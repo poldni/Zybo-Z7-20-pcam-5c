@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Jun 19 18:56:17 2018
--- Host        : elodlt-ro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top system_rst_clk_wiz_0_50M_0 -prefix
---               system_rst_clk_wiz_0_50M_0_ system_rst_clk_wiz_0_50M_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Thu Nov 29 10:17:20 2018
+-- Host        : pold2 running 64-bit Ubuntu 16.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/ronny/projects/git/fork/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_rst_clk_wiz_0_50M_0/system_rst_clk_wiz_0_50M_0_sim_netlist.vhdl
 -- Design      : system_rst_clk_wiz_0_50M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,12 +19,14 @@ entity system_rst_clk_wiz_0_50M_0_cdc_sync is
     lpf_asr_reg : out STD_LOGIC;
     scndry_out : out STD_LOGIC;
     lpf_asr : in STD_LOGIC;
-    asr_lpf : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_1_in : in STD_LOGIC;
     p_2_in : in STD_LOGIC;
+    asr_lpf : in STD_LOGIC_VECTOR ( 0 to 0 );
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_0_50M_0_cdc_sync : entity is "cdc_sync";
 end system_rst_clk_wiz_0_50M_0_cdc_sync;
 
 architecture STRUCTURE of system_rst_clk_wiz_0_50M_0_cdc_sync is
@@ -61,7 +63,7 @@ begin
       Q => s_level_out_d1_cdc_to,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1\: unisim.vcomponents.LUT1
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -108,10 +110,10 @@ lpf_asr_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => lpf_asr,
-      I1 => asr_lpf(0),
-      I2 => \^scndry_out\,
-      I3 => p_1_in,
-      I4 => p_2_in,
+      I1 => p_1_in,
+      I2 => p_2_in,
+      I3 => \^scndry_out\,
+      I4 => asr_lpf(0),
       O => lpf_asr_reg
     );
 end STRUCTURE;
@@ -134,7 +136,7 @@ entity system_rst_clk_wiz_0_50M_0_cdc_sync_0 is
 end system_rst_clk_wiz_0_50M_0_cdc_sync_0;
 
 architecture STRUCTURE of system_rst_clk_wiz_0_50M_0_cdc_sync_0 is
-  signal \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0\ : STD_LOGIC;
+  signal exr_d1 : STD_LOGIC;
   signal s_level_out_d1_cdc_to : STD_LOGIC;
   signal s_level_out_d2 : STD_LOGIC;
   signal s_level_out_d3 : STD_LOGIC;
@@ -163,18 +165,18 @@ begin
         port map (
       C => slowest_sync_clk,
       CE => '1',
-      D => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0\,
+      D => exr_d1,
       Q => s_level_out_d1_cdc_to,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0\: unisim.vcomponents.LUT2
+\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"B"
     )
         port map (
       I0 => mb_debug_sys_rst,
       I1 => ext_reset_in,
-      O => \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0\
+      O => exr_d1
     );
 \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2\: unisim.vcomponents.FDRE
     generic map(
@@ -215,10 +217,10 @@ lpf_exr_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => lpf_exr,
-      I1 => p_3_out(0),
-      I2 => \^scndry_out\,
-      I3 => p_3_out(1),
-      I4 => p_3_out(2),
+      I1 => p_3_out(1),
+      I2 => p_3_out(2),
+      I3 => \^scndry_out\,
+      I4 => p_3_out(0),
       O => lpf_exr_reg
     );
 end STRUCTURE;
@@ -233,6 +235,8 @@ entity system_rst_clk_wiz_0_50M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_0_50M_0_upcnt_n : entity is "upcnt_n";
 end system_rst_clk_wiz_0_50M_0_upcnt_n;
 
 architecture STRUCTURE of system_rst_clk_wiz_0_50M_0_upcnt_n is
@@ -393,10 +397,12 @@ entity system_rst_clk_wiz_0_50M_0_lpf is
     lpf_int : out STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC;
     dcm_locked : in STD_LOGIC;
-    aux_reset_in : in STD_LOGIC;
     mb_debug_sys_rst : in STD_LOGIC;
-    ext_reset_in : in STD_LOGIC
+    ext_reset_in : in STD_LOGIC;
+    aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_0_50M_0_lpf : entity is "lpf";
 end system_rst_clk_wiz_0_50M_0_lpf;
 
 architecture STRUCTURE of system_rst_clk_wiz_0_50M_0_lpf is
@@ -543,13 +549,13 @@ lpf_exr_reg: unisim.vcomponents.FDRE
     );
 lpf_int0: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEF"
+      INIT => X"FFFD"
     )
         port map (
-      I0 => Q,
-      I1 => lpf_asr,
-      I2 => dcm_locked,
-      I3 => lpf_exr,
+      I0 => dcm_locked,
+      I1 => lpf_exr,
+      I2 => lpf_asr,
+      I3 => Q,
       O => \lpf_int0__0\
     );
 lpf_int_reg: unisim.vcomponents.FDRE
@@ -578,6 +584,8 @@ entity system_rst_clk_wiz_0_50M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_0_50M_0_sequence_psr : entity is "sequence_psr";
 end system_rst_clk_wiz_0_50M_0_sequence_psr;
 
 architecture STRUCTURE of system_rst_clk_wiz_0_50M_0_sequence_psr is
@@ -663,13 +671,13 @@ SEQ_COUNTER: entity work.system_rst_clk_wiz_0_50M_0_upcnt_n
     );
 \bsr_dec[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0804"
+      INIT => X"0090"
     )
         port map (
       I0 => seq_cnt_en,
-      I1 => seq_cnt(3),
-      I2 => seq_cnt(5),
-      I3 => seq_cnt(4),
+      I1 => seq_cnt(4),
+      I2 => seq_cnt(3),
+      I3 => seq_cnt(5),
       O => p_5_out(0)
     );
 \bsr_dec[2]_i_1\: unisim.vcomponents.LUT2
@@ -725,13 +733,13 @@ bsr_reg: unisim.vcomponents.FDSE
     );
 \core_dec[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8040"
+      INIT => X"9000"
     )
         port map (
-      I0 => seq_cnt(4),
-      I1 => seq_cnt(3),
-      I2 => seq_cnt(5),
-      I3 => seq_cnt_en,
+      I0 => seq_cnt_en,
+      I1 => seq_cnt(4),
+      I2 => seq_cnt(3),
+      I3 => seq_cnt(5),
       O => \core_dec[0]_i_1_n_0\
     );
 \core_dec[2]_i_1\: unisim.vcomponents.LUT2
@@ -798,23 +806,23 @@ from_sys_reg: unisim.vcomponents.FDSE
     );
 pr_dec0: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0210"
+      INIT => X"0018"
     )
         port map (
-      I0 => seq_cnt(0),
-      I1 => seq_cnt(1),
+      I0 => seq_cnt_en,
+      I1 => seq_cnt(0),
       I2 => seq_cnt(2),
-      I3 => seq_cnt_en,
+      I3 => seq_cnt(1),
       O => \pr_dec0__0\
     );
 \pr_dec[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1080"
+      INIT => X"0480"
     )
         port map (
       I0 => seq_cnt_en,
-      I1 => seq_cnt(5),
-      I2 => seq_cnt(3),
+      I1 => seq_cnt(3),
+      I2 => seq_cnt(5),
       I3 => seq_cnt(4),
       O => p_3_out(0)
     );
@@ -916,6 +924,8 @@ entity system_rst_clk_wiz_0_50M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of system_rst_clk_wiz_0_50M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of system_rst_clk_wiz_0_50M_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_rst_clk_wiz_0_50M_0_proc_sys_reset : entity is "proc_sys_reset";
 end system_rst_clk_wiz_0_50M_0_proc_sys_reset;
 
 architecture STRUCTURE of system_rst_clk_wiz_0_50M_0_proc_sys_reset is
@@ -1051,7 +1061,7 @@ entity system_rst_clk_wiz_0_50M_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_rst_clk_wiz_0_50M_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_rst_clk_wiz_0_50M_0 : entity is "proc_sys_reset,Vivado 2017.4";
+  attribute x_core_info of system_rst_clk_wiz_0_50M_0 : entity is "proc_sys_reset,Vivado 2018.2";
 end system_rst_clk_wiz_0_50M_0;
 
 architecture STRUCTURE of system_rst_clk_wiz_0_50M_0 is

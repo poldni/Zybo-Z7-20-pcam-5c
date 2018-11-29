@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Jun 19 19:03:07 2018
--- Host        : elodlt-ro running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top system_AXI_BayerToRGB_1_0 -prefix
---               system_AXI_BayerToRGB_1_0_ system_AXI_BayerToRGB_1_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Thu Nov 29 10:13:46 2018
+-- Host        : pold2 running 64-bit Ubuntu 16.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/ronny/projects/git/fork/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_AXI_BayerToRGB_1_0/system_AXI_BayerToRGB_1_0_sim_netlist.vhdl
 -- Design      : system_AXI_BayerToRGB_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24,6 +24,8 @@ entity system_AXI_BayerToRGB_1_0_LineBuffer is
     Q : in STD_LOGIC_VECTOR ( 9 downto 0 );
     \sLineBufferReadDataBuf_reg[9]\ : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_AXI_BayerToRGB_1_0_LineBuffer : entity is "LineBuffer";
 end system_AXI_BayerToRGB_1_0_LineBuffer;
 
 architecture STRUCTURE of system_AXI_BayerToRGB_1_0_LineBuffer is
@@ -258,6 +260,8 @@ entity system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
     s_axis_video_tuser : in STD_LOGIC;
     s_axis_video_tlast : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB : entity is "AXI_BayerToRGB";
 end system_AXI_BayerToRGB_1_0_AXI_BayerToRGB;
 
 architecture STRUCTURE of system_AXI_BayerToRGB_1_0_AXI_BayerToRGB is
@@ -1766,8 +1770,8 @@ sAXI_SlaveLastAsserted_reg: unisim.vcomponents.FDRE
       INIT => X"0E"
     )
         port map (
-      I0 => sCntRemPixels(1),
-      I1 => s_axis_video_tvalid,
+      I0 => s_axis_video_tvalid,
+      I1 => sCntRemPixels(1),
       I2 => sCntRemPixels(0),
       O => \sCntRemPixels[0]_i_1_n_0\
     );
@@ -3429,7 +3433,7 @@ entity system_AXI_BayerToRGB_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_AXI_BayerToRGB_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_AXI_BayerToRGB_1_0 : entity is "AXI_BayerToRGB,Vivado 2017.4";
+  attribute x_core_info of system_AXI_BayerToRGB_1_0 : entity is "AXI_BayerToRGB,Vivado 2018.2";
 end system_AXI_BayerToRGB_1_0;
 
 architecture STRUCTURE of system_AXI_BayerToRGB_1_0 is

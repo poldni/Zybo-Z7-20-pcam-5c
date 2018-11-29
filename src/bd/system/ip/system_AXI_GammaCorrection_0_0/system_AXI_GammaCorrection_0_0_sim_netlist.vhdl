@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Sep 19 12:20:19 2018
--- Host        : catuna-ro running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+-- Date        : Thu Nov 29 10:13:58 2018
+-- Host        : pold2 running 64-bit Ubuntu 16.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               D:/Ionut/Camy/PublicGit/src/bd/system/ip/system_AXI_GammaCorrection_0_0/system_AXI_GammaCorrection_0_0_sim_netlist.vhdl
+--               /home/ronny/projects/git/fork/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_AXI_GammaCorrection_0_0/system_AXI_GammaCorrection_0_0_sim_netlist.vhdl
 -- Design      : system_AXI_GammaCorrection_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,9 +19,8 @@ entity system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
     m_axis_video_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sGammaReg : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axis_video_tdata : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    \sGammaReg_reg[1]\ : in STD_LOGIC;
     \sGammaReg_reg[0]\ : in STD_LOGIC;
-    \sGammaReg_reg[0]_0\ : in STD_LOGIC;
+    \sGammaReg_reg[1]\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     StreamClk : in STD_LOGIC
   );
@@ -117,11 +116,11 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[1]_i_114_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_115_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_116_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_23_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_24_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_25_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_26_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_117_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_118_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_4_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_55_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_56_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_57_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_58_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_59_n_0\ : STD_LOGIC;
@@ -147,7 +146,6 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[1]_i_77_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_78_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_79_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_7_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_80_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_81_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_82_n_0\ : STD_LOGIC;
@@ -176,23 +174,24 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[2]_i_105_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_106_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_107_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_108_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_13_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_15_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_14_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_16_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_21_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_22_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_33_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_34_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_35_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_25_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_27_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_39_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_40_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_41_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_42_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_45_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_46_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_47_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_4_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_54__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_55_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_56_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_56__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_57_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_58_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_59_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_5_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_60_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_61_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_62_n_0\ : STD_LOGIC;
@@ -214,6 +213,7 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[2]_i_77_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_78_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_79_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_7_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_80_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_81_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_82_n_0\ : STD_LOGIC;
@@ -224,6 +224,7 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[2]_i_87_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_88_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_89_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_8_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_90_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_91_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_92_n_0\ : STD_LOGIC;
@@ -234,38 +235,43 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[2]_i_97_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_98_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_99_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_10_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_11_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_13_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_14_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_17_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_18_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_21_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_23__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_24__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_25_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_26_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_27_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_22_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_23_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_24_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_26__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_27__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_28_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_29_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_32_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_33__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_29__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_31_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_36_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_37_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_38_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_39_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_40_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_41_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_42_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_43_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_44_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_45_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_46_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_47_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_48_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_49_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_4_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_50_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_53__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_54__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_55_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_56_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_57_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_5_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_60__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_61__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_58_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_59_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_60_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_61_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_62_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_63_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_64_n_0\ : STD_LOGIC;
@@ -285,7 +291,6 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[3]_i_77_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_78_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_79_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_7_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_80_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_81_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_82_n_0\ : STD_LOGIC;
@@ -297,108 +302,113 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData[3]_i_88_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_89_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_8_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_11_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_9_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_12_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_13_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_15_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_16_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_17_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_17__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_18_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_19_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_20_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_21_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_21__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_22_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_23_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_24_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_25_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_23__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_24__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_26_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_27_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_28_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_29_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_30_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_31_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_32_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_34__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_35__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_36__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_37__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_38_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_39_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_34_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_36_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_37_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_38__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_39__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_3_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_40_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_41_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_42__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_43__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_44_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_43_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_44__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_45_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_46_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_47_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_48__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_46__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_47__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_48_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_49_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_4_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_50_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_51_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_52_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_53_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_54_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_55_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_56__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_56_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_57_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_58__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_59__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_58_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_59_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_5_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_60_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_61_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_62_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_63_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_64_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_6_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_7_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_8_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_9_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_10_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_11_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_12_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_13_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_14_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_15_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_15__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_16_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_17_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_18_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_19__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_20_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_21__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_19_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_20__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_21_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_22_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_23_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_24__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_25__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_26__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_24_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_25_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_26_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_27_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_28_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_29_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_30_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_31_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_30__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_31__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_32__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_33_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_34_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_35_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_36__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_37__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_38__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_36_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_37_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_38_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_3_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_4_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_5_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_6_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_7_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_8_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_9_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_10_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_11_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_12_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_13_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_14_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_15_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_15__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_16__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_17__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_18__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_19__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_20_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_21_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_3_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_4_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_5_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_6_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_7_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_8_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_9__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[7]_i_10__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_9_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_10_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_11__1_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_4_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_5_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_6_n_0\ : STD_LOGIC;
@@ -466,6 +476,10 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData_reg[1]_i_20_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_21_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_22_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_23_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_24_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_25_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_26_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_27_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_28_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_29_n_0\ : STD_LOGIC;
@@ -494,286 +508,268 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs is
   signal \rStoredData_reg[1]_i_52_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_53_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_54_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_55_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_56_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_7_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_8_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_9_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_10_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_11_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_12_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_14_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_13_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_15_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_17_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_18_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_19_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_20_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_22_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_23_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_24_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_25_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_26_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_27_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_28_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_29_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_30_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_31_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_32_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_33_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_34_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_35_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_36_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_37_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_38_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_39_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_40_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_41_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_43_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_44_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_45_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_46_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_47_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_48_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_49_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_50_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_51_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_52_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_53_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_5_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_7_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_8_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_54_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_55_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_9_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_10_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_12_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_14_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_13_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_15_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_16_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_19_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_20_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_22_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_25_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_30_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_31_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_32_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_33_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_34_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_35_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_39_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_40_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_43_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_44_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_49_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_50_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_51_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_52_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_53_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_54_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_58_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_59_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_9_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_5_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_7_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[4]_i_10_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_13_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_11_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[4]_i_14_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_25_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_30_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_31_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_32_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[4]_i_33_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_5_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_6_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_7_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_8_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_9_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[5]_i_9_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[6]_i_6_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_35_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_4_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[5]_i_28_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[5]_i_4_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[6]_i_12_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \rStoredData[2]_i_54__1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_23__1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_24__1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_33__1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_36\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_45\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_49\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_57\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_60__1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_61__1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_25\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_26\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_27\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_32\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_34__1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_35__1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_36__1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_37__1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_38\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_40\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_42__1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_43__1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_44\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_45\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_48__0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_50\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_52\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_56__1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_58__1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_59__1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_21__1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_24__1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_25__0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_26__1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_27\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_28\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \rStoredData[2]_i_56__1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \rStoredData[2]_i_65\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_24\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_26__1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_27__1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_29__1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_36\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_44\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_53__1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_54__1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_57\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_17__1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_18\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_20\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_21__1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_22\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_24__1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_38__1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_39__1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_42__1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_44__1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_46__1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_47__1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_49\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_61\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_63\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_19\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_20__1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_30__1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_31__1\ : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of \rStoredData[5]_i_32__1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_33\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_34\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_35\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_36__1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_38__1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_13\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_16__1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_17__1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_18__1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_19__1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_20\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_9__1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_10__1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_8__1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_9\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_33\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_34\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_35\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_15__1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_16__1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_17__1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_18__1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_19__1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_11__1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_7__1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_8__1\ : label is "soft_lutpair12";
 begin
 \rStoredData[0]_i_100\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"20DBCD22658E5875"
+      INIT => X"79DC16BCA56359D4"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_100_n_0\
     );
 \rStoredData[0]_i_101\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8E00F3FFFFFF0000"
+      INIT => X"9A30D82367C72794"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_101_n_0\
     );
 \rStoredData[0]_i_102\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"66666C6696996626"
+      INIT => X"5A9C8623E1431A9C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_102_n_0\
     );
 \rStoredData[0]_i_103\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3B999CC466233B99"
+      INIT => X"3C3432B393C3C3C9"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_103_n_0\
     );
 \rStoredData[0]_i_104\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"99629D3BC499669C"
+      INIT => X"B50FD0B5F02F4AF0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_104_n_0\
     );
 \rStoredData[0]_i_105\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6E56A866996E91A9"
+      INIT => X"4D6C2C2436B6B293"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_105_n_0\
     );
 \rStoredData[0]_i_106\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8999177666E89999"
+      INIT => X"92D3496DDBC96D2C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_106_n_0\
     );
 \rStoredData[0]_i_107\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"665D999A26665999"
+      INIT => X"4CDD264C9B32D99B"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_107_n_0\
     );
 \rStoredData[0]_i_108\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"269B66264D66994D"
+      INIT => X"33269B334CCD264C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_108_n_0\
     );
 \rStoredData[0]_i_109\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D33332CCCCD93333"
+      INIT => X"D3CC33D33233CC33"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_109_n_0\
     );
 \rStoredData[0]_i_110\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"433333CCCCC33333"
+      INIT => X"4333CCC633CC3333"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_110_n_0\
     );
 \rStoredData[0]_i_111\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFF40000000FD"
+      INIT => X"FFFFFFEA00000055"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(0),
@@ -783,23 +779,23 @@ begin
     );
 \rStoredData[0]_i_112\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4F00FFFF30FF0000"
+      INIT => X"7F7700885500AAFE"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_112_n_0\
     );
 \rStoredData[0]_i_113\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00CD204CFF33DFFB"
+      INIT => X"AA678AE655197551"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
@@ -809,10 +805,10 @@ begin
     );
 \rStoredData[0]_i_114\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE377F33038080C8"
+      INIT => X"AB622A665695D59D"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
@@ -822,54 +818,54 @@ begin
     );
 \rStoredData[0]_i_115\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"521FBDA4E5063FE8"
+      INIT => X"786D3DB5970E0E4A"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[0]_i_115_n_0\
     );
 \rStoredData[0]_i_116\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A37DC222DE821DD7"
+      INIT => X"8F79870FB48F7096"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_116_n_0\
     );
 \rStoredData[0]_i_117\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1466B990467B9844"
+      INIT => X"BCCC333AC5433C8C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_117_n_0\
     );
 \rStoredData[0]_i_118\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FC4013BEEC0137EE"
+      INIT => X"AA11891556EA66AA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_118_n_0\
     );
 \rStoredData[0]_i_2\: unisim.vcomponents.LUT6
@@ -892,9 +888,9 @@ begin
         port map (
       I0 => \rStoredData_reg[0]_i_7_n_0\,
       I1 => \rStoredData_reg[0]_i_8_n_0\,
-      I2 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(7),
       I3 => \rStoredData_reg[0]_i_9_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(8),
       I5 => \rStoredData_reg[0]_i_10_n_0\,
       O => p_0_out(0)
     );
@@ -918,15 +914,54 @@ begin
         port map (
       I0 => \rStoredData_reg[0]_i_15_n_0\,
       I1 => \rStoredData_reg[0]_i_16_n_0\,
-      I2 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(0),
       I3 => \rStoredData_reg[0]_i_17_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(6),
       I5 => \rStoredData_reg[0]_i_18_n_0\,
       O => \rStoredData[0]_i_5_n_0\
     );
 \rStoredData[0]_i_55\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"007F01FFFF00FA00"
+      INIT => X"C3CBCC4C3C3C3C33"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_55_n_0\
+    );
+\rStoredData[0]_i_56\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"4AF00F52AD4AB52F"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_56_n_0\
+    );
+\rStoredData[0]_i_57\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0B0AF5FDFFFF0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_57_n_0\
+    );
+\rStoredData[0]_i_58\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF7FF551000008A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -935,58 +970,19 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[0]_i_55_n_0\
-    );
-\rStoredData[0]_i_56\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00008FFFFFFF7000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[0]_i_56_n_0\
-    );
-\rStoredData[0]_i_57\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0B0AFFFFF5FD0000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[0]_i_57_n_0\
-    );
-\rStoredData[0]_i_58\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFF5F7F51008000A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_58_n_0\
     );
 \rStoredData[0]_i_59\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7655579581A888AA"
+      INIT => X"CCC53ABC43338DCD"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_59_n_0\
     );
 \rStoredData[0]_i_6\: unisim.vcomponents.LUT6
@@ -1004,106 +1000,106 @@ begin
     );
 \rStoredData[0]_i_60\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CD4C9BDD329B2632"
+      INIT => X"15FFFFFEEA000111"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_60_n_0\
     );
 \rStoredData[0]_i_61\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CC3BC4CC33CC33C3"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_61_n_0\
-    );
-\rStoredData[0]_i_62\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"4A0FF052ADB54A2F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_62_n_0\
-    );
-\rStoredData[0]_i_63\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"54666AAB999D5446"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[0]_i_63_n_0\
-    );
-\rStoredData[0]_i_64\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"576EEAA899155576"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[0]_i_64_n_0\
-    );
-\rStoredData[0]_i_65\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAA80111575FEEEA"
+      INIT => X"EAA8575F0111EEEA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_61_n_0\
+    );
+\rStoredData[0]_i_62\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5AF078F0F0E1F1A5"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_62_n_0\
+    );
+\rStoredData[0]_i_63\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7655579581A888AA"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_63_n_0\
+    );
+\rStoredData[0]_i_64\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C4DC9DBD392B2362"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_64_n_0\
+    );
+\rStoredData[0]_i_65\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F0F70F00F1AF0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_65_n_0\
     );
 \rStoredData[0]_i_66\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"57FFFFEAA8000115"
+      INIT => X"0F0F0F0F87F0F0F0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_66_n_0\
     );
 \rStoredData[0]_i_67\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3C9249E04F15AD1E"
+      INIT => X"34CF4A9D9125E10E"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_67_n_0\
     );
 \rStoredData[0]_i_68\: unisim.vcomponents.LUT6
@@ -1121,62 +1117,62 @@ begin
     );
 \rStoredData[0]_i_69\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CC433B8CC533ACDD"
+      INIT => X"5969496D65A4A4B6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_69_n_0\
     );
 \rStoredData[0]_i_70\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1FFF5FFEE001A011"
+      INIT => X"5961E5A779E5A586"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[0]_i_70_n_0\
     );
 \rStoredData[0]_i_71\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"008F0000FF70FFFF"
+      INIT => X"AE7700005118FFFF"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(9),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_71_n_0\
     );
 \rStoredData[0]_i_72\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4D64995DBA9926B2"
+      INIT => X"0280C0F5FDFD3F0A"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_72_n_0\
     );
 \rStoredData[0]_i_73\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFAEF7F751510808"
+      INIT => X"67A67577D9518888"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -1186,103 +1182,103 @@ begin
     );
 \rStoredData[0]_i_74\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9BB26644D99BA266"
+      INIT => X"FFF43BBF4003CC44"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(9),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_74_n_0\
     );
 \rStoredData[0]_i_75\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B955955666AB6AB9"
+      INIT => X"919DFDFEEE6A2313"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_75_n_0\
     );
 \rStoredData[0]_i_76\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E675599AAE675599"
+      INIT => X"FE6A22031195DDFC"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_76_n_0\
     );
 \rStoredData[0]_i_77\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"157F15FEEA81A801"
+      INIT => X"11D5DDFCEA2A2A33"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_77_n_0\
     );
 \rStoredData[0]_i_78\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A665AA6659995559"
+      INIT => X"AA2A55D43757C088"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_78_n_0\
     );
 \rStoredData[0]_i_79\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A0007FFE80017FFE"
+      INIT => X"008088A9FF7F7F66"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_79_n_0\
     );
 \rStoredData[0]_i_80\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2665AA66599B55D9"
+      INIT => X"7220E2A21DDF1D5D"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_80_n_0\
     );
 \rStoredData[0]_i_81\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3F00000080FFFFFF"
+      INIT => X"8FE0A0E0705F7F1F"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(9),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
@@ -1290,456 +1286,483 @@ begin
     );
 \rStoredData[0]_i_82\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"665D99BA26645D99"
+      INIT => X"0F020A80C0FDF5FD"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_82_n_0\
     );
 \rStoredData[0]_i_83\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8F76601909BEEF30"
+      INIT => X"2E525141849DBBEA"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_83_n_0\
     );
 \rStoredData[0]_i_84\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"10518A88EEAE75F7"
+      INIT => X"415098BCAFEF7B52"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_84_n_0\
     );
 \rStoredData[0]_i_85\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CC633BCC4333CCC3"
+      INIT => X"ECEB3614EB3B44C1"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_85_n_0\
     );
 \rStoredData[0]_i_86\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7655571591A888EA"
+      INIT => X"624394DC1111ECEB"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_86_n_0\
     );
-\rStoredData[0]_i_87\: unisim.vcomponents.LUT5
+\rStoredData[0]_i_87\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"92DB496D"
+      INIT => X"D0953D6AFAC50527"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[0]_i_87_n_0\
     );
 \rStoredData[0]_i_88\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AB6699629DAA54B9"
+      INIT => X"81927E6C175BE9B2"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_88_n_0\
     );
 \rStoredData[0]_i_89\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"778876917691EE15"
+      INIT => X"C551DAAA375EC884"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_89_n_0\
     );
 \rStoredData[0]_i_90\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C787871E878E861E"
+      INIT => X"E8A4566D0593FAA4"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_90_n_0\
     );
 \rStoredData[0]_i_91\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"733C328C4DDBC9B2"
+      INIT => X"BF3F60DA9FED2039"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_91_n_0\
     );
 \rStoredData[0]_i_92\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"66CC64D96499C999"
+      INIT => X"79DC86B9E5635ADC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_92_n_0\
     );
 \rStoredData[0]_i_93\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8E9867E69C1966C6"
+      INIT => X"9854D0342FC1BFD2"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_93_n_0\
     );
 \rStoredData[0]_i_94\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F3C7C3CE1C313833"
+      INIT => X"5A9CF944A5231A9C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_94_n_0\
     );
 \rStoredData[0]_i_95\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"DCCC33BD0333CC40"
+      INIT => X"C836EE54C9B6A159"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_95_n_0\
     );
 \rStoredData[0]_i_96\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4D2C6D2434B2B2D3"
+      INIT => X"8913F2A41479A993"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_96_n_0\
     );
 \rStoredData[0]_i_97\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A696869A965A9659"
+      INIT => X"C5713A81256BCA1E"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_97_n_0\
     );
 \rStoredData[0]_i_98\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A515055F7AA8EAA5"
+      INIT => X"A9B65E6C05DBE8A6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_98_n_0\
     );
 \rStoredData[0]_i_99\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"44EE11EF12E53C12"
+      INIT => X"3FB8B7F0402D483A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_99_n_0\
     );
 \rStoredData[1]_i_100\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2D2F2D2DBD2DB42D"
+      INIT => X"BD962B2939B56269"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_100_n_0\
     );
 \rStoredData[1]_i_101\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"088C88CCEEF7EF77"
+      INIT => X"756A889D10A3AF46"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_101_n_0\
     );
 \rStoredData[1]_i_102\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5F0F4F0505A020B0"
+      INIT => X"B5D22F9D2DD50A2D"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(8),
       I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_102_n_0\
     );
 \rStoredData[1]_i_103\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E666777731111998"
+      INIT => X"A2A6A6266545655D"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_103_n_0\
     );
 \rStoredData[1]_i_104\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"98888EEEE6E67777"
+      INIT => X"1555AA8857EA5555"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_104_n_0\
     );
 \rStoredData[1]_i_105\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5075EFAFF5F78A0A"
+      INIT => X"69495BDB4949DBDA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[1]_i_105_n_0\
     );
 \rStoredData[1]_i_106\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FBBBB2222004444D"
+      INIT => X"D99B99BBBA262266"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_106_n_0\
     );
 \rStoredData[1]_i_107\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"080000F0F0FFF3FF"
+      INIT => X"DA5F45255D55A0A2"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_107_n_0\
-    );
-\rStoredData[1]_i_108\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"BFF55040"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_107_n_0\
+    );
+\rStoredData[1]_i_108\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAEE66775555119"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_108_n_0\
     );
 \rStoredData[1]_i_109\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000FFFFFFFF4"
+      INIT => X"C4CCCC3C3C333B33"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_109_n_0\
     );
 \rStoredData[1]_i_110\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"004F0000FFB0FFFF"
+      INIT => X"9AAA6664A6A65555"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_110_n_0\
-    );
-\rStoredData[1]_i_111\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AA67551955558AAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_110_n_0\
+    );
+\rStoredData[1]_i_111\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"33333336"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
       O => \rStoredData[1]_i_111_n_0\
     );
 \rStoredData[1]_i_112\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555D5D59BAAAAAA2"
+      INIT => X"000008AFFFFFF751"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_112_n_0\
     );
 \rStoredData[1]_i_113\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"331CCC9B22774898"
+      INIT => X"AAEF7511FFF70000"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_113_n_0\
     );
 \rStoredData[1]_i_114\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8ACAD2D7F7F53520"
+      INIT => X"5A1A5A1E0E8F8F87"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_114_n_0\
     );
 \rStoredData[1]_i_115\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"400AFDD0AFAF5000"
+      INIT => X"1090EEEA9DEF3B10"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_115_n_0\
     );
 \rStoredData[1]_i_116\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555546EAAAAB9D55"
+      INIT => X"BB8C3333CC45ACCC"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_116_n_0\
+    );
+\rStoredData[1]_i_117\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EA55A57AAA5285AA"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[1]_i_117_n_0\
+    );
+\rStoredData[1]_i_118\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F1E58F00E1A78F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_118_n_0\
     );
 \rStoredData[1]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -1754,68 +1777,16 @@ begin
       I5 => \rStoredData[1]_i_6_n_0\,
       O => p_1_in(1)
     );
-\rStoredData[1]_i_23\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FEFEFFFF00010000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[1]_i_23_n_0\
-    );
-\rStoredData[1]_i_24\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0BF5FF00FF00FF00"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_24_n_0\
-    );
-\rStoredData[1]_i_25\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3333CCCCBCCCCCCC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_25_n_0\
-    );
-\rStoredData[1]_i_26\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"334CCCCC32CCCCCC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_26_n_0\
-    );
 \rStoredData[1]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[1]_i_7_n_0\,
+      I0 => \rStoredData_reg[1]_i_7_n_0\,
       I1 => \rStoredData_reg[1]_i_8_n_0\,
-      I2 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(7),
       I3 => \rStoredData_reg[1]_i_9_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(8),
       I5 => \rStoredData_reg[1]_i_10_n_0\,
       O => p_0_out(1)
     );
@@ -1839,49 +1810,75 @@ begin
         port map (
       I0 => \rStoredData_reg[1]_i_15_n_0\,
       I1 => \rStoredData_reg[1]_i_16_n_0\,
-      I2 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(0),
       I3 => \rStoredData_reg[1]_i_17_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(6),
       I5 => \rStoredData_reg[1]_i_18_n_0\,
       O => \rStoredData[1]_i_5_n_0\
     );
-\rStoredData[1]_i_57\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_55\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F7F5F7751008080A"
+      INIT => X"9AA696A692A696A5"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_55_n_0\
+    );
+\rStoredData[1]_i_56\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AF5AAA580A501A75"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_56_n_0\
+    );
+\rStoredData[1]_i_57\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"23DDFF00FF00FF00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_57_n_0\
     );
 \rStoredData[1]_i_58\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"98AA8AAEE6757755"
+      INIT => X"FFFCFFFF00010000"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[1]_i_58_n_0\
     );
 \rStoredData[1]_i_59\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9999AAAAA2666665"
+      INIT => X"A5A4A6969E1A1B5B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_59_n_0\
     );
 \rStoredData[1]_i_6\: unisim.vcomponents.LUT6
@@ -1899,83 +1896,109 @@ begin
     );
 \rStoredData[1]_i_60\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AFAA0A1A5A585075"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_60_n_0\
-    );
-\rStoredData[1]_i_61\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"66444CCDDDD9999B"
+      INIT => X"1FA0FF00FF00FE11"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_60_n_0\
+    );
+\rStoredData[1]_i_61\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCCDCDCD9393B333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_61_n_0\
     );
 \rStoredData[1]_i_62\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A0807FFF0515AAA0"
+      INIT => X"6C4CCCCCCCCDCDC9"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_62_n_0\
     );
 \rStoredData[1]_i_63\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCCCDDD9B933333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_63_n_0\
-    );
-\rStoredData[1]_i_64\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"6C4CCCCCCCCCCDD9"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_64_n_0\
-    );
-\rStoredData[1]_i_65\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2EFD389C8176733C"
+      INIT => X"FF77F7551008008A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[1]_i_63_n_0\
+    );
+\rStoredData[1]_i_64\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"98E68A77AA75AE55"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_64_n_0\
+    );
+\rStoredData[1]_i_65\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"334C32CCCCCCCCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_65_n_0\
     );
 \rStoredData[1]_i_66\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3B3C3C3CCCCCCCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[1]_i_66_n_0\
+    );
+\rStoredData[1]_i_67\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2387F973E813DC6C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_67_n_0\
+    );
+\rStoredData[1]_i_68\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"D2F5D5B52D2A280A"
     )
@@ -1986,601 +2009,549 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_66_n_0\
-    );
-\rStoredData[1]_i_67\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAA954669115EABB"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_67_n_0\
-    );
-\rStoredData[1]_i_68\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1FFFFFFEA0000011"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_68_n_0\
     );
 \rStoredData[1]_i_69\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0B00FFFFFCFF0000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_69_n_0\
-    );
-\rStoredData[1]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[1]_i_23_n_0\,
-      I1 => \rStoredData[1]_i_24_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[1]_i_25_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[1]_i_26_n_0\,
-      O => \rStoredData[1]_i_7_n_0\
-    );
-\rStoredData[1]_i_70\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E7557751118808AA"
+      INIT => X"66444CCDDDD9999B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[1]_i_69_n_0\
+    );
+\rStoredData[1]_i_70\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"88807FFF1115A8A8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_70_n_0\
     );
 \rStoredData[1]_i_71\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFFFFFF751000008"
+      INIT => X"BF0050FFFDFF0000"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_71_n_0\
     );
 \rStoredData[1]_i_72\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFF4CCC3330FB33"
+      INIT => X"A525585865785A5A"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_72_n_0\
     );
 \rStoredData[1]_i_73\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EEAA880115577FEE"
+      INIT => X"45FBDDAA55AADD22"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_73_n_0\
     );
 \rStoredData[1]_i_74\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EEF7FF7551001088"
+      INIT => X"FFFE7FFF00018880"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_74_n_0\
     );
 \rStoredData[1]_i_75\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"157FFFFEEA000001"
+      INIT => X"CCB7AA55AA75AB44"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_75_n_0\
     );
 \rStoredData[1]_i_76\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"51100888AAEEFFF7"
+      INIT => X"F0F0F0F1E1652D0D"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_76_n_0\
     );
 \rStoredData[1]_i_77\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000FFFE7FFF8000"
+      INIT => X"B45A785A705A584B"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[1]_i_77_n_0\
     );
 \rStoredData[1]_i_78\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AEEF5511F7750088"
+      INIT => X"00FF15AA75AAF58A"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_78_n_0\
     );
 \rStoredData[1]_i_79\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00008FFFFFFFF000"
+      INIT => X"0F8FF0F087A6F0F0"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_79_n_0\
     );
 \rStoredData[1]_i_80\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0520A0AABAFADF5F"
+      INIT => X"AAAA555595FD6200"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_80_n_0\
     );
 \rStoredData[1]_i_81\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"43CC33D53A328C22"
+      INIT => X"430B4B0B0F3C3C3C"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_81_n_0\
     );
 \rStoredData[1]_i_82\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF5D050000A0BAFF"
+      INIT => X"0F0F0F8FCFF2D2F2"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_82_n_0\
     );
 \rStoredData[1]_i_83\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"55766EAAA9995556"
+      INIT => X"E4B43128B5B50A4A"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_83_n_0\
     );
 \rStoredData[1]_i_84\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"080A080EEFF7F7F5"
+      INIT => X"AB3144C81544BBBB"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_84_n_0\
+    );
+\rStoredData[1]_i_85\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"585B4F4F5B4B0F8E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[1]_i_85_n_0\
+    );
+\rStoredData[1]_i_86\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F0E1E1E9AD2F2F1"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_86_n_0\
+    );
+\rStoredData[1]_i_87\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"681F0EF25E851DED"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_87_n_0\
+    );
+\rStoredData[1]_i_88\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C224BC49D46D3DDB"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_88_n_0\
+    );
+\rStoredData[1]_i_89\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"60A27A0C5F5397F6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[1]_i_89_n_0\
+    );
+\rStoredData[1]_i_90\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C336C62594493CC9"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[1]_i_90_n_0\
+    );
+\rStoredData[1]_i_91\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"51006B5B8AFF560E"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_84_n_0\
-    );
-\rStoredData[1]_i_85\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"E85EA17A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_85_n_0\
-    );
-\rStoredData[1]_i_86\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0177EA001177AA11"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_86_n_0\
-    );
-\rStoredData[1]_i_87\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A0005FFAA005FFEA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_87_n_0\
-    );
-\rStoredData[1]_i_88\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFC08000033FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[1]_i_88_n_0\
-    );
-\rStoredData[1]_i_89\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3C7CC3334CCB303C"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[1]_i_89_n_0\
-    );
-\rStoredData[1]_i_90\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"870F871E871E0E1E"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(0),
-      O => \rStoredData[1]_i_90_n_0\
-    );
-\rStoredData[1]_i_91\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5A4AD2D24A4B5252"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_91_n_0\
     );
 \rStoredData[1]_i_92\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33CB33C33C334C34"
+      INIT => X"BD393B6396B52D69"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[1]_i_92_n_0\
     );
 \rStoredData[1]_i_93\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555566EAA9995555"
+      INIT => X"774A809E50A4AF43"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_93_n_0\
     );
 \rStoredData[1]_i_94\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"59717175A5A7A7A6"
+      INIT => X"9C3DD6963923B529"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_94_n_0\
     );
 \rStoredData[1]_i_95\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F8E8F8E8175F1F5E"
+      INIT => X"68970CF25EA159AD"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_95_n_0\
     );
 \rStoredData[1]_i_96\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"057FEA0005FFA005"
+      INIT => X"C2253C49D46D3DDA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_96_n_0\
     );
 \rStoredData[1]_i_97\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9C638B728D62B660"
+      INIT => X"60825F725A0D95EC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_97_n_0\
     );
 \rStoredData[1]_i_98\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"331389E8FE339199"
+      INIT => X"C2C69C3C246D49CB"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[1]_i_98_n_0\
     );
 \rStoredData[1]_i_99\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2F00000040FFFFFF"
+      INIT => X"50E5109A8F50EF68"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_99_n_0\
     );
+\rStoredData[2]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"E4"
+    )
+        port map (
+      I0 => sGammaReg(2),
+      I1 => p_1_in(2),
+      I2 => p_0_out(2),
+      O => p_0_in(2)
+    );
 \rStoredData[2]_i_100\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555555556AAAAAAA"
+      INIT => X"CCCCCCC933333333"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_100_n_0\
     );
-\rStoredData[2]_i_101\: unisim.vcomponents.LUT5
+\rStoredData[2]_i_101\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAA95555"
+      INIT => X"CCCCC46333333333"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_101_n_0\
     );
 \rStoredData[2]_i_102\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F8FF03000000FFFF"
+      INIT => X"6323633333333333"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_102_n_0\
     );
 \rStoredData[2]_i_103\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"663333B9233B3399"
+      INIT => X"333B3B3B9D9C9CDC"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_103_n_0\
     );
 \rStoredData[2]_i_104\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"07FF0000FF00FFFF"
+      INIT => X"25FAB70DFF05FA00"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_104_n_0\
-    );
-\rStoredData[2]_i_105\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AF509F055F2558A0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_104_n_0\
+    );
+\rStoredData[2]_i_105\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DD99D998AA26AA66"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_105_n_0\
     );
 \rStoredData[2]_i_106\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8CDDCDDDFF22BA22"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_106_n_0\
-    );
-\rStoredData[2]_i_107\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C73C0C3C"
+      INIT => X"00FF00F00FE07F00"
     )
         port map (
       I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(4),
       I4 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_107_n_0\
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_106_n_0\
     );
-\rStoredData[2]_i_108\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_107\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"999B993333263266"
+      INIT => X"F0C7F30F0F0F0F0F"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_108_n_0\
+      O => \rStoredData[2]_i_107_n_0\
     );
-\rStoredData[2]_i_13\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_14\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[2]_i_33_n_0\,
-      I1 => \rStoredData[1]_i_25_n_0\,
-      I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[2]_i_34_n_0\,
+      I0 => \rStoredData[2]_i_39_n_0\,
+      I1 => \rStoredData[2]_i_40_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[2]_i_41_n_0\,
       I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[2]_i_35_n_0\,
-      O => \rStoredData[2]_i_13_n_0\
-    );
-\rStoredData[2]_i_15\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData_reg[2]_i_38_n_0\,
-      I1 => \rStoredData_reg[2]_i_39_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData_reg[2]_i_40_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_41_n_0\,
-      O => \rStoredData[2]_i_15_n_0\
+      I5 => \rStoredData[2]_i_42_n_0\,
+      O => \rStoredData[2]_i_14_n_0\
     );
 \rStoredData[2]_i_16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[2]_i_42_n_0\,
-      I1 => \rStoredData_reg[2]_i_43_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData_reg[2]_i_44_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_45_n_0\,
+      I0 => \rStoredData[2]_i_45_n_0\,
+      I1 => \rStoredData[2]_i_46_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[2]_i_41_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[2]_i_47_n_0\,
       O => \rStoredData[2]_i_16_n_0\
     );
 \rStoredData[2]_i_2\: unisim.vcomponents.LUT6
@@ -2590,7 +2561,7 @@ begin
         port map (
       I0 => \rStoredData[2]_i_4_n_0\,
       I1 => s_axis_video_tdata(4),
-      I2 => \rStoredData_reg[2]_i_5_n_0\,
+      I2 => \rStoredData[2]_i_5_n_0\,
       I3 => sGammaReg(1),
       I4 => sGammaReg(0),
       I5 => \rStoredData[2]_i_6_n_0\,
@@ -2601,130 +2572,180 @@ begin
       INIT => X"30BBFC88FF00FF00"
     )
         port map (
-      I0 => \rStoredData[5]_i_32__1_n_0\,
+      I0 => \rStoredData[5]_i_30__1_n_0\,
       I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[4]_i_56__1_n_0\,
+      I2 => \rStoredData[4]_i_63_n_0\,
       I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_26__1_n_0\,
+      I4 => \rStoredData[2]_i_56__1_n_0\,
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_21_n_0\
     );
-\rStoredData[2]_i_22\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_25\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FC33FC00BB00BB00"
+      INIT => X"B8BBB888B888B888"
     )
         port map (
-      I0 => \rStoredData[2]_i_54__1_n_0\,
+      I0 => \rStoredData[4]_i_23__1_n_0\,
       I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[4]_i_43__1_n_0\,
+      I2 => \rStoredData[5]_i_20__1_n_0\,
       I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_21__1_n_0\,
+      I4 => \rStoredData[5]_i_31__1_n_0\,
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_22_n_0\
+      O => \rStoredData[2]_i_25_n_0\
     );
-\rStoredData[2]_i_3\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_27\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
+      INIT => X"70F070F0F5EFF0E5"
     )
         port map (
-      I0 => \rStoredData_reg[2]_i_7_n_0\,
-      I1 => \rStoredData_reg[2]_i_8_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData_reg[2]_i_9_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData_reg[2]_i_10_n_0\,
-      O => p_0_out(2)
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[6]_i_17__1_n_0\,
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => \rStoredData[2]_i_65_n_0\,
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_27_n_0\
     );
-\rStoredData[2]_i_33\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_39\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FD00552240AA00FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_33_n_0\
-    );
-\rStoredData[2]_i_34\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9DCCCCCCDCCCCC44"
+      INIT => X"B9B999B95423462B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_34_n_0\
-    );
-\rStoredData[2]_i_35\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00FF7F00FF00FF00"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_35_n_0\
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_39_n_0\
     );
 \rStoredData[2]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[2]_i_11_n_0\,
-      I1 => \rStoredData_reg[2]_i_12_n_0\,
+      I0 => \rStoredData_reg[2]_i_9_n_0\,
+      I1 => \rStoredData_reg[2]_i_10_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[2]_i_13_n_0\,
+      I3 => \rStoredData_reg[2]_i_11_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_14_n_0\,
+      I5 => \rStoredData_reg[2]_i_12_n_0\,
       O => \rStoredData[2]_i_4_n_0\
+    );
+\rStoredData[2]_i_40\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3C9EBC243C3B9366"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_40_n_0\
+    );
+\rStoredData[2]_i_41\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9B9999DD426B436B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_41_n_0\
     );
 \rStoredData[2]_i_42\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCCCCCDD9B39B33"
+      INIT => X"3CBB3C20B365934B"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_42_n_0\
     );
-\rStoredData[2]_i_54__1\: unisim.vcomponents.LUT4
+\rStoredData[2]_i_45\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"B999B9B95646233B"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      O => \rStoredData[2]_i_54__1_n_0\
-    );
-\rStoredData[2]_i_55\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FEFCFFFF00010000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_45_n_0\
+    );
+\rStoredData[2]_i_46\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3CBE3C38B4259362"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_46_n_0\
+    );
+\rStoredData[2]_i_47\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3CB33B653CD3204A"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_47_n_0\
+    );
+\rStoredData[2]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData_reg[2]_i_13_n_0\,
+      I1 => \rStoredData[2]_i_14_n_0\,
+      I2 => s_axis_video_tdata(0),
+      I3 => \rStoredData_reg[2]_i_15_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[2]_i_16_n_0\,
+      O => \rStoredData[2]_i_5_n_0\
+    );
+\rStoredData[2]_i_56__1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_56__1_n_0\
+    );
+\rStoredData[2]_i_57\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF8FFFF00010000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(5),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_55_n_0\
+      O => \rStoredData[2]_i_57_n_0\
     );
-\rStoredData[2]_i_56\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_58\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"505A524A0A0F0F0F"
     )
@@ -2735,43 +2756,17 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_56_n_0\
-    );
-\rStoredData[2]_i_57\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BB9D99DDBB9D99DC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(0),
-      O => \rStoredData[2]_i_57_n_0\
-    );
-\rStoredData[2]_i_58\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5A0A5A0A5A0A4A2F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
       O => \rStoredData[2]_i_58_n_0\
     );
 \rStoredData[2]_i_59\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F5D5D5D550505042"
+      INIT => X"DDD5DD5544444442"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_59_n_0\
@@ -2791,90 +2786,87 @@ begin
     );
 \rStoredData[2]_i_60\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AABBABBBD5555555"
+      INIT => X"AAABBBBBD5555555"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_60_n_0\
     );
 \rStoredData[2]_i_61\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAAB9BD9D9D"
+      INIT => X"7CB4A5A1A2B3D2DE"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_61_n_0\
     );
 \rStoredData[2]_i_62\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2A2AAAAAAAABABAB"
+      INIT => X"6178585A7078585A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[2]_i_62_n_0\
     );
 \rStoredData[2]_i_63\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7BAAABDDC451232E"
+      INIT => X"BB99BB9999DDDDDC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_63_n_0\
     );
 \rStoredData[2]_i_64\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"65757575188A088A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_64_n_0\
-    );
-\rStoredData[2]_i_65\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CCCD99BBDDD93322"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_65_n_0\
-    );
-\rStoredData[2]_i_66\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"38F0F0F0F0F0F0F5"
+      INIT => X"5A5A5A4A0A0A0A2F"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_64_n_0\
+    );
+\rStoredData[2]_i_65\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"07"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_65_n_0\
+    );
+\rStoredData[2]_i_66\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CC99DD33CDBBD922"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
@@ -2882,59 +2874,423 @@ begin
     );
 \rStoredData[2]_i_67\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"30EFFF00FF00FF00"
+      INIT => X"38F0F0F0F0F0F0F5"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_67_n_0\
     );
 \rStoredData[2]_i_68\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000A020ABFFFFFF5"
+      INIT => X"007F0FF00FF00FF0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_68_n_0\
     );
 \rStoredData[2]_i_69\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFD40000000"
+      INIT => X"3766366666EC6EEC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_69_n_0\
+    );
+\rStoredData[2]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[2]_i_21_n_0\,
+      I1 => \rStoredData_reg[2]_i_22_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => \rStoredData_reg[2]_i_23_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[2]_i_24_n_0\,
+      O => \rStoredData[2]_i_7_n_0\
+    );
+\rStoredData[2]_i_70\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"77FF77FFC8888888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_70_n_0\
+    );
+\rStoredData[2]_i_71\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFE80000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_71_n_0\
+    );
+\rStoredData[2]_i_72\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"4466666773333333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_72_n_0\
+    );
+\rStoredData[2]_i_73\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"66666666676B637B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_73_n_0\
+    );
+\rStoredData[2]_i_74\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2666666666EECCCD"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_74_n_0\
+    );
+\rStoredData[2]_i_75\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F1A7AFAF0F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_75_n_0\
+    );
+\rStoredData[2]_i_76\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"70EFFF00FF00FF00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_76_n_0\
+    );
+\rStoredData[2]_i_77\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AA55BF00FF00F500"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_77_n_0\
+    );
+\rStoredData[2]_i_78\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"999C9C9CC6464646"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_78_n_0\
+    );
+\rStoredData[2]_i_79\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9594961666666666"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_79_n_0\
+    );
+\rStoredData[2]_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[2]_i_25_n_0\,
+      I1 => \rStoredData_reg[2]_i_26_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => \rStoredData[2]_i_27_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[2]_i_28_n_0\,
+      O => \rStoredData[2]_i_8_n_0\
+    );
+\rStoredData[2]_i_80\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CD99DD80DD88D922"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[2]_i_80_n_0\
+    );
+\rStoredData[2]_i_81\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9888C4C48CCC7777"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_81_n_0\
+    );
+\rStoredData[2]_i_82\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9999999112662266"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_82_n_0\
+    );
+\rStoredData[2]_i_83\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C3D35333C3D31332"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[2]_i_83_n_0\
+    );
+\rStoredData[2]_i_84\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"D4C9C33AC2D84337"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_84_n_0\
+    );
+\rStoredData[2]_i_85\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A96DBD24952494B6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_85_n_0\
+    );
+\rStoredData[2]_i_86\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DCC6CC59C43393AE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_86_n_0\
+    );
+\rStoredData[2]_i_87\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A9BDAD956D246CA4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_87_n_0\
+    );
+\rStoredData[2]_i_88\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"D4C9433AC2986337"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_88_n_0\
+    );
+\rStoredData[2]_i_89\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A995BD946C2424B6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_89_n_0\
+    );
+\rStoredData[2]_i_90\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DCC5C6C8C3BA4336"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_90_n_0\
+    );
+\rStoredData[2]_i_91\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A9B5AD956D2424A6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_91_n_0\
+    );
+\rStoredData[2]_i_92\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"999D99DDDDCCDCC4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_92_n_0\
+    );
+\rStoredData[2]_i_93\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"4000AAAA0A2AFFFF"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_69_n_0\
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_93_n_0\
     );
-\rStoredData[2]_i_70\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_94\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0FF8F0FFFFF0000"
+      INIT => X"FF0F8F0F0F0000F0"
     )
         port map (
       I0 => s_axis_video_tdata(0),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_70_n_0\
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_94_n_0\
     );
-\rStoredData[2]_i_71\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_95\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCCCCCDD99BB333"
+      INIT => X"AAAAABBBDDDDD555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_95_n_0\
+    );
+\rStoredData[2]_i_96\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF3FBF330000004"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_96_n_0\
+    );
+\rStoredData[2]_i_97\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"666222233333333B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -2943,36 +3299,24 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_71_n_0\
+      O => \rStoredData[2]_i_97_n_0\
     );
-\rStoredData[2]_i_72\: unisim.vcomponents.LUT5
+\rStoredData[2]_i_98\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0002BFFF"
+      INIT => X"CBC3C3F3F3F0F0F0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_72_n_0\
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_98_n_0\
     );
-\rStoredData[2]_i_73\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_99\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"24CCCCCC6CCCCCCD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(0),
-      O => \rStoredData[2]_i_73_n_0\
-    );
-\rStoredData[2]_i_74\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00FFCF334CFFFF00"
+      INIT => X"334C00CC30CC00FF"
     )
         port map (
       I0 => s_axis_video_tdata(0),
@@ -2981,379 +3325,71 @@ begin
       I3 => s_axis_video_tdata(4),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_74_n_0\
-    );
-\rStoredData[2]_i_75\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"655D55D999AA88AA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_75_n_0\
-    );
-\rStoredData[2]_i_76\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0F0F04AF050F00F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_76_n_0\
-    );
-\rStoredData[2]_i_77\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9BB393B336262624"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_77_n_0\
-    );
-\rStoredData[2]_i_78\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C4C6C4C223333333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_78_n_0\
-    );
-\rStoredData[2]_i_79\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"33333333304C00CC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_79_n_0\
-    );
-\rStoredData[2]_i_80\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"CFCF3333B3333330"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_80_n_0\
-    );
-\rStoredData[2]_i_81\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000022AAABBBFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_81_n_0\
-    );
-\rStoredData[2]_i_82\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FF55D5555400002A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_82_n_0\
-    );
-\rStoredData[2]_i_83\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFB00000000FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_83_n_0\
-    );
-\rStoredData[2]_i_84\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"D40022FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_84_n_0\
-    );
-\rStoredData[2]_i_85\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E586E486B2C786C6"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_85_n_0\
-    );
-\rStoredData[2]_i_86\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"66B954AAAA9944BB"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_86_n_0\
-    );
-\rStoredData[2]_i_87\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAABF5D5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_87_n_0\
-    );
-\rStoredData[2]_i_88\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"54224422AAAAAABB"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_88_n_0\
-    );
-\rStoredData[2]_i_89\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0A0A0A0BFDFDFDFD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_89_n_0\
-    );
-\rStoredData[2]_i_90\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFEFFF0F0F000010"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_90_n_0\
-    );
-\rStoredData[2]_i_91\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C08003337FFCCCC0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_91_n_0\
-    );
-\rStoredData[2]_i_92\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFE808001017FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_92_n_0\
-    );
-\rStoredData[2]_i_93\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9115115577667666"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_93_n_0\
-    );
-\rStoredData[2]_i_94\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"555F557EAAAAAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_94_n_0\
-    );
-\rStoredData[2]_i_95\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F0F0F7FFFF0F0F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_95_n_0\
-    );
-\rStoredData[2]_i_96\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFAAEA80AA00AA55"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_96_n_0\
-    );
-\rStoredData[2]_i_97\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FB33333330CC04CC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_97_n_0\
-    );
-\rStoredData[2]_i_98\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"666666226666622B"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(0),
-      O => \rStoredData[2]_i_98_n_0\
-    );
-\rStoredData[2]_i_99\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"99955646"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_99_n_0\
+    );
+\rStoredData[3]_i_10\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFE0FFFFEFE00000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_29__1_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData[5]_i_16_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[3]_i_30_n_0\,
+      O => \rStoredData[3]_i_10_n_0\
     );
 \rStoredData[3]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFEAE5E5EFEA4040"
+      INIT => X"EFEAE5E5E5E0E0E0"
     )
         port map (
       I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[3]_i_32_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[4]_i_34__1_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[3]_i_33__1_n_0\,
+      I1 => \rStoredData[3]_i_31_n_0\,
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[4]_i_38__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[4]_i_21__1_n_0\,
       O => \rStoredData[3]_i_11_n_0\
     );
-\rStoredData[3]_i_13\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_14\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
       I0 => \rStoredData[3]_i_36_n_0\,
-      I1 => \rStoredData[3]_i_37_n_0\,
+      I1 => \rStoredData[4]_i_45_n_0\,
       I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[5]_i_19__1_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I3 => \rStoredData[3]_i_37_n_0\,
+      I4 => s_axis_video_tdata(5),
       I5 => \rStoredData[3]_i_38_n_0\,
-      O => \rStoredData[3]_i_13_n_0\
+      O => \rStoredData[3]_i_14_n_0\
     );
 \rStoredData[3]_i_17\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_45_n_0\,
-      I1 => \rStoredData[3]_i_46_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData[5]_i_30_n_0\,
+      I0 => \rStoredData[3]_i_43_n_0\,
+      I1 => \rStoredData[3]_i_44_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[3]_i_45_n_0\,
       I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[3]_i_47_n_0\,
+      I5 => \rStoredData[3]_i_46_n_0\,
       O => \rStoredData[3]_i_17_n_0\
     );
-\rStoredData[3]_i_18\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_18\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8BBB888"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_48_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[3]_i_49_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_50_n_0\,
+      I0 => \rStoredData[3]_i_47_n_0\,
+      I1 => \rStoredData[5]_i_34_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[3]_i_48_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_23__1_n_0\,
       O => \rStoredData[3]_i_18_n_0\
     );
 \rStoredData[3]_i_2\: unisim.vcomponents.LUT6
@@ -3363,7 +3399,7 @@ begin
         port map (
       I0 => \rStoredData[3]_i_4_n_0\,
       I1 => s_axis_video_tdata(5),
-      I2 => \rStoredData[3]_i_5_n_0\,
+      I2 => \rStoredData_reg[3]_i_5_n_0\,
       I3 => sGammaReg(1),
       I4 => sGammaReg(0),
       I5 => \rStoredData[3]_i_6_n_0\,
@@ -3371,176 +3407,178 @@ begin
     );
 \rStoredData[3]_i_21\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[3]_i_55_n_0\,
-      I1 => \rStoredData[3]_i_56_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[3]_i_57_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[4]_i_59__1_n_0\,
-      O => \rStoredData[3]_i_21_n_0\
-    );
-\rStoredData[3]_i_23__1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"7F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_23__1_n_0\
-    );
-\rStoredData[3]_i_24__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C8880000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_24__1_n_0\
-    );
-\rStoredData[3]_i_25\: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"AFAFAFAF0FC000C0"
     )
         port map (
-      I0 => \rStoredData[6]_i_17__1_n_0\,
-      I1 => \rStoredData[3]_i_60__1_n_0\,
+      I0 => \rStoredData[3]_i_53__1_n_0\,
+      I1 => \rStoredData[3]_i_54__1_n_0\,
       I2 => s_axis_video_tdata(6),
       I3 => s_axis_video_tdata(4),
       I4 => \rStoredData[6]_i_18__1_n_0\,
       I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_25_n_0\
+      O => \rStoredData[3]_i_21_n_0\
     );
-\rStoredData[3]_i_26\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_22\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"333333333F7CFCFC"
+      INIT => X"FFFFFFFF80000000"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[3]_i_22_n_0\
+    );
+\rStoredData[3]_i_23\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7F7FFFFFFFFFFEEE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_26_n_0\
+      O => \rStoredData[3]_i_23_n_0\
     );
-\rStoredData[3]_i_27\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_24\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000001FFFFFFFF"
+      INIT => X"0000557F"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_27_n_0\
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_24_n_0\
     );
-\rStoredData[3]_i_28\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_26__1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"CFCCB3B3"
+      INIT => X"7F"
     )
         port map (
-      I0 => \rStoredData[4]_i_42__1_n_0\,
-      I1 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[5]_i_24__1_n_0\,
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_28_n_0\
+      O => \rStoredData[3]_i_26__1_n_0\
     );
-\rStoredData[3]_i_29\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_27__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"A0F0A0F0F0CFF0C0"
+      INIT => X"AA800000"
     )
         port map (
-      I0 => \rStoredData[4]_i_43__1_n_0\,
-      I1 => \rStoredData[3]_i_61__1_n_0\,
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_27__1_n_0\
+    );
+\rStoredData[3]_i_28\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00AF00A0FFCFFFCF"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_57_n_0\,
+      I1 => \rStoredData[6]_i_18__1_n_0\,
       I2 => s_axis_video_tdata(6),
       I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[4]_i_56__1_n_0\,
+      I4 => \rStoredData[4]_i_24__1_n_0\,
       I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_29_n_0\
+      O => \rStoredData[3]_i_28_n_0\
+    );
+\rStoredData[3]_i_29__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FAEA0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_29__1_n_0\
     );
 \rStoredData[3]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_7_n_0\,
+      I0 => \rStoredData_reg[3]_i_7_n_0\,
       I1 => \rStoredData[3]_i_8_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData_reg[3]_i_9_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData_reg[3]_i_10_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[3]_i_9_n_0\,
+      I4 => s_axis_video_tdata(8),
+      I5 => \rStoredData[3]_i_10_n_0\,
       O => p_0_out(3)
     );
-\rStoredData[3]_i_32\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_31\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555F557FEAAAAAAA"
+      INIT => X"03373F3FFFFFFFFF"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_32_n_0\
-    );
-\rStoredData[3]_i_33__1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_33__1_n_0\
+      O => \rStoredData[3]_i_31_n_0\
     );
 \rStoredData[3]_i_36\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"333337FC"
+      INIT => X"FFFFC880"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_36_n_0\
     );
 \rStoredData[3]_i_37\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7A6A6A6AAAAAAAAA"
+      INIT => X"FFAAAAAAEAAAAA55"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[3]_i_37_n_0\
     );
 \rStoredData[3]_i_38\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F70F0F0F0F0F0F0"
+      INIT => X"5555555540020002"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_38_n_0\
+    );
+\rStoredData[3]_i_39\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_68_n_0\,
+      I1 => \rStoredData[3]_i_69_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_70_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_71_n_0\,
+      O => \rStoredData[3]_i_39_n_0\
     );
 \rStoredData[3]_i_4\: unisim.vcomponents.LUT6
     generic map(
@@ -3550,237 +3588,162 @@ begin
       I0 => \rStoredData[3]_i_11_n_0\,
       I1 => \rStoredData_reg[3]_i_12_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[3]_i_13_n_0\,
+      I3 => \rStoredData_reg[3]_i_13_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[3]_i_14_n_0\,
+      I5 => \rStoredData[3]_i_14_n_0\,
       O => \rStoredData[3]_i_4_n_0\
+    );
+\rStoredData[3]_i_40\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_72_n_0\,
+      I1 => \rStoredData[3]_i_73_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_74_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_75_n_0\,
+      O => \rStoredData[3]_i_40_n_0\
     );
 \rStoredData[3]_i_41\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F5F5F55550505042"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
+      I0 => \rStoredData[3]_i_76_n_0\,
+      I1 => \rStoredData[3]_i_77_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_70_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_78_n_0\,
       O => \rStoredData[3]_i_41_n_0\
     );
 \rStoredData[3]_i_42\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAABB99B99D"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
+      I0 => \rStoredData[3]_i_79_n_0\,
+      I1 => \rStoredData[3]_i_80_n_0\,
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
+      I3 => \rStoredData[3]_i_74_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_81_n_0\,
       O => \rStoredData[3]_i_42_n_0\
     );
-\rStoredData[3]_i_45\: unisim.vcomponents.LUT4
+\rStoredData[3]_i_43\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80"
+      INIT => X"FFFFFFFFAAAAA888"
     )
         port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_45_n_0\
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_43_n_0\
     );
-\rStoredData[3]_i_46\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_44\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"01111111FFFFFFFF"
+      INIT => X"01FF"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_44_n_0\
+    );
+\rStoredData[3]_i_45\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF000000C80000FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_45_n_0\
+    );
+\rStoredData[3]_i_46\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFA8880000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
       O => \rStoredData[3]_i_46_n_0\
     );
 \rStoredData[3]_i_47\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAA880001115555"
+      INIT => X"0F0F0F0F7FFFFFF0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_47_n_0\
     );
 \rStoredData[3]_i_48\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"333333BB33339CCC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_48_n_0\
-    );
-\rStoredData[3]_i_49\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"2BF5ABF4"
+      INIT => X"AAAAAAA811111115"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_49_n_0\
-    );
-\rStoredData[3]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData_reg[3]_i_15_n_0\,
-      I1 => \rStoredData_reg[3]_i_16_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[3]_i_17_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[3]_i_18_n_0\,
-      O => \rStoredData[3]_i_5_n_0\
-    );
-\rStoredData[3]_i_50\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000FAAA555FB5F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_50_n_0\
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_48_n_0\
     );
-\rStoredData[3]_i_55\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_53__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"57770000FFFFFFFF"
+      INIT => X"FFFE0000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_55_n_0\
-    );
-\rStoredData[3]_i_56\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFF5FDF550004000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
       I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_56_n_0\
-    );
-\rStoredData[3]_i_57\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"000010FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_57_n_0\
+      O => \rStoredData[3]_i_53__1_n_0\
     );
-\rStoredData[3]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData_reg[3]_i_19_n_0\,
-      I1 => \rStoredData_reg[3]_i_20_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[3]_i_21_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[3]_i_22_n_0\,
-      O => \rStoredData[3]_i_6_n_0\
-    );
-\rStoredData[3]_i_60__1\: unisim.vcomponents.LUT3
+\rStoredData[3]_i_54__1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"01"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_60__1_n_0\
-    );
-\rStoredData[3]_i_61__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFF8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      O => \rStoredData[3]_i_61__1_n_0\
+      O => \rStoredData[3]_i_54__1_n_0\
     );
-\rStoredData[3]_i_62\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_55\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A222776623774558"
+      INIT => X"5555555544226222"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[3]_i_62_n_0\
-    );
-\rStoredData[3]_i_63\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000A0A0ABFFFFFF5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_63_n_0\
+      O => \rStoredData[3]_i_55_n_0\
     );
-\rStoredData[3]_i_64\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"55555555520A420A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_64_n_0\
-    );
-\rStoredData[3]_i_65\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_56\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9555555555555550"
     )
@@ -3788,14 +3751,38 @@ begin
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_65_n_0\
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_56_n_0\
     );
-\rStoredData[3]_i_66\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_57\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"AAAAAAAAB9B9B99D"
+      INIT => X"57FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_57_n_0\
+    );
+\rStoredData[3]_i_58\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A724273526752678"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[3]_i_58_n_0\
+    );
+\rStoredData[3]_i_59\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"02220222BFFDFFFD"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -3804,15 +3791,119 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_59_n_0\
+    );
+\rStoredData[3]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_17_n_0\,
+      I1 => \rStoredData[3]_i_18_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData_reg[3]_i_19_n_0\,
+      I4 => s_axis_video_tdata(8),
+      I5 => \rStoredData_reg[3]_i_20_n_0\,
+      O => \rStoredData[3]_i_6_n_0\
+    );
+\rStoredData[3]_i_60\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000003BBB3BBF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_60_n_0\
+    );
+\rStoredData[3]_i_61\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFDD55445444"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_61_n_0\
+    );
+\rStoredData[3]_i_62\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6222222222AAAAAB"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_62_n_0\
+    );
+\rStoredData[3]_i_63\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"999DD55555555555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_63_n_0\
+    );
+\rStoredData[3]_i_64\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FF0F0F0F0F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_64_n_0\
+    );
+\rStoredData[3]_i_65\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000005777FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[3]_i_65_n_0\
+    );
+\rStoredData[3]_i_66\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEEEEAAAAAAA8888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_66_n_0\
     );
 \rStoredData[3]_i_67\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AAA81555"
+      INIT => X"033337FF"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(9),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(4),
@@ -3820,564 +3911,369 @@ begin
     );
 \rStoredData[3]_i_68\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"62AAAAAA2AAAAAAB"
+      INIT => X"15151717E8E9E9E1"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_68_n_0\
     );
 \rStoredData[3]_i_69\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C0C3830333333333"
+      INIT => X"6E6E666255563725"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_69_n_0\
-    );
-\rStoredData[3]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FCBBFC88FF88FF88"
-    )
-        port map (
-      I0 => \rStoredData[7]_i_8__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[3]_i_23__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_24__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_7_n_0\
     );
 \rStoredData[3]_i_70\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FD55F555400A000A"
+      INIT => X"15151757E8E9E1A1"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_70_n_0\
     );
-\rStoredData[3]_i_71\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_71\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAA1"
+      INIT => X"6E6A62625656272C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_71_n_0\
-    );
-\rStoredData[3]_i_72\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CCCFB333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[3]_i_71_n_0\
+    );
+\rStoredData[3]_i_72\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFAEAAAA0805557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_72_n_0\
     );
 \rStoredData[3]_i_73\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAA89999911"
+      INIT => X"AA57AA5A552F5AB5"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_73_n_0\
     );
 \rStoredData[3]_i_74\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33334CCC3000CCCC"
+      INIT => X"FEEEEAAA88815557"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_74_n_0\
     );
 \rStoredData[3]_i_75\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3333333333304CCC"
+      INIT => X"A55BA74BA669866C"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_75_n_0\
     );
 \rStoredData[3]_i_76\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5F5FAAAA5F5EAAAA"
+      INIT => X"0333FCC00337FC83"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_76_n_0\
     );
 \rStoredData[3]_i_77\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE00000000"
+      INIT => X"66EE466255563265"
     )
         port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_77_n_0\
     );
 \rStoredData[3]_i_78\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"504040400A0A0A0A"
+      INIT => X"6E6E62625656272C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_78_n_0\
     );
 \rStoredData[3]_i_79\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAA080FFFFFFFF"
+      INIT => X"FFFAEAAAA0805555"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_79_n_0\
     );
-\rStoredData[3]_i_8\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_8\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8BBB888"
+      INIT => X"88B8FFFF88B80000"
     )
         port map (
-      I0 => \rStoredData[3]_i_25_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[3]_i_26_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_27_n_0\,
+      I0 => \rStoredData[3]_i_23_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[3]_i_24_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[3]_i_25_n_0\,
       O => \rStoredData[3]_i_8_n_0\
     );
 \rStoredData[3]_i_80\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAA80FFFFFFFF"
+      INIT => X"AA57AA5A552F52B5"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_80_n_0\
     );
-\rStoredData[3]_i_81\: unisim.vcomponents.LUT4
+\rStoredData[3]_i_81\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF01"
+      INIT => X"A55BA74BA669A66C"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_81_n_0\
     );
 \rStoredData[3]_i_82\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001555500000000"
+      INIT => X"5555555566666662"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_82_n_0\
     );
 \rStoredData[3]_i_83\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFD55555554"
+      INIT => X"55555555666E666A"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_83_n_0\
     );
-\rStoredData[3]_i_84\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_84\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBFFDFD"
+      INIT => X"55555555EEAAEAAA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_84_n_0\
     );
 \rStoredData[3]_i_85\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1555555500000000"
+      INIT => X"776E76EEAAAAAAAA"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_85_n_0\
     );
 \rStoredData[3]_i_86\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5F0F4F0F0F2A0AAA"
+      INIT => X"D5470F0F0F0A0A0A"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_86_n_0\
     );
 \rStoredData[3]_i_87\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EA99BB99AB99BB99"
+      INIT => X"AAAAABBBDDDDDDDD"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_87_n_0\
     );
-\rStoredData[3]_i_88\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_88\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF08000"
+      INIT => X"00FF0700FF00FF00"
     )
         port map (
       I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_88_n_0\
     );
 \rStoredData[3]_i_89\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00010101777F7F7F"
+      INIT => X"333333333C4C0CCC"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_89_n_0\
     );
+\rStoredData[3]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B8CCFFFFB8CC0000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_26__1_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[3]_i_27__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_28_n_0\,
+      O => \rStoredData[3]_i_9_n_0\
+    );
 \rStoredData[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBBBBB8BBB8BBB8"
+      INIT => X"BBBBBBBBBBB8B8B8"
     )
         port map (
       I0 => p_0_out(4),
       I1 => sGammaReg(2),
       I2 => \rStoredData[4]_i_3_n_0\,
-      I3 => \rStoredData[4]_i_4_n_0\,
-      I4 => \rStoredData_reg[4]_i_5_n_0\,
-      I5 => \sGammaReg_reg[1]\,
+      I3 => \rStoredData_reg[4]_i_4_n_0\,
+      I4 => \sGammaReg_reg[0]\,
+      I5 => \rStoredData[4]_i_5_n_0\,
       O => p_0_in(4)
     );
-\rStoredData[4]_i_11\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3077304430FF30FF"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_28_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[5]_i_29_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_25_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_11_n_0\
-    );
 \rStoredData[4]_i_12\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFC88888888"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_26_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[4]_i_27_n_0\,
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_12_n_0\
-    );
-\rStoredData[4]_i_15\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B888FFFFB8880000"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_19__1_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[4]_i_32_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData_reg[4]_i_33_n_0\,
-      O => \rStoredData[4]_i_15_n_0\
-    );
-\rStoredData[4]_i_16\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AF00AF00FCFFFC00"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_34__1_n_0\,
-      I1 => \rStoredData[4]_i_35__1_n_0\,
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(7),
-      I4 => \rStoredData[3]_i_27_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_16_n_0\
-    );
-\rStoredData[4]_i_17\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B8BB3333B8BB0000"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_36__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_37__1_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[6]_i_7_n_0\,
-      O => \rStoredData[4]_i_17_n_0\
-    );
-\rStoredData[4]_i_18\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF80000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(7),
-      O => \rStoredData[4]_i_18_n_0\
-    );
-\rStoredData[4]_i_19\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[4]_i_38_n_0\,
-      I1 => \rStoredData[4]_i_39_n_0\,
+      I0 => \rStoredData_reg[4]_i_30_n_0\,
+      I1 => \rStoredData_reg[4]_i_31_n_0\,
       I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[4]_i_40_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[4]_i_41_n_0\,
-      O => \rStoredData[4]_i_19_n_0\
+      I3 => \rStoredData_reg[4]_i_32_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData_reg[4]_i_33_n_0\,
+      O => \rStoredData[4]_i_12_n_0\
     );
-\rStoredData[4]_i_20\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_13\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E5A5E0A5A5A5A5A5"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[4]_i_42__1_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[4]_i_43__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_20_n_0\
+      I0 => \rStoredData[4]_i_34_n_0\,
+      I1 => \rStoredData_reg[4]_i_31_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[4]_i_35_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData_reg[4]_i_33_n_0\,
+      O => \rStoredData[4]_i_13_n_0\
     );
-\rStoredData[4]_i_21\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_15\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00B8FFFF00B80000"
+      INIT => X"AF0FAF00C0C0C0C0"
     )
         port map (
-      I0 => \rStoredData[4]_i_44_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[4]_i_45_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[4]_i_46_n_0\,
-      O => \rStoredData[4]_i_21_n_0\
-    );
-\rStoredData[4]_i_22\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B8BBB888B8BBB8BB"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_47_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_7__1_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[4]_i_48__0_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_22_n_0\
-    );
-\rStoredData[4]_i_23\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"B8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_49_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[4]_i_50_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_51_n_0\,
-      O => \rStoredData[4]_i_23_n_0\
-    );
-\rStoredData[4]_i_24\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F00DFDF0F00D0D0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[4]_i_52_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData[5]_i_30_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[4]_i_53_n_0\,
-      O => \rStoredData[4]_i_24_n_0\
-    );
-\rStoredData[4]_i_25\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00007FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_25_n_0\
-    );
-\rStoredData[4]_i_26\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFCCC8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_26_n_0\
-    );
-\rStoredData[4]_i_27\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_27_n_0\
-    );
-\rStoredData[4]_i_28\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BBB8FF33BBB8CC00"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_54_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_37__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[4]_i_55_n_0\,
-      O => \rStoredData[4]_i_28_n_0\
-    );
-\rStoredData[4]_i_29\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFC0FFFFBFC00000"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_56__1_n_0\,
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData[4]_i_57_n_0\,
-      O => \rStoredData[4]_i_29_n_0\
-    );
-\rStoredData[4]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0E020E0E0E020202"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => sGammaReg(0),
-      I2 => sGammaReg(1),
-      I3 => \rStoredData_reg[4]_i_8_n_0\,
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData_reg[4]_i_9_n_0\,
-      O => \rStoredData[4]_i_3_n_0\
-    );
-\rStoredData[4]_i_30\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFCFAFC000C000C0"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_58__1_n_0\,
-      I1 => \rStoredData[5]_i_35_n_0\,
+      I0 => \rStoredData[4]_i_38__1_n_0\,
+      I1 => \rStoredData[5]_i_34_n_0\,
       I2 => s_axis_video_tdata(7),
       I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[4]_i_59__1_n_0\,
+      I4 => \rStoredData[4]_i_39__1_n_0\,
       I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_30_n_0\
+      O => \rStoredData[4]_i_15_n_0\
     );
-\rStoredData[4]_i_31\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CCCCCCCFF3F3F3B3"
     )
@@ -4388,746 +4284,986 @@ begin
       I3 => s_axis_video_tdata(4),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_31_n_0\
+      O => \rStoredData[4]_i_16_n_0\
     );
-\rStoredData[4]_i_32\: unisim.vcomponents.LUT4
+\rStoredData[4]_i_17__1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFEA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_32_n_0\
-    );
-\rStoredData[4]_i_34__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_34__1_n_0\
-    );
-\rStoredData[4]_i_35__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFC888"
+      INIT => X"E"
     )
         port map (
       I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      O => \rStoredData[4]_i_17__1_n_0\
+    );
+\rStoredData[4]_i_18\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFFFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_18_n_0\
+    );
+\rStoredData[4]_i_19\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFEEEAAAA"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_35__1_n_0\
-    );
-\rStoredData[4]_i_36__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_36__1_n_0\
-    );
-\rStoredData[4]_i_37__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00003F7F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_37__1_n_0\
-    );
-\rStoredData[4]_i_38\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000557F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_38_n_0\
-    );
-\rStoredData[4]_i_39\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A000800000000001"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_39_n_0\
-    );
-\rStoredData[4]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[4]_i_10_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_11_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[4]_i_12_n_0\,
-      I5 => \sGammaReg_reg[0]\,
-      O => \rStoredData[4]_i_4_n_0\
-    );
-\rStoredData[4]_i_40\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFEAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_40_n_0\
-    );
-\rStoredData[4]_i_41\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFAAFEAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_41_n_0\
+      O => \rStoredData[4]_i_19_n_0\
     );
-\rStoredData[4]_i_42__1\: unisim.vcomponents.LUT4
+\rStoredData[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFC8"
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_6_n_0\,
+      I1 => \rStoredData[4]_i_7_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[4]_i_8_n_0\,
+      I4 => s_axis_video_tdata(8),
+      I5 => \rStoredData[4]_i_9_n_0\,
+      O => p_0_out(4)
+    );
+\rStoredData[4]_i_20\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFEA0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_20_n_0\
+    );
+\rStoredData[4]_i_21__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_21__1_n_0\
+    );
+\rStoredData[4]_i_22\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"000057FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_22_n_0\
+    );
+\rStoredData[4]_i_23__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFE00000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_23__1_n_0\
+    );
+\rStoredData[4]_i_24__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
     )
         port map (
       I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_42__1_n_0\
+      O => \rStoredData[4]_i_24__1_n_0\
     );
-\rStoredData[4]_i_43__1\: unisim.vcomponents.LUT3
+\rStoredData[4]_i_26\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7F"
+      INIT => X"22FF22FFF0FFF000"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      O => \rStoredData[4]_i_43__1_n_0\
-    );
-\rStoredData[4]_i_44\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00001555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_44_n_0\
-    );
-\rStoredData[4]_i_45\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"1F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_45_n_0\
-    );
-\rStoredData[4]_i_46\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFCCCCCCCC8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
+      I0 => \rStoredData[4]_i_42__1_n_0\,
       I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
+      I2 => \rStoredData[5]_i_21_n_0\,
+      I3 => s_axis_video_tdata(6),
+      I4 => \rStoredData[4]_i_43_n_0\,
       I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_46_n_0\
+      O => \rStoredData[4]_i_26_n_0\
     );
-\rStoredData[4]_i_47\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_27\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"300C040CCCCCCCCC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_47_n_0\
-    );
-\rStoredData[4]_i_48__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"5777FFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_48__0_n_0\
-    );
-\rStoredData[4]_i_49\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A889A98955555555"
+      INIT => X"EAEAAAAA55005555"
     )
         port map (
       I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_49_n_0\
+      I1 => \rStoredData[4]_i_44__1_n_0\,
+      I2 => s_axis_video_tdata(4),
+      I3 => \rStoredData[5]_i_20__1_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_27_n_0\
     );
-\rStoredData[4]_i_50\: unisim.vcomponents.LUT5
+\rStoredData[4]_i_28\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80033333"
+      INIT => X"33BB338830883088"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_50_n_0\
+      I0 => \rStoredData[4]_i_45_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_46__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[4]_i_47__1_n_0\,
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_28_n_0\
     );
-\rStoredData[4]_i_51\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_29\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAFFF555554000"
+      INIT => X"BBBBBB88B8BBB8BB"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_48_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_49_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[7]_i_7__1_n_0\,
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_29_n_0\
+    );
+\rStoredData[4]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0E020E0E0E020202"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => sGammaReg(0),
+      I2 => sGammaReg(1),
+      I3 => \rStoredData_reg[4]_i_10_n_0\,
+      I4 => s_axis_video_tdata(7),
+      I5 => \rStoredData_reg[4]_i_11_n_0\,
+      O => \rStoredData[4]_i_3_n_0\
+    );
+\rStoredData[4]_i_34\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"CDFFCD00"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_51_n_0\
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[4]_i_58_n_0\,
+      O => \rStoredData[4]_i_34_n_0\
     );
-\rStoredData[4]_i_52\: unisim.vcomponents.LUT5
+\rStoredData[4]_i_36\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000007F"
+      INIT => X"BBFCF333BBFCC000"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_52_n_0\
-    );
-\rStoredData[4]_i_53\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFEEEEEAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_53_n_0\
-    );
-\rStoredData[4]_i_54\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"555454540A2A2A2A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_54_n_0\
-    );
-\rStoredData[4]_i_55\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FEEEFFFF00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I0 => \rStoredData[3]_i_24_n_0\,
+      I1 => s_axis_video_tdata(7),
+      I2 => \rStoredData[4]_i_61_n_0\,
+      I3 => s_axis_video_tdata(5),
       I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_55_n_0\
+      I5 => \rStoredData[4]_i_62_n_0\,
+      O => \rStoredData[4]_i_36_n_0\
     );
-\rStoredData[4]_i_56__1\: unisim.vcomponents.LUT4
+\rStoredData[4]_i_37\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"07FF"
+      INIT => X"BCCCFFFFBCCC0000"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_56__1_n_0\
+      I0 => \rStoredData[4]_i_63_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => \rStoredData[4]_i_64_n_0\,
+      O => \rStoredData[4]_i_37_n_0\
     );
-\rStoredData[4]_i_57\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"001FFFFFFFF00000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_57_n_0\
-    );
-\rStoredData[4]_i_58__1\: unisim.vcomponents.LUT5
+\rStoredData[4]_i_38__1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"FFFF8000"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_58__1_n_0\
-    );
-\rStoredData[4]_i_59__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFCCC8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_59__1_n_0\
+      O => \rStoredData[4]_i_38__1_n_0\
     );
-\rStoredData[4]_i_60\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_39__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"666663733333322A"
+      INIT => X"FFFFAAA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_39__1_n_0\
+    );
+\rStoredData[4]_i_40\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"636363636332723A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_60_n_0\
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[4]_i_40_n_0\
     );
-\rStoredData[4]_i_61\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_41\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555F55FFEAAAAAAA"
+      INIT => X"57775777EAAAAAAA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_41_n_0\
+    );
+\rStoredData[4]_i_42__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"A0800000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_42__1_n_0\
+    );
+\rStoredData[4]_i_43\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFC444C440"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_43_n_0\
+    );
+\rStoredData[4]_i_44__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFC8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_44__1_n_0\
+    );
+\rStoredData[4]_i_45\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000F0F0F7FFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_45_n_0\
+    );
+\rStoredData[4]_i_46__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_46__1_n_0\
+    );
+\rStoredData[4]_i_47__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_47__1_n_0\
+    );
+\rStoredData[4]_i_48\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0037FFFFC0000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_48_n_0\
+    );
+\rStoredData[4]_i_49\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"557FFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_49_n_0\
+    );
+\rStoredData[4]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEE222E200000000"
+    )
+        port map (
+      I0 => \rStoredData_reg[4]_i_14_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[4]_i_15_n_0\,
+      I3 => s_axis_video_tdata(8),
+      I4 => \rStoredData[4]_i_16_n_0\,
+      I5 => \sGammaReg_reg[1]\,
+      O => \rStoredData[4]_i_5_n_0\
+    );
+\rStoredData[4]_i_50\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AA888155"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_50_n_0\
+    );
+\rStoredData[4]_i_51\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FFFF01FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_51_n_0\
+    );
+\rStoredData[4]_i_52\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AA880155"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_52_n_0\
+    );
+\rStoredData[4]_i_53\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FFFE5557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_53_n_0\
+    );
+\rStoredData[4]_i_54\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3F3FFF3F33C337F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_54_n_0\
+    );
+\rStoredData[4]_i_55\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E0E0E0E05F5E7E7E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_55_n_0\
+    );
+\rStoredData[4]_i_56\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3F3FFF3F33C33FB0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_56_n_0\
+    );
+\rStoredData[4]_i_57\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E0E0E0A05F5E7E7E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_57_n_0\
+    );
+\rStoredData[4]_i_58\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AAA88155"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_58_n_0\
+    );
+\rStoredData[4]_i_59\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7577F7F759595D7C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_59_n_0\
+    );
+\rStoredData[4]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAAAAAA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(4),
+      I2 => \rStoredData[4]_i_17__1_n_0\,
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_6_n_0\
+    );
+\rStoredData[4]_i_60\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FC00FC0033FF37FC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_60_n_0\
+    );
+\rStoredData[4]_i_61\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFEA0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
       O => \rStoredData[4]_i_61_n_0\
+    );
+\rStoredData[4]_i_62\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000FFFF57FF0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_62_n_0\
+    );
+\rStoredData[4]_i_63\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"15FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_63_n_0\
+    );
+\rStoredData[4]_i_64\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F1F0FF0F0F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_64_n_0\
+    );
+\rStoredData[4]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_18_n_0\,
+      I1 => \rStoredData[4]_i_19_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[5]_i_18_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_20_n_0\,
+      O => \rStoredData[4]_i_7_n_0\
+    );
+\rStoredData[4]_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B8333333B8330000"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_21__1_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[4]_i_22_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_23__1_n_0\,
+      O => \rStoredData[4]_i_8_n_0\
+    );
+\rStoredData[4]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"005DFFFF005D0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[4]_i_24__1_n_0\,
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[4]_i_25_n_0\,
+      O => \rStoredData[4]_i_9_n_0\
     );
 \rStoredData[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBBBBBBBBBBBBB8"
+      INIT => X"BBBBBBBBBBB8B8B8"
     )
         port map (
       I0 => p_0_out(5),
       I1 => sGammaReg(2),
       I2 => \rStoredData[5]_i_3_n_0\,
-      I3 => \rStoredData[5]_i_4_n_0\,
-      I4 => \rStoredData[5]_i_5_n_0\,
-      I5 => \rStoredData[5]_i_6_n_0\,
+      I3 => \rStoredData_reg[5]_i_4_n_0\,
+      I4 => \sGammaReg_reg[0]\,
+      I5 => \rStoredData[5]_i_5_n_0\,
       O => p_0_in(5)
     );
-\rStoredData[5]_i_10\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_10\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"55040504FFFFFFFF"
+      INIT => X"B8"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_24__1_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_25__0_n_0\,
-      I5 => s_axis_video_tdata(6),
+      I0 => \rStoredData[5]_i_25_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[5]_i_26_n_0\,
       O => \rStoredData[5]_i_10_n_0\
     );
 \rStoredData[5]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFF15555555"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => \rStoredData[5]_i_26__1_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(9),
+      I0 => \rStoredData[5]_i_27_n_0\,
+      I1 => \rStoredData[5]_i_25_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[5]_i_28_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData[5]_i_29_n_0\,
       O => \rStoredData[5]_i_11_n_0\
     );
 \rStoredData[5]_i_12\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"88BB88BBB8BBB888"
+      INIT => X"F3F3B3B330303000"
     )
         port map (
-      I0 => \rStoredData[6]_i_12_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[5]_i_27_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[5]_i_28_n_0\,
-      I5 => s_axis_video_tdata(5),
+      I0 => \rStoredData[5]_i_30__1_n_0\,
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[5]_i_31__1_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
       O => \rStoredData[5]_i_12_n_0\
     );
-\rStoredData[5]_i_13\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FCBB"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_29_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[5]_i_30_n_0\,
-      I3 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_13_n_0\
-    );
-\rStoredData[5]_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FF55FF55EA55EA00"
-    )
-        port map (
-      I0 => s_axis_video_tdata(9),
-      I1 => s_axis_video_tdata(5),
-      I2 => \rStoredData[5]_i_28_n_0\,
-      I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_31_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_14_n_0\
-    );
-\rStoredData[5]_i_15\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FBFB333333300000"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_32__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[5]_i_21__1_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_15_n_0\
-    );
-\rStoredData[5]_i_16\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"8383330333333333"
     )
         port map (
-      I0 => \rStoredData[5]_i_32__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[5]_i_33_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_16_n_0\
-    );
-\rStoredData[5]_i_17\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0FFF0F0AF8FAF8F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[5]_i_34_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_35_n_0\,
-      I5 => s_axis_video_tdata(7),
-      O => \rStoredData[5]_i_17_n_0\
-    );
-\rStoredData[5]_i_18\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8080000003033303"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_36__1_n_0\,
+      I0 => \rStoredData[5]_i_30__1_n_0\,
       I1 => s_axis_video_tdata(7),
       I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[5]_i_24__1_n_0\,
+      I3 => \rStoredData[5]_i_32__1_n_0\,
       I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_18_n_0\
+      O => \rStoredData[5]_i_13_n_0\
     );
-\rStoredData[5]_i_19__1\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_14\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000000007FFFFFFF"
+      INIT => X"F0FFF0F0EF0FEF0F"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_33_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(6),
+      I4 => \rStoredData[5]_i_34_n_0\,
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_14_n_0\
+    );
+\rStoredData[5]_i_15__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FAEAAAAA00000000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_19__1_n_0\
+      O => \rStoredData[5]_i_15__1_n_0\
     );
-\rStoredData[5]_i_20\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_16\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000001FFFFFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_16_n_0\
+    );
+\rStoredData[5]_i_17\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"B833B83333333300"
     )
         port map (
       I0 => \rStoredData[6]_i_18__1_n_0\,
       I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[5]_i_24__1_n_0\,
+      I2 => \rStoredData[4]_i_24__1_n_0\,
       I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_32__1_n_0\,
+      I4 => \rStoredData[5]_i_30__1_n_0\,
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_20_n_0\
+      O => \rStoredData[5]_i_17_n_0\
     );
-\rStoredData[5]_i_21__1\: unisim.vcomponents.LUT4
+\rStoredData[5]_i_18\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C080"
+      INIT => X"000000007FFFFFFF"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_18_n_0\
+    );
+\rStoredData[5]_i_19\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"80000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_19_n_0\
+    );
+\rStoredData[5]_i_20__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_20__1_n_0\
+    );
+\rStoredData[5]_i_21\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"02220222AAAAAAAB"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
-      O => \rStoredData[5]_i_21__1_n_0\
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_21_n_0\
     );
 \rStoredData[5]_i_22\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEAFAEA00000000"
+      INIT => X"FEAA0000FFFFFFFF"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_37__1_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_38__1_n_0\,
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[5]_i_22_n_0\
     );
 \rStoredData[5]_i_23\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C0C08080FCCCCCCC"
+      INIT => X"00000000A8880000"
     )
         port map (
-      I0 => \rStoredData[7]_i_10__1_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[5]_i_32__1_n_0\,
-      I4 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(9),
       O => \rStoredData[5]_i_23_n_0\
     );
-\rStoredData[5]_i_24__1\: unisim.vcomponents.LUT4
+\rStoredData[5]_i_24\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001"
+      INIT => X"FFFFFFF0F080F000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_24_n_0\
+    );
+\rStoredData[5]_i_25\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAAAA5555233B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_25_n_0\
+    );
+\rStoredData[5]_i_26\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"B8FFB800"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_35_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[5]_i_36_n_0\,
+      I3 => s_axis_video_tdata(1),
+      I4 => \rStoredData[5]_i_29_n_0\,
+      O => \rStoredData[5]_i_26_n_0\
+    );
+\rStoredData[5]_i_27\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAAAA55552333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_27_n_0\
+    );
+\rStoredData[5]_i_29\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAA44009995FEEE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_29_n_0\
+    );
+\rStoredData[5]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"31223100"
+    )
+        port map (
+      I0 => sGammaReg(0),
+      I1 => sGammaReg(1),
+      I2 => \rStoredData[5]_i_8_n_0\,
+      I3 => s_axis_video_tdata(7),
+      I4 => \rStoredData[5]_i_9_n_0\,
+      O => \rStoredData[5]_i_3_n_0\
+    );
+\rStoredData[5]_i_30__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"EA00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[5]_i_30__1_n_0\
+    );
+\rStoredData[5]_i_31__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"C800"
     )
         port map (
       I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      O => \rStoredData[5]_i_24__1_n_0\
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[5]_i_31__1_n_0\
     );
-\rStoredData[5]_i_25__0\: unisim.vcomponents.LUT3
+\rStoredData[5]_i_32__1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"07"
+      INIT => X"1F"
     )
         port map (
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_25__0_n_0\
-    );
-\rStoredData[5]_i_26__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      O => \rStoredData[5]_i_26__1_n_0\
-    );
-\rStoredData[5]_i_27\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"1F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_27_n_0\
-    );
-\rStoredData[5]_i_28\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_28_n_0\
-    );
-\rStoredData[5]_i_29\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FEEEEEEE00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_29_n_0\
-    );
-\rStoredData[5]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[5]_i_9_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[5]_i_10_n_0\,
-      I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_11_n_0\,
-      I5 => \sGammaReg_reg[0]_0\,
-      O => \rStoredData[5]_i_3_n_0\
-    );
-\rStoredData[5]_i_30\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000111FFFFFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_30_n_0\
-    );
-\rStoredData[5]_i_31\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAAAAAAA00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_31_n_0\
-    );
-\rStoredData[5]_i_32__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"F080"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
       O => \rStoredData[5]_i_32__1_n_0\
     );
-\rStoredData[5]_i_33\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"1F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_33_n_0\
-    );
-\rStoredData[5]_i_34\: unisim.vcomponents.LUT2
+\rStoredData[5]_i_33\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_34_n_0\
+      O => \rStoredData[5]_i_33_n_0\
     );
-\rStoredData[5]_i_35\: unisim.vcomponents.LUT5
+\rStoredData[5]_i_34\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"000057FF"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_34_n_0\
+    );
+\rStoredData[5]_i_35\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFE000FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
       O => \rStoredData[5]_i_35_n_0\
     );
-\rStoredData[5]_i_36__1\: unisim.vcomponents.LUT3
+\rStoredData[5]_i_36\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80"
+      INIT => X"C000CC003337FCCC"
     )
         port map (
       I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_36_n_0\
+    );
+\rStoredData[5]_i_37\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C000CC803337FCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_37_n_0\
+    );
+\rStoredData[5]_i_38\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFE000000FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      O => \rStoredData[5]_i_36__1_n_0\
-    );
-\rStoredData[5]_i_37__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      O => \rStoredData[5]_i_37__1_n_0\
-    );
-\rStoredData[5]_i_38__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_38__1_n_0\
-    );
-\rStoredData[5]_i_4\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"02"
-    )
-        port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => sGammaReg(1),
-      I2 => sGammaReg(0),
-      O => \rStoredData[5]_i_4_n_0\
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_38_n_0\
     );
 \rStoredData[5]_i_5\: unisim.vcomponents.LUT6
     generic map(
@@ -5135,150 +5271,158 @@ begin
     )
         port map (
       I0 => \rStoredData[5]_i_12_n_0\,
-      I1 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(8),
       I2 => \rStoredData[5]_i_13_n_0\,
-      I3 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(9),
       I4 => \rStoredData[5]_i_14_n_0\,
-      I5 => \sGammaReg_reg[0]\,
+      I5 => \sGammaReg_reg[1]\,
       O => \rStoredData[5]_i_5_n_0\
     );
 \rStoredData[5]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFE200E200000000"
+      INIT => X"CCFCBB33CCFC8800"
     )
         port map (
-      I0 => \rStoredData[5]_i_15_n_0\,
+      I0 => \rStoredData[5]_i_15__1_n_0\,
       I1 => s_axis_video_tdata(8),
       I2 => \rStoredData[5]_i_16_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_17_n_0\,
-      I5 => \sGammaReg_reg[1]\,
+      I3 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[5]_i_17_n_0\,
       O => \rStoredData[5]_i_6_n_0\
     );
-\rStoredData[5]_i_7\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_7\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B8BBBBBBB8BB8888"
+      INIT => X"FFFFAD0D"
     )
         port map (
-      I0 => \rStoredData[5]_i_18_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[5]_i_19__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData[5]_i_20_n_0\,
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[5]_i_18_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[5]_i_19_n_0\,
+      I4 => s_axis_video_tdata(8),
       O => \rStoredData[5]_i_7_n_0\
     );
 \rStoredData[5]_i_8\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFEEEAAAAA"
+      INIT => X"A0AFA0A0EFFFEFFF"
     )
         port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(5),
-      I2 => \rStoredData[5]_i_21__1_n_0\,
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(9),
+      I0 => s_axis_video_tdata(9),
+      I1 => \rStoredData[5]_i_20__1_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_21_n_0\,
+      I5 => s_axis_video_tdata(6),
       O => \rStoredData[5]_i_8_n_0\
+    );
+\rStoredData[5]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFAFAFA0C000C000"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_22_n_0\,
+      I1 => \rStoredData[5]_i_23_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_24_n_0\,
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_9_n_0\
+    );
+\rStoredData[6]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBBBBBBB8B8B8"
+    )
+        port map (
+      I0 => p_0_out(6),
+      I1 => sGammaReg(2),
+      I2 => \rStoredData[6]_i_3_n_0\,
+      I3 => \rStoredData[6]_i_4_n_0\,
+      I4 => \sGammaReg_reg[0]\,
+      I5 => \rStoredData[6]_i_5_n_0\,
+      O => p_0_in(6)
     );
 \rStoredData[6]_i_10\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFB3B3B3B0"
+      INIT => X"AAAAAAAAFFFFDCCC"
     )
         port map (
-      I0 => \rStoredData[6]_i_18__1_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[6]_i_19__1_n_0\,
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[6]_i_10_n_0\
     );
 \rStoredData[6]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFAAA80000"
+      INIT => X"AAAAAAAAFFFFDCC4"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(2),
-      I2 => \rStoredData[6]_i_20_n_0\,
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
       I5 => s_axis_video_tdata(8),
       O => \rStoredData[6]_i_11_n_0\
     );
-\rStoredData[6]_i_12\: unisim.vcomponents.LUT6
+\rStoredData[6]_i_13\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000000005555557F"
+      INIT => X"5555777FFFFFFFFF"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(6),
-      O => \rStoredData[6]_i_12_n_0\
-    );
-\rStoredData[6]_i_13\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FAEA0000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(6),
       O => \rStoredData[6]_i_13_n_0\
     );
 \rStoredData[6]_i_14\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000FFFF75FF0000"
+      INIT => X"FFFFFFFFEEEAAAAA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => \rStoredData[5]_i_33_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(8),
-      I5 => s_axis_video_tdata(7),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
       O => \rStoredData[6]_i_14_n_0\
     );
-\rStoredData[6]_i_15\: unisim.vcomponents.LUT6
+\rStoredData[6]_i_15__1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFAAAAA888"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_10__1_n_0\,
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(8),
-      O => \rStoredData[6]_i_15_n_0\
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[6]_i_15__1_n_0\
     );
 \rStoredData[6]_i_16__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"7FFF"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
       O => \rStoredData[6]_i_16__1_n_0\
     );
-\rStoredData[6]_i_17__1\: unisim.vcomponents.LUT5
+\rStoredData[6]_i_17__1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFFE0000"
+      INIT => X"8"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
       O => \rStoredData[6]_i_17__1_n_0\
     );
 \rStoredData[6]_i_18__1\: unisim.vcomponents.LUT3
@@ -5286,130 +5430,159 @@ begin
       INIT => X"F8"
     )
         port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(3),
       O => \rStoredData[6]_i_18__1_n_0\
     );
-\rStoredData[6]_i_19__1\: unisim.vcomponents.LUT3
+\rStoredData[6]_i_19__1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FE"
+      INIT => X"E"
     )
         port map (
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
       O => \rStoredData[6]_i_19__1_n_0\
     );
-\rStoredData[6]_i_2\: unisim.vcomponents.LUT6
+\rStoredData[6]_i_20\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"AAAAABFFFFFF0000"
     )
         port map (
-      I0 => \rStoredData[6]_i_4_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[6]_i_5_n_0\,
-      I3 => sGammaReg(1),
-      I4 => sGammaReg(0),
-      I5 => \rStoredData_reg[6]_i_6_n_0\,
-      O => p_1_in(6)
-    );
-\rStoredData[6]_i_20\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"F8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[6]_i_20_n_0\
+    );
+\rStoredData[6]_i_21\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAABFFFFFF0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => \rStoredData[6]_i_19__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_21_n_0\
     );
 \rStoredData[6]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE5555FFFE0000"
+      INIT => X"3131333322000000"
     )
         port map (
-      I0 => s_axis_video_tdata(8),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[6]_i_7_n_0\,
-      I3 => s_axis_video_tdata(7),
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[6]_i_8_n_0\,
-      O => p_0_out(6)
+      I0 => sGammaReg(0),
+      I1 => sGammaReg(1),
+      I2 => \rStoredData[6]_i_8_n_0\,
+      I3 => \rStoredData[6]_i_9_n_0\,
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_3_n_0\
     );
 \rStoredData[6]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCEEFFFFF0000000"
+      INIT => X"BF80FFFFBF800000"
     )
         port map (
-      I0 => \rStoredData[6]_i_9__1_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[6]_i_10_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => s_axis_video_tdata(8),
+      I0 => \rStoredData[6]_i_10_n_0\,
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => \rStoredData[6]_i_11_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData_reg[6]_i_12_n_0\,
       O => \rStoredData[6]_i_4_n_0\
     );
 \rStoredData[6]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E5E0EFEFE5E0EAEA"
+      INIT => X"EE62CC6200000000"
     )
         port map (
       I0 => s_axis_video_tdata(7),
-      I1 => \rStoredData[6]_i_11_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[6]_i_12_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData[6]_i_13_n_0\,
+      I1 => s_axis_video_tdata(8),
+      I2 => \rStoredData[6]_i_13_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[6]_i_14_n_0\,
+      I5 => \sGammaReg_reg[1]\,
       O => \rStoredData[6]_i_5_n_0\
+    );
+\rStoredData[6]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DDDDDDDDD8C8C888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[6]_i_15__1_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_6_n_0\
     );
 \rStoredData[6]_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE00000000"
+      INIT => X"FFFFFFFF11115515"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(6),
+      I2 => s_axis_video_tdata(4),
+      I3 => \rStoredData[6]_i_16__1_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[6]_i_7_n_0\
     );
 \rStoredData[6]_i_8\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0FBF0FBFFFF0F0F0"
+      INIT => X"CDDDDDDDDDDDDDDD"
     )
         port map (
-      I0 => \rStoredData[6]_i_16__1_n_0\,
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(7),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[6]_i_17__1_n_0\,
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(3),
+      I3 => \rStoredData[6]_i_17__1_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(5),
       O => \rStoredData[6]_i_8_n_0\
     );
-\rStoredData[6]_i_9__1\: unisim.vcomponents.LUT5
+\rStoredData[6]_i_9\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7FFFFFFF"
+      INIT => X"EFEFAFAA00000000"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[6]_i_9__1_n_0\
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[6]_i_18__1_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[6]_i_15__1_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_9_n_0\
     );
-\rStoredData[7]_i_10__1\: unisim.vcomponents.LUT3
+\rStoredData[7]_i_10\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C8"
+      INIT => X"FFFFFFFFC8C8C888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(7),
+      I1 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[7]_i_10_n_0\
+    );
+\rStoredData[7]_i_11__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"E0"
     )
         port map (
       I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      O => \rStoredData[7]_i_10__1_n_0\
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      O => \rStoredData[7]_i_11__1_n_0\
     );
 \rStoredData[7]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -5424,41 +5597,43 @@ begin
       I5 => \rStoredData[7]_i_6_n_0\,
       O => p_1_in(7)
     );
-\rStoredData[7]_i_3\: unisim.vcomponents.LUT5
+\rStoredData[7]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFEAAA"
+      INIT => X"FFFFFFFFFFFFE000"
     )
         port map (
-      I0 => s_axis_video_tdata(9),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_7__1_n_0\,
-      I3 => s_axis_video_tdata(7),
-      I4 => s_axis_video_tdata(8),
-      O => p_0_out(7)
-    );
-\rStoredData[7]_i_4\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFE000"
-    )
-        port map (
-      I0 => \rStoredData[7]_i_8__1_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(8),
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[7]_i_7__1_n_0\,
+      I2 => s_axis_video_tdata(6),
       I3 => s_axis_video_tdata(7),
       I4 => s_axis_video_tdata(9),
+      I5 => s_axis_video_tdata(8),
+      O => p_0_out(7)
+    );
+\rStoredData[7]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFF8000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[7]_i_8__1_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[7]_i_4_n_0\
     );
 \rStoredData[7]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFCCCCC888"
+      INIT => X"FFB8FFBBFFB8CC88"
     )
         port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(8),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[7]_i_9_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(9),
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[7]_i_9_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData[7]_i_10_n_0\,
       O => \rStoredData[7]_i_5_n_0\
     );
 \rStoredData[7]_i_6\: unisim.vcomponents.LUT6
@@ -5467,47 +5642,47 @@ begin
     )
         port map (
       I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_10__1_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[7]_i_11__1_n_0\,
       I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
       I5 => s_axis_video_tdata(8),
       O => \rStoredData[7]_i_6_n_0\
     );
-\rStoredData[7]_i_7__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF80000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[7]_i_7__1_n_0\
-    );
-\rStoredData[7]_i_8__1\: unisim.vcomponents.LUT5
+\rStoredData[7]_i_7__1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"80000000"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[7]_i_8__1_n_0\
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[7]_i_7__1_n_0\
     );
-\rStoredData[7]_i_9\: unisim.vcomponents.LUT4
+\rStoredData[7]_i_8__1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFF8"
+      INIT => X"8000"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      O => \rStoredData[7]_i_8__1_n_0\
+    );
+\rStoredData[7]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FE000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[7]_i_9_n_0\
     );
 \rStoredData_reg[0]\: unisim.vcomponents.FDRE
@@ -5530,7 +5705,7 @@ begin
       I0 => \rStoredData_reg[0]_i_29_n_0\,
       I1 => \rStoredData_reg[0]_i_30_n_0\,
       O => \rStoredData_reg[0]_i_10_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_11\: unisim.vcomponents.MUXF8
      port map (
@@ -5565,28 +5740,28 @@ begin
       I0 => \rStoredData_reg[0]_i_39_n_0\,
       I1 => \rStoredData_reg[0]_i_40_n_0\,
       O => \rStoredData_reg[0]_i_15_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_16\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_41_n_0\,
       I1 => \rStoredData_reg[0]_i_42_n_0\,
       O => \rStoredData_reg[0]_i_16_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_17\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_43_n_0\,
       I1 => \rStoredData_reg[0]_i_44_n_0\,
       O => \rStoredData_reg[0]_i_17_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_18\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_45_n_0\,
       I1 => \rStoredData_reg[0]_i_46_n_0\,
       O => \rStoredData_reg[0]_i_18_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_19\: unisim.vcomponents.MUXF8
      port map (
@@ -5677,189 +5852,189 @@ begin
       I0 => \rStoredData[0]_i_71_n_0\,
       I1 => \rStoredData[0]_i_72_n_0\,
       O => \rStoredData_reg[0]_i_31_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_32\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_73_n_0\,
       I1 => \rStoredData[0]_i_74_n_0\,
       O => \rStoredData_reg[0]_i_32_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_33\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_75_n_0\,
       I1 => \rStoredData[0]_i_76_n_0\,
       O => \rStoredData_reg[0]_i_33_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_34\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_77_n_0\,
       I1 => \rStoredData[0]_i_78_n_0\,
       O => \rStoredData_reg[0]_i_34_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_35\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_79_n_0\,
       I1 => \rStoredData[0]_i_80_n_0\,
       O => \rStoredData_reg[0]_i_35_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_36\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_81_n_0\,
       I1 => \rStoredData[0]_i_82_n_0\,
       O => \rStoredData_reg[0]_i_36_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_37\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_83_n_0\,
       I1 => \rStoredData[0]_i_84_n_0\,
       O => \rStoredData_reg[0]_i_37_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_38\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_85_n_0\,
       I1 => \rStoredData[0]_i_86_n_0\,
       O => \rStoredData_reg[0]_i_38_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_39\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_87_n_0\,
       I1 => \rStoredData[0]_i_88_n_0\,
       O => \rStoredData_reg[0]_i_39_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_40\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_89_n_0\,
       I1 => \rStoredData[0]_i_90_n_0\,
       O => \rStoredData_reg[0]_i_40_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_41\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_91_n_0\,
       I1 => \rStoredData[0]_i_92_n_0\,
       O => \rStoredData_reg[0]_i_41_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_42\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_93_n_0\,
       I1 => \rStoredData[0]_i_94_n_0\,
       O => \rStoredData_reg[0]_i_42_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_43\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_95_n_0\,
       I1 => \rStoredData[0]_i_96_n_0\,
       O => \rStoredData_reg[0]_i_43_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_44\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_97_n_0\,
       I1 => \rStoredData[0]_i_98_n_0\,
       O => \rStoredData_reg[0]_i_44_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_45\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_99_n_0\,
       I1 => \rStoredData[0]_i_100_n_0\,
       O => \rStoredData_reg[0]_i_45_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_46\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_101_n_0\,
       I1 => \rStoredData[0]_i_102_n_0\,
       O => \rStoredData_reg[0]_i_46_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_47\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_103_n_0\,
       I1 => \rStoredData[0]_i_104_n_0\,
       O => \rStoredData_reg[0]_i_47_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_48\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_105_n_0\,
       I1 => \rStoredData[0]_i_106_n_0\,
       O => \rStoredData_reg[0]_i_48_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_49\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_107_n_0\,
       I1 => \rStoredData[0]_i_108_n_0\,
       O => \rStoredData_reg[0]_i_49_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_50\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_109_n_0\,
       I1 => \rStoredData[0]_i_110_n_0\,
       O => \rStoredData_reg[0]_i_50_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_51\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_111_n_0\,
       I1 => \rStoredData[0]_i_112_n_0\,
       O => \rStoredData_reg[0]_i_51_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_52\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_113_n_0\,
       I1 => \rStoredData[0]_i_114_n_0\,
       O => \rStoredData_reg[0]_i_52_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_53\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_115_n_0\,
       I1 => \rStoredData[0]_i_116_n_0\,
       O => \rStoredData_reg[0]_i_53_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_54\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_117_n_0\,
       I1 => \rStoredData[0]_i_118_n_0\,
       O => \rStoredData_reg[0]_i_54_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_7\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_23_n_0\,
       I1 => \rStoredData_reg[0]_i_24_n_0\,
       O => \rStoredData_reg[0]_i_7_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_8\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_25_n_0\,
       I1 => \rStoredData_reg[0]_i_26_n_0\,
       O => \rStoredData_reg[0]_i_8_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_9\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_27_n_0\,
       I1 => \rStoredData_reg[0]_i_28_n_0\,
       O => \rStoredData_reg[0]_i_9_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -5878,318 +6053,339 @@ begin
     );
 \rStoredData_reg[1]_i_10\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_31_n_0\,
-      I1 => \rStoredData_reg[1]_i_32_n_0\,
+      I0 => \rStoredData_reg[1]_i_29_n_0\,
+      I1 => \rStoredData_reg[1]_i_30_n_0\,
       O => \rStoredData_reg[1]_i_10_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_11\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_33_n_0\,
-      I1 => \rStoredData_reg[1]_i_34_n_0\,
+      I0 => \rStoredData_reg[1]_i_31_n_0\,
+      I1 => \rStoredData_reg[1]_i_32_n_0\,
       O => \rStoredData_reg[1]_i_11_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_12\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_35_n_0\,
-      I1 => \rStoredData_reg[1]_i_36_n_0\,
+      I0 => \rStoredData_reg[1]_i_33_n_0\,
+      I1 => \rStoredData_reg[1]_i_34_n_0\,
       O => \rStoredData_reg[1]_i_12_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_13\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_37_n_0\,
-      I1 => \rStoredData_reg[1]_i_38_n_0\,
+      I0 => \rStoredData_reg[1]_i_35_n_0\,
+      I1 => \rStoredData_reg[1]_i_36_n_0\,
       O => \rStoredData_reg[1]_i_13_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_14\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_39_n_0\,
-      I1 => \rStoredData_reg[1]_i_40_n_0\,
+      I0 => \rStoredData_reg[1]_i_37_n_0\,
+      I1 => \rStoredData_reg[1]_i_38_n_0\,
       O => \rStoredData_reg[1]_i_14_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_15\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_41_n_0\,
-      I1 => \rStoredData_reg[1]_i_42_n_0\,
+      I0 => \rStoredData_reg[1]_i_39_n_0\,
+      I1 => \rStoredData_reg[1]_i_40_n_0\,
       O => \rStoredData_reg[1]_i_15_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_16\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_43_n_0\,
-      I1 => \rStoredData_reg[1]_i_44_n_0\,
+      I0 => \rStoredData_reg[1]_i_41_n_0\,
+      I1 => \rStoredData_reg[1]_i_42_n_0\,
       O => \rStoredData_reg[1]_i_16_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_17\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_45_n_0\,
-      I1 => \rStoredData_reg[1]_i_46_n_0\,
+      I0 => \rStoredData_reg[1]_i_43_n_0\,
+      I1 => \rStoredData_reg[1]_i_44_n_0\,
       O => \rStoredData_reg[1]_i_17_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_18\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_47_n_0\,
-      I1 => \rStoredData_reg[1]_i_48_n_0\,
+      I0 => \rStoredData_reg[1]_i_45_n_0\,
+      I1 => \rStoredData_reg[1]_i_46_n_0\,
       O => \rStoredData_reg[1]_i_18_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_19\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_49_n_0\,
-      I1 => \rStoredData_reg[1]_i_50_n_0\,
+      I0 => \rStoredData_reg[1]_i_47_n_0\,
+      I1 => \rStoredData_reg[1]_i_48_n_0\,
       O => \rStoredData_reg[1]_i_19_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[1]_i_20\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_51_n_0\,
-      I1 => \rStoredData_reg[1]_i_52_n_0\,
+      I0 => \rStoredData_reg[1]_i_49_n_0\,
+      I1 => \rStoredData_reg[1]_i_50_n_0\,
       O => \rStoredData_reg[1]_i_20_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[1]_i_21\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_53_n_0\,
-      I1 => \rStoredData_reg[1]_i_54_n_0\,
+      I0 => \rStoredData_reg[1]_i_51_n_0\,
+      I1 => \rStoredData_reg[1]_i_52_n_0\,
       O => \rStoredData_reg[1]_i_21_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[1]_i_22\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_55_n_0\,
-      I1 => \rStoredData_reg[1]_i_56_n_0\,
+      I0 => \rStoredData_reg[1]_i_53_n_0\,
+      I1 => \rStoredData_reg[1]_i_54_n_0\,
       O => \rStoredData_reg[1]_i_22_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[1]_i_27\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_23\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[1]_i_55_n_0\,
+      I1 => \rStoredData[1]_i_56_n_0\,
+      O => \rStoredData_reg[1]_i_23_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[1]_i_24\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_57_n_0\,
       I1 => \rStoredData[1]_i_58_n_0\,
+      O => \rStoredData_reg[1]_i_24_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[1]_i_25\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[1]_i_59_n_0\,
+      I1 => \rStoredData[1]_i_60_n_0\,
+      O => \rStoredData_reg[1]_i_25_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[1]_i_26\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[1]_i_61_n_0\,
+      I1 => \rStoredData[1]_i_62_n_0\,
+      O => \rStoredData_reg[1]_i_26_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[1]_i_27\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[1]_i_63_n_0\,
+      I1 => \rStoredData[1]_i_64_n_0\,
       O => \rStoredData_reg[1]_i_27_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_28\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_59_n_0\,
-      I1 => \rStoredData[1]_i_60_n_0\,
+      I0 => \rStoredData[1]_i_65_n_0\,
+      I1 => \rStoredData[1]_i_66_n_0\,
       O => \rStoredData_reg[1]_i_28_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_29\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_61_n_0\,
-      I1 => \rStoredData[1]_i_62_n_0\,
+      I0 => \rStoredData[1]_i_67_n_0\,
+      I1 => \rStoredData[1]_i_68_n_0\,
       O => \rStoredData_reg[1]_i_29_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_30\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_63_n_0\,
-      I1 => \rStoredData[1]_i_64_n_0\,
+      I0 => \rStoredData[1]_i_69_n_0\,
+      I1 => \rStoredData[1]_i_70_n_0\,
       O => \rStoredData_reg[1]_i_30_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_31\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_65_n_0\,
-      I1 => \rStoredData[1]_i_66_n_0\,
+      I0 => \rStoredData[1]_i_71_n_0\,
+      I1 => \rStoredData[1]_i_72_n_0\,
       O => \rStoredData_reg[1]_i_31_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_32\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_67_n_0\,
-      I1 => \rStoredData[1]_i_68_n_0\,
+      I0 => \rStoredData[1]_i_73_n_0\,
+      I1 => \rStoredData[1]_i_74_n_0\,
       O => \rStoredData_reg[1]_i_32_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_33\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_69_n_0\,
-      I1 => \rStoredData[1]_i_70_n_0\,
+      I0 => \rStoredData[1]_i_75_n_0\,
+      I1 => \rStoredData[1]_i_76_n_0\,
       O => \rStoredData_reg[1]_i_33_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_34\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_71_n_0\,
-      I1 => \rStoredData[1]_i_72_n_0\,
+      I0 => \rStoredData[1]_i_77_n_0\,
+      I1 => \rStoredData[1]_i_78_n_0\,
       O => \rStoredData_reg[1]_i_34_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_35\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_73_n_0\,
-      I1 => \rStoredData[1]_i_74_n_0\,
+      I0 => \rStoredData[1]_i_79_n_0\,
+      I1 => \rStoredData[1]_i_80_n_0\,
       O => \rStoredData_reg[1]_i_35_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_36\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_75_n_0\,
-      I1 => \rStoredData[1]_i_76_n_0\,
+      I0 => \rStoredData[1]_i_81_n_0\,
+      I1 => \rStoredData[1]_i_82_n_0\,
       O => \rStoredData_reg[1]_i_36_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_37\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_77_n_0\,
-      I1 => \rStoredData[1]_i_78_n_0\,
+      I0 => \rStoredData[1]_i_83_n_0\,
+      I1 => \rStoredData[1]_i_84_n_0\,
       O => \rStoredData_reg[1]_i_37_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_38\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_79_n_0\,
-      I1 => \rStoredData[1]_i_80_n_0\,
+      I0 => \rStoredData[1]_i_85_n_0\,
+      I1 => \rStoredData[1]_i_86_n_0\,
       O => \rStoredData_reg[1]_i_38_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_39\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_81_n_0\,
-      I1 => \rStoredData[1]_i_82_n_0\,
+      I0 => \rStoredData[1]_i_87_n_0\,
+      I1 => \rStoredData[1]_i_88_n_0\,
       O => \rStoredData_reg[1]_i_39_n_0\,
       S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_40\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_83_n_0\,
-      I1 => \rStoredData[1]_i_84_n_0\,
+      I0 => \rStoredData[1]_i_89_n_0\,
+      I1 => \rStoredData[1]_i_90_n_0\,
       O => \rStoredData_reg[1]_i_40_n_0\,
       S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_41\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_85_n_0\,
-      I1 => \rStoredData[1]_i_86_n_0\,
+      I0 => \rStoredData[1]_i_91_n_0\,
+      I1 => \rStoredData[1]_i_92_n_0\,
       O => \rStoredData_reg[1]_i_41_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_42\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_87_n_0\,
-      I1 => \rStoredData[1]_i_88_n_0\,
+      I0 => \rStoredData[1]_i_93_n_0\,
+      I1 => \rStoredData[1]_i_94_n_0\,
       O => \rStoredData_reg[1]_i_42_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_43\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_89_n_0\,
-      I1 => \rStoredData[1]_i_90_n_0\,
+      I0 => \rStoredData[1]_i_95_n_0\,
+      I1 => \rStoredData[1]_i_96_n_0\,
       O => \rStoredData_reg[1]_i_43_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_44\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_91_n_0\,
-      I1 => \rStoredData[1]_i_92_n_0\,
+      I0 => \rStoredData[1]_i_97_n_0\,
+      I1 => \rStoredData[1]_i_98_n_0\,
       O => \rStoredData_reg[1]_i_44_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_45\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_93_n_0\,
-      I1 => \rStoredData[1]_i_94_n_0\,
+      I0 => \rStoredData[1]_i_99_n_0\,
+      I1 => \rStoredData[1]_i_100_n_0\,
       O => \rStoredData_reg[1]_i_45_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_46\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_95_n_0\,
-      I1 => \rStoredData[1]_i_96_n_0\,
+      I0 => \rStoredData[1]_i_101_n_0\,
+      I1 => \rStoredData[1]_i_102_n_0\,
       O => \rStoredData_reg[1]_i_46_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_47\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_97_n_0\,
-      I1 => \rStoredData[1]_i_98_n_0\,
+      I0 => \rStoredData[1]_i_103_n_0\,
+      I1 => \rStoredData[1]_i_104_n_0\,
       O => \rStoredData_reg[1]_i_47_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_48\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_99_n_0\,
-      I1 => \rStoredData[1]_i_100_n_0\,
+      I0 => \rStoredData[1]_i_105_n_0\,
+      I1 => \rStoredData[1]_i_106_n_0\,
       O => \rStoredData_reg[1]_i_48_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_49\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_101_n_0\,
-      I1 => \rStoredData[1]_i_102_n_0\,
+      I0 => \rStoredData[1]_i_107_n_0\,
+      I1 => \rStoredData[1]_i_108_n_0\,
       O => \rStoredData_reg[1]_i_49_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_50\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_103_n_0\,
-      I1 => \rStoredData[1]_i_104_n_0\,
+      I0 => \rStoredData[1]_i_109_n_0\,
+      I1 => \rStoredData[1]_i_110_n_0\,
       O => \rStoredData_reg[1]_i_50_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_51\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_105_n_0\,
-      I1 => \rStoredData[1]_i_106_n_0\,
+      I0 => \rStoredData[1]_i_111_n_0\,
+      I1 => \rStoredData[1]_i_112_n_0\,
       O => \rStoredData_reg[1]_i_51_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_52\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_107_n_0\,
-      I1 => \rStoredData[1]_i_108_n_0\,
+      I0 => \rStoredData[1]_i_113_n_0\,
+      I1 => \rStoredData[1]_i_114_n_0\,
       O => \rStoredData_reg[1]_i_52_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_53\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_109_n_0\,
-      I1 => \rStoredData[1]_i_110_n_0\,
+      I0 => \rStoredData[1]_i_115_n_0\,
+      I1 => \rStoredData[1]_i_116_n_0\,
       O => \rStoredData_reg[1]_i_53_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_54\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_111_n_0\,
-      I1 => \rStoredData[1]_i_112_n_0\,
+      I0 => \rStoredData[1]_i_117_n_0\,
+      I1 => \rStoredData[1]_i_118_n_0\,
       O => \rStoredData_reg[1]_i_54_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_55\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_7\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData[1]_i_113_n_0\,
-      I1 => \rStoredData[1]_i_114_n_0\,
-      O => \rStoredData_reg[1]_i_55_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[1]_i_56\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[1]_i_115_n_0\,
-      I1 => \rStoredData[1]_i_116_n_0\,
-      O => \rStoredData_reg[1]_i_56_n_0\,
-      S => s_axis_video_tdata(5)
+      I0 => \rStoredData_reg[1]_i_23_n_0\,
+      I1 => \rStoredData_reg[1]_i_24_n_0\,
+      O => \rStoredData_reg[1]_i_7_n_0\,
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_8\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_27_n_0\,
-      I1 => \rStoredData_reg[1]_i_28_n_0\,
+      I0 => \rStoredData_reg[1]_i_25_n_0\,
+      I1 => \rStoredData_reg[1]_i_26_n_0\,
       O => \rStoredData_reg[1]_i_8_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_9\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_29_n_0\,
-      I1 => \rStoredData_reg[1]_i_30_n_0\,
+      I0 => \rStoredData_reg[1]_i_27_n_0\,
+      I1 => \rStoredData_reg[1]_i_28_n_0\,
       O => \rStoredData_reg[1]_i_9_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -6199,285 +6395,257 @@ begin
       Q => m_axis_video_tdata(2),
       R => '0'
     );
-\rStoredData_reg[2]_i_1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => p_1_in(2),
-      I1 => p_0_out(2),
-      O => p_0_in(2),
-      S => sGammaReg(2)
-    );
 \rStoredData_reg[2]_i_10\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_27_n_0\,
-      I1 => \rStoredData_reg[2]_i_28_n_0\,
+      I0 => \rStoredData_reg[2]_i_31_n_0\,
+      I1 => \rStoredData_reg[2]_i_32_n_0\,
       O => \rStoredData_reg[2]_i_10_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_11\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_29_n_0\,
-      I1 => \rStoredData_reg[2]_i_30_n_0\,
+      I0 => \rStoredData_reg[2]_i_33_n_0\,
+      I1 => \rStoredData_reg[2]_i_34_n_0\,
       O => \rStoredData_reg[2]_i_11_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_12\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_31_n_0\,
-      I1 => \rStoredData_reg[2]_i_32_n_0\,
+      I0 => \rStoredData_reg[2]_i_35_n_0\,
+      I1 => \rStoredData_reg[2]_i_36_n_0\,
       O => \rStoredData_reg[2]_i_12_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_14\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_13\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_36_n_0\,
-      I1 => \rStoredData_reg[2]_i_37_n_0\,
-      O => \rStoredData_reg[2]_i_14_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData_reg[2]_i_37_n_0\,
+      I1 => \rStoredData_reg[2]_i_38_n_0\,
+      O => \rStoredData_reg[2]_i_13_n_0\,
+      S => s_axis_video_tdata(1)
+    );
+\rStoredData_reg[2]_i_15\: unisim.vcomponents.MUXF8
+     port map (
+      I0 => \rStoredData_reg[2]_i_43_n_0\,
+      I1 => \rStoredData_reg[2]_i_44_n_0\,
+      O => \rStoredData_reg[2]_i_15_n_0\,
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[2]_i_17\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_46_n_0\,
-      I1 => \rStoredData_reg[2]_i_47_n_0\,
+      I0 => \rStoredData_reg[2]_i_48_n_0\,
+      I1 => \rStoredData_reg[2]_i_49_n_0\,
       O => \rStoredData_reg[2]_i_17_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_18\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_48_n_0\,
-      I1 => \rStoredData_reg[2]_i_49_n_0\,
+      I0 => \rStoredData_reg[2]_i_50_n_0\,
+      I1 => \rStoredData_reg[2]_i_51_n_0\,
       O => \rStoredData_reg[2]_i_18_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_19\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_50_n_0\,
-      I1 => \rStoredData_reg[2]_i_51_n_0\,
+      I0 => \rStoredData_reg[2]_i_52_n_0\,
+      I1 => \rStoredData_reg[2]_i_53_n_0\,
       O => \rStoredData_reg[2]_i_19_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_20\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_52_n_0\,
-      I1 => \rStoredData_reg[2]_i_53_n_0\,
+      I0 => \rStoredData_reg[2]_i_54_n_0\,
+      I1 => \rStoredData_reg[2]_i_55_n_0\,
       O => \rStoredData_reg[2]_i_20_n_0\,
       S => s_axis_video_tdata(7)
     );
+\rStoredData_reg[2]_i_22\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_57_n_0\,
+      I1 => \rStoredData[2]_i_58_n_0\,
+      O => \rStoredData_reg[2]_i_22_n_0\,
+      S => s_axis_video_tdata(6)
+    );
 \rStoredData_reg[2]_i_23\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_55_n_0\,
-      I1 => \rStoredData[2]_i_56_n_0\,
+      I0 => \rStoredData[2]_i_59_n_0\,
+      I1 => \rStoredData[2]_i_60_n_0\,
       O => \rStoredData_reg[2]_i_23_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_24\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_57_n_0\,
-      I1 => \rStoredData[2]_i_58_n_0\,
+      I0 => \rStoredData[2]_i_61_n_0\,
+      I1 => \rStoredData[2]_i_62_n_0\,
       O => \rStoredData_reg[2]_i_24_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_25\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_59_n_0\,
-      I1 => \rStoredData[2]_i_60_n_0\,
-      O => \rStoredData_reg[2]_i_25_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_26\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_61_n_0\,
-      I1 => \rStoredData[2]_i_62_n_0\,
-      O => \rStoredData_reg[2]_i_26_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_27\: unisim.vcomponents.MUXF7
-     port map (
       I0 => \rStoredData[2]_i_63_n_0\,
       I1 => \rStoredData[2]_i_64_n_0\,
-      O => \rStoredData_reg[2]_i_27_n_0\,
+      O => \rStoredData_reg[2]_i_26_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_28\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_65_n_0\,
-      I1 => \rStoredData[2]_i_66_n_0\,
+      I0 => \rStoredData[2]_i_66_n_0\,
+      I1 => \rStoredData[2]_i_67_n_0\,
       O => \rStoredData_reg[2]_i_28_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_29\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_67_n_0\,
-      I1 => \rStoredData[2]_i_68_n_0\,
+      I0 => \rStoredData[2]_i_68_n_0\,
+      I1 => \rStoredData[2]_i_69_n_0\,
       O => \rStoredData_reg[2]_i_29_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_3\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_7_n_0\,
+      I1 => \rStoredData[2]_i_8_n_0\,
+      O => p_0_out(2),
+      S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_30\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_69_n_0\,
-      I1 => \rStoredData[2]_i_70_n_0\,
+      I0 => \rStoredData[2]_i_70_n_0\,
+      I1 => \rStoredData[2]_i_71_n_0\,
       O => \rStoredData_reg[2]_i_30_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_31\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_71_n_0\,
-      I1 => \rStoredData[2]_i_72_n_0\,
+      I0 => \rStoredData[2]_i_72_n_0\,
+      I1 => \rStoredData[2]_i_73_n_0\,
       O => \rStoredData_reg[2]_i_31_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_32\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_73_n_0\,
-      I1 => \rStoredData[2]_i_74_n_0\,
+      I0 => \rStoredData[2]_i_74_n_0\,
+      I1 => \rStoredData[2]_i_75_n_0\,
       O => \rStoredData_reg[2]_i_32_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_33\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_76_n_0\,
+      I1 => \rStoredData[2]_i_77_n_0\,
+      O => \rStoredData_reg[2]_i_33_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_34\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_78_n_0\,
+      I1 => \rStoredData[2]_i_79_n_0\,
+      O => \rStoredData_reg[2]_i_34_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_35\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_80_n_0\,
+      I1 => \rStoredData[2]_i_81_n_0\,
+      O => \rStoredData_reg[2]_i_35_n_0\,
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_36\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_75_n_0\,
-      I1 => \rStoredData[2]_i_76_n_0\,
+      I0 => \rStoredData[2]_i_82_n_0\,
+      I1 => \rStoredData[2]_i_83_n_0\,
       O => \rStoredData_reg[2]_i_36_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_37\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_77_n_0\,
-      I1 => \rStoredData[2]_i_78_n_0\,
+      I0 => \rStoredData[2]_i_84_n_0\,
+      I1 => \rStoredData[2]_i_85_n_0\,
       O => \rStoredData_reg[2]_i_37_n_0\,
       S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_38\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_79_n_0\,
-      I1 => \rStoredData[2]_i_80_n_0\,
+      I0 => \rStoredData[2]_i_86_n_0\,
+      I1 => \rStoredData[2]_i_87_n_0\,
       O => \rStoredData_reg[2]_i_38_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_39\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_81_n_0\,
-      I1 => \rStoredData[2]_i_82_n_0\,
-      O => \rStoredData_reg[2]_i_39_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_40\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_83_n_0\,
-      I1 => \rStoredData[2]_i_84_n_0\,
-      O => \rStoredData_reg[2]_i_40_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_41\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_85_n_0\,
-      I1 => \rStoredData[2]_i_86_n_0\,
-      O => \rStoredData_reg[2]_i_41_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_43\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_87_n_0\,
-      I1 => \rStoredData[2]_i_88_n_0\,
+      I0 => \rStoredData[2]_i_88_n_0\,
+      I1 => \rStoredData[2]_i_89_n_0\,
       O => \rStoredData_reg[2]_i_43_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_44\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_89_n_0\,
-      I1 => \rStoredData[2]_i_90_n_0\,
+      I0 => \rStoredData[2]_i_90_n_0\,
+      I1 => \rStoredData[2]_i_91_n_0\,
       O => \rStoredData_reg[2]_i_44_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_45\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_91_n_0\,
-      I1 => \rStoredData[2]_i_92_n_0\,
-      O => \rStoredData_reg[2]_i_45_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_46\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_93_n_0\,
-      I1 => \rStoredData[2]_i_94_n_0\,
-      O => \rStoredData_reg[2]_i_46_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[2]_i_47\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_95_n_0\,
-      I1 => \rStoredData[2]_i_96_n_0\,
-      O => \rStoredData_reg[2]_i_47_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_48\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_97_n_0\,
-      I1 => \rStoredData[2]_i_98_n_0\,
+      I0 => \rStoredData[2]_i_92_n_0\,
+      I1 => \rStoredData[2]_i_93_n_0\,
       O => \rStoredData_reg[2]_i_48_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_49\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_99_n_0\,
-      I1 => \rStoredData[2]_i_100_n_0\,
+      I0 => \rStoredData[2]_i_94_n_0\,
+      I1 => \rStoredData[2]_i_95_n_0\,
       O => \rStoredData_reg[2]_i_49_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[2]_i_5\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_15_n_0\,
-      I1 => \rStoredData[2]_i_16_n_0\,
-      O => \rStoredData_reg[2]_i_5_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_50\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_101_n_0\,
-      I1 => \rStoredData[2]_i_102_n_0\,
+      I0 => \rStoredData[2]_i_96_n_0\,
+      I1 => \rStoredData[2]_i_97_n_0\,
       O => \rStoredData_reg[2]_i_50_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_51\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_103_n_0\,
-      I1 => \rStoredData[2]_i_104_n_0\,
+      I0 => \rStoredData[2]_i_98_n_0\,
+      I1 => \rStoredData[2]_i_99_n_0\,
       O => \rStoredData_reg[2]_i_51_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_52\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_105_n_0\,
-      I1 => \rStoredData[2]_i_106_n_0\,
+      I0 => \rStoredData[2]_i_100_n_0\,
+      I1 => \rStoredData[2]_i_101_n_0\,
       O => \rStoredData_reg[2]_i_52_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_53\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_107_n_0\,
-      I1 => \rStoredData[2]_i_108_n_0\,
+      I0 => \rStoredData[2]_i_102_n_0\,
+      I1 => \rStoredData[2]_i_103_n_0\,
       O => \rStoredData_reg[2]_i_53_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_7\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_54\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_21_n_0\,
-      I1 => \rStoredData[2]_i_22_n_0\,
-      O => \rStoredData_reg[2]_i_7_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[2]_i_104_n_0\,
+      I1 => \rStoredData[2]_i_105_n_0\,
+      O => \rStoredData_reg[2]_i_54_n_0\,
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_8\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_55\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData_reg[2]_i_23_n_0\,
-      I1 => \rStoredData_reg[2]_i_24_n_0\,
-      O => \rStoredData_reg[2]_i_8_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[2]_i_106_n_0\,
+      I1 => \rStoredData[2]_i_107_n_0\,
+      O => \rStoredData_reg[2]_i_55_n_0\,
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_9\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_25_n_0\,
-      I1 => \rStoredData_reg[2]_i_26_n_0\,
+      I0 => \rStoredData_reg[2]_i_29_n_0\,
+      I1 => \rStoredData_reg[2]_i_30_n_0\,
       O => \rStoredData_reg[2]_i_9_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -6494,166 +6662,131 @@ begin
       O => p_0_in(3),
       S => sGammaReg(2)
     );
-\rStoredData_reg[3]_i_10\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_30_n_0\,
-      I1 => \rStoredData_reg[3]_i_31_n_0\,
-      O => \rStoredData_reg[3]_i_10_n_0\,
-      S => s_axis_video_tdata(7)
-    );
 \rStoredData_reg[3]_i_12\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_34_n_0\,
-      I1 => \rStoredData_reg[3]_i_35_n_0\,
+      I0 => \rStoredData_reg[3]_i_32_n_0\,
+      I1 => \rStoredData_reg[3]_i_33_n_0\,
       O => \rStoredData_reg[3]_i_12_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_14\: unisim.vcomponents.MUXF8
+\rStoredData_reg[3]_i_13\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_39_n_0\,
-      I1 => \rStoredData_reg[3]_i_40_n_0\,
-      O => \rStoredData_reg[3]_i_14_n_0\,
+      I0 => \rStoredData_reg[3]_i_34_n_0\,
+      I1 => \rStoredData_reg[3]_i_35_n_0\,
+      O => \rStoredData_reg[3]_i_13_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_15\: unisim.vcomponents.MUXF7
      port map (
+      I0 => \rStoredData[3]_i_39_n_0\,
+      I1 => \rStoredData[3]_i_40_n_0\,
+      O => \rStoredData_reg[3]_i_15_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[3]_i_16\: unisim.vcomponents.MUXF7
+     port map (
       I0 => \rStoredData[3]_i_41_n_0\,
       I1 => \rStoredData[3]_i_42_n_0\,
-      O => \rStoredData_reg[3]_i_15_n_0\,
-      S => s_axis_video_tdata(8)
-    );
-\rStoredData_reg[3]_i_16\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_43_n_0\,
-      I1 => \rStoredData_reg[3]_i_44_n_0\,
       O => \rStoredData_reg[3]_i_16_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_19\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_51_n_0\,
-      I1 => \rStoredData_reg[3]_i_52_n_0\,
+      I0 => \rStoredData_reg[3]_i_49_n_0\,
+      I1 => \rStoredData_reg[3]_i_50_n_0\,
       O => \rStoredData_reg[3]_i_19_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[3]_i_20\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_53_n_0\,
-      I1 => \rStoredData_reg[3]_i_54_n_0\,
+      I0 => \rStoredData_reg[3]_i_51_n_0\,
+      I1 => \rStoredData_reg[3]_i_52_n_0\,
       O => \rStoredData_reg[3]_i_20_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[3]_i_22\: unisim.vcomponents.MUXF8
+\rStoredData_reg[3]_i_25\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData_reg[3]_i_58_n_0\,
-      I1 => \rStoredData_reg[3]_i_59_n_0\,
-      O => \rStoredData_reg[3]_i_22_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[3]_i_55_n_0\,
+      I1 => \rStoredData[3]_i_56_n_0\,
+      O => \rStoredData_reg[3]_i_25_n_0\,
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_30\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_62_n_0\,
-      I1 => \rStoredData[3]_i_63_n_0\,
+      I0 => \rStoredData[3]_i_58_n_0\,
+      I1 => \rStoredData[3]_i_59_n_0\,
       O => \rStoredData_reg[3]_i_30_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_31\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_32\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_64_n_0\,
-      I1 => \rStoredData[3]_i_65_n_0\,
-      O => \rStoredData_reg[3]_i_31_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData[3]_i_60_n_0\,
+      I1 => \rStoredData[3]_i_61_n_0\,
+      O => \rStoredData_reg[3]_i_32_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[3]_i_33\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_62_n_0\,
+      I1 => \rStoredData[3]_i_63_n_0\,
+      O => \rStoredData_reg[3]_i_33_n_0\,
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[3]_i_34\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_66_n_0\,
-      I1 => \rStoredData[3]_i_67_n_0\,
+      I0 => \rStoredData[3]_i_64_n_0\,
+      I1 => \rStoredData[3]_i_65_n_0\,
       O => \rStoredData_reg[3]_i_34_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[3]_i_35\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_68_n_0\,
-      I1 => \rStoredData[3]_i_69_n_0\,
+      I0 => \rStoredData[3]_i_66_n_0\,
+      I1 => \rStoredData[3]_i_67_n_0\,
       O => \rStoredData_reg[3]_i_35_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[3]_i_39\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_49\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_70_n_0\,
-      I1 => \rStoredData[3]_i_71_n_0\,
-      O => \rStoredData_reg[3]_i_39_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_40\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_72_n_0\,
-      I1 => \rStoredData[3]_i_73_n_0\,
-      O => \rStoredData_reg[3]_i_40_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_43\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_74_n_0\,
-      I1 => \rStoredData[3]_i_75_n_0\,
-      O => \rStoredData_reg[3]_i_43_n_0\,
+      I0 => \rStoredData[3]_i_82_n_0\,
+      I1 => \rStoredData[3]_i_83_n_0\,
+      O => \rStoredData_reg[3]_i_49_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_44\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_5\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData[3]_i_76_n_0\,
-      I1 => \rStoredData[3]_i_77_n_0\,
-      O => \rStoredData_reg[3]_i_44_n_0\,
+      I0 => \rStoredData_reg[3]_i_15_n_0\,
+      I1 => \rStoredData_reg[3]_i_16_n_0\,
+      O => \rStoredData_reg[3]_i_5_n_0\,
+      S => s_axis_video_tdata(0)
+    );
+\rStoredData_reg[3]_i_50\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_84_n_0\,
+      I1 => \rStoredData[3]_i_85_n_0\,
+      O => \rStoredData_reg[3]_i_50_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_51\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_78_n_0\,
-      I1 => \rStoredData[3]_i_79_n_0\,
+      I0 => \rStoredData[3]_i_86_n_0\,
+      I1 => \rStoredData[3]_i_87_n_0\,
       O => \rStoredData_reg[3]_i_51_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_52\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_80_n_0\,
-      I1 => \rStoredData[3]_i_81_n_0\,
-      O => \rStoredData_reg[3]_i_52_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_53\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_82_n_0\,
-      I1 => \rStoredData[3]_i_83_n_0\,
-      O => \rStoredData_reg[3]_i_53_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_54\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_84_n_0\,
-      I1 => \rStoredData[3]_i_85_n_0\,
-      O => \rStoredData_reg[3]_i_54_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_58\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_86_n_0\,
-      I1 => \rStoredData[3]_i_87_n_0\,
-      O => \rStoredData_reg[3]_i_58_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_59\: unisim.vcomponents.MUXF7
-     port map (
       I0 => \rStoredData[3]_i_88_n_0\,
       I1 => \rStoredData[3]_i_89_n_0\,
-      O => \rStoredData_reg[3]_i_59_n_0\,
-      S => s_axis_video_tdata(5)
+      O => \rStoredData_reg[3]_i_52_n_0\,
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_9\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_7\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_28_n_0\,
-      I1 => \rStoredData[3]_i_29_n_0\,
-      O => \rStoredData_reg[3]_i_9_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[3]_i_21_n_0\,
+      I1 => \rStoredData[3]_i_22_n_0\,
+      O => \rStoredData_reg[3]_i_7_n_0\,
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -6665,73 +6798,73 @@ begin
     );
 \rStoredData_reg[4]_i_10\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_23_n_0\,
-      I1 => \rStoredData[4]_i_24_n_0\,
+      I0 => \rStoredData[4]_i_26_n_0\,
+      I1 => \rStoredData[4]_i_27_n_0\,
       O => \rStoredData_reg[4]_i_10_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(8)
     );
-\rStoredData_reg[4]_i_13\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_11\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[4]_i_28_n_0\,
       I1 => \rStoredData[4]_i_29_n_0\,
-      O => \rStoredData_reg[4]_i_13_n_0\,
+      O => \rStoredData_reg[4]_i_11_n_0\,
       S => s_axis_video_tdata(8)
     );
 \rStoredData_reg[4]_i_14\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_30_n_0\,
-      I1 => \rStoredData[4]_i_31_n_0\,
+      I0 => \rStoredData[4]_i_36_n_0\,
+      I1 => \rStoredData[4]_i_37_n_0\,
       O => \rStoredData_reg[4]_i_14_n_0\,
       S => s_axis_video_tdata(8)
     );
-\rStoredData_reg[4]_i_2\: unisim.vcomponents.MUXF8
+\rStoredData_reg[4]_i_25\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData_reg[4]_i_6_n_0\,
-      I1 => \rStoredData_reg[4]_i_7_n_0\,
-      O => p_0_out(4),
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[4]_i_40_n_0\,
+      I1 => \rStoredData[4]_i_41_n_0\,
+      O => \rStoredData_reg[4]_i_25_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[4]_i_30\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_50_n_0\,
+      I1 => \rStoredData[4]_i_51_n_0\,
+      O => \rStoredData_reg[4]_i_30_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[4]_i_31\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_52_n_0\,
+      I1 => \rStoredData[4]_i_53_n_0\,
+      O => \rStoredData_reg[4]_i_31_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[4]_i_32\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_54_n_0\,
+      I1 => \rStoredData[4]_i_55_n_0\,
+      O => \rStoredData_reg[4]_i_32_n_0\,
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[4]_i_33\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_60_n_0\,
-      I1 => \rStoredData[4]_i_61_n_0\,
+      I0 => \rStoredData[4]_i_56_n_0\,
+      I1 => \rStoredData[4]_i_57_n_0\,
       O => \rStoredData_reg[4]_i_33_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[4]_i_5\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[4]_i_13_n_0\,
-      I1 => \rStoredData_reg[4]_i_14_n_0\,
-      O => \rStoredData_reg[4]_i_5_n_0\,
       S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[4]_i_6\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_35\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_15_n_0\,
-      I1 => \rStoredData[4]_i_16_n_0\,
-      O => \rStoredData_reg[4]_i_6_n_0\,
+      I0 => \rStoredData[4]_i_59_n_0\,
+      I1 => \rStoredData[4]_i_60_n_0\,
+      O => \rStoredData_reg[4]_i_35_n_0\,
       S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[4]_i_7\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_4\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_17_n_0\,
-      I1 => \rStoredData[4]_i_18_n_0\,
-      O => \rStoredData_reg[4]_i_7_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[4]_i_8\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[4]_i_19_n_0\,
-      I1 => \rStoredData[4]_i_20_n_0\,
-      O => \rStoredData_reg[4]_i_8_n_0\,
-      S => s_axis_video_tdata(8)
-    );
-\rStoredData_reg[4]_i_9\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[4]_i_21_n_0\,
-      I1 => \rStoredData[4]_i_22_n_0\,
-      O => \rStoredData_reg[4]_i_9_n_0\,
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[4]_i_12_n_0\,
+      I1 => \rStoredData[4]_i_13_n_0\,
+      O => \rStoredData_reg[4]_i_4_n_0\,
+      S => s_axis_video_tdata(0)
     );
 \rStoredData_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -6743,17 +6876,24 @@ begin
     );
 \rStoredData_reg[5]_i_2\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_7_n_0\,
-      I1 => \rStoredData[5]_i_8_n_0\,
+      I0 => \rStoredData[5]_i_6_n_0\,
+      I1 => \rStoredData[5]_i_7_n_0\,
       O => p_0_out(5),
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[5]_i_9\: unisim.vcomponents.MUXF7
+\rStoredData_reg[5]_i_28\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_22_n_0\,
-      I1 => \rStoredData[5]_i_23_n_0\,
-      O => \rStoredData_reg[5]_i_9_n_0\,
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[5]_i_37_n_0\,
+      I1 => \rStoredData[5]_i_38_n_0\,
+      O => \rStoredData_reg[5]_i_28_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[5]_i_4\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[5]_i_10_n_0\,
+      I1 => \rStoredData[5]_i_11_n_0\,
+      O => \rStoredData_reg[5]_i_4_n_0\,
+      S => s_axis_video_tdata(0)
     );
 \rStoredData_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -6763,19 +6903,19 @@ begin
       Q => m_axis_video_tdata(6),
       R => '0'
     );
-\rStoredData_reg[6]_i_1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[6]_i_12\: unisim.vcomponents.MUXF7
      port map (
-      I0 => p_1_in(6),
-      I1 => p_0_out(6),
-      O => p_0_in(6),
-      S => sGammaReg(2)
+      I0 => \rStoredData[6]_i_20_n_0\,
+      I1 => \rStoredData[6]_i_21_n_0\,
+      O => \rStoredData_reg[6]_i_12_n_0\,
+      S => s_axis_video_tdata(1)
     );
-\rStoredData_reg[6]_i_6\: unisim.vcomponents.MUXF7
+\rStoredData_reg[6]_i_2\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[6]_i_14_n_0\,
-      I1 => \rStoredData[6]_i_15_n_0\,
-      O => \rStoredData_reg[6]_i_6_n_0\,
-      S => s_axis_video_tdata(9)
+      I0 => \rStoredData[6]_i_6_n_0\,
+      I1 => \rStoredData[6]_i_7_n_0\,
+      O => p_0_out(6),
+      S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -6802,9 +6942,8 @@ entity system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
     m_axis_video_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sGammaReg : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axis_video_tdata : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    \sGammaReg_reg[1]\ : in STD_LOGIC;
     \sGammaReg_reg[0]\ : in STD_LOGIC;
-    \sGammaReg_reg[0]_0\ : in STD_LOGIC;
+    \sGammaReg_reg[1]\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     StreamClk : in STD_LOGIC
   );
@@ -6899,11 +7038,11 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[1]_i_114__0_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_115__0_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_116__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_117_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_118_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_117__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_118__0_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_3__0_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_4__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_55_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_55__0_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_56__0_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_57__0_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_58__0_n_0\ : STD_LOGIC;
@@ -6958,24 +7097,25 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[2]_i_105__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_106__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_107__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_108__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_109_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_110_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_111_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_15__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_14__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_16__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_1__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_21__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_22__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_23_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_3__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_25__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_27__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_39__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_40__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_41__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_42__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_45__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_46__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_47__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_4__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_54_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_55__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_56__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_57__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_58__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_59__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_5__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_60__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_61__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_62__0_n_0\ : STD_LOGIC;
@@ -6997,7 +7137,7 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[2]_i_77__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_78__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_79__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_7_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_7__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_80__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_81__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_82__0_n_0\ : STD_LOGIC;
@@ -7008,6 +7148,7 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[2]_i_87__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_88__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_89__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_8__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_90__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_91__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_92__0_n_0\ : STD_LOGIC;
@@ -7018,38 +7159,46 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[2]_i_97__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_98__0_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_99__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_10__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_11__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_14__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_17__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_18__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_21__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_23_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_24_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_25__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_22__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_23__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_24__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_26__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_27__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_28__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_29__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_30_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_33_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_34__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_31__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_36__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_37__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_38__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_39__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_3__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_40__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_41__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_42__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_43__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_44__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_45__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_46__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_47__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_48__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_49__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_4__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_50__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_53__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_54__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_55__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_56__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_57__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_5__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_58__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_59__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_60__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_61__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_62__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_63__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_62__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_63__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_64__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_65__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_66__0_n_0\ : STD_LOGIC;
@@ -7067,7 +7216,6 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[3]_i_77__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_78__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_79__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_7__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_80__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_81__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_82__0_n_0\ : STD_LOGIC;
@@ -7079,15 +7227,9 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[3]_i_88__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_89__0_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_8__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_90_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_91_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_92_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_93_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_94_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_11__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_9__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_12__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_13_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_14_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_13__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_15__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_16__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_17__0_n_0\ : STD_LOGIC;
@@ -7099,105 +7241,109 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData[4]_i_22__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_23__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_24__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_25__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_26__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_27__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_27__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_28__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_29__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_30__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_31__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_32__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_33_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_34_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_35_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_2__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_34__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_36__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_37_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_37__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_38__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_39__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_3__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_40__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_41__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_42_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_43_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_41__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_42__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_43__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_44__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_45__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_46__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_47__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_48__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_49__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_4__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_48__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_49__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_50__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_51__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_52__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_53__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_54__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_55__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_56_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_56__0_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_57__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_58_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_59_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_5_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_58__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_59__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_5__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_60__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_61__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_62__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_63__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_64__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_6__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_7__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_8__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_9__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_10__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_11__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_12__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_13__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_14__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_15__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_16__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_17__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_18__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_19_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_19__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_1__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_20__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_21_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_20__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_21__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_22__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_23__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_24__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_25__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_26_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_25__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_26__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_27__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_28__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_29__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_30__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_31__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_32_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_33__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_34__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_35__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_29__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_30__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_31__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_32__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_33__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_34__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_35__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_36__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_37_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_38_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_39_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_37__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_38__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_3__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_40__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_41_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_42_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_4__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_5__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_6__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_7__0_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_8__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_9__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_10__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_11__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_12__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_13__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_14__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_15__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_16__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_17_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_18_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_19_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_17__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_18__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_19__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_1__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_20__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_21__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_3__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_4__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_5__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_6__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_7__0_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_8__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_9_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_9__0_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_10__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_11__0_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_3__0_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_4__0_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_5__0_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_6__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[7]_i_7_n_0\ : STD_LOGIC;
-  signal \rStoredData[7]_i_8_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_7__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_8__0_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_9__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[0]_i_10__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[0]_i_11__0_n_0\ : STD_LOGIC;
@@ -7262,10 +7408,10 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData_reg[1]_i_20__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_21__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_22__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_23_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_24_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_25_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_26_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_23__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_24__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_25__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_26__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_27__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_28__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_29__0_n_0\ : STD_LOGIC;
@@ -7294,190 +7440,169 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 is
   signal \rStoredData_reg[1]_i_52__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_53__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_54__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_7_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_7__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_8__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_9__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_10__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_11__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_12__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_13_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_14__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_13__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_15__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_17__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_18__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_19__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_1__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_20__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_22__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_23__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_24__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_25__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_26__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_27__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_28__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_29__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_30__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_31__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_32__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_33_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_34_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_35_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_33__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_34__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_35__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_36__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_37__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_38__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_39__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_40__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_41__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_3__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_43__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_44__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_45__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_46__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_47__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_48__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_49__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_50__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_51__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_52__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_53__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_5__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_8__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_54__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_55__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_9__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_10__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_12__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_13_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_14__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_13__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_15__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_16__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_19__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_1__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_20__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_22__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_31__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_32_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_25__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_30__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_32__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_33__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_34__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_35__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_36_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_37_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_38_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_39__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_40__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_43__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_44__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_49__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_50__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_51__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_52__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_53__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_54__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_58__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_59__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_9__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_5__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_7__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[4]_i_10__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_2__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_39_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_6__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_7__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_8__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_9__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[5]_i_12_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_11__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_14__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_25__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_30__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_31__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_32__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_33__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_35__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_4__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[5]_i_28__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[5]_i_2__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[5]_i_9__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[6]_i_1__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[6]_i_6__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[5]_i_4__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[6]_i_12__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[6]_i_2__0_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[7]_i_1__0_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_23\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_24\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_25__1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_34__0\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_45__0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_49__0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_57__0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_60__0\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_61__0\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_62__1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_63__1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_27__1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_29__0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_31__1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_32__1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_33\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_36__0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_38__0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_40__0\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_41__1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_43\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_45__0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_47__0\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_48__1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_49__1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_53__0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_55__0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_20__1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_23__0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_24__0\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_25__1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_29__1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_30__1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_31__1\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_32\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_33__1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_34__1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_35__1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_36__0\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_37\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_38\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_40__0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_41\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_15__0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_16__0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_17\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_18\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_19\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_9\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_10__0\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_7\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_9__0\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \rStoredData[2]_i_56__0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \rStoredData[2]_i_65__0\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_24__0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_26__0\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_27__0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_29__0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_36__0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_44__0\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_53__0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_54__0\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_57__0\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_17__0\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_18__0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_20__0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_21__0\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_22__0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_24__0\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_38__0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_39__0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_42__0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_44__0\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_46__0\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_47__0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_49__0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_61__0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_63__0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_19__0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_20__0\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_30__0\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_31__0\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_32__0\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_33__0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_34__0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_35__0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_15__0\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_16__0\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_17__0\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_18__0\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_19__0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_11__0\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_7__0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_8__0\ : label is "soft_lutpair33";
 begin
 \rStoredData[0]_i_100__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"11A1DE14EB4E11B9"
+      INIT => X"79DC16BCA56359D4"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_100__0_n_0\
     );
 \rStoredData[0]_i_101__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B200FFFFDDFF0000"
+      INIT => X"9A30D82367C72794"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_101__0_n_0\
     );
 \rStoredData[0]_i_102__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5598AA6675598AA6"
+      INIT => X"5A9C8623E1431A9C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_102__0_n_0\
     );
 \rStoredData[0]_i_103__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"36B693CB9293C949"
+      INIT => X"3C3493C332B3C3C9"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -7487,49 +7612,49 @@ begin
     );
 \rStoredData[0]_i_104__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"969293DBC949696C"
+      INIT => X"B50FF02FD0B54AF0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_104__0_n_0\
     );
 \rStoredData[0]_i_105__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"65E6A686969E9A19"
+      INIT => X"4D6C36B62C24B293"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[0]_i_105__0_n_0\
+    );
+\rStoredData[0]_i_106__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"92D3DBC9496D6D2C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_105__0_n_0\
-    );
-\rStoredData[0]_i_106__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"899966E817769999"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_106__0_n_0\
     );
 \rStoredData[0]_i_107__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"665D2666999A5999"
+      INIT => X"4CDD264C9B32D99B"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
@@ -7539,23 +7664,23 @@ begin
     );
 \rStoredData[0]_i_108__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"296B626646D6949D"
+      INIT => X"33269B334CCD264C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_108__0_n_0\
     );
 \rStoredData[0]_i_109__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D3CC323333D9CC33"
+      INIT => X"D3CC323333D3CC33"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -7565,49 +7690,49 @@ begin
     );
 \rStoredData[0]_i_110__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4C3C33333C33C3C3"
+      INIT => X"4333CCC633CC3333"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_110__0_n_0\
     );
 \rStoredData[0]_i_111__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFF40000000FD"
+      INIT => X"FFFF0000FFEA0055"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_111__0_n_0\
     );
 \rStoredData[0]_i_112__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4F00FFFF30FF0000"
+      INIT => X"7F7755000088AAFE"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_112__0_n_0\
     );
 \rStoredData[0]_i_113__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00CD204CFF33DFFB"
+      INIT => X"AA678AE655197551"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
@@ -7617,10 +7742,10 @@ begin
     );
 \rStoredData[0]_i_114__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE377F33038080C8"
+      INIT => X"AB622A665695D59D"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
@@ -7630,10 +7755,10 @@ begin
     );
 \rStoredData[0]_i_115__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"52E5BD3F1F06A4E8"
+      INIT => X"786D3DB5970E0E4A"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
@@ -7643,23 +7768,23 @@ begin
     );
 \rStoredData[0]_i_116__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A37DC222DE821DD7"
+      INIT => X"8F79870FB48F7096"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_116__0_n_0\
     );
 \rStoredData[0]_i_117__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1446B998676B9404"
+      INIT => X"BCCC333AC5433C8C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -7669,14 +7794,14 @@ begin
     );
 \rStoredData[0]_i_118__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FECC40011337BEEE"
+      INIT => X"AA11891556EA66AA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_118__0_n_0\
     );
@@ -7700,9 +7825,9 @@ begin
         port map (
       I0 => \rStoredData_reg[0]_i_7__0_n_0\,
       I1 => \rStoredData_reg[0]_i_8__0_n_0\,
-      I2 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(7),
       I3 => \rStoredData_reg[0]_i_9__0_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(8),
       I5 => \rStoredData_reg[0]_i_10__0_n_0\,
       O => \rStoredData[0]_i_3__0_n_0\
     );
@@ -7721,7 +7846,7 @@ begin
     );
 \rStoredData[0]_i_55__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F0F70F00F1AF0F0"
+      INIT => X"C3CB3C3CCC4C3C33"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -7734,15 +7859,15 @@ begin
     );
 \rStoredData[0]_i_56__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F0F0F0F87F0F0F0"
+      INIT => X"4AF0AD4A0F52B52F"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_56__0_n_0\
     );
 \rStoredData[0]_i_57__0\: unisim.vcomponents.LUT6
@@ -7760,28 +7885,28 @@ begin
     );
 \rStoredData[0]_i_58__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF7FF551000008A"
+      INIT => X"FFFFF7551000008A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_58__0_n_0\
     );
 \rStoredData[0]_i_59__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7655579581A888AA"
+      INIT => X"CCC53ABC43338DCD"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_59__0_n_0\
     );
 \rStoredData[0]_i_5__0\: unisim.vcomponents.LUT6
@@ -7791,54 +7916,54 @@ begin
         port map (
       I0 => \rStoredData_reg[0]_i_15__0_n_0\,
       I1 => \rStoredData_reg[0]_i_16__0_n_0\,
-      I2 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(0),
       I3 => \rStoredData_reg[0]_i_17__0_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(6),
       I5 => \rStoredData_reg[0]_i_18__0_n_0\,
       O => \rStoredData[0]_i_5__0_n_0\
     );
 \rStoredData[0]_i_60__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C4DC9DBD392B2362"
+      INIT => X"15FFEA00FFFE0111"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_60__0_n_0\
     );
 \rStoredData[0]_i_61__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C3CBCC4C3C3C3C33"
+      INIT => X"EAA8575F0111EEEA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_61__0_n_0\
     );
 \rStoredData[0]_i_62__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4AF00F52AD4AB52F"
+      INIT => X"5AF078F0F0E1F1A5"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_62__0_n_0\
     );
 \rStoredData[0]_i_63__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5969496D65A4A4B6"
+      INIT => X"7655579581A888AA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -7851,46 +7976,7 @@ begin
     );
 \rStoredData[0]_i_64__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5961E5A779E5A586"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(0),
-      O => \rStoredData[0]_i_64__0_n_0\
-    );
-\rStoredData[0]_i_65__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAA8575F0111EEEA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_65__0_n_0\
-    );
-\rStoredData[0]_i_66__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5AF078F0F0E1F1A5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_66__0_n_0\
-    );
-\rStoredData[0]_i_67__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"34CF4A9D9125E10E"
+      INIT => X"C4DC392B9DBD2362"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -7899,6 +7985,45 @@ begin
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
+      O => \rStoredData[0]_i_64__0_n_0\
+    );
+\rStoredData[0]_i_65__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F0F0F1A70F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_65__0_n_0\
+    );
+\rStoredData[0]_i_66__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F0F0F0F87F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_66__0_n_0\
+    );
+\rStoredData[0]_i_67__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"34CF91254A9DE10E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_67__0_n_0\
     );
 \rStoredData[0]_i_68__0\: unisim.vcomponents.LUT6
@@ -7916,15 +8041,15 @@ begin
     );
 \rStoredData[0]_i_69__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCC53ABC43338DCD"
+      INIT => X"5969496D65A4A4B6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_69__0_n_0\
     );
 \rStoredData[0]_i_6__0\: unisim.vcomponents.LUT6
@@ -7942,49 +8067,49 @@ begin
     );
 \rStoredData[0]_i_70__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"15FFFFFEEA000111"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_70__0_n_0\
-    );
-\rStoredData[0]_i_71__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"080F0000F7F0FFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_71__0_n_0\
-    );
-\rStoredData[0]_i_72__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"46B9D4A9952B9D62"
+      INIT => X"59E561A779A5E586"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[0]_i_70__0_n_0\
+    );
+\rStoredData[0]_i_71__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AE7700005118FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(9),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_71__0_n_0\
+    );
+\rStoredData[0]_i_72__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0280FDFDC0F53F0A"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_72__0_n_0\
     );
 \rStoredData[0]_i_73__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFAE5151F7F70808"
+      INIT => X"67A6D95175778888"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -7994,23 +8119,23 @@ begin
     );
 \rStoredData[0]_i_74__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9BB2D99B6464A626"
+      INIT => X"FFF43BBF4003CC44"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_74__0_n_0\
     );
 \rStoredData[0]_i_75__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B995666A5556ABB9"
+      INIT => X"919DEE6AFDFE2313"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -8020,360 +8145,361 @@ begin
     );
 \rStoredData[0]_i_76__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EA6E7657559599A9"
+      INIT => X"FE6A11952203DDFC"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_76__0_n_0\
     );
 \rStoredData[0]_i_77__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"11EA55A87F80FE11"
+      INIT => X"11D5EA2ADDFC2A33"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_77__0_n_0\
     );
 \rStoredData[0]_i_78__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A665AA6659995559"
+      INIT => X"AA2A55D43757C088"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_78__0_n_0\
     );
 \rStoredData[0]_i_79__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A87700FF00FF01EE"
+      INIT => X"0080FF7F88A97F66"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_79__0_n_0\
     );
 \rStoredData[0]_i_80__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2665AA66599B55D9"
+      INIT => X"7220E2A21DDF1D5D"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_80__0_n_0\
     );
 \rStoredData[0]_i_81__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3F8000FF00FF00FF"
+      INIT => X"8FE0A0E0705F7F1F"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_81__0_n_0\
     );
 \rStoredData[0]_i_82__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"665D266499BA5D99"
+      INIT => X"0F020A80C0FDF5FD"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_82__0_n_0\
     );
 \rStoredData[0]_i_83__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"860E71B3F09F69E0"
+      INIT => X"2E52849D5141BBEA"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_83__0_n_0\
     );
 \rStoredData[0]_i_84__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1051EEAE8A8875F7"
+      INIT => X"415098BCAFEF7B52"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_84__0_n_0\
     );
 \rStoredData[0]_i_85__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C43C63CCC3BC33C3"
+      INIT => X"ECEB3614EB3B44C1"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_85__0_n_0\
     );
 \rStoredData[0]_i_86__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"769155A8578815EA"
+      INIT => X"624394DC1111ECEB"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_86__0_n_0\
     );
-\rStoredData[0]_i_87__0\: unisim.vcomponents.LUT5
+\rStoredData[0]_i_87__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9D462B9D"
+      INIT => X"D0953D6AFAC50527"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[0]_i_87__0_n_0\
     );
 \rStoredData[0]_i_88__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AB999D546662AAB9"
+      INIT => X"81927E6C175BE9B2"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_88__0_n_0\
     );
 \rStoredData[0]_i_89__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5577FEEAA8811155"
+      INIT => X"C551DAAA375EC884"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_89__0_n_0\
     );
 \rStoredData[0]_i_90__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EA880011557FFEEA"
+      INIT => X"E8A4566D0593FAA4"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_90__0_n_0\
     );
 \rStoredData[0]_i_91__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"533A32ECCCD3D932"
+      INIT => X"BF3F60DA9FED2039"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_91__0_n_0\
     );
 \rStoredData[0]_i_92__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5756EEEAA8811515"
+      INIT => X"79DC86B9E5635ADC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_92__0_n_0\
     );
 \rStoredData[0]_i_93__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9DB99D392B626246"
+      INIT => X"9854D0342FC1BFD2"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_93__0_n_0\
     );
 \rStoredData[0]_i_94__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CC32CC4CD3CC33DB"
+      INIT => X"5A9CF944A5231A9C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_94__0_n_0\
     );
 \rStoredData[0]_i_95__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCC339C4333CCC4"
+      INIT => X"C836EE54C9B6A159"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_95__0_n_0\
     );
 \rStoredData[0]_i_96__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4623DCC43BB94623"
+      INIT => X"8913F2A41479A993"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(7),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_96__0_n_0\
     );
 \rStoredData[0]_i_97__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA9956669155AAA9"
+      INIT => X"C5713A81256BCA1E"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_97__0_n_0\
     );
 \rStoredData[0]_i_98__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"89116EEA5577A899"
+      INIT => X"A9B65E6C05DBE8A6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_98__0_n_0\
     );
 \rStoredData[0]_i_99__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"40FC43DC17A9249E"
+      INIT => X"3FB8B7F0402D483A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_99__0_n_0\
     );
 \rStoredData[1]_i_100__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2232EC22CD6CD9DD"
+      INIT => X"BD962B2939B56269"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_100__0_n_0\
     );
 \rStoredData[1]_i_101__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4F00000020FFFFFF"
+      INIT => X"756A889D10A3AF46"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_101__0_n_0\
     );
 \rStoredData[1]_i_102__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0AAF00AAFD54FFD5"
+      INIT => X"B5D22F9D2DD50A2D"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_102__0_n_0\
     );
 \rStoredData[1]_i_103__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"088C88CCEEF7EF77"
+      INIT => X"AA26A2666455655D"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
@@ -8383,49 +8509,49 @@ begin
     );
 \rStoredData[1]_i_104__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5F4F0F050520A0B0"
+      INIT => X"1555AA8857EA5555"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_104__0_n_0\
     );
 \rStoredData[1]_i_105__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E361717961617978"
+      INIT => X"695B49DB49DB49DA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(0),
       O => \rStoredData[1]_i_105__0_n_0\
     );
 \rStoredData[1]_i_106__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9888E6E68EEE7777"
+      INIT => X"D9999BBBBA222666"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_106__0_n_0\
     );
 \rStoredData[1]_i_107__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5075EFAFF5F78A0A"
+      INIT => X"DA5F45255D55A0A2"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
@@ -8435,74 +8561,74 @@ begin
     );
 \rStoredData[1]_i_108__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F2B4B024B024B42D"
+      INIT => X"AAE6AE6775515519"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_108__0_n_0\
     );
 \rStoredData[1]_i_109__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"080000F0F0F3FFFF"
+      INIT => X"C4CCCC3C3C3B3333"
     )
         port map (
       I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_109__0_n_0\
     );
-\rStoredData[1]_i_110__0\: unisim.vcomponents.LUT5
+\rStoredData[1]_i_110__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9DCCDC44"
+      INIT => X"9AAA6664A6A65555"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_110__0_n_0\
     );
-\rStoredData[1]_i_111__0\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_111__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0F0F0F0F0F0F0FF4"
+      INIT => X"33333336"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(0),
       O => \rStoredData[1]_i_111__0_n_0\
     );
 \rStoredData[1]_i_112__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"004F0000FFB0FFFF"
+      INIT => X"000800AFFFF7FF51"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_112__0_n_0\
     );
 \rStoredData[1]_i_113__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA67551955558AAA"
+      INIT => X"AAEF7511FFF70000"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
@@ -8512,23 +8638,23 @@ begin
     );
 \rStoredData[1]_i_114__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555D55D9BAAAAAA2"
+      INIT => X"5A1A5A1E0E8F8F87"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_114__0_n_0\
     );
 \rStoredData[1]_i_115__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3232C4C817C799B8"
+      INIT => X"1090EEEA9DEF3B10"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -8538,42 +8664,42 @@ begin
     );
 \rStoredData[1]_i_116__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8ACAD2D7F7F53520"
+      INIT => X"BB8C3333CC45ACCC"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_116__0_n_0\
     );
-\rStoredData[1]_i_117\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_117__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"40FDAF500AD0AF00"
+      INIT => X"EA55AA52A57A85AA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_117_n_0\
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_117__0_n_0\
     );
-\rStoredData[1]_i_118\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_118__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5A5A496D5A5BE5A5"
+      INIT => X"0F581EF00E781AF0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_118_n_0\
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_118__0_n_0\
     );
 \rStoredData[1]_i_2__0\: unisim.vcomponents.LUT6
     generic map(
@@ -8593,11 +8719,11 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[1]_i_7_n_0\,
+      I0 => \rStoredData_reg[1]_i_7__0_n_0\,
       I1 => \rStoredData_reg[1]_i_8__0_n_0\,
-      I2 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(7),
       I3 => \rStoredData_reg[1]_i_9__0_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(8),
       I5 => \rStoredData_reg[1]_i_10__0_n_0\,
       O => \rStoredData[1]_i_3__0_n_0\
     );
@@ -8614,30 +8740,30 @@ begin
       I5 => \rStoredData_reg[1]_i_14__0_n_0\,
       O => \rStoredData[1]_i_4__0_n_0\
     );
-\rStoredData[1]_i_55\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_55__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"334C32CCCCCCCCCC"
+      INIT => X"9A96A6A69296A6A5"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_55_n_0\
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_55__0_n_0\
     );
 \rStoredData[1]_i_56__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3B3C3C3CCCCCCCCC"
+      INIT => X"AF5A0A50AA581A75"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_56__0_n_0\
     );
 \rStoredData[1]_i_57__0\: unisim.vcomponents.LUT6
@@ -8659,8 +8785,8 @@ begin
     )
         port map (
       I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(5),
       I5 => s_axis_video_tdata(4),
@@ -8668,15 +8794,15 @@ begin
     );
 \rStoredData[1]_i_59__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF77F7551008008A"
+      INIT => X"A5A49E1AA6961B5B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_59__0_n_0\
     );
 \rStoredData[1]_i_5__0\: unisim.vcomponents.LUT6
@@ -8686,15 +8812,15 @@ begin
         port map (
       I0 => \rStoredData_reg[1]_i_15__0_n_0\,
       I1 => \rStoredData_reg[1]_i_16__0_n_0\,
-      I2 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(0),
       I3 => \rStoredData_reg[1]_i_17__0_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(6),
       I5 => \rStoredData_reg[1]_i_18__0_n_0\,
       O => \rStoredData[1]_i_5__0_n_0\
     );
 \rStoredData[1]_i_60__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"98E6AA758A77AE55"
+      INIT => X"1FA0FF00FF00FE11"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -8707,33 +8833,33 @@ begin
     );
 \rStoredData[1]_i_61__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9AA696A692A696A5"
+      INIT => X"CCCDCDCD9393B333"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_61__0_n_0\
     );
 \rStoredData[1]_i_62__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AF5AAA580A501A75"
+      INIT => X"6C4CCCCCCCCDCDC9"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_62__0_n_0\
     );
 \rStoredData[1]_i_63__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"66444CCDDDD9999B"
+      INIT => X"FFF777551000088A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -8746,33 +8872,33 @@ begin
     );
 \rStoredData[1]_i_64__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A0807FFF0515A8A8"
+      INIT => X"98E6AA758A77AE55"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_64__0_n_0\
     );
 \rStoredData[1]_i_65__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCDCDCD9393B333"
+      INIT => X"343C3C2CCCCCCCCC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_65__0_n_0\
     );
 \rStoredData[1]_i_66__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6C4CCCCCCCCDCDC9"
+      INIT => X"3B3C3C3CCCCCCCCC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -8811,15 +8937,15 @@ begin
     );
 \rStoredData[1]_i_69__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A5A4A6969E1A1B5B"
+      INIT => X"664C44CDDD99D99B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_69__0_n_0\
     );
 \rStoredData[1]_i_6__0\: unisim.vcomponents.LUT6
@@ -8837,49 +8963,49 @@ begin
     );
 \rStoredData[1]_i_70__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1FA0FF00FF00FE11"
+      INIT => X"A0807FFF0515A8A8"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_70__0_n_0\
     );
 \rStoredData[1]_i_71__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2300FCFFFFFF0000"
+      INIT => X"BF0050FFFDFF0000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(9),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_71__0_n_0\
     );
 \rStoredData[1]_i_72__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E7117708558851AA"
+      INIT => X"A525657858585A5A"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_72__0_n_0\
     );
 \rStoredData[1]_i_73__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EF51FF00FF00F708"
+      INIT => X"45FB55AADDAADD22"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -8889,23 +9015,23 @@ begin
     );
 \rStoredData[1]_i_74__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFF4CCC3330FB33"
+      INIT => X"FFFE7FFF0001A080"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_74__0_n_0\
     );
 \rStoredData[1]_i_75__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EE15AA57887F01EE"
+      INIT => X"CCB7AA75AA55AB44"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -8915,76 +9041,76 @@ begin
     );
 \rStoredData[1]_i_76__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E5F1E1F0F0787058"
+      INIT => X"F0F0E165F0F12D0D"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_76__0_n_0\
     );
 \rStoredData[1]_i_77__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1E5A70F0F0F0F0E1"
+      INIT => X"B4785A5A70585A4B"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_77__0_n_0\
+    );
+\rStoredData[1]_i_78__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00FF75AA15AAF58A"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[1]_i_78__0_n_0\
+    );
+\rStoredData[1]_i_79__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F8F87A6F0F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_77__0_n_0\
-    );
-\rStoredData[1]_i_78__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5110AEAE0888FFF7"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_78__0_n_0\
-    );
-\rStoredData[1]_i_79__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F0F0F0E78F0F0F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_79__0_n_0\
     );
 \rStoredData[1]_i_80__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AEEF5511F7750088"
+      INIT => X"AAAA555595FD6200"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_80__0_n_0\
     );
 \rStoredData[1]_i_81__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F0F0F0F8FF0F0F0"
+      INIT => X"430B4B0B0F3C3C3C"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(9),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
@@ -8993,454 +9119,416 @@ begin
     );
 \rStoredData[1]_i_82__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0520BAFAA0AADF5F"
+      INIT => X"0F0F0F8FCFF2D2F2"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_82__0_n_0\
     );
 \rStoredData[1]_i_83__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4C333CA23D8235C2"
+      INIT => X"E4B43128B5B50A4A"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_83__0_n_0\
     );
 \rStoredData[1]_i_84__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF005DA005BA00FF"
+      INIT => X"AB3144C81544BBBB"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_84__0_n_0\
     );
 \rStoredData[1]_i_85__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5A6559E579A569A6"
+      INIT => X"585B5B4B4F4F0F8E"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_85__0_n_0\
     );
 \rStoredData[1]_i_86__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"080A080EEFF7F7F5"
+      INIT => X"0F0E9AD21E1EF2F1"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_86__0_n_0\
     );
-\rStoredData[1]_i_87__0\: unisim.vcomponents.LUT5
+\rStoredData[1]_i_87__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D99BB226"
+      INIT => X"681F0EF25E851DED"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_87__0_n_0\
     );
 \rStoredData[1]_i_88__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"324426CC224466DD"
+      INIT => X"C224BC49D46D3DDB"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_88__0_n_0\
     );
 \rStoredData[1]_i_89__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9933BB3333223266"
+      INIT => X"60A27A0C5F5397F6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_89__0_n_0\
     );
 \rStoredData[1]_i_90__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0F0F3C38F0F0F"
+      INIT => X"C336C62594493CC9"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_90__0_n_0\
     );
 \rStoredData[1]_i_91__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"347CCCCBC333303C"
+      INIT => X"51006B5B8AFF560E"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_91__0_n_0\
     );
 \rStoredData[1]_i_92__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A800001557FFFEEA"
+      INIT => X"BD393B6396B52D69"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[1]_i_92__0_n_0\
     );
 \rStoredData[1]_i_93__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5540F555AAAB00AA"
+      INIT => X"774A809E50A4AF43"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_93__0_n_0\
     );
 \rStoredData[1]_i_94__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3C3C3B333343C3C4"
+      INIT => X"9C3DD6963923B529"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_94__0_n_0\
     );
 \rStoredData[1]_i_95__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"666665555D599999"
+      INIT => X"68970CF25EA159AD"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_95__0_n_0\
     );
 \rStoredData[1]_i_96__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"644599995DDD9BBA"
+      INIT => X"C2253C49D46D3DDA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_96__0_n_0\
     );
 \rStoredData[1]_i_97__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCDD9BBBDD993332"
+      INIT => X"60825F725A0D95EC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_97__0_n_0\
     );
 \rStoredData[1]_i_98__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"324C66CC22CC44DD"
+      INIT => X"C2C69C3C246D49CB"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[1]_i_98__0_n_0\
     );
 \rStoredData[1]_i_99__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA55ED0043BA36E8"
+      INIT => X"50E5109A8F50EF68"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[1]_i_99__0_n_0\
+    );
+\rStoredData[2]_i_100__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCCCCCC933333333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_100__0_n_0\
+    );
+\rStoredData[2]_i_101__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCC4CC6333333333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_101__0_n_0\
+    );
+\rStoredData[2]_i_102__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6233633333333333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_102__0_n_0\
+    );
+\rStoredData[2]_i_103__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"333B3B3B9D9C9CDC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_103__0_n_0\
+    );
+\rStoredData[2]_i_104__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"25FAFF05B70DFA00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[2]_i_104__0_n_0\
+    );
+\rStoredData[2]_i_105__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DDD99998AAAA2666"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_99__0_n_0\
-    );
-\rStoredData[2]_i_100__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F333B3333C0C0C4C"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_100__0_n_0\
-    );
-\rStoredData[2]_i_101__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"666666666662222B"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_101__0_n_0\
-    );
-\rStoredData[2]_i_102__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"99955466"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_102__0_n_0\
-    );
-\rStoredData[2]_i_103__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"555555556AAAAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_103__0_n_0\
-    );
-\rStoredData[2]_i_104__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAA95555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_104__0_n_0\
-    );
-\rStoredData[2]_i_105__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"ECFF03000000FFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_105__0_n_0\
     );
 \rStoredData[2]_i_106__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6233633333B93B99"
+      INIT => X"00FF00F00FE07F00"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_106__0_n_0\
     );
 \rStoredData[2]_i_107__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"15FF0000FF00FFFF"
+      INIT => X"F0F3C70F0F0F0F0F"
     )
         port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_107__0_n_0\
     );
-\rStoredData[2]_i_108__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AF509F055F2558A0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_108__0_n_0\
-    );
-\rStoredData[2]_i_109\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8FCFD2D2CBDAD2D2"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_109_n_0\
-    );
-\rStoredData[2]_i_110\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C70C3C3C"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_110_n_0\
-    );
-\rStoredData[2]_i_111\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"999399B333263266"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_111_n_0\
-    );
-\rStoredData[2]_i_15__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_14__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[2]_i_38__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_39__0_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData_reg[2]_i_40__0_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_41__0_n_0\,
-      O => \rStoredData[2]_i_15__0_n_0\
+      I0 => \rStoredData[2]_i_39__0_n_0\,
+      I1 => \rStoredData[2]_i_40__0_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[2]_i_41__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[2]_i_42__0_n_0\,
+      O => \rStoredData[2]_i_14__0_n_0\
     );
 \rStoredData[2]_i_16__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[2]_i_42__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_43__0_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData_reg[2]_i_44__0_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_45__0_n_0\,
+      I0 => \rStoredData[2]_i_45__0_n_0\,
+      I1 => \rStoredData[2]_i_46__0_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[2]_i_41__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[2]_i_47__0_n_0\,
       O => \rStoredData[2]_i_16__0_n_0\
+    );
+\rStoredData[2]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"E4"
+    )
+        port map (
+      I0 => sGammaReg(2),
+      I1 => \p_1_in__0\(2),
+      I2 => \rStoredData_reg[2]_i_3__0_n_0\,
+      O => \rStoredData[2]_i_1__0_n_0\
     );
 \rStoredData[2]_i_21__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"66AAEAAAAAAAAAAA"
+      INIT => X"30BBFC88FF00FF00"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I0 => \rStoredData[5]_i_30__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_63__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[2]_i_56__0_n_0\,
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_21__0_n_0\
     );
-\rStoredData[2]_i_22__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_25__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6666EAAAAAAAAAAA"
+      INIT => X"B8BBB888B888B888"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
+      I0 => \rStoredData[4]_i_23__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[5]_i_20__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_31__0_n_0\,
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_22__1_n_0\
+      O => \rStoredData[2]_i_25__0_n_0\
     );
-\rStoredData[2]_i_23\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_27__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0FF070F0F0F0F0F0"
+      INIT => X"70F070F0F5EFF0E5"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[6]_i_17__0_n_0\,
       I2 => s_axis_video_tdata(5),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
+      I4 => \rStoredData[2]_i_65__0_n_0\,
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_23_n_0\
+      O => \rStoredData[2]_i_27__0_n_0\
     );
 \rStoredData[2]_i_2__0\: unisim.vcomponents.LUT6
     generic map(
@@ -9449,65 +9537,139 @@ begin
         port map (
       I0 => \rStoredData[2]_i_4__0_n_0\,
       I1 => s_axis_video_tdata(4),
-      I2 => \rStoredData_reg[2]_i_5__0_n_0\,
+      I2 => \rStoredData[2]_i_5__0_n_0\,
       I3 => sGammaReg(1),
       I4 => sGammaReg(0),
       I5 => \rStoredData[2]_i_6__0_n_0\,
       O => \p_1_in__0\(2)
     );
-\rStoredData[2]_i_3__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_39__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
+      INIT => X"B9B999B95423462B"
     )
         port map (
-      I0 => \rStoredData[2]_i_7_n_0\,
-      I1 => \rStoredData_reg[2]_i_8__0_n_0\,
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_39__0_n_0\
+    );
+\rStoredData[2]_i_40__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3C9EBC243C3B9366"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_40__0_n_0\
+    );
+\rStoredData[2]_i_41__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9B9999DD426B436B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData_reg[2]_i_9__0_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData_reg[2]_i_10__0_n_0\,
-      O => \rStoredData[2]_i_3__0_n_0\
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_41__0_n_0\
     );
 \rStoredData[2]_i_42__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCCCCCDD99BB333"
+      INIT => X"3CBB3C20B365934B"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_42__0_n_0\
+    );
+\rStoredData[2]_i_45__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B999B9B95646233B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_45__0_n_0\
+    );
+\rStoredData[2]_i_46__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3CBE3C38B4259362"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_46__0_n_0\
+    );
+\rStoredData[2]_i_47__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3CB33B653CD3204A"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_47__0_n_0\
     );
 \rStoredData[2]_i_4__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[2]_i_11__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_12__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_9__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_10__0_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData_reg[2]_i_13_n_0\,
+      I3 => \rStoredData_reg[2]_i_11__0_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_14__0_n_0\,
+      I5 => \rStoredData_reg[2]_i_12__0_n_0\,
       O => \rStoredData[2]_i_4__0_n_0\
     );
-\rStoredData[2]_i_54\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_56__0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFF8FFFF00010000"
+      INIT => X"8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_56__0_n_0\
+    );
+\rStoredData[2]_i_57__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFECFFFF00010000"
     )
         port map (
       I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(5),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_54_n_0\
+      O => \rStoredData[2]_i_57__0_n_0\
     );
-\rStoredData[2]_i_55__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_58__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"50525A4A0A0F0F0F"
     )
@@ -9518,48 +9680,35 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_55__0_n_0\
+      O => \rStoredData[2]_i_58__0_n_0\
     );
-\rStoredData[2]_i_56__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_59__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BB99BB9999DDDDDC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_56__0_n_0\
-    );
-\rStoredData[2]_i_57__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5A5A5A4A0A0A0A2F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_57__0_n_0\
-    );
-\rStoredData[2]_i_58__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"DDD5DD5544444442"
+      INIT => X"DDD5D5D544444442"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_58__0_n_0\
+      O => \rStoredData[2]_i_59__0_n_0\
     );
-\rStoredData[2]_i_59__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_5__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData_reg[2]_i_13__0_n_0\,
+      I1 => \rStoredData[2]_i_14__0_n_0\,
+      I2 => s_axis_video_tdata(0),
+      I3 => \rStoredData_reg[2]_i_15__0_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[2]_i_16__0_n_0\,
+      O => \rStoredData[2]_i_5__0_n_0\
+    );
+\rStoredData[2]_i_60__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AABBABBBD5555555"
     )
@@ -9570,74 +9719,84 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_59__0_n_0\
-    );
-\rStoredData[2]_i_60__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAAAB9B99DDD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_60__0_n_0\
     );
 \rStoredData[2]_i_61__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2A2AAAAAAAAAABBB"
+      INIT => X"7CB4A2B3A5A1D2DE"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[2]_i_61__0_n_0\
     );
 \rStoredData[2]_i_62__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7CB4A5A1A2B3D2DE"
+      INIT => X"6158785A7058785A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[2]_i_62__0_n_0\
     );
 \rStoredData[2]_i_63__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6178585A7078585A"
+      INIT => X"BBBB999999DDDDDC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_63__0_n_0\
     );
 \rStoredData[2]_i_64__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CC99DD33CDBBD922"
+      INIT => X"5A5A5A4A0A0A0A2F"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_64__0_n_0\
+    );
+\rStoredData[2]_i_65__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"07"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_65__0_n_0\
+    );
+\rStoredData[2]_i_66__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CC99CDBBDD33D922"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_64__0_n_0\
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_66__0_n_0\
     );
-\rStoredData[2]_i_65__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_67__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"38F0F0F0F0F0F0F5"
     )
@@ -9645,60 +9804,34 @@ begin
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_65__0_n_0\
-    );
-\rStoredData[2]_i_66__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"30EFFF00FF00FF00"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_66__0_n_0\
-    );
-\rStoredData[2]_i_67__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00022222BFFFFFDD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_67__0_n_0\
     );
 \rStoredData[2]_i_68__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFD40000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_68__0_n_0\
-    );
-\rStoredData[2]_i_69__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0FF8F0FFFFF0000"
+      INIT => X"007F0FF00FF00FF0"
     )
         port map (
       I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_68__0_n_0\
+    );
+\rStoredData[2]_i_69__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"367636666E6C6EEC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_69__0_n_0\
     );
@@ -9715,115 +9848,103 @@ begin
       I5 => \rStoredData_reg[2]_i_20__0_n_0\,
       O => \rStoredData[2]_i_6__0_n_0\
     );
-\rStoredData[2]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_7__0_n_0\,
-      I1 => \rStoredData[2]_i_21__0_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[2]_i_22__1_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[2]_i_23_n_0\,
-      O => \rStoredData[2]_i_7_n_0\
-    );
 \rStoredData[2]_i_70__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCCCCCDDB9393B3"
+      INIT => X"7F7F7F7FC8888888"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_70__0_n_0\
-    );
-\rStoredData[2]_i_71__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0002BFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_70__0_n_0\
+    );
+\rStoredData[2]_i_71__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFE80000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_71__0_n_0\
     );
 \rStoredData[2]_i_72__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2C4C6CCCCCCCCCCD"
+      INIT => X"4466666773333333"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_72__0_n_0\
     );
 \rStoredData[2]_i_73__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00FF4CFFCF33FF00"
+      INIT => X"66666666667B673B"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_73__0_n_0\
     );
 \rStoredData[2]_i_74__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00FF7F00FF00FF00"
+      INIT => X"2666666666CCEECD"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_74__0_n_0\
     );
 \rStoredData[2]_i_75__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9CDCDCCCCCCCC4C4"
+      INIT => X"0F7A1AFAF0F0F0F0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_75__0_n_0\
     );
 \rStoredData[2]_i_76__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3B3C3C3CCCCCCCCC"
+      INIT => X"70EFFF00FF00FF00"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_76__0_n_0\
     );
 \rStoredData[2]_i_77__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FD00550A40AA00FF"
+      INIT => X"AA55BF00FF00F500"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(4),
@@ -9833,362 +9954,443 @@ begin
     );
 \rStoredData[2]_i_78__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"659955885DAAD9AA"
+      INIT => X"999C9C9CC6464646"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_78__0_n_0\
+    );
+\rStoredData[2]_i_79__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9594961666666666"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_79__0_n_0\
+    );
+\rStoredData[2]_i_7__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[2]_i_21__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_22__0_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => \rStoredData_reg[2]_i_23__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[2]_i_24__0_n_0\,
+      O => \rStoredData[2]_i_7__0_n_0\
+    );
+\rStoredData[2]_i_80__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CD99DD88DD80D922"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_78__0_n_0\
-    );
-\rStoredData[2]_i_79__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0F0F0F0F04A500F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_79__0_n_0\
-    );
-\rStoredData[2]_i_80__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9B93B3B336262624"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_80__0_n_0\
     );
 \rStoredData[2]_i_81__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C4C6C4C223333333"
+      INIT => X"9888C4C48CCC7777"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_81__0_n_0\
     );
 \rStoredData[2]_i_82__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33333333304C00CC"
+      INIT => X"9999999112226666"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_82__0_n_0\
     );
 \rStoredData[2]_i_83__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C3F3B333C3F33330"
+      INIT => X"C353D333C313D332"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[2]_i_83__0_n_0\
     );
 \rStoredData[2]_i_84__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"02022222BBBFBFBF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_84__0_n_0\
-    );
-\rStoredData[2]_i_85__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F5D5F5555002400A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_85__0_n_0\
-    );
-\rStoredData[2]_i_86__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0F0F0F0B00F0F0F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_86__0_n_0\
-    );
-\rStoredData[2]_i_87__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"D40A00FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_87__0_n_0\
-    );
-\rStoredData[2]_i_88__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EE45BB55B86200BA"
+      INIT => X"D4C9C33AC2D84337"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_84__0_n_0\
+    );
+\rStoredData[2]_i_85__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A96DBD24952494B6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_85__0_n_0\
+    );
+\rStoredData[2]_i_86__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DCC6CC59C43393AE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_86__0_n_0\
+    );
+\rStoredData[2]_i_87__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A9BDAD956D246CA4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_87__0_n_0\
+    );
+\rStoredData[2]_i_88__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"D4C9433AC2986337"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_88__0_n_0\
     );
 \rStoredData[2]_i_89__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"55999888AAAAE677"
+      INIT => X"A995BD946C2424B6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_89__0_n_0\
+    );
+\rStoredData[2]_i_8__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[2]_i_25__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_26__0_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => \rStoredData[2]_i_27__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[2]_i_28__0_n_0\,
+      O => \rStoredData[2]_i_8__0_n_0\
+    );
+\rStoredData[2]_i_90__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DCC5C6C8C3BA4336"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_90__0_n_0\
+    );
+\rStoredData[2]_i_91__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A9B5AD956D2424A6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_91__0_n_0\
+    );
+\rStoredData[2]_i_92__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"999D9D9DDCDCDCC4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_92__0_n_0\
+    );
+\rStoredData[2]_i_93__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"4000AAAA02AAFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_93__0_n_0\
+    );
+\rStoredData[2]_i_94__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF0F8F0F0F0000F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_94__0_n_0\
+    );
+\rStoredData[2]_i_95__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAABBBDDDDD555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_95__0_n_0\
+    );
+\rStoredData[2]_i_96__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFBF3F330000004"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_96__0_n_0\
+    );
+\rStoredData[2]_i_97__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"662262233333333B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_89__0_n_0\
-    );
-\rStoredData[2]_i_90__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAABFD55"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_90__0_n_0\
-    );
-\rStoredData[2]_i_91__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5A0A4AAA5A0A0AAF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_91__0_n_0\
-    );
-\rStoredData[2]_i_92__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0A0A0A0BFFF5FFF5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_92__0_n_0\
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_97__0_n_0\
     );
-\rStoredData[2]_i_93__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_98__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFEF0F0F000010"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_93__0_n_0\
-    );
-\rStoredData[2]_i_94__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C78F0C3C0F0C3C30"
+      INIT => X"CBC3C3F3F3F0F0F0"
     )
         port map (
       I0 => s_axis_video_tdata(0),
       I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_94__0_n_0\
-    );
-\rStoredData[2]_i_95__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0F0F0E5A70F0F0F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_95__0_n_0\
-    );
-\rStoredData[2]_i_96__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9115115577667666"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_96__0_n_0\
-    );
-\rStoredData[2]_i_97__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"55775776AAAAAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_97__0_n_0\
-    );
-\rStoredData[2]_i_98__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F0F0F7FFFF0F0F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_98__0_n_0\
     );
 \rStoredData[2]_i_99__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAEA80AA00AA55"
+      INIT => X"334C00CC30CC00FF"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_99__0_n_0\
+    );
+\rStoredData[3]_i_10__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFE0FFFFEFE00000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_29__0_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData[5]_i_16__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[3]_i_30__0_n_0\,
+      O => \rStoredData[3]_i_10__0_n_0\
     );
 \rStoredData[3]_i_11__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFEAE5E5EFEA4040"
+      INIT => X"EFEAE5E5E5E0E0E0"
     )
         port map (
       I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[3]_i_33_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[4]_i_40__0_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[3]_i_34__0_n_0\,
+      I1 => \rStoredData[3]_i_31__0_n_0\,
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[4]_i_38__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[4]_i_21__0_n_0\,
       O => \rStoredData[3]_i_11__0_n_0\
+    );
+\rStoredData[3]_i_14__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_36__0_n_0\,
+      I1 => \rStoredData[4]_i_45__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData[3]_i_37__0_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => \rStoredData[3]_i_38__0_n_0\,
+      O => \rStoredData[3]_i_14__0_n_0\
     );
 \rStoredData[3]_i_17__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_45__0_n_0\,
-      I1 => \rStoredData[3]_i_46__0_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData[5]_i_42_n_0\,
+      I0 => \rStoredData[3]_i_43__0_n_0\,
+      I1 => \rStoredData[3]_i_44__0_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[3]_i_45__0_n_0\,
       I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[3]_i_47__0_n_0\,
+      I5 => \rStoredData[3]_i_46__0_n_0\,
       O => \rStoredData[3]_i_17__0_n_0\
     );
-\rStoredData[3]_i_18__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"B8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[3]_i_48__0_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[3]_i_49__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_50__0_n_0\,
-      O => \rStoredData[3]_i_18__0_n_0\
-    );
-\rStoredData[3]_i_21__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_18__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_55__0_n_0\,
-      I1 => \rStoredData[3]_i_56__0_n_0\,
+      I0 => \rStoredData[3]_i_47__0_n_0\,
+      I1 => \rStoredData[5]_i_34__0_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[3]_i_57__0_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[4]_i_32__1_n_0\,
-      O => \rStoredData[3]_i_21__0_n_0\
+      I3 => \rStoredData[3]_i_48__0_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_23__0_n_0\,
+      O => \rStoredData[3]_i_18__0_n_0\
     );
-\rStoredData[3]_i_23\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_21__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80000000"
+      INIT => X"AFAFAFAF0FC000C0"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_23_n_0\
+      I0 => \rStoredData[3]_i_53__0_n_0\,
+      I1 => \rStoredData[3]_i_54__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(4),
+      I4 => \rStoredData[6]_i_18__0_n_0\,
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_21__0_n_0\
     );
-\rStoredData[3]_i_24\: unisim.vcomponents.LUT3
+\rStoredData[3]_i_22__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFF80000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[3]_i_22__0_n_0\
+    );
+\rStoredData[3]_i_23__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7F7FFFFFFFFFFEEE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_23__0_n_0\
+    );
+\rStoredData[3]_i_24__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0000557F"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_24__0_n_0\
+    );
+\rStoredData[3]_i_26__0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"7F"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_24_n_0\
+      O => \rStoredData[3]_i_26__0_n_0\
     );
-\rStoredData[3]_i_25__1\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_27__0\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"AA800000"
     )
@@ -10198,58 +10400,31 @@ begin
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_25__1_n_0\
-    );
-\rStoredData[3]_i_26__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFAFAFAF0FC000C0"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_16__0_n_0\,
-      I1 => \rStoredData[3]_i_60__0_n_0\,
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[5]_i_35__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_26__0_n_0\
-    );
-\rStoredData[3]_i_27__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"333333333FFC7CFC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_27__0_n_0\
     );
 \rStoredData[3]_i_28__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000001FFFFFFFF"
+      INIT => X"00AF00A0FFCFFFCF"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
+      I0 => \rStoredData[3]_i_57__0_n_0\,
+      I1 => \rStoredData[6]_i_18__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(4),
+      I4 => \rStoredData[4]_i_24__0_n_0\,
       I5 => s_axis_video_tdata(5),
       O => \rStoredData[3]_i_28__0_n_0\
     );
-\rStoredData[3]_i_29__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_29__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CCCCCFCCF3F3B3B3"
+      INIT => X"FEAA0000"
     )
         port map (
-      I0 => \rStoredData[3]_i_61__0_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[3]_i_62__1_n_0\,
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_29__0_n_0\
     );
 \rStoredData[3]_i_2__0\: unisim.vcomponents.LUT6
@@ -10259,148 +10434,203 @@ begin
         port map (
       I0 => \rStoredData[3]_i_4__0_n_0\,
       I1 => s_axis_video_tdata(5),
-      I2 => \rStoredData[3]_i_5__0_n_0\,
+      I2 => \rStoredData_reg[3]_i_5__0_n_0\,
       I3 => sGammaReg(1),
       I4 => sGammaReg(0),
       I5 => \rStoredData[3]_i_6__0_n_0\,
       O => \p_1_in__0\(3)
     );
-\rStoredData[3]_i_30\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_31__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A0F0A0F0F0CFF0C0"
+      INIT => X"033F373FFFFFFFFF"
     )
         port map (
-      I0 => \rStoredData[4]_i_48__1_n_0\,
-      I1 => \rStoredData[3]_i_63__1_n_0\,
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[4]_i_33_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_30_n_0\
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_31__0_n_0\
     );
-\rStoredData[3]_i_33\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_36__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"55577777EAAAAAAA"
+      INIT => X"FFFFC880"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_33_n_0\
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_36__0_n_0\
     );
-\rStoredData[3]_i_34__0\: unisim.vcomponents.LUT3
+\rStoredData[3]_i_37__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80"
+      INIT => X"FFAAAAAAEAAAAA55"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_34__0_n_0\
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[3]_i_37__0_n_0\
+    );
+\rStoredData[3]_i_38__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555555540020002"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_38__0_n_0\
+    );
+\rStoredData[3]_i_39__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_68__0_n_0\,
+      I1 => \rStoredData[3]_i_69__0_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_70__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_71__0_n_0\,
+      O => \rStoredData[3]_i_39__0_n_0\
     );
 \rStoredData[3]_i_3__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_7__0_n_0\,
+      I0 => \rStoredData_reg[3]_i_7__0_n_0\,
       I1 => \rStoredData[3]_i_8__0_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData_reg[3]_i_9__0_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData_reg[3]_i_10__0_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[3]_i_9__0_n_0\,
+      I4 => s_axis_video_tdata(8),
+      I5 => \rStoredData[3]_i_10__0_n_0\,
       O => \rStoredData[3]_i_3__0_n_0\
+    );
+\rStoredData[3]_i_40__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_72__0_n_0\,
+      I1 => \rStoredData[3]_i_73__0_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_74__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_75__0_n_0\,
+      O => \rStoredData[3]_i_40__0_n_0\
     );
 \rStoredData[3]_i_41__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"DDD5DDD544444442"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(5),
+      I0 => \rStoredData[3]_i_76__0_n_0\,
+      I1 => \rStoredData[3]_i_77__0_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_70__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_78__0_n_0\,
       O => \rStoredData[3]_i_41__0_n_0\
     );
 \rStoredData[3]_i_42__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAAB9B9B99D"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(5),
+      I0 => \rStoredData[3]_i_79__0_n_0\,
+      I1 => \rStoredData[3]_i_80__0_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_74__0_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_81__0_n_0\,
       O => \rStoredData[3]_i_42__0_n_0\
     );
-\rStoredData[3]_i_45__0\: unisim.vcomponents.LUT4
+\rStoredData[3]_i_43__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80"
+      INIT => X"FFFFFFFFAAAAA888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_43__0_n_0\
+    );
+\rStoredData[3]_i_44__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"01FF"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_44__0_n_0\
+    );
+\rStoredData[3]_i_45__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF000000E00000FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_45__0_n_0\
     );
 \rStoredData[3]_i_46__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00001555FFFFFFFF"
+      INIT => X"FFFFFFFFA8880000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
       O => \rStoredData[3]_i_46__0_n_0\
     );
 \rStoredData[3]_i_47__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A8A8888811151515"
+      INIT => X"0F0F0F0F7FFFFFF0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_47__0_n_0\
     );
 \rStoredData[3]_i_48__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33333333393CBCBC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_48__0_n_0\
-    );
-\rStoredData[3]_i_49__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"3B9DBB9C"
+      INIT => X"AAAAAAA811111115"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_49__0_n_0\
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_48__0_n_0\
     );
 \rStoredData[3]_i_4__0\: unisim.vcomponents.LUT6
     generic map(
@@ -10410,117 +10640,71 @@ begin
       I0 => \rStoredData[3]_i_11__0_n_0\,
       I1 => \rStoredData_reg[3]_i_12__0_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData_reg[3]_i_13_n_0\,
+      I3 => \rStoredData_reg[3]_i_13__0_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[3]_i_14__0_n_0\,
+      I5 => \rStoredData[3]_i_14__0_n_0\,
       O => \rStoredData[3]_i_4__0_n_0\
     );
-\rStoredData[3]_i_50__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_53__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"33222222677755CC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_50__0_n_0\
-    );
-\rStoredData[3]_i_55__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"557F0000FFFFFFFF"
+      INIT => X"FFFE0000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_53__0_n_0\
+    );
+\rStoredData[3]_i_54__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_54__0_n_0\
+    );
+\rStoredData[3]_i_55__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555555544622222"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_55__0_n_0\
     );
 \rStoredData[3]_i_56__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFDDFDDD44004000"
+      INIT => X"9555555555555550"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_56__0_n_0\
     );
-\rStoredData[3]_i_57__0\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_57__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"001000FF"
+      INIT => X"37FF"
     )
         port map (
       I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_57__0_n_0\
     );
-\rStoredData[3]_i_5__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData_reg[3]_i_15__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_16__0_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[3]_i_17__0_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[3]_i_18__0_n_0\,
-      O => \rStoredData[3]_i_5__0_n_0\
-    );
-\rStoredData[3]_i_60__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_60__0_n_0\
-    );
-\rStoredData[3]_i_61__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"C8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_61__0_n_0\
-    );
-\rStoredData[3]_i_62__1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      O => \rStoredData[3]_i_62__1_n_0\
-    );
-\rStoredData[3]_i_63__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFEA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_63__1_n_0\
-    );
-\rStoredData[3]_i_64__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_58__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"A724273526752678"
     )
@@ -10531,9 +10715,9 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_64__0_n_0\
+      O => \rStoredData[3]_i_58__0_n_0\
     );
-\rStoredData[3]_i_65__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_59__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"02220222BFFDFFFD"
     )
@@ -10544,57 +10728,135 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_65__0_n_0\
+      O => \rStoredData[3]_i_59__0_n_0\
     );
-\rStoredData[3]_i_66__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_60__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5555555544226222"
+      INIT => X"000000003BBB3BBF"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_60__0_n_0\
+    );
+\rStoredData[3]_i_61__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFDD55544444"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_61__0_n_0\
+    );
+\rStoredData[3]_i_62__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6222222222AAAAAB"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_62__0_n_0\
+    );
+\rStoredData[3]_i_63__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"99D59D5555555555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_66__0_n_0\
+      O => \rStoredData[3]_i_63__0_n_0\
     );
-\rStoredData[3]_i_67__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_64__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9555555555555550"
+      INIT => X"7FF0F0F0F0F0F0F0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_64__0_n_0\
+    );
+\rStoredData[3]_i_65__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000005777FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[3]_i_65__0_n_0\
+    );
+\rStoredData[3]_i_66__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEEEEAAAAAAA8888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_66__0_n_0\
+    );
+\rStoredData[3]_i_67__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"033337FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_67__0_n_0\
     );
 \rStoredData[3]_i_68__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAABBB9999D"
+      INIT => X"15151717E8E9E9E1"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_68__0_n_0\
     );
-\rStoredData[3]_i_69__0\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_69__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAA81555"
+      INIT => X"6E6E666255563725"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_69__0_n_0\
     );
 \rStoredData[3]_i_6__0\: unisim.vcomponents.LUT6
@@ -10602,384 +10864,340 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[3]_i_19__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_20__0_n_0\,
+      I0 => \rStoredData[3]_i_17__0_n_0\,
+      I1 => \rStoredData[3]_i_18__0_n_0\,
       I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[3]_i_21__0_n_0\,
+      I3 => \rStoredData_reg[3]_i_19__0_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[3]_i_22__0_n_0\,
+      I5 => \rStoredData_reg[3]_i_20__0_n_0\,
       O => \rStoredData[3]_i_6__0_n_0\
     );
 \rStoredData[3]_i_70__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6A2A2AAAAAAAAAAB"
+      INIT => X"15151757E8E9E1A1"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_70__0_n_0\
+    );
+\rStoredData[3]_i_71__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6E6A62625656272C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[3]_i_71__0_n_0\
+    );
+\rStoredData[3]_i_72__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFAEAAAA0805557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_72__0_n_0\
+    );
+\rStoredData[3]_i_73__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AA57AA5A552F5AB5"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_73__0_n_0\
+    );
+\rStoredData[3]_i_74__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEEEEAAA88815557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_74__0_n_0\
+    );
+\rStoredData[3]_i_75__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A55BA74BA669866C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_75__0_n_0\
+    );
+\rStoredData[3]_i_76__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0333FCC00337FC83"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_76__0_n_0\
+    );
+\rStoredData[3]_i_77__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"66EE466255563265"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_70__0_n_0\
-    );
-\rStoredData[3]_i_71__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C083C30333333333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_71__0_n_0\
-    );
-\rStoredData[3]_i_72__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0FF070F0F0F0F0F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(5),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_72__0_n_0\
-    );
-\rStoredData[3]_i_73__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000000007FFFFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_73__0_n_0\
-    );
-\rStoredData[3]_i_74__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"33333F7C"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_74__0_n_0\
-    );
-\rStoredData[3]_i_75__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"DDDDD55540002222"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_75__0_n_0\
-    );
-\rStoredData[3]_i_76__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAAAA89"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_76__0_n_0\
-    );
-\rStoredData[3]_i_77__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CCCFB333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_77__0_n_0\
     );
 \rStoredData[3]_i_78__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAA89999911"
+      INIT => X"6E6E62625656272C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_78__0_n_0\
     );
 \rStoredData[3]_i_79__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"333030304CCCCCCC"
+      INIT => X"FFFAEAAAA0805555"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_79__0_n_0\
-    );
-\rStoredData[3]_i_7__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FCBBFC88FF88FF88"
-    )
-        port map (
-      I0 => \rStoredData[3]_i_23_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[3]_i_24_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_25__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_7__0_n_0\
     );
 \rStoredData[3]_i_80__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33333333334C30CC"
+      INIT => X"AA57AA5A552F52B5"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_80__0_n_0\
     );
 \rStoredData[3]_i_81__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"55FF55FEAAAAAAAA"
+      INIT => X"A55BA74BA669A66C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_81__0_n_0\
     );
 \rStoredData[3]_i_82__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE00000000"
+      INIT => X"5555555566666662"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_82__0_n_0\
     );
 \rStoredData[3]_i_83__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4444400022222222"
+      INIT => X"55555555666E666A"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_83__0_n_0\
     );
 \rStoredData[3]_i_84__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAA080FFFFFFFF"
+      INIT => X"55555555EEEAAAAA"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_84__0_n_0\
     );
 \rStoredData[3]_i_85__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAA888FFFFFFFF"
+      INIT => X"77766EEEAAAAAAAA"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_85__0_n_0\
     );
-\rStoredData[3]_i_86__0\: unisim.vcomponents.LUT4
+\rStoredData[3]_i_86__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF01"
+      INIT => X"D50F470F0F0A0A0A"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_86__0_n_0\
     );
 \rStoredData[3]_i_87__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001555500000000"
+      INIT => X"AAAAABBBDDDDDDDD"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[3]_i_87__0_n_0\
-    );
-\rStoredData[3]_i_88__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFD55555554"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_88__0_n_0\
-    );
-\rStoredData[3]_i_89__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"BBBFFFDD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_89__0_n_0\
-    );
-\rStoredData[3]_i_8__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"B8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[3]_i_26__0_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[3]_i_27__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_28__0_n_0\,
-      O => \rStoredData[3]_i_8__0_n_0\
-    );
-\rStoredData[3]_i_90\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1555555500000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[3]_i_90_n_0\
-    );
-\rStoredData[3]_i_91\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5F4F0F0F0F0A2AAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_91_n_0\
-    );
-\rStoredData[3]_i_92\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EABBABBB99999999"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_92_n_0\
-    );
-\rStoredData[3]_i_93\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFF08000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_93_n_0\
-    );
-\rStoredData[3]_i_94\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000011177777FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_94_n_0\
+      O => \rStoredData[3]_i_87__0_n_0\
     );
-\rStoredData[4]_i_11__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_88__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3077304430FF30FF"
+      INIT => X"00FF0700FF00FF00"
     )
         port map (
-      I0 => \rStoredData[4]_i_27__1_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[4]_i_28__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_29__0_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_11__0_n_0\
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_88__0_n_0\
+    );
+\rStoredData[3]_i_89__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"333333333C0C4CCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_89__0_n_0\
+    );
+\rStoredData[3]_i_8__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"88B8FFFF88B80000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_23__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[3]_i_24__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[3]_i_25__0_n_0\,
+      O => \rStoredData[3]_i_8__0_n_0\
+    );
+\rStoredData[3]_i_9__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B8CCFFFFB8CC0000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_26__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[3]_i_27__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_28__0_n_0\,
+      O => \rStoredData[3]_i_9__0_n_0\
     );
 \rStoredData[4]_i_12__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFEAAA88888"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(8),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => \rStoredData[4]_i_30__0_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
+      I0 => \rStoredData_reg[4]_i_30__0_n_0\,
+      I1 => \rStoredData_reg[4]_i_31__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[4]_i_32__0_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData_reg[4]_i_33__0_n_0\,
       O => \rStoredData[4]_i_12__0_n_0\
     );
-\rStoredData[4]_i_13\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_13__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_34__0_n_0\,
+      I1 => \rStoredData_reg[4]_i_31__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[4]_i_35__0_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData_reg[4]_i_33__0_n_0\,
+      O => \rStoredData[4]_i_13__0_n_0\
+    );
+\rStoredData[4]_i_15__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AF0FAF00C0C0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_38__0_n_0\,
+      I1 => \rStoredData[5]_i_34__0_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[4]_i_39__0_n_0\,
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[4]_i_15__0_n_0\
+    );
+\rStoredData[4]_i_16__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CCCCCCCFF3F3F3B3"
     )
@@ -10987,297 +11205,81 @@ begin
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(7),
       I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_13_n_0\
-    );
-\rStoredData[4]_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFCFAFC000C000C0"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_31__1_n_0\,
-      I1 => \rStoredData[5]_i_32_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[4]_i_32__1_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_14_n_0\
-    );
-\rStoredData[4]_i_15__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFC0FFFFBFC00000"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_33_n_0\,
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData[4]_i_34_n_0\,
-      O => \rStoredData[4]_i_15__0_n_0\
-    );
-\rStoredData[4]_i_16__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BBB8FF33BBB8CC00"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_35_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_36__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[4]_i_37_n_0\,
       O => \rStoredData[4]_i_16__0_n_0\
     );
-\rStoredData[4]_i_17__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_17__0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"B888FFFFB8880000"
+      INIT => X"E"
     )
         port map (
-      I0 => \rStoredData[5]_i_18__0_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[4]_i_38__0_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData_reg[4]_i_39_n_0\,
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
       O => \rStoredData[4]_i_17__0_n_0\
     );
-\rStoredData[4]_i_18__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_18__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AF00AF00FCFFFC00"
+      INIT => X"7FFFFFFF"
     )
         port map (
-      I0 => \rStoredData[4]_i_40__0_n_0\,
-      I1 => \rStoredData[4]_i_41__1_n_0\,
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(7),
-      I4 => \rStoredData[3]_i_28__0_n_0\,
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
       O => \rStoredData[4]_i_18__0_n_0\
     );
 \rStoredData[4]_i_19__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B8BBBBBBB8BB8888"
+      INIT => X"FFFFFFFFFEEEAAAA"
     )
         port map (
-      I0 => \rStoredData[4]_i_42_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_36__0_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[6]_i_7__0_n_0\,
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
       O => \rStoredData[4]_i_19__0_n_0\
     );
 \rStoredData[4]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBBBBB8BBB8BBB8"
+      INIT => X"BBBBBBBBBBB8B8B8"
     )
         port map (
-      I0 => \rStoredData_reg[4]_i_2__0_n_0\,
+      I0 => \rStoredData[4]_i_2__0_n_0\,
       I1 => sGammaReg(2),
       I2 => \rStoredData[4]_i_3__0_n_0\,
-      I3 => \rStoredData[4]_i_4__0_n_0\,
-      I4 => \rStoredData[4]_i_5_n_0\,
-      I5 => \sGammaReg_reg[1]\,
+      I3 => \rStoredData_reg[4]_i_4__0_n_0\,
+      I4 => \sGammaReg_reg[0]\,
+      I5 => \rStoredData[4]_i_5__0_n_0\,
       O => \rStoredData[4]_i_1__0_n_0\
     );
-\rStoredData[4]_i_20__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_20__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFF80000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(7),
-      O => \rStoredData[4]_i_20__0_n_0\
-    );
-\rStoredData[4]_i_21__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_43_n_0\,
-      I1 => \rStoredData[4]_i_44__0_n_0\,
-      I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[4]_i_45__0_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[4]_i_46__0_n_0\,
-      O => \rStoredData[4]_i_21__0_n_0\
-    );
-\rStoredData[4]_i_22__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E5A5E0A5A5A5A5A5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[4]_i_47__0_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[4]_i_48__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_22__0_n_0\
-    );
-\rStoredData[4]_i_23__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00B8FFFF00B80000"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_49__1_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[5]_i_40__0_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[4]_i_50__0_n_0\,
-      O => \rStoredData[4]_i_23__0_n_0\
-    );
-\rStoredData[4]_i_24__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B8BBB888B8BBB8BB"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_51__0_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[4]_i_52__0_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[4]_i_53__0_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_24__0_n_0\
-    );
-\rStoredData[4]_i_25__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"B8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_54__0_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[4]_i_55__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_56_n_0\,
-      O => \rStoredData[4]_i_25__0_n_0\
-    );
-\rStoredData[4]_i_26__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F00DFDF0F00D0D0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[4]_i_49__1_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData[5]_i_42_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[4]_i_57__0_n_0\,
-      O => \rStoredData[4]_i_26__0_n_0\
-    );
-\rStoredData[4]_i_27__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_27__1_n_0\
-    );
-\rStoredData[4]_i_28__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFEAAA00000000"
+      INIT => X"FFEA0000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_28__0_n_0\
-    );
-\rStoredData[4]_i_29__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00007FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_29__0_n_0\
-    );
-\rStoredData[4]_i_30__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      O => \rStoredData[4]_i_30__0_n_0\
-    );
-\rStoredData[4]_i_31__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFF8000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_31__1_n_0\
-    );
-\rStoredData[4]_i_32__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFAAA8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_32__1_n_0\
-    );
-\rStoredData[4]_i_33\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"15FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_33_n_0\
-    );
-\rStoredData[4]_i_34\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"001FFFFFFFF00000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
       I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_34_n_0\
+      O => \rStoredData[4]_i_20__0_n_0\
     );
-\rStoredData[4]_i_35\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_21__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"5555544422222AAA"
+      INIT => X"80"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_35_n_0\
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_21__0_n_0\
     );
-\rStoredData[4]_i_36__0\: unisim.vcomponents.LUT5
+\rStoredData[4]_i_22__0\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00005F7F"
     )
@@ -11287,31 +11289,158 @@ begin
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_36__0_n_0\
+      O => \rStoredData[4]_i_22__0_n_0\
     );
-\rStoredData[4]_i_37\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_23__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEAFFFF00000000"
+      INIT => X"FFFFFFFE00000000"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_37_n_0\
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_23__0_n_0\
     );
-\rStoredData[4]_i_38__0\: unisim.vcomponents.LUT4
+\rStoredData[4]_i_24__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEA"
+      INIT => X"0001"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_24__0_n_0\
+    );
+\rStoredData[4]_i_26__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"22FF22FFF0FFF000"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_42__0_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[5]_i_21__0_n_0\,
+      I3 => s_axis_video_tdata(6),
+      I4 => \rStoredData[4]_i_43__0_n_0\,
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_26__0_n_0\
+    );
+\rStoredData[4]_i_27__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAEAAAAA55005555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[4]_i_44__0_n_0\,
+      I2 => s_axis_video_tdata(4),
+      I3 => \rStoredData[5]_i_20__0_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_27__0_n_0\
+    );
+\rStoredData[4]_i_28__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"33BB338830883088"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_45__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_46__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[4]_i_47__0_n_0\,
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_28__0_n_0\
+    );
+\rStoredData[4]_i_29__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBB88B8BBB8BB"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_48__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_49__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[7]_i_7__0_n_0\,
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_29__0_n_0\
+    );
+\rStoredData[4]_i_2__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_6__0_n_0\,
+      I1 => \rStoredData[4]_i_7__0_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[4]_i_8__0_n_0\,
+      I4 => s_axis_video_tdata(8),
+      I5 => \rStoredData[4]_i_9__0_n_0\,
+      O => \rStoredData[4]_i_2__0_n_0\
+    );
+\rStoredData[4]_i_34__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"CDFFCD00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[4]_i_58__0_n_0\,
+      O => \rStoredData[4]_i_34__0_n_0\
+    );
+\rStoredData[4]_i_36__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBFCF333BBFCC000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_24__0_n_0\,
+      I1 => s_axis_video_tdata(7),
+      I2 => \rStoredData[4]_i_61__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_62__0_n_0\,
+      O => \rStoredData[4]_i_36__0_n_0\
+    );
+\rStoredData[4]_i_37__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BCCCFFFFBCCC0000"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_63__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => \rStoredData[4]_i_64__0_n_0\,
+      O => \rStoredData[4]_i_37__0_n_0\
+    );
+\rStoredData[4]_i_38__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFF8000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
       O => \rStoredData[4]_i_38__0_n_0\
+    );
+\rStoredData[4]_i_39__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFAAA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_39__0_n_0\
     );
 \rStoredData[4]_i_3__0\: unisim.vcomponents.LUT6
     generic map(
@@ -11321,259 +11450,12 @@ begin
       I0 => s_axis_video_tdata(6),
       I1 => sGammaReg(0),
       I2 => sGammaReg(1),
-      I3 => \rStoredData_reg[4]_i_8__0_n_0\,
+      I3 => \rStoredData_reg[4]_i_10__0_n_0\,
       I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData_reg[4]_i_9__0_n_0\,
+      I5 => \rStoredData_reg[4]_i_11__0_n_0\,
       O => \rStoredData[4]_i_3__0_n_0\
     );
-\rStoredData[4]_i_40__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_40__0_n_0\
-    );
-\rStoredData[4]_i_41__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFAA80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_41__1_n_0\
-    );
-\rStoredData[4]_i_42\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFE00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_42_n_0\
-    );
-\rStoredData[4]_i_43\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000557F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_43_n_0\
-    );
-\rStoredData[4]_i_44__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8880000000000001"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_44__0_n_0\
-    );
-\rStoredData[4]_i_45__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFEAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_45__0_n_0\
-    );
-\rStoredData[4]_i_46__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFEAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_46__0_n_0\
-    );
-\rStoredData[4]_i_47__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFA8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_47__0_n_0\
-    );
-\rStoredData[4]_i_48__1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"7F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_48__1_n_0\
-    );
-\rStoredData[4]_i_49__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00001555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_49__1_n_0\
-    );
-\rStoredData[4]_i_4__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[4]_i_10__0_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_11__0_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[4]_i_12__0_n_0\,
-      I5 => \sGammaReg_reg[0]\,
-      O => \rStoredData[4]_i_4__0_n_0\
-    );
-\rStoredData[4]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_13_n_0\,
-      I1 => \rStoredData[4]_i_14_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[4]_i_15__0_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData[4]_i_16__0_n_0\,
-      O => \rStoredData[4]_i_5_n_0\
-    );
-\rStoredData[4]_i_50__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFCCCCCCCC8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_50__0_n_0\
-    );
-\rStoredData[4]_i_51__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"30040C0CCCCCCCCC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_51__0_n_0\
-    );
-\rStoredData[4]_i_52__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF80000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_52__0_n_0\
-    );
-\rStoredData[4]_i_53__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"557FFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_53__0_n_0\
-    );
-\rStoredData[4]_i_54__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A8A8899955555555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_54__0_n_0\
-    );
-\rStoredData[4]_i_55__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"80033333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_55__0_n_0\
-    );
-\rStoredData[4]_i_56\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"99999999DCC4CCC4"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_56_n_0\
-    );
-\rStoredData[4]_i_57__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFAAEAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_57__0_n_0\
-    );
-\rStoredData[4]_i_58\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_40__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"636363636332723A"
     )
@@ -11584,110 +11466,472 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[4]_i_58_n_0\
+      O => \rStoredData[4]_i_40__0_n_0\
     );
-\rStoredData[4]_i_59\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_41__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"57775777EAAAAAAA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_59_n_0\
+      O => \rStoredData[4]_i_41__0_n_0\
     );
-\rStoredData[5]_i_10__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_42__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"55040504FFFFFFFF"
+      INIT => X"A8000000"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_23__0_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_24__0_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_10__0_n_0\
-    );
-\rStoredData[5]_i_11__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF55155555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => \rStoredData[5]_i_25__1_n_0\,
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(9),
-      O => \rStoredData[5]_i_11__0_n_0\
+      O => \rStoredData[4]_i_42__0_n_0\
     );
-\rStoredData[5]_i_13__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_43__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFF80FF8000"
+      INIT => X"FFFFFFFFC444C440"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_43__0_n_0\
+    );
+\rStoredData[4]_i_44__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_44__0_n_0\
+    );
+\rStoredData[4]_i_45__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000F0F0F7FFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_45__0_n_0\
+    );
+\rStoredData[4]_i_46__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_46__0_n_0\
+    );
+\rStoredData[4]_i_47__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_47__0_n_0\
+    );
+\rStoredData[4]_i_48__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0037FFFFC0000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_48__0_n_0\
+    );
+\rStoredData[4]_i_49__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"557FFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_49__0_n_0\
+    );
+\rStoredData[4]_i_50__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AA888155"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_50__0_n_0\
+    );
+\rStoredData[4]_i_51__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FFFF01FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_51__0_n_0\
+    );
+\rStoredData[4]_i_52__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AA880155"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_52__0_n_0\
+    );
+\rStoredData[4]_i_53__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FFFE5557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_53__0_n_0\
+    );
+\rStoredData[4]_i_54__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3F3FFF3F33C337F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_28__0_n_0\,
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_54__0_n_0\
+    );
+\rStoredData[4]_i_55__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E0E0E0E05F5E7E7E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_55__0_n_0\
+    );
+\rStoredData[4]_i_56__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3F3FFF3F33C33FB0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_56__0_n_0\
+    );
+\rStoredData[4]_i_57__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E0E0E0A05F5E7E7E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_57__0_n_0\
+    );
+\rStoredData[4]_i_58__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AAA88155"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_58__0_n_0\
+    );
+\rStoredData[4]_i_59__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7577F7F759595D7C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_59__0_n_0\
+    );
+\rStoredData[4]_i_5__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEE222E200000000"
+    )
+        port map (
+      I0 => \rStoredData_reg[4]_i_14__0_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[4]_i_15__0_n_0\,
+      I3 => s_axis_video_tdata(8),
+      I4 => \rStoredData[4]_i_16__0_n_0\,
+      I5 => \sGammaReg_reg[1]\,
+      O => \rStoredData[4]_i_5__0_n_0\
+    );
+\rStoredData[4]_i_60__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FC00FC0033FF37FC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_60__0_n_0\
+    );
+\rStoredData[4]_i_61__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFEA0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_61__0_n_0\
+    );
+\rStoredData[4]_i_62__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000FFFF5F7F0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_62__0_n_0\
+    );
+\rStoredData[4]_i_63__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"15FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_63__0_n_0\
+    );
+\rStoredData[4]_i_64__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F1F0FF0F0F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_64__0_n_0\
+    );
+\rStoredData[4]_i_6__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAAAAAA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(4),
+      I2 => \rStoredData[4]_i_17__0_n_0\,
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_6__0_n_0\
+    );
+\rStoredData[4]_i_7__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_18__0_n_0\,
+      I1 => \rStoredData[4]_i_19__0_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[5]_i_18__0_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_20__0_n_0\,
+      O => \rStoredData[4]_i_7__0_n_0\
+    );
+\rStoredData[4]_i_8__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B8333333B8330000"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_21__0_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[4]_i_22__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_23__0_n_0\,
+      O => \rStoredData[4]_i_8__0_n_0\
+    );
+\rStoredData[4]_i_9__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"005DFFFF005D0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[4]_i_24__0_n_0\,
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[4]_i_25__0_n_0\,
+      O => \rStoredData[4]_i_9__0_n_0\
+    );
+\rStoredData[5]_i_10__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_25__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[5]_i_26__0_n_0\,
+      O => \rStoredData[5]_i_10__0_n_0\
+    );
+\rStoredData[5]_i_11__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_27__0_n_0\,
+      I1 => \rStoredData[5]_i_25__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[5]_i_28__0_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData[5]_i_29__0_n_0\,
+      O => \rStoredData[5]_i_11__0_n_0\
+    );
+\rStoredData[5]_i_12__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F3F3B3B330303000"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_30__0_n_0\,
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[5]_i_31__0_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_12__0_n_0\
+    );
+\rStoredData[5]_i_13__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8383330333333333"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_30__0_n_0\,
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[5]_i_32__0_n_0\,
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(6),
       O => \rStoredData[5]_i_13__0_n_0\
     );
 \rStoredData[5]_i_14__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FBFB333333300000"
+      INIT => X"F0FFF0F0EF0FEF0F"
     )
         port map (
-      I0 => \rStoredData[5]_i_29__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[5]_i_20__1_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(6),
+      I0 => \rStoredData[5]_i_33__0_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(6),
+      I4 => \rStoredData[5]_i_34__0_n_0\,
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[5]_i_14__0_n_0\
     );
 \rStoredData[5]_i_15__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8383330333333333"
+      INIT => X"EEEAAAAA00000000"
     )
         port map (
-      I0 => \rStoredData[5]_i_29__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[5]_i_30__1_n_0\,
-      I4 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
       O => \rStoredData[5]_i_15__0_n_0\
     );
 \rStoredData[5]_i_16__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0FFF0F0AF8FAF8F"
+      INIT => X"00000001FFFFFFFF"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[5]_i_31__1_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_32_n_0\,
-      I5 => s_axis_video_tdata(7),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
       O => \rStoredData[5]_i_16__0_n_0\
     );
 \rStoredData[5]_i_17__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8080000003033303"
+      INIT => X"B833B83333333300"
     )
         port map (
-      I0 => \rStoredData[5]_i_33__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[5]_i_34__1_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
+      I0 => \rStoredData[6]_i_18__0_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_24__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_30__0_n_0\,
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[5]_i_17__0_n_0\
     );
 \rStoredData[5]_i_18__0\: unisim.vcomponents.LUT6
@@ -11703,139 +11947,146 @@ begin
       I5 => s_axis_video_tdata(5),
       O => \rStoredData[5]_i_18__0_n_0\
     );
-\rStoredData[5]_i_19\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_19__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B833B83333333300"
+      INIT => X"80000000"
     )
         port map (
-      I0 => \rStoredData[5]_i_35__1_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[5]_i_34__1_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_29__1_n_0\,
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_19_n_0\
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_19__0_n_0\
     );
 \rStoredData[5]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBBBBBBBBBBBBB8"
+      INIT => X"BBBBBBBBBBB8B8B8"
     )
         port map (
       I0 => \rStoredData_reg[5]_i_2__0_n_0\,
       I1 => sGammaReg(2),
       I2 => \rStoredData[5]_i_3__0_n_0\,
-      I3 => \rStoredData[5]_i_4__0_n_0\,
-      I4 => \rStoredData[5]_i_5__0_n_0\,
-      I5 => \rStoredData[5]_i_6__0_n_0\,
+      I3 => \rStoredData_reg[5]_i_4__0_n_0\,
+      I4 => \sGammaReg_reg[0]\,
+      I5 => \rStoredData[5]_i_5__0_n_0\,
       O => \rStoredData[5]_i_1__0_n_0\
     );
-\rStoredData[5]_i_20__1\: unisim.vcomponents.LUT4
+\rStoredData[5]_i_20__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"C800"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_20__1_n_0\
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_20__0_n_0\
     );
-\rStoredData[5]_i_21\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_21__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEAFAEA00000000"
+      INIT => X"02220222AAAAAAAB"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_36__0_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_37_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_21_n_0\
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_21__0_n_0\
     );
 \rStoredData[5]_i_22__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80808080FCCCCCCC"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_38_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[5]_i_29__1_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(9),
-      O => \rStoredData[5]_i_22__0_n_0\
-    );
-\rStoredData[5]_i_23__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0001"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_23__0_n_0\
-    );
-\rStoredData[5]_i_24__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"07"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_24__0_n_0\
-    );
-\rStoredData[5]_i_25__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      O => \rStoredData[5]_i_25__1_n_0\
-    );
-\rStoredData[5]_i_26\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"88BB88BBB8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_39_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[5]_i_40__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_27__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_26_n_0\
-    );
-\rStoredData[5]_i_27__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFF00A8FFA8FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_41_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_42_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_27__0_n_0\
-    );
-\rStoredData[5]_i_28__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAAAAAAA00000000"
+      INIT => X"FEAA0000FFFFFFFF"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_28__0_n_0\
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[5]_i_22__0_n_0\
     );
-\rStoredData[5]_i_29__1\: unisim.vcomponents.LUT4
+\rStoredData[5]_i_23__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000A8880000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[5]_i_23__0_n_0\
+    );
+\rStoredData[5]_i_24__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF0F080F000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_24__0_n_0\
+    );
+\rStoredData[5]_i_25__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAAAA5555233B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__0_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_25__0_n_0\
+    );
+\rStoredData[5]_i_26__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"B8FFB800"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_35__0_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[5]_i_36__0_n_0\,
+      I3 => s_axis_video_tdata(1),
+      I4 => \rStoredData[5]_i_29__0_n_0\,
+      O => \rStoredData[5]_i_26__0_n_0\
+    );
+\rStoredData[5]_i_27__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAAAA55552333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__0_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_27__0_n_0\
+    );
+\rStoredData[5]_i_29__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAA44009995FEEE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_29__0_n_0\
+    );
+\rStoredData[5]_i_30__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"EA00"
     )
@@ -11844,289 +12095,241 @@ begin
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_29__1_n_0\
+      O => \rStoredData[5]_i_30__0_n_0\
     );
-\rStoredData[5]_i_30__1\: unisim.vcomponents.LUT3
+\rStoredData[5]_i_31__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1F"
+      INIT => X"A800"
     )
         port map (
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_30__1_n_0\
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[5]_i_31__0_n_0\
     );
-\rStoredData[5]_i_31__1\: unisim.vcomponents.LUT2
+\rStoredData[5]_i_32__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"1F"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      O => \rStoredData[5]_i_32__0_n_0\
+    );
+\rStoredData[5]_i_33__0\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_31__1_n_0\
+      O => \rStoredData[5]_i_33__0_n_0\
     );
-\rStoredData[5]_i_32\: unisim.vcomponents.LUT5
+\rStoredData[5]_i_34__0\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"000057FF"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_32_n_0\
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_34__0_n_0\
     );
-\rStoredData[5]_i_33__1\: unisim.vcomponents.LUT3
+\rStoredData[5]_i_35__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"80"
+      INIT => X"FFE000FF"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_33__1_n_0\
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_35__0_n_0\
     );
-\rStoredData[5]_i_34__1\: unisim.vcomponents.LUT4
+\rStoredData[5]_i_36__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001"
+      INIT => X"C000CC003337FCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_36__0_n_0\
+    );
+\rStoredData[5]_i_37__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C000CC803337FCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_37__0_n_0\
+    );
+\rStoredData[5]_i_38__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFE000000FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_38__0_n_0\
+    );
+\rStoredData[5]_i_3__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"31223100"
+    )
+        port map (
+      I0 => sGammaReg(0),
+      I1 => sGammaReg(1),
+      I2 => \rStoredData[5]_i_8__0_n_0\,
+      I3 => s_axis_video_tdata(7),
+      I4 => \rStoredData[5]_i_9__0_n_0\,
+      O => \rStoredData[5]_i_3__0_n_0\
+    );
+\rStoredData[5]_i_5__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFE200E200000000"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_12__0_n_0\,
+      I1 => s_axis_video_tdata(8),
+      I2 => \rStoredData[5]_i_13__0_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[5]_i_14__0_n_0\,
+      I5 => \sGammaReg_reg[1]\,
+      O => \rStoredData[5]_i_5__0_n_0\
+    );
+\rStoredData[5]_i_6__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCFCBB33CCFC8800"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_15__0_n_0\,
+      I1 => s_axis_video_tdata(8),
+      I2 => \rStoredData[5]_i_16__0_n_0\,
+      I3 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[5]_i_17__0_n_0\,
+      O => \rStoredData[5]_i_6__0_n_0\
+    );
+\rStoredData[5]_i_7__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFAD0D"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[5]_i_18__0_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[5]_i_19__0_n_0\,
+      I4 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_7__0_n_0\
+    );
+\rStoredData[5]_i_8__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A0AFA0A0EFFFEFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => \rStoredData[5]_i_20__0_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_21__0_n_0\,
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_8__0_n_0\
+    );
+\rStoredData[5]_i_9__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFAFAFA0C000C000"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_22__0_n_0\,
+      I1 => \rStoredData[5]_i_23__0_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_24__0_n_0\,
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_9__0_n_0\
+    );
+\rStoredData[6]_i_10__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAFFFFDCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__0_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_10__0_n_0\
+    );
+\rStoredData[6]_i_11__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAFFFFDCC4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_19__0_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_11__0_n_0\
+    );
+\rStoredData[6]_i_13__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555777FFFFFFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_13__0_n_0\
+    );
+\rStoredData[6]_i_14__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEEEAAAAA"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_14__0_n_0\
+    );
+\rStoredData[6]_i_15__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
     )
         port map (
       I0 => s_axis_video_tdata(0),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_34__1_n_0\
+      O => \rStoredData[6]_i_15__0_n_0\
     );
-\rStoredData[5]_i_35__1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"F8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_35__1_n_0\
-    );
-\rStoredData[5]_i_36__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_36__0_n_0\
-    );
-\rStoredData[5]_i_37\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_37_n_0\
-    );
-\rStoredData[5]_i_38\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFA8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_38_n_0\
-    );
-\rStoredData[5]_i_39\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000055555777"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_39_n_0\
-    );
-\rStoredData[5]_i_3__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[5]_i_9__0_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[5]_i_10__0_n_0\,
-      I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_11__0_n_0\,
-      I5 => \sGammaReg_reg[0]_0\,
-      O => \rStoredData[5]_i_3__0_n_0\
-    );
-\rStoredData[5]_i_40__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"1F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_40__0_n_0\
-    );
-\rStoredData[5]_i_41\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_41_n_0\
-    );
-\rStoredData[5]_i_42\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000015FFFFFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_42_n_0\
-    );
-\rStoredData[5]_i_4__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"02"
-    )
-        port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => sGammaReg(1),
-      I2 => sGammaReg(0),
-      O => \rStoredData[5]_i_4__0_n_0\
-    );
-\rStoredData[5]_i_5__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[5]_i_12_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[5]_i_13__0_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => s_axis_video_tdata(8),
-      I5 => \sGammaReg_reg[0]\,
-      O => \rStoredData[5]_i_5__0_n_0\
-    );
-\rStoredData[5]_i_6__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFE200E200000000"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_14__0_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[5]_i_15__0_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_16__0_n_0\,
-      I5 => \sGammaReg_reg[1]\,
-      O => \rStoredData[5]_i_6__0_n_0\
-    );
-\rStoredData[5]_i_7__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B8BBBBBBB8BB8888"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_17__0_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[5]_i_18__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData[5]_i_19_n_0\,
-      O => \rStoredData[5]_i_7__0_n_0\
-    );
-\rStoredData[5]_i_8__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFEEEAAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(5),
-      I2 => \rStoredData[5]_i_20__1_n_0\,
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(9),
-      O => \rStoredData[5]_i_8__0_n_0\
-    );
-\rStoredData[6]_i_10__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFF3F3B3B0"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_17_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[6]_i_18_n_0\,
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[6]_i_10__0_n_0\
-    );
-\rStoredData[6]_i_11__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFEA00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[6]_i_11__0_n_0\
-    );
-\rStoredData[6]_i_12__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"333030300C0C8C8C"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_19_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[4]_i_30__0_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[6]_i_12__0_n_0\
-    );
-\rStoredData[6]_i_13__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000FFFF75FF0000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => \rStoredData[5]_i_30__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(8),
-      I5 => s_axis_video_tdata(7),
-      O => \rStoredData[6]_i_13__0_n_0\
-    );
-\rStoredData[6]_i_14__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFAAAAA888"
-    )
-        port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_10__0_n_0\,
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(8),
-      O => \rStoredData[6]_i_14__0_n_0\
-    );
-\rStoredData[6]_i_15__0\: unisim.vcomponents.LUT4
+\rStoredData[6]_i_16__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"7FFF"
     )
@@ -12135,148 +12338,188 @@ begin
       I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[6]_i_15__0_n_0\
-    );
-\rStoredData[6]_i_16__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFE0000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
       O => \rStoredData[6]_i_16__0_n_0\
     );
-\rStoredData[6]_i_17\: unisim.vcomponents.LUT2
+\rStoredData[6]_i_17__0\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(2),
-      O => \rStoredData[6]_i_17_n_0\
+      O => \rStoredData[6]_i_17__0_n_0\
     );
-\rStoredData[6]_i_18\: unisim.vcomponents.LUT3
+\rStoredData[6]_i_18__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      O => \rStoredData[6]_i_18_n_0\
-    );
-\rStoredData[6]_i_19\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"07"
+      INIT => X"F8"
     )
         port map (
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(3),
-      O => \rStoredData[6]_i_19_n_0\
+      O => \rStoredData[6]_i_18__0_n_0\
     );
-\rStoredData[6]_i_2__0\: unisim.vcomponents.LUT6
+\rStoredData[6]_i_19__0\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"E"
     )
         port map (
-      I0 => \rStoredData[6]_i_4__0_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[6]_i_5__0_n_0\,
-      I3 => sGammaReg(1),
-      I4 => sGammaReg(0),
-      I5 => \rStoredData_reg[6]_i_6__0_n_0\,
-      O => \p_1_in__0\(6)
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
+      O => \rStoredData[6]_i_19__0_n_0\
+    );
+\rStoredData[6]_i_1__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBBBBBBB8B8B8"
+    )
+        port map (
+      I0 => \rStoredData_reg[6]_i_2__0_n_0\,
+      I1 => sGammaReg(2),
+      I2 => \rStoredData[6]_i_3__0_n_0\,
+      I3 => \rStoredData[6]_i_4__0_n_0\,
+      I4 => \sGammaReg_reg[0]\,
+      I5 => \rStoredData[6]_i_5__0_n_0\,
+      O => \rStoredData[6]_i_1__0_n_0\
+    );
+\rStoredData[6]_i_20__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAABFFFFFF0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_20__0_n_0\
+    );
+\rStoredData[6]_i_21__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAABFFFFFF0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => \rStoredData[6]_i_19__0_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_21__0_n_0\
     );
 \rStoredData[6]_i_3__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE5555FFFE0000"
+      INIT => X"3131333322000000"
     )
         port map (
-      I0 => s_axis_video_tdata(8),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[6]_i_7__0_n_0\,
-      I3 => s_axis_video_tdata(7),
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[6]_i_8__0_n_0\,
+      I0 => sGammaReg(0),
+      I1 => sGammaReg(1),
+      I2 => \rStoredData[6]_i_8__0_n_0\,
+      I3 => \rStoredData[6]_i_9__0_n_0\,
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[6]_i_3__0_n_0\
     );
 \rStoredData[6]_i_4__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCEEFFFFF0000000"
+      INIT => X"BF80FFFFBF800000"
     )
         port map (
-      I0 => \rStoredData[6]_i_9_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[6]_i_10__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => s_axis_video_tdata(8),
+      I0 => \rStoredData[6]_i_10__0_n_0\,
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => \rStoredData[6]_i_11__0_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData_reg[6]_i_12__0_n_0\,
       O => \rStoredData[6]_i_4__0_n_0\
     );
 \rStoredData[6]_i_5__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEA55FFFFEA00AA"
+      INIT => X"EE62CC6200000000"
     )
         port map (
       I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[6]_i_11__0_n_0\,
-      I3 => s_axis_video_tdata(8),
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[6]_i_12__0_n_0\,
+      I1 => s_axis_video_tdata(8),
+      I2 => \rStoredData[6]_i_13__0_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[6]_i_14__0_n_0\,
+      I5 => \sGammaReg_reg[1]\,
       O => \rStoredData[6]_i_5__0_n_0\
+    );
+\rStoredData[6]_i_6__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DDDDDDDDD8C8C888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[6]_i_15__0_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_6__0_n_0\
     );
 \rStoredData[6]_i_7__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE00000000"
+      INIT => X"FFFFFFFF11115515"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(6),
+      I2 => s_axis_video_tdata(4),
+      I3 => \rStoredData[6]_i_16__0_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[6]_i_7__0_n_0\
     );
 \rStoredData[6]_i_8__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0FBF0FBFFFF0F0F0"
+      INIT => X"CDDDDDDDDDDDDDDD"
     )
         port map (
-      I0 => \rStoredData[6]_i_15__0_n_0\,
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(7),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[6]_i_16__0_n_0\,
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(3),
+      I3 => \rStoredData[6]_i_17__0_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(5),
       O => \rStoredData[6]_i_8__0_n_0\
     );
-\rStoredData[6]_i_9\: unisim.vcomponents.LUT5
+\rStoredData[6]_i_9__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7FFFFFFF"
+      INIT => X"EFEFAFAA00000000"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[6]_i_9_n_0\
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[6]_i_18__0_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[6]_i_15__0_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_9__0_n_0\
     );
-\rStoredData[7]_i_10__0\: unisim.vcomponents.LUT3
+\rStoredData[7]_i_10__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFC8C8C888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(7),
+      I1 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[7]_i_10__0_n_0\
+    );
+\rStoredData[7]_i_11__0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"E0"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(3),
-      O => \rStoredData[7]_i_10__0_n_0\
+      O => \rStoredData[7]_i_11__0_n_0\
     );
 \rStoredData[7]_i_2__0\: unisim.vcomponents.LUT6
     generic map(
@@ -12293,40 +12536,41 @@ begin
     );
 \rStoredData[7]_i_3__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFEEEAAAAA"
+      INIT => X"FFFFFFFFFFFFE000"
     )
         port map (
-      I0 => s_axis_video_tdata(9),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_7_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(7),
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[7]_i_7__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(9),
       I5 => s_axis_video_tdata(8),
       O => \rStoredData[7]_i_3__0_n_0\
     );
-\rStoredData[7]_i_4__0\: unisim.vcomponents.LUT5
+\rStoredData[7]_i_4__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFFFE000"
+      INIT => X"FFFFFFFFF8000000"
     )
         port map (
-      I0 => \rStoredData[7]_i_8_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(8),
-      I3 => s_axis_video_tdata(7),
-      I4 => s_axis_video_tdata(9),
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[7]_i_8__0_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[7]_i_4__0_n_0\
     );
 \rStoredData[7]_i_5__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFCCCCC888"
+      INIT => X"FFB8FFBBFFB8CC88"
     )
         port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(8),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[7]_i_9__0_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(9),
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[7]_i_9__0_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData[7]_i_10__0_n_0\,
       O => \rStoredData[7]_i_5__0_n_0\
     );
 \rStoredData[7]_i_6__0\: unisim.vcomponents.LUT6
@@ -12335,47 +12579,47 @@ begin
     )
         port map (
       I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_10__0_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[7]_i_11__0_n_0\,
       I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
       I5 => s_axis_video_tdata(8),
       O => \rStoredData[7]_i_6__0_n_0\
     );
-\rStoredData[7]_i_7\: unisim.vcomponents.LUT5
+\rStoredData[7]_i_7__0\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"80000000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[7]_i_7_n_0\
+      O => \rStoredData[7]_i_7__0_n_0\
     );
-\rStoredData[7]_i_8\: unisim.vcomponents.LUT6
+\rStoredData[7]_i_8__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFF80000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(9),
-      O => \rStoredData[7]_i_8_n_0\
-    );
-\rStoredData[7]_i_9__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFEA"
+      INIT => X"8000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(4),
+      O => \rStoredData[7]_i_8__0_n_0\
+    );
+\rStoredData[7]_i_9__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FE000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[7]_i_9__0_n_0\
     );
 \rStoredData_reg[0]\: unisim.vcomponents.FDRE
@@ -12391,7 +12635,7 @@ begin
       I0 => \rStoredData_reg[0]_i_29__0_n_0\,
       I1 => \rStoredData_reg[0]_i_30__0_n_0\,
       O => \rStoredData_reg[0]_i_10__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_11__0\: unisim.vcomponents.MUXF8
      port map (
@@ -12426,28 +12670,28 @@ begin
       I0 => \rStoredData_reg[0]_i_39__0_n_0\,
       I1 => \rStoredData_reg[0]_i_40__0_n_0\,
       O => \rStoredData_reg[0]_i_15__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_16__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_41__0_n_0\,
       I1 => \rStoredData_reg[0]_i_42__0_n_0\,
       O => \rStoredData_reg[0]_i_16__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_17__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_43__0_n_0\,
       I1 => \rStoredData_reg[0]_i_44__0_n_0\,
       O => \rStoredData_reg[0]_i_17__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_18__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_45__0_n_0\,
       I1 => \rStoredData_reg[0]_i_46__0_n_0\,
       O => \rStoredData_reg[0]_i_18__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_19__0\: unisim.vcomponents.MUXF8
      port map (
@@ -12545,189 +12789,189 @@ begin
       I0 => \rStoredData[0]_i_71__0_n_0\,
       I1 => \rStoredData[0]_i_72__0_n_0\,
       O => \rStoredData_reg[0]_i_31__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_32__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_73__0_n_0\,
       I1 => \rStoredData[0]_i_74__0_n_0\,
       O => \rStoredData_reg[0]_i_32__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_33__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_75__0_n_0\,
       I1 => \rStoredData[0]_i_76__0_n_0\,
       O => \rStoredData_reg[0]_i_33__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_34__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_77__0_n_0\,
       I1 => \rStoredData[0]_i_78__0_n_0\,
       O => \rStoredData_reg[0]_i_34__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_35__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_79__0_n_0\,
       I1 => \rStoredData[0]_i_80__0_n_0\,
       O => \rStoredData_reg[0]_i_35__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_36__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_81__0_n_0\,
       I1 => \rStoredData[0]_i_82__0_n_0\,
       O => \rStoredData_reg[0]_i_36__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_37__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_83__0_n_0\,
       I1 => \rStoredData[0]_i_84__0_n_0\,
       O => \rStoredData_reg[0]_i_37__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_38__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_85__0_n_0\,
       I1 => \rStoredData[0]_i_86__0_n_0\,
       O => \rStoredData_reg[0]_i_38__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_39__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_87__0_n_0\,
       I1 => \rStoredData[0]_i_88__0_n_0\,
       O => \rStoredData_reg[0]_i_39__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_40__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_89__0_n_0\,
       I1 => \rStoredData[0]_i_90__0_n_0\,
       O => \rStoredData_reg[0]_i_40__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_41__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_91__0_n_0\,
       I1 => \rStoredData[0]_i_92__0_n_0\,
       O => \rStoredData_reg[0]_i_41__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_42__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_93__0_n_0\,
       I1 => \rStoredData[0]_i_94__0_n_0\,
       O => \rStoredData_reg[0]_i_42__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_43__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_95__0_n_0\,
       I1 => \rStoredData[0]_i_96__0_n_0\,
       O => \rStoredData_reg[0]_i_43__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_44__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_97__0_n_0\,
       I1 => \rStoredData[0]_i_98__0_n_0\,
       O => \rStoredData_reg[0]_i_44__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_45__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_99__0_n_0\,
       I1 => \rStoredData[0]_i_100__0_n_0\,
       O => \rStoredData_reg[0]_i_45__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_46__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_101__0_n_0\,
       I1 => \rStoredData[0]_i_102__0_n_0\,
       O => \rStoredData_reg[0]_i_46__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_47__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_103__0_n_0\,
       I1 => \rStoredData[0]_i_104__0_n_0\,
       O => \rStoredData_reg[0]_i_47__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_48__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_105__0_n_0\,
       I1 => \rStoredData[0]_i_106__0_n_0\,
       O => \rStoredData_reg[0]_i_48__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_49__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_107__0_n_0\,
       I1 => \rStoredData[0]_i_108__0_n_0\,
       O => \rStoredData_reg[0]_i_49__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_50__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_109__0_n_0\,
       I1 => \rStoredData[0]_i_110__0_n_0\,
       O => \rStoredData_reg[0]_i_50__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_51__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_111__0_n_0\,
       I1 => \rStoredData[0]_i_112__0_n_0\,
       O => \rStoredData_reg[0]_i_51__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_52__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_113__0_n_0\,
       I1 => \rStoredData[0]_i_114__0_n_0\,
       O => \rStoredData_reg[0]_i_52__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_53__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_115__0_n_0\,
       I1 => \rStoredData[0]_i_116__0_n_0\,
       O => \rStoredData_reg[0]_i_53__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_54__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_117__0_n_0\,
       I1 => \rStoredData[0]_i_118__0_n_0\,
       O => \rStoredData_reg[0]_i_54__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_7__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_23__0_n_0\,
       I1 => \rStoredData_reg[0]_i_24__0_n_0\,
       O => \rStoredData_reg[0]_i_7__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_8__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_25__0_n_0\,
       I1 => \rStoredData_reg[0]_i_26__0_n_0\,
       O => \rStoredData_reg[0]_i_8__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_9__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_27__0_n_0\,
       I1 => \rStoredData_reg[0]_i_28__0_n_0\,
       O => \rStoredData_reg[0]_i_9__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -12742,7 +12986,7 @@ begin
       I0 => \rStoredData_reg[1]_i_29__0_n_0\,
       I1 => \rStoredData_reg[1]_i_30__0_n_0\,
       O => \rStoredData_reg[1]_i_10__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_11__0\: unisim.vcomponents.MUXF8
      port map (
@@ -12777,28 +13021,28 @@ begin
       I0 => \rStoredData_reg[1]_i_39__0_n_0\,
       I1 => \rStoredData_reg[1]_i_40__0_n_0\,
       O => \rStoredData_reg[1]_i_15__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_16__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_41__0_n_0\,
       I1 => \rStoredData_reg[1]_i_42__0_n_0\,
       O => \rStoredData_reg[1]_i_16__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_17__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_43__0_n_0\,
       I1 => \rStoredData_reg[1]_i_44__0_n_0\,
       O => \rStoredData_reg[1]_i_17__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_18__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_45__0_n_0\,
       I1 => \rStoredData_reg[1]_i_46__0_n_0\,
       O => \rStoredData_reg[1]_i_18__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_19__0\: unisim.vcomponents.MUXF8
      port map (
@@ -12835,32 +13079,32 @@ begin
       O => \rStoredData_reg[1]_i_22__0_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[1]_i_23\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_23__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_55_n_0\,
+      I0 => \rStoredData[1]_i_55__0_n_0\,
       I1 => \rStoredData[1]_i_56__0_n_0\,
-      O => \rStoredData_reg[1]_i_23_n_0\,
+      O => \rStoredData_reg[1]_i_23__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_24\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_24__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_57__0_n_0\,
       I1 => \rStoredData[1]_i_58__0_n_0\,
-      O => \rStoredData_reg[1]_i_24_n_0\,
+      O => \rStoredData_reg[1]_i_24__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_25\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_25__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_59__0_n_0\,
       I1 => \rStoredData[1]_i_60__0_n_0\,
-      O => \rStoredData_reg[1]_i_25_n_0\,
+      O => \rStoredData_reg[1]_i_25__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_26\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_26__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_61__0_n_0\,
       I1 => \rStoredData[1]_i_62__0_n_0\,
-      O => \rStoredData_reg[1]_i_26_n_0\,
+      O => \rStoredData_reg[1]_i_26__0_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_27__0\: unisim.vcomponents.MUXF7
@@ -12896,491 +13140,449 @@ begin
       I0 => \rStoredData[1]_i_71__0_n_0\,
       I1 => \rStoredData[1]_i_72__0_n_0\,
       O => \rStoredData_reg[1]_i_31__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_32__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_73__0_n_0\,
       I1 => \rStoredData[1]_i_74__0_n_0\,
       O => \rStoredData_reg[1]_i_32__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_33__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_75__0_n_0\,
       I1 => \rStoredData[1]_i_76__0_n_0\,
       O => \rStoredData_reg[1]_i_33__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_34__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_77__0_n_0\,
       I1 => \rStoredData[1]_i_78__0_n_0\,
       O => \rStoredData_reg[1]_i_34__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_35__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_79__0_n_0\,
       I1 => \rStoredData[1]_i_80__0_n_0\,
       O => \rStoredData_reg[1]_i_35__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_36__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_81__0_n_0\,
       I1 => \rStoredData[1]_i_82__0_n_0\,
       O => \rStoredData_reg[1]_i_36__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_37__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_83__0_n_0\,
       I1 => \rStoredData[1]_i_84__0_n_0\,
       O => \rStoredData_reg[1]_i_37__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_38__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_85__0_n_0\,
       I1 => \rStoredData[1]_i_86__0_n_0\,
       O => \rStoredData_reg[1]_i_38__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_39__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_87__0_n_0\,
       I1 => \rStoredData[1]_i_88__0_n_0\,
       O => \rStoredData_reg[1]_i_39__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_40__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_89__0_n_0\,
       I1 => \rStoredData[1]_i_90__0_n_0\,
       O => \rStoredData_reg[1]_i_40__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_41__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_91__0_n_0\,
       I1 => \rStoredData[1]_i_92__0_n_0\,
       O => \rStoredData_reg[1]_i_41__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_42__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_93__0_n_0\,
       I1 => \rStoredData[1]_i_94__0_n_0\,
       O => \rStoredData_reg[1]_i_42__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_43__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_95__0_n_0\,
       I1 => \rStoredData[1]_i_96__0_n_0\,
       O => \rStoredData_reg[1]_i_43__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_44__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_97__0_n_0\,
       I1 => \rStoredData[1]_i_98__0_n_0\,
       O => \rStoredData_reg[1]_i_44__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_45__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_99__0_n_0\,
       I1 => \rStoredData[1]_i_100__0_n_0\,
       O => \rStoredData_reg[1]_i_45__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_46__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_101__0_n_0\,
       I1 => \rStoredData[1]_i_102__0_n_0\,
       O => \rStoredData_reg[1]_i_46__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_47__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_103__0_n_0\,
       I1 => \rStoredData[1]_i_104__0_n_0\,
       O => \rStoredData_reg[1]_i_47__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_48__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_105__0_n_0\,
       I1 => \rStoredData[1]_i_106__0_n_0\,
       O => \rStoredData_reg[1]_i_48__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_49__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_107__0_n_0\,
       I1 => \rStoredData[1]_i_108__0_n_0\,
       O => \rStoredData_reg[1]_i_49__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_50__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_109__0_n_0\,
       I1 => \rStoredData[1]_i_110__0_n_0\,
       O => \rStoredData_reg[1]_i_50__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_51__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_111__0_n_0\,
       I1 => \rStoredData[1]_i_112__0_n_0\,
       O => \rStoredData_reg[1]_i_51__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_52__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_113__0_n_0\,
       I1 => \rStoredData[1]_i_114__0_n_0\,
       O => \rStoredData_reg[1]_i_52__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_53__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_115__0_n_0\,
       I1 => \rStoredData[1]_i_116__0_n_0\,
       O => \rStoredData_reg[1]_i_53__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_54__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_117_n_0\,
-      I1 => \rStoredData[1]_i_118_n_0\,
+      I0 => \rStoredData[1]_i_117__0_n_0\,
+      I1 => \rStoredData[1]_i_118__0_n_0\,
       O => \rStoredData_reg[1]_i_54__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_7\: unisim.vcomponents.MUXF8
+\rStoredData_reg[1]_i_7__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_23_n_0\,
-      I1 => \rStoredData_reg[1]_i_24_n_0\,
-      O => \rStoredData_reg[1]_i_7_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData_reg[1]_i_23__0_n_0\,
+      I1 => \rStoredData_reg[1]_i_24__0_n_0\,
+      O => \rStoredData_reg[1]_i_7__0_n_0\,
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_8__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_25_n_0\,
-      I1 => \rStoredData_reg[1]_i_26_n_0\,
+      I0 => \rStoredData_reg[1]_i_25__0_n_0\,
+      I1 => \rStoredData_reg[1]_i_26__0_n_0\,
       O => \rStoredData_reg[1]_i_8__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_9__0\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_27__0_n_0\,
       I1 => \rStoredData_reg[1]_i_28__0_n_0\,
       O => \rStoredData_reg[1]_i_9__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => E(0),
-      D => \rStoredData_reg[2]_i_1__0_n_0\,
+      D => \rStoredData[2]_i_1__0_n_0\,
       Q => m_axis_video_tdata(2),
       R => '0'
     );
 \rStoredData_reg[2]_i_10__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_28__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_29__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_31__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_32__0_n_0\,
       O => \rStoredData_reg[2]_i_10__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_11__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_30__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_31__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_33__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_34__0_n_0\,
       O => \rStoredData_reg[2]_i_11__0_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_12__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_32__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_33_n_0\,
+      I0 => \rStoredData_reg[2]_i_35__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_36__0_n_0\,
       O => \rStoredData_reg[2]_i_12__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_13\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_13__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_34_n_0\,
-      I1 => \rStoredData_reg[2]_i_35_n_0\,
-      O => \rStoredData_reg[2]_i_13_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData_reg[2]_i_37__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_38__0_n_0\,
+      O => \rStoredData_reg[2]_i_13__0_n_0\,
+      S => s_axis_video_tdata(1)
     );
-\rStoredData_reg[2]_i_14__0\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_15__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_36__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_37__0_n_0\,
-      O => \rStoredData_reg[2]_i_14__0_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData_reg[2]_i_43__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_44__0_n_0\,
+      O => \rStoredData_reg[2]_i_15__0_n_0\,
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[2]_i_17__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_46__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_47__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_48__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_49__0_n_0\,
       O => \rStoredData_reg[2]_i_17__0_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_18__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_48__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_49__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_50__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_51__0_n_0\,
       O => \rStoredData_reg[2]_i_18__0_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_19__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_50__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_51__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_52__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_53__0_n_0\,
       O => \rStoredData_reg[2]_i_19__0_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[2]_i_1__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \p_1_in__0\(2),
-      I1 => \rStoredData[2]_i_3__0_n_0\,
-      O => \rStoredData_reg[2]_i_1__0_n_0\,
-      S => sGammaReg(2)
-    );
 \rStoredData_reg[2]_i_20__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_52__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_53__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_54__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_55__0_n_0\,
       O => \rStoredData_reg[2]_i_20__0_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[2]_i_24__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_22__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_54_n_0\,
-      I1 => \rStoredData[2]_i_55__0_n_0\,
-      O => \rStoredData_reg[2]_i_24__0_n_0\,
+      I0 => \rStoredData[2]_i_57__0_n_0\,
+      I1 => \rStoredData[2]_i_58__0_n_0\,
+      O => \rStoredData_reg[2]_i_22__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_25__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_23__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_56__0_n_0\,
-      I1 => \rStoredData[2]_i_57__0_n_0\,
-      O => \rStoredData_reg[2]_i_25__0_n_0\,
+      I0 => \rStoredData[2]_i_59__0_n_0\,
+      I1 => \rStoredData[2]_i_60__0_n_0\,
+      O => \rStoredData_reg[2]_i_23__0_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[2]_i_24__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_61__0_n_0\,
+      I1 => \rStoredData[2]_i_62__0_n_0\,
+      O => \rStoredData_reg[2]_i_24__0_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_26__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_58__0_n_0\,
-      I1 => \rStoredData[2]_i_59__0_n_0\,
+      I0 => \rStoredData[2]_i_63__0_n_0\,
+      I1 => \rStoredData[2]_i_64__0_n_0\,
       O => \rStoredData_reg[2]_i_26__0_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_27__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_60__0_n_0\,
-      I1 => \rStoredData[2]_i_61__0_n_0\,
-      O => \rStoredData_reg[2]_i_27__0_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_28__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_62__0_n_0\,
-      I1 => \rStoredData[2]_i_63__0_n_0\,
+      I0 => \rStoredData[2]_i_66__0_n_0\,
+      I1 => \rStoredData[2]_i_67__0_n_0\,
       O => \rStoredData_reg[2]_i_28__0_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_29__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_64__0_n_0\,
-      I1 => \rStoredData[2]_i_65__0_n_0\,
+      I0 => \rStoredData[2]_i_68__0_n_0\,
+      I1 => \rStoredData[2]_i_69__0_n_0\,
       O => \rStoredData_reg[2]_i_29__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_30__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_66__0_n_0\,
-      I1 => \rStoredData[2]_i_67__0_n_0\,
+      I0 => \rStoredData[2]_i_70__0_n_0\,
+      I1 => \rStoredData[2]_i_71__0_n_0\,
       O => \rStoredData_reg[2]_i_30__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_31__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_68__0_n_0\,
-      I1 => \rStoredData[2]_i_69__0_n_0\,
+      I0 => \rStoredData[2]_i_72__0_n_0\,
+      I1 => \rStoredData[2]_i_73__0_n_0\,
       O => \rStoredData_reg[2]_i_31__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_32__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_70__0_n_0\,
-      I1 => \rStoredData[2]_i_71__0_n_0\,
-      O => \rStoredData_reg[2]_i_32__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[2]_i_33\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_72__0_n_0\,
-      I1 => \rStoredData[2]_i_73__0_n_0\,
-      O => \rStoredData_reg[2]_i_33_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[2]_i_34\: unisim.vcomponents.MUXF7
-     port map (
       I0 => \rStoredData[2]_i_74__0_n_0\,
       I1 => \rStoredData[2]_i_75__0_n_0\,
-      O => \rStoredData_reg[2]_i_34_n_0\,
-      S => s_axis_video_tdata(9)
+      O => \rStoredData_reg[2]_i_32__0_n_0\,
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[2]_i_35\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_33__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[2]_i_76__0_n_0\,
       I1 => \rStoredData[2]_i_77__0_n_0\,
-      O => \rStoredData_reg[2]_i_35_n_0\,
-      S => s_axis_video_tdata(9)
+      O => \rStoredData_reg[2]_i_33__0_n_0\,
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[2]_i_36__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_34__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[2]_i_78__0_n_0\,
       I1 => \rStoredData[2]_i_79__0_n_0\,
-      O => \rStoredData_reg[2]_i_36__0_n_0\,
-      S => s_axis_video_tdata(9)
+      O => \rStoredData_reg[2]_i_34__0_n_0\,
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[2]_i_37__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_35__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[2]_i_80__0_n_0\,
       I1 => \rStoredData[2]_i_81__0_n_0\,
+      O => \rStoredData_reg[2]_i_35__0_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_36__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_82__0_n_0\,
+      I1 => \rStoredData[2]_i_83__0_n_0\,
+      O => \rStoredData_reg[2]_i_36__0_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_37__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_84__0_n_0\,
+      I1 => \rStoredData[2]_i_85__0_n_0\,
       O => \rStoredData_reg[2]_i_37__0_n_0\,
       S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_38__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_82__0_n_0\,
-      I1 => \rStoredData[2]_i_83__0_n_0\,
-      O => \rStoredData_reg[2]_i_38__0_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_39__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_84__0_n_0\,
-      I1 => \rStoredData[2]_i_85__0_n_0\,
-      O => \rStoredData_reg[2]_i_39__0_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_40__0\: unisim.vcomponents.MUXF7
-     port map (
       I0 => \rStoredData[2]_i_86__0_n_0\,
       I1 => \rStoredData[2]_i_87__0_n_0\,
-      O => \rStoredData_reg[2]_i_40__0_n_0\,
-      S => s_axis_video_tdata(6)
+      O => \rStoredData_reg[2]_i_38__0_n_0\,
+      S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[2]_i_41__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_3__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_88__0_n_0\,
-      I1 => \rStoredData[2]_i_89__0_n_0\,
-      O => \rStoredData_reg[2]_i_41__0_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData[2]_i_7__0_n_0\,
+      I1 => \rStoredData[2]_i_8__0_n_0\,
+      O => \rStoredData_reg[2]_i_3__0_n_0\,
+      S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_43__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_90__0_n_0\,
-      I1 => \rStoredData[2]_i_91__0_n_0\,
+      I0 => \rStoredData[2]_i_88__0_n_0\,
+      I1 => \rStoredData[2]_i_89__0_n_0\,
       O => \rStoredData_reg[2]_i_43__0_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_44__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_92__0_n_0\,
-      I1 => \rStoredData[2]_i_93__0_n_0\,
+      I0 => \rStoredData[2]_i_90__0_n_0\,
+      I1 => \rStoredData[2]_i_91__0_n_0\,
       O => \rStoredData_reg[2]_i_44__0_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_45__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_94__0_n_0\,
-      I1 => \rStoredData[2]_i_95__0_n_0\,
-      O => \rStoredData_reg[2]_i_45__0_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_46__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_96__0_n_0\,
-      I1 => \rStoredData[2]_i_97__0_n_0\,
-      O => \rStoredData_reg[2]_i_46__0_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[2]_i_47__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_98__0_n_0\,
-      I1 => \rStoredData[2]_i_99__0_n_0\,
-      O => \rStoredData_reg[2]_i_47__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_48__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_100__0_n_0\,
-      I1 => \rStoredData[2]_i_101__0_n_0\,
+      I0 => \rStoredData[2]_i_92__0_n_0\,
+      I1 => \rStoredData[2]_i_93__0_n_0\,
       O => \rStoredData_reg[2]_i_48__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_49__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_102__0_n_0\,
-      I1 => \rStoredData[2]_i_103__0_n_0\,
+      I0 => \rStoredData[2]_i_94__0_n_0\,
+      I1 => \rStoredData[2]_i_95__0_n_0\,
       O => \rStoredData_reg[2]_i_49__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_50__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_104__0_n_0\,
-      I1 => \rStoredData[2]_i_105__0_n_0\,
+      I0 => \rStoredData[2]_i_96__0_n_0\,
+      I1 => \rStoredData[2]_i_97__0_n_0\,
       O => \rStoredData_reg[2]_i_50__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_51__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_106__0_n_0\,
-      I1 => \rStoredData[2]_i_107__0_n_0\,
+      I0 => \rStoredData[2]_i_98__0_n_0\,
+      I1 => \rStoredData[2]_i_99__0_n_0\,
       O => \rStoredData_reg[2]_i_51__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_52__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_108__0_n_0\,
-      I1 => \rStoredData[2]_i_109_n_0\,
+      I0 => \rStoredData[2]_i_100__0_n_0\,
+      I1 => \rStoredData[2]_i_101__0_n_0\,
       O => \rStoredData_reg[2]_i_52__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_53__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_110_n_0\,
-      I1 => \rStoredData[2]_i_111_n_0\,
+      I0 => \rStoredData[2]_i_102__0_n_0\,
+      I1 => \rStoredData[2]_i_103__0_n_0\,
       O => \rStoredData_reg[2]_i_53__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_5__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_54__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_15__0_n_0\,
-      I1 => \rStoredData[2]_i_16__0_n_0\,
-      O => \rStoredData_reg[2]_i_5__0_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[2]_i_104__0_n_0\,
+      I1 => \rStoredData[2]_i_105__0_n_0\,
+      O => \rStoredData_reg[2]_i_54__0_n_0\,
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_8__0\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_55__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData_reg[2]_i_24__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_25__0_n_0\,
-      O => \rStoredData_reg[2]_i_8__0_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[2]_i_106__0_n_0\,
+      I1 => \rStoredData[2]_i_107__0_n_0\,
+      O => \rStoredData_reg[2]_i_55__0_n_0\,
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_9__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_26__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_27__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_29__0_n_0\,
+      I1 => \rStoredData_reg[2]_i_30__0_n_0\,
       O => \rStoredData_reg[2]_i_9__0_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -13390,52 +13592,38 @@ begin
       Q => m_axis_video_tdata(3),
       R => '0'
     );
-\rStoredData_reg[3]_i_10__0\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_31__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_32_n_0\,
-      O => \rStoredData_reg[3]_i_10__0_n_0\,
-      S => s_axis_video_tdata(7)
-    );
 \rStoredData_reg[3]_i_12__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_35__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_36_n_0\,
+      I0 => \rStoredData_reg[3]_i_32__0_n_0\,
+      I1 => \rStoredData_reg[3]_i_33__0_n_0\,
       O => \rStoredData_reg[3]_i_12__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_13\: unisim.vcomponents.MUXF8
+\rStoredData_reg[3]_i_13__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_37_n_0\,
-      I1 => \rStoredData_reg[3]_i_38_n_0\,
-      O => \rStoredData_reg[3]_i_13_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[3]_i_14__0\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_39__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_40__0_n_0\,
-      O => \rStoredData_reg[3]_i_14__0_n_0\,
+      I0 => \rStoredData_reg[3]_i_34__0_n_0\,
+      I1 => \rStoredData_reg[3]_i_35__0_n_0\,
+      O => \rStoredData_reg[3]_i_13__0_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_15__0\: unisim.vcomponents.MUXF7
      port map (
+      I0 => \rStoredData[3]_i_39__0_n_0\,
+      I1 => \rStoredData[3]_i_40__0_n_0\,
+      O => \rStoredData_reg[3]_i_15__0_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[3]_i_16__0\: unisim.vcomponents.MUXF7
+     port map (
       I0 => \rStoredData[3]_i_41__0_n_0\,
       I1 => \rStoredData[3]_i_42__0_n_0\,
-      O => \rStoredData_reg[3]_i_15__0_n_0\,
-      S => s_axis_video_tdata(8)
-    );
-\rStoredData_reg[3]_i_16__0\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_43__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_44__0_n_0\,
       O => \rStoredData_reg[3]_i_16__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_19__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_51__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_52__0_n_0\,
+      I0 => \rStoredData_reg[3]_i_49__0_n_0\,
+      I1 => \rStoredData_reg[3]_i_50__0_n_0\,
       O => \rStoredData_reg[3]_i_19__0_n_0\,
       S => s_axis_video_tdata(7)
     );
@@ -13448,136 +13636,94 @@ begin
     );
 \rStoredData_reg[3]_i_20__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_53__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_54__0_n_0\,
+      I0 => \rStoredData_reg[3]_i_51__0_n_0\,
+      I1 => \rStoredData_reg[3]_i_52__0_n_0\,
       O => \rStoredData_reg[3]_i_20__0_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[3]_i_22__0\: unisim.vcomponents.MUXF8
+\rStoredData_reg[3]_i_25__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData_reg[3]_i_58__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_59__0_n_0\,
-      O => \rStoredData_reg[3]_i_22__0_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[3]_i_55__0_n_0\,
+      I1 => \rStoredData[3]_i_56__0_n_0\,
+      O => \rStoredData_reg[3]_i_25__0_n_0\,
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_31__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_30__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_58__0_n_0\,
+      I1 => \rStoredData[3]_i_59__0_n_0\,
+      O => \rStoredData_reg[3]_i_30__0_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[3]_i_32__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_60__0_n_0\,
+      I1 => \rStoredData[3]_i_61__0_n_0\,
+      O => \rStoredData_reg[3]_i_32__0_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[3]_i_33__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_62__0_n_0\,
+      I1 => \rStoredData[3]_i_63__0_n_0\,
+      O => \rStoredData_reg[3]_i_33__0_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[3]_i_34__0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[3]_i_64__0_n_0\,
       I1 => \rStoredData[3]_i_65__0_n_0\,
-      O => \rStoredData_reg[3]_i_31__0_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[3]_i_32\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_66__0_n_0\,
-      I1 => \rStoredData[3]_i_67__0_n_0\,
-      O => \rStoredData_reg[3]_i_32_n_0\,
-      S => s_axis_video_tdata(6)
+      O => \rStoredData_reg[3]_i_34__0_n_0\,
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[3]_i_35__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_68__0_n_0\,
-      I1 => \rStoredData[3]_i_69__0_n_0\,
+      I0 => \rStoredData[3]_i_66__0_n_0\,
+      I1 => \rStoredData[3]_i_67__0_n_0\,
       O => \rStoredData_reg[3]_i_35__0_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[3]_i_36\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_49__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_70__0_n_0\,
-      I1 => \rStoredData[3]_i_71__0_n_0\,
-      O => \rStoredData_reg[3]_i_36_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_37\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_72__0_n_0\,
-      I1 => \rStoredData[3]_i_73__0_n_0\,
-      O => \rStoredData_reg[3]_i_37_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_38\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_22__1_n_0\,
-      I1 => \rStoredData[3]_i_74__0_n_0\,
-      O => \rStoredData_reg[3]_i_38_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_39__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_75__0_n_0\,
-      I1 => \rStoredData[3]_i_76__0_n_0\,
-      O => \rStoredData_reg[3]_i_39__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_40__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_77__0_n_0\,
-      I1 => \rStoredData[3]_i_78__0_n_0\,
-      O => \rStoredData_reg[3]_i_40__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_43__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_79__0_n_0\,
-      I1 => \rStoredData[3]_i_80__0_n_0\,
-      O => \rStoredData_reg[3]_i_43__0_n_0\,
+      I0 => \rStoredData[3]_i_82__0_n_0\,
+      I1 => \rStoredData[3]_i_83__0_n_0\,
+      O => \rStoredData_reg[3]_i_49__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_44__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_50__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_81__0_n_0\,
-      I1 => \rStoredData[3]_i_82__0_n_0\,
-      O => \rStoredData_reg[3]_i_44__0_n_0\,
+      I0 => \rStoredData[3]_i_84__0_n_0\,
+      I1 => \rStoredData[3]_i_85__0_n_0\,
+      O => \rStoredData_reg[3]_i_50__0_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_51__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_83__0_n_0\,
-      I1 => \rStoredData[3]_i_84__0_n_0\,
+      I0 => \rStoredData[3]_i_86__0_n_0\,
+      I1 => \rStoredData[3]_i_87__0_n_0\,
       O => \rStoredData_reg[3]_i_51__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_52__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_85__0_n_0\,
-      I1 => \rStoredData[3]_i_86__0_n_0\,
+      I0 => \rStoredData[3]_i_88__0_n_0\,
+      I1 => \rStoredData[3]_i_89__0_n_0\,
       O => \rStoredData_reg[3]_i_52__0_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_53__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_5__0\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData[3]_i_87__0_n_0\,
-      I1 => \rStoredData[3]_i_88__0_n_0\,
-      O => \rStoredData_reg[3]_i_53__0_n_0\,
-      S => s_axis_video_tdata(5)
+      I0 => \rStoredData_reg[3]_i_15__0_n_0\,
+      I1 => \rStoredData_reg[3]_i_16__0_n_0\,
+      O => \rStoredData_reg[3]_i_5__0_n_0\,
+      S => s_axis_video_tdata(0)
     );
-\rStoredData_reg[3]_i_54__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_7__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_89__0_n_0\,
-      I1 => \rStoredData[3]_i_90_n_0\,
-      O => \rStoredData_reg[3]_i_54__0_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_58__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_91_n_0\,
-      I1 => \rStoredData[3]_i_92_n_0\,
-      O => \rStoredData_reg[3]_i_58__0_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_59__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_93_n_0\,
-      I1 => \rStoredData[3]_i_94_n_0\,
-      O => \rStoredData_reg[3]_i_59__0_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_9__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_29__0_n_0\,
-      I1 => \rStoredData[3]_i_30_n_0\,
-      O => \rStoredData_reg[3]_i_9__0_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[3]_i_21__0_n_0\,
+      I1 => \rStoredData[3]_i_22__0_n_0\,
+      O => \rStoredData_reg[3]_i_7__0_n_0\,
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -13589,52 +13735,73 @@ begin
     );
 \rStoredData_reg[4]_i_10__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_25__0_n_0\,
-      I1 => \rStoredData[4]_i_26__0_n_0\,
+      I0 => \rStoredData[4]_i_26__0_n_0\,
+      I1 => \rStoredData[4]_i_27__0_n_0\,
       O => \rStoredData_reg[4]_i_10__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[4]_i_2__0\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[4]_i_6__0_n_0\,
-      I1 => \rStoredData_reg[4]_i_7__0_n_0\,
-      O => \rStoredData_reg[4]_i_2__0_n_0\,
       S => s_axis_video_tdata(8)
     );
-\rStoredData_reg[4]_i_39\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_11__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_58_n_0\,
-      I1 => \rStoredData[4]_i_59_n_0\,
-      O => \rStoredData_reg[4]_i_39_n_0\,
+      I0 => \rStoredData[4]_i_28__0_n_0\,
+      I1 => \rStoredData[4]_i_29__0_n_0\,
+      O => \rStoredData_reg[4]_i_11__0_n_0\,
+      S => s_axis_video_tdata(8)
+    );
+\rStoredData_reg[4]_i_14__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_36__0_n_0\,
+      I1 => \rStoredData[4]_i_37__0_n_0\,
+      O => \rStoredData_reg[4]_i_14__0_n_0\,
+      S => s_axis_video_tdata(8)
+    );
+\rStoredData_reg[4]_i_25__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_40__0_n_0\,
+      I1 => \rStoredData[4]_i_41__0_n_0\,
+      O => \rStoredData_reg[4]_i_25__0_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[4]_i_6__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_30__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_17__0_n_0\,
-      I1 => \rStoredData[4]_i_18__0_n_0\,
-      O => \rStoredData_reg[4]_i_6__0_n_0\,
+      I0 => \rStoredData[4]_i_50__0_n_0\,
+      I1 => \rStoredData[4]_i_51__0_n_0\,
+      O => \rStoredData_reg[4]_i_30__0_n_0\,
       S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[4]_i_7__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_31__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_19__0_n_0\,
-      I1 => \rStoredData[4]_i_20__0_n_0\,
-      O => \rStoredData_reg[4]_i_7__0_n_0\,
+      I0 => \rStoredData[4]_i_52__0_n_0\,
+      I1 => \rStoredData[4]_i_53__0_n_0\,
+      O => \rStoredData_reg[4]_i_31__0_n_0\,
       S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[4]_i_8__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_32__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_21__0_n_0\,
-      I1 => \rStoredData[4]_i_22__0_n_0\,
-      O => \rStoredData_reg[4]_i_8__0_n_0\,
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[4]_i_54__0_n_0\,
+      I1 => \rStoredData[4]_i_55__0_n_0\,
+      O => \rStoredData_reg[4]_i_32__0_n_0\,
+      S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[4]_i_9__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_33__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_23__0_n_0\,
-      I1 => \rStoredData[4]_i_24__0_n_0\,
-      O => \rStoredData_reg[4]_i_9__0_n_0\,
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[4]_i_56__0_n_0\,
+      I1 => \rStoredData[4]_i_57__0_n_0\,
+      O => \rStoredData_reg[4]_i_33__0_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[4]_i_35__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_59__0_n_0\,
+      I1 => \rStoredData[4]_i_60__0_n_0\,
+      O => \rStoredData_reg[4]_i_35__0_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[4]_i_4__0\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_12__0_n_0\,
+      I1 => \rStoredData[4]_i_13__0_n_0\,
+      O => \rStoredData_reg[4]_i_4__0_n_0\,
+      S => s_axis_video_tdata(0)
     );
 \rStoredData_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -13644,48 +13811,48 @@ begin
       Q => m_axis_video_tdata(5),
       R => '0'
     );
-\rStoredData_reg[5]_i_12\: unisim.vcomponents.MUXF7
+\rStoredData_reg[5]_i_28__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_26_n_0\,
-      I1 => \rStoredData[5]_i_27__0_n_0\,
-      O => \rStoredData_reg[5]_i_12_n_0\,
+      I0 => \rStoredData[5]_i_37__0_n_0\,
+      I1 => \rStoredData[5]_i_38__0_n_0\,
+      O => \rStoredData_reg[5]_i_28__0_n_0\,
       S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[5]_i_2__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_7__0_n_0\,
-      I1 => \rStoredData[5]_i_8__0_n_0\,
+      I0 => \rStoredData[5]_i_6__0_n_0\,
+      I1 => \rStoredData[5]_i_7__0_n_0\,
       O => \rStoredData_reg[5]_i_2__0_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[5]_i_9__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[5]_i_4__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_21_n_0\,
-      I1 => \rStoredData[5]_i_22__0_n_0\,
-      O => \rStoredData_reg[5]_i_9__0_n_0\,
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[5]_i_10__0_n_0\,
+      I1 => \rStoredData[5]_i_11__0_n_0\,
+      O => \rStoredData_reg[5]_i_4__0_n_0\,
+      S => s_axis_video_tdata(0)
     );
 \rStoredData_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => E(0),
-      D => \rStoredData_reg[6]_i_1__0_n_0\,
+      D => \rStoredData[6]_i_1__0_n_0\,
       Q => m_axis_video_tdata(6),
       R => '0'
     );
-\rStoredData_reg[6]_i_1__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[6]_i_12__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \p_1_in__0\(6),
-      I1 => \rStoredData[6]_i_3__0_n_0\,
-      O => \rStoredData_reg[6]_i_1__0_n_0\,
-      S => sGammaReg(2)
+      I0 => \rStoredData[6]_i_20__0_n_0\,
+      I1 => \rStoredData[6]_i_21__0_n_0\,
+      O => \rStoredData_reg[6]_i_12__0_n_0\,
+      S => s_axis_video_tdata(1)
     );
-\rStoredData_reg[6]_i_6__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[6]_i_2__0\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[6]_i_13__0_n_0\,
-      I1 => \rStoredData[6]_i_14__0_n_0\,
-      O => \rStoredData_reg[6]_i_6__0_n_0\,
-      S => s_axis_video_tdata(9)
+      I0 => \rStoredData[6]_i_6__0_n_0\,
+      I1 => \rStoredData[6]_i_7__0_n_0\,
+      O => \rStoredData_reg[6]_i_2__0_n_0\,
+      S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -13712,7 +13879,6 @@ entity system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \rStoredData_reg[4]_0\ : out STD_LOGIC;
     \rStoredData_reg[4]_1\ : out STD_LOGIC;
-    \rStoredData_reg[5]_0\ : out STD_LOGIC;
     m_axis_video_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axis_video_tvalid : in STD_LOGIC;
     m_axis_video_tready : in STD_LOGIC;
@@ -13812,12 +13978,12 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData[1]_i_114__1_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_115__1_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_116__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_117__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_118__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_117__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_118__1_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_3__1_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_4__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_55__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[1]_i_56_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_55__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[1]_i_56__1_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_57__1_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_58__1_n_0\ : STD_LOGIC;
   signal \rStoredData[1]_i_59__1_n_0\ : STD_LOGIC;
@@ -13871,24 +14037,25 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData[2]_i_105__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_106__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_107__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_108__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_109__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_110__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_111__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_15__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_14__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_16__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_1__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_21__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_22__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_23__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_3__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_25__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_27__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_39__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_40__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_41__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_42__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_45__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_46__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_47__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_4__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_54__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_55__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_56__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_56_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_57__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_58__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_59__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_5__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_60__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_61__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_62__1_n_0\ : STD_LOGIC;
@@ -13910,7 +14077,7 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData[2]_i_77__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_78__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_79__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[2]_i_7__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_7__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_80__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_81__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_82__1_n_0\ : STD_LOGIC;
@@ -13921,6 +14088,7 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData[2]_i_87__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_88__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_89__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[2]_i_8__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_90__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_91__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_92__1_n_0\ : STD_LOGIC;
@@ -13931,38 +14099,46 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData[2]_i_97__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_98__1_n_0\ : STD_LOGIC;
   signal \rStoredData[2]_i_99__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_10__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_11__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_14__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_17__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_18__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_21__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_23__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_24__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_25__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_26__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_27__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_22__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_23__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_24__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_26_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_27_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_28__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_29__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_30__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_33__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_34_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_29_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_31__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_36__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_37__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_38__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_39__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_3__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_40__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_41__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_42__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_43__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_44__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_45__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_46__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_47__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_48__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_49__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_4__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_50__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_53_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_54_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_55__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_56__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_57__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_5__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_60_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_61_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_62__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_63__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_58__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_59__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_60__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_61__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_62__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_63__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_64__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_65__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_66__1_n_0\ : STD_LOGIC;
@@ -13980,7 +14156,6 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData[3]_i_77__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_78__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_79__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_7__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_80__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_81__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_82__1_n_0\ : STD_LOGIC;
@@ -13992,125 +14167,123 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData[3]_i_88__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_89__1_n_0\ : STD_LOGIC;
   signal \rStoredData[3]_i_8__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_90__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_91__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_92__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_93__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[3]_i_94__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[3]_i_9__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_12__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_13__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_14__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_13__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_15__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_16__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_17__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_17_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_18__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_19__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_1__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_20__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_21__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_21_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_22__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_23__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_24__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_25__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_23_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_24_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_26__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_27__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_27__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_28__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_29__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_30__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_31__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_32__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_33__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_34__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_35__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_36_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_37__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_38__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_39__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_2__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_34__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_36__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_37__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_38_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_39_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_3__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_41__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_42__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_43__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_44__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_40__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_41__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_42_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_43__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_44_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_45__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_46__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_47__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_48_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_49__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_4__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_46_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_47_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_48__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_49__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_50__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_51__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_52__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_53__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_54__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_55__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_56__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_56__1_n_0\ : STD_LOGIC;
   signal \rStoredData[4]_i_57__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_58__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_59__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_5__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[4]_i_60__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_58__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_59__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_5__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_60__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_61__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_62__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_63__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_64__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_6__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_7__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_8__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[4]_i_9__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_10__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_11__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_12__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_13__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_14__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_15_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_16__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_17__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_18__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_19__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_19__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_1__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_20__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_21__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_20_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_21__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_22__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_23__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_24_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_25_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_26__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_24__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_25__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_26__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_27__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_28__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_29__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_30__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_31__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_32__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_33__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_34__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_35__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_36_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_37__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_38__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_39__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_29__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_30_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_31_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_32_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_33__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_34__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_35__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_36__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_37__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_38__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_3__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_40_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_41__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_42__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_43_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_44_n_0\ : STD_LOGIC;
-  signal \rStoredData[5]_i_4__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_5__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_6__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_7__1_n_0\ : STD_LOGIC;
   signal \rStoredData[5]_i_8__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[5]_i_9__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_10__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_11__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_12__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_13__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_12_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_14__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_15__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_16_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_17__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_18__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_19__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_15_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_17_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_18_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_19_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_1__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_20__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_21__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_22_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_23_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_3__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_4__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_5__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_6__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_7__1_n_0\ : STD_LOGIC;
   signal \rStoredData[6]_i_8__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[6]_i_9__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[7]_i_10_n_0\ : STD_LOGIC;
+  signal \rStoredData[6]_i_9__1_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_10__1_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_11_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_12_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_4__1_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_5__1_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_6__1_n_0\ : STD_LOGIC;
-  signal \rStoredData[7]_i_7__0_n_0\ : STD_LOGIC;
-  signal \rStoredData[7]_i_8__0_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_7_n_0\ : STD_LOGIC;
+  signal \rStoredData[7]_i_8_n_0\ : STD_LOGIC;
   signal \rStoredData[7]_i_9__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[0]_i_10__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[0]_i_11__1_n_0\ : STD_LOGIC;
@@ -14175,10 +14348,10 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData_reg[1]_i_20__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_21__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_22__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_23__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_24__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_25__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_26__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_23__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_24__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_25__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_26__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_27__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_28__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_29__1_n_0\ : STD_LOGIC;
@@ -14207,201 +14380,176 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 is
   signal \rStoredData_reg[1]_i_52__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_53__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_54__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[1]_i_7__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[1]_i_7__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_8__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[1]_i_9__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_10__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_11__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_12__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_13__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_14__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_13__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_15__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_17__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_18__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_19__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_1__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_20__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_22__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_23__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_24__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_25__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_26__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_27__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_28__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_29__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_30__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_31__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_32__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_33__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_34__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_35__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_33__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_34__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_35__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_36__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_37__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_38__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_39__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_40__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_41__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_3__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_43__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_44__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_45__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_46__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_47__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_48__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_49__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_50__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_51__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_52__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_53__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_5__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[2]_i_8__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_54__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[2]_i_55__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[2]_i_9__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_10__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_12__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_13__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_14__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_13__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_15__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_16__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_19__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_1__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_20__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_22__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_31__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_32__0_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_25__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_30__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_32__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_33__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_34__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_35__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_36__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_37__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_38__0_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_39__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_40__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_43__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_44__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_49__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_50__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_51__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[3]_i_52__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_53__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_54__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_58__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_59__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[3]_i_9__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_5__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[3]_i_7__1_n_0\ : STD_LOGIC;
   signal \^rstoreddata_reg[4]_0\ : STD_LOGIC;
   signal \^rstoreddata_reg[4]_1\ : STD_LOGIC;
   signal \rStoredData_reg[4]_i_10__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_11_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_2__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_40_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_7__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_8__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[4]_i_9__1_n_0\ : STD_LOGIC;
-  signal \^rstoreddata_reg[5]_0\ : STD_LOGIC;
-  signal \rStoredData_reg[5]_i_13_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_11__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_14__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_25__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_30__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_31__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_32__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_33__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_35__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[4]_i_4__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[5]_i_28__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[5]_i_2__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[5]_i_9__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[6]_i_1__1_n_0\ : STD_LOGIC;
-  signal \rStoredData_reg[6]_i_6__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[5]_i_4__1_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[6]_i_13_n_0\ : STD_LOGIC;
+  signal \rStoredData_reg[6]_i_2__1_n_0\ : STD_LOGIC;
   signal \rStoredData_reg[7]_i_2_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_23__0\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_24__0\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_25__0\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_34\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_45__1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_49__1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_57__1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_60\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_61\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_62__0\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \rStoredData[3]_i_63__0\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_28__1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_30__1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_31__0\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_32__0\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_33__0\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_34__0\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_37__0\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_39__0\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_41__0\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_42__0\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_44__1\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_46__1\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_48\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_49__0\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_50__1\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_54__1\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_56__0\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \rStoredData[4]_i_6\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_12__0\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_15__1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_22__1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_25\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_26__0\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_27__1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_31__0\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_32__0\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_33__0\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_34__0\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_35__0\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_36\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_37__0\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_38__0\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_39__0\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_40\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_42__0\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_43\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \rStoredData[5]_i_4__1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_15__1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_16\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_18__0\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_19__0\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \rStoredData[6]_i_9__0\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_10\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_11\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \rStoredData[7]_i_8__0\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \rStoredData[2]_i_56\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \rStoredData[2]_i_65__1\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_24__1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_26\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_27\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_29\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_36__1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_44__1\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_53\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_54\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \rStoredData[3]_i_57__1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_17\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_18__1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_20__1\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_21\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_22__1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_24\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_38\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_39\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_42\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_44\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_46\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_47\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_49__1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_61__1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \rStoredData[4]_i_63__1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_19__1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_20\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_30\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_31\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_32\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_33__1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_34__1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_35__1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \rStoredData[5]_i_3__1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_17\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_18\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_19\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_20__1\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_21__1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \rStoredData[6]_i_5__1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_12\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_8\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \rStoredData[7]_i_9__1\ : label is "soft_lutpair54";
 begin
   E(0) <= \^e\(0);
   \rStoredData_reg[4]_0\ <= \^rstoreddata_reg[4]_0\;
   \rStoredData_reg[4]_1\ <= \^rstoreddata_reg[4]_1\;
-  \rStoredData_reg[5]_0\ <= \^rstoreddata_reg[5]_0\;
 \rStoredData[0]_i_100__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"11A1DE14EB4E11B9"
+      INIT => X"79DC16BCA56359D4"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_100__1_n_0\
     );
 \rStoredData[0]_i_101__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B200FFFFDDFF0000"
+      INIT => X"9A30D82367C72794"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_101__1_n_0\
     );
 \rStoredData[0]_i_102__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5598AA6675598AA6"
+      INIT => X"5A9C8623E1431A9C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_102__1_n_0\
     );
 \rStoredData[0]_i_103__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"36B693CB9293C949"
+      INIT => X"3C3493C332B3C3C9"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -14411,49 +14559,49 @@ begin
     );
 \rStoredData[0]_i_104__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"969293DBC949696C"
+      INIT => X"B50FF02FD0B54AF0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_104__1_n_0\
     );
 \rStoredData[0]_i_105__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"65E6A686969E9A19"
+      INIT => X"4D6C36B62C24B293"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[0]_i_105__1_n_0\
+    );
+\rStoredData[0]_i_106__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"92D3DBC9496D6D2C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_105__1_n_0\
-    );
-\rStoredData[0]_i_106__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"899966E817769999"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_106__1_n_0\
     );
 \rStoredData[0]_i_107__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"665D2666999A5999"
+      INIT => X"4CDD264C9B32D99B"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
@@ -14463,23 +14611,23 @@ begin
     );
 \rStoredData[0]_i_108__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"296B626646D6949D"
+      INIT => X"33269B334CCD264C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_108__1_n_0\
     );
 \rStoredData[0]_i_109__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D3CC323333D9CC33"
+      INIT => X"D3CC323333D3CC33"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -14489,49 +14637,49 @@ begin
     );
 \rStoredData[0]_i_110__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4C3C33333C33C3C3"
+      INIT => X"4333CCC633CC3333"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_110__1_n_0\
     );
 \rStoredData[0]_i_111__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFF40000000FD"
+      INIT => X"FFFF0000FFEA0055"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_111__1_n_0\
     );
 \rStoredData[0]_i_112__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4F00FFFF30FF0000"
+      INIT => X"7F7755000088AAFE"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_112__1_n_0\
     );
 \rStoredData[0]_i_113__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00CD204CFF33DFFB"
+      INIT => X"AA678AE655197551"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
@@ -14541,10 +14689,10 @@ begin
     );
 \rStoredData[0]_i_114__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE377F33038080C8"
+      INIT => X"AB622A665695D59D"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
@@ -14554,10 +14702,10 @@ begin
     );
 \rStoredData[0]_i_115__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"52E5BD3F1F06A4E8"
+      INIT => X"786D3DB5970E0E4A"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
@@ -14567,23 +14715,23 @@ begin
     );
 \rStoredData[0]_i_116__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A37DC222DE821DD7"
+      INIT => X"8F79870FB48F7096"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_116__1_n_0\
     );
 \rStoredData[0]_i_117__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1446B998676B9404"
+      INIT => X"BCCC333AC5433C8C"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -14593,14 +14741,14 @@ begin
     );
 \rStoredData[0]_i_118__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FECC40011337BEEE"
+      INIT => X"AA11891556EA66AA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_118__1_n_0\
     );
@@ -14624,9 +14772,9 @@ begin
         port map (
       I0 => \rStoredData_reg[0]_i_7__1_n_0\,
       I1 => \rStoredData_reg[0]_i_8__1_n_0\,
-      I2 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(7),
       I3 => \rStoredData_reg[0]_i_9__1_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(8),
       I5 => \rStoredData_reg[0]_i_10__1_n_0\,
       O => \rStoredData[0]_i_3__1_n_0\
     );
@@ -14645,7 +14793,7 @@ begin
     );
 \rStoredData[0]_i_55__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F0F70F00F1AF0F0"
+      INIT => X"C3CB3C3CCC4C3C33"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -14658,15 +14806,15 @@ begin
     );
 \rStoredData[0]_i_56__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F0F0F0F87F0F0F0"
+      INIT => X"4AF0AD4A0F52B52F"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_56__1_n_0\
     );
 \rStoredData[0]_i_57__1\: unisim.vcomponents.LUT6
@@ -14684,28 +14832,28 @@ begin
     );
 \rStoredData[0]_i_58__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF7FF551000008A"
+      INIT => X"FFFFF7551000008A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_58__1_n_0\
     );
 \rStoredData[0]_i_59__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7655579581A888AA"
+      INIT => X"CCC53ABC43338DCD"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_59__1_n_0\
     );
 \rStoredData[0]_i_5__1\: unisim.vcomponents.LUT6
@@ -14715,54 +14863,54 @@ begin
         port map (
       I0 => \rStoredData_reg[0]_i_15__1_n_0\,
       I1 => \rStoredData_reg[0]_i_16__1_n_0\,
-      I2 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(0),
       I3 => \rStoredData_reg[0]_i_17__1_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(6),
       I5 => \rStoredData_reg[0]_i_18__1_n_0\,
       O => \rStoredData[0]_i_5__1_n_0\
     );
 \rStoredData[0]_i_60__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C4DC9DBD392B2362"
+      INIT => X"15FFEA00FFFE0111"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_60__1_n_0\
     );
 \rStoredData[0]_i_61__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C3CBCC4C3C3C3C33"
+      INIT => X"EAA8575F0111EEEA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_61__1_n_0\
     );
 \rStoredData[0]_i_62__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4AF00F52AD4AB52F"
+      INIT => X"5AF078F0F0E1F1A5"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_62__1_n_0\
     );
 \rStoredData[0]_i_63__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5969496D65A4A4B6"
+      INIT => X"7655579581A888AA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -14775,46 +14923,7 @@ begin
     );
 \rStoredData[0]_i_64__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5961E5A779E5A586"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(0),
-      O => \rStoredData[0]_i_64__1_n_0\
-    );
-\rStoredData[0]_i_65__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAA8575F0111EEEA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_65__1_n_0\
-    );
-\rStoredData[0]_i_66__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5AF078F0F0E1F1A5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_66__1_n_0\
-    );
-\rStoredData[0]_i_67__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"34CF4A9D9125E10E"
+      INIT => X"C4DC392B9DBD2362"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -14823,6 +14932,45 @@ begin
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
+      O => \rStoredData[0]_i_64__1_n_0\
+    );
+\rStoredData[0]_i_65__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F0F0F1A70F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_65__1_n_0\
+    );
+\rStoredData[0]_i_66__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F0F0F0F87F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_66__1_n_0\
+    );
+\rStoredData[0]_i_67__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"34CF91254A9DE10E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_67__1_n_0\
     );
 \rStoredData[0]_i_68__1\: unisim.vcomponents.LUT6
@@ -14840,15 +14988,15 @@ begin
     );
 \rStoredData[0]_i_69__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCC53ABC43338DCD"
+      INIT => X"5969496D65A4A4B6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_69__1_n_0\
     );
 \rStoredData[0]_i_6__1\: unisim.vcomponents.LUT6
@@ -14866,49 +15014,49 @@ begin
     );
 \rStoredData[0]_i_70__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"15FFFFFEEA000111"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_70__1_n_0\
-    );
-\rStoredData[0]_i_71__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"080F0000F7F0FFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[0]_i_71__1_n_0\
-    );
-\rStoredData[0]_i_72__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"46B9D4A9952B9D62"
+      INIT => X"59E561A779A5E586"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[0]_i_70__1_n_0\
+    );
+\rStoredData[0]_i_71__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AE7700005118FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(9),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[0]_i_71__1_n_0\
+    );
+\rStoredData[0]_i_72__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0280FDFDC0F53F0A"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_72__1_n_0\
     );
 \rStoredData[0]_i_73__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFAE5151F7F70808"
+      INIT => X"67A6D95175778888"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -14918,23 +15066,23 @@ begin
     );
 \rStoredData[0]_i_74__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9BB2D99B6464A626"
+      INIT => X"FFF43BBF4003CC44"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_74__1_n_0\
     );
 \rStoredData[0]_i_75__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B995666A5556ABB9"
+      INIT => X"919DEE6AFDFE2313"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -14944,360 +15092,361 @@ begin
     );
 \rStoredData[0]_i_76__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EA6E7657559599A9"
+      INIT => X"FE6A11952203DDFC"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_76__1_n_0\
     );
 \rStoredData[0]_i_77__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"11EA55A87F80FE11"
+      INIT => X"11D5EA2ADDFC2A33"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_77__1_n_0\
     );
 \rStoredData[0]_i_78__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A665AA6659995559"
+      INIT => X"AA2A55D43757C088"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_78__1_n_0\
     );
 \rStoredData[0]_i_79__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A87700FF00FF01EE"
+      INIT => X"0080FF7F88A97F66"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_79__1_n_0\
     );
 \rStoredData[0]_i_80__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2665AA66599B55D9"
+      INIT => X"7220E2A21DDF1D5D"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_80__1_n_0\
     );
 \rStoredData[0]_i_81__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3F8000FF00FF00FF"
+      INIT => X"8FE0A0E0705F7F1F"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_81__1_n_0\
     );
 \rStoredData[0]_i_82__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"665D266499BA5D99"
+      INIT => X"0F020A80C0FDF5FD"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_82__1_n_0\
     );
 \rStoredData[0]_i_83__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"860E71B3F09F69E0"
+      INIT => X"2E52849D5141BBEA"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_83__1_n_0\
     );
 \rStoredData[0]_i_84__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1051EEAE8A8875F7"
+      INIT => X"415098BCAFEF7B52"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_84__1_n_0\
     );
 \rStoredData[0]_i_85__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C43C63CCC3BC33C3"
+      INIT => X"ECEB3614EB3B44C1"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_85__1_n_0\
     );
 \rStoredData[0]_i_86__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"769155A8578815EA"
+      INIT => X"624394DC1111ECEB"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[0]_i_86__1_n_0\
     );
-\rStoredData[0]_i_87__1\: unisim.vcomponents.LUT5
+\rStoredData[0]_i_87__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9D462B9D"
+      INIT => X"D0953D6AFAC50527"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[0]_i_87__1_n_0\
     );
 \rStoredData[0]_i_88__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AB999D546662AAB9"
+      INIT => X"81927E6C175BE9B2"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_88__1_n_0\
     );
 \rStoredData[0]_i_89__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5577FEEAA8811155"
+      INIT => X"C551DAAA375EC884"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_89__1_n_0\
     );
 \rStoredData[0]_i_90__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EA880011557FFEEA"
+      INIT => X"E8A4566D0593FAA4"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_90__1_n_0\
     );
 \rStoredData[0]_i_91__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"533A32ECCCD3D932"
+      INIT => X"BF3F60DA9FED2039"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_91__1_n_0\
     );
 \rStoredData[0]_i_92__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5756EEEAA8811515"
+      INIT => X"79DC86B9E5635ADC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_92__1_n_0\
     );
 \rStoredData[0]_i_93__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9DB99D392B626246"
+      INIT => X"9854D0342FC1BFD2"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_93__1_n_0\
     );
 \rStoredData[0]_i_94__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CC32CC4CD3CC33DB"
+      INIT => X"5A9CF944A5231A9C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_94__1_n_0\
     );
 \rStoredData[0]_i_95__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCC339C4333CCC4"
+      INIT => X"C836EE54C9B6A159"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_95__1_n_0\
     );
 \rStoredData[0]_i_96__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4623DCC43BB94623"
+      INIT => X"8913F2A41479A993"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(7),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_96__1_n_0\
     );
 \rStoredData[0]_i_97__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA9956669155AAA9"
+      INIT => X"C5713A81256BCA1E"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[0]_i_97__1_n_0\
     );
 \rStoredData[0]_i_98__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"89116EEA5577A899"
+      INIT => X"A9B65E6C05DBE8A6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_98__1_n_0\
     );
 \rStoredData[0]_i_99__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"40FC43DC17A9249E"
+      INIT => X"3FB8B7F0402D483A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[0]_i_99__1_n_0\
     );
 \rStoredData[1]_i_100__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2232EC22CD6CD9DD"
+      INIT => X"BD962B2939B56269"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_100__1_n_0\
     );
 \rStoredData[1]_i_101__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4F00000020FFFFFF"
+      INIT => X"756A889D10A3AF46"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_101__1_n_0\
     );
 \rStoredData[1]_i_102__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0AAF00AAFD54FFD5"
+      INIT => X"B5D22F9D2DD50A2D"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_102__1_n_0\
     );
 \rStoredData[1]_i_103__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"088C88CCEEF7EF77"
+      INIT => X"AA26A2666455655D"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
@@ -15307,49 +15456,49 @@ begin
     );
 \rStoredData[1]_i_104__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5F4F0F050520A0B0"
+      INIT => X"1555AA8857EA5555"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_104__1_n_0\
     );
 \rStoredData[1]_i_105__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E361717961617978"
+      INIT => X"695B49DB49DB49DA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(0),
       O => \rStoredData[1]_i_105__1_n_0\
     );
 \rStoredData[1]_i_106__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9888E6E68EEE7777"
+      INIT => X"D9999BBBBA222666"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_106__1_n_0\
     );
 \rStoredData[1]_i_107__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5075EFAFF5F78A0A"
+      INIT => X"DA5F45255D55A0A2"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
@@ -15359,74 +15508,74 @@ begin
     );
 \rStoredData[1]_i_108__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F2B4B024B024B42D"
+      INIT => X"AAE6AE6775515519"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_108__1_n_0\
     );
 \rStoredData[1]_i_109__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"080000F0F0F3FFFF"
+      INIT => X"C4CCCC3C3C3B3333"
     )
         port map (
       I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_109__1_n_0\
     );
-\rStoredData[1]_i_110__1\: unisim.vcomponents.LUT5
+\rStoredData[1]_i_110__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9DCCDC44"
+      INIT => X"9AAA6664A6A65555"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_110__1_n_0\
     );
-\rStoredData[1]_i_111__1\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_111__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0F0F0F0F0F0F0FF4"
+      INIT => X"33333336"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(0),
       O => \rStoredData[1]_i_111__1_n_0\
     );
 \rStoredData[1]_i_112__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"004F0000FFB0FFFF"
+      INIT => X"000800AFFFF7FF51"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_112__1_n_0\
     );
 \rStoredData[1]_i_113__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA67551955558AAA"
+      INIT => X"AAEF7511FFF70000"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
@@ -15436,23 +15585,23 @@ begin
     );
 \rStoredData[1]_i_114__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"555D55D9BAAAAAA2"
+      INIT => X"5A1A5A1E0E8F8F87"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_114__1_n_0\
     );
 \rStoredData[1]_i_115__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3232C4C817C799B8"
+      INIT => X"1090EEEA9DEF3B10"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
@@ -15462,42 +15611,42 @@ begin
     );
 \rStoredData[1]_i_116__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8ACAD2D7F7F53520"
+      INIT => X"BB8C3333CC45ACCC"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_116__1_n_0\
     );
-\rStoredData[1]_i_117__0\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_117__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"40FDAF500AD0AF00"
+      INIT => X"EA55AA52A57A85AA"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_117__0_n_0\
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[1]_i_117__1_n_0\
     );
-\rStoredData[1]_i_118__0\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_118__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5A5A496D5A5BE5A5"
+      INIT => X"0F581EF00E781AF0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[1]_i_118__0_n_0\
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_118__1_n_0\
     );
 \rStoredData[1]_i_2__1\: unisim.vcomponents.LUT6
     generic map(
@@ -15517,11 +15666,11 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[1]_i_7__0_n_0\,
+      I0 => \rStoredData_reg[1]_i_7__1_n_0\,
       I1 => \rStoredData_reg[1]_i_8__1_n_0\,
-      I2 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(7),
       I3 => \rStoredData_reg[1]_i_9__1_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(8),
       I5 => \rStoredData_reg[1]_i_10__1_n_0\,
       O => \rStoredData[1]_i_3__1_n_0\
     );
@@ -15538,31 +15687,31 @@ begin
       I5 => \rStoredData_reg[1]_i_14__1_n_0\,
       O => \rStoredData[1]_i_4__1_n_0\
     );
-\rStoredData[1]_i_55__0\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_55__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"334C32CCCCCCCCCC"
+      INIT => X"9A96A6A69296A6A5"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_55__0_n_0\
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_55__1_n_0\
     );
-\rStoredData[1]_i_56\: unisim.vcomponents.LUT6
+\rStoredData[1]_i_56__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3B3C3C3CCCCCCCCC"
+      INIT => X"AF5A0A50AA581A75"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[1]_i_56_n_0\
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[1]_i_56__1_n_0\
     );
 \rStoredData[1]_i_57__1\: unisim.vcomponents.LUT6
     generic map(
@@ -15583,8 +15732,8 @@ begin
     )
         port map (
       I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(5),
       I5 => s_axis_video_tdata(4),
@@ -15592,15 +15741,15 @@ begin
     );
 \rStoredData[1]_i_59__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF77F7551008008A"
+      INIT => X"A5A49E1AA6961B5B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_59__1_n_0\
     );
 \rStoredData[1]_i_5__1\: unisim.vcomponents.LUT6
@@ -15610,15 +15759,15 @@ begin
         port map (
       I0 => \rStoredData_reg[1]_i_15__1_n_0\,
       I1 => \rStoredData_reg[1]_i_16__1_n_0\,
-      I2 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(0),
       I3 => \rStoredData_reg[1]_i_17__1_n_0\,
-      I4 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(6),
       I5 => \rStoredData_reg[1]_i_18__1_n_0\,
       O => \rStoredData[1]_i_5__1_n_0\
     );
 \rStoredData[1]_i_60__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"98E6AA758A77AE55"
+      INIT => X"1FA0FF00FF00FE11"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -15631,33 +15780,33 @@ begin
     );
 \rStoredData[1]_i_61__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9AA696A692A696A5"
+      INIT => X"CCCDCDCD9393B333"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_61__1_n_0\
     );
 \rStoredData[1]_i_62__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AF5AAA580A501A75"
+      INIT => X"6C4CCCCCCCCDCDC9"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_62__1_n_0\
     );
 \rStoredData[1]_i_63__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"66444CCDDDD9999B"
+      INIT => X"FFF777551000088A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -15670,33 +15819,33 @@ begin
     );
 \rStoredData[1]_i_64__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A0807FFF0515A8A8"
+      INIT => X"98E6AA758A77AE55"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_64__1_n_0\
     );
 \rStoredData[1]_i_65__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCDCDCD9393B333"
+      INIT => X"343C3C2CCCCCCCCC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_65__1_n_0\
     );
 \rStoredData[1]_i_66__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6C4CCCCCCCCDCDC9"
+      INIT => X"3B3C3C3CCCCCCCCC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
@@ -15735,15 +15884,15 @@ begin
     );
 \rStoredData[1]_i_69__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A5A4A6969E1A1B5B"
+      INIT => X"664C44CDDD99D99B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_69__1_n_0\
     );
 \rStoredData[1]_i_6__1\: unisim.vcomponents.LUT6
@@ -15761,49 +15910,49 @@ begin
     );
 \rStoredData[1]_i_70__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1FA0FF00FF00FE11"
+      INIT => X"A0807FFF0515A8A8"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_70__1_n_0\
     );
 \rStoredData[1]_i_71__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2300FCFFFFFF0000"
+      INIT => X"BF0050FFFDFF0000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(9),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_71__1_n_0\
     );
 \rStoredData[1]_i_72__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E7117708558851AA"
+      INIT => X"A525657858585A5A"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_72__1_n_0\
     );
 \rStoredData[1]_i_73__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EF51FF00FF00F708"
+      INIT => X"45FB55AADDAADD22"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -15813,23 +15962,23 @@ begin
     );
 \rStoredData[1]_i_74__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCFF4CCC3330FB33"
+      INIT => X"FFFE7FFF0001A080"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_74__1_n_0\
     );
 \rStoredData[1]_i_75__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EE15AA57887F01EE"
+      INIT => X"CCB7AA75AA55AB44"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
@@ -15839,76 +15988,76 @@ begin
     );
 \rStoredData[1]_i_76__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"E5F1E1F0F0787058"
+      INIT => X"F0F0E165F0F12D0D"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_76__1_n_0\
     );
 \rStoredData[1]_i_77__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1E5A70F0F0F0F0E1"
+      INIT => X"B4785A5A70585A4B"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
+      O => \rStoredData[1]_i_77__1_n_0\
+    );
+\rStoredData[1]_i_78__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00FF75AA15AAF58A"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[1]_i_78__1_n_0\
+    );
+\rStoredData[1]_i_79__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F8F87A6F0F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_77__1_n_0\
-    );
-\rStoredData[1]_i_78__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5110AEAE0888FFF7"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_78__1_n_0\
-    );
-\rStoredData[1]_i_79__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F0F0F0E78F0F0F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_79__1_n_0\
     );
 \rStoredData[1]_i_80__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AEEF5511F7750088"
+      INIT => X"AAAA555595FD6200"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_80__1_n_0\
     );
 \rStoredData[1]_i_81__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F0F0F0F8FF0F0F0"
+      INIT => X"430B4B0B0F3C3C3C"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(9),
       I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
@@ -15917,454 +16066,416 @@ begin
     );
 \rStoredData[1]_i_82__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0520BAFAA0AADF5F"
+      INIT => X"0F0F0F8FCFF2D2F2"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_82__1_n_0\
     );
 \rStoredData[1]_i_83__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4C333CA23D8235C2"
+      INIT => X"E4B43128B5B50A4A"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_83__1_n_0\
     );
 \rStoredData[1]_i_84__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF005DA005BA00FF"
+      INIT => X"AB3144C81544BBBB"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_84__1_n_0\
     );
 \rStoredData[1]_i_85__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5A6559E579A569A6"
+      INIT => X"585B5B4B4F4F0F8E"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_85__1_n_0\
     );
 \rStoredData[1]_i_86__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"080A080EEFF7F7F5"
+      INIT => X"0F0E9AD21E1EF2F1"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[1]_i_86__1_n_0\
     );
-\rStoredData[1]_i_87__1\: unisim.vcomponents.LUT5
+\rStoredData[1]_i_87__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"D99BB226"
+      INIT => X"681F0EF25E851DED"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_87__1_n_0\
     );
 \rStoredData[1]_i_88__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"324426CC224466DD"
+      INIT => X"C224BC49D46D3DDB"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_88__1_n_0\
     );
 \rStoredData[1]_i_89__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9933BB3333223266"
+      INIT => X"60A27A0C5F5397F6"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_89__1_n_0\
     );
 \rStoredData[1]_i_90__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0F0F3C38F0F0F"
+      INIT => X"C336C62594493CC9"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_90__1_n_0\
     );
 \rStoredData[1]_i_91__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"347CCCCBC333303C"
+      INIT => X"51006B5B8AFF560E"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_91__1_n_0\
     );
 \rStoredData[1]_i_92__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A800001557FFFEEA"
+      INIT => X"BD393B6396B52D69"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[1]_i_92__1_n_0\
     );
 \rStoredData[1]_i_93__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5540F555AAAB00AA"
+      INIT => X"774A809E50A4AF43"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_93__1_n_0\
     );
 \rStoredData[1]_i_94__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3C3C3B333343C3C4"
+      INIT => X"9C3DD6963923B529"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[1]_i_94__1_n_0\
     );
 \rStoredData[1]_i_95__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"666665555D599999"
+      INIT => X"68970CF25EA159AD"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_95__1_n_0\
     );
 \rStoredData[1]_i_96__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"644599995DDD9BBA"
+      INIT => X"C2253C49D46D3DDA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_96__1_n_0\
     );
 \rStoredData[1]_i_97__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCDD9BBBDD993332"
+      INIT => X"60825F725A0D95EC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[1]_i_97__1_n_0\
     );
 \rStoredData[1]_i_98__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"324C66CC22CC44DD"
+      INIT => X"C2C69C3C246D49CB"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[1]_i_98__1_n_0\
     );
 \rStoredData[1]_i_99__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AA55ED0043BA36E8"
+      INIT => X"50E5109A8F50EF68"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[1]_i_99__1_n_0\
+    );
+\rStoredData[2]_i_100__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCCCCCC933333333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_100__1_n_0\
+    );
+\rStoredData[2]_i_101__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCC4CC6333333333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_101__1_n_0\
+    );
+\rStoredData[2]_i_102__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6233633333333333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_102__1_n_0\
+    );
+\rStoredData[2]_i_103__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"333B3B3B9D9C9CDC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_103__1_n_0\
+    );
+\rStoredData[2]_i_104__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"25FAFF05B70DFA00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(1),
+      O => \rStoredData[2]_i_104__1_n_0\
+    );
+\rStoredData[2]_i_105__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DDD99998AAAA2666"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[1]_i_99__1_n_0\
-    );
-\rStoredData[2]_i_100__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F333B3333C0C0C4C"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_100__1_n_0\
-    );
-\rStoredData[2]_i_101__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"666666666662222B"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_101__1_n_0\
-    );
-\rStoredData[2]_i_102__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"99955466"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_102__1_n_0\
-    );
-\rStoredData[2]_i_103__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"555555556AAAAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_103__1_n_0\
-    );
-\rStoredData[2]_i_104__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAA95555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_104__1_n_0\
-    );
-\rStoredData[2]_i_105__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"ECFF03000000FFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(4),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_105__1_n_0\
     );
 \rStoredData[2]_i_106__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6233633333B93B99"
+      INIT => X"00FF00F00FE07F00"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_106__1_n_0\
     );
 \rStoredData[2]_i_107__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"15FF0000FF00FFFF"
+      INIT => X"F0F3C70F0F0F0F0F"
     )
         port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_107__1_n_0\
     );
-\rStoredData[2]_i_108__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AF509F055F2558A0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_108__1_n_0\
-    );
-\rStoredData[2]_i_109__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8FCFD2D2CBDAD2D2"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_109__0_n_0\
-    );
-\rStoredData[2]_i_110__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C70C3C3C"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_110__0_n_0\
-    );
-\rStoredData[2]_i_111__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"999399B333263266"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_111__0_n_0\
-    );
-\rStoredData[2]_i_15__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_14__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[2]_i_38__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_39__1_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData_reg[2]_i_40__1_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_41__1_n_0\,
-      O => \rStoredData[2]_i_15__1_n_0\
+      I0 => \rStoredData[2]_i_39__1_n_0\,
+      I1 => \rStoredData[2]_i_40__1_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[2]_i_41__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[2]_i_42__1_n_0\,
+      O => \rStoredData[2]_i_14__1_n_0\
     );
 \rStoredData[2]_i_16__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[2]_i_42__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_43__1_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData_reg[2]_i_44__1_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_45__1_n_0\,
+      I0 => \rStoredData[2]_i_45__1_n_0\,
+      I1 => \rStoredData[2]_i_46__1_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[2]_i_41__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[2]_i_47__1_n_0\,
       O => \rStoredData[2]_i_16__1_n_0\
+    );
+\rStoredData[2]_i_1__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"E4"
+    )
+        port map (
+      I0 => sGammaReg(2),
+      I1 => \p_1_in__1\(2),
+      I2 => \rStoredData_reg[2]_i_3__1_n_0\,
+      O => \rStoredData[2]_i_1__1_n_0\
     );
 \rStoredData[2]_i_21__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"66AAEAAAAAAAAAAA"
+      INIT => X"30BBFC88FF00FF00"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
+      I0 => \rStoredData[5]_i_30_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_63__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[2]_i_56_n_0\,
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_21__1_n_0\
     );
-\rStoredData[2]_i_22__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_25__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6666EAAAAAAAAAAA"
+      INIT => X"B8BBB888B888B888"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
+      I0 => \rStoredData[4]_i_23_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[5]_i_20_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_31_n_0\,
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_22__0_n_0\
+      O => \rStoredData[2]_i_25__1_n_0\
     );
-\rStoredData[2]_i_23__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_27__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0FF070F0F0F0F0F0"
+      INIT => X"70F070F0F5EFF0E5"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[6]_i_19_n_0\,
       I2 => s_axis_video_tdata(5),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
+      I4 => \rStoredData[2]_i_65__1_n_0\,
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_23__0_n_0\
+      O => \rStoredData[2]_i_27__1_n_0\
     );
 \rStoredData[2]_i_2__1\: unisim.vcomponents.LUT6
     generic map(
@@ -16373,65 +16484,139 @@ begin
         port map (
       I0 => \rStoredData[2]_i_4__1_n_0\,
       I1 => s_axis_video_tdata(4),
-      I2 => \rStoredData_reg[2]_i_5__1_n_0\,
+      I2 => \rStoredData[2]_i_5__1_n_0\,
       I3 => sGammaReg(1),
       I4 => sGammaReg(0),
       I5 => \rStoredData[2]_i_6__1_n_0\,
       O => \p_1_in__1\(2)
     );
-\rStoredData[2]_i_3__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_39__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
+      INIT => X"B9B999B95423462B"
     )
         port map (
-      I0 => \rStoredData[2]_i_7__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_8__1_n_0\,
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_39__1_n_0\
+    );
+\rStoredData[2]_i_40__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3C9EBC243C3B9366"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_40__1_n_0\
+    );
+\rStoredData[2]_i_41__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9B9999DD426B436B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData_reg[2]_i_9__1_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData_reg[2]_i_10__1_n_0\,
-      O => \rStoredData[2]_i_3__1_n_0\
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_41__1_n_0\
     );
 \rStoredData[2]_i_42__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCCCCCDD99BB333"
+      INIT => X"3CBB3C20B365934B"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_42__1_n_0\
+    );
+\rStoredData[2]_i_45__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B999B9B95646233B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[2]_i_45__1_n_0\
+    );
+\rStoredData[2]_i_46__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3CBE3C38B4259362"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_46__1_n_0\
+    );
+\rStoredData[2]_i_47__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3CB33B653CD3204A"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_47__1_n_0\
     );
 \rStoredData[2]_i_4__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[2]_i_11__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_12__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_9__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_10__1_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData_reg[2]_i_13__0_n_0\,
+      I3 => \rStoredData_reg[2]_i_11__1_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[2]_i_14__1_n_0\,
+      I5 => \rStoredData_reg[2]_i_12__1_n_0\,
       O => \rStoredData[2]_i_4__1_n_0\
     );
-\rStoredData[2]_i_54__0\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_56\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFF8FFFF00010000"
+      INIT => X"8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_56_n_0\
+    );
+\rStoredData[2]_i_57__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFECFFFF00010000"
     )
         port map (
       I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(5),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_54__0_n_0\
+      O => \rStoredData[2]_i_57__1_n_0\
     );
-\rStoredData[2]_i_55__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_58__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"50525A4A0A0F0F0F"
     )
@@ -16442,48 +16627,35 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_55__1_n_0\
+      O => \rStoredData[2]_i_58__1_n_0\
     );
-\rStoredData[2]_i_56__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_59__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BB99BB9999DDDDDC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_56__1_n_0\
-    );
-\rStoredData[2]_i_57__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5A5A5A4A0A0A0A2F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_57__1_n_0\
-    );
-\rStoredData[2]_i_58__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"DDD5DD5544444442"
+      INIT => X"DDD5D5D544444442"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_58__1_n_0\
+      O => \rStoredData[2]_i_59__1_n_0\
     );
-\rStoredData[2]_i_59__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_5__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData_reg[2]_i_13__1_n_0\,
+      I1 => \rStoredData[2]_i_14__1_n_0\,
+      I2 => s_axis_video_tdata(0),
+      I3 => \rStoredData_reg[2]_i_15__1_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[2]_i_16__1_n_0\,
+      O => \rStoredData[2]_i_5__1_n_0\
+    );
+\rStoredData[2]_i_60__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AABBABBBD5555555"
     )
@@ -16494,74 +16666,84 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_59__1_n_0\
-    );
-\rStoredData[2]_i_60__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAAAB9B99DDD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_60__1_n_0\
     );
 \rStoredData[2]_i_61__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2A2AAAAAAAAAABBB"
+      INIT => X"7CB4A2B3A5A1D2DE"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(1),
       O => \rStoredData[2]_i_61__1_n_0\
     );
 \rStoredData[2]_i_62__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7CB4A5A1A2B3D2DE"
+      INIT => X"6158785A7058785A"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[2]_i_62__1_n_0\
     );
 \rStoredData[2]_i_63__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6178585A7078585A"
+      INIT => X"BBBB999999DDDDDC"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_63__1_n_0\
     );
 \rStoredData[2]_i_64__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CC99DD33CDBBD922"
+      INIT => X"5A5A5A4A0A0A0A2F"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_64__1_n_0\
+    );
+\rStoredData[2]_i_65__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"07"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_65__1_n_0\
+    );
+\rStoredData[2]_i_66__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CC99CDBBDD33D922"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_64__1_n_0\
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_66__1_n_0\
     );
-\rStoredData[2]_i_65__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_67__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"38F0F0F0F0F0F0F5"
     )
@@ -16569,60 +16751,34 @@ begin
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_65__1_n_0\
-    );
-\rStoredData[2]_i_66__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"30EFFF00FF00FF00"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_66__1_n_0\
-    );
-\rStoredData[2]_i_67__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00022222BFFFFFDD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_67__1_n_0\
     );
 \rStoredData[2]_i_68__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFD40000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_68__1_n_0\
-    );
-\rStoredData[2]_i_69__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0FF8F0FFFFF0000"
+      INIT => X"007F0FF00FF00FF0"
     )
         port map (
       I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_68__1_n_0\
+    );
+\rStoredData[2]_i_69__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"367636666E6C6EEC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_69__1_n_0\
     );
@@ -16641,100 +16797,101 @@ begin
     );
 \rStoredData[2]_i_70__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCCCCCCDDB9393B3"
+      INIT => X"7F7F7F7FC8888888"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_70__1_n_0\
-    );
-\rStoredData[2]_i_71__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0002BFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_70__1_n_0\
+    );
+\rStoredData[2]_i_71__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFE80000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_71__1_n_0\
     );
 \rStoredData[2]_i_72__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2C4C6CCCCCCCCCCD"
+      INIT => X"4466666773333333"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_72__1_n_0\
     );
 \rStoredData[2]_i_73__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00FF4CFFCF33FF00"
+      INIT => X"66666666667B673B"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_73__1_n_0\
     );
 \rStoredData[2]_i_74__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00FF7F00FF00FF00"
+      INIT => X"2666666666CCEECD"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_74__1_n_0\
     );
 \rStoredData[2]_i_75__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9CDCDCCCCCCCC4C4"
+      INIT => X"0F7A1AFAF0F0F0F0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_75__1_n_0\
     );
 \rStoredData[2]_i_76__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3B3C3C3CCCCCCCCC"
+      INIT => X"70EFFF00FF00FF00"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_76__1_n_0\
     );
 \rStoredData[2]_i_77__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FD00550A40AA00FF"
+      INIT => X"AA55BF00FF00F500"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(4),
@@ -16744,375 +16901,443 @@ begin
     );
 \rStoredData[2]_i_78__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"659955885DAAD9AA"
+      INIT => X"999C9C9CC6464646"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_78__1_n_0\
+    );
+\rStoredData[2]_i_79__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"9594961666666666"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_79__1_n_0\
+    );
+\rStoredData[2]_i_7__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[2]_i_21__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_22__1_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => \rStoredData_reg[2]_i_23__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[2]_i_24__1_n_0\,
+      O => \rStoredData[2]_i_7__1_n_0\
+    );
+\rStoredData[2]_i_80__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CD99DD88DD80D922"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_78__1_n_0\
-    );
-\rStoredData[2]_i_79__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0F0F0F0F04A500F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_79__1_n_0\
-    );
-\rStoredData[2]_i_7__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_7__1_n_0\,
-      I1 => \rStoredData[2]_i_21__1_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[2]_i_22__0_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[2]_i_23__0_n_0\,
-      O => \rStoredData[2]_i_7__0_n_0\
-    );
-\rStoredData[2]_i_80__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9B93B3B336262624"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_80__1_n_0\
     );
 \rStoredData[2]_i_81__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C4C6C4C223333333"
+      INIT => X"9888C4C48CCC7777"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_81__1_n_0\
     );
 \rStoredData[2]_i_82__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33333333304C00CC"
+      INIT => X"9999999112226666"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[2]_i_82__1_n_0\
     );
 \rStoredData[2]_i_83__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"C3F3B333C3F33330"
+      INIT => X"C353D333C313D332"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(0),
       O => \rStoredData[2]_i_83__1_n_0\
     );
 \rStoredData[2]_i_84__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"02022222BBBFBFBF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_84__1_n_0\
-    );
-\rStoredData[2]_i_85__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F5D5F5555002400A"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_85__1_n_0\
-    );
-\rStoredData[2]_i_86__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0F0F0F0B00F0F0F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_86__1_n_0\
-    );
-\rStoredData[2]_i_87__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"D40A00FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_87__1_n_0\
-    );
-\rStoredData[2]_i_88__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EE45BB55B86200BA"
+      INIT => X"D4C9C33AC2D84337"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[2]_i_84__1_n_0\
+    );
+\rStoredData[2]_i_85__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A96DBD24952494B6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_85__1_n_0\
+    );
+\rStoredData[2]_i_86__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DCC6CC59C43393AE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_86__1_n_0\
+    );
+\rStoredData[2]_i_87__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A9BDAD956D246CA4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_87__1_n_0\
+    );
+\rStoredData[2]_i_88__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"D4C9433AC2986337"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_88__1_n_0\
     );
 \rStoredData[2]_i_89__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"55999888AAAAE677"
+      INIT => X"A995BD946C2424B6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_89__1_n_0\
+    );
+\rStoredData[2]_i_8__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[2]_i_25__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_26__1_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => \rStoredData[2]_i_27__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[2]_i_28__1_n_0\,
+      O => \rStoredData[2]_i_8__1_n_0\
+    );
+\rStoredData[2]_i_90__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"DCC5C6C8C3BA4336"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_90__1_n_0\
+    );
+\rStoredData[2]_i_91__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A9B5AD956D2424A6"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[2]_i_91__1_n_0\
+    );
+\rStoredData[2]_i_92__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"999D9D9DDCDCDCC4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_92__1_n_0\
+    );
+\rStoredData[2]_i_93__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"4000AAAA02AAFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_93__1_n_0\
+    );
+\rStoredData[2]_i_94__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF0F8F0F0F0000F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_94__1_n_0\
+    );
+\rStoredData[2]_i_95__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAABBBDDDDD555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_95__1_n_0\
+    );
+\rStoredData[2]_i_96__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFBF3F330000004"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[2]_i_96__1_n_0\
+    );
+\rStoredData[2]_i_97__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"662262233333333B"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_89__1_n_0\
-    );
-\rStoredData[2]_i_90__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAABFD55"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_90__1_n_0\
-    );
-\rStoredData[2]_i_91__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5A0A4AAA5A0A0AAF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(1),
-      O => \rStoredData[2]_i_91__1_n_0\
-    );
-\rStoredData[2]_i_92__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0A0A0A0BFFF5FFF5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(3),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_92__1_n_0\
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[2]_i_97__1_n_0\
     );
-\rStoredData[2]_i_93__1\: unisim.vcomponents.LUT6
+\rStoredData[2]_i_98__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFEF0F0F000010"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_93__1_n_0\
-    );
-\rStoredData[2]_i_94__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C78F0C3C0F0C3C30"
+      INIT => X"CBC3C3F3F3F0F0F0"
     )
         port map (
       I0 => s_axis_video_tdata(0),
       I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(2),
-      O => \rStoredData[2]_i_94__1_n_0\
-    );
-\rStoredData[2]_i_95__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0F0F0E5A70F0F0F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_95__1_n_0\
-    );
-\rStoredData[2]_i_96__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9115115577667666"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(3),
-      O => \rStoredData[2]_i_96__1_n_0\
-    );
-\rStoredData[2]_i_97__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"55775776AAAAAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[2]_i_97__1_n_0\
-    );
-\rStoredData[2]_i_98__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F0F0F7FFFF0F0F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
       O => \rStoredData[2]_i_98__1_n_0\
     );
 \rStoredData[2]_i_99__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAAEA80AA00AA55"
+      INIT => X"334C00CC30CC00FF"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
       O => \rStoredData[2]_i_99__1_n_0\
+    );
+\rStoredData[3]_i_10__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFE0FFFFEFE00000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_29_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData[5]_i_16__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[3]_i_30__1_n_0\,
+      O => \rStoredData[3]_i_10__1_n_0\
     );
 \rStoredData[3]_i_11__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFEAE5E5EFEA4040"
+      INIT => X"EFEAE5E5E5E0E0E0"
     )
         port map (
       I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[3]_i_33__0_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[4]_i_41__0_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[3]_i_34_n_0\,
+      I1 => \rStoredData[3]_i_31__1_n_0\,
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[4]_i_38_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[4]_i_21_n_0\,
       O => \rStoredData[3]_i_11__1_n_0\
+    );
+\rStoredData[3]_i_14__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_36__1_n_0\,
+      I1 => \rStoredData[4]_i_45__1_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData[3]_i_37__1_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => \rStoredData[3]_i_38__1_n_0\,
+      O => \rStoredData[3]_i_14__1_n_0\
     );
 \rStoredData[3]_i_17__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_45__1_n_0\,
-      I1 => \rStoredData[3]_i_46__1_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData[5]_i_44_n_0\,
+      I0 => \rStoredData[3]_i_43__1_n_0\,
+      I1 => \rStoredData[3]_i_44__1_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[3]_i_45__1_n_0\,
       I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[3]_i_47__1_n_0\,
+      I5 => \rStoredData[3]_i_46__1_n_0\,
       O => \rStoredData[3]_i_17__1_n_0\
     );
-\rStoredData[3]_i_18__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"B8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[3]_i_48__1_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[3]_i_49__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_50__1_n_0\,
-      O => \rStoredData[3]_i_18__1_n_0\
-    );
-\rStoredData[3]_i_21__1\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_18__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_55__1_n_0\,
-      I1 => \rStoredData[3]_i_56__1_n_0\,
+      I0 => \rStoredData[3]_i_47__1_n_0\,
+      I1 => \rStoredData[5]_i_34__1_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[3]_i_57__1_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[4]_i_33__0_n_0\,
-      O => \rStoredData[3]_i_21__1_n_0\
+      I3 => \rStoredData[3]_i_48__1_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_23_n_0\,
+      O => \rStoredData[3]_i_18__1_n_0\
     );
-\rStoredData[3]_i_23__0\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_21__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80000000"
+      INIT => X"AFAFAFAF0FC000C0"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_23__0_n_0\
+      I0 => \rStoredData[3]_i_53_n_0\,
+      I1 => \rStoredData[3]_i_54_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(4),
+      I4 => \rStoredData[6]_i_20__1_n_0\,
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_21__1_n_0\
     );
-\rStoredData[3]_i_24__0\: unisim.vcomponents.LUT3
+\rStoredData[3]_i_22__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFF80000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[3]_i_22__1_n_0\
+    );
+\rStoredData[3]_i_23__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7F7FFFFFFFFFFEEE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_23__1_n_0\
+    );
+\rStoredData[3]_i_24__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0000557F"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_24__1_n_0\
+    );
+\rStoredData[3]_i_26\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"7F"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_24__0_n_0\
+      O => \rStoredData[3]_i_26_n_0\
     );
-\rStoredData[3]_i_25__0\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_27\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"AA800000"
     )
@@ -17122,59 +17347,32 @@ begin
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_25__0_n_0\
-    );
-\rStoredData[3]_i_26__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFAFAFAF0FC000C0"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_16_n_0\,
-      I1 => \rStoredData[3]_i_60_n_0\,
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[5]_i_37__0_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_26__1_n_0\
-    );
-\rStoredData[3]_i_27__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"333333333FFC7CFC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_27__1_n_0\
+      O => \rStoredData[3]_i_27_n_0\
     );
 \rStoredData[3]_i_28__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000001FFFFFFFF"
+      INIT => X"00AF00A0FFCFFFCF"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
+      I0 => \rStoredData[3]_i_57__1_n_0\,
+      I1 => \rStoredData[6]_i_20__1_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(4),
+      I4 => \rStoredData[4]_i_24_n_0\,
       I5 => s_axis_video_tdata(5),
       O => \rStoredData[3]_i_28__1_n_0\
     );
-\rStoredData[3]_i_29__1\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_29\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CCCCCFCCF3F3B3B3"
+      INIT => X"FEAA0000"
     )
         port map (
-      I0 => \rStoredData[3]_i_61_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[3]_i_62__0_n_0\,
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_29__1_n_0\
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_29_n_0\
     );
 \rStoredData[3]_i_2__1\: unisim.vcomponents.LUT6
     generic map(
@@ -17183,148 +17381,203 @@ begin
         port map (
       I0 => \rStoredData[3]_i_4__1_n_0\,
       I1 => s_axis_video_tdata(5),
-      I2 => \rStoredData[3]_i_5__1_n_0\,
+      I2 => \rStoredData_reg[3]_i_5__1_n_0\,
       I3 => sGammaReg(1),
       I4 => sGammaReg(0),
       I5 => \rStoredData[3]_i_6__1_n_0\,
       O => \p_1_in__1\(3)
     );
-\rStoredData[3]_i_30__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_31__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A0F0A0F0F0CFF0C0"
+      INIT => X"033F373FFFFFFFFF"
     )
         port map (
-      I0 => \rStoredData[4]_i_49__0_n_0\,
-      I1 => \rStoredData[3]_i_63__0_n_0\,
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[4]_i_34__0_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_30__0_n_0\
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_31__1_n_0\
     );
-\rStoredData[3]_i_33__0\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_36__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"55577777EAAAAAAA"
+      INIT => X"FFFFC880"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_33__0_n_0\
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_36__1_n_0\
     );
-\rStoredData[3]_i_34\: unisim.vcomponents.LUT3
+\rStoredData[3]_i_37__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"80"
+      INIT => X"FFAAAAAAEAAAAA55"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_34_n_0\
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(2),
+      O => \rStoredData[3]_i_37__1_n_0\
+    );
+\rStoredData[3]_i_38__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555555540020002"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_38__1_n_0\
+    );
+\rStoredData[3]_i_39__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_68__1_n_0\,
+      I1 => \rStoredData[3]_i_69__1_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_70__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_71__1_n_0\,
+      O => \rStoredData[3]_i_39__1_n_0\
     );
 \rStoredData[3]_i_3__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[3]_i_7__1_n_0\,
+      I0 => \rStoredData_reg[3]_i_7__1_n_0\,
       I1 => \rStoredData[3]_i_8__1_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData_reg[3]_i_9__1_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData_reg[3]_i_10__1_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[3]_i_9__1_n_0\,
+      I4 => s_axis_video_tdata(8),
+      I5 => \rStoredData[3]_i_10__1_n_0\,
       O => \rStoredData[3]_i_3__1_n_0\
+    );
+\rStoredData[3]_i_40__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_72__1_n_0\,
+      I1 => \rStoredData[3]_i_73__1_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_74__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_75__1_n_0\,
+      O => \rStoredData[3]_i_40__1_n_0\
     );
 \rStoredData[3]_i_41__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"DDD5DDD544444442"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(5),
+      I0 => \rStoredData[3]_i_76__1_n_0\,
+      I1 => \rStoredData[3]_i_77__1_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_70__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_78__1_n_0\,
       O => \rStoredData[3]_i_41__1_n_0\
     );
 \rStoredData[3]_i_42__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAAB9B9B99D"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(5),
+      I0 => \rStoredData[3]_i_79__1_n_0\,
+      I1 => \rStoredData[3]_i_80__1_n_0\,
+      I2 => s_axis_video_tdata(1),
+      I3 => \rStoredData[3]_i_74__1_n_0\,
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_81__1_n_0\,
       O => \rStoredData[3]_i_42__1_n_0\
     );
-\rStoredData[3]_i_45__1\: unisim.vcomponents.LUT4
+\rStoredData[3]_i_43__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF80"
+      INIT => X"FFFFFFFFAAAAA888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_43__1_n_0\
+    );
+\rStoredData[3]_i_44__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"01FF"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(5),
+      O => \rStoredData[3]_i_44__1_n_0\
+    );
+\rStoredData[3]_i_45__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF000000E00000FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_45__1_n_0\
     );
 \rStoredData[3]_i_46__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00001555FFFFFFFF"
+      INIT => X"FFFFFFFFA8880000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
       O => \rStoredData[3]_i_46__1_n_0\
     );
 \rStoredData[3]_i_47__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A8A8888811151515"
+      INIT => X"0F0F0F0F7FFFFFF0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_47__1_n_0\
     );
 \rStoredData[3]_i_48__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33333333393CBCBC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_48__1_n_0\
-    );
-\rStoredData[3]_i_49__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"3B9DBB9C"
+      INIT => X"AAAAAAA811111115"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_49__1_n_0\
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_48__1_n_0\
     );
 \rStoredData[3]_i_4__1\: unisim.vcomponents.LUT6
     generic map(
@@ -17334,117 +17587,71 @@ begin
       I0 => \rStoredData[3]_i_11__1_n_0\,
       I1 => \rStoredData_reg[3]_i_12__1_n_0\,
       I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData_reg[3]_i_13__0_n_0\,
+      I3 => \rStoredData_reg[3]_i_13__1_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[3]_i_14__1_n_0\,
+      I5 => \rStoredData[3]_i_14__1_n_0\,
       O => \rStoredData[3]_i_4__1_n_0\
     );
-\rStoredData[3]_i_50__1\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_53\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"33222222677755CC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_50__1_n_0\
-    );
-\rStoredData[3]_i_55__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"557F0000FFFFFFFF"
+      INIT => X"FFFE0000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_53_n_0\
+    );
+\rStoredData[3]_i_54\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_54_n_0\
+    );
+\rStoredData[3]_i_55__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555555544622222"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_55__1_n_0\
     );
 \rStoredData[3]_i_56__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFDDFDDD44004000"
+      INIT => X"9555555555555550"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_56__1_n_0\
     );
-\rStoredData[3]_i_57__1\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_57__1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"001000FF"
+      INIT => X"37FF"
     )
         port map (
       I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_57__1_n_0\
     );
-\rStoredData[3]_i_5__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData_reg[3]_i_15__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_16__1_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => \rStoredData[3]_i_17__1_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[3]_i_18__1_n_0\,
-      O => \rStoredData[3]_i_5__1_n_0\
-    );
-\rStoredData[3]_i_60\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_60_n_0\
-    );
-\rStoredData[3]_i_61\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"C8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_61_n_0\
-    );
-\rStoredData[3]_i_62__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      O => \rStoredData[3]_i_62__0_n_0\
-    );
-\rStoredData[3]_i_63__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFEA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_63__0_n_0\
-    );
-\rStoredData[3]_i_64__1\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_58__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"A724273526752678"
     )
@@ -17455,9 +17662,9 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(1),
-      O => \rStoredData[3]_i_64__1_n_0\
+      O => \rStoredData[3]_i_58__1_n_0\
     );
-\rStoredData[3]_i_65__1\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_59__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"02220222BFFDFFFD"
     )
@@ -17468,57 +17675,135 @@ begin
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_65__1_n_0\
+      O => \rStoredData[3]_i_59__1_n_0\
     );
-\rStoredData[3]_i_66__1\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_60__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5555555544226222"
+      INIT => X"000000003BBB3BBF"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_60__1_n_0\
+    );
+\rStoredData[3]_i_61__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFDD55544444"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_61__1_n_0\
+    );
+\rStoredData[3]_i_62__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6222222222AAAAAB"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_62__1_n_0\
+    );
+\rStoredData[3]_i_63__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"99D59D5555555555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(1),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_66__1_n_0\
+      O => \rStoredData[3]_i_63__1_n_0\
     );
-\rStoredData[3]_i_67__1\: unisim.vcomponents.LUT6
+\rStoredData[3]_i_64__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"9555555555555550"
+      INIT => X"7FF0F0F0F0F0F0F0"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(3),
       I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_64__1_n_0\
+    );
+\rStoredData[3]_i_65__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000005777FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[3]_i_65__1_n_0\
+    );
+\rStoredData[3]_i_66__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEEEEAAAAAAA8888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_66__1_n_0\
+    );
+\rStoredData[3]_i_67__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"033337FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_67__1_n_0\
     );
 \rStoredData[3]_i_68__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAABBB9999D"
+      INIT => X"15151717E8E9E9E1"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_68__1_n_0\
     );
-\rStoredData[3]_i_69__1\: unisim.vcomponents.LUT5
+\rStoredData[3]_i_69__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAA81555"
+      INIT => X"6E6E666255563725"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_69__1_n_0\
     );
 \rStoredData[3]_i_6__1\: unisim.vcomponents.LUT6
@@ -17526,384 +17811,340 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData_reg[3]_i_19__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_20__1_n_0\,
+      I0 => \rStoredData[3]_i_17__1_n_0\,
+      I1 => \rStoredData[3]_i_18__1_n_0\,
       I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[3]_i_21__1_n_0\,
+      I3 => \rStoredData_reg[3]_i_19__1_n_0\,
       I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData_reg[3]_i_22__1_n_0\,
+      I5 => \rStoredData_reg[3]_i_20__1_n_0\,
       O => \rStoredData[3]_i_6__1_n_0\
     );
 \rStoredData[3]_i_70__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"6A2A2AAAAAAAAAAB"
+      INIT => X"15151757E8E9E1A1"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_70__1_n_0\
+    );
+\rStoredData[3]_i_71__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6E6A62625656272C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[3]_i_71__1_n_0\
+    );
+\rStoredData[3]_i_72__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFAEAAAA0805557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_72__1_n_0\
+    );
+\rStoredData[3]_i_73__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AA57AA5A552F5AB5"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_73__1_n_0\
+    );
+\rStoredData[3]_i_74__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEEEEAAA88815557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[3]_i_74__1_n_0\
+    );
+\rStoredData[3]_i_75__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A55BA74BA669866C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_75__1_n_0\
+    );
+\rStoredData[3]_i_76__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0333FCC00337FC83"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(3),
+      O => \rStoredData[3]_i_76__1_n_0\
+    );
+\rStoredData[3]_i_77__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"66EE466255563265"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(4),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_70__1_n_0\
-    );
-\rStoredData[3]_i_71__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C083C30333333333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_71__1_n_0\
-    );
-\rStoredData[3]_i_72__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0FF070F0F0F0F0F0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(5),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_72__1_n_0\
-    );
-\rStoredData[3]_i_73__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000000007FFFFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_73__1_n_0\
-    );
-\rStoredData[3]_i_74__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"33333F7C"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_74__1_n_0\
-    );
-\rStoredData[3]_i_75__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"DDDDD55540002222"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_75__1_n_0\
-    );
-\rStoredData[3]_i_76__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAAAA89"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_76__1_n_0\
-    );
-\rStoredData[3]_i_77__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CCCFB333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_77__1_n_0\
     );
 \rStoredData[3]_i_78__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAAAAA89999911"
+      INIT => X"6E6E62625656272C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
       O => \rStoredData[3]_i_78__1_n_0\
     );
 \rStoredData[3]_i_79__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"333030304CCCCCCC"
+      INIT => X"FFFAEAAAA0805555"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_79__1_n_0\
-    );
-\rStoredData[3]_i_7__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FCBBFC88FF88FF88"
-    )
-        port map (
-      I0 => \rStoredData[3]_i_23__0_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[3]_i_24__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_25__0_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[3]_i_7__1_n_0\
     );
 \rStoredData[3]_i_80__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33333333334C30CC"
+      INIT => X"AA57AA5A552F52B5"
     )
         port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[3]_i_80__1_n_0\
     );
 \rStoredData[3]_i_81__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"55FF55FEAAAAAAAA"
+      INIT => X"A55BA74BA669A66C"
     )
         port map (
       I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(1),
-      I5 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_81__1_n_0\
     );
 \rStoredData[3]_i_82__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE00000000"
+      INIT => X"5555555566666662"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_82__1_n_0\
     );
 \rStoredData[3]_i_83__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4444400022222222"
+      INIT => X"55555555666E666A"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_83__1_n_0\
     );
 \rStoredData[3]_i_84__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAA080FFFFFFFF"
+      INIT => X"55555555EEEAAAAA"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_84__1_n_0\
     );
 \rStoredData[3]_i_85__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAAA888FFFFFFFF"
+      INIT => X"77766EEEAAAAAAAA"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(0),
       I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[3]_i_85__1_n_0\
     );
-\rStoredData[3]_i_86__1\: unisim.vcomponents.LUT4
+\rStoredData[3]_i_86__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF01"
+      INIT => X"D50F470F0F0A0A0A"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(1),
+      I5 => s_axis_video_tdata(3),
       O => \rStoredData[3]_i_86__1_n_0\
     );
 \rStoredData[3]_i_87__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001555500000000"
+      INIT => X"AAAAABBBDDDDDDDD"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[3]_i_87__1_n_0\
-    );
-\rStoredData[3]_i_88__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFD55555554"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_88__1_n_0\
-    );
-\rStoredData[3]_i_89__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"BBBFFFDD"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_89__1_n_0\
-    );
-\rStoredData[3]_i_8__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"B8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[3]_i_26__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[3]_i_27__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[3]_i_28__1_n_0\,
-      O => \rStoredData[3]_i_8__1_n_0\
-    );
-\rStoredData[3]_i_90__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1555555500000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[3]_i_90__0_n_0\
-    );
-\rStoredData[3]_i_91__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5F4F0F0F0F0A2AAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_91__0_n_0\
-    );
-\rStoredData[3]_i_92__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EABBABBB99999999"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[3]_i_92__0_n_0\
-    );
-\rStoredData[3]_i_93__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFF08000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(6),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_93__0_n_0\
-    );
-\rStoredData[3]_i_94__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000011177777FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(2),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[3]_i_94__0_n_0\
+      O => \rStoredData[3]_i_87__1_n_0\
+    );
+\rStoredData[3]_i_88__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00FF0700FF00FF00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_88__1_n_0\
+    );
+\rStoredData[3]_i_89__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"333333333C0C4CCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[3]_i_89__1_n_0\
+    );
+\rStoredData[3]_i_8__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"88B8FFFF88B80000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_23__1_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[3]_i_24__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[3]_i_25__1_n_0\,
+      O => \rStoredData[3]_i_8__1_n_0\
+    );
+\rStoredData[3]_i_9__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B8CCFFFFB8CC0000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_26_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[3]_i_27_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[3]_i_28__1_n_0\,
+      O => \rStoredData[3]_i_9__1_n_0\
     );
 \rStoredData[4]_i_12__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3077304430FF30FF"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \rStoredData[4]_i_28__1_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[4]_i_29__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_30__1_n_0\,
-      I5 => s_axis_video_tdata(5),
+      I0 => \rStoredData_reg[4]_i_30__1_n_0\,
+      I1 => \rStoredData_reg[4]_i_31__1_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[4]_i_32__1_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData_reg[4]_i_33__1_n_0\,
       O => \rStoredData[4]_i_12__1_n_0\
     );
-\rStoredData[4]_i_13__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_13__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFEAAA88888"
+      INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => s_axis_video_tdata(8),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(1),
-      I3 => \rStoredData[4]_i_31__0_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_13__0_n_0\
+      I0 => \rStoredData[4]_i_34__1_n_0\,
+      I1 => \rStoredData_reg[4]_i_31__1_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[4]_i_35__1_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData_reg[4]_i_33__1_n_0\,
+      O => \rStoredData[4]_i_13__1_n_0\
     );
-\rStoredData[4]_i_14__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_15__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AF0FAF00C0C0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_38_n_0\,
+      I1 => \rStoredData[5]_i_34__1_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[4]_i_39_n_0\,
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[4]_i_15__1_n_0\
+    );
+\rStoredData[4]_i_16__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CCCCCCCFF3F3F3B3"
     )
@@ -17911,297 +18152,81 @@ begin
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(7),
       I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_14__0_n_0\
-    );
-\rStoredData[4]_i_15__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFCFAFC000C000C0"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_32__0_n_0\,
-      I1 => \rStoredData[5]_i_34__0_n_0\,
-      I2 => s_axis_video_tdata(7),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[4]_i_33__0_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_15__1_n_0\
-    );
-\rStoredData[4]_i_16__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFC0FFFFBFC00000"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_34__0_n_0\,
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData[4]_i_35__0_n_0\,
       O => \rStoredData[4]_i_16__1_n_0\
     );
-\rStoredData[4]_i_17__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_17\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"BBB8FF33BBB8CC00"
+      INIT => X"E"
     )
         port map (
-      I0 => \rStoredData[4]_i_36_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_37__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(5),
-      I5 => \rStoredData[4]_i_38__1_n_0\,
-      O => \rStoredData[4]_i_17__1_n_0\
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      O => \rStoredData[4]_i_17_n_0\
     );
-\rStoredData[4]_i_18__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_18__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B888FFFFB8880000"
+      INIT => X"7FFFFFFF"
     )
         port map (
-      I0 => \rStoredData[5]_i_20__0_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[4]_i_39__0_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData_reg[4]_i_40_n_0\,
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
       O => \rStoredData[4]_i_18__1_n_0\
     );
 \rStoredData[4]_i_19__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AF00AF00FCFFFC00"
+      INIT => X"FFFFFFFFFEEEAAAA"
     )
         port map (
-      I0 => \rStoredData[4]_i_41__0_n_0\,
-      I1 => \rStoredData[4]_i_42__0_n_0\,
-      I2 => s_axis_video_tdata(5),
-      I3 => s_axis_video_tdata(7),
-      I4 => \rStoredData[3]_i_28__1_n_0\,
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
       O => \rStoredData[4]_i_19__1_n_0\
     );
 \rStoredData[4]_i_1__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBBBBB8BBB8BBB8"
+      INIT => X"BBBBBBBBBBB8B8B8"
     )
         port map (
-      I0 => \rStoredData_reg[4]_i_2__1_n_0\,
+      I0 => \rStoredData[4]_i_2__1_n_0\,
       I1 => sGammaReg(2),
       I2 => \rStoredData[4]_i_3__1_n_0\,
-      I3 => \rStoredData[4]_i_4__1_n_0\,
-      I4 => \rStoredData[4]_i_5__0_n_0\,
-      I5 => \^rstoreddata_reg[4]_0\,
+      I3 => \rStoredData_reg[4]_i_4__1_n_0\,
+      I4 => \^rstoreddata_reg[4]_0\,
+      I5 => \rStoredData[4]_i_5__1_n_0\,
       O => \rStoredData[4]_i_1__1_n_0\
     );
-\rStoredData[4]_i_20__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_20__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B8BBBBBBB8BB8888"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_43__0_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_37__0_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[6]_i_7__1_n_0\,
-      O => \rStoredData[4]_i_20__1_n_0\
-    );
-\rStoredData[4]_i_21__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF80000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(7),
-      O => \rStoredData[4]_i_21__1_n_0\
-    );
-\rStoredData[4]_i_22__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_44__1_n_0\,
-      I1 => \rStoredData[4]_i_45__1_n_0\,
-      I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[4]_i_46__1_n_0\,
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[4]_i_47__1_n_0\,
-      O => \rStoredData[4]_i_22__1_n_0\
-    );
-\rStoredData[4]_i_23__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E5A5E0A5A5A5A5A5"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[4]_i_48_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => s_axis_video_tdata(4),
-      I4 => \rStoredData[4]_i_49__0_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_23__1_n_0\
-    );
-\rStoredData[4]_i_24__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00B8FFFF00B80000"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_50__1_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[5]_i_42__0_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[4]_i_51__1_n_0\,
-      O => \rStoredData[4]_i_24__1_n_0\
-    );
-\rStoredData[4]_i_25__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B8BBB888B8BBB8BB"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_52__1_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[4]_i_53__1_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[4]_i_54__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_25__1_n_0\
-    );
-\rStoredData[4]_i_26__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"B8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_55__1_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[4]_i_56__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_57__1_n_0\,
-      O => \rStoredData[4]_i_26__1_n_0\
-    );
-\rStoredData[4]_i_27__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0F00DFDF0F00D0D0"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[4]_i_50__1_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => \rStoredData[5]_i_44_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => \rStoredData[4]_i_58__0_n_0\,
-      O => \rStoredData[4]_i_27__0_n_0\
-    );
-\rStoredData[4]_i_28__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_28__1_n_0\
-    );
-\rStoredData[4]_i_29__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFEAAA00000000"
+      INIT => X"FFEA0000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_29__1_n_0\
-    );
-\rStoredData[4]_i_30__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00007FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(0),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_30__1_n_0\
-    );
-\rStoredData[4]_i_31__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      O => \rStoredData[4]_i_31__0_n_0\
-    );
-\rStoredData[4]_i_32__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFF8000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_32__0_n_0\
-    );
-\rStoredData[4]_i_33__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFAAA8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_33__0_n_0\
-    );
-\rStoredData[4]_i_34__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"15FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_34__0_n_0\
-    );
-\rStoredData[4]_i_35__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"001FFFFFFFF00000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(4),
       I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_35__0_n_0\
+      O => \rStoredData[4]_i_20__1_n_0\
     );
-\rStoredData[4]_i_36\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_21\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"5555544422222AAA"
+      INIT => X"80"
     )
         port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_36_n_0\
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_21_n_0\
     );
-\rStoredData[4]_i_37__0\: unisim.vcomponents.LUT5
+\rStoredData[4]_i_22__1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00005F7F"
     )
@@ -18211,31 +18236,158 @@ begin
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_37__0_n_0\
+      O => \rStoredData[4]_i_22__1_n_0\
     );
-\rStoredData[4]_i_38__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_23\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEAFFFF00000000"
+      INIT => X"FFFFFFFE00000000"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_38__1_n_0\
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_23_n_0\
     );
-\rStoredData[4]_i_39__0\: unisim.vcomponents.LUT4
+\rStoredData[4]_i_24\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEA"
+      INIT => X"0001"
+    )
+        port map (
+      I0 => s_axis_video_tdata(0),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_24_n_0\
+    );
+\rStoredData[4]_i_26__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"22FF22FFF0FFF000"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_42_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[5]_i_21__1_n_0\,
+      I3 => s_axis_video_tdata(6),
+      I4 => \rStoredData[4]_i_43__1_n_0\,
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_26__1_n_0\
+    );
+\rStoredData[4]_i_27__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAEAAAAA55005555"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[4]_i_44_n_0\,
+      I2 => s_axis_video_tdata(4),
+      I3 => \rStoredData[5]_i_20_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_27__1_n_0\
+    );
+\rStoredData[4]_i_28__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"33BB338830883088"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_45__1_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_46_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[4]_i_47_n_0\,
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_28__1_n_0\
+    );
+\rStoredData[4]_i_29__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBB88B8BBB8BB"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_48__1_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_49__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[7]_i_8_n_0\,
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_29__1_n_0\
+    );
+\rStoredData[4]_i_2__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_6__1_n_0\,
+      I1 => \rStoredData[4]_i_7__1_n_0\,
+      I2 => s_axis_video_tdata(7),
+      I3 => \rStoredData[4]_i_8__1_n_0\,
+      I4 => s_axis_video_tdata(8),
+      I5 => \rStoredData[4]_i_9__1_n_0\,
+      O => \rStoredData[4]_i_2__1_n_0\
+    );
+\rStoredData[4]_i_34__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"CDFFCD00"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[4]_i_58__1_n_0\,
+      O => \rStoredData[4]_i_34__1_n_0\
+    );
+\rStoredData[4]_i_36__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBFCF333BBFCC000"
+    )
+        port map (
+      I0 => \rStoredData[3]_i_24__1_n_0\,
+      I1 => s_axis_video_tdata(7),
+      I2 => \rStoredData[4]_i_61__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_62__1_n_0\,
+      O => \rStoredData[4]_i_36__1_n_0\
+    );
+\rStoredData[4]_i_37__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BCCCFFFFBCCC0000"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_63__1_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => \rStoredData[4]_i_64__1_n_0\,
+      O => \rStoredData[4]_i_37__1_n_0\
+    );
+\rStoredData[4]_i_38\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFF8000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_39__0_n_0\
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_38_n_0\
+    );
+\rStoredData[4]_i_39\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFAAA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_39_n_0\
     );
 \rStoredData[4]_i_3__1\: unisim.vcomponents.LUT6
     generic map(
@@ -18245,246 +18397,12 @@ begin
       I0 => s_axis_video_tdata(6),
       I1 => sGammaReg(0),
       I2 => sGammaReg(1),
-      I3 => \rStoredData_reg[4]_i_9__1_n_0\,
+      I3 => \rStoredData_reg[4]_i_10__1_n_0\,
       I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData_reg[4]_i_10__1_n_0\,
+      I5 => \rStoredData_reg[4]_i_11__1_n_0\,
       O => \rStoredData[4]_i_3__1_n_0\
     );
-\rStoredData[4]_i_41__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_41__0_n_0\
-    );
-\rStoredData[4]_i_42__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFAA80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_42__0_n_0\
-    );
-\rStoredData[4]_i_43__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFE00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[4]_i_43__0_n_0\
-    );
-\rStoredData[4]_i_44__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000557F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_44__1_n_0\
-    );
-\rStoredData[4]_i_45__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8880000000000001"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_45__1_n_0\
-    );
-\rStoredData[4]_i_46__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFEAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_46__1_n_0\
-    );
-\rStoredData[4]_i_47__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFEAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_47__1_n_0\
-    );
-\rStoredData[4]_i_48\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFA8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_48_n_0\
-    );
-\rStoredData[4]_i_49__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"7F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_49__0_n_0\
-    );
-\rStoredData[4]_i_4__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[4]_i_11_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[4]_i_12__1_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[4]_i_13__0_n_0\,
-      I5 => \^rstoreddata_reg[4]_1\,
-      O => \rStoredData[4]_i_4__1_n_0\
-    );
-\rStoredData[4]_i_50__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00001555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_50__1_n_0\
-    );
-\rStoredData[4]_i_51__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFCCCCCCCC8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_51__1_n_0\
-    );
-\rStoredData[4]_i_52__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"30040C0CCCCCCCCC"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_52__1_n_0\
-    );
-\rStoredData[4]_i_53__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF80000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_53__1_n_0\
-    );
-\rStoredData[4]_i_54__1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"557FFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_54__1_n_0\
-    );
-\rStoredData[4]_i_55__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A8A8899955555555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_55__1_n_0\
-    );
-\rStoredData[4]_i_56__0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"80033333"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_56__0_n_0\
-    );
-\rStoredData[4]_i_57__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"99999999DCC4CCC4"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(3),
-      O => \rStoredData[4]_i_57__1_n_0\
-    );
-\rStoredData[4]_i_58__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFAAEAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[4]_i_58__0_n_0\
-    );
-\rStoredData[4]_i_59__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_40__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"636363636332723A"
     )
@@ -18495,166 +18413,475 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(2),
-      O => \rStoredData[4]_i_59__0_n_0\
+      O => \rStoredData[4]_i_40__1_n_0\
     );
-\rStoredData[4]_i_5__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \rStoredData[4]_i_14__0_n_0\,
-      I1 => \rStoredData[4]_i_15__1_n_0\,
-      I2 => s_axis_video_tdata(9),
-      I3 => \rStoredData[4]_i_16__1_n_0\,
-      I4 => s_axis_video_tdata(8),
-      I5 => \rStoredData[4]_i_17__1_n_0\,
-      O => \rStoredData[4]_i_5__0_n_0\
-    );
-\rStoredData[4]_i_6\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => sGammaReg(1),
-      I1 => sGammaReg(0),
-      O => \^rstoreddata_reg[4]_0\
-    );
-\rStoredData[4]_i_60__0\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_41__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"57775777EAAAAAAA"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(0),
       I5 => s_axis_video_tdata(4),
-      O => \rStoredData[4]_i_60__0_n_0\
+      O => \rStoredData[4]_i_41__1_n_0\
     );
-\rStoredData[5]_i_10__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_42\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"55040504FFFFFFFF"
+      INIT => X"A8000000"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_25_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_26__0_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_10__1_n_0\
-    );
-\rStoredData[5]_i_11__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFF55155555"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => s_axis_video_tdata(5),
-      I2 => s_axis_video_tdata(3),
-      I3 => \rStoredData[5]_i_27__1_n_0\,
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
       I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(9),
-      O => \rStoredData[5]_i_11__1_n_0\
+      O => \rStoredData[4]_i_42_n_0\
     );
-\rStoredData[5]_i_12__0\: unisim.vcomponents.LUT2
+\rStoredData[4]_i_43__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2"
+      INIT => X"FFFFFFFFC444C440"
     )
         port map (
-      I0 => sGammaReg(0),
-      I1 => sGammaReg(1),
-      O => \^rstoreddata_reg[5]_0\
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_43__1_n_0\
     );
-\rStoredData[5]_i_14__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_44\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFF80FF8000"
+      INIT => X"FFA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_44_n_0\
+    );
+\rStoredData[4]_i_45__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000F0F0F7FFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_45__1_n_0\
+    );
+\rStoredData[4]_i_46\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_46_n_0\
+    );
+\rStoredData[4]_i_47\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_47_n_0\
+    );
+\rStoredData[4]_i_48__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0037FFFFC0000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_48__1_n_0\
+    );
+\rStoredData[4]_i_49__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"557FFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_49__1_n_0\
+    );
+\rStoredData[4]_i_50__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AA888155"
     )
         port map (
       I0 => s_axis_video_tdata(5),
       I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_50__1_n_0\
+    );
+\rStoredData[4]_i_51__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FFFF01FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_51__1_n_0\
+    );
+\rStoredData[4]_i_52__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AA880155"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_52__1_n_0\
+    );
+\rStoredData[4]_i_53__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF0000FFFE5557"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_53__1_n_0\
+    );
+\rStoredData[4]_i_54__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3F3FFF3F33C337F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(4),
       I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_30__0_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_14__1_n_0\
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_54__1_n_0\
     );
-\rStoredData[5]_i_15__1\: unisim.vcomponents.LUT2
+\rStoredData[4]_i_55__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8"
+      INIT => X"E0E0E0E05F5E7E7E"
     )
         port map (
-      I0 => sGammaReg(0),
-      I1 => sGammaReg(1),
-      O => \^rstoreddata_reg[4]_1\
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_55__1_n_0\
     );
-\rStoredData[5]_i_16__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_56__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FBFB333333300000"
+      INIT => X"3F3FFF3F33C33FB0"
     )
         port map (
-      I0 => \rStoredData[5]_i_31__0_n_0\,
-      I1 => s_axis_video_tdata(7),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
       I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[5]_i_22__1_n_0\,
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_16__1_n_0\
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_56__1_n_0\
     );
-\rStoredData[5]_i_17__1\: unisim.vcomponents.LUT6
+\rStoredData[4]_i_57__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E0E0E0A05F5E7E7E"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_57__1_n_0\
+    );
+\rStoredData[4]_i_58__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000AA80AAA88155"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[4]_i_58__1_n_0\
+    );
+\rStoredData[4]_i_59__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7577F7F759595D7C"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_59__1_n_0\
+    );
+\rStoredData[4]_i_5__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEE222E200000000"
+    )
+        port map (
+      I0 => \rStoredData_reg[4]_i_14__1_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[4]_i_15__1_n_0\,
+      I3 => s_axis_video_tdata(8),
+      I4 => \rStoredData[4]_i_16__1_n_0\,
+      I5 => \^rstoreddata_reg[4]_1\,
+      O => \rStoredData[4]_i_5__1_n_0\
+    );
+\rStoredData[4]_i_60__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FC00FC0033FF37FC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[4]_i_60__1_n_0\
+    );
+\rStoredData[4]_i_61__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFEA0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_61__1_n_0\
+    );
+\rStoredData[4]_i_62__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000FFFF5F7F0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[4]_i_62__1_n_0\
+    );
+\rStoredData[4]_i_63__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"15FF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[4]_i_63__1_n_0\
+    );
+\rStoredData[4]_i_64__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0F1F0FF0F0F0F0F0"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[4]_i_64__1_n_0\
+    );
+\rStoredData[4]_i_6__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAAAAAA8"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(4),
+      I2 => \rStoredData[4]_i_17_n_0\,
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[4]_i_6__1_n_0\
+    );
+\rStoredData[4]_i_7__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_18__1_n_0\,
+      I1 => \rStoredData[4]_i_19__1_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[5]_i_18__1_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_20__1_n_0\,
+      O => \rStoredData[4]_i_7__1_n_0\
+    );
+\rStoredData[4]_i_8__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B8333333B8330000"
+    )
+        port map (
+      I0 => \rStoredData[4]_i_21_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[4]_i_22__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData[4]_i_23_n_0\,
+      O => \rStoredData[4]_i_8__1_n_0\
+    );
+\rStoredData[4]_i_9__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"005DFFFF005D0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[4]_i_24_n_0\,
+      I2 => s_axis_video_tdata(4),
+      I3 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData_reg[4]_i_25__1_n_0\,
+      O => \rStoredData[4]_i_9__1_n_0\
+    );
+\rStoredData[5]_i_10__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_25__1_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[5]_i_26__1_n_0\,
+      O => \rStoredData[5]_i_10__1_n_0\
+    );
+\rStoredData[5]_i_11__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_27__1_n_0\,
+      I1 => \rStoredData[5]_i_25__1_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => \rStoredData_reg[5]_i_28__1_n_0\,
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData[5]_i_29__1_n_0\,
+      O => \rStoredData[5]_i_11__1_n_0\
+    );
+\rStoredData[5]_i_12__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F3F3B3B330303000"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_30_n_0\,
+      I1 => s_axis_video_tdata(7),
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[5]_i_31_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_12__1_n_0\
+    );
+\rStoredData[5]_i_13__1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"8383330333333333"
     )
         port map (
-      I0 => \rStoredData[5]_i_31__0_n_0\,
+      I0 => \rStoredData[5]_i_30_n_0\,
       I1 => s_axis_video_tdata(7),
-      I2 => s_axis_video_tdata(6),
-      I3 => \rStoredData[5]_i_32__0_n_0\,
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[5]_i_32_n_0\,
       I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_13__1_n_0\
+    );
+\rStoredData[5]_i_14__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F0FFF0F0EF0FEF0F"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_33__1_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(6),
+      I4 => \rStoredData[5]_i_34__1_n_0\,
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_14__1_n_0\
+    );
+\rStoredData[5]_i_15\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEEAAAAA00000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(0),
+      I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_15_n_0\
+    );
+\rStoredData[5]_i_16__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000001FFFFFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_16__1_n_0\
+    );
+\rStoredData[5]_i_17__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B833B83333333300"
+    )
+        port map (
+      I0 => \rStoredData[6]_i_20__1_n_0\,
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[4]_i_24_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_30_n_0\,
+      I5 => s_axis_video_tdata(4),
       O => \rStoredData[5]_i_17__1_n_0\
     );
 \rStoredData[5]_i_18__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0FFF0F0AF8FAF8F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(6),
-      I1 => \rStoredData[5]_i_33__0_n_0\,
-      I2 => s_axis_video_tdata(8),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_34__0_n_0\,
-      I5 => s_axis_video_tdata(7),
-      O => \rStoredData[5]_i_18__1_n_0\
-    );
-\rStoredData[5]_i_19__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8080000003033303"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_35__0_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[5]_i_36_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_19__0_n_0\
-    );
-\rStoredData[5]_i_1__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BBBBBBBBBBBBBBB8"
-    )
-        port map (
-      I0 => \rStoredData_reg[5]_i_2__1_n_0\,
-      I1 => sGammaReg(2),
-      I2 => \rStoredData[5]_i_3__1_n_0\,
-      I3 => \rStoredData[5]_i_4__1_n_0\,
-      I4 => \rStoredData[5]_i_5__1_n_0\,
-      I5 => \rStoredData[5]_i_6__1_n_0\,
-      O => \rStoredData[5]_i_1__1_n_0\
-    );
-\rStoredData[5]_i_20__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"000000007FFFFFFF"
     )
@@ -18665,128 +18892,148 @@ begin
       I3 => s_axis_video_tdata(1),
       I4 => s_axis_video_tdata(3),
       I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_20__0_n_0\
+      O => \rStoredData[5]_i_18__1_n_0\
     );
-\rStoredData[5]_i_21__0\: unisim.vcomponents.LUT6
+\rStoredData[5]_i_19__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B833B83333333300"
+      INIT => X"80000000"
     )
         port map (
-      I0 => \rStoredData[5]_i_37__0_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[5]_i_36_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[5]_i_31__0_n_0\,
-      I5 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_21__0_n_0\
-    );
-\rStoredData[5]_i_22__1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"C800"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(4),
       I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_19__1_n_0\
+    );
+\rStoredData[5]_i_1__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BBBBBBBBBBB8B8B8"
+    )
+        port map (
+      I0 => \rStoredData_reg[5]_i_2__1_n_0\,
+      I1 => sGammaReg(2),
+      I2 => \rStoredData[5]_i_3__1_n_0\,
+      I3 => \rStoredData_reg[5]_i_4__1_n_0\,
+      I4 => \^rstoreddata_reg[4]_0\,
+      I5 => \rStoredData[5]_i_5__1_n_0\,
+      O => \rStoredData[5]_i_1__1_n_0\
+    );
+\rStoredData[5]_i_20\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_20_n_0\
+    );
+\rStoredData[5]_i_21__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"02220222AAAAAAAB"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(0),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_21__1_n_0\
+    );
+\rStoredData[5]_i_22__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FEAA0000FFFFFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[5]_i_22__1_n_0\
     );
 \rStoredData[5]_i_23__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEAFAEA00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_38__0_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_39__0_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_23__1_n_0\
-    );
-\rStoredData[5]_i_24\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"80808080FCCCCCCC"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_40_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[5]_i_31__0_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(9),
-      O => \rStoredData[5]_i_24_n_0\
-    );
-\rStoredData[5]_i_25\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0001"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_25_n_0\
-    );
-\rStoredData[5]_i_26__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"07"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_26__0_n_0\
-    );
-\rStoredData[5]_i_27__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      O => \rStoredData[5]_i_27__1_n_0\
-    );
-\rStoredData[5]_i_28__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"88BB88BBB8BBB888"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_41__0_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[5]_i_42__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => \rStoredData[4]_i_28__1_n_0\,
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_28__1_n_0\
-    );
-\rStoredData[5]_i_29__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFF00A8FFA8FF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => \rStoredData[5]_i_43_n_0\,
-      I2 => s_axis_video_tdata(4),
-      I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_44_n_0\,
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_29__0_n_0\
-    );
-\rStoredData[5]_i_30__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAAAAAAA00000000"
+      INIT => X"00000000A8880000"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(0),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_30__0_n_0\
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(3),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[5]_i_23__1_n_0\
     );
-\rStoredData[5]_i_31__0\: unisim.vcomponents.LUT4
+\rStoredData[5]_i_24__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF0F080F000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(0),
+      I2 => s_axis_video_tdata(9),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(2),
+      I5 => s_axis_video_tdata(4),
+      O => \rStoredData[5]_i_24__1_n_0\
+    );
+\rStoredData[5]_i_25__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAAAA5555233B"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_21__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_25__1_n_0\
+    );
+\rStoredData[5]_i_26__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"B8FFB800"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_35__1_n_0\,
+      I1 => s_axis_video_tdata(9),
+      I2 => \rStoredData[5]_i_36__1_n_0\,
+      I3 => s_axis_video_tdata(1),
+      I4 => \rStoredData[5]_i_29__1_n_0\,
+      O => \rStoredData[5]_i_26__1_n_0\
+    );
+\rStoredData[5]_i_27__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFAAAA55552333"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_21__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_27__1_n_0\
+    );
+\rStoredData[5]_i_29__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EAAA44009995FEEE"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_29__1_n_0\
+    );
+\rStoredData[5]_i_30\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"EA00"
     )
@@ -18795,289 +19042,263 @@ begin
       I1 => s_axis_video_tdata(0),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_31__0_n_0\
+      O => \rStoredData[5]_i_30_n_0\
     );
-\rStoredData[5]_i_32__0\: unisim.vcomponents.LUT3
+\rStoredData[5]_i_31\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"1F"
+      INIT => X"A800"
     )
         port map (
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_32__0_n_0\
+      I2 => s_axis_video_tdata(0),
+      I3 => s_axis_video_tdata(3),
+      O => \rStoredData[5]_i_31_n_0\
     );
-\rStoredData[5]_i_33__0\: unisim.vcomponents.LUT2
+\rStoredData[5]_i_32\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"1F"
+    )
+        port map (
+      I0 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(3),
+      O => \rStoredData[5]_i_32_n_0\
+    );
+\rStoredData[5]_i_33__1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => s_axis_video_tdata(3),
       I1 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_33__0_n_0\
+      O => \rStoredData[5]_i_33__1_n_0\
     );
-\rStoredData[5]_i_34__0\: unisim.vcomponents.LUT5
+\rStoredData[5]_i_34__1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"000057FF"
     )
         port map (
       I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(1),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_34__0_n_0\
+      I4 => s_axis_video_tdata(5),
+      O => \rStoredData[5]_i_34__1_n_0\
     );
-\rStoredData[5]_i_35__0\: unisim.vcomponents.LUT3
+\rStoredData[5]_i_35__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"80"
+      INIT => X"FFE000FF"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_35__0_n_0\
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_35__1_n_0\
     );
-\rStoredData[5]_i_36\: unisim.vcomponents.LUT4
+\rStoredData[5]_i_36__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001"
+      INIT => X"C000CC003337FCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_36__1_n_0\
+    );
+\rStoredData[5]_i_37__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C000CC803337FCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(5),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[5]_i_37__1_n_0\
+    );
+\rStoredData[5]_i_38__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFE000000FFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_38__1_n_0\
+    );
+\rStoredData[5]_i_3__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"31223100"
+    )
+        port map (
+      I0 => sGammaReg(0),
+      I1 => sGammaReg(1),
+      I2 => \rStoredData[5]_i_8__1_n_0\,
+      I3 => s_axis_video_tdata(7),
+      I4 => \rStoredData[5]_i_9__1_n_0\,
+      O => \rStoredData[5]_i_3__1_n_0\
+    );
+\rStoredData[5]_i_5__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFE200E200000000"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_12__1_n_0\,
+      I1 => s_axis_video_tdata(8),
+      I2 => \rStoredData[5]_i_13__1_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[5]_i_14__1_n_0\,
+      I5 => \^rstoreddata_reg[4]_1\,
+      O => \rStoredData[5]_i_5__1_n_0\
+    );
+\rStoredData[5]_i_6__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"CCFCBB33CCFC8800"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_15_n_0\,
+      I1 => s_axis_video_tdata(8),
+      I2 => \rStoredData[5]_i_16__1_n_0\,
+      I3 => s_axis_video_tdata(6),
+      I4 => s_axis_video_tdata(9),
+      I5 => \rStoredData[5]_i_17__1_n_0\,
+      O => \rStoredData[5]_i_6__1_n_0\
+    );
+\rStoredData[5]_i_7__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFAD0D"
+    )
+        port map (
+      I0 => s_axis_video_tdata(6),
+      I1 => \rStoredData[5]_i_18__1_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[5]_i_19__1_n_0\,
+      I4 => s_axis_video_tdata(8),
+      O => \rStoredData[5]_i_7__1_n_0\
+    );
+\rStoredData[5]_i_8__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A0AFA0A0EFFFEFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => \rStoredData[5]_i_20_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_21__1_n_0\,
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_8__1_n_0\
+    );
+\rStoredData[5]_i_9__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFAFAFA0C000C000"
+    )
+        port map (
+      I0 => \rStoredData[5]_i_22__1_n_0\,
+      I1 => \rStoredData[5]_i_23__1_n_0\,
+      I2 => s_axis_video_tdata(8),
+      I3 => s_axis_video_tdata(5),
+      I4 => \rStoredData[5]_i_24__1_n_0\,
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[5]_i_9__1_n_0\
+    );
+\rStoredData[6]_i_10__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EFEFAFAA00000000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[6]_i_20__1_n_0\,
+      I2 => s_axis_video_tdata(9),
+      I3 => \rStoredData[6]_i_17_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_10__1_n_0\
+    );
+\rStoredData[6]_i_11__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAFFFFDCCC"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_21__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_11__1_n_0\
+    );
+\rStoredData[6]_i_12\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAFFFFDCC4"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[6]_i_21__1_n_0\,
+      I3 => s_axis_video_tdata(4),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_12_n_0\
+    );
+\rStoredData[6]_i_14__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555777FFFFFFFFF"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(1),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_14__1_n_0\
+    );
+\rStoredData[6]_i_15\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFEEEAAAAA"
+    )
+        port map (
+      I0 => s_axis_video_tdata(5),
+      I1 => s_axis_video_tdata(3),
+      I2 => s_axis_video_tdata(1),
+      I3 => s_axis_video_tdata(2),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
+      O => \rStoredData[6]_i_15_n_0\
+    );
+\rStoredData[6]_i_16\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => sGammaReg(1),
+      I1 => sGammaReg(0),
+      O => \^rstoreddata_reg[4]_1\
+    );
+\rStoredData[6]_i_17\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
     )
         port map (
       I0 => s_axis_video_tdata(0),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(2),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_36_n_0\
+      O => \rStoredData[6]_i_17_n_0\
     );
-\rStoredData[5]_i_37__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"F8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_37__0_n_0\
-    );
-\rStoredData[5]_i_38__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_38__0_n_0\
-    );
-\rStoredData[5]_i_39__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_39__0_n_0\
-    );
-\rStoredData[5]_i_3__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[5]_i_9__1_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[5]_i_10__1_n_0\,
-      I3 => s_axis_video_tdata(8),
-      I4 => \rStoredData[5]_i_11__1_n_0\,
-      I5 => \^rstoreddata_reg[5]_0\,
-      O => \rStoredData[5]_i_3__1_n_0\
-    );
-\rStoredData[5]_i_40\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFA8"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_40_n_0\
-    );
-\rStoredData[5]_i_41__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000055555777"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[5]_i_41__0_n_0\
-    );
-\rStoredData[5]_i_42__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"1F"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(2),
-      I2 => s_axis_video_tdata(4),
-      O => \rStoredData[5]_i_42__0_n_0\
-    );
-\rStoredData[5]_i_43\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FF80"
-    )
-        port map (
-      I0 => s_axis_video_tdata(2),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      O => \rStoredData[5]_i_43_n_0\
-    );
-\rStoredData[5]_i_44\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000015FFFFFFFF"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[5]_i_44_n_0\
-    );
-\rStoredData[5]_i_4__1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"02"
-    )
-        port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => sGammaReg(1),
-      I2 => sGammaReg(0),
-      O => \rStoredData[5]_i_4__1_n_0\
-    );
-\rStoredData[5]_i_5__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EEE222E200000000"
-    )
-        port map (
-      I0 => \rStoredData_reg[5]_i_13_n_0\,
-      I1 => s_axis_video_tdata(7),
-      I2 => \rStoredData[5]_i_14__1_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => s_axis_video_tdata(8),
-      I5 => \^rstoreddata_reg[4]_1\,
-      O => \rStoredData[5]_i_5__1_n_0\
-    );
-\rStoredData[5]_i_6__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFE200E200000000"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_16__1_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[5]_i_17__1_n_0\,
-      I3 => s_axis_video_tdata(9),
-      I4 => \rStoredData[5]_i_18__1_n_0\,
-      I5 => \^rstoreddata_reg[4]_0\,
-      O => \rStoredData[5]_i_6__1_n_0\
-    );
-\rStoredData[5]_i_7__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B8BBBBBBB8BB8888"
-    )
-        port map (
-      I0 => \rStoredData[5]_i_19__0_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[5]_i_20__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => \rStoredData[5]_i_21__0_n_0\,
-      O => \rStoredData[5]_i_7__1_n_0\
-    );
-\rStoredData[5]_i_8__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFEEEAAAAA"
-    )
-        port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(5),
-      I2 => \rStoredData[5]_i_22__1_n_0\,
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(9),
-      O => \rStoredData[5]_i_8__1_n_0\
-    );
-\rStoredData[6]_i_10__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFF3F3B3B0"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_17__0_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => s_axis_video_tdata(4),
-      I3 => \rStoredData[6]_i_18__0_n_0\,
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[6]_i_10__1_n_0\
-    );
-\rStoredData[6]_i_11__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFEA00000000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(0),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(2),
-      I5 => s_axis_video_tdata(5),
-      O => \rStoredData[6]_i_11__1_n_0\
-    );
-\rStoredData[6]_i_12__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"333030300C0C8C8C"
-    )
-        port map (
-      I0 => \rStoredData[6]_i_19__0_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[4]_i_31__0_n_0\,
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(6),
-      O => \rStoredData[6]_i_12__1_n_0\
-    );
-\rStoredData[6]_i_13__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000FFFF75FF0000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(4),
-      I2 => \rStoredData[5]_i_32__0_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(8),
-      I5 => s_axis_video_tdata(7),
-      O => \rStoredData[6]_i_13__1_n_0\
-    );
-\rStoredData[6]_i_14__1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFAAAAA888"
-    )
-        port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_11_n_0\,
-      I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(5),
-      I5 => s_axis_video_tdata(8),
-      O => \rStoredData[6]_i_14__1_n_0\
-    );
-\rStoredData[6]_i_15__1\: unisim.vcomponents.LUT4
+\rStoredData[6]_i_18\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"7FFF"
     )
@@ -19086,138 +19307,161 @@ begin
       I1 => s_axis_video_tdata(2),
       I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(3),
-      O => \rStoredData[6]_i_15__1_n_0\
+      O => \rStoredData[6]_i_18_n_0\
     );
-\rStoredData[6]_i_16\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFE0000"
-    )
-        port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(0),
-      I4 => s_axis_video_tdata(4),
-      O => \rStoredData[6]_i_16_n_0\
-    );
-\rStoredData[6]_i_17__0\: unisim.vcomponents.LUT2
+\rStoredData[6]_i_19\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
         port map (
       I0 => s_axis_video_tdata(1),
       I1 => s_axis_video_tdata(2),
-      O => \rStoredData[6]_i_17__0_n_0\
+      O => \rStoredData[6]_i_19_n_0\
     );
-\rStoredData[6]_i_18__0\: unisim.vcomponents.LUT3
+\rStoredData[6]_i_1__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FE"
+      INIT => X"BBBBBBBBBBB8B8B8"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      O => \rStoredData[6]_i_18__0_n_0\
+      I0 => \rStoredData_reg[6]_i_2__1_n_0\,
+      I1 => sGammaReg(2),
+      I2 => \rStoredData[6]_i_3__1_n_0\,
+      I3 => \rStoredData[6]_i_4__1_n_0\,
+      I4 => \^rstoreddata_reg[4]_0\,
+      I5 => \rStoredData[6]_i_6__1_n_0\,
+      O => \rStoredData[6]_i_1__1_n_0\
     );
-\rStoredData[6]_i_19__0\: unisim.vcomponents.LUT3
+\rStoredData[6]_i_20__1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"07"
+      INIT => X"F8"
     )
         port map (
       I0 => s_axis_video_tdata(2),
       I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(3),
-      O => \rStoredData[6]_i_19__0_n_0\
+      O => \rStoredData[6]_i_20__1_n_0\
     );
-\rStoredData[6]_i_2__1\: unisim.vcomponents.LUT6
+\rStoredData[6]_i_21__1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"F0AAFFCCF0AA00CC"
+      INIT => X"E"
     )
         port map (
-      I0 => \rStoredData[6]_i_4__1_n_0\,
-      I1 => s_axis_video_tdata(8),
-      I2 => \rStoredData[6]_i_5__1_n_0\,
-      I3 => sGammaReg(1),
-      I4 => sGammaReg(0),
-      I5 => \rStoredData_reg[6]_i_6__1_n_0\,
-      O => \p_1_in__1\(6)
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(3),
+      O => \rStoredData[6]_i_21__1_n_0\
+    );
+\rStoredData[6]_i_22\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAABFFFFFF0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => s_axis_video_tdata(3),
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_22_n_0\
+    );
+\rStoredData[6]_i_23\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAABFFFFFF0000"
+    )
+        port map (
+      I0 => s_axis_video_tdata(9),
+      I1 => s_axis_video_tdata(4),
+      I2 => \rStoredData[6]_i_21__1_n_0\,
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
+      O => \rStoredData[6]_i_23_n_0\
     );
 \rStoredData[6]_i_3__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE5555FFFE0000"
+      INIT => X"3131333322000000"
     )
         port map (
-      I0 => s_axis_video_tdata(8),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[6]_i_7__1_n_0\,
-      I3 => s_axis_video_tdata(7),
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[6]_i_8__1_n_0\,
+      I0 => sGammaReg(0),
+      I1 => sGammaReg(1),
+      I2 => \rStoredData[6]_i_9__1_n_0\,
+      I3 => \rStoredData[6]_i_10__1_n_0\,
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(8),
       O => \rStoredData[6]_i_3__1_n_0\
     );
 \rStoredData[6]_i_4__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"CCEEFFFFF0000000"
+      INIT => X"BF80FFFFBF800000"
     )
         port map (
-      I0 => \rStoredData[6]_i_9__0_n_0\,
-      I1 => s_axis_video_tdata(9),
-      I2 => \rStoredData[6]_i_10__1_n_0\,
-      I3 => s_axis_video_tdata(6),
-      I4 => s_axis_video_tdata(7),
-      I5 => s_axis_video_tdata(8),
+      I0 => \rStoredData[6]_i_11__1_n_0\,
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(0),
+      I3 => \rStoredData[6]_i_12_n_0\,
+      I4 => s_axis_video_tdata(6),
+      I5 => \rStoredData_reg[6]_i_13_n_0\,
       O => \rStoredData[6]_i_4__1_n_0\
     );
-\rStoredData[6]_i_5__1\: unisim.vcomponents.LUT6
+\rStoredData[6]_i_5__1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFEA55FFFFEA00AA"
+      INIT => X"8"
+    )
+        port map (
+      I0 => sGammaReg(0),
+      I1 => sGammaReg(1),
+      O => \^rstoreddata_reg[4]_0\
+    );
+\rStoredData[6]_i_6__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EE62CC6200000000"
     )
         port map (
       I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[6]_i_11__1_n_0\,
-      I3 => s_axis_video_tdata(8),
-      I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[6]_i_12__1_n_0\,
-      O => \rStoredData[6]_i_5__1_n_0\
+      I1 => s_axis_video_tdata(8),
+      I2 => \rStoredData[6]_i_14__1_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => \rStoredData[6]_i_15_n_0\,
+      I5 => \^rstoreddata_reg[4]_1\,
+      O => \rStoredData[6]_i_6__1_n_0\
     );
 \rStoredData[6]_i_7__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFE00000000"
+      INIT => X"DDDDDDDDD8C8C888"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(0),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(1),
-      I4 => s_axis_video_tdata(3),
-      I5 => s_axis_video_tdata(5),
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(5),
+      I3 => \rStoredData[6]_i_17_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(6),
       O => \rStoredData[6]_i_7__1_n_0\
     );
 \rStoredData[6]_i_8__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0FBF0FBFFFF0F0F0"
+      INIT => X"FFFFFFFF11115515"
     )
         port map (
-      I0 => \rStoredData[6]_i_15__1_n_0\,
-      I1 => s_axis_video_tdata(4),
-      I2 => s_axis_video_tdata(7),
-      I3 => s_axis_video_tdata(5),
-      I4 => \rStoredData[6]_i_16_n_0\,
-      I5 => s_axis_video_tdata(6),
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(6),
+      I2 => s_axis_video_tdata(4),
+      I3 => \rStoredData[6]_i_18_n_0\,
+      I4 => s_axis_video_tdata(5),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[6]_i_8__1_n_0\
     );
-\rStoredData[6]_i_9__0\: unisim.vcomponents.LUT5
+\rStoredData[6]_i_9__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7FFFFFFF"
+      INIT => X"CDDDDDDDDDDDDDDD"
     )
         port map (
-      I0 => s_axis_video_tdata(4),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(3),
-      I4 => s_axis_video_tdata(5),
-      O => \rStoredData[6]_i_9__0_n_0\
+      I0 => s_axis_video_tdata(6),
+      I1 => s_axis_video_tdata(9),
+      I2 => s_axis_video_tdata(3),
+      I3 => \rStoredData[6]_i_19_n_0\,
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(5),
+      O => \rStoredData[6]_i_9__1_n_0\
     );
 \rStoredData[7]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -19228,26 +19472,41 @@ begin
       I1 => m_axis_video_tready,
       O => \^e\(0)
     );
-\rStoredData[7]_i_10\: unisim.vcomponents.LUT4
+\rStoredData[7]_i_10__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEA"
+      INIT => X"FFFF0000FE000000"
     )
         port map (
-      I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
+      I0 => s_axis_video_tdata(4),
+      I1 => s_axis_video_tdata(3),
       I2 => s_axis_video_tdata(2),
-      I3 => s_axis_video_tdata(4),
-      O => \rStoredData[7]_i_10_n_0\
+      I3 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(8),
+      I5 => s_axis_video_tdata(7),
+      O => \rStoredData[7]_i_10__1_n_0\
     );
-\rStoredData[7]_i_11\: unisim.vcomponents.LUT3
+\rStoredData[7]_i_11\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFC8C8C888"
+    )
+        port map (
+      I0 => s_axis_video_tdata(7),
+      I1 => s_axis_video_tdata(8),
+      I2 => s_axis_video_tdata(5),
+      I3 => s_axis_video_tdata(3),
+      I4 => s_axis_video_tdata(4),
+      I5 => s_axis_video_tdata(9),
+      O => \rStoredData[7]_i_11_n_0\
+    );
+\rStoredData[7]_i_12\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"E0"
     )
         port map (
-      I0 => s_axis_video_tdata(1),
-      I1 => s_axis_video_tdata(2),
+      I0 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(1),
       I2 => s_axis_video_tdata(3),
-      O => \rStoredData[7]_i_11_n_0\
+      O => \rStoredData[7]_i_12_n_0\
     );
 \rStoredData[7]_i_3__1\: unisim.vcomponents.LUT6
     generic map(
@@ -19259,83 +19518,82 @@ begin
       I2 => sGammaReg(1),
       I3 => sGammaReg(0),
       I4 => s_axis_video_tdata(9),
-      I5 => \rStoredData[7]_i_7__0_n_0\,
+      I5 => \rStoredData[7]_i_7_n_0\,
       O => \p_1_in__1\(7)
     );
 \rStoredData[7]_i_4__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFEEEAAAAA"
+      INIT => X"FFFFFFFFFFFFE000"
     )
         port map (
-      I0 => s_axis_video_tdata(9),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_8__0_n_0\,
-      I3 => s_axis_video_tdata(5),
-      I4 => s_axis_video_tdata(7),
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[7]_i_8_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(7),
+      I4 => s_axis_video_tdata(9),
       I5 => s_axis_video_tdata(8),
       O => \rStoredData[7]_i_4__1_n_0\
     );
-\rStoredData[7]_i_5__1\: unisim.vcomponents.LUT5
+\rStoredData[7]_i_5__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EFFFE000"
+      INIT => X"FFFFFFFFF8000000"
     )
         port map (
-      I0 => \rStoredData[7]_i_9__1_n_0\,
-      I1 => s_axis_video_tdata(6),
-      I2 => s_axis_video_tdata(8),
-      I3 => s_axis_video_tdata(7),
-      I4 => s_axis_video_tdata(9),
+      I0 => s_axis_video_tdata(5),
+      I1 => \rStoredData[7]_i_9__1_n_0\,
+      I2 => s_axis_video_tdata(6),
+      I3 => s_axis_video_tdata(8),
+      I4 => s_axis_video_tdata(7),
+      I5 => s_axis_video_tdata(9),
       O => \rStoredData[7]_i_5__1_n_0\
     );
 \rStoredData[7]_i_6__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFCCCCC888"
+      INIT => X"FFB8FFBBFFB8CC88"
     )
         port map (
-      I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(8),
-      I2 => s_axis_video_tdata(5),
-      I3 => \rStoredData[7]_i_10_n_0\,
-      I4 => s_axis_video_tdata(6),
-      I5 => s_axis_video_tdata(9),
+      I0 => s_axis_video_tdata(8),
+      I1 => s_axis_video_tdata(6),
+      I2 => \rStoredData[7]_i_10__1_n_0\,
+      I3 => s_axis_video_tdata(9),
+      I4 => s_axis_video_tdata(1),
+      I5 => \rStoredData[7]_i_11_n_0\,
       O => \rStoredData[7]_i_6__1_n_0\
     );
-\rStoredData[7]_i_7__0\: unisim.vcomponents.LUT6
+\rStoredData[7]_i_7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EEEAAAAA00000000"
     )
         port map (
       I0 => s_axis_video_tdata(7),
-      I1 => s_axis_video_tdata(6),
-      I2 => \rStoredData[7]_i_11_n_0\,
+      I1 => s_axis_video_tdata(5),
+      I2 => \rStoredData[7]_i_12_n_0\,
       I3 => s_axis_video_tdata(4),
-      I4 => s_axis_video_tdata(5),
+      I4 => s_axis_video_tdata(6),
       I5 => s_axis_video_tdata(8),
-      O => \rStoredData[7]_i_7__0_n_0\
+      O => \rStoredData[7]_i_7_n_0\
     );
-\rStoredData[7]_i_8__0\: unisim.vcomponents.LUT5
+\rStoredData[7]_i_8\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"80000000"
     )
         port map (
       I0 => s_axis_video_tdata(3),
-      I1 => s_axis_video_tdata(1),
-      I2 => s_axis_video_tdata(2),
+      I1 => s_axis_video_tdata(2),
+      I2 => s_axis_video_tdata(1),
       I3 => s_axis_video_tdata(0),
       I4 => s_axis_video_tdata(4),
-      O => \rStoredData[7]_i_8__0_n_0\
+      O => \rStoredData[7]_i_8_n_0\
     );
-\rStoredData[7]_i_9__1\: unisim.vcomponents.LUT6
+\rStoredData[7]_i_9__1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFF80000000"
+      INIT => X"8000"
     )
         port map (
-      I0 => s_axis_video_tdata(5),
-      I1 => s_axis_video_tdata(3),
-      I2 => s_axis_video_tdata(1),
-      I3 => s_axis_video_tdata(2),
-      I4 => s_axis_video_tdata(4),
-      I5 => s_axis_video_tdata(9),
+      I0 => s_axis_video_tdata(3),
+      I1 => s_axis_video_tdata(1),
+      I2 => s_axis_video_tdata(2),
+      I3 => s_axis_video_tdata(4),
       O => \rStoredData[7]_i_9__1_n_0\
     );
 \rStoredData_reg[0]\: unisim.vcomponents.FDRE
@@ -19351,7 +19609,7 @@ begin
       I0 => \rStoredData_reg[0]_i_29__1_n_0\,
       I1 => \rStoredData_reg[0]_i_30__1_n_0\,
       O => \rStoredData_reg[0]_i_10__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_11__1\: unisim.vcomponents.MUXF8
      port map (
@@ -19386,28 +19644,28 @@ begin
       I0 => \rStoredData_reg[0]_i_39__1_n_0\,
       I1 => \rStoredData_reg[0]_i_40__1_n_0\,
       O => \rStoredData_reg[0]_i_15__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_16__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_41__1_n_0\,
       I1 => \rStoredData_reg[0]_i_42__1_n_0\,
       O => \rStoredData_reg[0]_i_16__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_17__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_43__1_n_0\,
       I1 => \rStoredData_reg[0]_i_44__1_n_0\,
       O => \rStoredData_reg[0]_i_17__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_18__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_45__1_n_0\,
       I1 => \rStoredData_reg[0]_i_46__1_n_0\,
       O => \rStoredData_reg[0]_i_18__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[0]_i_19__1\: unisim.vcomponents.MUXF8
      port map (
@@ -19505,189 +19763,189 @@ begin
       I0 => \rStoredData[0]_i_71__1_n_0\,
       I1 => \rStoredData[0]_i_72__1_n_0\,
       O => \rStoredData_reg[0]_i_31__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_32__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_73__1_n_0\,
       I1 => \rStoredData[0]_i_74__1_n_0\,
       O => \rStoredData_reg[0]_i_32__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_33__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_75__1_n_0\,
       I1 => \rStoredData[0]_i_76__1_n_0\,
       O => \rStoredData_reg[0]_i_33__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_34__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_77__1_n_0\,
       I1 => \rStoredData[0]_i_78__1_n_0\,
       O => \rStoredData_reg[0]_i_34__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_35__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_79__1_n_0\,
       I1 => \rStoredData[0]_i_80__1_n_0\,
       O => \rStoredData_reg[0]_i_35__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_36__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_81__1_n_0\,
       I1 => \rStoredData[0]_i_82__1_n_0\,
       O => \rStoredData_reg[0]_i_36__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_37__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_83__1_n_0\,
       I1 => \rStoredData[0]_i_84__1_n_0\,
       O => \rStoredData_reg[0]_i_37__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_38__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_85__1_n_0\,
       I1 => \rStoredData[0]_i_86__1_n_0\,
       O => \rStoredData_reg[0]_i_38__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[0]_i_39__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_87__1_n_0\,
       I1 => \rStoredData[0]_i_88__1_n_0\,
       O => \rStoredData_reg[0]_i_39__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_40__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_89__1_n_0\,
       I1 => \rStoredData[0]_i_90__1_n_0\,
       O => \rStoredData_reg[0]_i_40__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_41__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_91__1_n_0\,
       I1 => \rStoredData[0]_i_92__1_n_0\,
       O => \rStoredData_reg[0]_i_41__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_42__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_93__1_n_0\,
       I1 => \rStoredData[0]_i_94__1_n_0\,
       O => \rStoredData_reg[0]_i_42__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_43__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_95__1_n_0\,
       I1 => \rStoredData[0]_i_96__1_n_0\,
       O => \rStoredData_reg[0]_i_43__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_44__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_97__1_n_0\,
       I1 => \rStoredData[0]_i_98__1_n_0\,
       O => \rStoredData_reg[0]_i_44__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_45__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_99__1_n_0\,
       I1 => \rStoredData[0]_i_100__1_n_0\,
       O => \rStoredData_reg[0]_i_45__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_46__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_101__1_n_0\,
       I1 => \rStoredData[0]_i_102__1_n_0\,
       O => \rStoredData_reg[0]_i_46__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_47__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_103__1_n_0\,
       I1 => \rStoredData[0]_i_104__1_n_0\,
       O => \rStoredData_reg[0]_i_47__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_48__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_105__1_n_0\,
       I1 => \rStoredData[0]_i_106__1_n_0\,
       O => \rStoredData_reg[0]_i_48__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_49__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_107__1_n_0\,
       I1 => \rStoredData[0]_i_108__1_n_0\,
       O => \rStoredData_reg[0]_i_49__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_50__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_109__1_n_0\,
       I1 => \rStoredData[0]_i_110__1_n_0\,
       O => \rStoredData_reg[0]_i_50__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_51__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_111__1_n_0\,
       I1 => \rStoredData[0]_i_112__1_n_0\,
       O => \rStoredData_reg[0]_i_51__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_52__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_113__1_n_0\,
       I1 => \rStoredData[0]_i_114__1_n_0\,
       O => \rStoredData_reg[0]_i_52__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_53__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_115__1_n_0\,
       I1 => \rStoredData[0]_i_116__1_n_0\,
       O => \rStoredData_reg[0]_i_53__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_54__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[0]_i_117__1_n_0\,
       I1 => \rStoredData[0]_i_118__1_n_0\,
       O => \rStoredData_reg[0]_i_54__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[0]_i_7__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_23__1_n_0\,
       I1 => \rStoredData_reg[0]_i_24__1_n_0\,
       O => \rStoredData_reg[0]_i_7__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_8__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_25__1_n_0\,
       I1 => \rStoredData_reg[0]_i_26__1_n_0\,
       O => \rStoredData_reg[0]_i_8__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[0]_i_9__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[0]_i_27__1_n_0\,
       I1 => \rStoredData_reg[0]_i_28__1_n_0\,
       O => \rStoredData_reg[0]_i_9__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -19702,7 +19960,7 @@ begin
       I0 => \rStoredData_reg[1]_i_29__1_n_0\,
       I1 => \rStoredData_reg[1]_i_30__1_n_0\,
       O => \rStoredData_reg[1]_i_10__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_11__1\: unisim.vcomponents.MUXF8
      port map (
@@ -19737,28 +19995,28 @@ begin
       I0 => \rStoredData_reg[1]_i_39__1_n_0\,
       I1 => \rStoredData_reg[1]_i_40__1_n_0\,
       O => \rStoredData_reg[1]_i_15__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_16__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_41__1_n_0\,
       I1 => \rStoredData_reg[1]_i_42__1_n_0\,
       O => \rStoredData_reg[1]_i_16__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_17__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_43__1_n_0\,
       I1 => \rStoredData_reg[1]_i_44__1_n_0\,
       O => \rStoredData_reg[1]_i_17__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_18__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_45__1_n_0\,
       I1 => \rStoredData_reg[1]_i_46__1_n_0\,
       O => \rStoredData_reg[1]_i_18__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[1]_i_19__1\: unisim.vcomponents.MUXF8
      port map (
@@ -19795,32 +20053,32 @@ begin
       O => \rStoredData_reg[1]_i_22__1_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[1]_i_23__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_23__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_55__0_n_0\,
-      I1 => \rStoredData[1]_i_56_n_0\,
-      O => \rStoredData_reg[1]_i_23__0_n_0\,
+      I0 => \rStoredData[1]_i_55__1_n_0\,
+      I1 => \rStoredData[1]_i_56__1_n_0\,
+      O => \rStoredData_reg[1]_i_23__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_24__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_24__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_57__1_n_0\,
       I1 => \rStoredData[1]_i_58__1_n_0\,
-      O => \rStoredData_reg[1]_i_24__0_n_0\,
+      O => \rStoredData_reg[1]_i_24__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_25__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_25__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_59__1_n_0\,
       I1 => \rStoredData[1]_i_60__1_n_0\,
-      O => \rStoredData_reg[1]_i_25__0_n_0\,
+      O => \rStoredData_reg[1]_i_25__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_26__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[1]_i_26__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_61__1_n_0\,
       I1 => \rStoredData[1]_i_62__1_n_0\,
-      O => \rStoredData_reg[1]_i_26__0_n_0\,
+      O => \rStoredData_reg[1]_i_26__1_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_27__1\: unisim.vcomponents.MUXF7
@@ -19856,491 +20114,449 @@ begin
       I0 => \rStoredData[1]_i_71__1_n_0\,
       I1 => \rStoredData[1]_i_72__1_n_0\,
       O => \rStoredData_reg[1]_i_31__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_32__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_73__1_n_0\,
       I1 => \rStoredData[1]_i_74__1_n_0\,
       O => \rStoredData_reg[1]_i_32__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_33__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_75__1_n_0\,
       I1 => \rStoredData[1]_i_76__1_n_0\,
       O => \rStoredData_reg[1]_i_33__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_34__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_77__1_n_0\,
       I1 => \rStoredData[1]_i_78__1_n_0\,
       O => \rStoredData_reg[1]_i_34__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_35__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_79__1_n_0\,
       I1 => \rStoredData[1]_i_80__1_n_0\,
       O => \rStoredData_reg[1]_i_35__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_36__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_81__1_n_0\,
       I1 => \rStoredData[1]_i_82__1_n_0\,
       O => \rStoredData_reg[1]_i_36__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_37__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_83__1_n_0\,
       I1 => \rStoredData[1]_i_84__1_n_0\,
       O => \rStoredData_reg[1]_i_37__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_38__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_85__1_n_0\,
       I1 => \rStoredData[1]_i_86__1_n_0\,
       O => \rStoredData_reg[1]_i_38__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[1]_i_39__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_87__1_n_0\,
       I1 => \rStoredData[1]_i_88__1_n_0\,
       O => \rStoredData_reg[1]_i_39__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_40__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_89__1_n_0\,
       I1 => \rStoredData[1]_i_90__1_n_0\,
       O => \rStoredData_reg[1]_i_40__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_41__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_91__1_n_0\,
       I1 => \rStoredData[1]_i_92__1_n_0\,
       O => \rStoredData_reg[1]_i_41__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_42__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_93__1_n_0\,
       I1 => \rStoredData[1]_i_94__1_n_0\,
       O => \rStoredData_reg[1]_i_42__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_43__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_95__1_n_0\,
       I1 => \rStoredData[1]_i_96__1_n_0\,
       O => \rStoredData_reg[1]_i_43__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_44__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_97__1_n_0\,
       I1 => \rStoredData[1]_i_98__1_n_0\,
       O => \rStoredData_reg[1]_i_44__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_45__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_99__1_n_0\,
       I1 => \rStoredData[1]_i_100__1_n_0\,
       O => \rStoredData_reg[1]_i_45__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_46__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_101__1_n_0\,
       I1 => \rStoredData[1]_i_102__1_n_0\,
       O => \rStoredData_reg[1]_i_46__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_47__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_103__1_n_0\,
       I1 => \rStoredData[1]_i_104__1_n_0\,
       O => \rStoredData_reg[1]_i_47__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_48__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_105__1_n_0\,
       I1 => \rStoredData[1]_i_106__1_n_0\,
       O => \rStoredData_reg[1]_i_48__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_49__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_107__1_n_0\,
       I1 => \rStoredData[1]_i_108__1_n_0\,
       O => \rStoredData_reg[1]_i_49__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_50__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_109__1_n_0\,
       I1 => \rStoredData[1]_i_110__1_n_0\,
       O => \rStoredData_reg[1]_i_50__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_51__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_111__1_n_0\,
       I1 => \rStoredData[1]_i_112__1_n_0\,
       O => \rStoredData_reg[1]_i_51__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_52__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_113__1_n_0\,
       I1 => \rStoredData[1]_i_114__1_n_0\,
       O => \rStoredData_reg[1]_i_52__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_53__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[1]_i_115__1_n_0\,
       I1 => \rStoredData[1]_i_116__1_n_0\,
       O => \rStoredData_reg[1]_i_53__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[1]_i_54__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[1]_i_117__0_n_0\,
-      I1 => \rStoredData[1]_i_118__0_n_0\,
+      I0 => \rStoredData[1]_i_117__1_n_0\,
+      I1 => \rStoredData[1]_i_118__1_n_0\,
       O => \rStoredData_reg[1]_i_54__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[1]_i_7__0\: unisim.vcomponents.MUXF8
+\rStoredData_reg[1]_i_7__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_23__0_n_0\,
-      I1 => \rStoredData_reg[1]_i_24__0_n_0\,
-      O => \rStoredData_reg[1]_i_7__0_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData_reg[1]_i_23__1_n_0\,
+      I1 => \rStoredData_reg[1]_i_24__1_n_0\,
+      O => \rStoredData_reg[1]_i_7__1_n_0\,
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_8__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[1]_i_25__0_n_0\,
-      I1 => \rStoredData_reg[1]_i_26__0_n_0\,
+      I0 => \rStoredData_reg[1]_i_25__1_n_0\,
+      I1 => \rStoredData_reg[1]_i_26__1_n_0\,
       O => \rStoredData_reg[1]_i_8__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[1]_i_9__1\: unisim.vcomponents.MUXF8
      port map (
       I0 => \rStoredData_reg[1]_i_27__1_n_0\,
       I1 => \rStoredData_reg[1]_i_28__1_n_0\,
       O => \rStoredData_reg[1]_i_9__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => \^e\(0),
-      D => \rStoredData_reg[2]_i_1__1_n_0\,
+      D => \rStoredData[2]_i_1__1_n_0\,
       Q => m_axis_video_tdata(2),
       R => '0'
     );
 \rStoredData_reg[2]_i_10__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_28__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_29__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_31__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_32__1_n_0\,
       O => \rStoredData_reg[2]_i_10__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_11__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_30__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_31__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_33__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_34__1_n_0\,
       O => \rStoredData_reg[2]_i_11__1_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_12__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_32__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_33__0_n_0\,
+      I0 => \rStoredData_reg[2]_i_35__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_36__1_n_0\,
       O => \rStoredData_reg[2]_i_12__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_13__0\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_13__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_34__0_n_0\,
-      I1 => \rStoredData_reg[2]_i_35__0_n_0\,
-      O => \rStoredData_reg[2]_i_13__0_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData_reg[2]_i_37__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_38__1_n_0\,
+      O => \rStoredData_reg[2]_i_13__1_n_0\,
+      S => s_axis_video_tdata(1)
     );
-\rStoredData_reg[2]_i_14__1\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_15__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_36__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_37__1_n_0\,
-      O => \rStoredData_reg[2]_i_14__1_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData_reg[2]_i_43__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_44__1_n_0\,
+      O => \rStoredData_reg[2]_i_15__1_n_0\,
+      S => s_axis_video_tdata(1)
     );
 \rStoredData_reg[2]_i_17__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_46__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_47__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_48__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_49__1_n_0\,
       O => \rStoredData_reg[2]_i_17__1_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_18__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_48__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_49__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_50__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_51__1_n_0\,
       O => \rStoredData_reg[2]_i_18__1_n_0\,
       S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_19__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_50__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_51__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_52__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_53__1_n_0\,
       O => \rStoredData_reg[2]_i_19__1_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[2]_i_1__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \p_1_in__1\(2),
-      I1 => \rStoredData[2]_i_3__1_n_0\,
-      O => \rStoredData_reg[2]_i_1__1_n_0\,
-      S => sGammaReg(2)
-    );
 \rStoredData_reg[2]_i_20__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_52__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_53__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_54__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_55__1_n_0\,
       O => \rStoredData_reg[2]_i_20__1_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[2]_i_24__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_22__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_54__0_n_0\,
-      I1 => \rStoredData[2]_i_55__1_n_0\,
-      O => \rStoredData_reg[2]_i_24__1_n_0\,
+      I0 => \rStoredData[2]_i_57__1_n_0\,
+      I1 => \rStoredData[2]_i_58__1_n_0\,
+      O => \rStoredData_reg[2]_i_22__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_25__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_23__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_56__1_n_0\,
-      I1 => \rStoredData[2]_i_57__1_n_0\,
-      O => \rStoredData_reg[2]_i_25__1_n_0\,
+      I0 => \rStoredData[2]_i_59__1_n_0\,
+      I1 => \rStoredData[2]_i_60__1_n_0\,
+      O => \rStoredData_reg[2]_i_23__1_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[2]_i_24__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_61__1_n_0\,
+      I1 => \rStoredData[2]_i_62__1_n_0\,
+      O => \rStoredData_reg[2]_i_24__1_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_26__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_58__1_n_0\,
-      I1 => \rStoredData[2]_i_59__1_n_0\,
+      I0 => \rStoredData[2]_i_63__1_n_0\,
+      I1 => \rStoredData[2]_i_64__1_n_0\,
       O => \rStoredData_reg[2]_i_26__1_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_27__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_60__1_n_0\,
-      I1 => \rStoredData[2]_i_61__1_n_0\,
-      O => \rStoredData_reg[2]_i_27__1_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_28__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_62__1_n_0\,
-      I1 => \rStoredData[2]_i_63__1_n_0\,
+      I0 => \rStoredData[2]_i_66__1_n_0\,
+      I1 => \rStoredData[2]_i_67__1_n_0\,
       O => \rStoredData_reg[2]_i_28__1_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_29__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_64__1_n_0\,
-      I1 => \rStoredData[2]_i_65__1_n_0\,
+      I0 => \rStoredData[2]_i_68__1_n_0\,
+      I1 => \rStoredData[2]_i_69__1_n_0\,
       O => \rStoredData_reg[2]_i_29__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_30__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_66__1_n_0\,
-      I1 => \rStoredData[2]_i_67__1_n_0\,
+      I0 => \rStoredData[2]_i_70__1_n_0\,
+      I1 => \rStoredData[2]_i_71__1_n_0\,
       O => \rStoredData_reg[2]_i_30__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_31__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_68__1_n_0\,
-      I1 => \rStoredData[2]_i_69__1_n_0\,
+      I0 => \rStoredData[2]_i_72__1_n_0\,
+      I1 => \rStoredData[2]_i_73__1_n_0\,
       O => \rStoredData_reg[2]_i_31__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[2]_i_32__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_70__1_n_0\,
-      I1 => \rStoredData[2]_i_71__1_n_0\,
-      O => \rStoredData_reg[2]_i_32__1_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[2]_i_33__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_72__1_n_0\,
-      I1 => \rStoredData[2]_i_73__1_n_0\,
-      O => \rStoredData_reg[2]_i_33__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[2]_i_34__0\: unisim.vcomponents.MUXF7
-     port map (
       I0 => \rStoredData[2]_i_74__1_n_0\,
       I1 => \rStoredData[2]_i_75__1_n_0\,
-      O => \rStoredData_reg[2]_i_34__0_n_0\,
-      S => s_axis_video_tdata(9)
+      O => \rStoredData_reg[2]_i_32__1_n_0\,
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[2]_i_35__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_33__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[2]_i_76__1_n_0\,
       I1 => \rStoredData[2]_i_77__1_n_0\,
-      O => \rStoredData_reg[2]_i_35__0_n_0\,
-      S => s_axis_video_tdata(9)
+      O => \rStoredData_reg[2]_i_33__1_n_0\,
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[2]_i_36__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_34__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[2]_i_78__1_n_0\,
       I1 => \rStoredData[2]_i_79__1_n_0\,
-      O => \rStoredData_reg[2]_i_36__1_n_0\,
-      S => s_axis_video_tdata(9)
+      O => \rStoredData_reg[2]_i_34__1_n_0\,
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[2]_i_37__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_35__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[2]_i_80__1_n_0\,
       I1 => \rStoredData[2]_i_81__1_n_0\,
+      O => \rStoredData_reg[2]_i_35__1_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_36__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_82__1_n_0\,
+      I1 => \rStoredData[2]_i_83__1_n_0\,
+      O => \rStoredData_reg[2]_i_36__1_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[2]_i_37__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[2]_i_84__1_n_0\,
+      I1 => \rStoredData[2]_i_85__1_n_0\,
       O => \rStoredData_reg[2]_i_37__1_n_0\,
       S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_38__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_82__1_n_0\,
-      I1 => \rStoredData[2]_i_83__1_n_0\,
-      O => \rStoredData_reg[2]_i_38__1_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_39__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_84__1_n_0\,
-      I1 => \rStoredData[2]_i_85__1_n_0\,
-      O => \rStoredData_reg[2]_i_39__1_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_40__1\: unisim.vcomponents.MUXF7
-     port map (
       I0 => \rStoredData[2]_i_86__1_n_0\,
       I1 => \rStoredData[2]_i_87__1_n_0\,
-      O => \rStoredData_reg[2]_i_40__1_n_0\,
-      S => s_axis_video_tdata(6)
+      O => \rStoredData_reg[2]_i_38__1_n_0\,
+      S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[2]_i_41__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_3__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_88__1_n_0\,
-      I1 => \rStoredData[2]_i_89__1_n_0\,
-      O => \rStoredData_reg[2]_i_41__1_n_0\,
-      S => s_axis_video_tdata(6)
+      I0 => \rStoredData[2]_i_7__1_n_0\,
+      I1 => \rStoredData[2]_i_8__1_n_0\,
+      O => \rStoredData_reg[2]_i_3__1_n_0\,
+      S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[2]_i_43__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_90__1_n_0\,
-      I1 => \rStoredData[2]_i_91__1_n_0\,
+      I0 => \rStoredData[2]_i_88__1_n_0\,
+      I1 => \rStoredData[2]_i_89__1_n_0\,
       O => \rStoredData_reg[2]_i_43__1_n_0\,
-      S => s_axis_video_tdata(6)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_44__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_92__1_n_0\,
-      I1 => \rStoredData[2]_i_93__1_n_0\,
+      I0 => \rStoredData[2]_i_90__1_n_0\,
+      I1 => \rStoredData[2]_i_91__1_n_0\,
       O => \rStoredData_reg[2]_i_44__1_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_45__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_94__1_n_0\,
-      I1 => \rStoredData[2]_i_95__1_n_0\,
-      O => \rStoredData_reg[2]_i_45__1_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[2]_i_46__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_96__1_n_0\,
-      I1 => \rStoredData[2]_i_97__1_n_0\,
-      O => \rStoredData_reg[2]_i_46__1_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[2]_i_47__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_98__1_n_0\,
-      I1 => \rStoredData[2]_i_99__1_n_0\,
-      O => \rStoredData_reg[2]_i_47__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[2]_i_48__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_100__1_n_0\,
-      I1 => \rStoredData[2]_i_101__1_n_0\,
+      I0 => \rStoredData[2]_i_92__1_n_0\,
+      I1 => \rStoredData[2]_i_93__1_n_0\,
       O => \rStoredData_reg[2]_i_48__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_49__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_102__1_n_0\,
-      I1 => \rStoredData[2]_i_103__1_n_0\,
+      I0 => \rStoredData[2]_i_94__1_n_0\,
+      I1 => \rStoredData[2]_i_95__1_n_0\,
       O => \rStoredData_reg[2]_i_49__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_50__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_104__1_n_0\,
-      I1 => \rStoredData[2]_i_105__1_n_0\,
+      I0 => \rStoredData[2]_i_96__1_n_0\,
+      I1 => \rStoredData[2]_i_97__1_n_0\,
       O => \rStoredData_reg[2]_i_50__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_51__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_106__1_n_0\,
-      I1 => \rStoredData[2]_i_107__1_n_0\,
+      I0 => \rStoredData[2]_i_98__1_n_0\,
+      I1 => \rStoredData[2]_i_99__1_n_0\,
       O => \rStoredData_reg[2]_i_51__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_52__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_108__1_n_0\,
-      I1 => \rStoredData[2]_i_109__0_n_0\,
+      I0 => \rStoredData[2]_i_100__1_n_0\,
+      I1 => \rStoredData[2]_i_101__1_n_0\,
       O => \rStoredData_reg[2]_i_52__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_53__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_110__0_n_0\,
-      I1 => \rStoredData[2]_i_111__0_n_0\,
+      I0 => \rStoredData[2]_i_102__1_n_0\,
+      I1 => \rStoredData[2]_i_103__1_n_0\,
       O => \rStoredData_reg[2]_i_53__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_5__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[2]_i_54__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[2]_i_15__1_n_0\,
-      I1 => \rStoredData[2]_i_16__1_n_0\,
-      O => \rStoredData_reg[2]_i_5__1_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[2]_i_104__1_n_0\,
+      I1 => \rStoredData[2]_i_105__1_n_0\,
+      O => \rStoredData_reg[2]_i_54__1_n_0\,
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[2]_i_8__1\: unisim.vcomponents.MUXF8
+\rStoredData_reg[2]_i_55__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData_reg[2]_i_24__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_25__1_n_0\,
-      O => \rStoredData_reg[2]_i_8__1_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[2]_i_106__1_n_0\,
+      I1 => \rStoredData[2]_i_107__1_n_0\,
+      O => \rStoredData_reg[2]_i_55__1_n_0\,
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[2]_i_9__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[2]_i_26__1_n_0\,
-      I1 => \rStoredData_reg[2]_i_27__1_n_0\,
+      I0 => \rStoredData_reg[2]_i_29__1_n_0\,
+      I1 => \rStoredData_reg[2]_i_30__1_n_0\,
       O => \rStoredData_reg[2]_i_9__1_n_0\,
-      S => s_axis_video_tdata(7)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -20350,52 +20566,38 @@ begin
       Q => m_axis_video_tdata(3),
       R => '0'
     );
-\rStoredData_reg[3]_i_10__1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_31__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_32__0_n_0\,
-      O => \rStoredData_reg[3]_i_10__1_n_0\,
-      S => s_axis_video_tdata(7)
-    );
 \rStoredData_reg[3]_i_12__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_35__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_36__0_n_0\,
+      I0 => \rStoredData_reg[3]_i_32__1_n_0\,
+      I1 => \rStoredData_reg[3]_i_33__1_n_0\,
       O => \rStoredData_reg[3]_i_12__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_13__0\: unisim.vcomponents.MUXF8
+\rStoredData_reg[3]_i_13__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_37__0_n_0\,
-      I1 => \rStoredData_reg[3]_i_38__0_n_0\,
-      O => \rStoredData_reg[3]_i_13__0_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[3]_i_14__1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_39__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_40__1_n_0\,
-      O => \rStoredData_reg[3]_i_14__1_n_0\,
+      I0 => \rStoredData_reg[3]_i_34__1_n_0\,
+      I1 => \rStoredData_reg[3]_i_35__1_n_0\,
+      O => \rStoredData_reg[3]_i_13__1_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_15__1\: unisim.vcomponents.MUXF7
      port map (
+      I0 => \rStoredData[3]_i_39__1_n_0\,
+      I1 => \rStoredData[3]_i_40__1_n_0\,
+      O => \rStoredData_reg[3]_i_15__1_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[3]_i_16__1\: unisim.vcomponents.MUXF7
+     port map (
       I0 => \rStoredData[3]_i_41__1_n_0\,
       I1 => \rStoredData[3]_i_42__1_n_0\,
-      O => \rStoredData_reg[3]_i_15__1_n_0\,
-      S => s_axis_video_tdata(8)
-    );
-\rStoredData_reg[3]_i_16__1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[3]_i_43__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_44__1_n_0\,
       O => \rStoredData_reg[3]_i_16__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_19__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_51__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_52__1_n_0\,
+      I0 => \rStoredData_reg[3]_i_49__1_n_0\,
+      I1 => \rStoredData_reg[3]_i_50__1_n_0\,
       O => \rStoredData_reg[3]_i_19__1_n_0\,
       S => s_axis_video_tdata(7)
     );
@@ -20408,136 +20610,94 @@ begin
     );
 \rStoredData_reg[3]_i_20__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData_reg[3]_i_53__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_54__1_n_0\,
+      I0 => \rStoredData_reg[3]_i_51__1_n_0\,
+      I1 => \rStoredData_reg[3]_i_52__1_n_0\,
       O => \rStoredData_reg[3]_i_20__1_n_0\,
       S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[3]_i_22__1\: unisim.vcomponents.MUXF8
+\rStoredData_reg[3]_i_25__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData_reg[3]_i_58__1_n_0\,
-      I1 => \rStoredData_reg[3]_i_59__1_n_0\,
-      O => \rStoredData_reg[3]_i_22__1_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[3]_i_55__1_n_0\,
+      I1 => \rStoredData[3]_i_56__1_n_0\,
+      O => \rStoredData_reg[3]_i_25__1_n_0\,
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_31__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_30__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_58__1_n_0\,
+      I1 => \rStoredData[3]_i_59__1_n_0\,
+      O => \rStoredData_reg[3]_i_30__1_n_0\,
+      S => s_axis_video_tdata(6)
+    );
+\rStoredData_reg[3]_i_32__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_60__1_n_0\,
+      I1 => \rStoredData[3]_i_61__1_n_0\,
+      O => \rStoredData_reg[3]_i_32__1_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[3]_i_33__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[3]_i_62__1_n_0\,
+      I1 => \rStoredData[3]_i_63__1_n_0\,
+      O => \rStoredData_reg[3]_i_33__1_n_0\,
+      S => s_axis_video_tdata(5)
+    );
+\rStoredData_reg[3]_i_34__1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \rStoredData[3]_i_64__1_n_0\,
       I1 => \rStoredData[3]_i_65__1_n_0\,
-      O => \rStoredData_reg[3]_i_31__1_n_0\,
-      S => s_axis_video_tdata(6)
-    );
-\rStoredData_reg[3]_i_32__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_66__1_n_0\,
-      I1 => \rStoredData[3]_i_67__1_n_0\,
-      O => \rStoredData_reg[3]_i_32__0_n_0\,
-      S => s_axis_video_tdata(6)
+      O => \rStoredData_reg[3]_i_34__1_n_0\,
+      S => s_axis_video_tdata(5)
     );
 \rStoredData_reg[3]_i_35__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_68__1_n_0\,
-      I1 => \rStoredData[3]_i_69__1_n_0\,
+      I0 => \rStoredData[3]_i_66__1_n_0\,
+      I1 => \rStoredData[3]_i_67__1_n_0\,
       O => \rStoredData_reg[3]_i_35__1_n_0\,
-      S => s_axis_video_tdata(9)
+      S => s_axis_video_tdata(5)
     );
-\rStoredData_reg[3]_i_36__0\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_49__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_70__1_n_0\,
-      I1 => \rStoredData[3]_i_71__1_n_0\,
-      O => \rStoredData_reg[3]_i_36__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_37__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_72__1_n_0\,
-      I1 => \rStoredData[3]_i_73__1_n_0\,
-      O => \rStoredData_reg[3]_i_37__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_38__0\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[2]_i_22__0_n_0\,
-      I1 => \rStoredData[3]_i_74__1_n_0\,
-      O => \rStoredData_reg[3]_i_38__0_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_39__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_75__1_n_0\,
-      I1 => \rStoredData[3]_i_76__1_n_0\,
-      O => \rStoredData_reg[3]_i_39__1_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_40__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_77__1_n_0\,
-      I1 => \rStoredData[3]_i_78__1_n_0\,
-      O => \rStoredData_reg[3]_i_40__1_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[3]_i_43__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_79__1_n_0\,
-      I1 => \rStoredData[3]_i_80__1_n_0\,
-      O => \rStoredData_reg[3]_i_43__1_n_0\,
+      I0 => \rStoredData[3]_i_82__1_n_0\,
+      I1 => \rStoredData[3]_i_83__1_n_0\,
+      O => \rStoredData_reg[3]_i_49__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_44__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_50__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_81__1_n_0\,
-      I1 => \rStoredData[3]_i_82__1_n_0\,
-      O => \rStoredData_reg[3]_i_44__1_n_0\,
+      I0 => \rStoredData[3]_i_84__1_n_0\,
+      I1 => \rStoredData[3]_i_85__1_n_0\,
+      O => \rStoredData_reg[3]_i_50__1_n_0\,
       S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_51__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_83__1_n_0\,
-      I1 => \rStoredData[3]_i_84__1_n_0\,
+      I0 => \rStoredData[3]_i_86__1_n_0\,
+      I1 => \rStoredData[3]_i_87__1_n_0\,
       O => \rStoredData_reg[3]_i_51__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
 \rStoredData_reg[3]_i_52__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_85__1_n_0\,
-      I1 => \rStoredData[3]_i_86__1_n_0\,
+      I0 => \rStoredData[3]_i_88__1_n_0\,
+      I1 => \rStoredData[3]_i_89__1_n_0\,
       O => \rStoredData_reg[3]_i_52__1_n_0\,
-      S => s_axis_video_tdata(5)
+      S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[3]_i_53__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_5__1\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \rStoredData[3]_i_87__1_n_0\,
-      I1 => \rStoredData[3]_i_88__1_n_0\,
-      O => \rStoredData_reg[3]_i_53__1_n_0\,
-      S => s_axis_video_tdata(5)
+      I0 => \rStoredData_reg[3]_i_15__1_n_0\,
+      I1 => \rStoredData_reg[3]_i_16__1_n_0\,
+      O => \rStoredData_reg[3]_i_5__1_n_0\,
+      S => s_axis_video_tdata(0)
     );
-\rStoredData_reg[3]_i_54__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[3]_i_7__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[3]_i_89__1_n_0\,
-      I1 => \rStoredData[3]_i_90__0_n_0\,
-      O => \rStoredData_reg[3]_i_54__1_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_58__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_91__0_n_0\,
-      I1 => \rStoredData[3]_i_92__0_n_0\,
-      O => \rStoredData_reg[3]_i_58__1_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_59__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_93__0_n_0\,
-      I1 => \rStoredData[3]_i_94__0_n_0\,
-      O => \rStoredData_reg[3]_i_59__1_n_0\,
-      S => s_axis_video_tdata(5)
-    );
-\rStoredData_reg[3]_i_9__1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \rStoredData[3]_i_29__1_n_0\,
-      I1 => \rStoredData[3]_i_30__0_n_0\,
-      O => \rStoredData_reg[3]_i_9__1_n_0\,
-      S => s_axis_video_tdata(7)
+      I0 => \rStoredData[3]_i_21__1_n_0\,
+      I1 => \rStoredData[3]_i_22__1_n_0\,
+      O => \rStoredData_reg[3]_i_7__1_n_0\,
+      S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -20549,52 +20709,73 @@ begin
     );
 \rStoredData_reg[4]_i_10__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_24__1_n_0\,
-      I1 => \rStoredData[4]_i_25__1_n_0\,
+      I0 => \rStoredData[4]_i_26__1_n_0\,
+      I1 => \rStoredData[4]_i_27__1_n_0\,
       O => \rStoredData_reg[4]_i_10__1_n_0\,
       S => s_axis_video_tdata(8)
     );
-\rStoredData_reg[4]_i_11\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_11__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_26__1_n_0\,
-      I1 => \rStoredData[4]_i_27__0_n_0\,
-      O => \rStoredData_reg[4]_i_11_n_0\,
-      S => s_axis_video_tdata(9)
-    );
-\rStoredData_reg[4]_i_2__1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \rStoredData_reg[4]_i_7__1_n_0\,
-      I1 => \rStoredData_reg[4]_i_8__1_n_0\,
-      O => \rStoredData_reg[4]_i_2__1_n_0\,
+      I0 => \rStoredData[4]_i_28__1_n_0\,
+      I1 => \rStoredData[4]_i_29__1_n_0\,
+      O => \rStoredData_reg[4]_i_11__1_n_0\,
       S => s_axis_video_tdata(8)
     );
-\rStoredData_reg[4]_i_40\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_14__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_59__0_n_0\,
-      I1 => \rStoredData[4]_i_60__0_n_0\,
-      O => \rStoredData_reg[4]_i_40_n_0\,
+      I0 => \rStoredData[4]_i_36__1_n_0\,
+      I1 => \rStoredData[4]_i_37__1_n_0\,
+      O => \rStoredData_reg[4]_i_14__1_n_0\,
+      S => s_axis_video_tdata(8)
+    );
+\rStoredData_reg[4]_i_25__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_40__1_n_0\,
+      I1 => \rStoredData[4]_i_41__1_n_0\,
+      O => \rStoredData_reg[4]_i_25__1_n_0\,
       S => s_axis_video_tdata(6)
     );
-\rStoredData_reg[4]_i_7__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_30__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_18__1_n_0\,
-      I1 => \rStoredData[4]_i_19__1_n_0\,
-      O => \rStoredData_reg[4]_i_7__1_n_0\,
+      I0 => \rStoredData[4]_i_50__1_n_0\,
+      I1 => \rStoredData[4]_i_51__1_n_0\,
+      O => \rStoredData_reg[4]_i_30__1_n_0\,
       S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[4]_i_8__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_31__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_20__1_n_0\,
-      I1 => \rStoredData[4]_i_21__1_n_0\,
-      O => \rStoredData_reg[4]_i_8__1_n_0\,
+      I0 => \rStoredData[4]_i_52__1_n_0\,
+      I1 => \rStoredData[4]_i_53__1_n_0\,
+      O => \rStoredData_reg[4]_i_31__1_n_0\,
       S => s_axis_video_tdata(9)
     );
-\rStoredData_reg[4]_i_9__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[4]_i_32__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[4]_i_22__1_n_0\,
-      I1 => \rStoredData[4]_i_23__1_n_0\,
-      O => \rStoredData_reg[4]_i_9__1_n_0\,
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[4]_i_54__1_n_0\,
+      I1 => \rStoredData[4]_i_55__1_n_0\,
+      O => \rStoredData_reg[4]_i_32__1_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[4]_i_33__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_56__1_n_0\,
+      I1 => \rStoredData[4]_i_57__1_n_0\,
+      O => \rStoredData_reg[4]_i_33__1_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[4]_i_35__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_59__1_n_0\,
+      I1 => \rStoredData[4]_i_60__1_n_0\,
+      O => \rStoredData_reg[4]_i_35__1_n_0\,
+      S => s_axis_video_tdata(9)
+    );
+\rStoredData_reg[4]_i_4__1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \rStoredData[4]_i_12__1_n_0\,
+      I1 => \rStoredData[4]_i_13__1_n_0\,
+      O => \rStoredData_reg[4]_i_4__1_n_0\,
+      S => s_axis_video_tdata(0)
     );
 \rStoredData_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -20604,48 +20785,48 @@ begin
       Q => m_axis_video_tdata(5),
       R => '0'
     );
-\rStoredData_reg[5]_i_13\: unisim.vcomponents.MUXF7
+\rStoredData_reg[5]_i_28__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_28__1_n_0\,
-      I1 => \rStoredData[5]_i_29__0_n_0\,
-      O => \rStoredData_reg[5]_i_13_n_0\,
+      I0 => \rStoredData[5]_i_37__1_n_0\,
+      I1 => \rStoredData[5]_i_38__1_n_0\,
+      O => \rStoredData_reg[5]_i_28__1_n_0\,
       S => s_axis_video_tdata(9)
     );
 \rStoredData_reg[5]_i_2__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_7__1_n_0\,
-      I1 => \rStoredData[5]_i_8__1_n_0\,
+      I0 => \rStoredData[5]_i_6__1_n_0\,
+      I1 => \rStoredData[5]_i_7__1_n_0\,
       O => \rStoredData_reg[5]_i_2__1_n_0\,
-      S => s_axis_video_tdata(8)
+      S => s_axis_video_tdata(7)
     );
-\rStoredData_reg[5]_i_9__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[5]_i_4__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[5]_i_23__1_n_0\,
-      I1 => \rStoredData[5]_i_24_n_0\,
-      O => \rStoredData_reg[5]_i_9__1_n_0\,
-      S => s_axis_video_tdata(8)
+      I0 => \rStoredData[5]_i_10__1_n_0\,
+      I1 => \rStoredData[5]_i_11__1_n_0\,
+      O => \rStoredData_reg[5]_i_4__1_n_0\,
+      S => s_axis_video_tdata(0)
     );
 \rStoredData_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => StreamClk,
       CE => \^e\(0),
-      D => \rStoredData_reg[6]_i_1__1_n_0\,
+      D => \rStoredData[6]_i_1__1_n_0\,
       Q => m_axis_video_tdata(6),
       R => '0'
     );
-\rStoredData_reg[6]_i_1__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[6]_i_13\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \p_1_in__1\(6),
-      I1 => \rStoredData[6]_i_3__1_n_0\,
-      O => \rStoredData_reg[6]_i_1__1_n_0\,
-      S => sGammaReg(2)
+      I0 => \rStoredData[6]_i_22_n_0\,
+      I1 => \rStoredData[6]_i_23_n_0\,
+      O => \rStoredData_reg[6]_i_13_n_0\,
+      S => s_axis_video_tdata(1)
     );
-\rStoredData_reg[6]_i_6__1\: unisim.vcomponents.MUXF7
+\rStoredData_reg[6]_i_2__1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \rStoredData[6]_i_13__1_n_0\,
-      I1 => \rStoredData[6]_i_14__1_n_0\,
-      O => \rStoredData_reg[6]_i_6__1_n_0\,
-      S => s_axis_video_tdata(9)
+      I0 => \rStoredData[6]_i_7__1_n_0\,
+      I1 => \rStoredData[6]_i_8__1_n_0\,
+      O => \rStoredData_reg[6]_i_2__1_n_0\,
+      S => s_axis_video_tdata(7)
     );
 \rStoredData_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -20722,39 +20903,38 @@ architecture STRUCTURE of system_AXI_GammaCorrection_0_0_AXI_GammaCorrection is
   signal \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_0\ : STD_LOGIC;
   signal \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1\ : STD_LOGIC;
   signal \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2\ : STD_LOGIC;
-  signal \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3\ : STD_LOGIC;
   signal \^s_axi_arready\ : STD_LOGIC;
   signal \^s_axi_awready\ : STD_LOGIC;
   signal \^s_axi_bvalid\ : STD_LOGIC;
   signal \^s_axi_rvalid\ : STD_LOGIC;
   signal \^s_axi_wready\ : STD_LOGIC;
-  signal axi_arready_i_1_n_0 : STD_LOGIC;
+  signal axi_arready0 : STD_LOGIC;
   signal axi_awaddr : STD_LOGIC_VECTOR ( 2 to 2 );
   signal \axi_awaddr[2]_i_1_n_0\ : STD_LOGIC;
   signal axi_awready0 : STD_LOGIC;
   signal axi_awready_i_1_n_0 : STD_LOGIC;
   signal axi_bvalid_i_1_n_0 : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
-  signal axi_wready_i_1_n_0 : STD_LOGIC;
+  signal axi_wready0 : STD_LOGIC;
   signal \^m_axis_video_tlast\ : STD_LOGIC;
   signal m_axis_video_tlast_i_1_n_0 : STD_LOGIC;
   signal \^m_axis_video_tready\ : STD_LOGIC;
   signal \^m_axis_video_tuser\ : STD_LOGIC;
   signal m_axis_video_tuser_i_1_n_0 : STD_LOGIC;
   signal \^m_axis_video_tvalid\ : STD_LOGIC;
+  signal p_1_in : STD_LOGIC_VECTOR ( 2 to 2 );
   signal sAXI_OutputValid_i_1_n_0 : STD_LOGIC;
   signal sGammaReg : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \sGammaReg[0]_i_1_n_0\ : STD_LOGIC;
   signal \sGammaReg[1]_i_1_n_0\ : STD_LOGIC;
   signal \sGammaReg[2]_i_1_n_0\ : STD_LOGIC;
-  signal \sGammaReg[2]_i_2_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \axi_awaddr[2]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \sGammaReg[0]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \sGammaReg[2]_i_1\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \axi_awaddr[2]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \sGammaReg[1]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \sGammaReg[2]_i_1\ : label is "soft_lutpair66";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -20812,9 +20992,8 @@ GND: unisim.vcomponents.GND
       StreamClk => StreamClk,
       m_axis_video_tdata(7 downto 0) => m_axis_video_tdata(7 downto 0),
       sGammaReg(2 downto 0) => sGammaReg(2 downto 0),
-      \sGammaReg_reg[0]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2\,
-      \sGammaReg_reg[0]_0\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3\,
-      \sGammaReg_reg[1]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1\,
+      \sGammaReg_reg[0]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1\,
+      \sGammaReg_reg[1]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2\,
       s_axis_video_tdata(9 downto 0) => s_axis_video_tdata(9 downto 0)
     );
 \GammaStorageCoefsGeneration[1].StoredGammaCoefsInst\: entity work.system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
@@ -20823,9 +21002,8 @@ GND: unisim.vcomponents.GND
       StreamClk => StreamClk,
       m_axis_video_tdata(7 downto 0) => m_axis_video_tdata(15 downto 8),
       sGammaReg(2 downto 0) => sGammaReg(2 downto 0),
-      \sGammaReg_reg[0]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2\,
-      \sGammaReg_reg[0]_0\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3\,
-      \sGammaReg_reg[1]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1\,
+      \sGammaReg_reg[0]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1\,
+      \sGammaReg_reg[1]\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2\,
       s_axis_video_tdata(9 downto 0) => s_axis_video_tdata(19 downto 10)
     );
 \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst\: entity work.system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
@@ -20836,7 +21014,6 @@ GND: unisim.vcomponents.GND
       m_axis_video_tready => \^m_axis_video_tready\,
       \rStoredData_reg[4]_0\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1\,
       \rStoredData_reg[4]_1\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2\,
-      \rStoredData_reg[5]_0\ => \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3\,
       sGammaReg(2 downto 0) => sGammaReg(2 downto 0),
       s_axis_video_tdata(9 downto 0) => s_axis_video_tdata(29 downto 20),
       s_axis_video_tvalid => s_axis_video_tvalid
@@ -20848,25 +21025,25 @@ axi_arready_i_1: unisim.vcomponents.LUT2
         port map (
       I0 => S_AXI_ARVALID,
       I1 => \^s_axi_arready\,
-      O => axi_arready_i_1_n_0
+      O => axi_arready0
     );
 axi_arready_reg: unisim.vcomponents.FDRE
      port map (
       C => AxiLiteClk,
       CE => '1',
-      D => axi_arready_i_1_n_0,
+      D => axi_arready0,
       Q => \^s_axi_arready\,
       R => axi_awready_i_1_n_0
     );
 \axi_awaddr[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"EFFF2000"
+      INIT => X"FFBF0080"
     )
         port map (
       I0 => S_AXI_AWADDR(2),
-      I1 => \^s_axi_awready\,
-      I2 => S_AXI_AWVALID,
-      I3 => S_AXI_WVALID,
+      I1 => S_AXI_AWVALID,
+      I2 => S_AXI_WVALID,
+      I3 => \^s_axi_awready\,
       I4 => axi_awaddr(2),
       O => \axi_awaddr[2]_i_1_n_0\
     );
@@ -20888,12 +21065,12 @@ axi_awready_i_1: unisim.vcomponents.LUT1
     );
 axi_awready_i_2: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"40"
+      INIT => X"08"
     )
         port map (
-      I0 => \^s_axi_awready\,
-      I1 => S_AXI_AWVALID,
-      I2 => S_AXI_WVALID,
+      I0 => S_AXI_AWVALID,
+      I1 => S_AXI_WVALID,
+      I2 => \^s_axi_awready\,
       O => axi_awready0
     );
 axi_awready_reg: unisim.vcomponents.FDRE
@@ -20911,8 +21088,8 @@ axi_bvalid_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => S_AXI_AWVALID,
       I1 => S_AXI_WVALID,
-      I2 => \^s_axi_wready\,
-      I3 => \^s_axi_awready\,
+      I2 => \^s_axi_awready\,
+      I3 => \^s_axi_wready\,
       I4 => S_AXI_BREADY,
       I5 => \^s_axi_bvalid\,
       O => axi_bvalid_i_1_n_0
@@ -20946,19 +21123,19 @@ axi_rvalid_reg: unisim.vcomponents.FDRE
     );
 axi_wready_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"40"
+      INIT => X"08"
     )
         port map (
-      I0 => \^s_axi_wready\,
-      I1 => S_AXI_AWVALID,
-      I2 => S_AXI_WVALID,
-      O => axi_wready_i_1_n_0
+      I0 => S_AXI_AWVALID,
+      I1 => S_AXI_WVALID,
+      I2 => \^s_axi_wready\,
+      O => axi_wready0
     );
 axi_wready_reg: unisim.vcomponents.FDRE
      port map (
       C => AxiLiteClk,
       CE => '1',
-      D => axi_wready_i_1_n_0,
+      D => axi_wready0,
       Q => \^s_axi_wready\,
       R => axi_awready_i_1_n_0
     );
@@ -21027,7 +21204,7 @@ sAXI_OutputValid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => S_AXI_WDATA(0),
-      I1 => \sGammaReg[2]_i_2_n_0\,
+      I1 => p_1_in(2),
       I2 => sGammaReg(0),
       O => \sGammaReg[0]_i_1_n_0\
     );
@@ -21037,7 +21214,7 @@ sAXI_OutputValid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => S_AXI_WDATA(1),
-      I1 => \sGammaReg[2]_i_2_n_0\,
+      I1 => p_1_in(2),
       I2 => sGammaReg(1),
       O => \sGammaReg[1]_i_1_n_0\
     );
@@ -21047,22 +21224,22 @@ sAXI_OutputValid_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => S_AXI_WDATA(2),
-      I1 => \sGammaReg[2]_i_2_n_0\,
+      I1 => p_1_in(2),
       I2 => sGammaReg(2),
       O => \sGammaReg[2]_i_1_n_0\
     );
 \sGammaReg[2]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4000000000000000"
+      INIT => X"0000800000000000"
     )
         port map (
-      I0 => axi_awaddr(2),
-      I1 => S_AXI_WSTRB(0),
+      I0 => S_AXI_WVALID,
+      I1 => S_AXI_AWVALID,
       I2 => \^s_axi_awready\,
       I3 => \^s_axi_wready\,
-      I4 => S_AXI_WVALID,
-      I5 => S_AXI_AWVALID,
-      O => \sGammaReg[2]_i_2_n_0\
+      I4 => axi_awaddr(2),
+      I5 => S_AXI_WSTRB(0),
+      O => p_1_in(2)
     );
 \sGammaReg_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -21136,7 +21313,7 @@ entity system_AXI_GammaCorrection_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_AXI_GammaCorrection_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of system_AXI_GammaCorrection_0_0 : entity is "AXI_GammaCorrection,Vivado 2017.4";
+  attribute x_core_info of system_AXI_GammaCorrection_0_0 : entity is "AXI_GammaCorrection,Vivado 2018.2";
 end system_AXI_GammaCorrection_0_0;
 
 architecture STRUCTURE of system_AXI_GammaCorrection_0_0 is

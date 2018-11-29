@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Jun 20 16:26:59 2018
-// Host        : elodlt-ro running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+// Date        : Thu Nov 29 10:21:48 2018
+// Host        : pold2 running 64-bit Ubuntu 16.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               C:/git/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/system_MIPI_CSI_2_RX_0_0_stub.v
+//               /home/ronny/projects/git/fork/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_MIPI_CSI_2_RX_0_0/system_MIPI_CSI_2_RX_0_0_stub.v
 // Design      : system_MIPI_CSI_2_RX_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "mipi_csi2_rx_top,Vivado 2017.4" *)
+(* x_core_info = "mipi_csi2_rx_top,Vivado 2018.2" *)
 module system_MIPI_CSI_2_RX_0_0(RxByteClkHS, aClkStopstate, aRxClkActiveHS, 
   RxDataHSD0, RxSyncHSD0, RxValidHSD0, RxActiveHSD0, aD0Enable, RxDataHSD1, RxSyncHSD1, 
   RxValidHSD1, RxActiveHSD1, aD1Enable, RxDataHSD2, RxSyncHSD2, RxValidHSD2, RxActiveHSD2, 

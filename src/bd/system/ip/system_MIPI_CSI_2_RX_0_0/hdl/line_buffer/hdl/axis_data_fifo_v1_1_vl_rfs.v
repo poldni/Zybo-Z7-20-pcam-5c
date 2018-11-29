@@ -59,7 +59,7 @@
 `timescale 1ps/1ps
 `default_nettype none
 
-module axis_data_fifo_v1_1_16_axis_data_fifo #
+module axis_data_fifo_v1_1_18_axis_data_fifo #
 (
 ///////////////////////////////////////////////////////////////////////////////
 // Parameter Definitions
@@ -612,7 +612,7 @@ generate
       .M_TUSER  ( d1_tuser       )
     );
 
-    fifo_generator_v13_2_1 #(
+    fifo_generator_v13_2_2 #(
       .C_ADD_NGC_CONSTRAINT                ( 0                          ) ,
       .C_APPLICATION_TYPE_AXIS             ( P_APPLICATION_TYPE_AXIS    ) ,
       .C_APPLICATION_TYPE_RACH             ( 0                          ) ,

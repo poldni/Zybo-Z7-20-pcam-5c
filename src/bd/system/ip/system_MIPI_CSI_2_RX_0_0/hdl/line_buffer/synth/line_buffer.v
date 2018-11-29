@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_data_fifo:1.1
-// IP Revision: 16
+// IP Revision: 18
 
-(* X_CORE_INFO = "axis_data_fifo_v1_1_16_axis_data_fifo,Vivado 2017.4" *)
-(* CHECK_LICENSE_TYPE = "line_buffer,axis_data_fifo_v1_1_16_axis_data_fifo,{}" *)
-(* CORE_GENERATION_INFO = "line_buffer,axis_data_fifo_v1_1_16_axis_data_fifo,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=1.1,x_ipCoreRevision=16,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXIS_TDATA_WIDTH=40,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000010010011,C_FIFO_DEPTH=2048,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=2,C_ACLKEN_CONV_MODE=0}" *)
+(* X_CORE_INFO = "axis_data_fifo_v1_1_18_axis_data_fifo,Vivado 2018.2" *)
+(* CHECK_LICENSE_TYPE = "line_buffer,axis_data_fifo_v1_1_18_axis_data_fifo,{}" *)
+(* CORE_GENERATION_INFO = "line_buffer,axis_data_fifo_v1_1_18_axis_data_fifo,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=1.1,x_ipCoreRevision=18,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_AXIS_TDATA_WIDTH=40,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000010010011,C_FIFO_DEPTH=2048,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=0,C_SYNCHRONIZER_STAGE=2,C_ACLKEN_CONV_MODE=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module line_buffer (
   s_axis_aresetn,
@@ -104,7 +104,7 @@ output wire [31 : 0] axis_data_count;
 output wire [31 : 0] axis_wr_data_count;
 output wire [31 : 0] axis_rd_data_count;
 
-  axis_data_fifo_v1_1_16_axis_data_fifo #(
+  axis_data_fifo_v1_1_18_axis_data_fifo #(
     .C_FAMILY("zynq"),
     .C_AXIS_TDATA_WIDTH(40),
     .C_AXIS_TID_WIDTH(1),

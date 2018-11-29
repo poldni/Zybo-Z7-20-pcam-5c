@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2017.4
+set scripts_vivado_version 2018.2
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -181,31 +181,8 @@ proc create_root_design { parentCell } {
   # Create instance: AXI_BayerToRGB_1, and set properties
   set AXI_BayerToRGB_1 [ create_bd_cell -type ip -vlnv digilentinc.com:user:AXI_BayerToRGB:1.0 AXI_BayerToRGB_1 ]
 
-  set_property -dict [ list \
-   CONFIG.TDATA_NUM_BYTES {5} \
- ] [get_bd_intf_pins /AXI_BayerToRGB_1/AXI_Slave_Interface]
-
-  set_property -dict [ list \
-   CONFIG.TDATA_NUM_BYTES {4} \
- ] [get_bd_intf_pins /AXI_BayerToRGB_1/AXI_Stream_Master]
-
   # Create instance: AXI_GammaCorrection_0, and set properties
   set AXI_GammaCorrection_0 [ create_bd_cell -type ip -vlnv digilentinc.com:user:AXI_GammaCorrection:1.0 AXI_GammaCorrection_0 ]
-
-  set_property -dict [ list \
-   CONFIG.SUPPORTS_NARROW_BURST {0} \
-   CONFIG.NUM_READ_OUTSTANDING {1} \
-   CONFIG.NUM_WRITE_OUTSTANDING {1} \
-   CONFIG.MAX_BURST_LENGTH {1} \
- ] [get_bd_intf_pins /AXI_GammaCorrection_0/AXI_Lite_Reg_Intf]
-
-  set_property -dict [ list \
-   CONFIG.TDATA_NUM_BYTES {4} \
- ] [get_bd_intf_pins /AXI_GammaCorrection_0/AXI_Slave_Interface]
-
-  set_property -dict [ list \
-   CONFIG.TDATA_NUM_BYTES {3} \
- ] [get_bd_intf_pins /AXI_GammaCorrection_0/AXI_Stream_Master]
 
   # Create instance: DVIClocking_0, and set properties
   set block_name DVIClocking
@@ -260,7 +237,7 @@ proc create_root_design { parentCell } {
  ] $axi_vdma_0
 
   # Create instance: clk_wiz_0, and set properties
-  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0 ]
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CLKOUT1_DRIVES {BUFG} \
    CONFIG.CLKOUT1_JITTER {174.353} \
@@ -1197,7 +1174,7 @@ proc create_root_design { parentCell } {
  ] $v_axi4s_vid_out_0
 
   # Create instance: video_dynclk, and set properties
-  set video_dynclk [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 video_dynclk ]
+  set video_dynclk [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 video_dynclk ]
   set_property -dict [ list \
    CONFIG.CLKOUT1_DRIVES {No_buffer} \
    CONFIG.CLKOUT1_JITTER {232.529} \

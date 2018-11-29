@@ -99,7 +99,7 @@ ARCHITECTURE system_rgb2dvi_0_0_arch OF system_rgb2dvi_0_0 IS
     );
   END COMPONENT rgb2dvi;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF system_rgb2dvi_0_0_arch: ARCHITECTURE IS "rgb2dvi,Vivado 2017.4";
+  ATTRIBUTE X_CORE_INFO OF system_rgb2dvi_0_0_arch: ARCHITECTURE IS "rgb2dvi,Vivado 2018.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF system_rgb2dvi_0_0_arch : ARCHITECTURE IS "system_rgb2dvi_0_0,rgb2dvi,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

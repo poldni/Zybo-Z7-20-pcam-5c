@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Sep 19 12:20:19 2018
-// Host        : catuna-ro running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+// Date        : Thu Nov 29 10:13:58 2018
+// Host        : pold2 running 64-bit Ubuntu 16.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
-//               D:/Ionut/Camy/PublicGit/src/bd/system/ip/system_AXI_GammaCorrection_0_0/system_AXI_GammaCorrection_0_0_sim_netlist.v
+//               /home/ronny/projects/git/fork/Zybo-Z7-20-pcam-5c/src/bd/system/ip/system_AXI_GammaCorrection_0_0/system_AXI_GammaCorrection_0_0_sim_netlist.v
 // Design      : system_AXI_GammaCorrection_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "system_AXI_GammaCorrection_0_0,AXI_GammaCorrection,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "AXI_GammaCorrection,Vivado 2017.4" *) 
+(* CHECK_LICENSE_TYPE = "system_AXI_GammaCorrection_0_0,AXI_GammaCorrection,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "AXI_GammaCorrection,Vivado 2018.2" *) 
 (* NotValidForBitStream *)
 module system_AXI_GammaCorrection_0_0
    (StreamClk,
@@ -232,7 +232,6 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
   wire \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_0 ;
   wire \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1 ;
   wire \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2 ;
-  wire \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3 ;
   wire S_AXI_ARREADY;
   wire S_AXI_ARVALID;
   wire [2:0]S_AXI_AWADDR;
@@ -248,14 +247,14 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
   wire S_AXI_WVALID;
   wire StreamClk;
   wire aAxiLiteReset_n;
-  wire axi_arready_i_1_n_0;
+  wire axi_arready0;
   wire [2:2]axi_awaddr;
   wire \axi_awaddr[2]_i_1_n_0 ;
   wire axi_awready0;
   wire axi_awready_i_1_n_0;
   wire axi_bvalid_i_1_n_0;
   wire axi_rvalid_i_1_n_0;
-  wire axi_wready_i_1_n_0;
+  wire axi_wready0;
   wire [23:0]m_axis_video_tdata;
   wire m_axis_video_tlast;
   wire m_axis_video_tlast_i_1_n_0;
@@ -263,12 +262,12 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
   wire m_axis_video_tuser;
   wire m_axis_video_tuser_i_1_n_0;
   wire m_axis_video_tvalid;
+  wire [2:2]p_1_in;
   wire sAXI_OutputValid_i_1_n_0;
   wire [2:0]sGammaReg;
   wire \sGammaReg[0]_i_1_n_0 ;
   wire \sGammaReg[1]_i_1_n_0 ;
   wire \sGammaReg[2]_i_1_n_0 ;
-  wire \sGammaReg[2]_i_2_n_0 ;
   wire sStreamReset_n;
   wire [31:0]s_axis_video_tdata;
   wire s_axis_video_tlast;
@@ -319,18 +318,16 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
         .StreamClk(StreamClk),
         .m_axis_video_tdata(m_axis_video_tdata[7:0]),
         .sGammaReg(sGammaReg),
-        .\sGammaReg_reg[0] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2 ),
-        .\sGammaReg_reg[0]_0 (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3 ),
-        .\sGammaReg_reg[1] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1 ),
+        .\sGammaReg_reg[0] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1 ),
+        .\sGammaReg_reg[1] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2 ),
         .s_axis_video_tdata(s_axis_video_tdata[9:0]));
   system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0 \GammaStorageCoefsGeneration[1].StoredGammaCoefsInst 
        (.E(\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_0 ),
         .StreamClk(StreamClk),
         .m_axis_video_tdata(m_axis_video_tdata[15:8]),
         .sGammaReg(sGammaReg),
-        .\sGammaReg_reg[0] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2 ),
-        .\sGammaReg_reg[0]_0 (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3 ),
-        .\sGammaReg_reg[1] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1 ),
+        .\sGammaReg_reg[0] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1 ),
+        .\sGammaReg_reg[1] (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2 ),
         .s_axis_video_tdata(s_axis_video_tdata[19:10]));
   system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1 \GammaStorageCoefsGeneration[2].StoredGammaCoefsInst 
        (.E(\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_0 ),
@@ -339,31 +336,30 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
         .m_axis_video_tready(m_axis_video_tready),
         .\rStoredData_reg[4]_0 (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_1 ),
         .\rStoredData_reg[4]_1 (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_2 ),
-        .\rStoredData_reg[5]_0 (\GammaStorageCoefsGeneration[2].StoredGammaCoefsInst_n_3 ),
         .sGammaReg(sGammaReg),
         .s_axis_video_tdata(s_axis_video_tdata[29:20]),
         .s_axis_video_tvalid(s_axis_video_tvalid));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
        (.I0(S_AXI_ARVALID),
         .I1(S_AXI_ARREADY),
-        .O(axi_arready_i_1_n_0));
+        .O(axi_arready0));
   FDRE axi_arready_reg
        (.C(AxiLiteClk),
         .CE(1'b1),
-        .D(axi_arready_i_1_n_0),
+        .D(axi_arready0),
         .Q(S_AXI_ARREADY),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT5 #(
-    .INIT(32'hEFFF2000)) 
+    .INIT(32'hFFBF0080)) 
     \axi_awaddr[2]_i_1 
        (.I0(S_AXI_AWADDR[2]),
-        .I1(S_AXI_AWREADY),
-        .I2(S_AXI_AWVALID),
-        .I3(S_AXI_WVALID),
+        .I1(S_AXI_AWVALID),
+        .I2(S_AXI_WVALID),
+        .I3(S_AXI_AWREADY),
         .I4(axi_awaddr),
         .O(\axi_awaddr[2]_i_1_n_0 ));
   FDRE \axi_awaddr_reg[2] 
@@ -377,13 +373,13 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
     axi_awready_i_1
        (.I0(aAxiLiteReset_n),
         .O(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h08)) 
     axi_awready_i_2
-       (.I0(S_AXI_AWREADY),
-        .I1(S_AXI_AWVALID),
-        .I2(S_AXI_WVALID),
+       (.I0(S_AXI_AWVALID),
+        .I1(S_AXI_WVALID),
+        .I2(S_AXI_AWREADY),
         .O(axi_awready0));
   FDRE axi_awready_reg
        (.C(AxiLiteClk),
@@ -396,8 +392,8 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
     axi_bvalid_i_1
        (.I0(S_AXI_AWVALID),
         .I1(S_AXI_WVALID),
-        .I2(S_AXI_WREADY),
-        .I3(S_AXI_AWREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(S_AXI_WREADY),
         .I4(S_AXI_BREADY),
         .I5(S_AXI_BVALID),
         .O(axi_bvalid_i_1_n_0));
@@ -407,7 +403,7 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
         .D(axi_bvalid_i_1_n_0),
         .Q(S_AXI_BVALID),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'h0F88)) 
     axi_rvalid_i_1
@@ -423,16 +419,16 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
         .Q(S_AXI_RVALID),
         .R(axi_awready_i_1_n_0));
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h08)) 
     axi_wready_i_1
-       (.I0(S_AXI_WREADY),
-        .I1(S_AXI_AWVALID),
-        .I2(S_AXI_WVALID),
-        .O(axi_wready_i_1_n_0));
+       (.I0(S_AXI_AWVALID),
+        .I1(S_AXI_WVALID),
+        .I2(S_AXI_WREADY),
+        .O(axi_wready0));
   FDRE axi_wready_reg
        (.C(AxiLiteClk),
         .CE(1'b1),
-        .D(axi_wready_i_1_n_0),
+        .D(axi_wready0),
         .Q(S_AXI_WREADY),
         .R(axi_awready_i_1_n_0));
   LUT5 #(
@@ -479,39 +475,39 @@ module system_AXI_GammaCorrection_0_0_AXI_GammaCorrection
         .D(sAXI_OutputValid_i_1_n_0),
         .Q(m_axis_video_tvalid),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sGammaReg[0]_i_1 
        (.I0(S_AXI_WDATA[0]),
-        .I1(\sGammaReg[2]_i_2_n_0 ),
+        .I1(p_1_in),
         .I2(sGammaReg[0]),
         .O(\sGammaReg[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sGammaReg[1]_i_1 
        (.I0(S_AXI_WDATA[1]),
-        .I1(\sGammaReg[2]_i_2_n_0 ),
+        .I1(p_1_in),
         .I2(sGammaReg[1]),
         .O(\sGammaReg[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sGammaReg[2]_i_1 
        (.I0(S_AXI_WDATA[2]),
-        .I1(\sGammaReg[2]_i_2_n_0 ),
+        .I1(p_1_in),
         .I2(sGammaReg[2]),
         .O(\sGammaReg[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h4000000000000000)) 
+    .INIT(64'h0000800000000000)) 
     \sGammaReg[2]_i_2 
-       (.I0(axi_awaddr),
-        .I1(S_AXI_WSTRB[0]),
+       (.I0(S_AXI_WVALID),
+        .I1(S_AXI_AWVALID),
         .I2(S_AXI_AWREADY),
         .I3(S_AXI_WREADY),
-        .I4(S_AXI_WVALID),
-        .I5(S_AXI_AWVALID),
-        .O(\sGammaReg[2]_i_2_n_0 ));
+        .I4(axi_awaddr),
+        .I5(S_AXI_WSTRB[0]),
+        .O(p_1_in));
   FDRE \sGammaReg_reg[0] 
        (.C(AxiLiteClk),
         .CE(1'b1),
@@ -537,17 +533,15 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
    (m_axis_video_tdata,
     sGammaReg,
     s_axis_video_tdata,
-    \sGammaReg_reg[1] ,
     \sGammaReg_reg[0] ,
-    \sGammaReg_reg[0]_0 ,
+    \sGammaReg_reg[1] ,
     E,
     StreamClk);
   output [7:0]m_axis_video_tdata;
   input [2:0]sGammaReg;
   input [9:0]s_axis_video_tdata;
-  input \sGammaReg_reg[1] ;
   input \sGammaReg_reg[0] ;
-  input \sGammaReg_reg[0]_0 ;
+  input \sGammaReg_reg[1] ;
   input [0:0]E;
   input StreamClk;
 
@@ -641,11 +635,11 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[1]_i_114_n_0 ;
   wire \rStoredData[1]_i_115_n_0 ;
   wire \rStoredData[1]_i_116_n_0 ;
-  wire \rStoredData[1]_i_23_n_0 ;
-  wire \rStoredData[1]_i_24_n_0 ;
-  wire \rStoredData[1]_i_25_n_0 ;
-  wire \rStoredData[1]_i_26_n_0 ;
+  wire \rStoredData[1]_i_117_n_0 ;
+  wire \rStoredData[1]_i_118_n_0 ;
   wire \rStoredData[1]_i_4_n_0 ;
+  wire \rStoredData[1]_i_55_n_0 ;
+  wire \rStoredData[1]_i_56_n_0 ;
   wire \rStoredData[1]_i_57_n_0 ;
   wire \rStoredData[1]_i_58_n_0 ;
   wire \rStoredData[1]_i_59_n_0 ;
@@ -671,7 +665,6 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[1]_i_77_n_0 ;
   wire \rStoredData[1]_i_78_n_0 ;
   wire \rStoredData[1]_i_79_n_0 ;
-  wire \rStoredData[1]_i_7_n_0 ;
   wire \rStoredData[1]_i_80_n_0 ;
   wire \rStoredData[1]_i_81_n_0 ;
   wire \rStoredData[1]_i_82_n_0 ;
@@ -700,23 +693,24 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[2]_i_105_n_0 ;
   wire \rStoredData[2]_i_106_n_0 ;
   wire \rStoredData[2]_i_107_n_0 ;
-  wire \rStoredData[2]_i_108_n_0 ;
-  wire \rStoredData[2]_i_13_n_0 ;
-  wire \rStoredData[2]_i_15_n_0 ;
+  wire \rStoredData[2]_i_14_n_0 ;
   wire \rStoredData[2]_i_16_n_0 ;
   wire \rStoredData[2]_i_21_n_0 ;
-  wire \rStoredData[2]_i_22_n_0 ;
-  wire \rStoredData[2]_i_33_n_0 ;
-  wire \rStoredData[2]_i_34_n_0 ;
-  wire \rStoredData[2]_i_35_n_0 ;
+  wire \rStoredData[2]_i_25_n_0 ;
+  wire \rStoredData[2]_i_27_n_0 ;
+  wire \rStoredData[2]_i_39_n_0 ;
+  wire \rStoredData[2]_i_40_n_0 ;
+  wire \rStoredData[2]_i_41_n_0 ;
   wire \rStoredData[2]_i_42_n_0 ;
+  wire \rStoredData[2]_i_45_n_0 ;
+  wire \rStoredData[2]_i_46_n_0 ;
+  wire \rStoredData[2]_i_47_n_0 ;
   wire \rStoredData[2]_i_4_n_0 ;
-  wire \rStoredData[2]_i_54__1_n_0 ;
-  wire \rStoredData[2]_i_55_n_0 ;
-  wire \rStoredData[2]_i_56_n_0 ;
+  wire \rStoredData[2]_i_56__1_n_0 ;
   wire \rStoredData[2]_i_57_n_0 ;
   wire \rStoredData[2]_i_58_n_0 ;
   wire \rStoredData[2]_i_59_n_0 ;
+  wire \rStoredData[2]_i_5_n_0 ;
   wire \rStoredData[2]_i_60_n_0 ;
   wire \rStoredData[2]_i_61_n_0 ;
   wire \rStoredData[2]_i_62_n_0 ;
@@ -738,6 +732,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[2]_i_77_n_0 ;
   wire \rStoredData[2]_i_78_n_0 ;
   wire \rStoredData[2]_i_79_n_0 ;
+  wire \rStoredData[2]_i_7_n_0 ;
   wire \rStoredData[2]_i_80_n_0 ;
   wire \rStoredData[2]_i_81_n_0 ;
   wire \rStoredData[2]_i_82_n_0 ;
@@ -748,6 +743,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[2]_i_87_n_0 ;
   wire \rStoredData[2]_i_88_n_0 ;
   wire \rStoredData[2]_i_89_n_0 ;
+  wire \rStoredData[2]_i_8_n_0 ;
   wire \rStoredData[2]_i_90_n_0 ;
   wire \rStoredData[2]_i_91_n_0 ;
   wire \rStoredData[2]_i_92_n_0 ;
@@ -758,38 +754,43 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[2]_i_97_n_0 ;
   wire \rStoredData[2]_i_98_n_0 ;
   wire \rStoredData[2]_i_99_n_0 ;
+  wire \rStoredData[3]_i_10_n_0 ;
   wire \rStoredData[3]_i_11_n_0 ;
-  wire \rStoredData[3]_i_13_n_0 ;
+  wire \rStoredData[3]_i_14_n_0 ;
   wire \rStoredData[3]_i_17_n_0 ;
   wire \rStoredData[3]_i_18_n_0 ;
   wire \rStoredData[3]_i_21_n_0 ;
-  wire \rStoredData[3]_i_23__1_n_0 ;
-  wire \rStoredData[3]_i_24__1_n_0 ;
-  wire \rStoredData[3]_i_25_n_0 ;
-  wire \rStoredData[3]_i_26_n_0 ;
-  wire \rStoredData[3]_i_27_n_0 ;
+  wire \rStoredData[3]_i_22_n_0 ;
+  wire \rStoredData[3]_i_23_n_0 ;
+  wire \rStoredData[3]_i_24_n_0 ;
+  wire \rStoredData[3]_i_26__1_n_0 ;
+  wire \rStoredData[3]_i_27__1_n_0 ;
   wire \rStoredData[3]_i_28_n_0 ;
-  wire \rStoredData[3]_i_29_n_0 ;
-  wire \rStoredData[3]_i_32_n_0 ;
-  wire \rStoredData[3]_i_33__1_n_0 ;
+  wire \rStoredData[3]_i_29__1_n_0 ;
+  wire \rStoredData[3]_i_31_n_0 ;
   wire \rStoredData[3]_i_36_n_0 ;
   wire \rStoredData[3]_i_37_n_0 ;
   wire \rStoredData[3]_i_38_n_0 ;
+  wire \rStoredData[3]_i_39_n_0 ;
+  wire \rStoredData[3]_i_40_n_0 ;
   wire \rStoredData[3]_i_41_n_0 ;
   wire \rStoredData[3]_i_42_n_0 ;
+  wire \rStoredData[3]_i_43_n_0 ;
+  wire \rStoredData[3]_i_44_n_0 ;
   wire \rStoredData[3]_i_45_n_0 ;
   wire \rStoredData[3]_i_46_n_0 ;
   wire \rStoredData[3]_i_47_n_0 ;
   wire \rStoredData[3]_i_48_n_0 ;
-  wire \rStoredData[3]_i_49_n_0 ;
   wire \rStoredData[3]_i_4_n_0 ;
-  wire \rStoredData[3]_i_50_n_0 ;
+  wire \rStoredData[3]_i_53__1_n_0 ;
+  wire \rStoredData[3]_i_54__1_n_0 ;
   wire \rStoredData[3]_i_55_n_0 ;
   wire \rStoredData[3]_i_56_n_0 ;
   wire \rStoredData[3]_i_57_n_0 ;
-  wire \rStoredData[3]_i_5_n_0 ;
-  wire \rStoredData[3]_i_60__1_n_0 ;
-  wire \rStoredData[3]_i_61__1_n_0 ;
+  wire \rStoredData[3]_i_58_n_0 ;
+  wire \rStoredData[3]_i_59_n_0 ;
+  wire \rStoredData[3]_i_60_n_0 ;
+  wire \rStoredData[3]_i_61_n_0 ;
   wire \rStoredData[3]_i_62_n_0 ;
   wire \rStoredData[3]_i_63_n_0 ;
   wire \rStoredData[3]_i_64_n_0 ;
@@ -809,7 +810,6 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[3]_i_77_n_0 ;
   wire \rStoredData[3]_i_78_n_0 ;
   wire \rStoredData[3]_i_79_n_0 ;
-  wire \rStoredData[3]_i_7_n_0 ;
   wire \rStoredData[3]_i_80_n_0 ;
   wire \rStoredData[3]_i_81_n_0 ;
   wire \rStoredData[3]_i_82_n_0 ;
@@ -821,108 +821,113 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData[3]_i_88_n_0 ;
   wire \rStoredData[3]_i_89_n_0 ;
   wire \rStoredData[3]_i_8_n_0 ;
-  wire \rStoredData[4]_i_11_n_0 ;
+  wire \rStoredData[3]_i_9_n_0 ;
   wire \rStoredData[4]_i_12_n_0 ;
+  wire \rStoredData[4]_i_13_n_0 ;
   wire \rStoredData[4]_i_15_n_0 ;
   wire \rStoredData[4]_i_16_n_0 ;
-  wire \rStoredData[4]_i_17_n_0 ;
+  wire \rStoredData[4]_i_17__1_n_0 ;
   wire \rStoredData[4]_i_18_n_0 ;
   wire \rStoredData[4]_i_19_n_0 ;
   wire \rStoredData[4]_i_20_n_0 ;
-  wire \rStoredData[4]_i_21_n_0 ;
+  wire \rStoredData[4]_i_21__1_n_0 ;
   wire \rStoredData[4]_i_22_n_0 ;
-  wire \rStoredData[4]_i_23_n_0 ;
-  wire \rStoredData[4]_i_24_n_0 ;
-  wire \rStoredData[4]_i_25_n_0 ;
+  wire \rStoredData[4]_i_23__1_n_0 ;
+  wire \rStoredData[4]_i_24__1_n_0 ;
   wire \rStoredData[4]_i_26_n_0 ;
   wire \rStoredData[4]_i_27_n_0 ;
   wire \rStoredData[4]_i_28_n_0 ;
   wire \rStoredData[4]_i_29_n_0 ;
-  wire \rStoredData[4]_i_30_n_0 ;
-  wire \rStoredData[4]_i_31_n_0 ;
-  wire \rStoredData[4]_i_32_n_0 ;
-  wire \rStoredData[4]_i_34__1_n_0 ;
-  wire \rStoredData[4]_i_35__1_n_0 ;
-  wire \rStoredData[4]_i_36__1_n_0 ;
-  wire \rStoredData[4]_i_37__1_n_0 ;
-  wire \rStoredData[4]_i_38_n_0 ;
-  wire \rStoredData[4]_i_39_n_0 ;
+  wire \rStoredData[4]_i_34_n_0 ;
+  wire \rStoredData[4]_i_36_n_0 ;
+  wire \rStoredData[4]_i_37_n_0 ;
+  wire \rStoredData[4]_i_38__1_n_0 ;
+  wire \rStoredData[4]_i_39__1_n_0 ;
   wire \rStoredData[4]_i_3_n_0 ;
   wire \rStoredData[4]_i_40_n_0 ;
   wire \rStoredData[4]_i_41_n_0 ;
   wire \rStoredData[4]_i_42__1_n_0 ;
-  wire \rStoredData[4]_i_43__1_n_0 ;
-  wire \rStoredData[4]_i_44_n_0 ;
+  wire \rStoredData[4]_i_43_n_0 ;
+  wire \rStoredData[4]_i_44__1_n_0 ;
   wire \rStoredData[4]_i_45_n_0 ;
-  wire \rStoredData[4]_i_46_n_0 ;
-  wire \rStoredData[4]_i_47_n_0 ;
-  wire \rStoredData[4]_i_48__0_n_0 ;
+  wire \rStoredData[4]_i_46__1_n_0 ;
+  wire \rStoredData[4]_i_47__1_n_0 ;
+  wire \rStoredData[4]_i_48_n_0 ;
   wire \rStoredData[4]_i_49_n_0 ;
-  wire \rStoredData[4]_i_4_n_0 ;
   wire \rStoredData[4]_i_50_n_0 ;
   wire \rStoredData[4]_i_51_n_0 ;
   wire \rStoredData[4]_i_52_n_0 ;
   wire \rStoredData[4]_i_53_n_0 ;
   wire \rStoredData[4]_i_54_n_0 ;
   wire \rStoredData[4]_i_55_n_0 ;
-  wire \rStoredData[4]_i_56__1_n_0 ;
+  wire \rStoredData[4]_i_56_n_0 ;
   wire \rStoredData[4]_i_57_n_0 ;
-  wire \rStoredData[4]_i_58__1_n_0 ;
-  wire \rStoredData[4]_i_59__1_n_0 ;
+  wire \rStoredData[4]_i_58_n_0 ;
+  wire \rStoredData[4]_i_59_n_0 ;
+  wire \rStoredData[4]_i_5_n_0 ;
   wire \rStoredData[4]_i_60_n_0 ;
   wire \rStoredData[4]_i_61_n_0 ;
+  wire \rStoredData[4]_i_62_n_0 ;
+  wire \rStoredData[4]_i_63_n_0 ;
+  wire \rStoredData[4]_i_64_n_0 ;
+  wire \rStoredData[4]_i_6_n_0 ;
+  wire \rStoredData[4]_i_7_n_0 ;
+  wire \rStoredData[4]_i_8_n_0 ;
+  wire \rStoredData[4]_i_9_n_0 ;
   wire \rStoredData[5]_i_10_n_0 ;
   wire \rStoredData[5]_i_11_n_0 ;
   wire \rStoredData[5]_i_12_n_0 ;
   wire \rStoredData[5]_i_13_n_0 ;
   wire \rStoredData[5]_i_14_n_0 ;
-  wire \rStoredData[5]_i_15_n_0 ;
+  wire \rStoredData[5]_i_15__1_n_0 ;
   wire \rStoredData[5]_i_16_n_0 ;
   wire \rStoredData[5]_i_17_n_0 ;
   wire \rStoredData[5]_i_18_n_0 ;
-  wire \rStoredData[5]_i_19__1_n_0 ;
-  wire \rStoredData[5]_i_20_n_0 ;
-  wire \rStoredData[5]_i_21__1_n_0 ;
+  wire \rStoredData[5]_i_19_n_0 ;
+  wire \rStoredData[5]_i_20__1_n_0 ;
+  wire \rStoredData[5]_i_21_n_0 ;
   wire \rStoredData[5]_i_22_n_0 ;
   wire \rStoredData[5]_i_23_n_0 ;
-  wire \rStoredData[5]_i_24__1_n_0 ;
-  wire \rStoredData[5]_i_25__0_n_0 ;
-  wire \rStoredData[5]_i_26__1_n_0 ;
+  wire \rStoredData[5]_i_24_n_0 ;
+  wire \rStoredData[5]_i_25_n_0 ;
+  wire \rStoredData[5]_i_26_n_0 ;
   wire \rStoredData[5]_i_27_n_0 ;
-  wire \rStoredData[5]_i_28_n_0 ;
   wire \rStoredData[5]_i_29_n_0 ;
-  wire \rStoredData[5]_i_30_n_0 ;
-  wire \rStoredData[5]_i_31_n_0 ;
+  wire \rStoredData[5]_i_30__1_n_0 ;
+  wire \rStoredData[5]_i_31__1_n_0 ;
   wire \rStoredData[5]_i_32__1_n_0 ;
   wire \rStoredData[5]_i_33_n_0 ;
   wire \rStoredData[5]_i_34_n_0 ;
   wire \rStoredData[5]_i_35_n_0 ;
-  wire \rStoredData[5]_i_36__1_n_0 ;
-  wire \rStoredData[5]_i_37__1_n_0 ;
-  wire \rStoredData[5]_i_38__1_n_0 ;
+  wire \rStoredData[5]_i_36_n_0 ;
+  wire \rStoredData[5]_i_37_n_0 ;
+  wire \rStoredData[5]_i_38_n_0 ;
   wire \rStoredData[5]_i_3_n_0 ;
-  wire \rStoredData[5]_i_4_n_0 ;
   wire \rStoredData[5]_i_5_n_0 ;
   wire \rStoredData[5]_i_6_n_0 ;
   wire \rStoredData[5]_i_7_n_0 ;
   wire \rStoredData[5]_i_8_n_0 ;
+  wire \rStoredData[5]_i_9_n_0 ;
   wire \rStoredData[6]_i_10_n_0 ;
   wire \rStoredData[6]_i_11_n_0 ;
-  wire \rStoredData[6]_i_12_n_0 ;
   wire \rStoredData[6]_i_13_n_0 ;
   wire \rStoredData[6]_i_14_n_0 ;
-  wire \rStoredData[6]_i_15_n_0 ;
+  wire \rStoredData[6]_i_15__1_n_0 ;
   wire \rStoredData[6]_i_16__1_n_0 ;
   wire \rStoredData[6]_i_17__1_n_0 ;
   wire \rStoredData[6]_i_18__1_n_0 ;
   wire \rStoredData[6]_i_19__1_n_0 ;
   wire \rStoredData[6]_i_20_n_0 ;
+  wire \rStoredData[6]_i_21_n_0 ;
+  wire \rStoredData[6]_i_3_n_0 ;
   wire \rStoredData[6]_i_4_n_0 ;
   wire \rStoredData[6]_i_5_n_0 ;
+  wire \rStoredData[6]_i_6_n_0 ;
   wire \rStoredData[6]_i_7_n_0 ;
   wire \rStoredData[6]_i_8_n_0 ;
-  wire \rStoredData[6]_i_9__1_n_0 ;
-  wire \rStoredData[7]_i_10__1_n_0 ;
+  wire \rStoredData[6]_i_9_n_0 ;
+  wire \rStoredData[7]_i_10_n_0 ;
+  wire \rStoredData[7]_i_11__1_n_0 ;
   wire \rStoredData[7]_i_4_n_0 ;
   wire \rStoredData[7]_i_5_n_0 ;
   wire \rStoredData[7]_i_6_n_0 ;
@@ -990,6 +995,10 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData_reg[1]_i_20_n_0 ;
   wire \rStoredData_reg[1]_i_21_n_0 ;
   wire \rStoredData_reg[1]_i_22_n_0 ;
+  wire \rStoredData_reg[1]_i_23_n_0 ;
+  wire \rStoredData_reg[1]_i_24_n_0 ;
+  wire \rStoredData_reg[1]_i_25_n_0 ;
+  wire \rStoredData_reg[1]_i_26_n_0 ;
   wire \rStoredData_reg[1]_i_27_n_0 ;
   wire \rStoredData_reg[1]_i_28_n_0 ;
   wire \rStoredData_reg[1]_i_29_n_0 ;
@@ -1018,203 +1027,194 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   wire \rStoredData_reg[1]_i_52_n_0 ;
   wire \rStoredData_reg[1]_i_53_n_0 ;
   wire \rStoredData_reg[1]_i_54_n_0 ;
-  wire \rStoredData_reg[1]_i_55_n_0 ;
-  wire \rStoredData_reg[1]_i_56_n_0 ;
+  wire \rStoredData_reg[1]_i_7_n_0 ;
   wire \rStoredData_reg[1]_i_8_n_0 ;
   wire \rStoredData_reg[1]_i_9_n_0 ;
   wire \rStoredData_reg[2]_i_10_n_0 ;
   wire \rStoredData_reg[2]_i_11_n_0 ;
   wire \rStoredData_reg[2]_i_12_n_0 ;
-  wire \rStoredData_reg[2]_i_14_n_0 ;
+  wire \rStoredData_reg[2]_i_13_n_0 ;
+  wire \rStoredData_reg[2]_i_15_n_0 ;
   wire \rStoredData_reg[2]_i_17_n_0 ;
   wire \rStoredData_reg[2]_i_18_n_0 ;
   wire \rStoredData_reg[2]_i_19_n_0 ;
   wire \rStoredData_reg[2]_i_20_n_0 ;
+  wire \rStoredData_reg[2]_i_22_n_0 ;
   wire \rStoredData_reg[2]_i_23_n_0 ;
   wire \rStoredData_reg[2]_i_24_n_0 ;
-  wire \rStoredData_reg[2]_i_25_n_0 ;
   wire \rStoredData_reg[2]_i_26_n_0 ;
-  wire \rStoredData_reg[2]_i_27_n_0 ;
   wire \rStoredData_reg[2]_i_28_n_0 ;
   wire \rStoredData_reg[2]_i_29_n_0 ;
   wire \rStoredData_reg[2]_i_30_n_0 ;
   wire \rStoredData_reg[2]_i_31_n_0 ;
   wire \rStoredData_reg[2]_i_32_n_0 ;
+  wire \rStoredData_reg[2]_i_33_n_0 ;
+  wire \rStoredData_reg[2]_i_34_n_0 ;
+  wire \rStoredData_reg[2]_i_35_n_0 ;
   wire \rStoredData_reg[2]_i_36_n_0 ;
   wire \rStoredData_reg[2]_i_37_n_0 ;
   wire \rStoredData_reg[2]_i_38_n_0 ;
-  wire \rStoredData_reg[2]_i_39_n_0 ;
-  wire \rStoredData_reg[2]_i_40_n_0 ;
-  wire \rStoredData_reg[2]_i_41_n_0 ;
   wire \rStoredData_reg[2]_i_43_n_0 ;
   wire \rStoredData_reg[2]_i_44_n_0 ;
-  wire \rStoredData_reg[2]_i_45_n_0 ;
-  wire \rStoredData_reg[2]_i_46_n_0 ;
-  wire \rStoredData_reg[2]_i_47_n_0 ;
   wire \rStoredData_reg[2]_i_48_n_0 ;
   wire \rStoredData_reg[2]_i_49_n_0 ;
   wire \rStoredData_reg[2]_i_50_n_0 ;
   wire \rStoredData_reg[2]_i_51_n_0 ;
   wire \rStoredData_reg[2]_i_52_n_0 ;
   wire \rStoredData_reg[2]_i_53_n_0 ;
-  wire \rStoredData_reg[2]_i_5_n_0 ;
-  wire \rStoredData_reg[2]_i_7_n_0 ;
-  wire \rStoredData_reg[2]_i_8_n_0 ;
+  wire \rStoredData_reg[2]_i_54_n_0 ;
+  wire \rStoredData_reg[2]_i_55_n_0 ;
   wire \rStoredData_reg[2]_i_9_n_0 ;
-  wire \rStoredData_reg[3]_i_10_n_0 ;
   wire \rStoredData_reg[3]_i_12_n_0 ;
-  wire \rStoredData_reg[3]_i_14_n_0 ;
+  wire \rStoredData_reg[3]_i_13_n_0 ;
   wire \rStoredData_reg[3]_i_15_n_0 ;
   wire \rStoredData_reg[3]_i_16_n_0 ;
   wire \rStoredData_reg[3]_i_19_n_0 ;
   wire \rStoredData_reg[3]_i_20_n_0 ;
-  wire \rStoredData_reg[3]_i_22_n_0 ;
+  wire \rStoredData_reg[3]_i_25_n_0 ;
   wire \rStoredData_reg[3]_i_30_n_0 ;
-  wire \rStoredData_reg[3]_i_31_n_0 ;
+  wire \rStoredData_reg[3]_i_32_n_0 ;
+  wire \rStoredData_reg[3]_i_33_n_0 ;
   wire \rStoredData_reg[3]_i_34_n_0 ;
   wire \rStoredData_reg[3]_i_35_n_0 ;
-  wire \rStoredData_reg[3]_i_39_n_0 ;
-  wire \rStoredData_reg[3]_i_40_n_0 ;
-  wire \rStoredData_reg[3]_i_43_n_0 ;
-  wire \rStoredData_reg[3]_i_44_n_0 ;
+  wire \rStoredData_reg[3]_i_49_n_0 ;
+  wire \rStoredData_reg[3]_i_50_n_0 ;
   wire \rStoredData_reg[3]_i_51_n_0 ;
   wire \rStoredData_reg[3]_i_52_n_0 ;
-  wire \rStoredData_reg[3]_i_53_n_0 ;
-  wire \rStoredData_reg[3]_i_54_n_0 ;
-  wire \rStoredData_reg[3]_i_58_n_0 ;
-  wire \rStoredData_reg[3]_i_59_n_0 ;
-  wire \rStoredData_reg[3]_i_9_n_0 ;
+  wire \rStoredData_reg[3]_i_5_n_0 ;
+  wire \rStoredData_reg[3]_i_7_n_0 ;
   wire \rStoredData_reg[4]_i_10_n_0 ;
-  wire \rStoredData_reg[4]_i_13_n_0 ;
+  wire \rStoredData_reg[4]_i_11_n_0 ;
   wire \rStoredData_reg[4]_i_14_n_0 ;
+  wire \rStoredData_reg[4]_i_25_n_0 ;
+  wire \rStoredData_reg[4]_i_30_n_0 ;
+  wire \rStoredData_reg[4]_i_31_n_0 ;
+  wire \rStoredData_reg[4]_i_32_n_0 ;
   wire \rStoredData_reg[4]_i_33_n_0 ;
-  wire \rStoredData_reg[4]_i_5_n_0 ;
-  wire \rStoredData_reg[4]_i_6_n_0 ;
-  wire \rStoredData_reg[4]_i_7_n_0 ;
-  wire \rStoredData_reg[4]_i_8_n_0 ;
-  wire \rStoredData_reg[4]_i_9_n_0 ;
-  wire \rStoredData_reg[5]_i_9_n_0 ;
-  wire \rStoredData_reg[6]_i_6_n_0 ;
+  wire \rStoredData_reg[4]_i_35_n_0 ;
+  wire \rStoredData_reg[4]_i_4_n_0 ;
+  wire \rStoredData_reg[5]_i_28_n_0 ;
+  wire \rStoredData_reg[5]_i_4_n_0 ;
+  wire \rStoredData_reg[6]_i_12_n_0 ;
   wire [2:0]sGammaReg;
   wire \sGammaReg_reg[0] ;
-  wire \sGammaReg_reg[0]_0 ;
   wire \sGammaReg_reg[1] ;
   wire [9:0]s_axis_video_tdata;
 
   LUT6 #(
-    .INIT(64'h20DBCD22658E5875)) 
+    .INIT(64'h79DC16BCA56359D4)) 
     \rStoredData[0]_i_100 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_100_n_0 ));
   LUT6 #(
-    .INIT(64'h8E00F3FFFFFF0000)) 
+    .INIT(64'h9A30D82367C72794)) 
     \rStoredData[0]_i_101 
-       (.I0(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_101_n_0 ));
   LUT6 #(
-    .INIT(64'h66666C6696996626)) 
+    .INIT(64'h5A9C8623E1431A9C)) 
     \rStoredData[0]_i_102 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_102_n_0 ));
   LUT6 #(
-    .INIT(64'h3B999CC466233B99)) 
+    .INIT(64'h3C3432B393C3C3C9)) 
     \rStoredData[0]_i_103 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[0]_i_103_n_0 ));
-  LUT6 #(
-    .INIT(64'h99629D3BC499669C)) 
-    \rStoredData[0]_i_104 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_103_n_0 ));
+  LUT6 #(
+    .INIT(64'hB50FD0B5F02F4AF0)) 
+    \rStoredData[0]_i_104 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_104_n_0 ));
   LUT6 #(
-    .INIT(64'h6E56A866996E91A9)) 
+    .INIT(64'h4D6C2C2436B6B293)) 
     \rStoredData[0]_i_105 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_105_n_0 ));
   LUT6 #(
-    .INIT(64'h8999177666E89999)) 
+    .INIT(64'h92D3496DDBC96D2C)) 
     \rStoredData[0]_i_106 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_106_n_0 ));
   LUT6 #(
-    .INIT(64'h665D999A26665999)) 
+    .INIT(64'h4CDD264C9B32D99B)) 
     \rStoredData[0]_i_107 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_107_n_0 ));
   LUT6 #(
-    .INIT(64'h269B66264D66994D)) 
+    .INIT(64'h33269B334CCD264C)) 
     \rStoredData[0]_i_108 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_108_n_0 ));
+  LUT6 #(
+    .INIT(64'hD3CC33D33233CC33)) 
+    \rStoredData[0]_i_109 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_108_n_0 ));
-  LUT6 #(
-    .INIT(64'hD33332CCCCD93333)) 
-    \rStoredData[0]_i_109 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_109_n_0 ));
   LUT6 #(
-    .INIT(64'h433333CCCCC33333)) 
+    .INIT(64'h4333CCC633CC3333)) 
     \rStoredData[0]_i_110 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_110_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFF40000000FD)) 
+    .INIT(64'hFFFFFFEA00000055)) 
     \rStoredData[0]_i_111 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[0]),
@@ -1222,19 +1222,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_111_n_0 ));
   LUT6 #(
-    .INIT(64'h4F00FFFF30FF0000)) 
+    .INIT(64'h7F7700885500AAFE)) 
     \rStoredData[0]_i_112 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_112_n_0 ));
   LUT6 #(
-    .INIT(64'h00CD204CFF33DFFB)) 
+    .INIT(64'hAA678AE655197551)) 
     \rStoredData[0]_i_113 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
@@ -1242,9 +1242,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_113_n_0 ));
   LUT6 #(
-    .INIT(64'hFE377F33038080C8)) 
+    .INIT(64'hAB622A665695D59D)) 
     \rStoredData[0]_i_114 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
@@ -1252,44 +1252,44 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_114_n_0 ));
   LUT6 #(
-    .INIT(64'h521FBDA4E5063FE8)) 
+    .INIT(64'h786D3DB5970E0E4A)) 
     \rStoredData[0]_i_115 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[0]_i_115_n_0 ));
   LUT6 #(
-    .INIT(64'hA37DC222DE821DD7)) 
+    .INIT(64'h8F79870FB48F7096)) 
     \rStoredData[0]_i_116 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_116_n_0 ));
   LUT6 #(
-    .INIT(64'h1466B990467B9844)) 
+    .INIT(64'hBCCC333AC5433C8C)) 
     \rStoredData[0]_i_117 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_117_n_0 ));
   LUT6 #(
-    .INIT(64'hFC4013BEEC0137EE)) 
+    .INIT(64'hAA11891556EA66AA)) 
     \rStoredData[0]_i_118 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_118_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
@@ -1306,9 +1306,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
     \rStoredData[0]_i_3 
        (.I0(\rStoredData_reg[0]_i_7_n_0 ),
         .I1(\rStoredData_reg[0]_i_8_n_0 ),
-        .I2(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[7]),
         .I3(\rStoredData_reg[0]_i_9_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[8]),
         .I5(\rStoredData_reg[0]_i_10_n_0 ),
         .O(p_0_out[0]));
   LUT6 #(
@@ -1326,60 +1326,60 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
     \rStoredData[0]_i_5 
        (.I0(\rStoredData_reg[0]_i_15_n_0 ),
         .I1(\rStoredData_reg[0]_i_16_n_0 ),
-        .I2(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[0]),
         .I3(\rStoredData_reg[0]_i_17_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[6]),
         .I5(\rStoredData_reg[0]_i_18_n_0 ),
         .O(\rStoredData[0]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h007F01FFFF00FA00)) 
+    .INIT(64'hC3CBCC4C3C3C3C33)) 
     \rStoredData[0]_i_55 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_55_n_0 ));
+  LUT6 #(
+    .INIT(64'h4AF00F52AD4AB52F)) 
+    \rStoredData[0]_i_56 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_56_n_0 ));
+  LUT6 #(
+    .INIT(64'h0B0AF5FDFFFF0000)) 
+    \rStoredData[0]_i_57 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_57_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFF7FF551000008A)) 
+    \rStoredData[0]_i_58 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[0]_i_55_n_0 ));
-  LUT6 #(
-    .INIT(64'h00008FFFFFFF7000)) 
-    \rStoredData[0]_i_56 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[0]_i_56_n_0 ));
-  LUT6 #(
-    .INIT(64'h0B0AFFFFF5FD0000)) 
-    \rStoredData[0]_i_57 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[0]_i_57_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFF5F7F51008000A)) 
-    \rStoredData[0]_i_58 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_58_n_0 ));
   LUT6 #(
-    .INIT(64'h7655579581A888AA)) 
+    .INIT(64'hCCC53ABC43338DCD)) 
     \rStoredData[0]_i_59 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_59_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -1392,84 +1392,84 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(\rStoredData_reg[0]_i_22_n_0 ),
         .O(\rStoredData[0]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hCD4C9BDD329B2632)) 
+    .INIT(64'h15FFFFFEEA000111)) 
     \rStoredData[0]_i_60 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_60_n_0 ));
   LUT6 #(
-    .INIT(64'hCC3BC4CC33CC33C3)) 
+    .INIT(64'hEAA8575F0111EEEA)) 
     \rStoredData[0]_i_61 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_61_n_0 ));
-  LUT6 #(
-    .INIT(64'h4A0FF052ADB54A2F)) 
-    \rStoredData[0]_i_62 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_62_n_0 ));
-  LUT6 #(
-    .INIT(64'h54666AAB999D5446)) 
-    \rStoredData[0]_i_63 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[0]_i_63_n_0 ));
-  LUT6 #(
-    .INIT(64'h576EEAA899155576)) 
-    \rStoredData[0]_i_64 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[0]_i_64_n_0 ));
-  LUT6 #(
-    .INIT(64'hEAA80111575FEEEA)) 
-    \rStoredData[0]_i_65 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[0]_i_65_n_0 ));
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_61_n_0 ));
   LUT6 #(
-    .INIT(64'h57FFFFEAA8000115)) 
-    \rStoredData[0]_i_66 
+    .INIT(64'h5AF078F0F0E1F1A5)) 
+    \rStoredData[0]_i_62 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_62_n_0 ));
+  LUT6 #(
+    .INIT(64'h7655579581A888AA)) 
+    \rStoredData[0]_i_63 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_63_n_0 ));
+  LUT6 #(
+    .INIT(64'hC4DC9DBD392B2362)) 
+    \rStoredData[0]_i_64 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_64_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F0F70F00F1AF0F0)) 
+    \rStoredData[0]_i_65 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_65_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F0F0F0F87F0F0F0)) 
+    \rStoredData[0]_i_66 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_66_n_0 ));
   LUT6 #(
-    .INIT(64'h3C9249E04F15AD1E)) 
+    .INIT(64'h34CF4A9D9125E10E)) 
     \rStoredData[0]_i_67 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_67_n_0 ));
   LUT6 #(
     .INIT(64'hDD8819FD297F6222)) 
@@ -1482,49 +1482,49 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_68_n_0 ));
   LUT6 #(
-    .INIT(64'hCC433B8CC533ACDD)) 
+    .INIT(64'h5969496D65A4A4B6)) 
     \rStoredData[0]_i_69 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_69_n_0 ));
   LUT6 #(
-    .INIT(64'h1FFF5FFEE001A011)) 
+    .INIT(64'h5961E5A779E5A586)) 
     \rStoredData[0]_i_70 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[0]_i_70_n_0 ));
   LUT6 #(
-    .INIT(64'h008F0000FF70FFFF)) 
+    .INIT(64'hAE7700005118FFFF)) 
     \rStoredData[0]_i_71 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[9]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_71_n_0 ));
   LUT6 #(
-    .INIT(64'h4D64995DBA9926B2)) 
+    .INIT(64'h0280C0F5FDFD3F0A)) 
     \rStoredData[0]_i_72 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_72_n_0 ));
   LUT6 #(
-    .INIT(64'hEFAEF7F751510808)) 
+    .INIT(64'h67A67577D9518888)) 
     \rStoredData[0]_i_73 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -1532,433 +1532,454 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_73_n_0 ));
   LUT6 #(
-    .INIT(64'h9BB26644D99BA266)) 
+    .INIT(64'hFFF43BBF4003CC44)) 
     \rStoredData[0]_i_74 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[9]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_74_n_0 ));
   LUT6 #(
-    .INIT(64'hB955955666AB6AB9)) 
+    .INIT(64'h919DFDFEEE6A2313)) 
     \rStoredData[0]_i_75 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_75_n_0 ));
   LUT6 #(
-    .INIT(64'hE675599AAE675599)) 
+    .INIT(64'hFE6A22031195DDFC)) 
     \rStoredData[0]_i_76 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_76_n_0 ));
   LUT6 #(
-    .INIT(64'h157F15FEEA81A801)) 
+    .INIT(64'h11D5DDFCEA2A2A33)) 
     \rStoredData[0]_i_77 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_77_n_0 ));
   LUT6 #(
-    .INIT(64'hA665AA6659995559)) 
+    .INIT(64'hAA2A55D43757C088)) 
     \rStoredData[0]_i_78 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_78_n_0 ));
   LUT6 #(
-    .INIT(64'hA0007FFE80017FFE)) 
+    .INIT(64'h008088A9FF7F7F66)) 
     \rStoredData[0]_i_79 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_79_n_0 ));
   LUT6 #(
-    .INIT(64'h2665AA66599B55D9)) 
+    .INIT(64'h7220E2A21DDF1D5D)) 
     \rStoredData[0]_i_80 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_80_n_0 ));
   LUT6 #(
-    .INIT(64'h3F00000080FFFFFF)) 
+    .INIT(64'h8FE0A0E0705F7F1F)) 
     \rStoredData[0]_i_81 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[9]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_81_n_0 ));
   LUT6 #(
-    .INIT(64'h665D99BA26645D99)) 
+    .INIT(64'h0F020A80C0FDF5FD)) 
     \rStoredData[0]_i_82 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_82_n_0 ));
   LUT6 #(
-    .INIT(64'h8F76601909BEEF30)) 
+    .INIT(64'h2E525141849DBBEA)) 
     \rStoredData[0]_i_83 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_83_n_0 ));
   LUT6 #(
-    .INIT(64'h10518A88EEAE75F7)) 
+    .INIT(64'h415098BCAFEF7B52)) 
     \rStoredData[0]_i_84 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_84_n_0 ));
   LUT6 #(
-    .INIT(64'hCC633BCC4333CCC3)) 
+    .INIT(64'hECEB3614EB3B44C1)) 
     \rStoredData[0]_i_85 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_85_n_0 ));
   LUT6 #(
-    .INIT(64'h7655571591A888EA)) 
+    .INIT(64'h624394DC1111ECEB)) 
     \rStoredData[0]_i_86 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_86_n_0 ));
-  LUT5 #(
-    .INIT(32'h92DB496D)) 
+  LUT6 #(
+    .INIT(64'hD0953D6AFAC50527)) 
     \rStoredData[0]_i_87 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[0]_i_87_n_0 ));
   LUT6 #(
-    .INIT(64'hAB6699629DAA54B9)) 
+    .INIT(64'h81927E6C175BE9B2)) 
     \rStoredData[0]_i_88 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_88_n_0 ));
   LUT6 #(
-    .INIT(64'h778876917691EE15)) 
+    .INIT(64'hC551DAAA375EC884)) 
     \rStoredData[0]_i_89 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_89_n_0 ));
   LUT6 #(
-    .INIT(64'hC787871E878E861E)) 
+    .INIT(64'hE8A4566D0593FAA4)) 
     \rStoredData[0]_i_90 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_90_n_0 ));
   LUT6 #(
-    .INIT(64'h733C328C4DDBC9B2)) 
+    .INIT(64'hBF3F60DA9FED2039)) 
     \rStoredData[0]_i_91 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_91_n_0 ));
   LUT6 #(
-    .INIT(64'h66CC64D96499C999)) 
+    .INIT(64'h79DC86B9E5635ADC)) 
     \rStoredData[0]_i_92 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_92_n_0 ));
   LUT6 #(
-    .INIT(64'h8E9867E69C1966C6)) 
+    .INIT(64'h9854D0342FC1BFD2)) 
     \rStoredData[0]_i_93 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_93_n_0 ));
   LUT6 #(
-    .INIT(64'hF3C7C3CE1C313833)) 
+    .INIT(64'h5A9CF944A5231A9C)) 
     \rStoredData[0]_i_94 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_94_n_0 ));
   LUT6 #(
-    .INIT(64'hDCCC33BD0333CC40)) 
+    .INIT(64'hC836EE54C9B6A159)) 
     \rStoredData[0]_i_95 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_95_n_0 ));
   LUT6 #(
-    .INIT(64'h4D2C6D2434B2B2D3)) 
+    .INIT(64'h8913F2A41479A993)) 
     \rStoredData[0]_i_96 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_96_n_0 ));
   LUT6 #(
-    .INIT(64'hA696869A965A9659)) 
+    .INIT(64'hC5713A81256BCA1E)) 
     \rStoredData[0]_i_97 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_97_n_0 ));
   LUT6 #(
-    .INIT(64'hA515055F7AA8EAA5)) 
+    .INIT(64'hA9B65E6C05DBE8A6)) 
     \rStoredData[0]_i_98 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_98_n_0 ));
   LUT6 #(
-    .INIT(64'h44EE11EF12E53C12)) 
+    .INIT(64'h3FB8B7F0402D483A)) 
     \rStoredData[0]_i_99 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_99_n_0 ));
   LUT6 #(
-    .INIT(64'h2D2F2D2DBD2DB42D)) 
+    .INIT(64'hBD962B2939B56269)) 
     \rStoredData[1]_i_100 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_100_n_0 ));
   LUT6 #(
-    .INIT(64'h088C88CCEEF7EF77)) 
+    .INIT(64'h756A889D10A3AF46)) 
     \rStoredData[1]_i_101 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_101_n_0 ));
   LUT6 #(
-    .INIT(64'h5F0F4F0505A020B0)) 
+    .INIT(64'hB5D22F9D2DD50A2D)) 
     \rStoredData[1]_i_102 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[8]),
         .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_102_n_0 ));
   LUT6 #(
-    .INIT(64'hE666777731111998)) 
+    .INIT(64'hA2A6A6266545655D)) 
     \rStoredData[1]_i_103 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_103_n_0 ));
   LUT6 #(
-    .INIT(64'h98888EEEE6E67777)) 
+    .INIT(64'h1555AA8857EA5555)) 
     \rStoredData[1]_i_104 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_104_n_0 ));
   LUT6 #(
-    .INIT(64'h5075EFAFF5F78A0A)) 
+    .INIT(64'h69495BDB4949DBDA)) 
     \rStoredData[1]_i_105 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_105_n_0 ));
-  LUT6 #(
-    .INIT(64'hFBBBB2222004444D)) 
-    \rStoredData[1]_i_106 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_105_n_0 ));
+  LUT6 #(
+    .INIT(64'hD99B99BBBA262266)) 
+    \rStoredData[1]_i_106 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_106_n_0 ));
   LUT6 #(
-    .INIT(64'h080000F0F0FFF3FF)) 
+    .INIT(64'hDA5F45255D55A0A2)) 
     \rStoredData[1]_i_107 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_107_n_0 ));
-  LUT5 #(
-    .INIT(32'hBFF55040)) 
-    \rStoredData[1]_i_108 
-       (.I0(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_108_n_0 ));
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_107_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000FFFFFFFF4)) 
-    \rStoredData[1]_i_109 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[6]),
+    .INIT(64'hAAAEE66775555119)) 
+    \rStoredData[1]_i_108 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[1]_i_108_n_0 ));
+  LUT6 #(
+    .INIT(64'hC4CCCC3C3C333B33)) 
+    \rStoredData[1]_i_109 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_109_n_0 ));
   LUT6 #(
-    .INIT(64'h004F0000FFB0FFFF)) 
+    .INIT(64'h9AAA6664A6A65555)) 
     \rStoredData[1]_i_110 
-       (.I0(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_110_n_0 ));
-  LUT6 #(
-    .INIT(64'hAA67551955558AAA)) 
+  LUT5 #(
+    .INIT(32'h33333336)) 
     \rStoredData[1]_i_111 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_111_n_0 ));
+  LUT6 #(
+    .INIT(64'h000008AFFFFFF751)) 
+    \rStoredData[1]_i_112 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_111_n_0 ));
-  LUT6 #(
-    .INIT(64'h555D5D59BAAAAAA2)) 
-    \rStoredData[1]_i_112 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_112_n_0 ));
   LUT6 #(
-    .INIT(64'h331CCC9B22774898)) 
+    .INIT(64'hAAEF7511FFF70000)) 
     \rStoredData[1]_i_113 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_113_n_0 ));
-  LUT6 #(
-    .INIT(64'h8ACAD2D7F7F53520)) 
-    \rStoredData[1]_i_114 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_114_n_0 ));
-  LUT6 #(
-    .INIT(64'h400AFDD0AFAF5000)) 
-    \rStoredData[1]_i_115 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_113_n_0 ));
+  LUT6 #(
+    .INIT(64'h5A1A5A1E0E8F8F87)) 
+    \rStoredData[1]_i_114 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_114_n_0 ));
+  LUT6 #(
+    .INIT(64'h1090EEEA9DEF3B10)) 
+    \rStoredData[1]_i_115 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_115_n_0 ));
   LUT6 #(
-    .INIT(64'h555546EAAAAB9D55)) 
+    .INIT(64'hBB8C3333CC45ACCC)) 
     \rStoredData[1]_i_116 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_116_n_0 ));
+  LUT6 #(
+    .INIT(64'hEA55A57AAA5285AA)) 
+    \rStoredData[1]_i_117 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[1]_i_117_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F1E58F00E1A78F0)) 
+    \rStoredData[1]_i_118 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_118_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[1]_i_2 
@@ -1970,53 +1991,13 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(\rStoredData[1]_i_6_n_0 ),
         .O(p_1_in[1]));
   LUT6 #(
-    .INIT(64'hFEFEFFFF00010000)) 
-    \rStoredData[1]_i_23 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[1]_i_23_n_0 ));
-  LUT6 #(
-    .INIT(64'h0BF5FF00FF00FF00)) 
-    \rStoredData[1]_i_24 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_24_n_0 ));
-  LUT6 #(
-    .INIT(64'h3333CCCCBCCCCCCC)) 
-    \rStoredData[1]_i_25 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_25_n_0 ));
-  LUT6 #(
-    .INIT(64'h334CCCCC32CCCCCC)) 
-    \rStoredData[1]_i_26 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[1]_i_26_n_0 ));
-  LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[1]_i_3 
-       (.I0(\rStoredData[1]_i_7_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_7_n_0 ),
         .I1(\rStoredData_reg[1]_i_8_n_0 ),
-        .I2(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[7]),
         .I3(\rStoredData_reg[1]_i_9_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[8]),
         .I5(\rStoredData_reg[1]_i_10_n_0 ),
         .O(p_0_out[1]));
   LUT6 #(
@@ -2034,40 +2015,60 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
     \rStoredData[1]_i_5 
        (.I0(\rStoredData_reg[1]_i_15_n_0 ),
         .I1(\rStoredData_reg[1]_i_16_n_0 ),
-        .I2(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[0]),
         .I3(\rStoredData_reg[1]_i_17_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[6]),
         .I5(\rStoredData_reg[1]_i_18_n_0 ),
         .O(\rStoredData[1]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hF7F5F7751008080A)) 
-    \rStoredData[1]_i_57 
+    .INIT(64'h9AA696A692A696A5)) 
+    \rStoredData[1]_i_55 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_55_n_0 ));
+  LUT6 #(
+    .INIT(64'hAF5AAA580A501A75)) 
+    \rStoredData[1]_i_56 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_56_n_0 ));
+  LUT6 #(
+    .INIT(64'h23DDFF00FF00FF00)) 
+    \rStoredData[1]_i_57 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_57_n_0 ));
   LUT6 #(
-    .INIT(64'h98AA8AAEE6757755)) 
+    .INIT(64'hFFFCFFFF00010000)) 
     \rStoredData[1]_i_58 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[1]_i_58_n_0 ));
   LUT6 #(
-    .INIT(64'h9999AAAAA2666665)) 
+    .INIT(64'hA5A4A6969E1A1B5B)) 
     \rStoredData[1]_i_59 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_59_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -2080,538 +2081,518 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(\rStoredData_reg[1]_i_22_n_0 ),
         .O(\rStoredData[1]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hAFAA0A1A5A585075)) 
+    .INIT(64'h1FA0FF00FF00FE11)) 
     \rStoredData[1]_i_60 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_60_n_0 ));
   LUT6 #(
-    .INIT(64'h66444CCDDDD9999B)) 
+    .INIT(64'hCCCDCDCD9393B333)) 
     \rStoredData[1]_i_61 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_61_n_0 ));
   LUT6 #(
-    .INIT(64'hA0807FFF0515AAA0)) 
+    .INIT(64'h6C4CCCCCCCCDCDC9)) 
     \rStoredData[1]_i_62 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_62_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCCCDDD9B933333)) 
+    .INIT(64'hFF77F7551008008A)) 
     \rStoredData[1]_i_63 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_63_n_0 ));
   LUT6 #(
-    .INIT(64'h6C4CCCCCCCCCCDD9)) 
+    .INIT(64'h98E68A77AA75AE55)) 
     \rStoredData[1]_i_64 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_64_n_0 ));
   LUT6 #(
-    .INIT(64'h2EFD389C8176733C)) 
+    .INIT(64'h334C32CCCCCCCCCC)) 
     \rStoredData[1]_i_65 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_65_n_0 ));
   LUT6 #(
-    .INIT(64'hD2F5D5B52D2A280A)) 
+    .INIT(64'h3B3C3C3CCCCCCCCC)) 
     \rStoredData[1]_i_66 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[1]_i_66_n_0 ));
+  LUT6 #(
+    .INIT(64'h2387F973E813DC6C)) 
+    \rStoredData[1]_i_67 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_67_n_0 ));
+  LUT6 #(
+    .INIT(64'hD2F5D5B52D2A280A)) 
+    \rStoredData[1]_i_68 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_66_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAA954669115EABB)) 
-    \rStoredData[1]_i_67 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_67_n_0 ));
-  LUT6 #(
-    .INIT(64'h1FFFFFFEA0000011)) 
-    \rStoredData[1]_i_68 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_68_n_0 ));
   LUT6 #(
-    .INIT(64'h0B00FFFFFCFF0000)) 
+    .INIT(64'h66444CCDDDD9999B)) 
     \rStoredData[1]_i_69 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_69_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[1]_i_7 
-       (.I0(\rStoredData[1]_i_23_n_0 ),
-        .I1(\rStoredData[1]_i_24_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[1]_i_25_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[1]_i_26_n_0 ),
-        .O(\rStoredData[1]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hE7557751118808AA)) 
+    .INIT(64'h88807FFF1115A8A8)) 
     \rStoredData[1]_i_70 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_70_n_0 ));
   LUT6 #(
-    .INIT(64'hEFFFFFF751000008)) 
+    .INIT(64'hBF0050FFFDFF0000)) 
     \rStoredData[1]_i_71 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_71_n_0 ));
   LUT6 #(
-    .INIT(64'hCCFF4CCC3330FB33)) 
+    .INIT(64'hA525585865785A5A)) 
     \rStoredData[1]_i_72 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_72_n_0 ));
   LUT6 #(
-    .INIT(64'hEEAA880115577FEE)) 
+    .INIT(64'h45FBDDAA55AADD22)) 
     \rStoredData[1]_i_73 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_73_n_0 ));
   LUT6 #(
-    .INIT(64'hEEF7FF7551001088)) 
+    .INIT(64'hFFFE7FFF00018880)) 
     \rStoredData[1]_i_74 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_74_n_0 ));
   LUT6 #(
-    .INIT(64'h157FFFFEEA000001)) 
+    .INIT(64'hCCB7AA55AA75AB44)) 
     \rStoredData[1]_i_75 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_75_n_0 ));
   LUT6 #(
-    .INIT(64'h51100888AAEEFFF7)) 
+    .INIT(64'hF0F0F0F1E1652D0D)) 
     \rStoredData[1]_i_76 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_76_n_0 ));
   LUT6 #(
-    .INIT(64'h0000FFFE7FFF8000)) 
+    .INIT(64'hB45A785A705A584B)) 
     \rStoredData[1]_i_77 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[1]_i_77_n_0 ));
   LUT6 #(
-    .INIT(64'hAEEF5511F7750088)) 
+    .INIT(64'h00FF15AA75AAF58A)) 
     \rStoredData[1]_i_78 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_78_n_0 ));
   LUT6 #(
-    .INIT(64'h00008FFFFFFFF000)) 
+    .INIT(64'h0F8FF0F087A6F0F0)) 
     \rStoredData[1]_i_79 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_79_n_0 ));
   LUT6 #(
-    .INIT(64'h0520A0AABAFADF5F)) 
+    .INIT(64'hAAAA555595FD6200)) 
     \rStoredData[1]_i_80 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_80_n_0 ));
   LUT6 #(
-    .INIT(64'h43CC33D53A328C22)) 
+    .INIT(64'h430B4B0B0F3C3C3C)) 
     \rStoredData[1]_i_81 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_81_n_0 ));
   LUT6 #(
-    .INIT(64'hFF5D050000A0BAFF)) 
+    .INIT(64'h0F0F0F8FCFF2D2F2)) 
     \rStoredData[1]_i_82 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_82_n_0 ));
-  LUT6 #(
-    .INIT(64'h55766EAAA9995556)) 
-    \rStoredData[1]_i_83 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_83_n_0 ));
-  LUT6 #(
-    .INIT(64'h080A080EEFF7F7F5)) 
-    \rStoredData[1]_i_84 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_84_n_0 ));
-  LUT5 #(
-    .INIT(32'hE85EA17A)) 
-    \rStoredData[1]_i_85 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_82_n_0 ));
+  LUT6 #(
+    .INIT(64'hE4B43128B5B50A4A)) 
+    \rStoredData[1]_i_83 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[1]_i_83_n_0 ));
+  LUT6 #(
+    .INIT(64'hAB3144C81544BBBB)) 
+    \rStoredData[1]_i_84 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_84_n_0 ));
+  LUT6 #(
+    .INIT(64'h585B4F4F5B4B0F8E)) 
+    \rStoredData[1]_i_85 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_85_n_0 ));
   LUT6 #(
-    .INIT(64'h0177EA001177AA11)) 
+    .INIT(64'h0F0E1E1E9AD2F2F1)) 
     \rStoredData[1]_i_86 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_86_n_0 ));
   LUT6 #(
-    .INIT(64'hA0005FFAA005FFEA)) 
+    .INIT(64'h681F0EF25E851DED)) 
     \rStoredData[1]_i_87 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_87_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFC08000033FFF)) 
+    .INIT(64'hC224BC49D46D3DDB)) 
     \rStoredData[1]_i_88 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_88_n_0 ));
   LUT6 #(
-    .INIT(64'h3C7CC3334CCB303C)) 
+    .INIT(64'h60A27A0C5F5397F6)) 
     \rStoredData[1]_i_89 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_89_n_0 ));
   LUT6 #(
-    .INIT(64'h870F871E871E0E1E)) 
+    .INIT(64'hC336C62594493CC9)) 
     \rStoredData[1]_i_90 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_90_n_0 ));
   LUT6 #(
-    .INIT(64'h5A4AD2D24A4B5252)) 
+    .INIT(64'h51006B5B8AFF560E)) 
     \rStoredData[1]_i_91 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_91_n_0 ));
   LUT6 #(
-    .INIT(64'h33CB33C33C334C34)) 
+    .INIT(64'hBD393B6396B52D69)) 
     \rStoredData[1]_i_92 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[1]_i_92_n_0 ));
   LUT6 #(
-    .INIT(64'h555566EAA9995555)) 
+    .INIT(64'h774A809E50A4AF43)) 
     \rStoredData[1]_i_93 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_93_n_0 ));
   LUT6 #(
-    .INIT(64'h59717175A5A7A7A6)) 
+    .INIT(64'h9C3DD6963923B529)) 
     \rStoredData[1]_i_94 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_94_n_0 ));
   LUT6 #(
-    .INIT(64'hF8E8F8E8175F1F5E)) 
+    .INIT(64'h68970CF25EA159AD)) 
     \rStoredData[1]_i_95 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_95_n_0 ));
   LUT6 #(
-    .INIT(64'h057FEA0005FFA005)) 
+    .INIT(64'hC2253C49D46D3DDA)) 
     \rStoredData[1]_i_96 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_96_n_0 ));
   LUT6 #(
-    .INIT(64'h9C638B728D62B660)) 
+    .INIT(64'h60825F725A0D95EC)) 
     \rStoredData[1]_i_97 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_97_n_0 ));
   LUT6 #(
-    .INIT(64'h331389E8FE339199)) 
+    .INIT(64'hC2C69C3C246D49CB)) 
     \rStoredData[1]_i_98 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[1]_i_98_n_0 ));
   LUT6 #(
-    .INIT(64'h2F00000040FFFFFF)) 
+    .INIT(64'h50E5109A8F50EF68)) 
     \rStoredData[1]_i_99 
-       (.I0(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_99_n_0 ));
+  LUT3 #(
+    .INIT(8'hE4)) 
+    \rStoredData[2]_i_1 
+       (.I0(sGammaReg[2]),
+        .I1(p_1_in[2]),
+        .I2(p_0_out[2]),
+        .O(p_0_in[2]));
   LUT6 #(
-    .INIT(64'h555555556AAAAAAA)) 
+    .INIT(64'hCCCCCCC933333333)) 
     \rStoredData[2]_i_100 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_100_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAA95555)) 
+  LUT6 #(
+    .INIT(64'hCCCCC46333333333)) 
     \rStoredData[2]_i_101 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_101_n_0 ));
   LUT6 #(
-    .INIT(64'hF8FF03000000FFFF)) 
+    .INIT(64'h6323633333333333)) 
     \rStoredData[2]_i_102 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_102_n_0 ));
   LUT6 #(
-    .INIT(64'h663333B9233B3399)) 
+    .INIT(64'h333B3B3B9D9C9CDC)) 
     \rStoredData[2]_i_103 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_103_n_0 ));
   LUT6 #(
-    .INIT(64'h07FF0000FF00FFFF)) 
+    .INIT(64'h25FAB70DFF05FA00)) 
     \rStoredData[2]_i_104 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_104_n_0 ));
-  LUT6 #(
-    .INIT(64'hAF509F055F2558A0)) 
-    \rStoredData[2]_i_105 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_104_n_0 ));
+  LUT6 #(
+    .INIT(64'hDD99D998AA26AA66)) 
+    \rStoredData[2]_i_105 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_105_n_0 ));
   LUT6 #(
-    .INIT(64'h8CDDCDDDFF22BA22)) 
+    .INIT(64'h00FF00F00FE07F00)) 
     \rStoredData[2]_i_106 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_106_n_0 ));
-  LUT5 #(
-    .INIT(32'hC73C0C3C)) 
-    \rStoredData[2]_i_107 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .O(\rStoredData[2]_i_107_n_0 ));
   LUT6 #(
-    .INIT(64'h999B993333263266)) 
-    \rStoredData[2]_i_108 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
+    .INIT(64'hF0C7F30F0F0F0F0F)) 
+    \rStoredData[2]_i_107 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_108_n_0 ));
+        .O(\rStoredData[2]_i_107_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_13 
-       (.I0(\rStoredData[2]_i_33_n_0 ),
-        .I1(\rStoredData[1]_i_25_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[2]_i_34_n_0 ),
+    \rStoredData[2]_i_14 
+       (.I0(\rStoredData[2]_i_39_n_0 ),
+        .I1(\rStoredData[2]_i_40_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[2]_i_41_n_0 ),
         .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[2]_i_35_n_0 ),
-        .O(\rStoredData[2]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_15 
-       (.I0(\rStoredData_reg[2]_i_38_n_0 ),
-        .I1(\rStoredData_reg[2]_i_39_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData_reg[2]_i_40_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_41_n_0 ),
-        .O(\rStoredData[2]_i_15_n_0 ));
+        .I5(\rStoredData[2]_i_42_n_0 ),
+        .O(\rStoredData[2]_i_14_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[2]_i_16 
-       (.I0(\rStoredData[2]_i_42_n_0 ),
-        .I1(\rStoredData_reg[2]_i_43_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData_reg[2]_i_44_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_45_n_0 ),
+       (.I0(\rStoredData[2]_i_45_n_0 ),
+        .I1(\rStoredData[2]_i_46_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[2]_i_41_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[2]_i_47_n_0 ),
         .O(\rStoredData[2]_i_16_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[2]_i_2 
        (.I0(\rStoredData[2]_i_4_n_0 ),
         .I1(s_axis_video_tdata[4]),
-        .I2(\rStoredData_reg[2]_i_5_n_0 ),
+        .I2(\rStoredData[2]_i_5_n_0 ),
         .I3(sGammaReg[1]),
         .I4(sGammaReg[0]),
         .I5(\rStoredData[2]_i_6_n_0 ),
@@ -2619,139 +2600,157 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
   LUT6 #(
     .INIT(64'h30BBFC88FF00FF00)) 
     \rStoredData[2]_i_21 
-       (.I0(\rStoredData[5]_i_32__1_n_0 ),
+       (.I0(\rStoredData[5]_i_30__1_n_0 ),
         .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[4]_i_56__1_n_0 ),
+        .I2(\rStoredData[4]_i_63_n_0 ),
         .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_26__1_n_0 ),
+        .I4(\rStoredData[2]_i_56__1_n_0 ),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_21_n_0 ));
   LUT6 #(
-    .INIT(64'hFC33FC00BB00BB00)) 
-    \rStoredData[2]_i_22 
-       (.I0(\rStoredData[2]_i_54__1_n_0 ),
+    .INIT(64'hB8BBB888B888B888)) 
+    \rStoredData[2]_i_25 
+       (.I0(\rStoredData[4]_i_23__1_n_0 ),
         .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[4]_i_43__1_n_0 ),
+        .I2(\rStoredData[5]_i_20__1_n_0 ),
         .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_21__1_n_0 ),
+        .I4(\rStoredData[5]_i_31__1_n_0 ),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_22_n_0 ));
+        .O(\rStoredData[2]_i_25_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_3 
-       (.I0(\rStoredData_reg[2]_i_7_n_0 ),
-        .I1(\rStoredData_reg[2]_i_8_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData_reg[2]_i_9_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData_reg[2]_i_10_n_0 ),
-        .O(p_0_out[2]));
+    .INIT(64'h70F070F0F5EFF0E5)) 
+    \rStoredData[2]_i_27 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[6]_i_17__1_n_0 ),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(\rStoredData[2]_i_65_n_0 ),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_27_n_0 ));
   LUT6 #(
-    .INIT(64'hFD00552240AA00FF)) 
-    \rStoredData[2]_i_33 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_33_n_0 ));
-  LUT6 #(
-    .INIT(64'h9DCCCCCCDCCCCC44)) 
-    \rStoredData[2]_i_34 
+    .INIT(64'hB9B999B95423462B)) 
+    \rStoredData[2]_i_39 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_34_n_0 ));
-  LUT6 #(
-    .INIT(64'h00FF7F00FF00FF00)) 
-    \rStoredData[2]_i_35 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_35_n_0 ));
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_39_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[2]_i_4 
-       (.I0(\rStoredData_reg[2]_i_11_n_0 ),
-        .I1(\rStoredData_reg[2]_i_12_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_9_n_0 ),
+        .I1(\rStoredData_reg[2]_i_10_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[2]_i_13_n_0 ),
+        .I3(\rStoredData_reg[2]_i_11_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_14_n_0 ),
+        .I5(\rStoredData_reg[2]_i_12_n_0 ),
         .O(\rStoredData[2]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCCCCCDD9B39B33)) 
-    \rStoredData[2]_i_42 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_42_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \rStoredData[2]_i_54__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .O(\rStoredData[2]_i_54__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFEFCFFFF00010000)) 
-    \rStoredData[2]_i_55 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_55_n_0 ));
-  LUT6 #(
-    .INIT(64'h505A524A0A0F0F0F)) 
-    \rStoredData[2]_i_56 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_56_n_0 ));
-  LUT6 #(
-    .INIT(64'hBB9D99DDBB9D99DC)) 
-    \rStoredData[2]_i_57 
+    .INIT(64'h3C9EBC243C3B9366)) 
+    \rStoredData[2]_i_40 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_40_n_0 ));
+  LUT6 #(
+    .INIT(64'h9B9999DD426B436B)) 
+    \rStoredData[2]_i_41 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_41_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CBB3C20B365934B)) 
+    \rStoredData[2]_i_42 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_42_n_0 ));
+  LUT6 #(
+    .INIT(64'hB999B9B95646233B)) 
+    \rStoredData[2]_i_45 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_45_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CBE3C38B4259362)) 
+    \rStoredData[2]_i_46 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_46_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CB33B653CD3204A)) 
+    \rStoredData[2]_i_47 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_47_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_5 
+       (.I0(\rStoredData_reg[2]_i_13_n_0 ),
+        .I1(\rStoredData[2]_i_14_n_0 ),
+        .I2(s_axis_video_tdata[0]),
+        .I3(\rStoredData_reg[2]_i_15_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[2]_i_16_n_0 ),
+        .O(\rStoredData[2]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \rStoredData[2]_i_56__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_56__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFF8FFFF00010000)) 
+    \rStoredData[2]_i_57 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_57_n_0 ));
   LUT6 #(
-    .INIT(64'h5A0A5A0A5A0A4A2F)) 
+    .INIT(64'h505A524A0A0F0F0F)) 
     \rStoredData[2]_i_58 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_58_n_0 ));
   LUT6 #(
-    .INIT(64'hF5D5D5D550505042)) 
+    .INIT(64'hDDD5DD5544444442)) 
     \rStoredData[2]_i_59 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_59_n_0 ));
@@ -2766,1209 +2765,1289 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I5(\rStoredData_reg[2]_i_20_n_0 ),
         .O(\rStoredData[2]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hAABBABBBD5555555)) 
+    .INIT(64'hAAABBBBBD5555555)) 
     \rStoredData[2]_i_60 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_60_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAAB9BD9D9D)) 
+    .INIT(64'h7CB4A5A1A2B3D2DE)) 
     \rStoredData[2]_i_61 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_61_n_0 ));
   LUT6 #(
-    .INIT(64'h2A2AAAAAAAABABAB)) 
+    .INIT(64'h6178585A7078585A)) 
     \rStoredData[2]_i_62 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[2]_i_62_n_0 ));
   LUT6 #(
-    .INIT(64'h7BAAABDDC451232E)) 
+    .INIT(64'hBB99BB9999DDDDDC)) 
     \rStoredData[2]_i_63 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_63_n_0 ));
   LUT6 #(
-    .INIT(64'h65757575188A088A)) 
+    .INIT(64'h5A5A5A4A0A0A0A2F)) 
     \rStoredData[2]_i_64 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_64_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCCD99BBDDD93322)) 
-    \rStoredData[2]_i_65 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[2]_i_65_n_0 ));
-  LUT6 #(
-    .INIT(64'h38F0F0F0F0F0F0F5)) 
-    \rStoredData[2]_i_66 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_64_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'h07)) 
+    \rStoredData[2]_i_65 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_65_n_0 ));
+  LUT6 #(
+    .INIT(64'hCC99DD33CDBBD922)) 
+    \rStoredData[2]_i_66 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[2]_i_66_n_0 ));
   LUT6 #(
-    .INIT(64'h30EFFF00FF00FF00)) 
+    .INIT(64'h38F0F0F0F0F0F0F5)) 
     \rStoredData[2]_i_67 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_67_n_0 ));
   LUT6 #(
-    .INIT(64'h000A020ABFFFFFF5)) 
+    .INIT(64'h007F0FF00FF00FF0)) 
     \rStoredData[2]_i_68 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_68_n_0 ));
+  LUT6 #(
+    .INIT(64'h3766366666EC6EEC)) 
+    \rStoredData[2]_i_69 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_69_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_7 
+       (.I0(\rStoredData[2]_i_21_n_0 ),
+        .I1(\rStoredData_reg[2]_i_22_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(\rStoredData_reg[2]_i_23_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[2]_i_24_n_0 ),
+        .O(\rStoredData[2]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h77FF77FFC8888888)) 
+    \rStoredData[2]_i_70 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_70_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE80000000)) 
+    \rStoredData[2]_i_71 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_71_n_0 ));
+  LUT6 #(
+    .INIT(64'h4466666773333333)) 
+    \rStoredData[2]_i_72 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_72_n_0 ));
+  LUT6 #(
+    .INIT(64'h66666666676B637B)) 
+    \rStoredData[2]_i_73 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_73_n_0 ));
+  LUT6 #(
+    .INIT(64'h2666666666EECCCD)) 
+    \rStoredData[2]_i_74 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_74_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F1A7AFAF0F0F0F0)) 
+    \rStoredData[2]_i_75 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_75_n_0 ));
+  LUT6 #(
+    .INIT(64'h70EFFF00FF00FF00)) 
+    \rStoredData[2]_i_76 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_76_n_0 ));
+  LUT6 #(
+    .INIT(64'hAA55BF00FF00F500)) 
+    \rStoredData[2]_i_77 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_77_n_0 ));
+  LUT6 #(
+    .INIT(64'h999C9C9CC6464646)) 
+    \rStoredData[2]_i_78 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_78_n_0 ));
+  LUT6 #(
+    .INIT(64'h9594961666666666)) 
+    \rStoredData[2]_i_79 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_79_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_8 
+       (.I0(\rStoredData[2]_i_25_n_0 ),
+        .I1(\rStoredData_reg[2]_i_26_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(\rStoredData[2]_i_27_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[2]_i_28_n_0 ),
+        .O(\rStoredData[2]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'hCD99DD80DD88D922)) 
+    \rStoredData[2]_i_80 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[2]_i_80_n_0 ));
+  LUT6 #(
+    .INIT(64'h9888C4C48CCC7777)) 
+    \rStoredData[2]_i_81 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_81_n_0 ));
+  LUT6 #(
+    .INIT(64'h9999999112662266)) 
+    \rStoredData[2]_i_82 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_82_n_0 ));
+  LUT6 #(
+    .INIT(64'hC3D35333C3D31332)) 
+    \rStoredData[2]_i_83 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[2]_i_83_n_0 ));
+  LUT6 #(
+    .INIT(64'hD4C9C33AC2D84337)) 
+    \rStoredData[2]_i_84 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_84_n_0 ));
+  LUT6 #(
+    .INIT(64'hA96DBD24952494B6)) 
+    \rStoredData[2]_i_85 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_85_n_0 ));
+  LUT6 #(
+    .INIT(64'hDCC6CC59C43393AE)) 
+    \rStoredData[2]_i_86 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_86_n_0 ));
+  LUT6 #(
+    .INIT(64'hA9BDAD956D246CA4)) 
+    \rStoredData[2]_i_87 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[2]_i_87_n_0 ));
+  LUT6 #(
+    .INIT(64'hD4C9433AC2986337)) 
+    \rStoredData[2]_i_88 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_88_n_0 ));
+  LUT6 #(
+    .INIT(64'hA995BD946C2424B6)) 
+    \rStoredData[2]_i_89 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[2]_i_89_n_0 ));
+  LUT6 #(
+    .INIT(64'hDCC5C6C8C3BA4336)) 
+    \rStoredData[2]_i_90 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_90_n_0 ));
+  LUT6 #(
+    .INIT(64'hA9B5AD956D2424A6)) 
+    \rStoredData[2]_i_91 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[2]_i_91_n_0 ));
+  LUT6 #(
+    .INIT(64'h999D99DDDDCCDCC4)) 
+    \rStoredData[2]_i_92 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_92_n_0 ));
+  LUT6 #(
+    .INIT(64'h4000AAAA0A2AFFFF)) 
+    \rStoredData[2]_i_93 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_93_n_0 ));
+  LUT6 #(
+    .INIT(64'hFF0F8F0F0F0000F0)) 
+    \rStoredData[2]_i_94 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_94_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAABBBDDDDD555)) 
+    \rStoredData[2]_i_95 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_95_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFF3FBF330000004)) 
+    \rStoredData[2]_i_96 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_68_n_0 ));
+        .O(\rStoredData[2]_i_96_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFD40000000)) 
-    \rStoredData[2]_i_69 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_69_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0FF8F0FFFFF0000)) 
-    \rStoredData[2]_i_70 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_70_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCCCCCCDD99BB333)) 
-    \rStoredData[2]_i_71 
+    .INIT(64'h666222233333333B)) 
+    \rStoredData[2]_i_97 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_71_n_0 ));
-  LUT5 #(
-    .INIT(32'h0002BFFF)) 
-    \rStoredData[2]_i_72 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_72_n_0 ));
+        .O(\rStoredData[2]_i_97_n_0 ));
   LUT6 #(
-    .INIT(64'h24CCCCCC6CCCCCCD)) 
-    \rStoredData[2]_i_73 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[2]_i_73_n_0 ));
+    .INIT(64'hCBC3C3F3F3F0F0F0)) 
+    \rStoredData[2]_i_98 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_98_n_0 ));
   LUT6 #(
-    .INIT(64'h00FFCF334CFFFF00)) 
-    \rStoredData[2]_i_74 
+    .INIT(64'h334C00CC30CC00FF)) 
+    \rStoredData[2]_i_99 
        (.I0(s_axis_video_tdata[0]),
         .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[2]_i_74_n_0 ));
-  LUT6 #(
-    .INIT(64'h655D55D999AA88AA)) 
-    \rStoredData[2]_i_75 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_75_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0F0F04AF050F00F)) 
-    \rStoredData[2]_i_76 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_76_n_0 ));
-  LUT6 #(
-    .INIT(64'h9BB393B336262624)) 
-    \rStoredData[2]_i_77 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_77_n_0 ));
-  LUT6 #(
-    .INIT(64'hC4C6C4C223333333)) 
-    \rStoredData[2]_i_78 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_78_n_0 ));
-  LUT6 #(
-    .INIT(64'h33333333304C00CC)) 
-    \rStoredData[2]_i_79 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_79_n_0 ));
-  LUT6 #(
-    .INIT(64'hCFCF3333B3333330)) 
-    \rStoredData[2]_i_80 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_80_n_0 ));
-  LUT6 #(
-    .INIT(64'h000022AAABBBFFFF)) 
-    \rStoredData[2]_i_81 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_81_n_0 ));
-  LUT6 #(
-    .INIT(64'hFF55D5555400002A)) 
-    \rStoredData[2]_i_82 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_82_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFB00000000FFF)) 
-    \rStoredData[2]_i_83 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_83_n_0 ));
-  LUT5 #(
-    .INIT(32'hD40022FF)) 
-    \rStoredData[2]_i_84 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_84_n_0 ));
-  LUT6 #(
-    .INIT(64'hE586E486B2C786C6)) 
-    \rStoredData[2]_i_85 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_85_n_0 ));
-  LUT6 #(
-    .INIT(64'h66B954AAAA9944BB)) 
-    \rStoredData[2]_i_86 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_86_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAABF5D5)) 
-    \rStoredData[2]_i_87 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_87_n_0 ));
-  LUT6 #(
-    .INIT(64'h54224422AAAAAABB)) 
-    \rStoredData[2]_i_88 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_88_n_0 ));
-  LUT6 #(
-    .INIT(64'h0A0A0A0BFDFDFDFD)) 
-    \rStoredData[2]_i_89 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_89_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFEFFF0F0F000010)) 
-    \rStoredData[2]_i_90 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_90_n_0 ));
-  LUT6 #(
-    .INIT(64'hC08003337FFCCCC0)) 
-    \rStoredData[2]_i_91 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_91_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFE808001017FFF)) 
-    \rStoredData[2]_i_92 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_92_n_0 ));
-  LUT6 #(
-    .INIT(64'h9115115577667666)) 
-    \rStoredData[2]_i_93 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_93_n_0 ));
-  LUT6 #(
-    .INIT(64'h555F557EAAAAAAAA)) 
-    \rStoredData[2]_i_94 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_94_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0F0F7FFFF0F0F0)) 
-    \rStoredData[2]_i_95 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_95_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFAAEA80AA00AA55)) 
-    \rStoredData[2]_i_96 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_96_n_0 ));
-  LUT6 #(
-    .INIT(64'hFB33333330CC04CC)) 
-    \rStoredData[2]_i_97 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_97_n_0 ));
-  LUT6 #(
-    .INIT(64'h666666226666622B)) 
-    \rStoredData[2]_i_98 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[2]_i_98_n_0 ));
-  LUT5 #(
-    .INIT(32'h99955646)) 
-    \rStoredData[2]_i_99 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_99_n_0 ));
   LUT6 #(
-    .INIT(64'hEFEAE5E5EFEA4040)) 
+    .INIT(64'hEFE0FFFFEFE00000)) 
+    \rStoredData[3]_i_10 
+       (.I0(\rStoredData[3]_i_29__1_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData[5]_i_16_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[3]_i_30_n_0 ),
+        .O(\rStoredData[3]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'hEFEAE5E5E5E0E0E0)) 
     \rStoredData[3]_i_11 
        (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[3]_i_32_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[4]_i_34__1_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[3]_i_33__1_n_0 ),
+        .I1(\rStoredData[3]_i_31_n_0 ),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[4]_i_38__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[4]_i_21__1_n_0 ),
         .O(\rStoredData[3]_i_11_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_13 
+    \rStoredData[3]_i_14 
        (.I0(\rStoredData[3]_i_36_n_0 ),
-        .I1(\rStoredData[3]_i_37_n_0 ),
+        .I1(\rStoredData[4]_i_45_n_0 ),
         .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[5]_i_19__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I3(\rStoredData[3]_i_37_n_0 ),
+        .I4(s_axis_video_tdata[5]),
         .I5(\rStoredData[3]_i_38_n_0 ),
-        .O(\rStoredData[3]_i_13_n_0 ));
+        .O(\rStoredData[3]_i_14_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_17 
-       (.I0(\rStoredData[3]_i_45_n_0 ),
-        .I1(\rStoredData[3]_i_46_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData[5]_i_30_n_0 ),
+       (.I0(\rStoredData[3]_i_43_n_0 ),
+        .I1(\rStoredData[3]_i_44_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[3]_i_45_n_0 ),
         .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[3]_i_47_n_0 ),
+        .I5(\rStoredData[3]_i_46_n_0 ),
         .O(\rStoredData[3]_i_17_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_18 
-       (.I0(\rStoredData[3]_i_48_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[3]_i_49_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_50_n_0 ),
+       (.I0(\rStoredData[3]_i_47_n_0 ),
+        .I1(\rStoredData[5]_i_34_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[3]_i_48_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_23__1_n_0 ),
         .O(\rStoredData[3]_i_18_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[3]_i_2 
        (.I0(\rStoredData[3]_i_4_n_0 ),
         .I1(s_axis_video_tdata[5]),
-        .I2(\rStoredData[3]_i_5_n_0 ),
+        .I2(\rStoredData_reg[3]_i_5_n_0 ),
         .I3(sGammaReg[1]),
         .I4(sGammaReg[0]),
         .I5(\rStoredData[3]_i_6_n_0 ),
         .O(p_1_in[3]));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_21 
-       (.I0(\rStoredData[3]_i_55_n_0 ),
-        .I1(\rStoredData[3]_i_56_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[3]_i_57_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[4]_i_59__1_n_0 ),
-        .O(\rStoredData[3]_i_21_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \rStoredData[3]_i_23__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_23__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT5 #(
-    .INIT(32'hC8880000)) 
-    \rStoredData[3]_i_24__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_24__1_n_0 ));
-  LUT6 #(
     .INIT(64'hAFAFAFAF0FC000C0)) 
-    \rStoredData[3]_i_25 
-       (.I0(\rStoredData[6]_i_17__1_n_0 ),
-        .I1(\rStoredData[3]_i_60__1_n_0 ),
+    \rStoredData[3]_i_21 
+       (.I0(\rStoredData[3]_i_53__1_n_0 ),
+        .I1(\rStoredData[3]_i_54__1_n_0 ),
         .I2(s_axis_video_tdata[6]),
         .I3(s_axis_video_tdata[4]),
         .I4(\rStoredData[6]_i_18__1_n_0 ),
         .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_25_n_0 ));
+        .O(\rStoredData[3]_i_21_n_0 ));
   LUT6 #(
-    .INIT(64'h333333333F7CFCFC)) 
-    \rStoredData[3]_i_26 
+    .INIT(64'hFFFFFFFF80000000)) 
+    \rStoredData[3]_i_22 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[3]_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'h7F7FFFFFFFFFFEEE)) 
+    \rStoredData[3]_i_23 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_23_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h0000557F)) 
+    \rStoredData[3]_i_24 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_24_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \rStoredData[3]_i_26__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_26__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'hAA800000)) 
+    \rStoredData[3]_i_27__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_27__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00AF00A0FFCFFFCF)) 
+    \rStoredData[3]_i_28 
+       (.I0(\rStoredData[3]_i_57_n_0 ),
+        .I1(\rStoredData[6]_i_18__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(\rStoredData[4]_i_24__1_n_0 ),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_28_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'hFAEA0000)) 
+    \rStoredData[3]_i_29__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_29__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_3 
+       (.I0(\rStoredData_reg[3]_i_7_n_0 ),
+        .I1(\rStoredData[3]_i_8_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[3]_i_9_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .I5(\rStoredData[3]_i_10_n_0 ),
+        .O(p_0_out[3]));
+  LUT6 #(
+    .INIT(64'h03373F3FFFFFFFFF)) 
+    \rStoredData[3]_i_31 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[9]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_26_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000001FFFFFFFF)) 
-    \rStoredData[3]_i_27 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_27_n_0 ));
+        .O(\rStoredData[3]_i_31_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
-    .INIT(32'hCFCCB3B3)) 
-    \rStoredData[3]_i_28 
-       (.I0(\rStoredData[4]_i_42__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[5]_i_24__1_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_28_n_0 ));
-  LUT6 #(
-    .INIT(64'hA0F0A0F0F0CFF0C0)) 
-    \rStoredData[3]_i_29 
-       (.I0(\rStoredData[4]_i_43__1_n_0 ),
-        .I1(\rStoredData[3]_i_61__1_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[4]_i_56__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_29_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_3 
-       (.I0(\rStoredData[3]_i_7_n_0 ),
-        .I1(\rStoredData[3]_i_8_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData_reg[3]_i_9_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData_reg[3]_i_10_n_0 ),
-        .O(p_0_out[3]));
-  LUT6 #(
-    .INIT(64'h555F557FEAAAAAAA)) 
-    \rStoredData[3]_i_32 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_32_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \rStoredData[3]_i_33__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_33__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT5 #(
-    .INIT(32'h333337FC)) 
+    .INIT(32'hFFFFC880)) 
     \rStoredData[3]_i_36 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_36_n_0 ));
   LUT6 #(
-    .INIT(64'h7A6A6A6AAAAAAAAA)) 
+    .INIT(64'hFFAAAAAAEAAAAA55)) 
     \rStoredData[3]_i_37 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[3]_i_37_n_0 ));
   LUT6 #(
-    .INIT(64'h0F70F0F0F0F0F0F0)) 
+    .INIT(64'h5555555540020002)) 
     \rStoredData[3]_i_38 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_38_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_39 
+       (.I0(\rStoredData[3]_i_68_n_0 ),
+        .I1(\rStoredData[3]_i_69_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_70_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_71_n_0 ),
+        .O(\rStoredData[3]_i_39_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_4 
        (.I0(\rStoredData[3]_i_11_n_0 ),
         .I1(\rStoredData_reg[3]_i_12_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[3]_i_13_n_0 ),
+        .I3(\rStoredData_reg[3]_i_13_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[3]_i_14_n_0 ),
+        .I5(\rStoredData[3]_i_14_n_0 ),
         .O(\rStoredData[3]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hF5F5F55550505042)) 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_40 
+       (.I0(\rStoredData[3]_i_72_n_0 ),
+        .I1(\rStoredData[3]_i_73_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_74_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_75_n_0 ),
+        .O(\rStoredData[3]_i_40_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_41 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(\rStoredData[3]_i_76_n_0 ),
+        .I1(\rStoredData[3]_i_77_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_70_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_78_n_0 ),
         .O(\rStoredData[3]_i_41_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAABB99B99D)) 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_42 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
+       (.I0(\rStoredData[3]_i_79_n_0 ),
+        .I1(\rStoredData[3]_i_80_n_0 ),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
+        .I3(\rStoredData[3]_i_74_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_81_n_0 ),
         .O(\rStoredData[3]_i_42_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[3]_i_45 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_45_n_0 ));
   LUT6 #(
-    .INIT(64'h01111111FFFFFFFF)) 
-    \rStoredData[3]_i_46 
+    .INIT(64'hFFFFFFFFAAAAA888)) 
+    \rStoredData[3]_i_43 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_43_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT4 #(
+    .INIT(16'h01FF)) 
+    \rStoredData[3]_i_44 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_44_n_0 ));
+  LUT6 #(
+    .INIT(64'hFF000000C80000FF)) 
+    \rStoredData[3]_i_45 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_45_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFA8880000)) 
+    \rStoredData[3]_i_46 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[3]_i_46_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAA880001115555)) 
+    .INIT(64'h0F0F0F0F7FFFFFF0)) 
     \rStoredData[3]_i_47 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_47_n_0 ));
   LUT6 #(
-    .INIT(64'h333333BB33339CCC)) 
+    .INIT(64'hAAAAAAA811111115)) 
     \rStoredData[3]_i_48 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_48_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT5 #(
-    .INIT(32'h2BF5ABF4)) 
-    \rStoredData[3]_i_49 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_49_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_5 
-       (.I0(\rStoredData_reg[3]_i_15_n_0 ),
-        .I1(\rStoredData_reg[3]_i_16_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[3]_i_17_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[3]_i_18_n_0 ),
-        .O(\rStoredData[3]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000FAAA555FB5F0)) 
-    \rStoredData[3]_i_50 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_50_n_0 ));
-  LUT6 #(
-    .INIT(64'h57770000FFFFFFFF)) 
-    \rStoredData[3]_i_55 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_55_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFF5FDF550004000)) 
-    \rStoredData[3]_i_56 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_56_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT5 #(
-    .INIT(32'h000010FF)) 
-    \rStoredData[3]_i_57 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_57_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_6 
-       (.I0(\rStoredData_reg[3]_i_19_n_0 ),
-        .I1(\rStoredData_reg[3]_i_20_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[3]_i_21_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[3]_i_22_n_0 ),
-        .O(\rStoredData[3]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    \rStoredData[3]_i_60__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_60__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT4 #(
-    .INIT(16'hFFF8)) 
-    \rStoredData[3]_i_61__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .O(\rStoredData[3]_i_61__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hA222776623774558)) 
-    \rStoredData[3]_i_62 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[3]_i_62_n_0 ));
-  LUT6 #(
-    .INIT(64'h000A0A0ABFFFFFF5)) 
-    \rStoredData[3]_i_63 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_63_n_0 ));
-  LUT6 #(
-    .INIT(64'h55555555520A420A)) 
-    \rStoredData[3]_i_64 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_64_n_0 ));
-  LUT6 #(
-    .INIT(64'h9555555555555550)) 
-    \rStoredData[3]_i_65 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_65_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAB9B9B99D)) 
-    \rStoredData[3]_i_66 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_48_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'hFFFE0000)) 
+    \rStoredData[3]_i_53__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_53__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \rStoredData[3]_i_54__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_54__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555555544226222)) 
+    \rStoredData[3]_i_55 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_55_n_0 ));
+  LUT6 #(
+    .INIT(64'h9555555555555550)) 
+    \rStoredData[3]_i_56 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_56_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT4 #(
+    .INIT(16'h57FF)) 
+    \rStoredData[3]_i_57 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_57_n_0 ));
+  LUT6 #(
+    .INIT(64'hA724273526752678)) 
+    \rStoredData[3]_i_58 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[3]_i_58_n_0 ));
+  LUT6 #(
+    .INIT(64'h02220222BFFDFFFD)) 
+    \rStoredData[3]_i_59 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_59_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_6 
+       (.I0(\rStoredData[3]_i_17_n_0 ),
+        .I1(\rStoredData[3]_i_18_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData_reg[3]_i_19_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .I5(\rStoredData_reg[3]_i_20_n_0 ),
+        .O(\rStoredData[3]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000003BBB3BBF)) 
+    \rStoredData[3]_i_60 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_60_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFDD55445444)) 
+    \rStoredData[3]_i_61 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_61_n_0 ));
+  LUT6 #(
+    .INIT(64'h6222222222AAAAAB)) 
+    \rStoredData[3]_i_62 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_62_n_0 ));
+  LUT6 #(
+    .INIT(64'h999DD55555555555)) 
+    \rStoredData[3]_i_63 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_63_n_0 ));
+  LUT6 #(
+    .INIT(64'h7FF0F0F0F0F0F0F0)) 
+    \rStoredData[3]_i_64 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_64_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000005777FFFF)) 
+    \rStoredData[3]_i_65 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[3]_i_65_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEEEEAAAAAAA8888)) 
+    \rStoredData[3]_i_66 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_66_n_0 ));
   LUT5 #(
-    .INIT(32'hAAA81555)) 
+    .INIT(32'h033337FF)) 
     \rStoredData[3]_i_67 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[9]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_67_n_0 ));
   LUT6 #(
-    .INIT(64'h62AAAAAA2AAAAAAB)) 
+    .INIT(64'h15151717E8E9E9E1)) 
     \rStoredData[3]_i_68 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_68_n_0 ));
   LUT6 #(
-    .INIT(64'hC0C3830333333333)) 
+    .INIT(64'h6E6E666255563725)) 
     \rStoredData[3]_i_69 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_69_n_0 ));
   LUT6 #(
-    .INIT(64'hFCBBFC88FF88FF88)) 
-    \rStoredData[3]_i_7 
-       (.I0(\rStoredData[7]_i_8__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[3]_i_23__1_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_24__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hFD55F555400A000A)) 
+    .INIT(64'h15151757E8E9E1A1)) 
     \rStoredData[3]_i_70 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_70_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA1)) 
+  LUT6 #(
+    .INIT(64'h6E6A62625656272C)) 
     \rStoredData[3]_i_71 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_71_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCFB333)) 
-    \rStoredData[3]_i_72 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[3]_i_71_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFAEAAAA0805557)) 
+    \rStoredData[3]_i_72 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_72_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAA89999911)) 
+    .INIT(64'hAA57AA5A552F5AB5)) 
     \rStoredData[3]_i_73 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_73_n_0 ));
   LUT6 #(
-    .INIT(64'h33334CCC3000CCCC)) 
+    .INIT(64'hFEEEEAAA88815557)) 
     \rStoredData[3]_i_74 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_74_n_0 ));
   LUT6 #(
-    .INIT(64'h3333333333304CCC)) 
+    .INIT(64'hA55BA74BA669866C)) 
     \rStoredData[3]_i_75 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_75_n_0 ));
   LUT6 #(
-    .INIT(64'h5F5FAAAA5F5EAAAA)) 
+    .INIT(64'h0333FCC00337FC83)) 
     \rStoredData[3]_i_76 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_76_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
+    .INIT(64'h66EE466255563265)) 
     \rStoredData[3]_i_77 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_77_n_0 ));
   LUT6 #(
-    .INIT(64'h504040400A0A0A0A)) 
+    .INIT(64'h6E6E62625656272C)) 
     \rStoredData[3]_i_78 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_78_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAA080FFFFFFFF)) 
+    .INIT(64'hFFFAEAAAA0805555)) 
     \rStoredData[3]_i_79 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_79_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
+  LUT6 #(
+    .INIT(64'h88B8FFFF88B80000)) 
     \rStoredData[3]_i_8 
-       (.I0(\rStoredData[3]_i_25_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[3]_i_26_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_27_n_0 ),
+       (.I0(\rStoredData[3]_i_23_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[3]_i_24_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[3]_i_25_n_0 ),
         .O(\rStoredData[3]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAA80FFFFFFFF)) 
+    .INIT(64'hAA57AA5A552F52B5)) 
     \rStoredData[3]_i_80 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_80_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF01)) 
-    \rStoredData[3]_i_81 
-       (.I0(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[3]_i_80_n_0 ));
+  LUT6 #(
+    .INIT(64'hA55BA74BA669A66C)) 
+    \rStoredData[3]_i_81 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_81_n_0 ));
   LUT6 #(
-    .INIT(64'h0001555500000000)) 
+    .INIT(64'h5555555566666662)) 
     \rStoredData[3]_i_82 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_82_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFD55555554)) 
+    .INIT(64'h55555555666E666A)) 
     \rStoredData[3]_i_83 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_83_n_0 ));
-  LUT5 #(
-    .INIT(32'hBBBFFDFD)) 
+  LUT6 #(
+    .INIT(64'h55555555EEAAEAAA)) 
     \rStoredData[3]_i_84 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_84_n_0 ));
-  LUT6 #(
-    .INIT(64'h1555555500000000)) 
-    \rStoredData[3]_i_85 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_85_n_0 ));
-  LUT6 #(
-    .INIT(64'h5F0F4F0F0F2A0AAA)) 
-    \rStoredData[3]_i_86 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_84_n_0 ));
+  LUT6 #(
+    .INIT(64'h776E76EEAAAAAAAA)) 
+    \rStoredData[3]_i_85 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_85_n_0 ));
+  LUT6 #(
+    .INIT(64'hD5470F0F0F0A0A0A)) 
+    \rStoredData[3]_i_86 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_86_n_0 ));
   LUT6 #(
-    .INIT(64'hEA99BB99AB99BB99)) 
+    .INIT(64'hAAAAABBBDDDDDDDD)) 
     \rStoredData[3]_i_87 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_87_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFF08000)) 
+  LUT6 #(
+    .INIT(64'h00FF0700FF00FF00)) 
     \rStoredData[3]_i_88 
        (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_88_n_0 ));
   LUT6 #(
-    .INIT(64'h00010101777F7F7F)) 
+    .INIT(64'h333333333C4C0CCC)) 
     \rStoredData[3]_i_89 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_89_n_0 ));
   LUT6 #(
-    .INIT(64'hBBBBBBB8BBB8BBB8)) 
+    .INIT(64'hB8CCFFFFB8CC0000)) 
+    \rStoredData[3]_i_9 
+       (.I0(\rStoredData[3]_i_26__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[3]_i_27__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_28_n_0 ),
+        .O(\rStoredData[3]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
     \rStoredData[4]_i_1 
        (.I0(p_0_out[4]),
         .I1(sGammaReg[2]),
         .I2(\rStoredData[4]_i_3_n_0 ),
-        .I3(\rStoredData[4]_i_4_n_0 ),
-        .I4(\rStoredData_reg[4]_i_5_n_0 ),
-        .I5(\sGammaReg_reg[1] ),
+        .I3(\rStoredData_reg[4]_i_4_n_0 ),
+        .I4(\sGammaReg_reg[0] ),
+        .I5(\rStoredData[4]_i_5_n_0 ),
         .O(p_0_in[4]));
   LUT6 #(
-    .INIT(64'h3077304430FF30FF)) 
-    \rStoredData[4]_i_11 
-       (.I0(\rStoredData[5]_i_28_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[5]_i_29_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_25_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_11_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFC88888888)) 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[4]_i_12 
-       (.I0(\rStoredData[4]_i_26_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[4]_i_27_n_0 ),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(\rStoredData_reg[4]_i_30_n_0 ),
+        .I1(\rStoredData_reg[4]_i_31_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[4]_i_32_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData_reg[4]_i_33_n_0 ),
         .O(\rStoredData[4]_i_12_n_0 ));
   LUT6 #(
-    .INIT(64'hB888FFFFB8880000)) 
-    \rStoredData[4]_i_15 
-       (.I0(\rStoredData[5]_i_19__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[4]_i_32_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[7]),
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_13 
+       (.I0(\rStoredData[4]_i_34_n_0 ),
+        .I1(\rStoredData_reg[4]_i_31_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[4]_i_35_n_0 ),
+        .I4(s_axis_video_tdata[1]),
         .I5(\rStoredData_reg[4]_i_33_n_0 ),
+        .O(\rStoredData[4]_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'hAF0FAF00C0C0C0C0)) 
+    \rStoredData[4]_i_15 
+       (.I0(\rStoredData[4]_i_38__1_n_0 ),
+        .I1(\rStoredData[5]_i_34_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[4]_i_39__1_n_0 ),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[4]_i_15_n_0 ));
   LUT6 #(
-    .INIT(64'hAF00AF00FCFFFC00)) 
+    .INIT(64'hCCCCCCCFF3F3F3B3)) 
     \rStoredData[4]_i_16 
-       (.I0(\rStoredData[4]_i_34__1_n_0 ),
-        .I1(\rStoredData[4]_i_35__1_n_0 ),
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[7]),
         .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[7]),
-        .I4(\rStoredData[3]_i_27_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[4]_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BB3333B8BB0000)) 
-    \rStoredData[4]_i_17 
-       (.I0(\rStoredData[4]_i_36__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_37__1_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[6]_i_7_n_0 ),
-        .O(\rStoredData[4]_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \rStoredData[4]_i_17__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .O(\rStoredData[4]_i_17__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT5 #(
+    .INIT(32'h7FFFFFFF)) 
     \rStoredData[4]_i_18 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[4]_i_18_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'hFFFFFFFFFEEEAAAA)) 
     \rStoredData[4]_i_19 
-       (.I0(\rStoredData[4]_i_38_n_0 ),
-        .I1(\rStoredData[4]_i_39_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[4]_i_40_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[4]_i_41_n_0 ),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[4]_i_19_n_0 ));
   LUT6 #(
-    .INIT(64'hE5A5E0A5A5A5A5A5)) 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_2 
+       (.I0(\rStoredData[4]_i_6_n_0 ),
+        .I1(\rStoredData[4]_i_7_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[4]_i_8_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .I5(\rStoredData[4]_i_9_n_0 ),
+        .O(p_0_out[4]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT5 #(
+    .INIT(32'hFFEA0000)) 
     \rStoredData[4]_i_20 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[4]_i_42__1_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[4]_i_43__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'h00B8FFFF00B80000)) 
-    \rStoredData[4]_i_21 
-       (.I0(\rStoredData[4]_i_44_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[4]_i_45_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[4]_i_46_n_0 ),
-        .O(\rStoredData[4]_i_21_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBB888B8BBB8BB)) 
-    \rStoredData[4]_i_22 
-       (.I0(\rStoredData[4]_i_47_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_7__1_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[4]_i_48__0_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_22_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \rStoredData[4]_i_23 
-       (.I0(\rStoredData[4]_i_49_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[4]_i_50_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_51_n_0 ),
-        .O(\rStoredData[4]_i_23_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F00DFDF0F00D0D0)) 
-    \rStoredData[4]_i_24 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[4]_i_52_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData[5]_i_30_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[4]_i_53_n_0 ),
-        .O(\rStoredData[4]_i_24_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT5 #(
-    .INIT(32'h00007FFF)) 
-    \rStoredData[4]_i_25 
-       (.I0(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_20_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \rStoredData[4]_i_21__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_21__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h000057FF)) 
+    \rStoredData[4]_i_22 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_25_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'hFFFFCCC8)) 
+        .O(\rStoredData[4]_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \rStoredData[4]_i_23__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_23__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \rStoredData[4]_i_24__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_24__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h22FF22FFF0FFF000)) 
     \rStoredData[4]_i_26 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[5]),
+       (.I0(\rStoredData[4]_i_42__1_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[5]_i_21_n_0 ),
+        .I3(s_axis_video_tdata[6]),
+        .I4(\rStoredData[4]_i_43_n_0 ),
+        .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[4]_i_26_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
+  LUT6 #(
+    .INIT(64'hEAEAAAAA55005555)) 
     \rStoredData[4]_i_27 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[4]_i_44__1_n_0 ),
+        .I2(s_axis_video_tdata[4]),
+        .I3(\rStoredData[5]_i_20__1_n_0 ),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[4]_i_27_n_0 ));
   LUT6 #(
-    .INIT(64'hBBB8FF33BBB8CC00)) 
+    .INIT(64'h33BB338830883088)) 
     \rStoredData[4]_i_28 
-       (.I0(\rStoredData[4]_i_54_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_37__1_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[4]_i_55_n_0 ),
+       (.I0(\rStoredData[4]_i_45_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_46__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[4]_i_47__1_n_0 ),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[4]_i_28_n_0 ));
   LUT6 #(
-    .INIT(64'hBFC0FFFFBFC00000)) 
+    .INIT(64'hBBBBBB88B8BBB8BB)) 
     \rStoredData[4]_i_29 
-       (.I0(\rStoredData[4]_i_56__1_n_0 ),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData[4]_i_57_n_0 ),
+       (.I0(\rStoredData[4]_i_48_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_49_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[7]_i_7__1_n_0 ),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[4]_i_29_n_0 ));
   LUT6 #(
     .INIT(64'h0E020E0E0E020202)) 
@@ -3976,833 +4055,888 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
        (.I0(s_axis_video_tdata[6]),
         .I1(sGammaReg[0]),
         .I2(sGammaReg[1]),
-        .I3(\rStoredData_reg[4]_i_8_n_0 ),
+        .I3(\rStoredData_reg[4]_i_10_n_0 ),
         .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData_reg[4]_i_9_n_0 ),
+        .I5(\rStoredData_reg[4]_i_11_n_0 ),
         .O(\rStoredData[4]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFCFAFC000C000C0)) 
-    \rStoredData[4]_i_30 
-       (.I0(\rStoredData[4]_i_58__1_n_0 ),
-        .I1(\rStoredData[5]_i_35_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[4]_i_59__1_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_30_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCCCCCCFF3F3F3B3)) 
-    \rStoredData[4]_i_31 
-       (.I0(s_axis_video_tdata[2]),
+  LUT5 #(
+    .INIT(32'hCDFFCD00)) 
+    \rStoredData[4]_i_34 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_31_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT4 #(
-    .INIT(16'hFFEA)) 
-    \rStoredData[4]_i_32 
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[4]_i_58_n_0 ),
+        .O(\rStoredData[4]_i_34_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBFCF333BBFCC000)) 
+    \rStoredData[4]_i_36 
+       (.I0(\rStoredData[3]_i_24_n_0 ),
+        .I1(s_axis_video_tdata[7]),
+        .I2(\rStoredData[4]_i_61_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_62_n_0 ),
+        .O(\rStoredData[4]_i_36_n_0 ));
+  LUT6 #(
+    .INIT(64'hBCCCFFFFBCCC0000)) 
+    \rStoredData[4]_i_37 
+       (.I0(\rStoredData[4]_i_63_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(\rStoredData[4]_i_64_n_0 ),
+        .O(\rStoredData[4]_i_37_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT5 #(
+    .INIT(32'hFFFF8000)) 
+    \rStoredData[4]_i_38__1 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_32_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \rStoredData[4]_i_34__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_34__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT5 #(
-    .INIT(32'hFFFFC888)) 
-    \rStoredData[4]_i_35__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_35__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \rStoredData[4]_i_36__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_36__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT5 #(
-    .INIT(32'h00003F7F)) 
-    \rStoredData[4]_i_37__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_37__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+        .O(\rStoredData[4]_i_38__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'h0000557F)) 
-    \rStoredData[4]_i_38 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_38_n_0 ));
+    .INIT(32'hFFFFAAA8)) 
+    \rStoredData[4]_i_39__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_39__1_n_0 ));
   LUT6 #(
-    .INIT(64'hA000800000000001)) 
-    \rStoredData[4]_i_39 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_39_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[4]_i_4 
-       (.I0(\rStoredData_reg[4]_i_10_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_11_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[4]_i_12_n_0 ),
-        .I5(\sGammaReg_reg[0] ),
-        .O(\rStoredData[4]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT5 #(
-    .INIT(32'hFFFFEAAA)) 
+    .INIT(64'h636363636332723A)) 
     \rStoredData[4]_i_40 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[4]_i_40_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFAAFEAA)) 
+    .INIT(64'h57775777EAAAAAAA)) 
     \rStoredData[4]_i_41 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[4]_i_41_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'hA0800000)) 
+    \rStoredData[4]_i_42__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_42__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFC444C440)) 
+    \rStoredData[4]_i_43 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_43_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'hFFC8)) 
-    \rStoredData[4]_i_42__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_42__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \rStoredData[4]_i_43__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .O(\rStoredData[4]_i_43__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT5 #(
-    .INIT(32'h00001555)) 
-    \rStoredData[4]_i_44 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_44_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \rStoredData[4]_i_45 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_45_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFCCCCCCCC8)) 
-    \rStoredData[4]_i_46 
+    \rStoredData[4]_i_44__1 
        (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_46_n_0 ));
-  LUT6 #(
-    .INIT(64'h300C040CCCCCCCCC)) 
-    \rStoredData[4]_i_47 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_47_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'h5777FFFF)) 
-    \rStoredData[4]_i_48__0 
-       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_48__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hA889A98955555555)) 
-    \rStoredData[4]_i_49 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_49_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT5 #(
-    .INIT(32'h80033333)) 
-    \rStoredData[4]_i_50 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_50_n_0 ));
+        .O(\rStoredData[4]_i_44__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAFFF555554000)) 
-    \rStoredData[4]_i_51 
-       (.I0(s_axis_video_tdata[5]),
+    .INIT(64'h0000000F0F0F7FFF)) 
+    \rStoredData[4]_i_45 
+       (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[9]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_51_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT5 #(
-    .INIT(32'h0000007F)) 
-    \rStoredData[4]_i_52 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_52_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFEEEEEAAA)) 
-    \rStoredData[4]_i_53 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_53_n_0 ));
-  LUT6 #(
-    .INIT(64'h555454540A2A2A2A)) 
-    \rStoredData[4]_i_54 
-       (.I0(s_axis_video_tdata[6]),
+        .O(\rStoredData[4]_i_45_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \rStoredData[4]_i_46__1 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_54_n_0 ));
-  LUT6 #(
-    .INIT(64'hFEEEFFFF00000000)) 
-    \rStoredData[4]_i_55 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_55_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_46__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
-    .INIT(16'h07FF)) 
-    \rStoredData[4]_i_56__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_56__1_n_0 ));
+    .INIT(16'hFFFE)) 
+    \rStoredData[4]_i_47__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_47__1_n_0 ));
   LUT6 #(
-    .INIT(64'h001FFFFFFFF00000)) 
-    \rStoredData[4]_i_57 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
+    .INIT(64'h0037FFFFC0000000)) 
+    \rStoredData[4]_i_48 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_57_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_48_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
-    .INIT(32'hFFFF8000)) 
-    \rStoredData[4]_i_58__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
+    .INIT(32'h557FFFFF)) 
+    \rStoredData[4]_i_49 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_58__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT5 #(
-    .INIT(32'hFFFFCCC8)) 
-    \rStoredData[4]_i_59__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_59__1_n_0 ));
+        .O(\rStoredData[4]_i_49_n_0 ));
   LUT6 #(
-    .INIT(64'h666663733333322A)) 
-    \rStoredData[4]_i_60 
+    .INIT(64'hEEE222E200000000)) 
+    \rStoredData[4]_i_5 
+       (.I0(\rStoredData_reg[4]_i_14_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[4]_i_15_n_0 ),
+        .I3(s_axis_video_tdata[8]),
+        .I4(\rStoredData[4]_i_16_n_0 ),
+        .I5(\sGammaReg_reg[1] ),
+        .O(\rStoredData[4]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AA888155)) 
+    \rStoredData[4]_i_50 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_50_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FFFF01FF)) 
+    \rStoredData[4]_i_51 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_51_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AA880155)) 
+    \rStoredData[4]_i_52 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_52_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FFFE5557)) 
+    \rStoredData[4]_i_53 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_60_n_0 ));
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_53_n_0 ));
   LUT6 #(
-    .INIT(64'h555F55FFEAAAAAAA)) 
-    \rStoredData[4]_i_61 
+    .INIT(64'h3F3FFF3F33C337F0)) 
+    \rStoredData[4]_i_54 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_54_n_0 ));
+  LUT6 #(
+    .INIT(64'hE0E0E0E05F5E7E7E)) 
+    \rStoredData[4]_i_55 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_55_n_0 ));
+  LUT6 #(
+    .INIT(64'h3F3FFF3F33C33FB0)) 
+    \rStoredData[4]_i_56 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_56_n_0 ));
+  LUT6 #(
+    .INIT(64'hE0E0E0A05F5E7E7E)) 
+    \rStoredData[4]_i_57 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_57_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AAA88155)) 
+    \rStoredData[4]_i_58 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_58_n_0 ));
+  LUT6 #(
+    .INIT(64'h7577F7F759595D7C)) 
+    \rStoredData[4]_i_59 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_59_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAAAA8)) 
+    \rStoredData[4]_i_6 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(\rStoredData[4]_i_17__1_n_0 ),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hFC00FC0033FF37FC)) 
+    \rStoredData[4]_i_60 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_60_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT5 #(
+    .INIT(32'hFFEA0000)) 
+    \rStoredData[4]_i_61 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
         .O(\rStoredData[4]_i_61_n_0 ));
   LUT6 #(
-    .INIT(64'hBBBBBBBBBBBBBBB8)) 
+    .INIT(64'h0000FFFF57FF0000)) 
+    \rStoredData[4]_i_62 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_62_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT4 #(
+    .INIT(16'h15FF)) 
+    \rStoredData[4]_i_63 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_63_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F1F0FF0F0F0F0F0)) 
+    \rStoredData[4]_i_64 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_64_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_7 
+       (.I0(\rStoredData[4]_i_18_n_0 ),
+        .I1(\rStoredData[4]_i_19_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[5]_i_18_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_20_n_0 ),
+        .O(\rStoredData[4]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hB8333333B8330000)) 
+    \rStoredData[4]_i_8 
+       (.I0(\rStoredData[4]_i_21__1_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[4]_i_22_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_23__1_n_0 ),
+        .O(\rStoredData[4]_i_8_n_0 ));
+  LUT6 #(
+    .INIT(64'h005DFFFF005D0000)) 
+    \rStoredData[4]_i_9 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[4]_i_24__1_n_0 ),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[6]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[4]_i_25_n_0 ),
+        .O(\rStoredData[4]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
     \rStoredData[5]_i_1 
        (.I0(p_0_out[5]),
         .I1(sGammaReg[2]),
         .I2(\rStoredData[5]_i_3_n_0 ),
-        .I3(\rStoredData[5]_i_4_n_0 ),
-        .I4(\rStoredData[5]_i_5_n_0 ),
-        .I5(\rStoredData[5]_i_6_n_0 ),
+        .I3(\rStoredData_reg[5]_i_4_n_0 ),
+        .I4(\sGammaReg_reg[0] ),
+        .I5(\rStoredData[5]_i_5_n_0 ),
         .O(p_0_in[5]));
-  LUT6 #(
-    .INIT(64'h55040504FFFFFFFF)) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \rStoredData[5]_i_10 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_24__1_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_25__0_n_0 ),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(\rStoredData[5]_i_25_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[5]_i_26_n_0 ),
         .O(\rStoredData[5]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF15555555)) 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[5]_i_11 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(\rStoredData[5]_i_26__1_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
+       (.I0(\rStoredData[5]_i_27_n_0 ),
+        .I1(\rStoredData[5]_i_25_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[5]_i_28_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData[5]_i_29_n_0 ),
         .O(\rStoredData[5]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'h88BB88BBB8BBB888)) 
+    .INIT(64'hF3F3B3B330303000)) 
     \rStoredData[5]_i_12 
-       (.I0(\rStoredData[6]_i_12_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[5]_i_27_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[5]_i_28_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_12_n_0 ));
-  LUT4 #(
-    .INIT(16'hFCBB)) 
-    \rStoredData[5]_i_13 
-       (.I0(\rStoredData[5]_i_29_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[5]_i_30_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'hFF55FF55EA55EA00)) 
-    \rStoredData[5]_i_14 
-       (.I0(s_axis_video_tdata[9]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(\rStoredData[5]_i_28_n_0 ),
-        .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_31_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'hFBFB333333300000)) 
-    \rStoredData[5]_i_15 
-       (.I0(\rStoredData[5]_i_32__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[5]_i_21__1_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'h8383330333333333)) 
-    \rStoredData[5]_i_16 
-       (.I0(\rStoredData[5]_i_32__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[5]_i_33_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0FFF0F0AF8FAF8F)) 
-    \rStoredData[5]_i_17 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[5]_i_34_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_35_n_0 ),
-        .I5(s_axis_video_tdata[7]),
-        .O(\rStoredData[5]_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'h8080000003033303)) 
-    \rStoredData[5]_i_18 
-       (.I0(\rStoredData[5]_i_36__1_n_0 ),
+       (.I0(\rStoredData[5]_i_30__1_n_0 ),
         .I1(s_axis_video_tdata[7]),
         .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[5]_i_24__1_n_0 ),
+        .I3(\rStoredData[5]_i_31__1_n_0 ),
         .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_18_n_0 ));
+        .O(\rStoredData[5]_i_12_n_0 ));
   LUT6 #(
-    .INIT(64'h000000007FFFFFFF)) 
-    \rStoredData[5]_i_19__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_19__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hB833B83333333300)) 
-    \rStoredData[5]_i_20 
-       (.I0(\rStoredData[6]_i_18__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[5]_i_24__1_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_32__1_n_0 ),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_20_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'hC080)) 
-    \rStoredData[5]_i_21__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .O(\rStoredData[5]_i_21__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFEAFAEA00000000)) 
-    \rStoredData[5]_i_22 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_37__1_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_38__1_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_22_n_0 ));
-  LUT6 #(
-    .INIT(64'hC0C08080FCCCCCCC)) 
-    \rStoredData[5]_i_23 
-       (.I0(\rStoredData[7]_i_10__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
+    .INIT(64'h8383330333333333)) 
+    \rStoredData[5]_i_13 
+       (.I0(\rStoredData[5]_i_30__1_n_0 ),
+        .I1(s_axis_video_tdata[7]),
         .I2(s_axis_video_tdata[5]),
         .I3(\rStoredData[5]_i_32__1_n_0 ),
         .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
-        .O(\rStoredData[5]_i_23_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \rStoredData[5]_i_24__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .O(\rStoredData[5]_i_24__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT3 #(
-    .INIT(8'h07)) 
-    \rStoredData[5]_i_25__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_25__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \rStoredData[5]_i_26__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .O(\rStoredData[5]_i_26__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \rStoredData[5]_i_27 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_27_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \rStoredData[5]_i_28 
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'hF0FFF0F0EF0FEF0F)) 
+    \rStoredData[5]_i_14 
+       (.I0(\rStoredData[5]_i_33_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[6]),
+        .I4(\rStoredData[5]_i_34_n_0 ),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_14_n_0 ));
+  LUT6 #(
+    .INIT(64'hFAEAAAAA00000000)) 
+    \rStoredData[5]_i_15__1 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_28_n_0 ));
-  LUT6 #(
-    .INIT(64'hFEEEEEEE00000000)) 
-    \rStoredData[5]_i_29 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_29_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[5]_i_3 
-       (.I0(\rStoredData_reg[5]_i_9_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[5]_i_10_n_0 ),
-        .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_11_n_0 ),
-        .I5(\sGammaReg_reg[0]_0 ),
-        .O(\rStoredData[5]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000111FFFFFFFF)) 
-    \rStoredData[5]_i_30 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_30_n_0 ));
+        .O(\rStoredData[5]_i_15__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEAAAAAAA00000000)) 
-    \rStoredData[5]_i_31 
+    .INIT(64'h00000001FFFFFFFF)) 
+    \rStoredData[5]_i_16 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_31_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT4 #(
-    .INIT(16'hF080)) 
-    \rStoredData[5]_i_32__1 
-       (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .O(\rStoredData[5]_i_32__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \rStoredData[5]_i_33 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_33_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \rStoredData[5]_i_34 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_34_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_16_n_0 ));
+  LUT6 #(
+    .INIT(64'hB833B83333333300)) 
+    \rStoredData[5]_i_17 
+       (.I0(\rStoredData[6]_i_18__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_24__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_30__1_n_0 ),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_17_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000007FFFFFFF)) 
+    \rStoredData[5]_i_18 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_18_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
-    .INIT(32'h000057FF)) 
-    \rStoredData[5]_i_35 
+    .INIT(32'h80000000)) 
+    \rStoredData[5]_i_19 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_35_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \rStoredData[5]_i_36__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .O(\rStoredData[5]_i_36__1_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \rStoredData[5]_i_37__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .O(\rStoredData[5]_i_37__1_n_0 ));
+        .I4(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_19_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[5]_i_38__1 
-       (.I0(s_axis_video_tdata[2]),
+    .INIT(16'h7FFF)) 
+    \rStoredData[5]_i_20__1 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_20__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h02220222AAAAAAAB)) 
+    \rStoredData[5]_i_21 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_21_n_0 ));
+  LUT6 #(
+    .INIT(64'hFEAA0000FFFFFFFF)) 
+    \rStoredData[5]_i_22 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[5]_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000A8880000)) 
+    \rStoredData[5]_i_23 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[5]_i_23_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFF0F080F000)) 
+    \rStoredData[5]_i_24 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_24_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFAAAA5555233B)) 
+    \rStoredData[5]_i_25 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_25_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8FFB800)) 
+    \rStoredData[5]_i_26 
+       (.I0(\rStoredData[5]_i_35_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[5]_i_36_n_0 ),
+        .I3(s_axis_video_tdata[1]),
+        .I4(\rStoredData[5]_i_29_n_0 ),
+        .O(\rStoredData[5]_i_26_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFAAAA55552333)) 
+    \rStoredData[5]_i_27 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_27_n_0 ));
+  LUT6 #(
+    .INIT(64'hEAAA44009995FEEE)) 
+    \rStoredData[5]_i_29 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_29_n_0 ));
+  LUT5 #(
+    .INIT(32'h31223100)) 
+    \rStoredData[5]_i_3 
+       (.I0(sGammaReg[0]),
+        .I1(sGammaReg[1]),
+        .I2(\rStoredData[5]_i_8_n_0 ),
+        .I3(s_axis_video_tdata[7]),
+        .I4(\rStoredData[5]_i_9_n_0 ),
+        .O(\rStoredData[5]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT4 #(
+    .INIT(16'hEA00)) 
+    \rStoredData[5]_i_30__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[5]_i_30__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'hC800)) 
+    \rStoredData[5]_i_31__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_38__1_n_0 ));
+        .O(\rStoredData[5]_i_31__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
-    .INIT(8'h02)) 
-    \rStoredData[5]_i_4 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(sGammaReg[1]),
-        .I2(sGammaReg[0]),
-        .O(\rStoredData[5]_i_4_n_0 ));
+    .INIT(8'h1F)) 
+    \rStoredData[5]_i_32__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[3]),
+        .O(\rStoredData[5]_i_32__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \rStoredData[5]_i_33 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_33_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h000057FF)) 
+    \rStoredData[5]_i_34 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_34_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT5 #(
+    .INIT(32'hFFE000FF)) 
+    \rStoredData[5]_i_35 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_35_n_0 ));
+  LUT6 #(
+    .INIT(64'hC000CC003337FCCC)) 
+    \rStoredData[5]_i_36 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_36_n_0 ));
+  LUT6 #(
+    .INIT(64'hC000CC803337FCCC)) 
+    \rStoredData[5]_i_37 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_37_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFE000000FFFF)) 
+    \rStoredData[5]_i_38 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_38_n_0 ));
   LUT6 #(
     .INIT(64'hFFE200E200000000)) 
     \rStoredData[5]_i_5 
        (.I0(\rStoredData[5]_i_12_n_0 ),
-        .I1(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[8]),
         .I2(\rStoredData[5]_i_13_n_0 ),
-        .I3(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[9]),
         .I4(\rStoredData[5]_i_14_n_0 ),
-        .I5(\sGammaReg_reg[0] ),
+        .I5(\sGammaReg_reg[1] ),
         .O(\rStoredData[5]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFFE200E200000000)) 
+    .INIT(64'hCCFCBB33CCFC8800)) 
     \rStoredData[5]_i_6 
-       (.I0(\rStoredData[5]_i_15_n_0 ),
+       (.I0(\rStoredData[5]_i_15__1_n_0 ),
         .I1(s_axis_video_tdata[8]),
         .I2(\rStoredData[5]_i_16_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_17_n_0 ),
-        .I5(\sGammaReg_reg[1] ),
-        .O(\rStoredData[5]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBBBBBB8BB8888)) 
-    \rStoredData[5]_i_7 
-       (.I0(\rStoredData[5]_i_18_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[5]_i_19__1_n_0 ),
         .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData[5]_i_20_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[5]_i_17_n_0 ),
+        .O(\rStoredData[5]_i_6_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFAD0D)) 
+    \rStoredData[5]_i_7 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[5]_i_18_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[5]_i_19_n_0 ),
+        .I4(s_axis_video_tdata[8]),
         .O(\rStoredData[5]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFEEEAAAAA)) 
+    .INIT(64'hA0AFA0A0EFFFEFFF)) 
     \rStoredData[5]_i_8 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(\rStoredData[5]_i_21__1_n_0 ),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[9]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(\rStoredData[5]_i_20__1_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_21_n_0 ),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[5]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFB3B3B3B0)) 
+    .INIT(64'hAFAFAFA0C000C000)) 
+    \rStoredData[5]_i_9 
+       (.I0(\rStoredData[5]_i_22_n_0 ),
+        .I1(\rStoredData[5]_i_23_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_24_n_0 ),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
+    \rStoredData[6]_i_1 
+       (.I0(p_0_out[6]),
+        .I1(sGammaReg[2]),
+        .I2(\rStoredData[6]_i_3_n_0 ),
+        .I3(\rStoredData[6]_i_4_n_0 ),
+        .I4(\sGammaReg_reg[0] ),
+        .I5(\rStoredData[6]_i_5_n_0 ),
+        .O(p_0_in[6]));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAFFFFDCCC)) 
     \rStoredData[6]_i_10 
-       (.I0(\rStoredData[6]_i_18__1_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[6]_i_19__1_n_0 ),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[6]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFAAA80000)) 
+    .INIT(64'hAAAAAAAAFFFFDCC4)) 
     \rStoredData[6]_i_11 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(\rStoredData[6]_i_20_n_0 ),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
         .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[6]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'h000000005555557F)) 
-    \rStoredData[6]_i_12 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[6]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT5 #(
-    .INIT(32'hFAEA0000)) 
+    .INIT(64'h5555777FFFFFFFFF)) 
     \rStoredData[6]_i_13 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[6]_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'h0000FFFF75FF0000)) 
+    .INIT(64'hFFFFFFFFEEEAAAAA)) 
     \rStoredData[6]_i_14 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(\rStoredData[5]_i_33_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[8]),
-        .I5(s_axis_video_tdata[7]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[6]_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAA888)) 
-    \rStoredData[6]_i_15 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_10__1_n_0 ),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[8]),
-        .O(\rStoredData[6]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \rStoredData[6]_i_15__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[6]_i_15__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \rStoredData[6]_i_16__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .O(\rStoredData[6]_i_16__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hFFFE0000)) 
-    \rStoredData[6]_i_17__1 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[6]_i_16__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \rStoredData[6]_i_17__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
         .O(\rStoredData[6]_i_17__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \rStoredData[6]_i_18__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[3]),
         .O(\rStoredData[6]_i_18__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \rStoredData[6]_i_19__1 
        (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
         .O(\rStoredData[6]_i_19__1_n_0 ));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
-    \rStoredData[6]_i_2 
-       (.I0(\rStoredData[6]_i_4_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[6]_i_5_n_0 ),
-        .I3(sGammaReg[1]),
-        .I4(sGammaReg[0]),
-        .I5(\rStoredData_reg[6]_i_6_n_0 ),
-        .O(p_1_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hF8)) 
+    .INIT(64'hAAAAABFFFFFF0000)) 
     \rStoredData[6]_i_20 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[6]_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFE5555FFFE0000)) 
-    \rStoredData[6]_i_3 
-       (.I0(s_axis_video_tdata[8]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[6]_i_7_n_0 ),
-        .I3(s_axis_video_tdata[7]),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[6]_i_8_n_0 ),
-        .O(p_0_out[6]));
-  LUT6 #(
-    .INIT(64'hCCEEFFFFF0000000)) 
-    \rStoredData[6]_i_4 
-       (.I0(\rStoredData[6]_i_9__1_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[6]_i_10_n_0 ),
-        .I3(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[5]),
         .I4(s_axis_video_tdata[7]),
         .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_20_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAABFFFFFF0000)) 
+    \rStoredData[6]_i_21 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(\rStoredData[6]_i_19__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_21_n_0 ));
+  LUT6 #(
+    .INIT(64'h3131333322000000)) 
+    \rStoredData[6]_i_3 
+       (.I0(sGammaReg[0]),
+        .I1(sGammaReg[1]),
+        .I2(\rStoredData[6]_i_8_n_0 ),
+        .I3(\rStoredData[6]_i_9_n_0 ),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hBF80FFFFBF800000)) 
+    \rStoredData[6]_i_4 
+       (.I0(\rStoredData[6]_i_10_n_0 ),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(\rStoredData[6]_i_11_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData_reg[6]_i_12_n_0 ),
         .O(\rStoredData[6]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hE5E0EFEFE5E0EAEA)) 
+    .INIT(64'hEE62CC6200000000)) 
     \rStoredData[6]_i_5 
        (.I0(s_axis_video_tdata[7]),
-        .I1(\rStoredData[6]_i_11_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[6]_i_12_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData[6]_i_13_n_0 ),
+        .I1(s_axis_video_tdata[8]),
+        .I2(\rStoredData[6]_i_13_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[6]_i_14_n_0 ),
+        .I5(\sGammaReg_reg[1] ),
         .O(\rStoredData[6]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
+    .INIT(64'hDDDDDDDDD8C8C888)) 
+    \rStoredData[6]_i_6 
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[6]_i_15__1_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[6]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF11115515)) 
     \rStoredData[6]_i_7 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(\rStoredData[6]_i_16__1_n_0 ),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[6]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h0FBF0FBFFFF0F0F0)) 
+    .INIT(64'hCDDDDDDDDDDDDDDD)) 
     \rStoredData[6]_i_8 
-       (.I0(\rStoredData[6]_i_16__1_n_0 ),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[7]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[6]_i_17__1_n_0 ),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(\rStoredData[6]_i_17__1_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[6]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
-    \rStoredData[6]_i_9__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[6]_i_9__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT6 #(
+    .INIT(64'hEFEFAFAA00000000)) 
+    \rStoredData[6]_i_9 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[6]_i_18__1_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[6]_i_15__1_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[6]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFC8C8C888)) 
+    \rStoredData[7]_i_10 
+       (.I0(s_axis_video_tdata[7]),
+        .I1(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[7]_i_10_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
-    .INIT(8'hC8)) 
-    \rStoredData[7]_i_10__1 
+    .INIT(8'hE0)) 
+    \rStoredData[7]_i_11__1 
        (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .O(\rStoredData[7]_i_10__1_n_0 ));
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[3]),
+        .O(\rStoredData[7]_i_11__1_n_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CAFFCA00)) 
     \rStoredData[7]_i_2 
@@ -4813,72 +4947,74 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I4(s_axis_video_tdata[9]),
         .I5(\rStoredData[7]_i_6_n_0 ),
         .O(p_1_in[7]));
-  LUT5 #(
-    .INIT(32'hFFFFEAAA)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFE000)) 
     \rStoredData[7]_i_3 
-       (.I0(s_axis_video_tdata[9]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_7__1_n_0 ),
-        .I3(s_axis_video_tdata[7]),
-        .I4(s_axis_video_tdata[8]),
-        .O(p_0_out[7]));
-  LUT5 #(
-    .INIT(32'hFFFFE000)) 
-    \rStoredData[7]_i_4 
-       (.I0(\rStoredData[7]_i_8__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[8]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[7]_i_7__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
         .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[9]),
+        .I5(s_axis_video_tdata[8]),
+        .O(p_0_out[7]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF8000000)) 
+    \rStoredData[7]_i_4 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[7]_i_8__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[7]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFCCCCC888)) 
+    .INIT(64'hFFB8FFBBFFB8CC88)) 
     \rStoredData[7]_i_5 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[8]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[7]_i_9_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[9]),
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[7]_i_9_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData[7]_i_10_n_0 ),
         .O(\rStoredData[7]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hEEEAAAAA00000000)) 
     \rStoredData[7]_i_6 
        (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_10__1_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[7]_i_11__1_n_0 ),
         .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
         .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[7]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
-    \rStoredData[7]_i_7__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[7]_i_7__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
-    \rStoredData[7]_i_8__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[7]_i_8__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+    \rStoredData[7]_i_7__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[7]_i_7__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
-    .INIT(16'hFFF8)) 
-    \rStoredData[7]_i_9 
-       (.I0(s_axis_video_tdata[1]),
+    .INIT(16'h8000)) 
+    \rStoredData[7]_i_8__1 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[7]_i_8__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FE000000)) 
+    \rStoredData[7]_i_9 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[7]_i_9_n_0 ));
   FDRE \rStoredData_reg[0] 
        (.C(StreamClk),
@@ -4895,7 +5031,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
        (.I0(\rStoredData_reg[0]_i_29_n_0 ),
         .I1(\rStoredData_reg[0]_i_30_n_0 ),
         .O(\rStoredData_reg[0]_i_10_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_11 
        (.I0(\rStoredData_reg[0]_i_31_n_0 ),
         .I1(\rStoredData_reg[0]_i_32_n_0 ),
@@ -4920,22 +5056,22 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
        (.I0(\rStoredData_reg[0]_i_39_n_0 ),
         .I1(\rStoredData_reg[0]_i_40_n_0 ),
         .O(\rStoredData_reg[0]_i_15_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_16 
        (.I0(\rStoredData_reg[0]_i_41_n_0 ),
         .I1(\rStoredData_reg[0]_i_42_n_0 ),
         .O(\rStoredData_reg[0]_i_16_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_17 
        (.I0(\rStoredData_reg[0]_i_43_n_0 ),
         .I1(\rStoredData_reg[0]_i_44_n_0 ),
         .O(\rStoredData_reg[0]_i_17_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_18 
        (.I0(\rStoredData_reg[0]_i_45_n_0 ),
         .I1(\rStoredData_reg[0]_i_46_n_0 ),
         .O(\rStoredData_reg[0]_i_18_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_19 
        (.I0(\rStoredData_reg[0]_i_47_n_0 ),
         .I1(\rStoredData_reg[0]_i_48_n_0 ),
@@ -5000,137 +5136,137 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
        (.I0(\rStoredData[0]_i_71_n_0 ),
         .I1(\rStoredData[0]_i_72_n_0 ),
         .O(\rStoredData_reg[0]_i_31_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_32 
        (.I0(\rStoredData[0]_i_73_n_0 ),
         .I1(\rStoredData[0]_i_74_n_0 ),
         .O(\rStoredData_reg[0]_i_32_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_33 
        (.I0(\rStoredData[0]_i_75_n_0 ),
         .I1(\rStoredData[0]_i_76_n_0 ),
         .O(\rStoredData_reg[0]_i_33_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_34 
        (.I0(\rStoredData[0]_i_77_n_0 ),
         .I1(\rStoredData[0]_i_78_n_0 ),
         .O(\rStoredData_reg[0]_i_34_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_35 
        (.I0(\rStoredData[0]_i_79_n_0 ),
         .I1(\rStoredData[0]_i_80_n_0 ),
         .O(\rStoredData_reg[0]_i_35_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_36 
        (.I0(\rStoredData[0]_i_81_n_0 ),
         .I1(\rStoredData[0]_i_82_n_0 ),
         .O(\rStoredData_reg[0]_i_36_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_37 
        (.I0(\rStoredData[0]_i_83_n_0 ),
         .I1(\rStoredData[0]_i_84_n_0 ),
         .O(\rStoredData_reg[0]_i_37_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_38 
        (.I0(\rStoredData[0]_i_85_n_0 ),
         .I1(\rStoredData[0]_i_86_n_0 ),
         .O(\rStoredData_reg[0]_i_38_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_39 
        (.I0(\rStoredData[0]_i_87_n_0 ),
         .I1(\rStoredData[0]_i_88_n_0 ),
         .O(\rStoredData_reg[0]_i_39_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_40 
        (.I0(\rStoredData[0]_i_89_n_0 ),
         .I1(\rStoredData[0]_i_90_n_0 ),
         .O(\rStoredData_reg[0]_i_40_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_41 
        (.I0(\rStoredData[0]_i_91_n_0 ),
         .I1(\rStoredData[0]_i_92_n_0 ),
         .O(\rStoredData_reg[0]_i_41_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_42 
        (.I0(\rStoredData[0]_i_93_n_0 ),
         .I1(\rStoredData[0]_i_94_n_0 ),
         .O(\rStoredData_reg[0]_i_42_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_43 
        (.I0(\rStoredData[0]_i_95_n_0 ),
         .I1(\rStoredData[0]_i_96_n_0 ),
         .O(\rStoredData_reg[0]_i_43_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_44 
        (.I0(\rStoredData[0]_i_97_n_0 ),
         .I1(\rStoredData[0]_i_98_n_0 ),
         .O(\rStoredData_reg[0]_i_44_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_45 
        (.I0(\rStoredData[0]_i_99_n_0 ),
         .I1(\rStoredData[0]_i_100_n_0 ),
         .O(\rStoredData_reg[0]_i_45_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_46 
        (.I0(\rStoredData[0]_i_101_n_0 ),
         .I1(\rStoredData[0]_i_102_n_0 ),
         .O(\rStoredData_reg[0]_i_46_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_47 
        (.I0(\rStoredData[0]_i_103_n_0 ),
         .I1(\rStoredData[0]_i_104_n_0 ),
         .O(\rStoredData_reg[0]_i_47_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_48 
        (.I0(\rStoredData[0]_i_105_n_0 ),
         .I1(\rStoredData[0]_i_106_n_0 ),
         .O(\rStoredData_reg[0]_i_48_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_49 
        (.I0(\rStoredData[0]_i_107_n_0 ),
         .I1(\rStoredData[0]_i_108_n_0 ),
         .O(\rStoredData_reg[0]_i_49_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_50 
        (.I0(\rStoredData[0]_i_109_n_0 ),
         .I1(\rStoredData[0]_i_110_n_0 ),
         .O(\rStoredData_reg[0]_i_50_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_51 
        (.I0(\rStoredData[0]_i_111_n_0 ),
         .I1(\rStoredData[0]_i_112_n_0 ),
         .O(\rStoredData_reg[0]_i_51_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_52 
        (.I0(\rStoredData[0]_i_113_n_0 ),
         .I1(\rStoredData[0]_i_114_n_0 ),
         .O(\rStoredData_reg[0]_i_52_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_53 
        (.I0(\rStoredData[0]_i_115_n_0 ),
         .I1(\rStoredData[0]_i_116_n_0 ),
         .O(\rStoredData_reg[0]_i_53_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_54 
        (.I0(\rStoredData[0]_i_117_n_0 ),
         .I1(\rStoredData[0]_i_118_n_0 ),
         .O(\rStoredData_reg[0]_i_54_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[0]_i_7 
        (.I0(\rStoredData_reg[0]_i_23_n_0 ),
         .I1(\rStoredData_reg[0]_i_24_n_0 ),
         .O(\rStoredData_reg[0]_i_7_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_8 
        (.I0(\rStoredData_reg[0]_i_25_n_0 ),
         .I1(\rStoredData_reg[0]_i_26_n_0 ),
         .O(\rStoredData_reg[0]_i_8_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_9 
        (.I0(\rStoredData_reg[0]_i_27_n_0 ),
         .I1(\rStoredData_reg[0]_i_28_n_0 ),
         .O(\rStoredData_reg[0]_i_9_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[1] 
        (.C(StreamClk),
         .CE(E),
@@ -5143,436 +5279,431 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .O(p_0_in[1]),
         .S(sGammaReg[2]));
   MUXF8 \rStoredData_reg[1]_i_10 
+       (.I0(\rStoredData_reg[1]_i_29_n_0 ),
+        .I1(\rStoredData_reg[1]_i_30_n_0 ),
+        .O(\rStoredData_reg[1]_i_10_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF8 \rStoredData_reg[1]_i_11 
        (.I0(\rStoredData_reg[1]_i_31_n_0 ),
         .I1(\rStoredData_reg[1]_i_32_n_0 ),
-        .O(\rStoredData_reg[1]_i_10_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[1]_i_11 
-       (.I0(\rStoredData_reg[1]_i_33_n_0 ),
-        .I1(\rStoredData_reg[1]_i_34_n_0 ),
         .O(\rStoredData_reg[1]_i_11_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[1]_i_12 
-       (.I0(\rStoredData_reg[1]_i_35_n_0 ),
-        .I1(\rStoredData_reg[1]_i_36_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_33_n_0 ),
+        .I1(\rStoredData_reg[1]_i_34_n_0 ),
         .O(\rStoredData_reg[1]_i_12_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[1]_i_13 
-       (.I0(\rStoredData_reg[1]_i_37_n_0 ),
-        .I1(\rStoredData_reg[1]_i_38_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_35_n_0 ),
+        .I1(\rStoredData_reg[1]_i_36_n_0 ),
         .O(\rStoredData_reg[1]_i_13_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[1]_i_14 
-       (.I0(\rStoredData_reg[1]_i_39_n_0 ),
-        .I1(\rStoredData_reg[1]_i_40_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_37_n_0 ),
+        .I1(\rStoredData_reg[1]_i_38_n_0 ),
         .O(\rStoredData_reg[1]_i_14_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[1]_i_15 
+       (.I0(\rStoredData_reg[1]_i_39_n_0 ),
+        .I1(\rStoredData_reg[1]_i_40_n_0 ),
+        .O(\rStoredData_reg[1]_i_15_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF8 \rStoredData_reg[1]_i_16 
        (.I0(\rStoredData_reg[1]_i_41_n_0 ),
         .I1(\rStoredData_reg[1]_i_42_n_0 ),
-        .O(\rStoredData_reg[1]_i_15_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[1]_i_16 
+        .O(\rStoredData_reg[1]_i_16_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF8 \rStoredData_reg[1]_i_17 
        (.I0(\rStoredData_reg[1]_i_43_n_0 ),
         .I1(\rStoredData_reg[1]_i_44_n_0 ),
-        .O(\rStoredData_reg[1]_i_16_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[1]_i_17 
+        .O(\rStoredData_reg[1]_i_17_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF8 \rStoredData_reg[1]_i_18 
        (.I0(\rStoredData_reg[1]_i_45_n_0 ),
         .I1(\rStoredData_reg[1]_i_46_n_0 ),
-        .O(\rStoredData_reg[1]_i_17_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[1]_i_18 
+        .O(\rStoredData_reg[1]_i_18_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF8 \rStoredData_reg[1]_i_19 
        (.I0(\rStoredData_reg[1]_i_47_n_0 ),
         .I1(\rStoredData_reg[1]_i_48_n_0 ),
-        .O(\rStoredData_reg[1]_i_18_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[1]_i_19 
-       (.I0(\rStoredData_reg[1]_i_49_n_0 ),
-        .I1(\rStoredData_reg[1]_i_50_n_0 ),
         .O(\rStoredData_reg[1]_i_19_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[1]_i_20 
-       (.I0(\rStoredData_reg[1]_i_51_n_0 ),
-        .I1(\rStoredData_reg[1]_i_52_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_49_n_0 ),
+        .I1(\rStoredData_reg[1]_i_50_n_0 ),
         .O(\rStoredData_reg[1]_i_20_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[1]_i_21 
-       (.I0(\rStoredData_reg[1]_i_53_n_0 ),
-        .I1(\rStoredData_reg[1]_i_54_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_51_n_0 ),
+        .I1(\rStoredData_reg[1]_i_52_n_0 ),
         .O(\rStoredData_reg[1]_i_21_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[1]_i_22 
-       (.I0(\rStoredData_reg[1]_i_55_n_0 ),
-        .I1(\rStoredData_reg[1]_i_56_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_53_n_0 ),
+        .I1(\rStoredData_reg[1]_i_54_n_0 ),
         .O(\rStoredData_reg[1]_i_22_n_0 ),
         .S(s_axis_video_tdata[7]));
-  MUXF7 \rStoredData_reg[1]_i_27 
+  MUXF7 \rStoredData_reg[1]_i_23 
+       (.I0(\rStoredData[1]_i_55_n_0 ),
+        .I1(\rStoredData[1]_i_56_n_0 ),
+        .O(\rStoredData_reg[1]_i_23_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_24 
        (.I0(\rStoredData[1]_i_57_n_0 ),
         .I1(\rStoredData[1]_i_58_n_0 ),
+        .O(\rStoredData_reg[1]_i_24_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_25 
+       (.I0(\rStoredData[1]_i_59_n_0 ),
+        .I1(\rStoredData[1]_i_60_n_0 ),
+        .O(\rStoredData_reg[1]_i_25_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_26 
+       (.I0(\rStoredData[1]_i_61_n_0 ),
+        .I1(\rStoredData[1]_i_62_n_0 ),
+        .O(\rStoredData_reg[1]_i_26_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_27 
+       (.I0(\rStoredData[1]_i_63_n_0 ),
+        .I1(\rStoredData[1]_i_64_n_0 ),
         .O(\rStoredData_reg[1]_i_27_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_28 
-       (.I0(\rStoredData[1]_i_59_n_0 ),
-        .I1(\rStoredData[1]_i_60_n_0 ),
+       (.I0(\rStoredData[1]_i_65_n_0 ),
+        .I1(\rStoredData[1]_i_66_n_0 ),
         .O(\rStoredData_reg[1]_i_28_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_29 
-       (.I0(\rStoredData[1]_i_61_n_0 ),
-        .I1(\rStoredData[1]_i_62_n_0 ),
+       (.I0(\rStoredData[1]_i_67_n_0 ),
+        .I1(\rStoredData[1]_i_68_n_0 ),
         .O(\rStoredData_reg[1]_i_29_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_30 
-       (.I0(\rStoredData[1]_i_63_n_0 ),
-        .I1(\rStoredData[1]_i_64_n_0 ),
+       (.I0(\rStoredData[1]_i_69_n_0 ),
+        .I1(\rStoredData[1]_i_70_n_0 ),
         .O(\rStoredData_reg[1]_i_30_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_31 
-       (.I0(\rStoredData[1]_i_65_n_0 ),
-        .I1(\rStoredData[1]_i_66_n_0 ),
-        .O(\rStoredData_reg[1]_i_31_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_32 
-       (.I0(\rStoredData[1]_i_67_n_0 ),
-        .I1(\rStoredData[1]_i_68_n_0 ),
-        .O(\rStoredData_reg[1]_i_32_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_33 
-       (.I0(\rStoredData[1]_i_69_n_0 ),
-        .I1(\rStoredData[1]_i_70_n_0 ),
-        .O(\rStoredData_reg[1]_i_33_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[1]_i_34 
        (.I0(\rStoredData[1]_i_71_n_0 ),
         .I1(\rStoredData[1]_i_72_n_0 ),
-        .O(\rStoredData_reg[1]_i_34_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[1]_i_35 
+        .O(\rStoredData_reg[1]_i_31_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_32 
        (.I0(\rStoredData[1]_i_73_n_0 ),
         .I1(\rStoredData[1]_i_74_n_0 ),
-        .O(\rStoredData_reg[1]_i_35_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[1]_i_36 
+        .O(\rStoredData_reg[1]_i_32_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_33 
        (.I0(\rStoredData[1]_i_75_n_0 ),
         .I1(\rStoredData[1]_i_76_n_0 ),
-        .O(\rStoredData_reg[1]_i_36_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[1]_i_37 
+        .O(\rStoredData_reg[1]_i_33_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_34 
        (.I0(\rStoredData[1]_i_77_n_0 ),
         .I1(\rStoredData[1]_i_78_n_0 ),
-        .O(\rStoredData_reg[1]_i_37_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[1]_i_38 
+        .O(\rStoredData_reg[1]_i_34_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_35 
        (.I0(\rStoredData[1]_i_79_n_0 ),
         .I1(\rStoredData[1]_i_80_n_0 ),
-        .O(\rStoredData_reg[1]_i_38_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[1]_i_39 
+        .O(\rStoredData_reg[1]_i_35_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_36 
        (.I0(\rStoredData[1]_i_81_n_0 ),
         .I1(\rStoredData[1]_i_82_n_0 ),
+        .O(\rStoredData_reg[1]_i_36_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_37 
+       (.I0(\rStoredData[1]_i_83_n_0 ),
+        .I1(\rStoredData[1]_i_84_n_0 ),
+        .O(\rStoredData_reg[1]_i_37_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_38 
+       (.I0(\rStoredData[1]_i_85_n_0 ),
+        .I1(\rStoredData[1]_i_86_n_0 ),
+        .O(\rStoredData_reg[1]_i_38_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[1]_i_39 
+       (.I0(\rStoredData[1]_i_87_n_0 ),
+        .I1(\rStoredData[1]_i_88_n_0 ),
         .O(\rStoredData_reg[1]_i_39_n_0 ),
         .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_40 
-       (.I0(\rStoredData[1]_i_83_n_0 ),
-        .I1(\rStoredData[1]_i_84_n_0 ),
+       (.I0(\rStoredData[1]_i_89_n_0 ),
+        .I1(\rStoredData[1]_i_90_n_0 ),
         .O(\rStoredData_reg[1]_i_40_n_0 ),
         .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_41 
-       (.I0(\rStoredData[1]_i_85_n_0 ),
-        .I1(\rStoredData[1]_i_86_n_0 ),
-        .O(\rStoredData_reg[1]_i_41_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_42 
-       (.I0(\rStoredData[1]_i_87_n_0 ),
-        .I1(\rStoredData[1]_i_88_n_0 ),
-        .O(\rStoredData_reg[1]_i_42_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_43 
-       (.I0(\rStoredData[1]_i_89_n_0 ),
-        .I1(\rStoredData[1]_i_90_n_0 ),
-        .O(\rStoredData_reg[1]_i_43_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_44 
        (.I0(\rStoredData[1]_i_91_n_0 ),
         .I1(\rStoredData[1]_i_92_n_0 ),
-        .O(\rStoredData_reg[1]_i_44_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_45 
+        .O(\rStoredData_reg[1]_i_41_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[1]_i_42 
        (.I0(\rStoredData[1]_i_93_n_0 ),
         .I1(\rStoredData[1]_i_94_n_0 ),
-        .O(\rStoredData_reg[1]_i_45_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_46 
+        .O(\rStoredData_reg[1]_i_42_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[1]_i_43 
        (.I0(\rStoredData[1]_i_95_n_0 ),
         .I1(\rStoredData[1]_i_96_n_0 ),
-        .O(\rStoredData_reg[1]_i_46_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_47 
+        .O(\rStoredData_reg[1]_i_43_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[1]_i_44 
        (.I0(\rStoredData[1]_i_97_n_0 ),
         .I1(\rStoredData[1]_i_98_n_0 ),
+        .O(\rStoredData_reg[1]_i_44_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[1]_i_45 
+       (.I0(\rStoredData[1]_i_99_n_0 ),
+        .I1(\rStoredData[1]_i_100_n_0 ),
+        .O(\rStoredData_reg[1]_i_45_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[1]_i_46 
+       (.I0(\rStoredData[1]_i_101_n_0 ),
+        .I1(\rStoredData[1]_i_102_n_0 ),
+        .O(\rStoredData_reg[1]_i_46_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[1]_i_47 
+       (.I0(\rStoredData[1]_i_103_n_0 ),
+        .I1(\rStoredData[1]_i_104_n_0 ),
         .O(\rStoredData_reg[1]_i_47_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_48 
-       (.I0(\rStoredData[1]_i_99_n_0 ),
-        .I1(\rStoredData[1]_i_100_n_0 ),
+       (.I0(\rStoredData[1]_i_105_n_0 ),
+        .I1(\rStoredData[1]_i_106_n_0 ),
         .O(\rStoredData_reg[1]_i_48_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_49 
-       (.I0(\rStoredData[1]_i_101_n_0 ),
-        .I1(\rStoredData[1]_i_102_n_0 ),
-        .O(\rStoredData_reg[1]_i_49_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[1]_i_50 
-       (.I0(\rStoredData[1]_i_103_n_0 ),
-        .I1(\rStoredData[1]_i_104_n_0 ),
-        .O(\rStoredData_reg[1]_i_50_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[1]_i_51 
-       (.I0(\rStoredData[1]_i_105_n_0 ),
-        .I1(\rStoredData[1]_i_106_n_0 ),
-        .O(\rStoredData_reg[1]_i_51_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[1]_i_52 
        (.I0(\rStoredData[1]_i_107_n_0 ),
         .I1(\rStoredData[1]_i_108_n_0 ),
-        .O(\rStoredData_reg[1]_i_52_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[1]_i_53 
+        .O(\rStoredData_reg[1]_i_49_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_50 
        (.I0(\rStoredData[1]_i_109_n_0 ),
         .I1(\rStoredData[1]_i_110_n_0 ),
-        .O(\rStoredData_reg[1]_i_53_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[1]_i_54 
+        .O(\rStoredData_reg[1]_i_50_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_51 
        (.I0(\rStoredData[1]_i_111_n_0 ),
         .I1(\rStoredData[1]_i_112_n_0 ),
-        .O(\rStoredData_reg[1]_i_54_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[1]_i_55 
+        .O(\rStoredData_reg[1]_i_51_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_52 
        (.I0(\rStoredData[1]_i_113_n_0 ),
         .I1(\rStoredData[1]_i_114_n_0 ),
-        .O(\rStoredData_reg[1]_i_55_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[1]_i_56 
+        .O(\rStoredData_reg[1]_i_52_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_53 
        (.I0(\rStoredData[1]_i_115_n_0 ),
         .I1(\rStoredData[1]_i_116_n_0 ),
-        .O(\rStoredData_reg[1]_i_56_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .O(\rStoredData_reg[1]_i_53_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[1]_i_54 
+       (.I0(\rStoredData[1]_i_117_n_0 ),
+        .I1(\rStoredData[1]_i_118_n_0 ),
+        .O(\rStoredData_reg[1]_i_54_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[1]_i_7 
+       (.I0(\rStoredData_reg[1]_i_23_n_0 ),
+        .I1(\rStoredData_reg[1]_i_24_n_0 ),
+        .O(\rStoredData_reg[1]_i_7_n_0 ),
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[1]_i_8 
+       (.I0(\rStoredData_reg[1]_i_25_n_0 ),
+        .I1(\rStoredData_reg[1]_i_26_n_0 ),
+        .O(\rStoredData_reg[1]_i_8_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF8 \rStoredData_reg[1]_i_9 
        (.I0(\rStoredData_reg[1]_i_27_n_0 ),
         .I1(\rStoredData_reg[1]_i_28_n_0 ),
-        .O(\rStoredData_reg[1]_i_8_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[1]_i_9 
-       (.I0(\rStoredData_reg[1]_i_29_n_0 ),
-        .I1(\rStoredData_reg[1]_i_30_n_0 ),
         .O(\rStoredData_reg[1]_i_9_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[2] 
        (.C(StreamClk),
         .CE(E),
         .D(p_0_in[2]),
         .Q(m_axis_video_tdata[2]),
         .R(1'b0));
-  MUXF7 \rStoredData_reg[2]_i_1 
-       (.I0(p_1_in[2]),
-        .I1(p_0_out[2]),
-        .O(p_0_in[2]),
-        .S(sGammaReg[2]));
   MUXF8 \rStoredData_reg[2]_i_10 
-       (.I0(\rStoredData_reg[2]_i_27_n_0 ),
-        .I1(\rStoredData_reg[2]_i_28_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_31_n_0 ),
+        .I1(\rStoredData_reg[2]_i_32_n_0 ),
         .O(\rStoredData_reg[2]_i_10_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_11 
-       (.I0(\rStoredData_reg[2]_i_29_n_0 ),
-        .I1(\rStoredData_reg[2]_i_30_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_33_n_0 ),
+        .I1(\rStoredData_reg[2]_i_34_n_0 ),
         .O(\rStoredData_reg[2]_i_11_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_12 
-       (.I0(\rStoredData_reg[2]_i_31_n_0 ),
-        .I1(\rStoredData_reg[2]_i_32_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_35_n_0 ),
+        .I1(\rStoredData_reg[2]_i_36_n_0 ),
         .O(\rStoredData_reg[2]_i_12_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[2]_i_14 
-       (.I0(\rStoredData_reg[2]_i_36_n_0 ),
-        .I1(\rStoredData_reg[2]_i_37_n_0 ),
-        .O(\rStoredData_reg[2]_i_14_n_0 ),
-        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[2]_i_13 
+       (.I0(\rStoredData_reg[2]_i_37_n_0 ),
+        .I1(\rStoredData_reg[2]_i_38_n_0 ),
+        .O(\rStoredData_reg[2]_i_13_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF8 \rStoredData_reg[2]_i_15 
+       (.I0(\rStoredData_reg[2]_i_43_n_0 ),
+        .I1(\rStoredData_reg[2]_i_44_n_0 ),
+        .O(\rStoredData_reg[2]_i_15_n_0 ),
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[2]_i_17 
-       (.I0(\rStoredData_reg[2]_i_46_n_0 ),
-        .I1(\rStoredData_reg[2]_i_47_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_48_n_0 ),
+        .I1(\rStoredData_reg[2]_i_49_n_0 ),
         .O(\rStoredData_reg[2]_i_17_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[2]_i_18 
-       (.I0(\rStoredData_reg[2]_i_48_n_0 ),
-        .I1(\rStoredData_reg[2]_i_49_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_50_n_0 ),
+        .I1(\rStoredData_reg[2]_i_51_n_0 ),
         .O(\rStoredData_reg[2]_i_18_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[2]_i_19 
-       (.I0(\rStoredData_reg[2]_i_50_n_0 ),
-        .I1(\rStoredData_reg[2]_i_51_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_52_n_0 ),
+        .I1(\rStoredData_reg[2]_i_53_n_0 ),
         .O(\rStoredData_reg[2]_i_19_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[2]_i_20 
-       (.I0(\rStoredData_reg[2]_i_52_n_0 ),
-        .I1(\rStoredData_reg[2]_i_53_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_54_n_0 ),
+        .I1(\rStoredData_reg[2]_i_55_n_0 ),
         .O(\rStoredData_reg[2]_i_20_n_0 ),
         .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[2]_i_22 
+       (.I0(\rStoredData[2]_i_57_n_0 ),
+        .I1(\rStoredData[2]_i_58_n_0 ),
+        .O(\rStoredData_reg[2]_i_22_n_0 ),
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_23 
-       (.I0(\rStoredData[2]_i_55_n_0 ),
-        .I1(\rStoredData[2]_i_56_n_0 ),
+       (.I0(\rStoredData[2]_i_59_n_0 ),
+        .I1(\rStoredData[2]_i_60_n_0 ),
         .O(\rStoredData_reg[2]_i_23_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_24 
-       (.I0(\rStoredData[2]_i_57_n_0 ),
-        .I1(\rStoredData[2]_i_58_n_0 ),
-        .O(\rStoredData_reg[2]_i_24_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_25 
-       (.I0(\rStoredData[2]_i_59_n_0 ),
-        .I1(\rStoredData[2]_i_60_n_0 ),
-        .O(\rStoredData_reg[2]_i_25_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_26 
        (.I0(\rStoredData[2]_i_61_n_0 ),
         .I1(\rStoredData[2]_i_62_n_0 ),
-        .O(\rStoredData_reg[2]_i_26_n_0 ),
+        .O(\rStoredData_reg[2]_i_24_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_27 
+  MUXF7 \rStoredData_reg[2]_i_26 
        (.I0(\rStoredData[2]_i_63_n_0 ),
         .I1(\rStoredData[2]_i_64_n_0 ),
-        .O(\rStoredData_reg[2]_i_27_n_0 ),
+        .O(\rStoredData_reg[2]_i_26_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_28 
-       (.I0(\rStoredData[2]_i_65_n_0 ),
-        .I1(\rStoredData[2]_i_66_n_0 ),
+       (.I0(\rStoredData[2]_i_66_n_0 ),
+        .I1(\rStoredData[2]_i_67_n_0 ),
         .O(\rStoredData_reg[2]_i_28_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_29 
-       (.I0(\rStoredData[2]_i_67_n_0 ),
-        .I1(\rStoredData[2]_i_68_n_0 ),
+       (.I0(\rStoredData[2]_i_68_n_0 ),
+        .I1(\rStoredData[2]_i_69_n_0 ),
         .O(\rStoredData_reg[2]_i_29_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_3 
+       (.I0(\rStoredData[2]_i_7_n_0 ),
+        .I1(\rStoredData[2]_i_8_n_0 ),
+        .O(p_0_out[2]),
+        .S(s_axis_video_tdata[7]));
   MUXF7 \rStoredData_reg[2]_i_30 
-       (.I0(\rStoredData[2]_i_69_n_0 ),
-        .I1(\rStoredData[2]_i_70_n_0 ),
+       (.I0(\rStoredData[2]_i_70_n_0 ),
+        .I1(\rStoredData[2]_i_71_n_0 ),
         .O(\rStoredData_reg[2]_i_30_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[2]_i_31 
-       (.I0(\rStoredData[2]_i_71_n_0 ),
-        .I1(\rStoredData[2]_i_72_n_0 ),
+       (.I0(\rStoredData[2]_i_72_n_0 ),
+        .I1(\rStoredData[2]_i_73_n_0 ),
         .O(\rStoredData_reg[2]_i_31_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[2]_i_32 
-       (.I0(\rStoredData[2]_i_73_n_0 ),
-        .I1(\rStoredData[2]_i_74_n_0 ),
+       (.I0(\rStoredData[2]_i_74_n_0 ),
+        .I1(\rStoredData[2]_i_75_n_0 ),
         .O(\rStoredData_reg[2]_i_32_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_33 
+       (.I0(\rStoredData[2]_i_76_n_0 ),
+        .I1(\rStoredData[2]_i_77_n_0 ),
+        .O(\rStoredData_reg[2]_i_33_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_34 
+       (.I0(\rStoredData[2]_i_78_n_0 ),
+        .I1(\rStoredData[2]_i_79_n_0 ),
+        .O(\rStoredData_reg[2]_i_34_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_35 
+       (.I0(\rStoredData[2]_i_80_n_0 ),
+        .I1(\rStoredData[2]_i_81_n_0 ),
+        .O(\rStoredData_reg[2]_i_35_n_0 ),
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[2]_i_36 
-       (.I0(\rStoredData[2]_i_75_n_0 ),
-        .I1(\rStoredData[2]_i_76_n_0 ),
+       (.I0(\rStoredData[2]_i_82_n_0 ),
+        .I1(\rStoredData[2]_i_83_n_0 ),
         .O(\rStoredData_reg[2]_i_36_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[2]_i_37 
-       (.I0(\rStoredData[2]_i_77_n_0 ),
-        .I1(\rStoredData[2]_i_78_n_0 ),
+       (.I0(\rStoredData[2]_i_84_n_0 ),
+        .I1(\rStoredData[2]_i_85_n_0 ),
         .O(\rStoredData_reg[2]_i_37_n_0 ),
         .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[2]_i_38 
-       (.I0(\rStoredData[2]_i_79_n_0 ),
-        .I1(\rStoredData[2]_i_80_n_0 ),
+       (.I0(\rStoredData[2]_i_86_n_0 ),
+        .I1(\rStoredData[2]_i_87_n_0 ),
         .O(\rStoredData_reg[2]_i_38_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_39 
-       (.I0(\rStoredData[2]_i_81_n_0 ),
-        .I1(\rStoredData[2]_i_82_n_0 ),
-        .O(\rStoredData_reg[2]_i_39_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_40 
-       (.I0(\rStoredData[2]_i_83_n_0 ),
-        .I1(\rStoredData[2]_i_84_n_0 ),
-        .O(\rStoredData_reg[2]_i_40_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_41 
-       (.I0(\rStoredData[2]_i_85_n_0 ),
-        .I1(\rStoredData[2]_i_86_n_0 ),
-        .O(\rStoredData_reg[2]_i_41_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[2]_i_43 
-       (.I0(\rStoredData[2]_i_87_n_0 ),
-        .I1(\rStoredData[2]_i_88_n_0 ),
+       (.I0(\rStoredData[2]_i_88_n_0 ),
+        .I1(\rStoredData[2]_i_89_n_0 ),
         .O(\rStoredData_reg[2]_i_43_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[2]_i_44 
-       (.I0(\rStoredData[2]_i_89_n_0 ),
-        .I1(\rStoredData[2]_i_90_n_0 ),
+       (.I0(\rStoredData[2]_i_90_n_0 ),
+        .I1(\rStoredData[2]_i_91_n_0 ),
         .O(\rStoredData_reg[2]_i_44_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_45 
-       (.I0(\rStoredData[2]_i_91_n_0 ),
-        .I1(\rStoredData[2]_i_92_n_0 ),
-        .O(\rStoredData_reg[2]_i_45_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_46 
-       (.I0(\rStoredData[2]_i_93_n_0 ),
-        .I1(\rStoredData[2]_i_94_n_0 ),
-        .O(\rStoredData_reg[2]_i_46_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_47 
-       (.I0(\rStoredData[2]_i_95_n_0 ),
-        .I1(\rStoredData[2]_i_96_n_0 ),
-        .O(\rStoredData_reg[2]_i_47_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[2]_i_48 
-       (.I0(\rStoredData[2]_i_97_n_0 ),
-        .I1(\rStoredData[2]_i_98_n_0 ),
+       (.I0(\rStoredData[2]_i_92_n_0 ),
+        .I1(\rStoredData[2]_i_93_n_0 ),
         .O(\rStoredData_reg[2]_i_48_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_49 
-       (.I0(\rStoredData[2]_i_99_n_0 ),
-        .I1(\rStoredData[2]_i_100_n_0 ),
+       (.I0(\rStoredData[2]_i_94_n_0 ),
+        .I1(\rStoredData[2]_i_95_n_0 ),
         .O(\rStoredData_reg[2]_i_49_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_5 
-       (.I0(\rStoredData[2]_i_15_n_0 ),
-        .I1(\rStoredData[2]_i_16_n_0 ),
-        .O(\rStoredData_reg[2]_i_5_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_50 
-       (.I0(\rStoredData[2]_i_101_n_0 ),
-        .I1(\rStoredData[2]_i_102_n_0 ),
+       (.I0(\rStoredData[2]_i_96_n_0 ),
+        .I1(\rStoredData[2]_i_97_n_0 ),
         .O(\rStoredData_reg[2]_i_50_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_51 
-       (.I0(\rStoredData[2]_i_103_n_0 ),
-        .I1(\rStoredData[2]_i_104_n_0 ),
+       (.I0(\rStoredData[2]_i_98_n_0 ),
+        .I1(\rStoredData[2]_i_99_n_0 ),
         .O(\rStoredData_reg[2]_i_51_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_52 
-       (.I0(\rStoredData[2]_i_105_n_0 ),
-        .I1(\rStoredData[2]_i_106_n_0 ),
+       (.I0(\rStoredData[2]_i_100_n_0 ),
+        .I1(\rStoredData[2]_i_101_n_0 ),
         .O(\rStoredData_reg[2]_i_52_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_53 
-       (.I0(\rStoredData[2]_i_107_n_0 ),
-        .I1(\rStoredData[2]_i_108_n_0 ),
+       (.I0(\rStoredData[2]_i_102_n_0 ),
+        .I1(\rStoredData[2]_i_103_n_0 ),
         .O(\rStoredData_reg[2]_i_53_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_7 
-       (.I0(\rStoredData[2]_i_21_n_0 ),
-        .I1(\rStoredData[2]_i_22_n_0 ),
-        .O(\rStoredData_reg[2]_i_7_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[2]_i_8 
-       (.I0(\rStoredData_reg[2]_i_23_n_0 ),
-        .I1(\rStoredData_reg[2]_i_24_n_0 ),
-        .O(\rStoredData_reg[2]_i_8_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_54 
+       (.I0(\rStoredData[2]_i_104_n_0 ),
+        .I1(\rStoredData[2]_i_105_n_0 ),
+        .O(\rStoredData_reg[2]_i_54_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_55 
+       (.I0(\rStoredData[2]_i_106_n_0 ),
+        .I1(\rStoredData[2]_i_107_n_0 ),
+        .O(\rStoredData_reg[2]_i_55_n_0 ),
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_9 
-       (.I0(\rStoredData_reg[2]_i_25_n_0 ),
-        .I1(\rStoredData_reg[2]_i_26_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_29_n_0 ),
+        .I1(\rStoredData_reg[2]_i_30_n_0 ),
         .O(\rStoredData_reg[2]_i_9_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
   FDRE \rStoredData_reg[3] 
        (.C(StreamClk),
         .CE(E),
@@ -5584,121 +5715,96 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .I1(p_0_out[3]),
         .O(p_0_in[3]),
         .S(sGammaReg[2]));
-  MUXF8 \rStoredData_reg[3]_i_10 
-       (.I0(\rStoredData_reg[3]_i_30_n_0 ),
-        .I1(\rStoredData_reg[3]_i_31_n_0 ),
-        .O(\rStoredData_reg[3]_i_10_n_0 ),
-        .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[3]_i_12 
-       (.I0(\rStoredData_reg[3]_i_34_n_0 ),
-        .I1(\rStoredData_reg[3]_i_35_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_32_n_0 ),
+        .I1(\rStoredData_reg[3]_i_33_n_0 ),
         .O(\rStoredData_reg[3]_i_12_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[3]_i_14 
-       (.I0(\rStoredData_reg[3]_i_39_n_0 ),
-        .I1(\rStoredData_reg[3]_i_40_n_0 ),
-        .O(\rStoredData_reg[3]_i_14_n_0 ),
+  MUXF8 \rStoredData_reg[3]_i_13 
+       (.I0(\rStoredData_reg[3]_i_34_n_0 ),
+        .I1(\rStoredData_reg[3]_i_35_n_0 ),
+        .O(\rStoredData_reg[3]_i_13_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_15 
+       (.I0(\rStoredData[3]_i_39_n_0 ),
+        .I1(\rStoredData[3]_i_40_n_0 ),
+        .O(\rStoredData_reg[3]_i_15_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_16 
        (.I0(\rStoredData[3]_i_41_n_0 ),
         .I1(\rStoredData[3]_i_42_n_0 ),
-        .O(\rStoredData_reg[3]_i_15_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[3]_i_16 
-       (.I0(\rStoredData_reg[3]_i_43_n_0 ),
-        .I1(\rStoredData_reg[3]_i_44_n_0 ),
         .O(\rStoredData_reg[3]_i_16_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[3]_i_19 
-       (.I0(\rStoredData_reg[3]_i_51_n_0 ),
-        .I1(\rStoredData_reg[3]_i_52_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_49_n_0 ),
+        .I1(\rStoredData_reg[3]_i_50_n_0 ),
         .O(\rStoredData_reg[3]_i_19_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[3]_i_20 
-       (.I0(\rStoredData_reg[3]_i_53_n_0 ),
-        .I1(\rStoredData_reg[3]_i_54_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_51_n_0 ),
+        .I1(\rStoredData_reg[3]_i_52_n_0 ),
         .O(\rStoredData_reg[3]_i_20_n_0 ),
         .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[3]_i_22 
-       (.I0(\rStoredData_reg[3]_i_58_n_0 ),
-        .I1(\rStoredData_reg[3]_i_59_n_0 ),
-        .O(\rStoredData_reg[3]_i_22_n_0 ),
-        .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[3]_i_25 
+       (.I0(\rStoredData[3]_i_55_n_0 ),
+        .I1(\rStoredData[3]_i_56_n_0 ),
+        .O(\rStoredData_reg[3]_i_25_n_0 ),
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_30 
-       (.I0(\rStoredData[3]_i_62_n_0 ),
-        .I1(\rStoredData[3]_i_63_n_0 ),
+       (.I0(\rStoredData[3]_i_58_n_0 ),
+        .I1(\rStoredData[3]_i_59_n_0 ),
         .O(\rStoredData_reg[3]_i_30_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_31 
+  MUXF7 \rStoredData_reg[3]_i_32 
+       (.I0(\rStoredData[3]_i_60_n_0 ),
+        .I1(\rStoredData[3]_i_61_n_0 ),
+        .O(\rStoredData_reg[3]_i_32_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_33 
+       (.I0(\rStoredData[3]_i_62_n_0 ),
+        .I1(\rStoredData[3]_i_63_n_0 ),
+        .O(\rStoredData_reg[3]_i_33_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_34 
        (.I0(\rStoredData[3]_i_64_n_0 ),
         .I1(\rStoredData[3]_i_65_n_0 ),
-        .O(\rStoredData_reg[3]_i_31_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_34 
+        .O(\rStoredData_reg[3]_i_34_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_35 
        (.I0(\rStoredData[3]_i_66_n_0 ),
         .I1(\rStoredData[3]_i_67_n_0 ),
-        .O(\rStoredData_reg[3]_i_34_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_35 
-       (.I0(\rStoredData[3]_i_68_n_0 ),
-        .I1(\rStoredData[3]_i_69_n_0 ),
         .O(\rStoredData_reg[3]_i_35_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_39 
-       (.I0(\rStoredData[3]_i_70_n_0 ),
-        .I1(\rStoredData[3]_i_71_n_0 ),
-        .O(\rStoredData_reg[3]_i_39_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_40 
-       (.I0(\rStoredData[3]_i_72_n_0 ),
-        .I1(\rStoredData[3]_i_73_n_0 ),
-        .O(\rStoredData_reg[3]_i_40_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_43 
-       (.I0(\rStoredData[3]_i_74_n_0 ),
-        .I1(\rStoredData[3]_i_75_n_0 ),
-        .O(\rStoredData_reg[3]_i_43_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_44 
-       (.I0(\rStoredData[3]_i_76_n_0 ),
-        .I1(\rStoredData[3]_i_77_n_0 ),
-        .O(\rStoredData_reg[3]_i_44_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_51 
-       (.I0(\rStoredData[3]_i_78_n_0 ),
-        .I1(\rStoredData[3]_i_79_n_0 ),
-        .O(\rStoredData_reg[3]_i_51_n_0 ),
         .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_52 
-       (.I0(\rStoredData[3]_i_80_n_0 ),
-        .I1(\rStoredData[3]_i_81_n_0 ),
-        .O(\rStoredData_reg[3]_i_52_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_53 
+  MUXF7 \rStoredData_reg[3]_i_49 
        (.I0(\rStoredData[3]_i_82_n_0 ),
         .I1(\rStoredData[3]_i_83_n_0 ),
-        .O(\rStoredData_reg[3]_i_53_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_54 
+        .O(\rStoredData_reg[3]_i_49_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[3]_i_5 
+       (.I0(\rStoredData_reg[3]_i_15_n_0 ),
+        .I1(\rStoredData_reg[3]_i_16_n_0 ),
+        .O(\rStoredData_reg[3]_i_5_n_0 ),
+        .S(s_axis_video_tdata[0]));
+  MUXF7 \rStoredData_reg[3]_i_50 
        (.I0(\rStoredData[3]_i_84_n_0 ),
         .I1(\rStoredData[3]_i_85_n_0 ),
-        .O(\rStoredData_reg[3]_i_54_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_58 
+        .O(\rStoredData_reg[3]_i_50_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_51 
        (.I0(\rStoredData[3]_i_86_n_0 ),
         .I1(\rStoredData[3]_i_87_n_0 ),
-        .O(\rStoredData_reg[3]_i_58_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_59 
+        .O(\rStoredData_reg[3]_i_51_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_52 
        (.I0(\rStoredData[3]_i_88_n_0 ),
         .I1(\rStoredData[3]_i_89_n_0 ),
-        .O(\rStoredData_reg[3]_i_59_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_9 
-       (.I0(\rStoredData[3]_i_28_n_0 ),
-        .I1(\rStoredData[3]_i_29_n_0 ),
-        .O(\rStoredData_reg[3]_i_9_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .O(\rStoredData_reg[3]_i_52_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_7 
+       (.I0(\rStoredData[3]_i_21_n_0 ),
+        .I1(\rStoredData[3]_i_22_n_0 ),
+        .O(\rStoredData_reg[3]_i_7_n_0 ),
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[4] 
        (.C(StreamClk),
         .CE(E),
@@ -5706,55 +5812,55 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .Q(m_axis_video_tdata[4]),
         .R(1'b0));
   MUXF7 \rStoredData_reg[4]_i_10 
-       (.I0(\rStoredData[4]_i_23_n_0 ),
-        .I1(\rStoredData[4]_i_24_n_0 ),
+       (.I0(\rStoredData[4]_i_26_n_0 ),
+        .I1(\rStoredData[4]_i_27_n_0 ),
         .O(\rStoredData_reg[4]_i_10_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_13 
+        .S(s_axis_video_tdata[8]));
+  MUXF7 \rStoredData_reg[4]_i_11 
        (.I0(\rStoredData[4]_i_28_n_0 ),
         .I1(\rStoredData[4]_i_29_n_0 ),
-        .O(\rStoredData_reg[4]_i_13_n_0 ),
+        .O(\rStoredData_reg[4]_i_11_n_0 ),
         .S(s_axis_video_tdata[8]));
   MUXF7 \rStoredData_reg[4]_i_14 
-       (.I0(\rStoredData[4]_i_30_n_0 ),
-        .I1(\rStoredData[4]_i_31_n_0 ),
+       (.I0(\rStoredData[4]_i_36_n_0 ),
+        .I1(\rStoredData[4]_i_37_n_0 ),
         .O(\rStoredData_reg[4]_i_14_n_0 ),
         .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[4]_i_2 
-       (.I0(\rStoredData_reg[4]_i_6_n_0 ),
-        .I1(\rStoredData_reg[4]_i_7_n_0 ),
-        .O(p_0_out[4]),
-        .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[4]_i_33 
-       (.I0(\rStoredData[4]_i_60_n_0 ),
-        .I1(\rStoredData[4]_i_61_n_0 ),
-        .O(\rStoredData_reg[4]_i_33_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_25 
+       (.I0(\rStoredData[4]_i_40_n_0 ),
+        .I1(\rStoredData[4]_i_41_n_0 ),
+        .O(\rStoredData_reg[4]_i_25_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[4]_i_5 
-       (.I0(\rStoredData_reg[4]_i_13_n_0 ),
-        .I1(\rStoredData_reg[4]_i_14_n_0 ),
-        .O(\rStoredData_reg[4]_i_5_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_30 
+       (.I0(\rStoredData[4]_i_50_n_0 ),
+        .I1(\rStoredData[4]_i_51_n_0 ),
+        .O(\rStoredData_reg[4]_i_30_n_0 ),
         .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_6 
-       (.I0(\rStoredData[4]_i_15_n_0 ),
-        .I1(\rStoredData[4]_i_16_n_0 ),
-        .O(\rStoredData_reg[4]_i_6_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_31 
+       (.I0(\rStoredData[4]_i_52_n_0 ),
+        .I1(\rStoredData[4]_i_53_n_0 ),
+        .O(\rStoredData_reg[4]_i_31_n_0 ),
         .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_7 
-       (.I0(\rStoredData[4]_i_17_n_0 ),
-        .I1(\rStoredData[4]_i_18_n_0 ),
-        .O(\rStoredData_reg[4]_i_7_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_32 
+       (.I0(\rStoredData[4]_i_54_n_0 ),
+        .I1(\rStoredData[4]_i_55_n_0 ),
+        .O(\rStoredData_reg[4]_i_32_n_0 ),
         .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_8 
-       (.I0(\rStoredData[4]_i_19_n_0 ),
-        .I1(\rStoredData[4]_i_20_n_0 ),
-        .O(\rStoredData_reg[4]_i_8_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[4]_i_9 
-       (.I0(\rStoredData[4]_i_21_n_0 ),
-        .I1(\rStoredData[4]_i_22_n_0 ),
-        .O(\rStoredData_reg[4]_i_9_n_0 ),
-        .S(s_axis_video_tdata[8]));
+  MUXF7 \rStoredData_reg[4]_i_33 
+       (.I0(\rStoredData[4]_i_56_n_0 ),
+        .I1(\rStoredData[4]_i_57_n_0 ),
+        .O(\rStoredData_reg[4]_i_33_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_35 
+       (.I0(\rStoredData[4]_i_59_n_0 ),
+        .I1(\rStoredData[4]_i_60_n_0 ),
+        .O(\rStoredData_reg[4]_i_35_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_4 
+       (.I0(\rStoredData[4]_i_12_n_0 ),
+        .I1(\rStoredData[4]_i_13_n_0 ),
+        .O(\rStoredData_reg[4]_i_4_n_0 ),
+        .S(s_axis_video_tdata[0]));
   FDRE \rStoredData_reg[5] 
        (.C(StreamClk),
         .CE(E),
@@ -5762,31 +5868,36 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs
         .Q(m_axis_video_tdata[5]),
         .R(1'b0));
   MUXF7 \rStoredData_reg[5]_i_2 
-       (.I0(\rStoredData[5]_i_7_n_0 ),
-        .I1(\rStoredData[5]_i_8_n_0 ),
+       (.I0(\rStoredData[5]_i_6_n_0 ),
+        .I1(\rStoredData[5]_i_7_n_0 ),
         .O(p_0_out[5]),
-        .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[5]_i_9 
-       (.I0(\rStoredData[5]_i_22_n_0 ),
-        .I1(\rStoredData[5]_i_23_n_0 ),
-        .O(\rStoredData_reg[5]_i_9_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[5]_i_28 
+       (.I0(\rStoredData[5]_i_37_n_0 ),
+        .I1(\rStoredData[5]_i_38_n_0 ),
+        .O(\rStoredData_reg[5]_i_28_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[5]_i_4 
+       (.I0(\rStoredData[5]_i_10_n_0 ),
+        .I1(\rStoredData[5]_i_11_n_0 ),
+        .O(\rStoredData_reg[5]_i_4_n_0 ),
+        .S(s_axis_video_tdata[0]));
   FDRE \rStoredData_reg[6] 
        (.C(StreamClk),
         .CE(E),
         .D(p_0_in[6]),
         .Q(m_axis_video_tdata[6]),
         .R(1'b0));
-  MUXF7 \rStoredData_reg[6]_i_1 
-       (.I0(p_1_in[6]),
-        .I1(p_0_out[6]),
-        .O(p_0_in[6]),
-        .S(sGammaReg[2]));
-  MUXF7 \rStoredData_reg[6]_i_6 
-       (.I0(\rStoredData[6]_i_14_n_0 ),
-        .I1(\rStoredData[6]_i_15_n_0 ),
-        .O(\rStoredData_reg[6]_i_6_n_0 ),
-        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[6]_i_12 
+       (.I0(\rStoredData[6]_i_20_n_0 ),
+        .I1(\rStoredData[6]_i_21_n_0 ),
+        .O(\rStoredData_reg[6]_i_12_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF7 \rStoredData_reg[6]_i_2 
+       (.I0(\rStoredData[6]_i_6_n_0 ),
+        .I1(\rStoredData[6]_i_7_n_0 ),
+        .O(p_0_out[6]),
+        .S(s_axis_video_tdata[7]));
   FDRE \rStoredData_reg[7] 
        (.C(StreamClk),
         .CE(E),
@@ -5805,17 +5916,15 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
    (m_axis_video_tdata,
     sGammaReg,
     s_axis_video_tdata,
-    \sGammaReg_reg[1] ,
     \sGammaReg_reg[0] ,
-    \sGammaReg_reg[0]_0 ,
+    \sGammaReg_reg[1] ,
     E,
     StreamClk);
   output [7:0]m_axis_video_tdata;
   input [2:0]sGammaReg;
   input [9:0]s_axis_video_tdata;
-  input \sGammaReg_reg[1] ;
   input \sGammaReg_reg[0] ;
-  input \sGammaReg_reg[0]_0 ;
+  input \sGammaReg_reg[1] ;
   input [0:0]E;
   input StreamClk;
 
@@ -5908,11 +6017,11 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[1]_i_114__0_n_0 ;
   wire \rStoredData[1]_i_115__0_n_0 ;
   wire \rStoredData[1]_i_116__0_n_0 ;
-  wire \rStoredData[1]_i_117_n_0 ;
-  wire \rStoredData[1]_i_118_n_0 ;
+  wire \rStoredData[1]_i_117__0_n_0 ;
+  wire \rStoredData[1]_i_118__0_n_0 ;
   wire \rStoredData[1]_i_3__0_n_0 ;
   wire \rStoredData[1]_i_4__0_n_0 ;
-  wire \rStoredData[1]_i_55_n_0 ;
+  wire \rStoredData[1]_i_55__0_n_0 ;
   wire \rStoredData[1]_i_56__0_n_0 ;
   wire \rStoredData[1]_i_57__0_n_0 ;
   wire \rStoredData[1]_i_58__0_n_0 ;
@@ -5967,24 +6076,25 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[2]_i_105__0_n_0 ;
   wire \rStoredData[2]_i_106__0_n_0 ;
   wire \rStoredData[2]_i_107__0_n_0 ;
-  wire \rStoredData[2]_i_108__0_n_0 ;
-  wire \rStoredData[2]_i_109_n_0 ;
-  wire \rStoredData[2]_i_110_n_0 ;
-  wire \rStoredData[2]_i_111_n_0 ;
-  wire \rStoredData[2]_i_15__0_n_0 ;
+  wire \rStoredData[2]_i_14__0_n_0 ;
   wire \rStoredData[2]_i_16__0_n_0 ;
+  wire \rStoredData[2]_i_1__0_n_0 ;
   wire \rStoredData[2]_i_21__0_n_0 ;
-  wire \rStoredData[2]_i_22__1_n_0 ;
-  wire \rStoredData[2]_i_23_n_0 ;
-  wire \rStoredData[2]_i_3__0_n_0 ;
+  wire \rStoredData[2]_i_25__0_n_0 ;
+  wire \rStoredData[2]_i_27__0_n_0 ;
+  wire \rStoredData[2]_i_39__0_n_0 ;
+  wire \rStoredData[2]_i_40__0_n_0 ;
+  wire \rStoredData[2]_i_41__0_n_0 ;
   wire \rStoredData[2]_i_42__0_n_0 ;
+  wire \rStoredData[2]_i_45__0_n_0 ;
+  wire \rStoredData[2]_i_46__0_n_0 ;
+  wire \rStoredData[2]_i_47__0_n_0 ;
   wire \rStoredData[2]_i_4__0_n_0 ;
-  wire \rStoredData[2]_i_54_n_0 ;
-  wire \rStoredData[2]_i_55__0_n_0 ;
   wire \rStoredData[2]_i_56__0_n_0 ;
   wire \rStoredData[2]_i_57__0_n_0 ;
   wire \rStoredData[2]_i_58__0_n_0 ;
   wire \rStoredData[2]_i_59__0_n_0 ;
+  wire \rStoredData[2]_i_5__0_n_0 ;
   wire \rStoredData[2]_i_60__0_n_0 ;
   wire \rStoredData[2]_i_61__0_n_0 ;
   wire \rStoredData[2]_i_62__0_n_0 ;
@@ -6006,7 +6116,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[2]_i_77__0_n_0 ;
   wire \rStoredData[2]_i_78__0_n_0 ;
   wire \rStoredData[2]_i_79__0_n_0 ;
-  wire \rStoredData[2]_i_7_n_0 ;
+  wire \rStoredData[2]_i_7__0_n_0 ;
   wire \rStoredData[2]_i_80__0_n_0 ;
   wire \rStoredData[2]_i_81__0_n_0 ;
   wire \rStoredData[2]_i_82__0_n_0 ;
@@ -6017,6 +6127,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[2]_i_87__0_n_0 ;
   wire \rStoredData[2]_i_88__0_n_0 ;
   wire \rStoredData[2]_i_89__0_n_0 ;
+  wire \rStoredData[2]_i_8__0_n_0 ;
   wire \rStoredData[2]_i_90__0_n_0 ;
   wire \rStoredData[2]_i_91__0_n_0 ;
   wire \rStoredData[2]_i_92__0_n_0 ;
@@ -6027,38 +6138,46 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[2]_i_97__0_n_0 ;
   wire \rStoredData[2]_i_98__0_n_0 ;
   wire \rStoredData[2]_i_99__0_n_0 ;
+  wire \rStoredData[3]_i_10__0_n_0 ;
   wire \rStoredData[3]_i_11__0_n_0 ;
+  wire \rStoredData[3]_i_14__0_n_0 ;
   wire \rStoredData[3]_i_17__0_n_0 ;
   wire \rStoredData[3]_i_18__0_n_0 ;
   wire \rStoredData[3]_i_21__0_n_0 ;
-  wire \rStoredData[3]_i_23_n_0 ;
-  wire \rStoredData[3]_i_24_n_0 ;
-  wire \rStoredData[3]_i_25__1_n_0 ;
+  wire \rStoredData[3]_i_22__0_n_0 ;
+  wire \rStoredData[3]_i_23__0_n_0 ;
+  wire \rStoredData[3]_i_24__0_n_0 ;
   wire \rStoredData[3]_i_26__0_n_0 ;
   wire \rStoredData[3]_i_27__0_n_0 ;
   wire \rStoredData[3]_i_28__0_n_0 ;
   wire \rStoredData[3]_i_29__0_n_0 ;
-  wire \rStoredData[3]_i_30_n_0 ;
-  wire \rStoredData[3]_i_33_n_0 ;
-  wire \rStoredData[3]_i_34__0_n_0 ;
+  wire \rStoredData[3]_i_31__0_n_0 ;
+  wire \rStoredData[3]_i_36__0_n_0 ;
+  wire \rStoredData[3]_i_37__0_n_0 ;
+  wire \rStoredData[3]_i_38__0_n_0 ;
+  wire \rStoredData[3]_i_39__0_n_0 ;
   wire \rStoredData[3]_i_3__0_n_0 ;
+  wire \rStoredData[3]_i_40__0_n_0 ;
   wire \rStoredData[3]_i_41__0_n_0 ;
   wire \rStoredData[3]_i_42__0_n_0 ;
+  wire \rStoredData[3]_i_43__0_n_0 ;
+  wire \rStoredData[3]_i_44__0_n_0 ;
   wire \rStoredData[3]_i_45__0_n_0 ;
   wire \rStoredData[3]_i_46__0_n_0 ;
   wire \rStoredData[3]_i_47__0_n_0 ;
   wire \rStoredData[3]_i_48__0_n_0 ;
-  wire \rStoredData[3]_i_49__0_n_0 ;
   wire \rStoredData[3]_i_4__0_n_0 ;
-  wire \rStoredData[3]_i_50__0_n_0 ;
+  wire \rStoredData[3]_i_53__0_n_0 ;
+  wire \rStoredData[3]_i_54__0_n_0 ;
   wire \rStoredData[3]_i_55__0_n_0 ;
   wire \rStoredData[3]_i_56__0_n_0 ;
   wire \rStoredData[3]_i_57__0_n_0 ;
-  wire \rStoredData[3]_i_5__0_n_0 ;
+  wire \rStoredData[3]_i_58__0_n_0 ;
+  wire \rStoredData[3]_i_59__0_n_0 ;
   wire \rStoredData[3]_i_60__0_n_0 ;
   wire \rStoredData[3]_i_61__0_n_0 ;
-  wire \rStoredData[3]_i_62__1_n_0 ;
-  wire \rStoredData[3]_i_63__1_n_0 ;
+  wire \rStoredData[3]_i_62__0_n_0 ;
+  wire \rStoredData[3]_i_63__0_n_0 ;
   wire \rStoredData[3]_i_64__0_n_0 ;
   wire \rStoredData[3]_i_65__0_n_0 ;
   wire \rStoredData[3]_i_66__0_n_0 ;
@@ -6076,7 +6195,6 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[3]_i_77__0_n_0 ;
   wire \rStoredData[3]_i_78__0_n_0 ;
   wire \rStoredData[3]_i_79__0_n_0 ;
-  wire \rStoredData[3]_i_7__0_n_0 ;
   wire \rStoredData[3]_i_80__0_n_0 ;
   wire \rStoredData[3]_i_81__0_n_0 ;
   wire \rStoredData[3]_i_82__0_n_0 ;
@@ -6088,15 +6206,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[3]_i_88__0_n_0 ;
   wire \rStoredData[3]_i_89__0_n_0 ;
   wire \rStoredData[3]_i_8__0_n_0 ;
-  wire \rStoredData[3]_i_90_n_0 ;
-  wire \rStoredData[3]_i_91_n_0 ;
-  wire \rStoredData[3]_i_92_n_0 ;
-  wire \rStoredData[3]_i_93_n_0 ;
-  wire \rStoredData[3]_i_94_n_0 ;
-  wire \rStoredData[4]_i_11__0_n_0 ;
+  wire \rStoredData[3]_i_9__0_n_0 ;
   wire \rStoredData[4]_i_12__0_n_0 ;
-  wire \rStoredData[4]_i_13_n_0 ;
-  wire \rStoredData[4]_i_14_n_0 ;
+  wire \rStoredData[4]_i_13__0_n_0 ;
   wire \rStoredData[4]_i_15__0_n_0 ;
   wire \rStoredData[4]_i_16__0_n_0 ;
   wire \rStoredData[4]_i_17__0_n_0 ;
@@ -6108,105 +6220,109 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData[4]_i_22__0_n_0 ;
   wire \rStoredData[4]_i_23__0_n_0 ;
   wire \rStoredData[4]_i_24__0_n_0 ;
-  wire \rStoredData[4]_i_25__0_n_0 ;
   wire \rStoredData[4]_i_26__0_n_0 ;
-  wire \rStoredData[4]_i_27__1_n_0 ;
+  wire \rStoredData[4]_i_27__0_n_0 ;
   wire \rStoredData[4]_i_28__0_n_0 ;
   wire \rStoredData[4]_i_29__0_n_0 ;
-  wire \rStoredData[4]_i_30__0_n_0 ;
-  wire \rStoredData[4]_i_31__1_n_0 ;
-  wire \rStoredData[4]_i_32__1_n_0 ;
-  wire \rStoredData[4]_i_33_n_0 ;
-  wire \rStoredData[4]_i_34_n_0 ;
-  wire \rStoredData[4]_i_35_n_0 ;
+  wire \rStoredData[4]_i_2__0_n_0 ;
+  wire \rStoredData[4]_i_34__0_n_0 ;
   wire \rStoredData[4]_i_36__0_n_0 ;
-  wire \rStoredData[4]_i_37_n_0 ;
+  wire \rStoredData[4]_i_37__0_n_0 ;
   wire \rStoredData[4]_i_38__0_n_0 ;
+  wire \rStoredData[4]_i_39__0_n_0 ;
   wire \rStoredData[4]_i_3__0_n_0 ;
   wire \rStoredData[4]_i_40__0_n_0 ;
-  wire \rStoredData[4]_i_41__1_n_0 ;
-  wire \rStoredData[4]_i_42_n_0 ;
-  wire \rStoredData[4]_i_43_n_0 ;
+  wire \rStoredData[4]_i_41__0_n_0 ;
+  wire \rStoredData[4]_i_42__0_n_0 ;
+  wire \rStoredData[4]_i_43__0_n_0 ;
   wire \rStoredData[4]_i_44__0_n_0 ;
   wire \rStoredData[4]_i_45__0_n_0 ;
   wire \rStoredData[4]_i_46__0_n_0 ;
   wire \rStoredData[4]_i_47__0_n_0 ;
-  wire \rStoredData[4]_i_48__1_n_0 ;
-  wire \rStoredData[4]_i_49__1_n_0 ;
-  wire \rStoredData[4]_i_4__0_n_0 ;
+  wire \rStoredData[4]_i_48__0_n_0 ;
+  wire \rStoredData[4]_i_49__0_n_0 ;
   wire \rStoredData[4]_i_50__0_n_0 ;
   wire \rStoredData[4]_i_51__0_n_0 ;
   wire \rStoredData[4]_i_52__0_n_0 ;
   wire \rStoredData[4]_i_53__0_n_0 ;
   wire \rStoredData[4]_i_54__0_n_0 ;
   wire \rStoredData[4]_i_55__0_n_0 ;
-  wire \rStoredData[4]_i_56_n_0 ;
+  wire \rStoredData[4]_i_56__0_n_0 ;
   wire \rStoredData[4]_i_57__0_n_0 ;
-  wire \rStoredData[4]_i_58_n_0 ;
-  wire \rStoredData[4]_i_59_n_0 ;
-  wire \rStoredData[4]_i_5_n_0 ;
+  wire \rStoredData[4]_i_58__0_n_0 ;
+  wire \rStoredData[4]_i_59__0_n_0 ;
+  wire \rStoredData[4]_i_5__0_n_0 ;
+  wire \rStoredData[4]_i_60__0_n_0 ;
+  wire \rStoredData[4]_i_61__0_n_0 ;
+  wire \rStoredData[4]_i_62__0_n_0 ;
+  wire \rStoredData[4]_i_63__0_n_0 ;
+  wire \rStoredData[4]_i_64__0_n_0 ;
+  wire \rStoredData[4]_i_6__0_n_0 ;
+  wire \rStoredData[4]_i_7__0_n_0 ;
+  wire \rStoredData[4]_i_8__0_n_0 ;
+  wire \rStoredData[4]_i_9__0_n_0 ;
   wire \rStoredData[5]_i_10__0_n_0 ;
   wire \rStoredData[5]_i_11__0_n_0 ;
+  wire \rStoredData[5]_i_12__0_n_0 ;
   wire \rStoredData[5]_i_13__0_n_0 ;
   wire \rStoredData[5]_i_14__0_n_0 ;
   wire \rStoredData[5]_i_15__0_n_0 ;
   wire \rStoredData[5]_i_16__0_n_0 ;
   wire \rStoredData[5]_i_17__0_n_0 ;
   wire \rStoredData[5]_i_18__0_n_0 ;
-  wire \rStoredData[5]_i_19_n_0 ;
+  wire \rStoredData[5]_i_19__0_n_0 ;
   wire \rStoredData[5]_i_1__0_n_0 ;
-  wire \rStoredData[5]_i_20__1_n_0 ;
-  wire \rStoredData[5]_i_21_n_0 ;
+  wire \rStoredData[5]_i_20__0_n_0 ;
+  wire \rStoredData[5]_i_21__0_n_0 ;
   wire \rStoredData[5]_i_22__0_n_0 ;
   wire \rStoredData[5]_i_23__0_n_0 ;
   wire \rStoredData[5]_i_24__0_n_0 ;
-  wire \rStoredData[5]_i_25__1_n_0 ;
-  wire \rStoredData[5]_i_26_n_0 ;
+  wire \rStoredData[5]_i_25__0_n_0 ;
+  wire \rStoredData[5]_i_26__0_n_0 ;
   wire \rStoredData[5]_i_27__0_n_0 ;
-  wire \rStoredData[5]_i_28__0_n_0 ;
-  wire \rStoredData[5]_i_29__1_n_0 ;
-  wire \rStoredData[5]_i_30__1_n_0 ;
-  wire \rStoredData[5]_i_31__1_n_0 ;
-  wire \rStoredData[5]_i_32_n_0 ;
-  wire \rStoredData[5]_i_33__1_n_0 ;
-  wire \rStoredData[5]_i_34__1_n_0 ;
-  wire \rStoredData[5]_i_35__1_n_0 ;
+  wire \rStoredData[5]_i_29__0_n_0 ;
+  wire \rStoredData[5]_i_30__0_n_0 ;
+  wire \rStoredData[5]_i_31__0_n_0 ;
+  wire \rStoredData[5]_i_32__0_n_0 ;
+  wire \rStoredData[5]_i_33__0_n_0 ;
+  wire \rStoredData[5]_i_34__0_n_0 ;
+  wire \rStoredData[5]_i_35__0_n_0 ;
   wire \rStoredData[5]_i_36__0_n_0 ;
-  wire \rStoredData[5]_i_37_n_0 ;
-  wire \rStoredData[5]_i_38_n_0 ;
-  wire \rStoredData[5]_i_39_n_0 ;
+  wire \rStoredData[5]_i_37__0_n_0 ;
+  wire \rStoredData[5]_i_38__0_n_0 ;
   wire \rStoredData[5]_i_3__0_n_0 ;
-  wire \rStoredData[5]_i_40__0_n_0 ;
-  wire \rStoredData[5]_i_41_n_0 ;
-  wire \rStoredData[5]_i_42_n_0 ;
-  wire \rStoredData[5]_i_4__0_n_0 ;
   wire \rStoredData[5]_i_5__0_n_0 ;
   wire \rStoredData[5]_i_6__0_n_0 ;
   wire \rStoredData[5]_i_7__0_n_0 ;
   wire \rStoredData[5]_i_8__0_n_0 ;
+  wire \rStoredData[5]_i_9__0_n_0 ;
   wire \rStoredData[6]_i_10__0_n_0 ;
   wire \rStoredData[6]_i_11__0_n_0 ;
-  wire \rStoredData[6]_i_12__0_n_0 ;
   wire \rStoredData[6]_i_13__0_n_0 ;
   wire \rStoredData[6]_i_14__0_n_0 ;
   wire \rStoredData[6]_i_15__0_n_0 ;
   wire \rStoredData[6]_i_16__0_n_0 ;
-  wire \rStoredData[6]_i_17_n_0 ;
-  wire \rStoredData[6]_i_18_n_0 ;
-  wire \rStoredData[6]_i_19_n_0 ;
+  wire \rStoredData[6]_i_17__0_n_0 ;
+  wire \rStoredData[6]_i_18__0_n_0 ;
+  wire \rStoredData[6]_i_19__0_n_0 ;
+  wire \rStoredData[6]_i_1__0_n_0 ;
+  wire \rStoredData[6]_i_20__0_n_0 ;
+  wire \rStoredData[6]_i_21__0_n_0 ;
   wire \rStoredData[6]_i_3__0_n_0 ;
   wire \rStoredData[6]_i_4__0_n_0 ;
   wire \rStoredData[6]_i_5__0_n_0 ;
+  wire \rStoredData[6]_i_6__0_n_0 ;
   wire \rStoredData[6]_i_7__0_n_0 ;
   wire \rStoredData[6]_i_8__0_n_0 ;
-  wire \rStoredData[6]_i_9_n_0 ;
+  wire \rStoredData[6]_i_9__0_n_0 ;
   wire \rStoredData[7]_i_10__0_n_0 ;
+  wire \rStoredData[7]_i_11__0_n_0 ;
   wire \rStoredData[7]_i_3__0_n_0 ;
   wire \rStoredData[7]_i_4__0_n_0 ;
   wire \rStoredData[7]_i_5__0_n_0 ;
   wire \rStoredData[7]_i_6__0_n_0 ;
-  wire \rStoredData[7]_i_7_n_0 ;
-  wire \rStoredData[7]_i_8_n_0 ;
+  wire \rStoredData[7]_i_7__0_n_0 ;
+  wire \rStoredData[7]_i_8__0_n_0 ;
   wire \rStoredData[7]_i_9__0_n_0 ;
   wire \rStoredData_reg[0]_i_10__0_n_0 ;
   wire \rStoredData_reg[0]_i_11__0_n_0 ;
@@ -6271,10 +6387,10 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData_reg[1]_i_20__0_n_0 ;
   wire \rStoredData_reg[1]_i_21__0_n_0 ;
   wire \rStoredData_reg[1]_i_22__0_n_0 ;
-  wire \rStoredData_reg[1]_i_23_n_0 ;
-  wire \rStoredData_reg[1]_i_24_n_0 ;
-  wire \rStoredData_reg[1]_i_25_n_0 ;
-  wire \rStoredData_reg[1]_i_26_n_0 ;
+  wire \rStoredData_reg[1]_i_23__0_n_0 ;
+  wire \rStoredData_reg[1]_i_24__0_n_0 ;
+  wire \rStoredData_reg[1]_i_25__0_n_0 ;
+  wire \rStoredData_reg[1]_i_26__0_n_0 ;
   wire \rStoredData_reg[1]_i_27__0_n_0 ;
   wire \rStoredData_reg[1]_i_28__0_n_0 ;
   wire \rStoredData_reg[1]_i_29__0_n_0 ;
@@ -6303,131 +6419,119 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   wire \rStoredData_reg[1]_i_52__0_n_0 ;
   wire \rStoredData_reg[1]_i_53__0_n_0 ;
   wire \rStoredData_reg[1]_i_54__0_n_0 ;
-  wire \rStoredData_reg[1]_i_7_n_0 ;
+  wire \rStoredData_reg[1]_i_7__0_n_0 ;
   wire \rStoredData_reg[1]_i_8__0_n_0 ;
   wire \rStoredData_reg[1]_i_9__0_n_0 ;
   wire \rStoredData_reg[2]_i_10__0_n_0 ;
   wire \rStoredData_reg[2]_i_11__0_n_0 ;
   wire \rStoredData_reg[2]_i_12__0_n_0 ;
-  wire \rStoredData_reg[2]_i_13_n_0 ;
-  wire \rStoredData_reg[2]_i_14__0_n_0 ;
+  wire \rStoredData_reg[2]_i_13__0_n_0 ;
+  wire \rStoredData_reg[2]_i_15__0_n_0 ;
   wire \rStoredData_reg[2]_i_17__0_n_0 ;
   wire \rStoredData_reg[2]_i_18__0_n_0 ;
   wire \rStoredData_reg[2]_i_19__0_n_0 ;
-  wire \rStoredData_reg[2]_i_1__0_n_0 ;
   wire \rStoredData_reg[2]_i_20__0_n_0 ;
+  wire \rStoredData_reg[2]_i_22__0_n_0 ;
+  wire \rStoredData_reg[2]_i_23__0_n_0 ;
   wire \rStoredData_reg[2]_i_24__0_n_0 ;
-  wire \rStoredData_reg[2]_i_25__0_n_0 ;
   wire \rStoredData_reg[2]_i_26__0_n_0 ;
-  wire \rStoredData_reg[2]_i_27__0_n_0 ;
   wire \rStoredData_reg[2]_i_28__0_n_0 ;
   wire \rStoredData_reg[2]_i_29__0_n_0 ;
   wire \rStoredData_reg[2]_i_30__0_n_0 ;
   wire \rStoredData_reg[2]_i_31__0_n_0 ;
   wire \rStoredData_reg[2]_i_32__0_n_0 ;
-  wire \rStoredData_reg[2]_i_33_n_0 ;
-  wire \rStoredData_reg[2]_i_34_n_0 ;
-  wire \rStoredData_reg[2]_i_35_n_0 ;
+  wire \rStoredData_reg[2]_i_33__0_n_0 ;
+  wire \rStoredData_reg[2]_i_34__0_n_0 ;
+  wire \rStoredData_reg[2]_i_35__0_n_0 ;
   wire \rStoredData_reg[2]_i_36__0_n_0 ;
   wire \rStoredData_reg[2]_i_37__0_n_0 ;
   wire \rStoredData_reg[2]_i_38__0_n_0 ;
-  wire \rStoredData_reg[2]_i_39__0_n_0 ;
-  wire \rStoredData_reg[2]_i_40__0_n_0 ;
-  wire \rStoredData_reg[2]_i_41__0_n_0 ;
+  wire \rStoredData_reg[2]_i_3__0_n_0 ;
   wire \rStoredData_reg[2]_i_43__0_n_0 ;
   wire \rStoredData_reg[2]_i_44__0_n_0 ;
-  wire \rStoredData_reg[2]_i_45__0_n_0 ;
-  wire \rStoredData_reg[2]_i_46__0_n_0 ;
-  wire \rStoredData_reg[2]_i_47__0_n_0 ;
   wire \rStoredData_reg[2]_i_48__0_n_0 ;
   wire \rStoredData_reg[2]_i_49__0_n_0 ;
   wire \rStoredData_reg[2]_i_50__0_n_0 ;
   wire \rStoredData_reg[2]_i_51__0_n_0 ;
   wire \rStoredData_reg[2]_i_52__0_n_0 ;
   wire \rStoredData_reg[2]_i_53__0_n_0 ;
-  wire \rStoredData_reg[2]_i_5__0_n_0 ;
-  wire \rStoredData_reg[2]_i_8__0_n_0 ;
+  wire \rStoredData_reg[2]_i_54__0_n_0 ;
+  wire \rStoredData_reg[2]_i_55__0_n_0 ;
   wire \rStoredData_reg[2]_i_9__0_n_0 ;
-  wire \rStoredData_reg[3]_i_10__0_n_0 ;
   wire \rStoredData_reg[3]_i_12__0_n_0 ;
-  wire \rStoredData_reg[3]_i_13_n_0 ;
-  wire \rStoredData_reg[3]_i_14__0_n_0 ;
+  wire \rStoredData_reg[3]_i_13__0_n_0 ;
   wire \rStoredData_reg[3]_i_15__0_n_0 ;
   wire \rStoredData_reg[3]_i_16__0_n_0 ;
   wire \rStoredData_reg[3]_i_19__0_n_0 ;
   wire \rStoredData_reg[3]_i_1__0_n_0 ;
   wire \rStoredData_reg[3]_i_20__0_n_0 ;
-  wire \rStoredData_reg[3]_i_22__0_n_0 ;
-  wire \rStoredData_reg[3]_i_31__0_n_0 ;
-  wire \rStoredData_reg[3]_i_32_n_0 ;
+  wire \rStoredData_reg[3]_i_25__0_n_0 ;
+  wire \rStoredData_reg[3]_i_30__0_n_0 ;
+  wire \rStoredData_reg[3]_i_32__0_n_0 ;
+  wire \rStoredData_reg[3]_i_33__0_n_0 ;
+  wire \rStoredData_reg[3]_i_34__0_n_0 ;
   wire \rStoredData_reg[3]_i_35__0_n_0 ;
-  wire \rStoredData_reg[3]_i_36_n_0 ;
-  wire \rStoredData_reg[3]_i_37_n_0 ;
-  wire \rStoredData_reg[3]_i_38_n_0 ;
-  wire \rStoredData_reg[3]_i_39__0_n_0 ;
-  wire \rStoredData_reg[3]_i_40__0_n_0 ;
-  wire \rStoredData_reg[3]_i_43__0_n_0 ;
-  wire \rStoredData_reg[3]_i_44__0_n_0 ;
+  wire \rStoredData_reg[3]_i_49__0_n_0 ;
+  wire \rStoredData_reg[3]_i_50__0_n_0 ;
   wire \rStoredData_reg[3]_i_51__0_n_0 ;
   wire \rStoredData_reg[3]_i_52__0_n_0 ;
-  wire \rStoredData_reg[3]_i_53__0_n_0 ;
-  wire \rStoredData_reg[3]_i_54__0_n_0 ;
-  wire \rStoredData_reg[3]_i_58__0_n_0 ;
-  wire \rStoredData_reg[3]_i_59__0_n_0 ;
-  wire \rStoredData_reg[3]_i_9__0_n_0 ;
+  wire \rStoredData_reg[3]_i_5__0_n_0 ;
+  wire \rStoredData_reg[3]_i_7__0_n_0 ;
   wire \rStoredData_reg[4]_i_10__0_n_0 ;
-  wire \rStoredData_reg[4]_i_2__0_n_0 ;
-  wire \rStoredData_reg[4]_i_39_n_0 ;
-  wire \rStoredData_reg[4]_i_6__0_n_0 ;
-  wire \rStoredData_reg[4]_i_7__0_n_0 ;
-  wire \rStoredData_reg[4]_i_8__0_n_0 ;
-  wire \rStoredData_reg[4]_i_9__0_n_0 ;
-  wire \rStoredData_reg[5]_i_12_n_0 ;
+  wire \rStoredData_reg[4]_i_11__0_n_0 ;
+  wire \rStoredData_reg[4]_i_14__0_n_0 ;
+  wire \rStoredData_reg[4]_i_25__0_n_0 ;
+  wire \rStoredData_reg[4]_i_30__0_n_0 ;
+  wire \rStoredData_reg[4]_i_31__0_n_0 ;
+  wire \rStoredData_reg[4]_i_32__0_n_0 ;
+  wire \rStoredData_reg[4]_i_33__0_n_0 ;
+  wire \rStoredData_reg[4]_i_35__0_n_0 ;
+  wire \rStoredData_reg[4]_i_4__0_n_0 ;
+  wire \rStoredData_reg[5]_i_28__0_n_0 ;
   wire \rStoredData_reg[5]_i_2__0_n_0 ;
-  wire \rStoredData_reg[5]_i_9__0_n_0 ;
-  wire \rStoredData_reg[6]_i_1__0_n_0 ;
-  wire \rStoredData_reg[6]_i_6__0_n_0 ;
+  wire \rStoredData_reg[5]_i_4__0_n_0 ;
+  wire \rStoredData_reg[6]_i_12__0_n_0 ;
+  wire \rStoredData_reg[6]_i_2__0_n_0 ;
   wire \rStoredData_reg[7]_i_1__0_n_0 ;
   wire [2:0]sGammaReg;
   wire \sGammaReg_reg[0] ;
-  wire \sGammaReg_reg[0]_0 ;
   wire \sGammaReg_reg[1] ;
   wire [9:0]s_axis_video_tdata;
 
   LUT6 #(
-    .INIT(64'h11A1DE14EB4E11B9)) 
+    .INIT(64'h79DC16BCA56359D4)) 
     \rStoredData[0]_i_100__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_100__0_n_0 ));
   LUT6 #(
-    .INIT(64'hB200FFFFDDFF0000)) 
+    .INIT(64'h9A30D82367C72794)) 
     \rStoredData[0]_i_101__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_101__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5598AA6675598AA6)) 
+    .INIT(64'h5A9C8623E1431A9C)) 
     \rStoredData[0]_i_102__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_102__0_n_0 ));
   LUT6 #(
-    .INIT(64'h36B693CB9293C949)) 
+    .INIT(64'h3C3493C332B3C3C9)) 
     \rStoredData[0]_i_103__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -6435,39 +6539,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_103__0_n_0 ));
   LUT6 #(
-    .INIT(64'h969293DBC949696C)) 
+    .INIT(64'hB50FF02FD0B54AF0)) 
     \rStoredData[0]_i_104__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_104__0_n_0 ));
   LUT6 #(
-    .INIT(64'h65E6A686969E9A19)) 
+    .INIT(64'h4D6C36B62C24B293)) 
     \rStoredData[0]_i_105__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_105__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h92D3DBC9496D6D2C)) 
+    \rStoredData[0]_i_106__0 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_105__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h899966E817769999)) 
-    \rStoredData[0]_i_106__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_106__0_n_0 ));
   LUT6 #(
-    .INIT(64'h665D2666999A5999)) 
+    .INIT(64'h4CDD264C9B32D99B)) 
     \rStoredData[0]_i_107__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
@@ -6475,19 +6579,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_107__0_n_0 ));
   LUT6 #(
-    .INIT(64'h296B626646D6949D)) 
+    .INIT(64'h33269B334CCD264C)) 
     \rStoredData[0]_i_108__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_108__0_n_0 ));
   LUT6 #(
-    .INIT(64'hD3CC323333D9CC33)) 
+    .INIT(64'hD3CC323333D3CC33)) 
     \rStoredData[0]_i_109__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -6495,39 +6599,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_109__0_n_0 ));
   LUT6 #(
-    .INIT(64'h4C3C33333C33C3C3)) 
+    .INIT(64'h4333CCC633CC3333)) 
     \rStoredData[0]_i_110__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_110__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFF40000000FD)) 
+    .INIT(64'hFFFF0000FFEA0055)) 
     \rStoredData[0]_i_111__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_111__0_n_0 ));
   LUT6 #(
-    .INIT(64'h4F00FFFF30FF0000)) 
+    .INIT(64'h7F7755000088AAFE)) 
     \rStoredData[0]_i_112__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_112__0_n_0 ));
   LUT6 #(
-    .INIT(64'h00CD204CFF33DFFB)) 
+    .INIT(64'hAA678AE655197551)) 
     \rStoredData[0]_i_113__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
@@ -6535,9 +6639,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_113__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFE377F33038080C8)) 
+    .INIT(64'hAB622A665695D59D)) 
     \rStoredData[0]_i_114__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
@@ -6545,9 +6649,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_114__0_n_0 ));
   LUT6 #(
-    .INIT(64'h52E5BD3F1F06A4E8)) 
+    .INIT(64'h786D3DB5970E0E4A)) 
     \rStoredData[0]_i_115__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
@@ -6555,19 +6659,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[0]_i_115__0_n_0 ));
   LUT6 #(
-    .INIT(64'hA37DC222DE821DD7)) 
+    .INIT(64'h8F79870FB48F7096)) 
     \rStoredData[0]_i_116__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_116__0_n_0 ));
   LUT6 #(
-    .INIT(64'h1446B998676B9404)) 
+    .INIT(64'hBCCC333AC5433C8C)) 
     \rStoredData[0]_i_117__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -6575,13 +6679,13 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_117__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFECC40011337BEEE)) 
+    .INIT(64'hAA11891556EA66AA)) 
     \rStoredData[0]_i_118__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_118__0_n_0 ));
   LUT6 #(
@@ -6599,9 +6703,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
     \rStoredData[0]_i_3__0 
        (.I0(\rStoredData_reg[0]_i_7__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_8__0_n_0 ),
-        .I2(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[7]),
         .I3(\rStoredData_reg[0]_i_9__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[8]),
         .I5(\rStoredData_reg[0]_i_10__0_n_0 ),
         .O(\rStoredData[0]_i_3__0_n_0 ));
   LUT6 #(
@@ -6615,7 +6719,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(\rStoredData_reg[0]_i_14__0_n_0 ),
         .O(\rStoredData[0]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0F0F70F00F1AF0F0)) 
+    .INIT(64'hC3CB3C3CCC4C3C33)) 
     \rStoredData[0]_i_55__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -6625,14 +6729,14 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_55__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0F0F0F0F87F0F0F0)) 
+    .INIT(64'h4AF0AD4A0F52B52F)) 
     \rStoredData[0]_i_56__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_56__0_n_0 ));
   LUT6 #(
     .INIT(64'h0B0AF5FDFFFF0000)) 
@@ -6645,67 +6749,67 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_57__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF7FF551000008A)) 
+    .INIT(64'hFFFFF7551000008A)) 
     \rStoredData[0]_i_58__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_58__0_n_0 ));
   LUT6 #(
-    .INIT(64'h7655579581A888AA)) 
+    .INIT(64'hCCC53ABC43338DCD)) 
     \rStoredData[0]_i_59__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_59__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[0]_i_5__0 
        (.I0(\rStoredData_reg[0]_i_15__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_16__0_n_0 ),
-        .I2(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[0]),
         .I3(\rStoredData_reg[0]_i_17__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[6]),
         .I5(\rStoredData_reg[0]_i_18__0_n_0 ),
         .O(\rStoredData[0]_i_5__0_n_0 ));
   LUT6 #(
-    .INIT(64'hC4DC9DBD392B2362)) 
+    .INIT(64'h15FFEA00FFFE0111)) 
     \rStoredData[0]_i_60__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_60__0_n_0 ));
   LUT6 #(
-    .INIT(64'hC3CBCC4C3C3C3C33)) 
+    .INIT(64'hEAA8575F0111EEEA)) 
     \rStoredData[0]_i_61__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_61__0_n_0 ));
   LUT6 #(
-    .INIT(64'h4AF00F52AD4AB52F)) 
+    .INIT(64'h5AF078F0F0E1F1A5)) 
     \rStoredData[0]_i_62__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_62__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5969496D65A4A4B6)) 
+    .INIT(64'h7655579581A888AA)) 
     \rStoredData[0]_i_63__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -6715,44 +6819,44 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_63__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5961E5A779E5A586)) 
+    .INIT(64'hC4DC392B9DBD2362)) 
     \rStoredData[0]_i_64__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[0]_i_64__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEAA8575F0111EEEA)) 
-    \rStoredData[0]_i_65__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_65__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h5AF078F0F0E1F1A5)) 
-    \rStoredData[0]_i_66__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_66__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h34CF4A9D9125E10E)) 
-    \rStoredData[0]_i_67__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_64__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F0F0F1A70F0F0F0)) 
+    \rStoredData[0]_i_65__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_65__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F0F0F0F87F0F0F0)) 
+    \rStoredData[0]_i_66__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_66__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h34CF91254A9DE10E)) 
+    \rStoredData[0]_i_67__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_67__0_n_0 ));
   LUT6 #(
     .INIT(64'hDD8819FD297F6222)) 
@@ -6765,14 +6869,14 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_68__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCCC53ABC43338DCD)) 
+    .INIT(64'h5969496D65A4A4B6)) 
     \rStoredData[0]_i_69__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_69__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -6785,39 +6889,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(\rStoredData_reg[0]_i_22__0_n_0 ),
         .O(\rStoredData[0]_i_6__0_n_0 ));
   LUT6 #(
-    .INIT(64'h15FFFFFEEA000111)) 
+    .INIT(64'h59E561A779A5E586)) 
     \rStoredData[0]_i_70__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[0]_i_70__0_n_0 ));
   LUT6 #(
-    .INIT(64'h080F0000F7F0FFFF)) 
+    .INIT(64'hAE7700005118FFFF)) 
     \rStoredData[0]_i_71__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[9]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_71__0_n_0 ));
   LUT6 #(
-    .INIT(64'h46B9D4A9952B9D62)) 
+    .INIT(64'h0280FDFDC0F53F0A)) 
     \rStoredData[0]_i_72__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_72__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEFAE5151F7F70808)) 
+    .INIT(64'h67A6D95175778888)) 
     \rStoredData[0]_i_73__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -6825,19 +6929,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_73__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9BB2D99B6464A626)) 
+    .INIT(64'hFFF43BBF4003CC44)) 
     \rStoredData[0]_i_74__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_74__0_n_0 ));
   LUT6 #(
-    .INIT(64'hB995666A5556ABB9)) 
+    .INIT(64'h919DEE6AFDFE2313)) 
     \rStoredData[0]_i_75__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -6845,278 +6949,279 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_75__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEA6E7657559599A9)) 
+    .INIT(64'hFE6A11952203DDFC)) 
     \rStoredData[0]_i_76__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_76__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h11D5EA2ADDFC2A33)) 
+    \rStoredData[0]_i_77__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_77__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAA2A55D43757C088)) 
+    \rStoredData[0]_i_78__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_78__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0080FF7F88A97F66)) 
+    \rStoredData[0]_i_79__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_79__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h7220E2A21DDF1D5D)) 
+    \rStoredData[0]_i_80__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_80__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h8FE0A0E0705F7F1F)) 
+    \rStoredData[0]_i_81__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_81__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F020A80C0FDF5FD)) 
+    \rStoredData[0]_i_82__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_82__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h2E52849D5141BBEA)) 
+    \rStoredData[0]_i_83__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_83__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h415098BCAFEF7B52)) 
+    \rStoredData[0]_i_84__0 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_76__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h11EA55A87F80FE11)) 
-    \rStoredData[0]_i_77__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[0]_i_77__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hA665AA6659995559)) 
-    \rStoredData[0]_i_78__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_78__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hA87700FF00FF01EE)) 
-    \rStoredData[0]_i_79__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[0]_i_79__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h2665AA66599B55D9)) 
-    \rStoredData[0]_i_80__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_80__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h3F8000FF00FF00FF)) 
-    \rStoredData[0]_i_81__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[0]_i_81__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h665D266499BA5D99)) 
-    \rStoredData[0]_i_82__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_82__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h860E71B3F09F69E0)) 
-    \rStoredData[0]_i_83__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[0]_i_83__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h1051EEAE8A8875F7)) 
-    \rStoredData[0]_i_84__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_84__0_n_0 ));
   LUT6 #(
-    .INIT(64'hC43C63CCC3BC33C3)) 
+    .INIT(64'hECEB3614EB3B44C1)) 
     \rStoredData[0]_i_85__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_85__0_n_0 ));
   LUT6 #(
-    .INIT(64'h769155A8578815EA)) 
+    .INIT(64'h624394DC1111ECEB)) 
     \rStoredData[0]_i_86__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_86__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h9D462B9D)) 
+  LUT6 #(
+    .INIT(64'hD0953D6AFAC50527)) 
     \rStoredData[0]_i_87__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[0]_i_87__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAB999D546662AAB9)) 
+    .INIT(64'h81927E6C175BE9B2)) 
     \rStoredData[0]_i_88__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_88__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5577FEEAA8811155)) 
+    .INIT(64'hC551DAAA375EC884)) 
     \rStoredData[0]_i_89__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_89__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEA880011557FFEEA)) 
+    .INIT(64'hE8A4566D0593FAA4)) 
     \rStoredData[0]_i_90__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_90__0_n_0 ));
   LUT6 #(
-    .INIT(64'h533A32ECCCD3D932)) 
+    .INIT(64'hBF3F60DA9FED2039)) 
     \rStoredData[0]_i_91__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_91__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5756EEEAA8811515)) 
+    .INIT(64'h79DC86B9E5635ADC)) 
     \rStoredData[0]_i_92__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_92__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9DB99D392B626246)) 
+    .INIT(64'h9854D0342FC1BFD2)) 
     \rStoredData[0]_i_93__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_93__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCC32CC4CD3CC33DB)) 
+    .INIT(64'h5A9CF944A5231A9C)) 
     \rStoredData[0]_i_94__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_94__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCC339C4333CCC4)) 
+    .INIT(64'hC836EE54C9B6A159)) 
     \rStoredData[0]_i_95__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_95__0_n_0 ));
   LUT6 #(
-    .INIT(64'h4623DCC43BB94623)) 
+    .INIT(64'h8913F2A41479A993)) 
     \rStoredData[0]_i_96__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_96__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAA9956669155AAA9)) 
+    .INIT(64'hC5713A81256BCA1E)) 
     \rStoredData[0]_i_97__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_97__0_n_0 ));
   LUT6 #(
-    .INIT(64'h89116EEA5577A899)) 
+    .INIT(64'hA9B65E6C05DBE8A6)) 
     \rStoredData[0]_i_98__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_98__0_n_0 ));
   LUT6 #(
-    .INIT(64'h40FC43DC17A9249E)) 
+    .INIT(64'h3FB8B7F0402D483A)) 
     \rStoredData[0]_i_99__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_99__0_n_0 ));
   LUT6 #(
-    .INIT(64'h2232EC22CD6CD9DD)) 
+    .INIT(64'hBD962B2939B56269)) 
     \rStoredData[1]_i_100__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_100__0_n_0 ));
   LUT6 #(
-    .INIT(64'h4F00000020FFFFFF)) 
+    .INIT(64'h756A889D10A3AF46)) 
     \rStoredData[1]_i_101__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_101__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0AAF00AAFD54FFD5)) 
+    .INIT(64'hB5D22F9D2DD50A2D)) 
     \rStoredData[1]_i_102__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_102__0_n_0 ));
   LUT6 #(
-    .INIT(64'h088C88CCEEF7EF77)) 
+    .INIT(64'hAA26A2666455655D)) 
     \rStoredData[1]_i_103__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
@@ -7124,39 +7229,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_103__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5F4F0F050520A0B0)) 
+    .INIT(64'h1555AA8857EA5555)) 
     \rStoredData[1]_i_104__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_104__0_n_0 ));
   LUT6 #(
-    .INIT(64'hE361717961617978)) 
+    .INIT(64'h695B49DB49DB49DA)) 
     \rStoredData[1]_i_105__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[1]_i_105__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9888E6E68EEE7777)) 
+    .INIT(64'hD9999BBBBA222666)) 
     \rStoredData[1]_i_106__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_106__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5075EFAFF5F78A0A)) 
+    .INIT(64'hDA5F45255D55A0A2)) 
     \rStoredData[1]_i_107__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
@@ -7164,58 +7269,58 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_107__0_n_0 ));
   LUT6 #(
-    .INIT(64'hF2B4B024B024B42D)) 
+    .INIT(64'hAAE6AE6775515519)) 
     \rStoredData[1]_i_108__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_108__0_n_0 ));
   LUT6 #(
-    .INIT(64'h080000F0F0F3FFFF)) 
+    .INIT(64'hC4CCCC3C3C3B3333)) 
     \rStoredData[1]_i_109__0 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_109__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h9DCCDC44)) 
+  LUT6 #(
+    .INIT(64'h9AAA6664A6A65555)) 
     \rStoredData[1]_i_110__0 
-       (.I0(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_110__0_n_0 ));
+  LUT5 #(
+    .INIT(32'h33333336)) 
+    \rStoredData[1]_i_111__0 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_111__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h000800AFFFF7FF51)) 
+    \rStoredData[1]_i_112__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .O(\rStoredData[1]_i_110__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0F0F0F0F0F0FF4)) 
-    \rStoredData[1]_i_111__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[1]_i_111__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h004F0000FFB0FFFF)) 
-    \rStoredData[1]_i_112__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[6]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_112__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAA67551955558AAA)) 
+    .INIT(64'hAAEF7511FFF70000)) 
     \rStoredData[1]_i_113__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
@@ -7223,19 +7328,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_113__0_n_0 ));
   LUT6 #(
-    .INIT(64'h555D55D9BAAAAAA2)) 
+    .INIT(64'h5A1A5A1E0E8F8F87)) 
     \rStoredData[1]_i_114__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_114__0_n_0 ));
   LUT6 #(
-    .INIT(64'h3232C4C817C799B8)) 
+    .INIT(64'h1090EEEA9DEF3B10)) 
     \rStoredData[1]_i_115__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -7243,35 +7348,35 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_115__0_n_0 ));
   LUT6 #(
-    .INIT(64'h8ACAD2D7F7F53520)) 
+    .INIT(64'hBB8C3333CC45ACCC)) 
     \rStoredData[1]_i_116__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_116__0_n_0 ));
   LUT6 #(
-    .INIT(64'h40FDAF500AD0AF00)) 
-    \rStoredData[1]_i_117 
-       (.I0(s_axis_video_tdata[6]),
+    .INIT(64'hEA55AA52A57A85AA)) 
+    \rStoredData[1]_i_117__0 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[1]_i_117_n_0 ));
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_117__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5A5A496D5A5BE5A5)) 
-    \rStoredData[1]_i_118 
-       (.I0(s_axis_video_tdata[6]),
+    .INIT(64'h0F581EF00E781AF0)) 
+    \rStoredData[1]_i_118__0 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[1]_i_118_n_0 ));
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_118__0_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[1]_i_2__0 
@@ -7285,11 +7390,11 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[1]_i_3__0 
-       (.I0(\rStoredData_reg[1]_i_7_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_7__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_8__0_n_0 ),
-        .I2(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[7]),
         .I3(\rStoredData_reg[1]_i_9__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[8]),
         .I5(\rStoredData_reg[1]_i_10__0_n_0 ),
         .O(\rStoredData[1]_i_3__0_n_0 ));
   LUT6 #(
@@ -7303,24 +7408,24 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(\rStoredData_reg[1]_i_14__0_n_0 ),
         .O(\rStoredData[1]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'h334C32CCCCCCCCCC)) 
-    \rStoredData[1]_i_55 
+    .INIT(64'h9A96A6A69296A6A5)) 
+    \rStoredData[1]_i_55__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_55_n_0 ));
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_55__0_n_0 ));
   LUT6 #(
-    .INIT(64'h3B3C3C3CCCCCCCCC)) 
+    .INIT(64'hAF5A0A50AA581A75)) 
     \rStoredData[1]_i_56__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_56__0_n_0 ));
   LUT6 #(
     .INIT(64'h23DDFF00FF00FF00)) 
@@ -7336,34 +7441,34 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
     .INIT(64'hFFFCFFFF00010000)) 
     \rStoredData[1]_i_58__0 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[5]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[1]_i_58__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFF77F7551008008A)) 
+    .INIT(64'hA5A49E1AA6961B5B)) 
     \rStoredData[1]_i_59__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_59__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[1]_i_5__0 
        (.I0(\rStoredData_reg[1]_i_15__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_16__0_n_0 ),
-        .I2(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[0]),
         .I3(\rStoredData_reg[1]_i_17__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[6]),
         .I5(\rStoredData_reg[1]_i_18__0_n_0 ),
         .O(\rStoredData[1]_i_5__0_n_0 ));
   LUT6 #(
-    .INIT(64'h98E6AA758A77AE55)) 
+    .INIT(64'h1FA0FF00FF00FE11)) 
     \rStoredData[1]_i_60__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -7373,27 +7478,27 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_60__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9AA696A692A696A5)) 
+    .INIT(64'hCCCDCDCD9393B333)) 
     \rStoredData[1]_i_61__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_61__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAF5AAA580A501A75)) 
+    .INIT(64'h6C4CCCCCCCCDCDC9)) 
     \rStoredData[1]_i_62__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_62__0_n_0 ));
   LUT6 #(
-    .INIT(64'h66444CCDDDD9999B)) 
+    .INIT(64'hFFF777551000088A)) 
     \rStoredData[1]_i_63__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -7403,27 +7508,27 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_63__0_n_0 ));
   LUT6 #(
-    .INIT(64'hA0807FFF0515A8A8)) 
+    .INIT(64'h98E6AA758A77AE55)) 
     \rStoredData[1]_i_64__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_64__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCDCDCD9393B333)) 
+    .INIT(64'h343C3C2CCCCCCCCC)) 
     \rStoredData[1]_i_65__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_65__0_n_0 ));
   LUT6 #(
-    .INIT(64'h6C4CCCCCCCCDCDC9)) 
+    .INIT(64'h3B3C3C3CCCCCCCCC)) 
     \rStoredData[1]_i_66__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -7453,14 +7558,14 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_68__0_n_0 ));
   LUT6 #(
-    .INIT(64'hA5A4A6969E1A1B5B)) 
+    .INIT(64'h664C44CDDD99D99B)) 
     \rStoredData[1]_i_69__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_69__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -7473,39 +7578,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(\rStoredData_reg[1]_i_22__0_n_0 ),
         .O(\rStoredData[1]_i_6__0_n_0 ));
   LUT6 #(
-    .INIT(64'h1FA0FF00FF00FE11)) 
+    .INIT(64'hA0807FFF0515A8A8)) 
     \rStoredData[1]_i_70__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_70__0_n_0 ));
   LUT6 #(
-    .INIT(64'h2300FCFFFFFF0000)) 
+    .INIT(64'hBF0050FFFDFF0000)) 
     \rStoredData[1]_i_71__0 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[9]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_71__0_n_0 ));
   LUT6 #(
-    .INIT(64'hE7117708558851AA)) 
+    .INIT(64'hA525657858585A5A)) 
     \rStoredData[1]_i_72__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_72__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEF51FF00FF00F708)) 
+    .INIT(64'h45FB55AADDAADD22)) 
     \rStoredData[1]_i_73__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -7513,19 +7618,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_73__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCCFF4CCC3330FB33)) 
+    .INIT(64'hFFFE7FFF0001A080)) 
     \rStoredData[1]_i_74__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_74__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEE15AA57887F01EE)) 
+    .INIT(64'hCCB7AA75AA55AB44)) 
     \rStoredData[1]_i_75__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -7533,609 +7638,615 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_75__0_n_0 ));
   LUT6 #(
-    .INIT(64'hE5F1E1F0F0787058)) 
+    .INIT(64'hF0F0E165F0F12D0D)) 
     \rStoredData[1]_i_76__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[1]_i_76__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hB4785A5A70585A4B)) 
+    \rStoredData[1]_i_77__0 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_76__0_n_0 ));
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_77__0_n_0 ));
   LUT6 #(
-    .INIT(64'h1E5A70F0F0F0F0E1)) 
-    \rStoredData[1]_i_77__0 
-       (.I0(s_axis_video_tdata[5]),
+    .INIT(64'h00FF75AA15AAF58A)) 
+    \rStoredData[1]_i_78__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[1]_i_78__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F8F87A6F0F0F0F0)) 
+    \rStoredData[1]_i_79__0 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_77__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h5110AEAE0888FFF7)) 
-    \rStoredData[1]_i_78__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_78__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0F0F0E78F0F0F0)) 
-    \rStoredData[1]_i_79__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_79__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAEEF5511F7750088)) 
+    .INIT(64'hAAAA555595FD6200)) 
     \rStoredData[1]_i_80__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_80__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0F0F0F0F8FF0F0F0)) 
+    .INIT(64'h430B4B0B0F3C3C3C)) 
     \rStoredData[1]_i_81__0 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[9]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_81__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0520BAFAA0AADF5F)) 
+    .INIT(64'h0F0F0F8FCFF2D2F2)) 
     \rStoredData[1]_i_82__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_82__0_n_0 ));
   LUT6 #(
-    .INIT(64'h4C333CA23D8235C2)) 
+    .INIT(64'hE4B43128B5B50A4A)) 
     \rStoredData[1]_i_83__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_83__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFF005DA005BA00FF)) 
+    .INIT(64'hAB3144C81544BBBB)) 
     \rStoredData[1]_i_84__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_84__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5A6559E579A569A6)) 
+    .INIT(64'h585B5B4B4F4F0F8E)) 
     \rStoredData[1]_i_85__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_85__0_n_0 ));
   LUT6 #(
-    .INIT(64'h080A080EEFF7F7F5)) 
+    .INIT(64'h0F0E9AD21E1EF2F1)) 
     \rStoredData[1]_i_86__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_86__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hD99BB226)) 
+  LUT6 #(
+    .INIT(64'h681F0EF25E851DED)) 
     \rStoredData[1]_i_87__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_87__0_n_0 ));
   LUT6 #(
-    .INIT(64'h324426CC224466DD)) 
+    .INIT(64'hC224BC49D46D3DDB)) 
     \rStoredData[1]_i_88__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_88__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9933BB3333223266)) 
+    .INIT(64'h60A27A0C5F5397F6)) 
     \rStoredData[1]_i_89__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_89__0_n_0 ));
   LUT6 #(
-    .INIT(64'hF0F0F0F3C38F0F0F)) 
+    .INIT(64'hC336C62594493CC9)) 
     \rStoredData[1]_i_90__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_90__0_n_0 ));
   LUT6 #(
-    .INIT(64'h347CCCCBC333303C)) 
+    .INIT(64'h51006B5B8AFF560E)) 
     \rStoredData[1]_i_91__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_91__0_n_0 ));
   LUT6 #(
-    .INIT(64'hA800001557FFFEEA)) 
+    .INIT(64'hBD393B6396B52D69)) 
     \rStoredData[1]_i_92__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[1]_i_92__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5540F555AAAB00AA)) 
+    .INIT(64'h774A809E50A4AF43)) 
     \rStoredData[1]_i_93__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_93__0_n_0 ));
   LUT6 #(
-    .INIT(64'h3C3C3B333343C3C4)) 
+    .INIT(64'h9C3DD6963923B529)) 
     \rStoredData[1]_i_94__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_94__0_n_0 ));
   LUT6 #(
-    .INIT(64'h666665555D599999)) 
+    .INIT(64'h68970CF25EA159AD)) 
     \rStoredData[1]_i_95__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_95__0_n_0 ));
   LUT6 #(
-    .INIT(64'h644599995DDD9BBA)) 
+    .INIT(64'hC2253C49D46D3DDA)) 
     \rStoredData[1]_i_96__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_96__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCCDD9BBBDD993332)) 
+    .INIT(64'h60825F725A0D95EC)) 
     \rStoredData[1]_i_97__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_97__0_n_0 ));
   LUT6 #(
-    .INIT(64'h324C66CC22CC44DD)) 
+    .INIT(64'hC2C69C3C246D49CB)) 
     \rStoredData[1]_i_98__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[1]_i_98__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAA55ED0043BA36E8)) 
+    .INIT(64'h50E5109A8F50EF68)) 
     \rStoredData[1]_i_99__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_99__0_n_0 ));
   LUT6 #(
-    .INIT(64'hF333B3333C0C0C4C)) 
+    .INIT(64'hCCCCCCC933333333)) 
     \rStoredData[2]_i_100__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_100__0_n_0 ));
   LUT6 #(
-    .INIT(64'h666666666662222B)) 
+    .INIT(64'hCCC4CC6333333333)) 
     \rStoredData[2]_i_101__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_101__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h6233633333333333)) 
+    \rStoredData[2]_i_102__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_102__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h333B3B3B9D9C9CDC)) 
+    \rStoredData[2]_i_103__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_103__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h25FAFF05B70DFA00)) 
+    \rStoredData[2]_i_104__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[2]_i_104__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hDDD99998AAAA2666)) 
+    \rStoredData[2]_i_105__0 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_101__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h99955466)) 
-    \rStoredData[2]_i_102__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_102__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h555555556AAAAAAA)) 
-    \rStoredData[2]_i_103__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_103__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAA95555)) 
-    \rStoredData[2]_i_104__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_104__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hECFF03000000FFFF)) 
-    \rStoredData[2]_i_105__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_105__0_n_0 ));
   LUT6 #(
-    .INIT(64'h6233633333B93B99)) 
+    .INIT(64'h00FF00F00FE07F00)) 
     \rStoredData[2]_i_106__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_106__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h15FF0000FF00FFFF)) 
-    \rStoredData[2]_i_107__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_107__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAF509F055F2558A0)) 
-    \rStoredData[2]_i_108__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[2]_i_108__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h8FCFD2D2CBDAD2D2)) 
-    \rStoredData[2]_i_109 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_109_n_0 ));
-  LUT5 #(
-    .INIT(32'hC70C3C3C)) 
-    \rStoredData[2]_i_110 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_110_n_0 ));
-  LUT6 #(
-    .INIT(64'h999399B333263266)) 
-    \rStoredData[2]_i_111 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_111_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_15__0 
-       (.I0(\rStoredData_reg[2]_i_38__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_39__0_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData_reg[2]_i_40__0_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_41__0_n_0 ),
-        .O(\rStoredData[2]_i_15__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_16__0 
-       (.I0(\rStoredData[2]_i_42__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_43__0_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData_reg[2]_i_44__0_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_45__0_n_0 ),
-        .O(\rStoredData[2]_i_16__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h66AAEAAAAAAAAAAA)) 
-    \rStoredData[2]_i_21__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_21__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h6666EAAAAAAAAAAA)) 
-    \rStoredData[2]_i_22__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_22__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0FF070F0F0F0F0F0)) 
-    \rStoredData[2]_i_23 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_106__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hF0F3C70F0F0F0F0F)) 
+    \rStoredData[2]_i_107__0 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_107__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_14__0 
+       (.I0(\rStoredData[2]_i_39__0_n_0 ),
+        .I1(\rStoredData[2]_i_40__0_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[2]_i_41__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[2]_i_42__0_n_0 ),
+        .O(\rStoredData[2]_i_14__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_16__0 
+       (.I0(\rStoredData[2]_i_45__0_n_0 ),
+        .I1(\rStoredData[2]_i_46__0_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[2]_i_41__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[2]_i_47__0_n_0 ),
+        .O(\rStoredData[2]_i_16__0_n_0 ));
+  LUT3 #(
+    .INIT(8'hE4)) 
+    \rStoredData[2]_i_1__0 
+       (.I0(sGammaReg[2]),
+        .I1(p_1_in__0[2]),
+        .I2(\rStoredData_reg[2]_i_3__0_n_0 ),
+        .O(\rStoredData[2]_i_1__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h30BBFC88FF00FF00)) 
+    \rStoredData[2]_i_21__0 
+       (.I0(\rStoredData[5]_i_30__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_63__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[2]_i_56__0_n_0 ),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_23_n_0 ));
+        .O(\rStoredData[2]_i_21__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hB8BBB888B888B888)) 
+    \rStoredData[2]_i_25__0 
+       (.I0(\rStoredData[4]_i_23__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[5]_i_20__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_31__0_n_0 ),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_25__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h70F070F0F5EFF0E5)) 
+    \rStoredData[2]_i_27__0 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[6]_i_17__0_n_0 ),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(\rStoredData[2]_i_65__0_n_0 ),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_27__0_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[2]_i_2__0 
        (.I0(\rStoredData[2]_i_4__0_n_0 ),
         .I1(s_axis_video_tdata[4]),
-        .I2(\rStoredData_reg[2]_i_5__0_n_0 ),
+        .I2(\rStoredData[2]_i_5__0_n_0 ),
         .I3(sGammaReg[1]),
         .I4(sGammaReg[0]),
         .I5(\rStoredData[2]_i_6__0_n_0 ),
         .O(p_1_in__0[2]));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_3__0 
-       (.I0(\rStoredData[2]_i_7_n_0 ),
-        .I1(\rStoredData_reg[2]_i_8__0_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData_reg[2]_i_9__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData_reg[2]_i_10__0_n_0 ),
-        .O(\rStoredData[2]_i_3__0_n_0 ));
+    .INIT(64'hB9B999B95423462B)) 
+    \rStoredData[2]_i_39__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_39__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCCCCCDD99BB333)) 
-    \rStoredData[2]_i_42__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
+    .INIT(64'h3C9EBC243C3B9366)) 
+    \rStoredData[2]_i_40__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_40__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h9B9999DD426B436B)) 
+    \rStoredData[2]_i_41__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_41__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CBB3C20B365934B)) 
+    \rStoredData[2]_i_42__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_42__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hB999B9B95646233B)) 
+    \rStoredData[2]_i_45__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_45__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CBE3C38B4259362)) 
+    \rStoredData[2]_i_46__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_46__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CB33B653CD3204A)) 
+    \rStoredData[2]_i_47__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_47__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[2]_i_4__0 
-       (.I0(\rStoredData_reg[2]_i_11__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_12__0_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_9__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_10__0_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData_reg[2]_i_13_n_0 ),
+        .I3(\rStoredData_reg[2]_i_11__0_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_14__0_n_0 ),
+        .I5(\rStoredData_reg[2]_i_12__0_n_0 ),
         .O(\rStoredData[2]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \rStoredData[2]_i_56__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_56__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF8FFFF00010000)) 
-    \rStoredData[2]_i_54 
+    .INIT(64'hFFECFFFF00010000)) 
+    \rStoredData[2]_i_57__0 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[5]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_54_n_0 ));
+        .O(\rStoredData[2]_i_57__0_n_0 ));
   LUT6 #(
     .INIT(64'h50525A4A0A0F0F0F)) 
-    \rStoredData[2]_i_55__0 
+    \rStoredData[2]_i_58__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_55__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hBB99BB9999DDDDDC)) 
-    \rStoredData[2]_i_56__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_56__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h5A5A5A4A0A0A0A2F)) 
-    \rStoredData[2]_i_57__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_57__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hDDD5DD5544444442)) 
-    \rStoredData[2]_i_58__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_58__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAABBABBBD5555555)) 
+    .INIT(64'hDDD5D5D544444442)) 
     \rStoredData[2]_i_59__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_59__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_5__0 
+       (.I0(\rStoredData_reg[2]_i_13__0_n_0 ),
+        .I1(\rStoredData[2]_i_14__0_n_0 ),
+        .I2(s_axis_video_tdata[0]),
+        .I3(\rStoredData_reg[2]_i_15__0_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[2]_i_16__0_n_0 ),
+        .O(\rStoredData[2]_i_5__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAABBABBBD5555555)) 
+    \rStoredData[2]_i_60__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_59__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAB9B99DDD)) 
-    \rStoredData[2]_i_60__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_60__0_n_0 ));
   LUT6 #(
-    .INIT(64'h2A2AAAAAAAAAABBB)) 
+    .INIT(64'h7CB4A2B3A5A1D2DE)) 
     \rStoredData[2]_i_61__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[2]_i_61__0_n_0 ));
   LUT6 #(
-    .INIT(64'h7CB4A5A1A2B3D2DE)) 
+    .INIT(64'h6158785A7058785A)) 
     \rStoredData[2]_i_62__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[2]_i_62__0_n_0 ));
   LUT6 #(
-    .INIT(64'h6178585A7078585A)) 
+    .INIT(64'hBBBB999999DDDDDC)) 
     \rStoredData[2]_i_63__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_63__0_n_0 ));
   LUT6 #(
-    .INIT(64'hCC99DD33CDBBD922)) 
+    .INIT(64'h5A5A5A4A0A0A0A2F)) 
     \rStoredData[2]_i_64__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_64__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT3 #(
+    .INIT(8'h07)) 
+    \rStoredData[2]_i_65__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_65__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hCC99CDBBDD33D922)) 
+    \rStoredData[2]_i_66__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_64__0_n_0 ));
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_66__0_n_0 ));
   LUT6 #(
     .INIT(64'h38F0F0F0F0F0F0F5)) 
-    \rStoredData[2]_i_65__0 
+    \rStoredData[2]_i_67__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_65__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h30EFFF00FF00FF00)) 
-    \rStoredData[2]_i_66__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_66__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h00022222BFFFFFDD)) 
-    \rStoredData[2]_i_67__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_67__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFD40000000)) 
+    .INIT(64'h007F0FF00FF00FF0)) 
     \rStoredData[2]_i_68__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_68__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0FF8F0FFFFF0000)) 
-    \rStoredData[2]_i_69__0 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_68__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h367636666E6C6EEC)) 
+    \rStoredData[2]_i_69__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_69__0_n_0 ));
   LUT6 #(
@@ -8149,88 +8260,79 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(\rStoredData_reg[2]_i_20__0_n_0 ),
         .O(\rStoredData[2]_i_6__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_7 
-       (.I0(\rStoredData[6]_i_7__0_n_0 ),
-        .I1(\rStoredData[2]_i_21__0_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[2]_i_22__1_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[2]_i_23_n_0 ),
-        .O(\rStoredData[2]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCCCCCCDDB9393B3)) 
+    .INIT(64'h7F7F7F7FC8888888)) 
     \rStoredData[2]_i_70__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_70__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h0002BFFF)) 
-    \rStoredData[2]_i_71__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_71__0_n_0 ));
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_70__0_n_0 ));
   LUT6 #(
-    .INIT(64'h2C4C6CCCCCCCCCCD)) 
-    \rStoredData[2]_i_72__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
+    .INIT(64'hFFFFFFFE80000000)) 
+    \rStoredData[2]_i_71__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_71__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h4466666773333333)) 
+    \rStoredData[2]_i_72__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_72__0_n_0 ));
   LUT6 #(
-    .INIT(64'h00FF4CFFCF33FF00)) 
+    .INIT(64'h66666666667B673B)) 
     \rStoredData[2]_i_73__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_73__0_n_0 ));
   LUT6 #(
-    .INIT(64'h00FF7F00FF00FF00)) 
+    .INIT(64'h2666666666CCEECD)) 
     \rStoredData[2]_i_74__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_74__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9CDCDCCCCCCCC4C4)) 
+    .INIT(64'h0F7A1AFAF0F0F0F0)) 
     \rStoredData[2]_i_75__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_75__0_n_0 ));
   LUT6 #(
-    .INIT(64'h3B3C3C3CCCCCCCCC)) 
+    .INIT(64'h70EFFF00FF00FF00)) 
     \rStoredData[2]_i_76__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_76__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFD00550A40AA00FF)) 
+    .INIT(64'hAA55BF00FF00F500)) 
     \rStoredData[2]_i_77__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[4]),
@@ -8238,1446 +8340,1542 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_77__0_n_0 ));
   LUT6 #(
-    .INIT(64'h659955885DAAD9AA)) 
+    .INIT(64'h999C9C9CC6464646)) 
     \rStoredData[2]_i_78__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_78__0_n_0 ));
   LUT6 #(
-    .INIT(64'hF0F0F0F0F04A500F)) 
+    .INIT(64'h9594961666666666)) 
     \rStoredData[2]_i_79__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_79__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9B93B3B336262624)) 
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_7__0 
+       (.I0(\rStoredData[2]_i_21__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_22__0_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(\rStoredData_reg[2]_i_23__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[2]_i_24__0_n_0 ),
+        .O(\rStoredData[2]_i_7__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hCD99DD88DD80D922)) 
     \rStoredData[2]_i_80__0 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_80__0_n_0 ));
   LUT6 #(
-    .INIT(64'hC4C6C4C223333333)) 
+    .INIT(64'h9888C4C48CCC7777)) 
     \rStoredData[2]_i_81__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_81__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h9999999112226666)) 
+    \rStoredData[2]_i_82__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_82__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hC353D333C313D332)) 
+    \rStoredData[2]_i_83__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[2]_i_83__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hD4C9C33AC2D84337)) 
+    \rStoredData[2]_i_84__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_84__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hA96DBD24952494B6)) 
+    \rStoredData[2]_i_85__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_85__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hDCC6CC59C43393AE)) 
+    \rStoredData[2]_i_86__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_81__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h33333333304C00CC)) 
-    \rStoredData[2]_i_82__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_82__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hC3F3B333C3F33330)) 
-    \rStoredData[2]_i_83__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_83__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h02022222BBBFBFBF)) 
-    \rStoredData[2]_i_84__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_84__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hF5D5F5555002400A)) 
-    \rStoredData[2]_i_85__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_85__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0F0F0F0B00F0F0F)) 
-    \rStoredData[2]_i_86__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_86__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hD40A00FF)) 
+  LUT6 #(
+    .INIT(64'hA9BDAD956D246CA4)) 
     \rStoredData[2]_i_87__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[2]_i_87__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEE45BB55B86200BA)) 
+    .INIT(64'hD4C9433AC2986337)) 
     \rStoredData[2]_i_88__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_88__0_n_0 ));
   LUT6 #(
-    .INIT(64'h55999888AAAAE677)) 
+    .INIT(64'hA995BD946C2424B6)) 
     \rStoredData[2]_i_89__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[2]_i_89__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAABFD55)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_8__0 
+       (.I0(\rStoredData[2]_i_25__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_26__0_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(\rStoredData[2]_i_27__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[2]_i_28__0_n_0 ),
+        .O(\rStoredData[2]_i_8__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hDCC5C6C8C3BA4336)) 
     \rStoredData[2]_i_90__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_90__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5A0A4AAA5A0A0AAF)) 
+    .INIT(64'hA9B5AD956D2424A6)) 
     \rStoredData[2]_i_91__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[2]_i_91__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0A0A0A0BFFF5FFF5)) 
+    .INIT(64'h999D9D9DDCDCDCC4)) 
     \rStoredData[2]_i_92__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_92__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFEF0F0F000010)) 
+    .INIT(64'h4000AAAA02AAFFFF)) 
     \rStoredData[2]_i_93__0 
-       (.I0(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_93__0_n_0 ));
   LUT6 #(
-    .INIT(64'hC78F0C3C0F0C3C30)) 
+    .INIT(64'hFF0F8F0F0F0000F0)) 
     \rStoredData[2]_i_94__0 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_94__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAABBBDDDDD555)) 
+    \rStoredData[2]_i_95__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_95__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFBF3F330000004)) 
+    \rStoredData[2]_i_96__0 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_96__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h662262233333333B)) 
+    \rStoredData[2]_i_97__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_97__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hCBC3C3F3F3F0F0F0)) 
+    \rStoredData[2]_i_98__0 
        (.I0(s_axis_video_tdata[0]),
         .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[2]_i_94__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0F0F0E5A70F0F0F)) 
-    \rStoredData[2]_i_95__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_95__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h9115115577667666)) 
-    \rStoredData[2]_i_96__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_96__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h55775776AAAAAAAA)) 
-    \rStoredData[2]_i_97__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_97__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0F0F7FFFF0F0F0)) 
-    \rStoredData[2]_i_98__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_98__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFAAEA80AA00AA55)) 
+    .INIT(64'h334C00CC30CC00FF)) 
     \rStoredData[2]_i_99__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_99__0_n_0 ));
   LUT6 #(
-    .INIT(64'hEFEAE5E5EFEA4040)) 
+    .INIT(64'hEFE0FFFFEFE00000)) 
+    \rStoredData[3]_i_10__0 
+       (.I0(\rStoredData[3]_i_29__0_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData[5]_i_16__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[3]_i_30__0_n_0 ),
+        .O(\rStoredData[3]_i_10__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hEFEAE5E5E5E0E0E0)) 
     \rStoredData[3]_i_11__0 
        (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[3]_i_33_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[4]_i_40__0_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[3]_i_34__0_n_0 ),
+        .I1(\rStoredData[3]_i_31__0_n_0 ),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[4]_i_38__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[4]_i_21__0_n_0 ),
         .O(\rStoredData[3]_i_11__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_17__0 
-       (.I0(\rStoredData[3]_i_45__0_n_0 ),
-        .I1(\rStoredData[3]_i_46__0_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData[5]_i_42_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[3]_i_47__0_n_0 ),
-        .O(\rStoredData[3]_i_17__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \rStoredData[3]_i_18__0 
-       (.I0(\rStoredData[3]_i_48__0_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[3]_i_49__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_50__0_n_0 ),
-        .O(\rStoredData[3]_i_18__0_n_0 ));
+    \rStoredData[3]_i_14__0 
+       (.I0(\rStoredData[3]_i_36__0_n_0 ),
+        .I1(\rStoredData[4]_i_45__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData[3]_i_37__0_n_0 ),
+        .I4(s_axis_video_tdata[5]),
+        .I5(\rStoredData[3]_i_38__0_n_0 ),
+        .O(\rStoredData[3]_i_14__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_21__0 
-       (.I0(\rStoredData[3]_i_55__0_n_0 ),
-        .I1(\rStoredData[3]_i_56__0_n_0 ),
+    \rStoredData[3]_i_17__0 
+       (.I0(\rStoredData[3]_i_43__0_n_0 ),
+        .I1(\rStoredData[3]_i_44__0_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[3]_i_57__0_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[4]_i_32__1_n_0 ),
+        .I3(\rStoredData[3]_i_45__0_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[3]_i_46__0_n_0 ),
+        .O(\rStoredData[3]_i_17__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_18__0 
+       (.I0(\rStoredData[3]_i_47__0_n_0 ),
+        .I1(\rStoredData[5]_i_34__0_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[3]_i_48__0_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_23__0_n_0 ),
+        .O(\rStoredData[3]_i_18__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFAFAFAF0FC000C0)) 
+    \rStoredData[3]_i_21__0 
+       (.I0(\rStoredData[3]_i_53__0_n_0 ),
+        .I1(\rStoredData[3]_i_54__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(\rStoredData[6]_i_18__0_n_0 ),
+        .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[3]_i_21__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFF80000000)) 
+    \rStoredData[3]_i_22__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[3]_i_22__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h7F7FFFFFFFFFFEEE)) 
+    \rStoredData[3]_i_23__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_23__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
-    .INIT(32'h80000000)) 
-    \rStoredData[3]_i_23 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_23_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \rStoredData[3]_i_24 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_24_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT5 #(
-    .INIT(32'hAA800000)) 
-    \rStoredData[3]_i_25__1 
+    .INIT(32'h0000557F)) 
+    \rStoredData[3]_i_24__0 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_25__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFAFAFAF0FC000C0)) 
+        .O(\rStoredData[3]_i_24__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
     \rStoredData[3]_i_26__0 
-       (.I0(\rStoredData[6]_i_16__0_n_0 ),
-        .I1(\rStoredData[3]_i_60__0_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[5]_i_35__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_26__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h333333333FFC7CFC)) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT5 #(
+    .INIT(32'hAA800000)) 
     \rStoredData[3]_i_27__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_27__0_n_0 ));
   LUT6 #(
-    .INIT(64'h00000001FFFFFFFF)) 
+    .INIT(64'h00AF00A0FFCFFFCF)) 
     \rStoredData[3]_i_28__0 
-       (.I0(s_axis_video_tdata[4]),
+       (.I0(\rStoredData[3]_i_57__0_n_0 ),
+        .I1(\rStoredData[6]_i_18__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(\rStoredData[4]_i_24__0_n_0 ),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_28__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT5 #(
+    .INIT(32'hFEAA0000)) 
+    \rStoredData[3]_i_29__0 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_28__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCCCCFCCF3F3B3B3)) 
-    \rStoredData[3]_i_29__0 
-       (.I0(\rStoredData[3]_i_61__0_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[3]_i_62__1_n_0 ),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_29__0_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[3]_i_2__0 
        (.I0(\rStoredData[3]_i_4__0_n_0 ),
         .I1(s_axis_video_tdata[5]),
-        .I2(\rStoredData[3]_i_5__0_n_0 ),
+        .I2(\rStoredData_reg[3]_i_5__0_n_0 ),
         .I3(sGammaReg[1]),
         .I4(sGammaReg[0]),
         .I5(\rStoredData[3]_i_6__0_n_0 ),
         .O(p_1_in__0[3]));
   LUT6 #(
-    .INIT(64'hA0F0A0F0F0CFF0C0)) 
-    \rStoredData[3]_i_30 
-       (.I0(\rStoredData[4]_i_48__1_n_0 ),
-        .I1(\rStoredData[3]_i_63__1_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[4]_i_33_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_30_n_0 ));
-  LUT6 #(
-    .INIT(64'h55577777EAAAAAAA)) 
-    \rStoredData[3]_i_33 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_33_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \rStoredData[3]_i_34__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_34__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_3__0 
-       (.I0(\rStoredData[3]_i_7__0_n_0 ),
-        .I1(\rStoredData[3]_i_8__0_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData_reg[3]_i_9__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData_reg[3]_i_10__0_n_0 ),
-        .O(\rStoredData[3]_i_3__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hDDD5DDD544444442)) 
-    \rStoredData[3]_i_41__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_41__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAB9B9B99D)) 
-    \rStoredData[3]_i_42__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
+    .INIT(64'h033F373FFFFFFFFF)) 
+    \rStoredData[3]_i_31__0 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[9]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_31__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT5 #(
+    .INIT(32'hFFFFC880)) 
+    \rStoredData[3]_i_36__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_36__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFAAAAAAEAAAAA55)) 
+    \rStoredData[3]_i_37__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[3]_i_37__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555555540020002)) 
+    \rStoredData[3]_i_38__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_38__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_39__0 
+       (.I0(\rStoredData[3]_i_68__0_n_0 ),
+        .I1(\rStoredData[3]_i_69__0_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_70__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_71__0_n_0 ),
+        .O(\rStoredData[3]_i_39__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_3__0 
+       (.I0(\rStoredData_reg[3]_i_7__0_n_0 ),
+        .I1(\rStoredData[3]_i_8__0_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[3]_i_9__0_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .I5(\rStoredData[3]_i_10__0_n_0 ),
+        .O(\rStoredData[3]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_40__0 
+       (.I0(\rStoredData[3]_i_72__0_n_0 ),
+        .I1(\rStoredData[3]_i_73__0_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_74__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_75__0_n_0 ),
+        .O(\rStoredData[3]_i_40__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_41__0 
+       (.I0(\rStoredData[3]_i_76__0_n_0 ),
+        .I1(\rStoredData[3]_i_77__0_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_70__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_78__0_n_0 ),
+        .O(\rStoredData[3]_i_41__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_42__0 
+       (.I0(\rStoredData[3]_i_79__0_n_0 ),
+        .I1(\rStoredData[3]_i_80__0_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_74__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_81__0_n_0 ),
         .O(\rStoredData[3]_i_42__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAA888)) 
+    \rStoredData[3]_i_43__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_43__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[3]_i_45__0 
+    .INIT(16'h01FF)) 
+    \rStoredData[3]_i_44__0 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_44__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFF000000E00000FF)) 
+    \rStoredData[3]_i_45__0 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_45__0_n_0 ));
   LUT6 #(
-    .INIT(64'h00001555FFFFFFFF)) 
+    .INIT(64'hFFFFFFFFA8880000)) 
     \rStoredData[3]_i_46__0 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[3]_i_46__0_n_0 ));
   LUT6 #(
-    .INIT(64'hA8A8888811151515)) 
+    .INIT(64'h0F0F0F0F7FFFFFF0)) 
     \rStoredData[3]_i_47__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_47__0_n_0 ));
   LUT6 #(
-    .INIT(64'h33333333393CBCBC)) 
+    .INIT(64'hAAAAAAA811111115)) 
     \rStoredData[3]_i_48__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_48__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT5 #(
-    .INIT(32'h3B9DBB9C)) 
-    \rStoredData[3]_i_49__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_49__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_4__0 
        (.I0(\rStoredData[3]_i_11__0_n_0 ),
         .I1(\rStoredData_reg[3]_i_12__0_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData_reg[3]_i_13_n_0 ),
+        .I3(\rStoredData_reg[3]_i_13__0_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[3]_i_14__0_n_0 ),
+        .I5(\rStoredData[3]_i_14__0_n_0 ),
         .O(\rStoredData[3]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT5 #(
+    .INIT(32'hFFFE0000)) 
+    \rStoredData[3]_i_53__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_53__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \rStoredData[3]_i_54__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_54__0_n_0 ));
   LUT6 #(
-    .INIT(64'h33222222677755CC)) 
-    \rStoredData[3]_i_50__0 
+    .INIT(64'h5555555544622222)) 
+    \rStoredData[3]_i_55__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_50__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h557F0000FFFFFFFF)) 
-    \rStoredData[3]_i_55__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[6]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_55__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFDDFDDD44004000)) 
+    .INIT(64'h9555555555555550)) 
     \rStoredData[3]_i_56__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_56__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT5 #(
-    .INIT(32'h001000FF)) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT4 #(
+    .INIT(16'h37FF)) 
     \rStoredData[3]_i_57__0 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_57__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_5__0 
-       (.I0(\rStoredData_reg[3]_i_15__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_16__0_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[3]_i_17__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[3]_i_18__0_n_0 ),
-        .O(\rStoredData[3]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    \rStoredData[3]_i_60__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_60__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT3 #(
-    .INIT(8'hC8)) 
-    \rStoredData[3]_i_61__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_61__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    \rStoredData[3]_i_62__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .O(\rStoredData[3]_i_62__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT4 #(
-    .INIT(16'hFFEA)) 
-    \rStoredData[3]_i_63__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_63__1_n_0 ));
-  LUT6 #(
     .INIT(64'hA724273526752678)) 
-    \rStoredData[3]_i_64__0 
+    \rStoredData[3]_i_58__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_64__0_n_0 ));
+        .O(\rStoredData[3]_i_58__0_n_0 ));
   LUT6 #(
     .INIT(64'h02220222BFFDFFFD)) 
-    \rStoredData[3]_i_65__0 
+    \rStoredData[3]_i_59__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_65__0_n_0 ));
+        .O(\rStoredData[3]_i_59__0_n_0 ));
   LUT6 #(
-    .INIT(64'h5555555544226222)) 
-    \rStoredData[3]_i_66__0 
-       (.I0(s_axis_video_tdata[5]),
+    .INIT(64'h000000003BBB3BBF)) 
+    \rStoredData[3]_i_60__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_60__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFDD55544444)) 
+    \rStoredData[3]_i_61__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_61__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h6222222222AAAAAB)) 
+    \rStoredData[3]_i_62__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_62__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h99D59D5555555555)) 
+    \rStoredData[3]_i_63__0 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_66__0_n_0 ));
+        .O(\rStoredData[3]_i_63__0_n_0 ));
   LUT6 #(
-    .INIT(64'h9555555555555550)) 
-    \rStoredData[3]_i_67__0 
-       (.I0(s_axis_video_tdata[5]),
+    .INIT(64'h7FF0F0F0F0F0F0F0)) 
+    \rStoredData[3]_i_64__0 
+       (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_67__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAABBB9999D)) 
-    \rStoredData[3]_i_68__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_68__0_n_0 ));
+        .O(\rStoredData[3]_i_64__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000005777FFFF)) 
+    \rStoredData[3]_i_65__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[3]_i_65__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEEEEAAAAAAA8888)) 
+    \rStoredData[3]_i_66__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_66__0_n_0 ));
   LUT5 #(
-    .INIT(32'hAAA81555)) 
+    .INIT(32'h033337FF)) 
+    \rStoredData[3]_i_67__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_67__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h15151717E8E9E9E1)) 
+    \rStoredData[3]_i_68__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[3]_i_68__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h6E6E666255563725)) 
     \rStoredData[3]_i_69__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_69__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_6__0 
-       (.I0(\rStoredData_reg[3]_i_19__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_20__0_n_0 ),
+       (.I0(\rStoredData[3]_i_17__0_n_0 ),
+        .I1(\rStoredData[3]_i_18__0_n_0 ),
         .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[3]_i_21__0_n_0 ),
+        .I3(\rStoredData_reg[3]_i_19__0_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[3]_i_22__0_n_0 ),
+        .I5(\rStoredData_reg[3]_i_20__0_n_0 ),
         .O(\rStoredData[3]_i_6__0_n_0 ));
   LUT6 #(
-    .INIT(64'h6A2A2AAAAAAAAAAB)) 
+    .INIT(64'h15151757E8E9E1A1)) 
     \rStoredData[3]_i_70__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_70__0_n_0 ));
   LUT6 #(
-    .INIT(64'hC083C30333333333)) 
+    .INIT(64'h6E6A62625656272C)) 
     \rStoredData[3]_i_71__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_71__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0FF070F0F0F0F0F0)) 
+    .INIT(64'hFFFAEAAAA0805557)) 
     \rStoredData[3]_i_72__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_72__0_n_0 ));
   LUT6 #(
-    .INIT(64'h000000007FFFFFFF)) 
+    .INIT(64'hAA57AA5A552F5AB5)) 
     \rStoredData[3]_i_73__0 
-       (.I0(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_73__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h33333F7C)) 
+  LUT6 #(
+    .INIT(64'hFEEEEAAA88815557)) 
     \rStoredData[3]_i_74__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_74__0_n_0 ));
   LUT6 #(
-    .INIT(64'hDDDDD55540002222)) 
+    .INIT(64'hA55BA74BA669866C)) 
     \rStoredData[3]_i_75__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_75__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAA89)) 
+  LUT6 #(
+    .INIT(64'h0333FCC00337FC83)) 
     \rStoredData[3]_i_76__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_76__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCFB333)) 
-    \rStoredData[3]_i_77__0 
-       (.I0(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_76__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h66EE466255563265)) 
+    \rStoredData[3]_i_77__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_77__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAA89999911)) 
+    .INIT(64'h6E6E62625656272C)) 
     \rStoredData[3]_i_78__0 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_78__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h333030304CCCCCCC)) 
-    \rStoredData[3]_i_79__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_79__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFCBBFC88FF88FF88)) 
-    \rStoredData[3]_i_7__0 
-       (.I0(\rStoredData[3]_i_23_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[3]_i_24_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_25__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_7__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h33333333334C30CC)) 
-    \rStoredData[3]_i_80__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_80__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h55FF55FEAAAAAAAA)) 
-    \rStoredData[3]_i_81__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_81__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
-    \rStoredData[3]_i_82__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[3]_i_78__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFAEAAAA0805555)) 
+    \rStoredData[3]_i_79__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[3]_i_79__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAA57AA5A552F52B5)) 
+    \rStoredData[3]_i_80__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[3]_i_80__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hA55BA74BA669A66C)) 
+    \rStoredData[3]_i_81__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_81__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555555566666662)) 
+    \rStoredData[3]_i_82__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_82__0_n_0 ));
   LUT6 #(
-    .INIT(64'h4444400022222222)) 
+    .INIT(64'h55555555666E666A)) 
     \rStoredData[3]_i_83__0 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_83__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAA080FFFFFFFF)) 
+    .INIT(64'h55555555EEEAAAAA)) 
     \rStoredData[3]_i_84__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_84__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAA888FFFFFFFF)) 
+    .INIT(64'h77766EEEAAAAAAAA)) 
     \rStoredData[3]_i_85__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_85__0_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF01)) 
-    \rStoredData[3]_i_86__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_86__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0001555500000000)) 
-    \rStoredData[3]_i_87__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_87__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFD55555554)) 
-    \rStoredData[3]_i_88__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_88__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hBBBFFFDD)) 
-    \rStoredData[3]_i_89__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_89__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \rStoredData[3]_i_8__0 
-       (.I0(\rStoredData[3]_i_26__0_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[3]_i_27__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_28__0_n_0 ),
-        .O(\rStoredData[3]_i_8__0_n_0 ));
+        .O(\rStoredData[3]_i_85__0_n_0 ));
   LUT6 #(
-    .INIT(64'h1555555500000000)) 
-    \rStoredData[3]_i_90 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_90_n_0 ));
-  LUT6 #(
-    .INIT(64'h5F4F0F0F0F0A2AAA)) 
-    \rStoredData[3]_i_91 
-       (.I0(s_axis_video_tdata[6]),
+    .INIT(64'hD50F470F0F0A0A0A)) 
+    \rStoredData[3]_i_86__0 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_91_n_0 ));
-  LUT6 #(
-    .INIT(64'hEABBABBB99999999)) 
-    \rStoredData[3]_i_92 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_92_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFF08000)) 
-    \rStoredData[3]_i_93 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_93_n_0 ));
+        .O(\rStoredData[3]_i_86__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0000011177777FFF)) 
-    \rStoredData[3]_i_94 
-       (.I0(s_axis_video_tdata[6]),
+    .INIT(64'hAAAAABBBDDDDDDDD)) 
+    \rStoredData[3]_i_87__0 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_94_n_0 ));
+        .O(\rStoredData[3]_i_87__0_n_0 ));
   LUT6 #(
-    .INIT(64'h3077304430FF30FF)) 
-    \rStoredData[4]_i_11__0 
-       (.I0(\rStoredData[4]_i_27__1_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[4]_i_28__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_29__0_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_11__0_n_0 ));
+    .INIT(64'h00FF0700FF00FF00)) 
+    \rStoredData[3]_i_88__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_88__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFEAAA88888)) 
-    \rStoredData[4]_i_12__0 
-       (.I0(s_axis_video_tdata[8]),
+    .INIT(64'h333333333C0C4CCC)) 
+    \rStoredData[3]_i_89__0 
+       (.I0(s_axis_video_tdata[0]),
         .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(\rStoredData[4]_i_30__0_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_89__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h88B8FFFF88B80000)) 
+    \rStoredData[3]_i_8__0 
+       (.I0(\rStoredData[3]_i_23__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[3]_i_24__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[3]_i_25__0_n_0 ),
+        .O(\rStoredData[3]_i_8__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hB8CCFFFFB8CC0000)) 
+    \rStoredData[3]_i_9__0 
+       (.I0(\rStoredData[3]_i_26__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[3]_i_27__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_28__0_n_0 ),
+        .O(\rStoredData[3]_i_9__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_12__0 
+       (.I0(\rStoredData_reg[4]_i_30__0_n_0 ),
+        .I1(\rStoredData_reg[4]_i_31__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[4]_i_32__0_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData_reg[4]_i_33__0_n_0 ),
         .O(\rStoredData[4]_i_12__0_n_0 ));
   LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_13__0 
+       (.I0(\rStoredData[4]_i_34__0_n_0 ),
+        .I1(\rStoredData_reg[4]_i_31__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[4]_i_35__0_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData_reg[4]_i_33__0_n_0 ),
+        .O(\rStoredData[4]_i_13__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAF0FAF00C0C0C0C0)) 
+    \rStoredData[4]_i_15__0 
+       (.I0(\rStoredData[4]_i_38__0_n_0 ),
+        .I1(\rStoredData[5]_i_34__0_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[4]_i_39__0_n_0 ),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[4]_i_15__0_n_0 ));
+  LUT6 #(
     .INIT(64'hCCCCCCCFF3F3F3B3)) 
-    \rStoredData[4]_i_13 
+    \rStoredData[4]_i_16__0 
        (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[7]),
         .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFCFAFC000C000C0)) 
-    \rStoredData[4]_i_14 
-       (.I0(\rStoredData[4]_i_31__1_n_0 ),
-        .I1(\rStoredData[5]_i_32_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[4]_i_32__1_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFC0FFFFBFC00000)) 
-    \rStoredData[4]_i_15__0 
-       (.I0(\rStoredData[4]_i_33_n_0 ),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData[4]_i_34_n_0 ),
-        .O(\rStoredData[4]_i_15__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBB8FF33BBB8CC00)) 
-    \rStoredData[4]_i_16__0 
-       (.I0(\rStoredData[4]_i_35_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_36__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[4]_i_37_n_0 ),
         .O(\rStoredData[4]_i_16__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hB888FFFFB8880000)) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \rStoredData[4]_i_17__0 
-       (.I0(\rStoredData[5]_i_18__0_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[4]_i_38__0_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData_reg[4]_i_39_n_0 ),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
         .O(\rStoredData[4]_i_17__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAF00AF00FCFFFC00)) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT5 #(
+    .INIT(32'h7FFFFFFF)) 
     \rStoredData[4]_i_18__0 
-       (.I0(\rStoredData[4]_i_40__0_n_0 ),
-        .I1(\rStoredData[4]_i_41__1_n_0 ),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[7]),
-        .I4(\rStoredData[3]_i_28__0_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_18__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBBBBBB8BB8888)) 
-    \rStoredData[4]_i_19__0 
-       (.I0(\rStoredData[4]_i_42_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_36__0_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[6]_i_7__0_n_0 ),
-        .O(\rStoredData[4]_i_19__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBBBBBB8BBB8BBB8)) 
-    \rStoredData[4]_i_1__0 
-       (.I0(\rStoredData_reg[4]_i_2__0_n_0 ),
-        .I1(sGammaReg[2]),
-        .I2(\rStoredData[4]_i_3__0_n_0 ),
-        .I3(\rStoredData[4]_i_4__0_n_0 ),
-        .I4(\rStoredData[4]_i_5_n_0 ),
-        .I5(\sGammaReg_reg[1] ),
-        .O(\rStoredData[4]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
-    \rStoredData[4]_i_20__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[7]),
-        .O(\rStoredData[4]_i_20__0_n_0 ));
+        .O(\rStoredData[4]_i_18__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[4]_i_21__0 
-       (.I0(\rStoredData[4]_i_43_n_0 ),
-        .I1(\rStoredData[4]_i_44__0_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[4]_i_45__0_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[4]_i_46__0_n_0 ),
-        .O(\rStoredData[4]_i_21__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hE5A5E0A5A5A5A5A5)) 
-    \rStoredData[4]_i_22__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[4]_i_47__0_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[4]_i_48__1_n_0 ),
+    .INIT(64'hFFFFFFFFFEEEAAAA)) 
+    \rStoredData[4]_i_19__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_22__0_n_0 ));
+        .O(\rStoredData[4]_i_19__0_n_0 ));
   LUT6 #(
-    .INIT(64'h00B8FFFF00B80000)) 
-    \rStoredData[4]_i_23__0 
-       (.I0(\rStoredData[4]_i_49__1_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[5]_i_40__0_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[4]_i_50__0_n_0 ),
-        .O(\rStoredData[4]_i_23__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBB888B8BBB8BB)) 
-    \rStoredData[4]_i_24__0 
-       (.I0(\rStoredData[4]_i_51__0_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[4]_i_52__0_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[4]_i_53__0_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_24__0_n_0 ));
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
+    \rStoredData[4]_i_1__0 
+       (.I0(\rStoredData[4]_i_2__0_n_0 ),
+        .I1(sGammaReg[2]),
+        .I2(\rStoredData[4]_i_3__0_n_0 ),
+        .I3(\rStoredData_reg[4]_i_4__0_n_0 ),
+        .I4(\sGammaReg_reg[0] ),
+        .I5(\rStoredData[4]_i_5__0_n_0 ),
+        .O(\rStoredData[4]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \rStoredData[4]_i_25__0 
-       (.I0(\rStoredData[4]_i_54__0_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[4]_i_55__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_56_n_0 ),
-        .O(\rStoredData[4]_i_25__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F00DFDF0F00D0D0)) 
-    \rStoredData[4]_i_26__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[4]_i_49__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData[5]_i_42_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[4]_i_57__0_n_0 ),
-        .O(\rStoredData[4]_i_26__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \rStoredData[4]_i_27__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_27__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFEAAA00000000)) 
-    \rStoredData[4]_i_28__0 
+    .INIT(32'hFFEA0000)) 
+    \rStoredData[4]_i_20__0 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_28__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT5 #(
-    .INIT(32'h00007FFF)) 
-    \rStoredData[4]_i_29__0 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_29__0_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \rStoredData[4]_i_30__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .O(\rStoredData[4]_i_30__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT5 #(
-    .INIT(32'hFFFF8000)) 
-    \rStoredData[4]_i_31__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_31__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT5 #(
-    .INIT(32'hFFFFAAA8)) 
-    \rStoredData[4]_i_32__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_32__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT4 #(
-    .INIT(16'h15FF)) 
-    \rStoredData[4]_i_33 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_33_n_0 ));
-  LUT6 #(
-    .INIT(64'h001FFFFFFFF00000)) 
-    \rStoredData[4]_i_34 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_34_n_0 ));
-  LUT6 #(
-    .INIT(64'h5555544422222AAA)) 
-    \rStoredData[4]_i_35 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_35_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+        .O(\rStoredData[4]_i_20__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \rStoredData[4]_i_21__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_21__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'h00005F7F)) 
-    \rStoredData[4]_i_36__0 
+    \rStoredData[4]_i_22__0 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_22__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFE00000000)) 
+    \rStoredData[4]_i_23__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_23__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \rStoredData[4]_i_24__0 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_24__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h22FF22FFF0FFF000)) 
+    \rStoredData[4]_i_26__0 
+       (.I0(\rStoredData[4]_i_42__0_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[5]_i_21__0_n_0 ),
+        .I3(s_axis_video_tdata[6]),
+        .I4(\rStoredData[4]_i_43__0_n_0 ),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_26__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hEAEAAAAA55005555)) 
+    \rStoredData[4]_i_27__0 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[4]_i_44__0_n_0 ),
+        .I2(s_axis_video_tdata[4]),
+        .I3(\rStoredData[5]_i_20__0_n_0 ),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_27__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h33BB338830883088)) 
+    \rStoredData[4]_i_28__0 
+       (.I0(\rStoredData[4]_i_45__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_46__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[4]_i_47__0_n_0 ),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_28__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBB88B8BBB8BB)) 
+    \rStoredData[4]_i_29__0 
+       (.I0(\rStoredData[4]_i_48__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_49__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[7]_i_7__0_n_0 ),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_29__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_2__0 
+       (.I0(\rStoredData[4]_i_6__0_n_0 ),
+        .I1(\rStoredData[4]_i_7__0_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[4]_i_8__0_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .I5(\rStoredData[4]_i_9__0_n_0 ),
+        .O(\rStoredData[4]_i_2__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hCDFFCD00)) 
+    \rStoredData[4]_i_34__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[4]_i_58__0_n_0 ),
+        .O(\rStoredData[4]_i_34__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBFCF333BBFCC000)) 
+    \rStoredData[4]_i_36__0 
+       (.I0(\rStoredData[3]_i_24__0_n_0 ),
+        .I1(s_axis_video_tdata[7]),
+        .I2(\rStoredData[4]_i_61__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_62__0_n_0 ),
         .O(\rStoredData[4]_i_36__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFEAFFFF00000000)) 
-    \rStoredData[4]_i_37 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_37_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
-  LUT4 #(
-    .INIT(16'hFFEA)) 
+    .INIT(64'hBCCCFFFFBCCC0000)) 
+    \rStoredData[4]_i_37__0 
+       (.I0(\rStoredData[4]_i_63__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(\rStoredData[4]_i_64__0_n_0 ),
+        .O(\rStoredData[4]_i_37__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT5 #(
+    .INIT(32'hFFFF8000)) 
     \rStoredData[4]_i_38__0 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
         .O(\rStoredData[4]_i_38__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT5 #(
+    .INIT(32'hFFFFAAA8)) 
+    \rStoredData[4]_i_39__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_39__0_n_0 ));
   LUT6 #(
     .INIT(64'h0E020E0E0E020202)) 
     \rStoredData[4]_i_3__0 
        (.I0(s_axis_video_tdata[6]),
         .I1(sGammaReg[0]),
         .I2(sGammaReg[1]),
-        .I3(\rStoredData_reg[4]_i_8__0_n_0 ),
+        .I3(\rStoredData_reg[4]_i_10__0_n_0 ),
         .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData_reg[4]_i_9__0_n_0 ),
+        .I5(\rStoredData_reg[4]_i_11__0_n_0 ),
         .O(\rStoredData[4]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \rStoredData[4]_i_40__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_40__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT5 #(
-    .INIT(32'hFFFFAA80)) 
-    \rStoredData[4]_i_41__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_41__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
-    \rStoredData[4]_i_42 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_42_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT5 #(
-    .INIT(32'h0000557F)) 
-    \rStoredData[4]_i_43 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_43_n_0 ));
-  LUT6 #(
-    .INIT(64'h8880000000000001)) 
-    \rStoredData[4]_i_44__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_44__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT5 #(
-    .INIT(32'hFFFFEAAA)) 
-    \rStoredData[4]_i_45__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_45__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFEAAAA)) 
-    \rStoredData[4]_i_46__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_46__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT4 #(
-    .INIT(16'hFFA8)) 
-    \rStoredData[4]_i_47__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_47__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \rStoredData[4]_i_48__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_48__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT5 #(
-    .INIT(32'h00001555)) 
-    \rStoredData[4]_i_49__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_49__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[4]_i_4__0 
-       (.I0(\rStoredData_reg[4]_i_10__0_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_11__0_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[4]_i_12__0_n_0 ),
-        .I5(\sGammaReg_reg[0] ),
-        .O(\rStoredData[4]_i_4__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[4]_i_5 
-       (.I0(\rStoredData[4]_i_13_n_0 ),
-        .I1(\rStoredData[4]_i_14_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[4]_i_15__0_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData[4]_i_16__0_n_0 ),
-        .O(\rStoredData[4]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFCCCCCCCC8)) 
-    \rStoredData[4]_i_50__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_50__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h30040C0CCCCCCCCC)) 
-    \rStoredData[4]_i_51__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_51__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
-    \rStoredData[4]_i_52__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_52__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT5 #(
-    .INIT(32'h557FFFFF)) 
-    \rStoredData[4]_i_53__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_53__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hA8A8899955555555)) 
-    \rStoredData[4]_i_54__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_54__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT5 #(
-    .INIT(32'h80033333)) 
-    \rStoredData[4]_i_55__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_55__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h99999999DCC4CCC4)) 
-    \rStoredData[4]_i_56 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_56_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFAAEAAA)) 
-    \rStoredData[4]_i_57__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_57__0_n_0 ));
   LUT6 #(
     .INIT(64'h636363636332723A)) 
-    \rStoredData[4]_i_58 
+    \rStoredData[4]_i_40__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[4]_i_58_n_0 ));
+        .O(\rStoredData[4]_i_40__0_n_0 ));
   LUT6 #(
     .INIT(64'h57775777EAAAAAAA)) 
-    \rStoredData[4]_i_59 
+    \rStoredData[4]_i_41__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_59_n_0 ));
-  LUT6 #(
-    .INIT(64'h55040504FFFFFFFF)) 
-    \rStoredData[5]_i_10__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_23__0_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_24__0_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_10__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF55155555)) 
-    \rStoredData[5]_i_11__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(\rStoredData[5]_i_25__1_n_0 ),
+        .O(\rStoredData[4]_i_41__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT5 #(
+    .INIT(32'hA8000000)) 
+    \rStoredData[4]_i_42__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
-        .O(\rStoredData[5]_i_11__0_n_0 ));
+        .O(\rStoredData[4]_i_42__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF80FF8000)) 
-    \rStoredData[5]_i_13__0 
+    .INIT(64'hFFFFFFFFC444C440)) 
+    \rStoredData[4]_i_43__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_43__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  LUT4 #(
+    .INIT(16'hFFA8)) 
+    \rStoredData[4]_i_44__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_44__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000F0F0F7FFF)) 
+    \rStoredData[4]_i_45__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_45__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \rStoredData[4]_i_46__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_46__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \rStoredData[4]_i_47__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_47__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0037FFFFC0000000)) 
+    \rStoredData[4]_i_48__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_48__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT5 #(
+    .INIT(32'h557FFFFF)) 
+    \rStoredData[4]_i_49__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_49__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AA888155)) 
+    \rStoredData[4]_i_50__0 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_50__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FFFF01FF)) 
+    \rStoredData[4]_i_51__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_51__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AA880155)) 
+    \rStoredData[4]_i_52__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_52__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FFFE5557)) 
+    \rStoredData[4]_i_53__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_53__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h3F3FFF3F33C337F0)) 
+    \rStoredData[4]_i_54__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_28__0_n_0 ),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_54__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hE0E0E0E05F5E7E7E)) 
+    \rStoredData[4]_i_55__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_55__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h3F3FFF3F33C33FB0)) 
+    \rStoredData[4]_i_56__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_56__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hE0E0E0A05F5E7E7E)) 
+    \rStoredData[4]_i_57__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_57__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AAA88155)) 
+    \rStoredData[4]_i_58__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_58__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h7577F7F759595D7C)) 
+    \rStoredData[4]_i_59__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_59__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEE222E200000000)) 
+    \rStoredData[4]_i_5__0 
+       (.I0(\rStoredData_reg[4]_i_14__0_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[4]_i_15__0_n_0 ),
+        .I3(s_axis_video_tdata[8]),
+        .I4(\rStoredData[4]_i_16__0_n_0 ),
+        .I5(\sGammaReg_reg[1] ),
+        .O(\rStoredData[4]_i_5__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFC00FC0033FF37FC)) 
+    \rStoredData[4]_i_60__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_60__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT5 #(
+    .INIT(32'hFFEA0000)) 
+    \rStoredData[4]_i_61__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_61__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000FFFF5F7F0000)) 
+    \rStoredData[4]_i_62__0 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_62__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT4 #(
+    .INIT(16'h15FF)) 
+    \rStoredData[4]_i_63__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_63__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F1F0FF0F0F0F0F0)) 
+    \rStoredData[4]_i_64__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_64__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAAAA8)) 
+    \rStoredData[4]_i_6__0 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(\rStoredData[4]_i_17__0_n_0 ),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_6__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_7__0 
+       (.I0(\rStoredData[4]_i_18__0_n_0 ),
+        .I1(\rStoredData[4]_i_19__0_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[5]_i_18__0_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_20__0_n_0 ),
+        .O(\rStoredData[4]_i_7__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hB8333333B8330000)) 
+    \rStoredData[4]_i_8__0 
+       (.I0(\rStoredData[4]_i_21__0_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[4]_i_22__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_23__0_n_0 ),
+        .O(\rStoredData[4]_i_8__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h005DFFFF005D0000)) 
+    \rStoredData[4]_i_9__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[4]_i_24__0_n_0 ),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[6]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[4]_i_25__0_n_0 ),
+        .O(\rStoredData[4]_i_9__0_n_0 ));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rStoredData[5]_i_10__0 
+       (.I0(\rStoredData[5]_i_25__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[5]_i_26__0_n_0 ),
+        .O(\rStoredData[5]_i_10__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[5]_i_11__0 
+       (.I0(\rStoredData[5]_i_27__0_n_0 ),
+        .I1(\rStoredData[5]_i_25__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[5]_i_28__0_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData[5]_i_29__0_n_0 ),
+        .O(\rStoredData[5]_i_11__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hF3F3B3B330303000)) 
+    \rStoredData[5]_i_12__0 
+       (.I0(\rStoredData[5]_i_30__0_n_0 ),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[5]_i_31__0_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_12__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h8383330333333333)) 
+    \rStoredData[5]_i_13__0 
+       (.I0(\rStoredData[5]_i_30__0_n_0 ),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[5]_i_32__0_n_0 ),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[5]_i_13__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFBFB333333300000)) 
+    .INIT(64'hF0FFF0F0EF0FEF0F)) 
     \rStoredData[5]_i_14__0 
-       (.I0(\rStoredData[5]_i_29__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[5]_i_20__1_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(\rStoredData[5]_i_33__0_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[6]),
+        .I4(\rStoredData[5]_i_34__0_n_0 ),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[5]_i_14__0_n_0 ));
   LUT6 #(
-    .INIT(64'h8383330333333333)) 
+    .INIT(64'hEEEAAAAA00000000)) 
     \rStoredData[5]_i_15__0 
-       (.I0(\rStoredData[5]_i_29__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[5]_i_30__1_n_0 ),
-        .I4(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[5]_i_15__0_n_0 ));
   LUT6 #(
-    .INIT(64'hF0FFF0F0AF8FAF8F)) 
+    .INIT(64'h00000001FFFFFFFF)) 
     \rStoredData[5]_i_16__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[5]_i_31__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_32_n_0 ),
-        .I5(s_axis_video_tdata[7]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[5]_i_16__0_n_0 ));
   LUT6 #(
-    .INIT(64'h8080000003033303)) 
+    .INIT(64'hB833B83333333300)) 
     \rStoredData[5]_i_17__0 
-       (.I0(\rStoredData[5]_i_33__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[5]_i_34__1_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(\rStoredData[6]_i_18__0_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_24__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_30__0_n_0 ),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[5]_i_17__0_n_0 ));
   LUT6 #(
     .INIT(64'h000000007FFFFFFF)) 
@@ -9689,457 +9887,453 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[5]_i_18__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \rStoredData[5]_i_19__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_19__0_n_0 ));
   LUT6 #(
-    .INIT(64'hB833B83333333300)) 
-    \rStoredData[5]_i_19 
-       (.I0(\rStoredData[5]_i_35__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[5]_i_34__1_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_29__1_n_0 ),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_19_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBBBBBBBBBBBBBB8)) 
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
     \rStoredData[5]_i_1__0 
        (.I0(\rStoredData_reg[5]_i_2__0_n_0 ),
         .I1(sGammaReg[2]),
         .I2(\rStoredData[5]_i_3__0_n_0 ),
-        .I3(\rStoredData[5]_i_4__0_n_0 ),
-        .I4(\rStoredData[5]_i_5__0_n_0 ),
-        .I5(\rStoredData[5]_i_6__0_n_0 ),
+        .I3(\rStoredData_reg[5]_i_4__0_n_0 ),
+        .I4(\sGammaReg_reg[0] ),
+        .I5(\rStoredData[5]_i_5__0_n_0 ),
         .O(\rStoredData[5]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
-    .INIT(16'hC800)) 
-    \rStoredData[5]_i_20__1 
-       (.I0(s_axis_video_tdata[1]),
+    .INIT(16'h7FFF)) 
+    \rStoredData[5]_i_20__0 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_20__1_n_0 ));
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_20__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFEAFAEA00000000)) 
-    \rStoredData[5]_i_21 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_36__0_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_37_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_21_n_0 ));
-  LUT6 #(
-    .INIT(64'h80808080FCCCCCCC)) 
-    \rStoredData[5]_i_22__0 
-       (.I0(\rStoredData[5]_i_38_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[5]_i_29__1_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
-        .O(\rStoredData[5]_i_22__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \rStoredData[5]_i_23__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_23__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT3 #(
-    .INIT(8'h07)) 
-    \rStoredData[5]_i_24__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_24__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \rStoredData[5]_i_25__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .O(\rStoredData[5]_i_25__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h88BB88BBB8BBB888)) 
-    \rStoredData[5]_i_26 
-       (.I0(\rStoredData[5]_i_39_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[5]_i_40__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_27__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_26_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFF00A8FFA8FF)) 
-    \rStoredData[5]_i_27__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_41_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_42_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_27__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEAAAAAAA00000000)) 
-    \rStoredData[5]_i_28__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
+    .INIT(64'h02220222AAAAAAAB)) 
+    \rStoredData[5]_i_21__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_28__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT4 #(
-    .INIT(16'hEA00)) 
-    \rStoredData[5]_i_29__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_29__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \rStoredData[5]_i_30__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_30__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \rStoredData[5]_i_31__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_31__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT5 #(
-    .INIT(32'h000057FF)) 
-    \rStoredData[5]_i_32 
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_21__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFEAA0000FFFFFFFF)) 
+    \rStoredData[5]_i_22__0 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_32_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \rStoredData[5]_i_33__1 
-       (.I0(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[5]_i_22__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000A8880000)) 
+    \rStoredData[5]_i_23__0 
+       (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_33__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \rStoredData[5]_i_34__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[5]_i_23__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFF0F080F000)) 
+    \rStoredData[5]_i_24__0 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_34__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT3 #(
-    .INIT(8'hF8)) 
-    \rStoredData[5]_i_35__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_24__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFAAAA5555233B)) 
+    \rStoredData[5]_i_25__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__0_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_25__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8FFB800)) 
+    \rStoredData[5]_i_26__0 
+       (.I0(\rStoredData[5]_i_35__0_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[5]_i_36__0_n_0 ),
+        .I3(s_axis_video_tdata[1]),
+        .I4(\rStoredData[5]_i_29__0_n_0 ),
+        .O(\rStoredData[5]_i_26__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFAAAA55552333)) 
+    \rStoredData[5]_i_27__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__0_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_27__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hEAAA44009995FEEE)) 
+    \rStoredData[5]_i_29__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_35__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \rStoredData[5]_i_36__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_36__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_29__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[5]_i_37 
+    .INIT(16'hEA00)) 
+    \rStoredData[5]_i_30__0 
        (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_37_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+        .O(\rStoredData[5]_i_30__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
-    .INIT(16'hFFA8)) 
-    \rStoredData[5]_i_38 
-       (.I0(s_axis_video_tdata[3]),
+    .INIT(16'hA800)) 
+    \rStoredData[5]_i_31__0 
+       (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_38_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000055555777)) 
-    \rStoredData[5]_i_39 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_39_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[5]_i_3__0 
-       (.I0(\rStoredData_reg[5]_i_9__0_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[5]_i_10__0_n_0 ),
-        .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_11__0_n_0 ),
-        .I5(\sGammaReg_reg[0]_0 ),
-        .O(\rStoredData[5]_i_3__0_n_0 ));
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[5]_i_31__0_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'h1F)) 
-    \rStoredData[5]_i_40__0 
-       (.I0(s_axis_video_tdata[3]),
+    \rStoredData[5]_i_32__0 
+       (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_40__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[5]_i_41 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_41_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000015FFFFFFFF)) 
-    \rStoredData[5]_i_42 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_42_n_0 ));
-  LUT3 #(
-    .INIT(8'h02)) 
-    \rStoredData[5]_i_4__0 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(sGammaReg[1]),
-        .I2(sGammaReg[0]),
-        .O(\rStoredData[5]_i_4__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[5]_i_5__0 
-       (.I0(\rStoredData_reg[5]_i_12_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[5]_i_13__0_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\sGammaReg_reg[0] ),
-        .O(\rStoredData[5]_i_5__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFE200E200000000)) 
-    \rStoredData[5]_i_6__0 
-       (.I0(\rStoredData[5]_i_14__0_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[5]_i_15__0_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_16__0_n_0 ),
-        .I5(\sGammaReg_reg[1] ),
-        .O(\rStoredData[5]_i_6__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBBBBBB8BB8888)) 
-    \rStoredData[5]_i_7__0 
-       (.I0(\rStoredData[5]_i_17__0_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[5]_i_18__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData[5]_i_19_n_0 ),
-        .O(\rStoredData[5]_i_7__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFEEEAAAAA)) 
-    \rStoredData[5]_i_8__0 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(\rStoredData[5]_i_20__1_n_0 ),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[9]),
-        .O(\rStoredData[5]_i_8__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFF3F3B3B0)) 
-    \rStoredData[6]_i_10__0 
-       (.I0(\rStoredData[6]_i_17_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[6]_i_18_n_0 ),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[6]_i_10__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFEA00000000)) 
-    \rStoredData[6]_i_11__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[6]_i_11__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h333030300C0C8C8C)) 
-    \rStoredData[6]_i_12__0 
-       (.I0(\rStoredData[6]_i_19_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[4]_i_30__0_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[6]_i_12__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000FFFF75FF0000)) 
-    \rStoredData[6]_i_13__0 
-       (.I0(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .O(\rStoredData[5]_i_32__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \rStoredData[5]_i_33__0 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[4]),
-        .I2(\rStoredData[5]_i_30__1_n_0 ),
-        .I3(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_33__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT5 #(
+    .INIT(32'h000057FF)) 
+    \rStoredData[5]_i_34__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_34__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT5 #(
+    .INIT(32'hFFE000FF)) 
+    \rStoredData[5]_i_35__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_35__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hC000CC003337FCCC)) 
+    \rStoredData[5]_i_36__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_36__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hC000CC803337FCCC)) 
+    \rStoredData[5]_i_37__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_37__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFE000000FFFF)) 
+    \rStoredData[5]_i_38__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_38__0_n_0 ));
+  LUT5 #(
+    .INIT(32'h31223100)) 
+    \rStoredData[5]_i_3__0 
+       (.I0(sGammaReg[0]),
+        .I1(sGammaReg[1]),
+        .I2(\rStoredData[5]_i_8__0_n_0 ),
+        .I3(s_axis_video_tdata[7]),
+        .I4(\rStoredData[5]_i_9__0_n_0 ),
+        .O(\rStoredData[5]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFE200E200000000)) 
+    \rStoredData[5]_i_5__0 
+       (.I0(\rStoredData[5]_i_12__0_n_0 ),
+        .I1(s_axis_video_tdata[8]),
+        .I2(\rStoredData[5]_i_13__0_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[5]_i_14__0_n_0 ),
+        .I5(\sGammaReg_reg[1] ),
+        .O(\rStoredData[5]_i_5__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCFCBB33CCFC8800)) 
+    \rStoredData[5]_i_6__0 
+       (.I0(\rStoredData[5]_i_15__0_n_0 ),
+        .I1(s_axis_video_tdata[8]),
+        .I2(\rStoredData[5]_i_16__0_n_0 ),
+        .I3(s_axis_video_tdata[6]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[5]_i_17__0_n_0 ),
+        .O(\rStoredData[5]_i_6__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFAD0D)) 
+    \rStoredData[5]_i_7__0 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[5]_i_18__0_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[5]_i_19__0_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_7__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hA0AFA0A0EFFFEFFF)) 
+    \rStoredData[5]_i_8__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(\rStoredData[5]_i_20__0_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_21__0_n_0 ),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_8__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFAFAFA0C000C000)) 
+    \rStoredData[5]_i_9__0 
+       (.I0(\rStoredData[5]_i_22__0_n_0 ),
+        .I1(\rStoredData[5]_i_23__0_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_24__0_n_0 ),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_9__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAFFFFDCCC)) 
+    \rStoredData[6]_i_10__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__0_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_10__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAFFFFDCC4)) 
+    \rStoredData[6]_i_11__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_19__0_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_11__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555777FFFFFFFFF)) 
+    \rStoredData[6]_i_13__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[6]_i_13__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAA888)) 
+    .INIT(64'hFFFFFFFFEEEAAAAA)) 
     \rStoredData[6]_i_14__0 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_10__0_n_0 ),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[8]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[6]_i_14__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \rStoredData[6]_i_15__0 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[6]_i_15__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
-    \rStoredData[6]_i_15__0 
+    \rStoredData[6]_i_16__0 
        (.I0(s_axis_video_tdata[0]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[6]_i_15__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT5 #(
-    .INIT(32'hFFFE0000)) 
-    \rStoredData[6]_i_16__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
         .O(\rStoredData[6]_i_16__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \rStoredData[6]_i_17 
+    \rStoredData[6]_i_17__0 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[2]),
-        .O(\rStoredData[6]_i_17_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+        .O(\rStoredData[6]_i_17__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
-    .INIT(8'hFE)) 
-    \rStoredData[6]_i_18 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .O(\rStoredData[6]_i_18_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT3 #(
-    .INIT(8'h07)) 
-    \rStoredData[6]_i_19 
+    .INIT(8'hF8)) 
+    \rStoredData[6]_i_18__0 
        (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[6]_i_19_n_0 ));
+        .O(\rStoredData[6]_i_18__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \rStoredData[6]_i_19__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .O(\rStoredData[6]_i_19__0_n_0 ));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
-    \rStoredData[6]_i_2__0 
-       (.I0(\rStoredData[6]_i_4__0_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[6]_i_5__0_n_0 ),
-        .I3(sGammaReg[1]),
-        .I4(sGammaReg[0]),
-        .I5(\rStoredData_reg[6]_i_6__0_n_0 ),
-        .O(p_1_in__0[6]));
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
+    \rStoredData[6]_i_1__0 
+       (.I0(\rStoredData_reg[6]_i_2__0_n_0 ),
+        .I1(sGammaReg[2]),
+        .I2(\rStoredData[6]_i_3__0_n_0 ),
+        .I3(\rStoredData[6]_i_4__0_n_0 ),
+        .I4(\sGammaReg_reg[0] ),
+        .I5(\rStoredData[6]_i_5__0_n_0 ),
+        .O(\rStoredData[6]_i_1__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFE5555FFFE0000)) 
-    \rStoredData[6]_i_3__0 
-       (.I0(s_axis_video_tdata[8]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[6]_i_7__0_n_0 ),
-        .I3(s_axis_video_tdata[7]),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[6]_i_8__0_n_0 ),
-        .O(\rStoredData[6]_i_3__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCEEFFFFF0000000)) 
-    \rStoredData[6]_i_4__0 
-       (.I0(\rStoredData[6]_i_9_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[6]_i_10__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
+    .INIT(64'hAAAAABFFFFFF0000)) 
+    \rStoredData[6]_i_20__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[5]),
         .I4(s_axis_video_tdata[7]),
         .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_20__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAABFFFFFF0000)) 
+    \rStoredData[6]_i_21__0 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(\rStoredData[6]_i_19__0_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_21__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h3131333322000000)) 
+    \rStoredData[6]_i_3__0 
+       (.I0(sGammaReg[0]),
+        .I1(sGammaReg[1]),
+        .I2(\rStoredData[6]_i_8__0_n_0 ),
+        .I3(\rStoredData[6]_i_9__0_n_0 ),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hBF80FFFFBF800000)) 
+    \rStoredData[6]_i_4__0 
+       (.I0(\rStoredData[6]_i_10__0_n_0 ),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(\rStoredData[6]_i_11__0_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData_reg[6]_i_12__0_n_0 ),
         .O(\rStoredData[6]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFEA55FFFFEA00AA)) 
+    .INIT(64'hEE62CC6200000000)) 
     \rStoredData[6]_i_5__0 
        (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[6]_i_11__0_n_0 ),
-        .I3(s_axis_video_tdata[8]),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[6]_i_12__0_n_0 ),
+        .I1(s_axis_video_tdata[8]),
+        .I2(\rStoredData[6]_i_13__0_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[6]_i_14__0_n_0 ),
+        .I5(\sGammaReg_reg[1] ),
         .O(\rStoredData[6]_i_5__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
+    .INIT(64'hDDDDDDDDD8C8C888)) 
+    \rStoredData[6]_i_6__0 
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[6]_i_15__0_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[6]_i_6__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF11115515)) 
     \rStoredData[6]_i_7__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(\rStoredData[6]_i_16__0_n_0 ),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[6]_i_7__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0FBF0FBFFFF0F0F0)) 
+    .INIT(64'hCDDDDDDDDDDDDDDD)) 
     \rStoredData[6]_i_8__0 
-       (.I0(\rStoredData[6]_i_15__0_n_0 ),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[7]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[6]_i_16__0_n_0 ),
-        .I5(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(\rStoredData[6]_i_17__0_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[6]_i_8__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
-    \rStoredData[6]_i_9 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
+  LUT6 #(
+    .INIT(64'hEFEFAFAA00000000)) 
+    \rStoredData[6]_i_9__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[6]_i_18__0_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[6]_i_15__0_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[6]_i_9__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFC8C8C888)) 
+    \rStoredData[7]_i_10__0 
+       (.I0(s_axis_video_tdata[7]),
+        .I1(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[5]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[6]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[7]_i_10__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hE0)) 
-    \rStoredData[7]_i_10__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
+    \rStoredData[7]_i_11__0 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[7]_i_10__0_n_0 ));
+        .O(\rStoredData[7]_i_11__0_n_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CAFFCA00)) 
     \rStoredData[7]_i_2__0 
@@ -10151,72 +10345,73 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I5(\rStoredData[7]_i_6__0_n_0 ),
         .O(p_1_in__0[7]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFEEEAAAAA)) 
+    .INIT(64'hFFFFFFFFFFFFE000)) 
     \rStoredData[7]_i_3__0 
-       (.I0(s_axis_video_tdata[9]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_7_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(s_axis_video_tdata[8]),
-        .O(\rStoredData[7]_i_3__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hEFFFE000)) 
-    \rStoredData[7]_i_4__0 
-       (.I0(\rStoredData[7]_i_8_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[8]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[7]_i_7__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
         .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[9]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[7]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF8000000)) 
+    \rStoredData[7]_i_4__0 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[7]_i_8__0_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[7]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFCCCCC888)) 
+    .INIT(64'hFFB8FFBBFFB8CC88)) 
     \rStoredData[7]_i_5__0 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[8]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[7]_i_9__0_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[9]),
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[7]_i_9__0_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData[7]_i_10__0_n_0 ),
         .O(\rStoredData[7]_i_5__0_n_0 ));
   LUT6 #(
     .INIT(64'hEEEAAAAA00000000)) 
     \rStoredData[7]_i_6__0 
        (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_10__0_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[7]_i_11__0_n_0 ),
         .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
         .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[7]_i_6__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
-    \rStoredData[7]_i_7 
+    \rStoredData[7]_i_7__0 
        (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[7]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
-    \rStoredData[7]_i_8 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
-        .O(\rStoredData[7]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+        .O(\rStoredData[7]_i_7__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
-    .INIT(16'hFFEA)) 
-    \rStoredData[7]_i_9__0 
+    .INIT(16'h8000)) 
+    \rStoredData[7]_i_8__0 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[7]_i_8__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FE000000)) 
+    \rStoredData[7]_i_9__0 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[7]_i_9__0_n_0 ));
   FDRE \rStoredData_reg[0] 
        (.C(StreamClk),
@@ -10228,7 +10423,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
        (.I0(\rStoredData_reg[0]_i_29__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_30__0_n_0 ),
         .O(\rStoredData_reg[0]_i_10__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_11__0 
        (.I0(\rStoredData_reg[0]_i_31__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_32__0_n_0 ),
@@ -10253,22 +10448,22 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
        (.I0(\rStoredData_reg[0]_i_39__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_40__0_n_0 ),
         .O(\rStoredData_reg[0]_i_15__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_16__0 
        (.I0(\rStoredData_reg[0]_i_41__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_42__0_n_0 ),
         .O(\rStoredData_reg[0]_i_16__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_17__0 
        (.I0(\rStoredData_reg[0]_i_43__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_44__0_n_0 ),
         .O(\rStoredData_reg[0]_i_17__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_18__0 
        (.I0(\rStoredData_reg[0]_i_45__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_46__0_n_0 ),
         .O(\rStoredData_reg[0]_i_18__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_19__0 
        (.I0(\rStoredData_reg[0]_i_47__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_48__0_n_0 ),
@@ -10338,137 +10533,137 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
        (.I0(\rStoredData[0]_i_71__0_n_0 ),
         .I1(\rStoredData[0]_i_72__0_n_0 ),
         .O(\rStoredData_reg[0]_i_31__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_32__0 
        (.I0(\rStoredData[0]_i_73__0_n_0 ),
         .I1(\rStoredData[0]_i_74__0_n_0 ),
         .O(\rStoredData_reg[0]_i_32__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_33__0 
        (.I0(\rStoredData[0]_i_75__0_n_0 ),
         .I1(\rStoredData[0]_i_76__0_n_0 ),
         .O(\rStoredData_reg[0]_i_33__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_34__0 
        (.I0(\rStoredData[0]_i_77__0_n_0 ),
         .I1(\rStoredData[0]_i_78__0_n_0 ),
         .O(\rStoredData_reg[0]_i_34__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_35__0 
        (.I0(\rStoredData[0]_i_79__0_n_0 ),
         .I1(\rStoredData[0]_i_80__0_n_0 ),
         .O(\rStoredData_reg[0]_i_35__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_36__0 
        (.I0(\rStoredData[0]_i_81__0_n_0 ),
         .I1(\rStoredData[0]_i_82__0_n_0 ),
         .O(\rStoredData_reg[0]_i_36__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_37__0 
        (.I0(\rStoredData[0]_i_83__0_n_0 ),
         .I1(\rStoredData[0]_i_84__0_n_0 ),
         .O(\rStoredData_reg[0]_i_37__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_38__0 
        (.I0(\rStoredData[0]_i_85__0_n_0 ),
         .I1(\rStoredData[0]_i_86__0_n_0 ),
         .O(\rStoredData_reg[0]_i_38__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_39__0 
        (.I0(\rStoredData[0]_i_87__0_n_0 ),
         .I1(\rStoredData[0]_i_88__0_n_0 ),
         .O(\rStoredData_reg[0]_i_39__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_40__0 
        (.I0(\rStoredData[0]_i_89__0_n_0 ),
         .I1(\rStoredData[0]_i_90__0_n_0 ),
         .O(\rStoredData_reg[0]_i_40__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_41__0 
        (.I0(\rStoredData[0]_i_91__0_n_0 ),
         .I1(\rStoredData[0]_i_92__0_n_0 ),
         .O(\rStoredData_reg[0]_i_41__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_42__0 
        (.I0(\rStoredData[0]_i_93__0_n_0 ),
         .I1(\rStoredData[0]_i_94__0_n_0 ),
         .O(\rStoredData_reg[0]_i_42__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_43__0 
        (.I0(\rStoredData[0]_i_95__0_n_0 ),
         .I1(\rStoredData[0]_i_96__0_n_0 ),
         .O(\rStoredData_reg[0]_i_43__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_44__0 
        (.I0(\rStoredData[0]_i_97__0_n_0 ),
         .I1(\rStoredData[0]_i_98__0_n_0 ),
         .O(\rStoredData_reg[0]_i_44__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_45__0 
        (.I0(\rStoredData[0]_i_99__0_n_0 ),
         .I1(\rStoredData[0]_i_100__0_n_0 ),
         .O(\rStoredData_reg[0]_i_45__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_46__0 
        (.I0(\rStoredData[0]_i_101__0_n_0 ),
         .I1(\rStoredData[0]_i_102__0_n_0 ),
         .O(\rStoredData_reg[0]_i_46__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_47__0 
        (.I0(\rStoredData[0]_i_103__0_n_0 ),
         .I1(\rStoredData[0]_i_104__0_n_0 ),
         .O(\rStoredData_reg[0]_i_47__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_48__0 
        (.I0(\rStoredData[0]_i_105__0_n_0 ),
         .I1(\rStoredData[0]_i_106__0_n_0 ),
         .O(\rStoredData_reg[0]_i_48__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_49__0 
        (.I0(\rStoredData[0]_i_107__0_n_0 ),
         .I1(\rStoredData[0]_i_108__0_n_0 ),
         .O(\rStoredData_reg[0]_i_49__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_50__0 
        (.I0(\rStoredData[0]_i_109__0_n_0 ),
         .I1(\rStoredData[0]_i_110__0_n_0 ),
         .O(\rStoredData_reg[0]_i_50__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_51__0 
        (.I0(\rStoredData[0]_i_111__0_n_0 ),
         .I1(\rStoredData[0]_i_112__0_n_0 ),
         .O(\rStoredData_reg[0]_i_51__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_52__0 
        (.I0(\rStoredData[0]_i_113__0_n_0 ),
         .I1(\rStoredData[0]_i_114__0_n_0 ),
         .O(\rStoredData_reg[0]_i_52__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_53__0 
        (.I0(\rStoredData[0]_i_115__0_n_0 ),
         .I1(\rStoredData[0]_i_116__0_n_0 ),
         .O(\rStoredData_reg[0]_i_53__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_54__0 
        (.I0(\rStoredData[0]_i_117__0_n_0 ),
         .I1(\rStoredData[0]_i_118__0_n_0 ),
         .O(\rStoredData_reg[0]_i_54__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[0]_i_7__0 
        (.I0(\rStoredData_reg[0]_i_23__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_24__0_n_0 ),
         .O(\rStoredData_reg[0]_i_7__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_8__0 
        (.I0(\rStoredData_reg[0]_i_25__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_26__0_n_0 ),
         .O(\rStoredData_reg[0]_i_8__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_9__0 
        (.I0(\rStoredData_reg[0]_i_27__0_n_0 ),
         .I1(\rStoredData_reg[0]_i_28__0_n_0 ),
         .O(\rStoredData_reg[0]_i_9__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[1] 
        (.C(StreamClk),
         .CE(E),
@@ -10479,7 +10674,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
        (.I0(\rStoredData_reg[1]_i_29__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_30__0_n_0 ),
         .O(\rStoredData_reg[1]_i_10__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[1]_i_11__0 
        (.I0(\rStoredData_reg[1]_i_31__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_32__0_n_0 ),
@@ -10504,22 +10699,22 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
        (.I0(\rStoredData_reg[1]_i_39__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_40__0_n_0 ),
         .O(\rStoredData_reg[1]_i_15__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_16__0 
        (.I0(\rStoredData_reg[1]_i_41__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_42__0_n_0 ),
         .O(\rStoredData_reg[1]_i_16__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_17__0 
        (.I0(\rStoredData_reg[1]_i_43__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_44__0_n_0 ),
         .O(\rStoredData_reg[1]_i_17__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_18__0 
        (.I0(\rStoredData_reg[1]_i_45__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_46__0_n_0 ),
         .O(\rStoredData_reg[1]_i_18__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_19__0 
        (.I0(\rStoredData_reg[1]_i_47__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_48__0_n_0 ),
@@ -10545,25 +10740,25 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .I1(\rStoredData_reg[1]_i_54__0_n_0 ),
         .O(\rStoredData_reg[1]_i_22__0_n_0 ),
         .S(s_axis_video_tdata[7]));
-  MUXF7 \rStoredData_reg[1]_i_23 
-       (.I0(\rStoredData[1]_i_55_n_0 ),
+  MUXF7 \rStoredData_reg[1]_i_23__0 
+       (.I0(\rStoredData[1]_i_55__0_n_0 ),
         .I1(\rStoredData[1]_i_56__0_n_0 ),
-        .O(\rStoredData_reg[1]_i_23_n_0 ),
+        .O(\rStoredData_reg[1]_i_23__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_24 
+  MUXF7 \rStoredData_reg[1]_i_24__0 
        (.I0(\rStoredData[1]_i_57__0_n_0 ),
         .I1(\rStoredData[1]_i_58__0_n_0 ),
-        .O(\rStoredData_reg[1]_i_24_n_0 ),
+        .O(\rStoredData_reg[1]_i_24__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_25 
+  MUXF7 \rStoredData_reg[1]_i_25__0 
        (.I0(\rStoredData[1]_i_59__0_n_0 ),
         .I1(\rStoredData[1]_i_60__0_n_0 ),
-        .O(\rStoredData_reg[1]_i_25_n_0 ),
+        .O(\rStoredData_reg[1]_i_25__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_26 
+  MUXF7 \rStoredData_reg[1]_i_26__0 
        (.I0(\rStoredData[1]_i_61__0_n_0 ),
         .I1(\rStoredData[1]_i_62__0_n_0 ),
-        .O(\rStoredData_reg[1]_i_26_n_0 ),
+        .O(\rStoredData_reg[1]_i_26__0_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_27__0 
        (.I0(\rStoredData[1]_i_63__0_n_0 ),
@@ -10589,392 +10784,352 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
        (.I0(\rStoredData[1]_i_71__0_n_0 ),
         .I1(\rStoredData[1]_i_72__0_n_0 ),
         .O(\rStoredData_reg[1]_i_31__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_32__0 
        (.I0(\rStoredData[1]_i_73__0_n_0 ),
         .I1(\rStoredData[1]_i_74__0_n_0 ),
         .O(\rStoredData_reg[1]_i_32__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_33__0 
        (.I0(\rStoredData[1]_i_75__0_n_0 ),
         .I1(\rStoredData[1]_i_76__0_n_0 ),
         .O(\rStoredData_reg[1]_i_33__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_34__0 
        (.I0(\rStoredData[1]_i_77__0_n_0 ),
         .I1(\rStoredData[1]_i_78__0_n_0 ),
         .O(\rStoredData_reg[1]_i_34__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_35__0 
        (.I0(\rStoredData[1]_i_79__0_n_0 ),
         .I1(\rStoredData[1]_i_80__0_n_0 ),
         .O(\rStoredData_reg[1]_i_35__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_36__0 
        (.I0(\rStoredData[1]_i_81__0_n_0 ),
         .I1(\rStoredData[1]_i_82__0_n_0 ),
         .O(\rStoredData_reg[1]_i_36__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_37__0 
        (.I0(\rStoredData[1]_i_83__0_n_0 ),
         .I1(\rStoredData[1]_i_84__0_n_0 ),
         .O(\rStoredData_reg[1]_i_37__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_38__0 
        (.I0(\rStoredData[1]_i_85__0_n_0 ),
         .I1(\rStoredData[1]_i_86__0_n_0 ),
         .O(\rStoredData_reg[1]_i_38__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_39__0 
        (.I0(\rStoredData[1]_i_87__0_n_0 ),
         .I1(\rStoredData[1]_i_88__0_n_0 ),
         .O(\rStoredData_reg[1]_i_39__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_40__0 
        (.I0(\rStoredData[1]_i_89__0_n_0 ),
         .I1(\rStoredData[1]_i_90__0_n_0 ),
         .O(\rStoredData_reg[1]_i_40__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_41__0 
        (.I0(\rStoredData[1]_i_91__0_n_0 ),
         .I1(\rStoredData[1]_i_92__0_n_0 ),
         .O(\rStoredData_reg[1]_i_41__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_42__0 
        (.I0(\rStoredData[1]_i_93__0_n_0 ),
         .I1(\rStoredData[1]_i_94__0_n_0 ),
         .O(\rStoredData_reg[1]_i_42__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_43__0 
        (.I0(\rStoredData[1]_i_95__0_n_0 ),
         .I1(\rStoredData[1]_i_96__0_n_0 ),
         .O(\rStoredData_reg[1]_i_43__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_44__0 
        (.I0(\rStoredData[1]_i_97__0_n_0 ),
         .I1(\rStoredData[1]_i_98__0_n_0 ),
         .O(\rStoredData_reg[1]_i_44__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_45__0 
        (.I0(\rStoredData[1]_i_99__0_n_0 ),
         .I1(\rStoredData[1]_i_100__0_n_0 ),
         .O(\rStoredData_reg[1]_i_45__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_46__0 
        (.I0(\rStoredData[1]_i_101__0_n_0 ),
         .I1(\rStoredData[1]_i_102__0_n_0 ),
         .O(\rStoredData_reg[1]_i_46__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_47__0 
        (.I0(\rStoredData[1]_i_103__0_n_0 ),
         .I1(\rStoredData[1]_i_104__0_n_0 ),
         .O(\rStoredData_reg[1]_i_47__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_48__0 
        (.I0(\rStoredData[1]_i_105__0_n_0 ),
         .I1(\rStoredData[1]_i_106__0_n_0 ),
         .O(\rStoredData_reg[1]_i_48__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_49__0 
        (.I0(\rStoredData[1]_i_107__0_n_0 ),
         .I1(\rStoredData[1]_i_108__0_n_0 ),
         .O(\rStoredData_reg[1]_i_49__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_50__0 
        (.I0(\rStoredData[1]_i_109__0_n_0 ),
         .I1(\rStoredData[1]_i_110__0_n_0 ),
         .O(\rStoredData_reg[1]_i_50__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_51__0 
        (.I0(\rStoredData[1]_i_111__0_n_0 ),
         .I1(\rStoredData[1]_i_112__0_n_0 ),
         .O(\rStoredData_reg[1]_i_51__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_52__0 
        (.I0(\rStoredData[1]_i_113__0_n_0 ),
         .I1(\rStoredData[1]_i_114__0_n_0 ),
         .O(\rStoredData_reg[1]_i_52__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_53__0 
        (.I0(\rStoredData[1]_i_115__0_n_0 ),
         .I1(\rStoredData[1]_i_116__0_n_0 ),
         .O(\rStoredData_reg[1]_i_53__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_54__0 
-       (.I0(\rStoredData[1]_i_117_n_0 ),
-        .I1(\rStoredData[1]_i_118_n_0 ),
+       (.I0(\rStoredData[1]_i_117__0_n_0 ),
+        .I1(\rStoredData[1]_i_118__0_n_0 ),
         .O(\rStoredData_reg[1]_i_54__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF8 \rStoredData_reg[1]_i_7 
-       (.I0(\rStoredData_reg[1]_i_23_n_0 ),
-        .I1(\rStoredData_reg[1]_i_24_n_0 ),
-        .O(\rStoredData_reg[1]_i_7_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[1]_i_7__0 
+       (.I0(\rStoredData_reg[1]_i_23__0_n_0 ),
+        .I1(\rStoredData_reg[1]_i_24__0_n_0 ),
+        .O(\rStoredData_reg[1]_i_7__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[1]_i_8__0 
-       (.I0(\rStoredData_reg[1]_i_25_n_0 ),
-        .I1(\rStoredData_reg[1]_i_26_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_25__0_n_0 ),
+        .I1(\rStoredData_reg[1]_i_26__0_n_0 ),
         .O(\rStoredData_reg[1]_i_8__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[1]_i_9__0 
        (.I0(\rStoredData_reg[1]_i_27__0_n_0 ),
         .I1(\rStoredData_reg[1]_i_28__0_n_0 ),
         .O(\rStoredData_reg[1]_i_9__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[2] 
        (.C(StreamClk),
         .CE(E),
-        .D(\rStoredData_reg[2]_i_1__0_n_0 ),
+        .D(\rStoredData[2]_i_1__0_n_0 ),
         .Q(m_axis_video_tdata[2]),
         .R(1'b0));
   MUXF8 \rStoredData_reg[2]_i_10__0 
-       (.I0(\rStoredData_reg[2]_i_28__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_29__0_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_31__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_32__0_n_0 ),
         .O(\rStoredData_reg[2]_i_10__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_11__0 
-       (.I0(\rStoredData_reg[2]_i_30__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_31__0_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_33__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_34__0_n_0 ),
         .O(\rStoredData_reg[2]_i_11__0_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_12__0 
-       (.I0(\rStoredData_reg[2]_i_32__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_33_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_35__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_36__0_n_0 ),
         .O(\rStoredData_reg[2]_i_12__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[2]_i_13 
-       (.I0(\rStoredData_reg[2]_i_34_n_0 ),
-        .I1(\rStoredData_reg[2]_i_35_n_0 ),
-        .O(\rStoredData_reg[2]_i_13_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[2]_i_14__0 
-       (.I0(\rStoredData_reg[2]_i_36__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_37__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_14__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[2]_i_13__0 
+       (.I0(\rStoredData_reg[2]_i_37__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_38__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_13__0_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF8 \rStoredData_reg[2]_i_15__0 
+       (.I0(\rStoredData_reg[2]_i_43__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_44__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_15__0_n_0 ),
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[2]_i_17__0 
-       (.I0(\rStoredData_reg[2]_i_46__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_47__0_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_48__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_49__0_n_0 ),
         .O(\rStoredData_reg[2]_i_17__0_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[2]_i_18__0 
-       (.I0(\rStoredData_reg[2]_i_48__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_49__0_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_50__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_51__0_n_0 ),
         .O(\rStoredData_reg[2]_i_18__0_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[2]_i_19__0 
-       (.I0(\rStoredData_reg[2]_i_50__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_51__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_19__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF7 \rStoredData_reg[2]_i_1__0 
-       (.I0(p_1_in__0[2]),
-        .I1(\rStoredData[2]_i_3__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_1__0_n_0 ),
-        .S(sGammaReg[2]));
-  MUXF8 \rStoredData_reg[2]_i_20__0 
        (.I0(\rStoredData_reg[2]_i_52__0_n_0 ),
         .I1(\rStoredData_reg[2]_i_53__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_19__0_n_0 ),
+        .S(s_axis_video_tdata[7]));
+  MUXF8 \rStoredData_reg[2]_i_20__0 
+       (.I0(\rStoredData_reg[2]_i_54__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_55__0_n_0 ),
         .O(\rStoredData_reg[2]_i_20__0_n_0 ),
         .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[2]_i_22__0 
+       (.I0(\rStoredData[2]_i_57__0_n_0 ),
+        .I1(\rStoredData[2]_i_58__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_22__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_23__0 
+       (.I0(\rStoredData[2]_i_59__0_n_0 ),
+        .I1(\rStoredData[2]_i_60__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_23__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_24__0 
-       (.I0(\rStoredData[2]_i_54_n_0 ),
-        .I1(\rStoredData[2]_i_55__0_n_0 ),
+       (.I0(\rStoredData[2]_i_61__0_n_0 ),
+        .I1(\rStoredData[2]_i_62__0_n_0 ),
         .O(\rStoredData_reg[2]_i_24__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_25__0 
-       (.I0(\rStoredData[2]_i_56__0_n_0 ),
-        .I1(\rStoredData[2]_i_57__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_25__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_26__0 
-       (.I0(\rStoredData[2]_i_58__0_n_0 ),
-        .I1(\rStoredData[2]_i_59__0_n_0 ),
+       (.I0(\rStoredData[2]_i_63__0_n_0 ),
+        .I1(\rStoredData[2]_i_64__0_n_0 ),
         .O(\rStoredData_reg[2]_i_26__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_27__0 
-       (.I0(\rStoredData[2]_i_60__0_n_0 ),
-        .I1(\rStoredData[2]_i_61__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_27__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_28__0 
-       (.I0(\rStoredData[2]_i_62__0_n_0 ),
-        .I1(\rStoredData[2]_i_63__0_n_0 ),
+       (.I0(\rStoredData[2]_i_66__0_n_0 ),
+        .I1(\rStoredData[2]_i_67__0_n_0 ),
         .O(\rStoredData_reg[2]_i_28__0_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_29__0 
-       (.I0(\rStoredData[2]_i_64__0_n_0 ),
-        .I1(\rStoredData[2]_i_65__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_29__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_30__0 
-       (.I0(\rStoredData[2]_i_66__0_n_0 ),
-        .I1(\rStoredData[2]_i_67__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_30__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_31__0 
        (.I0(\rStoredData[2]_i_68__0_n_0 ),
         .I1(\rStoredData[2]_i_69__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_31__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_32__0 
+        .O(\rStoredData_reg[2]_i_29__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_30__0 
        (.I0(\rStoredData[2]_i_70__0_n_0 ),
         .I1(\rStoredData[2]_i_71__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_32__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_33 
+        .O(\rStoredData_reg[2]_i_30__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_31__0 
        (.I0(\rStoredData[2]_i_72__0_n_0 ),
         .I1(\rStoredData[2]_i_73__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_33_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_34 
+        .O(\rStoredData_reg[2]_i_31__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_32__0 
        (.I0(\rStoredData[2]_i_74__0_n_0 ),
         .I1(\rStoredData[2]_i_75__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_34_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_35 
+        .O(\rStoredData_reg[2]_i_32__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_33__0 
        (.I0(\rStoredData[2]_i_76__0_n_0 ),
         .I1(\rStoredData[2]_i_77__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_35_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_36__0 
+        .O(\rStoredData_reg[2]_i_33__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_34__0 
        (.I0(\rStoredData[2]_i_78__0_n_0 ),
         .I1(\rStoredData[2]_i_79__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_36__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_37__0 
+        .O(\rStoredData_reg[2]_i_34__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_35__0 
        (.I0(\rStoredData[2]_i_80__0_n_0 ),
         .I1(\rStoredData[2]_i_81__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_35__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_36__0 
+       (.I0(\rStoredData[2]_i_82__0_n_0 ),
+        .I1(\rStoredData[2]_i_83__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_36__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_37__0 
+       (.I0(\rStoredData[2]_i_84__0_n_0 ),
+        .I1(\rStoredData[2]_i_85__0_n_0 ),
         .O(\rStoredData_reg[2]_i_37__0_n_0 ),
         .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[2]_i_38__0 
-       (.I0(\rStoredData[2]_i_82__0_n_0 ),
-        .I1(\rStoredData[2]_i_83__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_38__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_39__0 
-       (.I0(\rStoredData[2]_i_84__0_n_0 ),
-        .I1(\rStoredData[2]_i_85__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_39__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_40__0 
        (.I0(\rStoredData[2]_i_86__0_n_0 ),
         .I1(\rStoredData[2]_i_87__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_40__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_41__0 
+        .O(\rStoredData_reg[2]_i_38__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[2]_i_3__0 
+       (.I0(\rStoredData[2]_i_7__0_n_0 ),
+        .I1(\rStoredData[2]_i_8__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_3__0_n_0 ),
+        .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[2]_i_43__0 
        (.I0(\rStoredData[2]_i_88__0_n_0 ),
         .I1(\rStoredData[2]_i_89__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_41__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_43__0 
+        .O(\rStoredData_reg[2]_i_43__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[2]_i_44__0 
        (.I0(\rStoredData[2]_i_90__0_n_0 ),
         .I1(\rStoredData[2]_i_91__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_43__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_44__0 
+        .O(\rStoredData_reg[2]_i_44__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[2]_i_48__0 
        (.I0(\rStoredData[2]_i_92__0_n_0 ),
         .I1(\rStoredData[2]_i_93__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_44__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_48__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_45__0 
+  MUXF7 \rStoredData_reg[2]_i_49__0 
        (.I0(\rStoredData[2]_i_94__0_n_0 ),
         .I1(\rStoredData[2]_i_95__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_45__0_n_0 ),
+        .O(\rStoredData_reg[2]_i_49__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_46__0 
+  MUXF7 \rStoredData_reg[2]_i_50__0 
        (.I0(\rStoredData[2]_i_96__0_n_0 ),
         .I1(\rStoredData[2]_i_97__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_46__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_47__0 
+        .O(\rStoredData_reg[2]_i_50__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_51__0 
        (.I0(\rStoredData[2]_i_98__0_n_0 ),
         .I1(\rStoredData[2]_i_99__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_47__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_48__0 
+        .O(\rStoredData_reg[2]_i_51__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_52__0 
        (.I0(\rStoredData[2]_i_100__0_n_0 ),
         .I1(\rStoredData[2]_i_101__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_48__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_49__0 
+        .O(\rStoredData_reg[2]_i_52__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_53__0 
        (.I0(\rStoredData[2]_i_102__0_n_0 ),
         .I1(\rStoredData[2]_i_103__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_49__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_50__0 
+        .O(\rStoredData_reg[2]_i_53__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_54__0 
        (.I0(\rStoredData[2]_i_104__0_n_0 ),
         .I1(\rStoredData[2]_i_105__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_50__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_51__0 
+        .O(\rStoredData_reg[2]_i_54__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_55__0 
        (.I0(\rStoredData[2]_i_106__0_n_0 ),
         .I1(\rStoredData[2]_i_107__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_51__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_52__0 
-       (.I0(\rStoredData[2]_i_108__0_n_0 ),
-        .I1(\rStoredData[2]_i_109_n_0 ),
-        .O(\rStoredData_reg[2]_i_52__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_53__0 
-       (.I0(\rStoredData[2]_i_110_n_0 ),
-        .I1(\rStoredData[2]_i_111_n_0 ),
-        .O(\rStoredData_reg[2]_i_53__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_5__0 
-       (.I0(\rStoredData[2]_i_15__0_n_0 ),
-        .I1(\rStoredData[2]_i_16__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_5__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[2]_i_8__0 
-       (.I0(\rStoredData_reg[2]_i_24__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_25__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_8__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .O(\rStoredData_reg[2]_i_55__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_9__0 
-       (.I0(\rStoredData_reg[2]_i_26__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_27__0_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_29__0_n_0 ),
+        .I1(\rStoredData_reg[2]_i_30__0_n_0 ),
         .O(\rStoredData_reg[2]_i_9__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
   FDRE \rStoredData_reg[3] 
        (.C(StreamClk),
         .CE(E),
         .D(\rStoredData_reg[3]_i_1__0_n_0 ),
         .Q(m_axis_video_tdata[3]),
         .R(1'b0));
-  MUXF8 \rStoredData_reg[3]_i_10__0 
-       (.I0(\rStoredData_reg[3]_i_31__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_32_n_0 ),
-        .O(\rStoredData_reg[3]_i_10__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[3]_i_12__0 
-       (.I0(\rStoredData_reg[3]_i_35__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_36_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_32__0_n_0 ),
+        .I1(\rStoredData_reg[3]_i_33__0_n_0 ),
         .O(\rStoredData_reg[3]_i_12__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[3]_i_13 
-       (.I0(\rStoredData_reg[3]_i_37_n_0 ),
-        .I1(\rStoredData_reg[3]_i_38_n_0 ),
-        .O(\rStoredData_reg[3]_i_13_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[3]_i_14__0 
-       (.I0(\rStoredData_reg[3]_i_39__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_40__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_14__0_n_0 ),
+  MUXF8 \rStoredData_reg[3]_i_13__0 
+       (.I0(\rStoredData_reg[3]_i_34__0_n_0 ),
+        .I1(\rStoredData_reg[3]_i_35__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_13__0_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_15__0 
+       (.I0(\rStoredData[3]_i_39__0_n_0 ),
+        .I1(\rStoredData[3]_i_40__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_15__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_16__0 
        (.I0(\rStoredData[3]_i_41__0_n_0 ),
         .I1(\rStoredData[3]_i_42__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_15__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[3]_i_16__0 
-       (.I0(\rStoredData_reg[3]_i_43__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_44__0_n_0 ),
         .O(\rStoredData_reg[3]_i_16__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[3]_i_19__0 
-       (.I0(\rStoredData_reg[3]_i_51__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_52__0_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_49__0_n_0 ),
+        .I1(\rStoredData_reg[3]_i_50__0_n_0 ),
         .O(\rStoredData_reg[3]_i_19__0_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF7 \rStoredData_reg[3]_i_1__0 
@@ -10983,100 +11138,70 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .O(\rStoredData_reg[3]_i_1__0_n_0 ),
         .S(sGammaReg[2]));
   MUXF8 \rStoredData_reg[3]_i_20__0 
-       (.I0(\rStoredData_reg[3]_i_53__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_54__0_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_51__0_n_0 ),
+        .I1(\rStoredData_reg[3]_i_52__0_n_0 ),
         .O(\rStoredData_reg[3]_i_20__0_n_0 ),
         .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[3]_i_22__0 
-       (.I0(\rStoredData_reg[3]_i_58__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_59__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_22__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF7 \rStoredData_reg[3]_i_31__0 
+  MUXF7 \rStoredData_reg[3]_i_25__0 
+       (.I0(\rStoredData[3]_i_55__0_n_0 ),
+        .I1(\rStoredData[3]_i_56__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_25__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_30__0 
+       (.I0(\rStoredData[3]_i_58__0_n_0 ),
+        .I1(\rStoredData[3]_i_59__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_30__0_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_32__0 
+       (.I0(\rStoredData[3]_i_60__0_n_0 ),
+        .I1(\rStoredData[3]_i_61__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_32__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_33__0 
+       (.I0(\rStoredData[3]_i_62__0_n_0 ),
+        .I1(\rStoredData[3]_i_63__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_33__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_34__0 
        (.I0(\rStoredData[3]_i_64__0_n_0 ),
         .I1(\rStoredData[3]_i_65__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_31__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_32 
+        .O(\rStoredData_reg[3]_i_34__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_35__0 
        (.I0(\rStoredData[3]_i_66__0_n_0 ),
         .I1(\rStoredData[3]_i_67__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_32_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_35__0 
-       (.I0(\rStoredData[3]_i_68__0_n_0 ),
-        .I1(\rStoredData[3]_i_69__0_n_0 ),
         .O(\rStoredData_reg[3]_i_35__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_36 
-       (.I0(\rStoredData[3]_i_70__0_n_0 ),
-        .I1(\rStoredData[3]_i_71__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_36_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_37 
-       (.I0(\rStoredData[3]_i_72__0_n_0 ),
-        .I1(\rStoredData[3]_i_73__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_37_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_38 
-       (.I0(\rStoredData[2]_i_22__1_n_0 ),
-        .I1(\rStoredData[3]_i_74__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_38_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_39__0 
-       (.I0(\rStoredData[3]_i_75__0_n_0 ),
-        .I1(\rStoredData[3]_i_76__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_39__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_40__0 
-       (.I0(\rStoredData[3]_i_77__0_n_0 ),
-        .I1(\rStoredData[3]_i_78__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_40__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_43__0 
-       (.I0(\rStoredData[3]_i_79__0_n_0 ),
-        .I1(\rStoredData[3]_i_80__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_43__0_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_49__0 
+       (.I0(\rStoredData[3]_i_82__0_n_0 ),
+        .I1(\rStoredData[3]_i_83__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_49__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_44__0 
-       (.I0(\rStoredData[3]_i_81__0_n_0 ),
-        .I1(\rStoredData[3]_i_82__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_44__0_n_0 ),
+  MUXF7 \rStoredData_reg[3]_i_50__0 
+       (.I0(\rStoredData[3]_i_84__0_n_0 ),
+        .I1(\rStoredData[3]_i_85__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_50__0_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_51__0 
-       (.I0(\rStoredData[3]_i_83__0_n_0 ),
-        .I1(\rStoredData[3]_i_84__0_n_0 ),
+       (.I0(\rStoredData[3]_i_86__0_n_0 ),
+        .I1(\rStoredData[3]_i_87__0_n_0 ),
         .O(\rStoredData_reg[3]_i_51__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_52__0 
-       (.I0(\rStoredData[3]_i_85__0_n_0 ),
-        .I1(\rStoredData[3]_i_86__0_n_0 ),
+       (.I0(\rStoredData[3]_i_88__0_n_0 ),
+        .I1(\rStoredData[3]_i_89__0_n_0 ),
         .O(\rStoredData_reg[3]_i_52__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_53__0 
-       (.I0(\rStoredData[3]_i_87__0_n_0 ),
-        .I1(\rStoredData[3]_i_88__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_53__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_54__0 
-       (.I0(\rStoredData[3]_i_89__0_n_0 ),
-        .I1(\rStoredData[3]_i_90_n_0 ),
-        .O(\rStoredData_reg[3]_i_54__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_58__0 
-       (.I0(\rStoredData[3]_i_91_n_0 ),
-        .I1(\rStoredData[3]_i_92_n_0 ),
-        .O(\rStoredData_reg[3]_i_58__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_59__0 
-       (.I0(\rStoredData[3]_i_93_n_0 ),
-        .I1(\rStoredData[3]_i_94_n_0 ),
-        .O(\rStoredData_reg[3]_i_59__0_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_9__0 
-       (.I0(\rStoredData[3]_i_29__0_n_0 ),
-        .I1(\rStoredData[3]_i_30_n_0 ),
-        .O(\rStoredData_reg[3]_i_9__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[3]_i_5__0 
+       (.I0(\rStoredData_reg[3]_i_15__0_n_0 ),
+        .I1(\rStoredData_reg[3]_i_16__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_5__0_n_0 ),
+        .S(s_axis_video_tdata[0]));
+  MUXF7 \rStoredData_reg[3]_i_7__0 
+       (.I0(\rStoredData[3]_i_21__0_n_0 ),
+        .I1(\rStoredData[3]_i_22__0_n_0 ),
+        .O(\rStoredData_reg[3]_i_7__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[4] 
        (.C(StreamClk),
         .CE(E),
@@ -11084,77 +11209,92 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_0
         .Q(m_axis_video_tdata[4]),
         .R(1'b0));
   MUXF7 \rStoredData_reg[4]_i_10__0 
-       (.I0(\rStoredData[4]_i_25__0_n_0 ),
-        .I1(\rStoredData[4]_i_26__0_n_0 ),
+       (.I0(\rStoredData[4]_i_26__0_n_0 ),
+        .I1(\rStoredData[4]_i_27__0_n_0 ),
         .O(\rStoredData_reg[4]_i_10__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF8 \rStoredData_reg[4]_i_2__0 
-       (.I0(\rStoredData_reg[4]_i_6__0_n_0 ),
-        .I1(\rStoredData_reg[4]_i_7__0_n_0 ),
-        .O(\rStoredData_reg[4]_i_2__0_n_0 ),
         .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[4]_i_39 
-       (.I0(\rStoredData[4]_i_58_n_0 ),
-        .I1(\rStoredData[4]_i_59_n_0 ),
-        .O(\rStoredData_reg[4]_i_39_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_11__0 
+       (.I0(\rStoredData[4]_i_28__0_n_0 ),
+        .I1(\rStoredData[4]_i_29__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_11__0_n_0 ),
+        .S(s_axis_video_tdata[8]));
+  MUXF7 \rStoredData_reg[4]_i_14__0 
+       (.I0(\rStoredData[4]_i_36__0_n_0 ),
+        .I1(\rStoredData[4]_i_37__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_14__0_n_0 ),
+        .S(s_axis_video_tdata[8]));
+  MUXF7 \rStoredData_reg[4]_i_25__0 
+       (.I0(\rStoredData[4]_i_40__0_n_0 ),
+        .I1(\rStoredData[4]_i_41__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_25__0_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[4]_i_6__0 
-       (.I0(\rStoredData[4]_i_17__0_n_0 ),
-        .I1(\rStoredData[4]_i_18__0_n_0 ),
-        .O(\rStoredData_reg[4]_i_6__0_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_30__0 
+       (.I0(\rStoredData[4]_i_50__0_n_0 ),
+        .I1(\rStoredData[4]_i_51__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_30__0_n_0 ),
         .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_7__0 
-       (.I0(\rStoredData[4]_i_19__0_n_0 ),
-        .I1(\rStoredData[4]_i_20__0_n_0 ),
-        .O(\rStoredData_reg[4]_i_7__0_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_31__0 
+       (.I0(\rStoredData[4]_i_52__0_n_0 ),
+        .I1(\rStoredData[4]_i_53__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_31__0_n_0 ),
         .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_8__0 
-       (.I0(\rStoredData[4]_i_21__0_n_0 ),
-        .I1(\rStoredData[4]_i_22__0_n_0 ),
-        .O(\rStoredData_reg[4]_i_8__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[4]_i_9__0 
-       (.I0(\rStoredData[4]_i_23__0_n_0 ),
-        .I1(\rStoredData[4]_i_24__0_n_0 ),
-        .O(\rStoredData_reg[4]_i_9__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+  MUXF7 \rStoredData_reg[4]_i_32__0 
+       (.I0(\rStoredData[4]_i_54__0_n_0 ),
+        .I1(\rStoredData[4]_i_55__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_32__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_33__0 
+       (.I0(\rStoredData[4]_i_56__0_n_0 ),
+        .I1(\rStoredData[4]_i_57__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_33__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_35__0 
+       (.I0(\rStoredData[4]_i_59__0_n_0 ),
+        .I1(\rStoredData[4]_i_60__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_35__0_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_4__0 
+       (.I0(\rStoredData[4]_i_12__0_n_0 ),
+        .I1(\rStoredData[4]_i_13__0_n_0 ),
+        .O(\rStoredData_reg[4]_i_4__0_n_0 ),
+        .S(s_axis_video_tdata[0]));
   FDRE \rStoredData_reg[5] 
        (.C(StreamClk),
         .CE(E),
         .D(\rStoredData[5]_i_1__0_n_0 ),
         .Q(m_axis_video_tdata[5]),
         .R(1'b0));
-  MUXF7 \rStoredData_reg[5]_i_12 
-       (.I0(\rStoredData[5]_i_26_n_0 ),
-        .I1(\rStoredData[5]_i_27__0_n_0 ),
-        .O(\rStoredData_reg[5]_i_12_n_0 ),
+  MUXF7 \rStoredData_reg[5]_i_28__0 
+       (.I0(\rStoredData[5]_i_37__0_n_0 ),
+        .I1(\rStoredData[5]_i_38__0_n_0 ),
+        .O(\rStoredData_reg[5]_i_28__0_n_0 ),
         .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[5]_i_2__0 
-       (.I0(\rStoredData[5]_i_7__0_n_0 ),
-        .I1(\rStoredData[5]_i_8__0_n_0 ),
+       (.I0(\rStoredData[5]_i_6__0_n_0 ),
+        .I1(\rStoredData[5]_i_7__0_n_0 ),
         .O(\rStoredData_reg[5]_i_2__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[5]_i_9__0 
-       (.I0(\rStoredData[5]_i_21_n_0 ),
-        .I1(\rStoredData[5]_i_22__0_n_0 ),
-        .O(\rStoredData_reg[5]_i_9__0_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[5]_i_4__0 
+       (.I0(\rStoredData[5]_i_10__0_n_0 ),
+        .I1(\rStoredData[5]_i_11__0_n_0 ),
+        .O(\rStoredData_reg[5]_i_4__0_n_0 ),
+        .S(s_axis_video_tdata[0]));
   FDRE \rStoredData_reg[6] 
        (.C(StreamClk),
         .CE(E),
-        .D(\rStoredData_reg[6]_i_1__0_n_0 ),
+        .D(\rStoredData[6]_i_1__0_n_0 ),
         .Q(m_axis_video_tdata[6]),
         .R(1'b0));
-  MUXF7 \rStoredData_reg[6]_i_1__0 
-       (.I0(p_1_in__0[6]),
-        .I1(\rStoredData[6]_i_3__0_n_0 ),
-        .O(\rStoredData_reg[6]_i_1__0_n_0 ),
-        .S(sGammaReg[2]));
-  MUXF7 \rStoredData_reg[6]_i_6__0 
-       (.I0(\rStoredData[6]_i_13__0_n_0 ),
-        .I1(\rStoredData[6]_i_14__0_n_0 ),
-        .O(\rStoredData_reg[6]_i_6__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[6]_i_12__0 
+       (.I0(\rStoredData[6]_i_20__0_n_0 ),
+        .I1(\rStoredData[6]_i_21__0_n_0 ),
+        .O(\rStoredData_reg[6]_i_12__0_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF7 \rStoredData_reg[6]_i_2__0 
+       (.I0(\rStoredData[6]_i_6__0_n_0 ),
+        .I1(\rStoredData[6]_i_7__0_n_0 ),
+        .O(\rStoredData_reg[6]_i_2__0_n_0 ),
+        .S(s_axis_video_tdata[7]));
   FDRE \rStoredData_reg[7] 
        (.C(StreamClk),
         .CE(E),
@@ -11173,7 +11313,6 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
    (E,
     \rStoredData_reg[4]_0 ,
     \rStoredData_reg[4]_1 ,
-    \rStoredData_reg[5]_0 ,
     m_axis_video_tdata,
     s_axis_video_tvalid,
     m_axis_video_tready,
@@ -11183,7 +11322,6 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   output [0:0]E;
   output \rStoredData_reg[4]_0 ;
   output \rStoredData_reg[4]_1 ;
-  output \rStoredData_reg[5]_0 ;
   output [7:0]m_axis_video_tdata;
   input s_axis_video_tvalid;
   input m_axis_video_tready;
@@ -11281,12 +11419,12 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData[1]_i_114__1_n_0 ;
   wire \rStoredData[1]_i_115__1_n_0 ;
   wire \rStoredData[1]_i_116__1_n_0 ;
-  wire \rStoredData[1]_i_117__0_n_0 ;
-  wire \rStoredData[1]_i_118__0_n_0 ;
+  wire \rStoredData[1]_i_117__1_n_0 ;
+  wire \rStoredData[1]_i_118__1_n_0 ;
   wire \rStoredData[1]_i_3__1_n_0 ;
   wire \rStoredData[1]_i_4__1_n_0 ;
-  wire \rStoredData[1]_i_55__0_n_0 ;
-  wire \rStoredData[1]_i_56_n_0 ;
+  wire \rStoredData[1]_i_55__1_n_0 ;
+  wire \rStoredData[1]_i_56__1_n_0 ;
   wire \rStoredData[1]_i_57__1_n_0 ;
   wire \rStoredData[1]_i_58__1_n_0 ;
   wire \rStoredData[1]_i_59__1_n_0 ;
@@ -11340,24 +11478,25 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData[2]_i_105__1_n_0 ;
   wire \rStoredData[2]_i_106__1_n_0 ;
   wire \rStoredData[2]_i_107__1_n_0 ;
-  wire \rStoredData[2]_i_108__1_n_0 ;
-  wire \rStoredData[2]_i_109__0_n_0 ;
-  wire \rStoredData[2]_i_110__0_n_0 ;
-  wire \rStoredData[2]_i_111__0_n_0 ;
-  wire \rStoredData[2]_i_15__1_n_0 ;
+  wire \rStoredData[2]_i_14__1_n_0 ;
   wire \rStoredData[2]_i_16__1_n_0 ;
+  wire \rStoredData[2]_i_1__1_n_0 ;
   wire \rStoredData[2]_i_21__1_n_0 ;
-  wire \rStoredData[2]_i_22__0_n_0 ;
-  wire \rStoredData[2]_i_23__0_n_0 ;
-  wire \rStoredData[2]_i_3__1_n_0 ;
+  wire \rStoredData[2]_i_25__1_n_0 ;
+  wire \rStoredData[2]_i_27__1_n_0 ;
+  wire \rStoredData[2]_i_39__1_n_0 ;
+  wire \rStoredData[2]_i_40__1_n_0 ;
+  wire \rStoredData[2]_i_41__1_n_0 ;
   wire \rStoredData[2]_i_42__1_n_0 ;
+  wire \rStoredData[2]_i_45__1_n_0 ;
+  wire \rStoredData[2]_i_46__1_n_0 ;
+  wire \rStoredData[2]_i_47__1_n_0 ;
   wire \rStoredData[2]_i_4__1_n_0 ;
-  wire \rStoredData[2]_i_54__0_n_0 ;
-  wire \rStoredData[2]_i_55__1_n_0 ;
-  wire \rStoredData[2]_i_56__1_n_0 ;
+  wire \rStoredData[2]_i_56_n_0 ;
   wire \rStoredData[2]_i_57__1_n_0 ;
   wire \rStoredData[2]_i_58__1_n_0 ;
   wire \rStoredData[2]_i_59__1_n_0 ;
+  wire \rStoredData[2]_i_5__1_n_0 ;
   wire \rStoredData[2]_i_60__1_n_0 ;
   wire \rStoredData[2]_i_61__1_n_0 ;
   wire \rStoredData[2]_i_62__1_n_0 ;
@@ -11379,7 +11518,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData[2]_i_77__1_n_0 ;
   wire \rStoredData[2]_i_78__1_n_0 ;
   wire \rStoredData[2]_i_79__1_n_0 ;
-  wire \rStoredData[2]_i_7__0_n_0 ;
+  wire \rStoredData[2]_i_7__1_n_0 ;
   wire \rStoredData[2]_i_80__1_n_0 ;
   wire \rStoredData[2]_i_81__1_n_0 ;
   wire \rStoredData[2]_i_82__1_n_0 ;
@@ -11390,6 +11529,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData[2]_i_87__1_n_0 ;
   wire \rStoredData[2]_i_88__1_n_0 ;
   wire \rStoredData[2]_i_89__1_n_0 ;
+  wire \rStoredData[2]_i_8__1_n_0 ;
   wire \rStoredData[2]_i_90__1_n_0 ;
   wire \rStoredData[2]_i_91__1_n_0 ;
   wire \rStoredData[2]_i_92__1_n_0 ;
@@ -11400,38 +11540,46 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData[2]_i_97__1_n_0 ;
   wire \rStoredData[2]_i_98__1_n_0 ;
   wire \rStoredData[2]_i_99__1_n_0 ;
+  wire \rStoredData[3]_i_10__1_n_0 ;
   wire \rStoredData[3]_i_11__1_n_0 ;
+  wire \rStoredData[3]_i_14__1_n_0 ;
   wire \rStoredData[3]_i_17__1_n_0 ;
   wire \rStoredData[3]_i_18__1_n_0 ;
   wire \rStoredData[3]_i_21__1_n_0 ;
-  wire \rStoredData[3]_i_23__0_n_0 ;
-  wire \rStoredData[3]_i_24__0_n_0 ;
-  wire \rStoredData[3]_i_25__0_n_0 ;
-  wire \rStoredData[3]_i_26__1_n_0 ;
-  wire \rStoredData[3]_i_27__1_n_0 ;
+  wire \rStoredData[3]_i_22__1_n_0 ;
+  wire \rStoredData[3]_i_23__1_n_0 ;
+  wire \rStoredData[3]_i_24__1_n_0 ;
+  wire \rStoredData[3]_i_26_n_0 ;
+  wire \rStoredData[3]_i_27_n_0 ;
   wire \rStoredData[3]_i_28__1_n_0 ;
-  wire \rStoredData[3]_i_29__1_n_0 ;
-  wire \rStoredData[3]_i_30__0_n_0 ;
-  wire \rStoredData[3]_i_33__0_n_0 ;
-  wire \rStoredData[3]_i_34_n_0 ;
+  wire \rStoredData[3]_i_29_n_0 ;
+  wire \rStoredData[3]_i_31__1_n_0 ;
+  wire \rStoredData[3]_i_36__1_n_0 ;
+  wire \rStoredData[3]_i_37__1_n_0 ;
+  wire \rStoredData[3]_i_38__1_n_0 ;
+  wire \rStoredData[3]_i_39__1_n_0 ;
   wire \rStoredData[3]_i_3__1_n_0 ;
+  wire \rStoredData[3]_i_40__1_n_0 ;
   wire \rStoredData[3]_i_41__1_n_0 ;
   wire \rStoredData[3]_i_42__1_n_0 ;
+  wire \rStoredData[3]_i_43__1_n_0 ;
+  wire \rStoredData[3]_i_44__1_n_0 ;
   wire \rStoredData[3]_i_45__1_n_0 ;
   wire \rStoredData[3]_i_46__1_n_0 ;
   wire \rStoredData[3]_i_47__1_n_0 ;
   wire \rStoredData[3]_i_48__1_n_0 ;
-  wire \rStoredData[3]_i_49__1_n_0 ;
   wire \rStoredData[3]_i_4__1_n_0 ;
-  wire \rStoredData[3]_i_50__1_n_0 ;
+  wire \rStoredData[3]_i_53_n_0 ;
+  wire \rStoredData[3]_i_54_n_0 ;
   wire \rStoredData[3]_i_55__1_n_0 ;
   wire \rStoredData[3]_i_56__1_n_0 ;
   wire \rStoredData[3]_i_57__1_n_0 ;
-  wire \rStoredData[3]_i_5__1_n_0 ;
-  wire \rStoredData[3]_i_60_n_0 ;
-  wire \rStoredData[3]_i_61_n_0 ;
-  wire \rStoredData[3]_i_62__0_n_0 ;
-  wire \rStoredData[3]_i_63__0_n_0 ;
+  wire \rStoredData[3]_i_58__1_n_0 ;
+  wire \rStoredData[3]_i_59__1_n_0 ;
+  wire \rStoredData[3]_i_60__1_n_0 ;
+  wire \rStoredData[3]_i_61__1_n_0 ;
+  wire \rStoredData[3]_i_62__1_n_0 ;
+  wire \rStoredData[3]_i_63__1_n_0 ;
   wire \rStoredData[3]_i_64__1_n_0 ;
   wire \rStoredData[3]_i_65__1_n_0 ;
   wire \rStoredData[3]_i_66__1_n_0 ;
@@ -11449,7 +11597,6 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData[3]_i_77__1_n_0 ;
   wire \rStoredData[3]_i_78__1_n_0 ;
   wire \rStoredData[3]_i_79__1_n_0 ;
-  wire \rStoredData[3]_i_7__1_n_0 ;
   wire \rStoredData[3]_i_80__1_n_0 ;
   wire \rStoredData[3]_i_81__1_n_0 ;
   wire \rStoredData[3]_i_82__1_n_0 ;
@@ -11461,125 +11608,123 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData[3]_i_88__1_n_0 ;
   wire \rStoredData[3]_i_89__1_n_0 ;
   wire \rStoredData[3]_i_8__1_n_0 ;
-  wire \rStoredData[3]_i_90__0_n_0 ;
-  wire \rStoredData[3]_i_91__0_n_0 ;
-  wire \rStoredData[3]_i_92__0_n_0 ;
-  wire \rStoredData[3]_i_93__0_n_0 ;
-  wire \rStoredData[3]_i_94__0_n_0 ;
+  wire \rStoredData[3]_i_9__1_n_0 ;
   wire \rStoredData[4]_i_12__1_n_0 ;
-  wire \rStoredData[4]_i_13__0_n_0 ;
-  wire \rStoredData[4]_i_14__0_n_0 ;
+  wire \rStoredData[4]_i_13__1_n_0 ;
   wire \rStoredData[4]_i_15__1_n_0 ;
   wire \rStoredData[4]_i_16__1_n_0 ;
-  wire \rStoredData[4]_i_17__1_n_0 ;
+  wire \rStoredData[4]_i_17_n_0 ;
   wire \rStoredData[4]_i_18__1_n_0 ;
   wire \rStoredData[4]_i_19__1_n_0 ;
   wire \rStoredData[4]_i_1__1_n_0 ;
   wire \rStoredData[4]_i_20__1_n_0 ;
-  wire \rStoredData[4]_i_21__1_n_0 ;
+  wire \rStoredData[4]_i_21_n_0 ;
   wire \rStoredData[4]_i_22__1_n_0 ;
-  wire \rStoredData[4]_i_23__1_n_0 ;
-  wire \rStoredData[4]_i_24__1_n_0 ;
-  wire \rStoredData[4]_i_25__1_n_0 ;
+  wire \rStoredData[4]_i_23_n_0 ;
+  wire \rStoredData[4]_i_24_n_0 ;
   wire \rStoredData[4]_i_26__1_n_0 ;
-  wire \rStoredData[4]_i_27__0_n_0 ;
+  wire \rStoredData[4]_i_27__1_n_0 ;
   wire \rStoredData[4]_i_28__1_n_0 ;
   wire \rStoredData[4]_i_29__1_n_0 ;
-  wire \rStoredData[4]_i_30__1_n_0 ;
-  wire \rStoredData[4]_i_31__0_n_0 ;
-  wire \rStoredData[4]_i_32__0_n_0 ;
-  wire \rStoredData[4]_i_33__0_n_0 ;
-  wire \rStoredData[4]_i_34__0_n_0 ;
-  wire \rStoredData[4]_i_35__0_n_0 ;
-  wire \rStoredData[4]_i_36_n_0 ;
-  wire \rStoredData[4]_i_37__0_n_0 ;
-  wire \rStoredData[4]_i_38__1_n_0 ;
-  wire \rStoredData[4]_i_39__0_n_0 ;
+  wire \rStoredData[4]_i_2__1_n_0 ;
+  wire \rStoredData[4]_i_34__1_n_0 ;
+  wire \rStoredData[4]_i_36__1_n_0 ;
+  wire \rStoredData[4]_i_37__1_n_0 ;
+  wire \rStoredData[4]_i_38_n_0 ;
+  wire \rStoredData[4]_i_39_n_0 ;
   wire \rStoredData[4]_i_3__1_n_0 ;
-  wire \rStoredData[4]_i_41__0_n_0 ;
-  wire \rStoredData[4]_i_42__0_n_0 ;
-  wire \rStoredData[4]_i_43__0_n_0 ;
-  wire \rStoredData[4]_i_44__1_n_0 ;
+  wire \rStoredData[4]_i_40__1_n_0 ;
+  wire \rStoredData[4]_i_41__1_n_0 ;
+  wire \rStoredData[4]_i_42_n_0 ;
+  wire \rStoredData[4]_i_43__1_n_0 ;
+  wire \rStoredData[4]_i_44_n_0 ;
   wire \rStoredData[4]_i_45__1_n_0 ;
-  wire \rStoredData[4]_i_46__1_n_0 ;
-  wire \rStoredData[4]_i_47__1_n_0 ;
-  wire \rStoredData[4]_i_48_n_0 ;
-  wire \rStoredData[4]_i_49__0_n_0 ;
-  wire \rStoredData[4]_i_4__1_n_0 ;
+  wire \rStoredData[4]_i_46_n_0 ;
+  wire \rStoredData[4]_i_47_n_0 ;
+  wire \rStoredData[4]_i_48__1_n_0 ;
+  wire \rStoredData[4]_i_49__1_n_0 ;
   wire \rStoredData[4]_i_50__1_n_0 ;
   wire \rStoredData[4]_i_51__1_n_0 ;
   wire \rStoredData[4]_i_52__1_n_0 ;
   wire \rStoredData[4]_i_53__1_n_0 ;
   wire \rStoredData[4]_i_54__1_n_0 ;
   wire \rStoredData[4]_i_55__1_n_0 ;
-  wire \rStoredData[4]_i_56__0_n_0 ;
+  wire \rStoredData[4]_i_56__1_n_0 ;
   wire \rStoredData[4]_i_57__1_n_0 ;
-  wire \rStoredData[4]_i_58__0_n_0 ;
-  wire \rStoredData[4]_i_59__0_n_0 ;
-  wire \rStoredData[4]_i_5__0_n_0 ;
-  wire \rStoredData[4]_i_60__0_n_0 ;
+  wire \rStoredData[4]_i_58__1_n_0 ;
+  wire \rStoredData[4]_i_59__1_n_0 ;
+  wire \rStoredData[4]_i_5__1_n_0 ;
+  wire \rStoredData[4]_i_60__1_n_0 ;
+  wire \rStoredData[4]_i_61__1_n_0 ;
+  wire \rStoredData[4]_i_62__1_n_0 ;
+  wire \rStoredData[4]_i_63__1_n_0 ;
+  wire \rStoredData[4]_i_64__1_n_0 ;
+  wire \rStoredData[4]_i_6__1_n_0 ;
+  wire \rStoredData[4]_i_7__1_n_0 ;
+  wire \rStoredData[4]_i_8__1_n_0 ;
+  wire \rStoredData[4]_i_9__1_n_0 ;
   wire \rStoredData[5]_i_10__1_n_0 ;
   wire \rStoredData[5]_i_11__1_n_0 ;
+  wire \rStoredData[5]_i_12__1_n_0 ;
+  wire \rStoredData[5]_i_13__1_n_0 ;
   wire \rStoredData[5]_i_14__1_n_0 ;
+  wire \rStoredData[5]_i_15_n_0 ;
   wire \rStoredData[5]_i_16__1_n_0 ;
   wire \rStoredData[5]_i_17__1_n_0 ;
   wire \rStoredData[5]_i_18__1_n_0 ;
-  wire \rStoredData[5]_i_19__0_n_0 ;
+  wire \rStoredData[5]_i_19__1_n_0 ;
   wire \rStoredData[5]_i_1__1_n_0 ;
-  wire \rStoredData[5]_i_20__0_n_0 ;
-  wire \rStoredData[5]_i_21__0_n_0 ;
+  wire \rStoredData[5]_i_20_n_0 ;
+  wire \rStoredData[5]_i_21__1_n_0 ;
   wire \rStoredData[5]_i_22__1_n_0 ;
   wire \rStoredData[5]_i_23__1_n_0 ;
-  wire \rStoredData[5]_i_24_n_0 ;
-  wire \rStoredData[5]_i_25_n_0 ;
-  wire \rStoredData[5]_i_26__0_n_0 ;
+  wire \rStoredData[5]_i_24__1_n_0 ;
+  wire \rStoredData[5]_i_25__1_n_0 ;
+  wire \rStoredData[5]_i_26__1_n_0 ;
   wire \rStoredData[5]_i_27__1_n_0 ;
-  wire \rStoredData[5]_i_28__1_n_0 ;
-  wire \rStoredData[5]_i_29__0_n_0 ;
-  wire \rStoredData[5]_i_30__0_n_0 ;
-  wire \rStoredData[5]_i_31__0_n_0 ;
-  wire \rStoredData[5]_i_32__0_n_0 ;
-  wire \rStoredData[5]_i_33__0_n_0 ;
-  wire \rStoredData[5]_i_34__0_n_0 ;
-  wire \rStoredData[5]_i_35__0_n_0 ;
-  wire \rStoredData[5]_i_36_n_0 ;
-  wire \rStoredData[5]_i_37__0_n_0 ;
-  wire \rStoredData[5]_i_38__0_n_0 ;
-  wire \rStoredData[5]_i_39__0_n_0 ;
+  wire \rStoredData[5]_i_29__1_n_0 ;
+  wire \rStoredData[5]_i_30_n_0 ;
+  wire \rStoredData[5]_i_31_n_0 ;
+  wire \rStoredData[5]_i_32_n_0 ;
+  wire \rStoredData[5]_i_33__1_n_0 ;
+  wire \rStoredData[5]_i_34__1_n_0 ;
+  wire \rStoredData[5]_i_35__1_n_0 ;
+  wire \rStoredData[5]_i_36__1_n_0 ;
+  wire \rStoredData[5]_i_37__1_n_0 ;
+  wire \rStoredData[5]_i_38__1_n_0 ;
   wire \rStoredData[5]_i_3__1_n_0 ;
-  wire \rStoredData[5]_i_40_n_0 ;
-  wire \rStoredData[5]_i_41__0_n_0 ;
-  wire \rStoredData[5]_i_42__0_n_0 ;
-  wire \rStoredData[5]_i_43_n_0 ;
-  wire \rStoredData[5]_i_44_n_0 ;
-  wire \rStoredData[5]_i_4__1_n_0 ;
   wire \rStoredData[5]_i_5__1_n_0 ;
   wire \rStoredData[5]_i_6__1_n_0 ;
   wire \rStoredData[5]_i_7__1_n_0 ;
   wire \rStoredData[5]_i_8__1_n_0 ;
+  wire \rStoredData[5]_i_9__1_n_0 ;
   wire \rStoredData[6]_i_10__1_n_0 ;
   wire \rStoredData[6]_i_11__1_n_0 ;
-  wire \rStoredData[6]_i_12__1_n_0 ;
-  wire \rStoredData[6]_i_13__1_n_0 ;
+  wire \rStoredData[6]_i_12_n_0 ;
   wire \rStoredData[6]_i_14__1_n_0 ;
-  wire \rStoredData[6]_i_15__1_n_0 ;
-  wire \rStoredData[6]_i_16_n_0 ;
-  wire \rStoredData[6]_i_17__0_n_0 ;
-  wire \rStoredData[6]_i_18__0_n_0 ;
-  wire \rStoredData[6]_i_19__0_n_0 ;
+  wire \rStoredData[6]_i_15_n_0 ;
+  wire \rStoredData[6]_i_17_n_0 ;
+  wire \rStoredData[6]_i_18_n_0 ;
+  wire \rStoredData[6]_i_19_n_0 ;
+  wire \rStoredData[6]_i_1__1_n_0 ;
+  wire \rStoredData[6]_i_20__1_n_0 ;
+  wire \rStoredData[6]_i_21__1_n_0 ;
+  wire \rStoredData[6]_i_22_n_0 ;
+  wire \rStoredData[6]_i_23_n_0 ;
   wire \rStoredData[6]_i_3__1_n_0 ;
   wire \rStoredData[6]_i_4__1_n_0 ;
-  wire \rStoredData[6]_i_5__1_n_0 ;
+  wire \rStoredData[6]_i_6__1_n_0 ;
   wire \rStoredData[6]_i_7__1_n_0 ;
   wire \rStoredData[6]_i_8__1_n_0 ;
-  wire \rStoredData[6]_i_9__0_n_0 ;
-  wire \rStoredData[7]_i_10_n_0 ;
+  wire \rStoredData[6]_i_9__1_n_0 ;
+  wire \rStoredData[7]_i_10__1_n_0 ;
   wire \rStoredData[7]_i_11_n_0 ;
+  wire \rStoredData[7]_i_12_n_0 ;
   wire \rStoredData[7]_i_4__1_n_0 ;
   wire \rStoredData[7]_i_5__1_n_0 ;
   wire \rStoredData[7]_i_6__1_n_0 ;
-  wire \rStoredData[7]_i_7__0_n_0 ;
-  wire \rStoredData[7]_i_8__0_n_0 ;
+  wire \rStoredData[7]_i_7_n_0 ;
+  wire \rStoredData[7]_i_8_n_0 ;
   wire \rStoredData[7]_i_9__1_n_0 ;
   wire \rStoredData_reg[0]_i_10__1_n_0 ;
   wire \rStoredData_reg[0]_i_11__1_n_0 ;
@@ -11644,10 +11789,10 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData_reg[1]_i_20__1_n_0 ;
   wire \rStoredData_reg[1]_i_21__1_n_0 ;
   wire \rStoredData_reg[1]_i_22__1_n_0 ;
-  wire \rStoredData_reg[1]_i_23__0_n_0 ;
-  wire \rStoredData_reg[1]_i_24__0_n_0 ;
-  wire \rStoredData_reg[1]_i_25__0_n_0 ;
-  wire \rStoredData_reg[1]_i_26__0_n_0 ;
+  wire \rStoredData_reg[1]_i_23__1_n_0 ;
+  wire \rStoredData_reg[1]_i_24__1_n_0 ;
+  wire \rStoredData_reg[1]_i_25__1_n_0 ;
+  wire \rStoredData_reg[1]_i_26__1_n_0 ;
   wire \rStoredData_reg[1]_i_27__1_n_0 ;
   wire \rStoredData_reg[1]_i_28__1_n_0 ;
   wire \rStoredData_reg[1]_i_29__1_n_0 ;
@@ -11676,132 +11821,120 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   wire \rStoredData_reg[1]_i_52__1_n_0 ;
   wire \rStoredData_reg[1]_i_53__1_n_0 ;
   wire \rStoredData_reg[1]_i_54__1_n_0 ;
-  wire \rStoredData_reg[1]_i_7__0_n_0 ;
+  wire \rStoredData_reg[1]_i_7__1_n_0 ;
   wire \rStoredData_reg[1]_i_8__1_n_0 ;
   wire \rStoredData_reg[1]_i_9__1_n_0 ;
   wire \rStoredData_reg[2]_i_10__1_n_0 ;
   wire \rStoredData_reg[2]_i_11__1_n_0 ;
   wire \rStoredData_reg[2]_i_12__1_n_0 ;
-  wire \rStoredData_reg[2]_i_13__0_n_0 ;
-  wire \rStoredData_reg[2]_i_14__1_n_0 ;
+  wire \rStoredData_reg[2]_i_13__1_n_0 ;
+  wire \rStoredData_reg[2]_i_15__1_n_0 ;
   wire \rStoredData_reg[2]_i_17__1_n_0 ;
   wire \rStoredData_reg[2]_i_18__1_n_0 ;
   wire \rStoredData_reg[2]_i_19__1_n_0 ;
-  wire \rStoredData_reg[2]_i_1__1_n_0 ;
   wire \rStoredData_reg[2]_i_20__1_n_0 ;
+  wire \rStoredData_reg[2]_i_22__1_n_0 ;
+  wire \rStoredData_reg[2]_i_23__1_n_0 ;
   wire \rStoredData_reg[2]_i_24__1_n_0 ;
-  wire \rStoredData_reg[2]_i_25__1_n_0 ;
   wire \rStoredData_reg[2]_i_26__1_n_0 ;
-  wire \rStoredData_reg[2]_i_27__1_n_0 ;
   wire \rStoredData_reg[2]_i_28__1_n_0 ;
   wire \rStoredData_reg[2]_i_29__1_n_0 ;
   wire \rStoredData_reg[2]_i_30__1_n_0 ;
   wire \rStoredData_reg[2]_i_31__1_n_0 ;
   wire \rStoredData_reg[2]_i_32__1_n_0 ;
-  wire \rStoredData_reg[2]_i_33__0_n_0 ;
-  wire \rStoredData_reg[2]_i_34__0_n_0 ;
-  wire \rStoredData_reg[2]_i_35__0_n_0 ;
+  wire \rStoredData_reg[2]_i_33__1_n_0 ;
+  wire \rStoredData_reg[2]_i_34__1_n_0 ;
+  wire \rStoredData_reg[2]_i_35__1_n_0 ;
   wire \rStoredData_reg[2]_i_36__1_n_0 ;
   wire \rStoredData_reg[2]_i_37__1_n_0 ;
   wire \rStoredData_reg[2]_i_38__1_n_0 ;
-  wire \rStoredData_reg[2]_i_39__1_n_0 ;
-  wire \rStoredData_reg[2]_i_40__1_n_0 ;
-  wire \rStoredData_reg[2]_i_41__1_n_0 ;
+  wire \rStoredData_reg[2]_i_3__1_n_0 ;
   wire \rStoredData_reg[2]_i_43__1_n_0 ;
   wire \rStoredData_reg[2]_i_44__1_n_0 ;
-  wire \rStoredData_reg[2]_i_45__1_n_0 ;
-  wire \rStoredData_reg[2]_i_46__1_n_0 ;
-  wire \rStoredData_reg[2]_i_47__1_n_0 ;
   wire \rStoredData_reg[2]_i_48__1_n_0 ;
   wire \rStoredData_reg[2]_i_49__1_n_0 ;
   wire \rStoredData_reg[2]_i_50__1_n_0 ;
   wire \rStoredData_reg[2]_i_51__1_n_0 ;
   wire \rStoredData_reg[2]_i_52__1_n_0 ;
   wire \rStoredData_reg[2]_i_53__1_n_0 ;
-  wire \rStoredData_reg[2]_i_5__1_n_0 ;
-  wire \rStoredData_reg[2]_i_8__1_n_0 ;
+  wire \rStoredData_reg[2]_i_54__1_n_0 ;
+  wire \rStoredData_reg[2]_i_55__1_n_0 ;
   wire \rStoredData_reg[2]_i_9__1_n_0 ;
-  wire \rStoredData_reg[3]_i_10__1_n_0 ;
   wire \rStoredData_reg[3]_i_12__1_n_0 ;
-  wire \rStoredData_reg[3]_i_13__0_n_0 ;
-  wire \rStoredData_reg[3]_i_14__1_n_0 ;
+  wire \rStoredData_reg[3]_i_13__1_n_0 ;
   wire \rStoredData_reg[3]_i_15__1_n_0 ;
   wire \rStoredData_reg[3]_i_16__1_n_0 ;
   wire \rStoredData_reg[3]_i_19__1_n_0 ;
   wire \rStoredData_reg[3]_i_1__1_n_0 ;
   wire \rStoredData_reg[3]_i_20__1_n_0 ;
-  wire \rStoredData_reg[3]_i_22__1_n_0 ;
-  wire \rStoredData_reg[3]_i_31__1_n_0 ;
-  wire \rStoredData_reg[3]_i_32__0_n_0 ;
+  wire \rStoredData_reg[3]_i_25__1_n_0 ;
+  wire \rStoredData_reg[3]_i_30__1_n_0 ;
+  wire \rStoredData_reg[3]_i_32__1_n_0 ;
+  wire \rStoredData_reg[3]_i_33__1_n_0 ;
+  wire \rStoredData_reg[3]_i_34__1_n_0 ;
   wire \rStoredData_reg[3]_i_35__1_n_0 ;
-  wire \rStoredData_reg[3]_i_36__0_n_0 ;
-  wire \rStoredData_reg[3]_i_37__0_n_0 ;
-  wire \rStoredData_reg[3]_i_38__0_n_0 ;
-  wire \rStoredData_reg[3]_i_39__1_n_0 ;
-  wire \rStoredData_reg[3]_i_40__1_n_0 ;
-  wire \rStoredData_reg[3]_i_43__1_n_0 ;
-  wire \rStoredData_reg[3]_i_44__1_n_0 ;
+  wire \rStoredData_reg[3]_i_49__1_n_0 ;
+  wire \rStoredData_reg[3]_i_50__1_n_0 ;
   wire \rStoredData_reg[3]_i_51__1_n_0 ;
   wire \rStoredData_reg[3]_i_52__1_n_0 ;
-  wire \rStoredData_reg[3]_i_53__1_n_0 ;
-  wire \rStoredData_reg[3]_i_54__1_n_0 ;
-  wire \rStoredData_reg[3]_i_58__1_n_0 ;
-  wire \rStoredData_reg[3]_i_59__1_n_0 ;
-  wire \rStoredData_reg[3]_i_9__1_n_0 ;
+  wire \rStoredData_reg[3]_i_5__1_n_0 ;
+  wire \rStoredData_reg[3]_i_7__1_n_0 ;
   wire \rStoredData_reg[4]_0 ;
   wire \rStoredData_reg[4]_1 ;
   wire \rStoredData_reg[4]_i_10__1_n_0 ;
-  wire \rStoredData_reg[4]_i_11_n_0 ;
-  wire \rStoredData_reg[4]_i_2__1_n_0 ;
-  wire \rStoredData_reg[4]_i_40_n_0 ;
-  wire \rStoredData_reg[4]_i_7__1_n_0 ;
-  wire \rStoredData_reg[4]_i_8__1_n_0 ;
-  wire \rStoredData_reg[4]_i_9__1_n_0 ;
-  wire \rStoredData_reg[5]_0 ;
-  wire \rStoredData_reg[5]_i_13_n_0 ;
+  wire \rStoredData_reg[4]_i_11__1_n_0 ;
+  wire \rStoredData_reg[4]_i_14__1_n_0 ;
+  wire \rStoredData_reg[4]_i_25__1_n_0 ;
+  wire \rStoredData_reg[4]_i_30__1_n_0 ;
+  wire \rStoredData_reg[4]_i_31__1_n_0 ;
+  wire \rStoredData_reg[4]_i_32__1_n_0 ;
+  wire \rStoredData_reg[4]_i_33__1_n_0 ;
+  wire \rStoredData_reg[4]_i_35__1_n_0 ;
+  wire \rStoredData_reg[4]_i_4__1_n_0 ;
+  wire \rStoredData_reg[5]_i_28__1_n_0 ;
   wire \rStoredData_reg[5]_i_2__1_n_0 ;
-  wire \rStoredData_reg[5]_i_9__1_n_0 ;
-  wire \rStoredData_reg[6]_i_1__1_n_0 ;
-  wire \rStoredData_reg[6]_i_6__1_n_0 ;
+  wire \rStoredData_reg[5]_i_4__1_n_0 ;
+  wire \rStoredData_reg[6]_i_13_n_0 ;
+  wire \rStoredData_reg[6]_i_2__1_n_0 ;
   wire \rStoredData_reg[7]_i_2_n_0 ;
   wire [2:0]sGammaReg;
   wire [9:0]s_axis_video_tdata;
   wire s_axis_video_tvalid;
 
   LUT6 #(
-    .INIT(64'h11A1DE14EB4E11B9)) 
+    .INIT(64'h79DC16BCA56359D4)) 
     \rStoredData[0]_i_100__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_100__1_n_0 ));
   LUT6 #(
-    .INIT(64'hB200FFFFDDFF0000)) 
+    .INIT(64'h9A30D82367C72794)) 
     \rStoredData[0]_i_101__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_101__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5598AA6675598AA6)) 
+    .INIT(64'h5A9C8623E1431A9C)) 
     \rStoredData[0]_i_102__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_102__1_n_0 ));
   LUT6 #(
-    .INIT(64'h36B693CB9293C949)) 
+    .INIT(64'h3C3493C332B3C3C9)) 
     \rStoredData[0]_i_103__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -11809,39 +11942,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_103__1_n_0 ));
   LUT6 #(
-    .INIT(64'h969293DBC949696C)) 
+    .INIT(64'hB50FF02FD0B54AF0)) 
     \rStoredData[0]_i_104__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_104__1_n_0 ));
   LUT6 #(
-    .INIT(64'h65E6A686969E9A19)) 
+    .INIT(64'h4D6C36B62C24B293)) 
     \rStoredData[0]_i_105__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_105__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h92D3DBC9496D6D2C)) 
+    \rStoredData[0]_i_106__1 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_105__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h899966E817769999)) 
-    \rStoredData[0]_i_106__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_106__1_n_0 ));
   LUT6 #(
-    .INIT(64'h665D2666999A5999)) 
+    .INIT(64'h4CDD264C9B32D99B)) 
     \rStoredData[0]_i_107__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
@@ -11849,19 +11982,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_107__1_n_0 ));
   LUT6 #(
-    .INIT(64'h296B626646D6949D)) 
+    .INIT(64'h33269B334CCD264C)) 
     \rStoredData[0]_i_108__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_108__1_n_0 ));
   LUT6 #(
-    .INIT(64'hD3CC323333D9CC33)) 
+    .INIT(64'hD3CC323333D3CC33)) 
     \rStoredData[0]_i_109__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -11869,39 +12002,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_109__1_n_0 ));
   LUT6 #(
-    .INIT(64'h4C3C33333C33C3C3)) 
+    .INIT(64'h4333CCC633CC3333)) 
     \rStoredData[0]_i_110__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_110__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFF40000000FD)) 
+    .INIT(64'hFFFF0000FFEA0055)) 
     \rStoredData[0]_i_111__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_111__1_n_0 ));
   LUT6 #(
-    .INIT(64'h4F00FFFF30FF0000)) 
+    .INIT(64'h7F7755000088AAFE)) 
     \rStoredData[0]_i_112__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_112__1_n_0 ));
   LUT6 #(
-    .INIT(64'h00CD204CFF33DFFB)) 
+    .INIT(64'hAA678AE655197551)) 
     \rStoredData[0]_i_113__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
@@ -11909,9 +12042,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_113__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFE377F33038080C8)) 
+    .INIT(64'hAB622A665695D59D)) 
     \rStoredData[0]_i_114__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
@@ -11919,9 +12052,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_114__1_n_0 ));
   LUT6 #(
-    .INIT(64'h52E5BD3F1F06A4E8)) 
+    .INIT(64'h786D3DB5970E0E4A)) 
     \rStoredData[0]_i_115__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
@@ -11929,19 +12062,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[0]_i_115__1_n_0 ));
   LUT6 #(
-    .INIT(64'hA37DC222DE821DD7)) 
+    .INIT(64'h8F79870FB48F7096)) 
     \rStoredData[0]_i_116__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_116__1_n_0 ));
   LUT6 #(
-    .INIT(64'h1446B998676B9404)) 
+    .INIT(64'hBCCC333AC5433C8C)) 
     \rStoredData[0]_i_117__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -11949,13 +12082,13 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_117__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFECC40011337BEEE)) 
+    .INIT(64'hAA11891556EA66AA)) 
     \rStoredData[0]_i_118__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_118__1_n_0 ));
   LUT6 #(
@@ -11973,9 +12106,9 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
     \rStoredData[0]_i_3__1 
        (.I0(\rStoredData_reg[0]_i_7__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_8__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[7]),
         .I3(\rStoredData_reg[0]_i_9__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[8]),
         .I5(\rStoredData_reg[0]_i_10__1_n_0 ),
         .O(\rStoredData[0]_i_3__1_n_0 ));
   LUT6 #(
@@ -11989,7 +12122,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(\rStoredData_reg[0]_i_14__1_n_0 ),
         .O(\rStoredData[0]_i_4__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0F0F70F00F1AF0F0)) 
+    .INIT(64'hC3CB3C3CCC4C3C33)) 
     \rStoredData[0]_i_55__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -11999,14 +12132,14 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_55__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0F0F0F0F87F0F0F0)) 
+    .INIT(64'h4AF0AD4A0F52B52F)) 
     \rStoredData[0]_i_56__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_56__1_n_0 ));
   LUT6 #(
     .INIT(64'h0B0AF5FDFFFF0000)) 
@@ -12019,67 +12152,67 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_57__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF7FF551000008A)) 
+    .INIT(64'hFFFFF7551000008A)) 
     \rStoredData[0]_i_58__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_58__1_n_0 ));
   LUT6 #(
-    .INIT(64'h7655579581A888AA)) 
+    .INIT(64'hCCC53ABC43338DCD)) 
     \rStoredData[0]_i_59__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_59__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[0]_i_5__1 
        (.I0(\rStoredData_reg[0]_i_15__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_16__1_n_0 ),
-        .I2(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[0]),
         .I3(\rStoredData_reg[0]_i_17__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[6]),
         .I5(\rStoredData_reg[0]_i_18__1_n_0 ),
         .O(\rStoredData[0]_i_5__1_n_0 ));
   LUT6 #(
-    .INIT(64'hC4DC9DBD392B2362)) 
+    .INIT(64'h15FFEA00FFFE0111)) 
     \rStoredData[0]_i_60__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_60__1_n_0 ));
   LUT6 #(
-    .INIT(64'hC3CBCC4C3C3C3C33)) 
+    .INIT(64'hEAA8575F0111EEEA)) 
     \rStoredData[0]_i_61__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_61__1_n_0 ));
   LUT6 #(
-    .INIT(64'h4AF00F52AD4AB52F)) 
+    .INIT(64'h5AF078F0F0E1F1A5)) 
     \rStoredData[0]_i_62__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_62__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5969496D65A4A4B6)) 
+    .INIT(64'h7655579581A888AA)) 
     \rStoredData[0]_i_63__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -12089,44 +12222,44 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_63__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5961E5A779E5A586)) 
+    .INIT(64'hC4DC392B9DBD2362)) 
     \rStoredData[0]_i_64__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[0]_i_64__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hEAA8575F0111EEEA)) 
-    \rStoredData[0]_i_65__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_65__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h5AF078F0F0E1F1A5)) 
-    \rStoredData[0]_i_66__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_66__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h34CF4A9D9125E10E)) 
-    \rStoredData[0]_i_67__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_64__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F0F0F1A70F0F0F0)) 
+    \rStoredData[0]_i_65__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_65__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F0F0F0F87F0F0F0)) 
+    \rStoredData[0]_i_66__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_66__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h34CF91254A9DE10E)) 
+    \rStoredData[0]_i_67__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_67__1_n_0 ));
   LUT6 #(
     .INIT(64'hDD8819FD297F6222)) 
@@ -12139,14 +12272,14 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_68__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCC53ABC43338DCD)) 
+    .INIT(64'h5969496D65A4A4B6)) 
     \rStoredData[0]_i_69__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_69__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -12159,39 +12292,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(\rStoredData_reg[0]_i_22__1_n_0 ),
         .O(\rStoredData[0]_i_6__1_n_0 ));
   LUT6 #(
-    .INIT(64'h15FFFFFEEA000111)) 
+    .INIT(64'h59E561A779A5E586)) 
     \rStoredData[0]_i_70__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[0]_i_70__1_n_0 ));
   LUT6 #(
-    .INIT(64'h080F0000F7F0FFFF)) 
+    .INIT(64'hAE7700005118FFFF)) 
     \rStoredData[0]_i_71__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[9]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_71__1_n_0 ));
   LUT6 #(
-    .INIT(64'h46B9D4A9952B9D62)) 
+    .INIT(64'h0280FDFDC0F53F0A)) 
     \rStoredData[0]_i_72__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_72__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEFAE5151F7F70808)) 
+    .INIT(64'h67A6D95175778888)) 
     \rStoredData[0]_i_73__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -12199,19 +12332,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_73__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9BB2D99B6464A626)) 
+    .INIT(64'hFFF43BBF4003CC44)) 
     \rStoredData[0]_i_74__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_74__1_n_0 ));
   LUT6 #(
-    .INIT(64'hB995666A5556ABB9)) 
+    .INIT(64'h919DEE6AFDFE2313)) 
     \rStoredData[0]_i_75__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -12219,278 +12352,279 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_75__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEA6E7657559599A9)) 
+    .INIT(64'hFE6A11952203DDFC)) 
     \rStoredData[0]_i_76__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_76__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h11D5EA2ADDFC2A33)) 
+    \rStoredData[0]_i_77__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_77__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAA2A55D43757C088)) 
+    \rStoredData[0]_i_78__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_78__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0080FF7F88A97F66)) 
+    \rStoredData[0]_i_79__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_79__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h7220E2A21DDF1D5D)) 
+    \rStoredData[0]_i_80__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_80__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h8FE0A0E0705F7F1F)) 
+    \rStoredData[0]_i_81__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_81__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F020A80C0FDF5FD)) 
+    \rStoredData[0]_i_82__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[0]_i_82__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h2E52849D5141BBEA)) 
+    \rStoredData[0]_i_83__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[0]_i_83__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h415098BCAFEF7B52)) 
+    \rStoredData[0]_i_84__1 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_76__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h11EA55A87F80FE11)) 
-    \rStoredData[0]_i_77__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[0]_i_77__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hA665AA6659995559)) 
-    \rStoredData[0]_i_78__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_78__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hA87700FF00FF01EE)) 
-    \rStoredData[0]_i_79__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[0]_i_79__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h2665AA66599B55D9)) 
-    \rStoredData[0]_i_80__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_80__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h3F8000FF00FF00FF)) 
-    \rStoredData[0]_i_81__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[0]_i_81__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h665D266499BA5D99)) 
-    \rStoredData[0]_i_82__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[0]_i_82__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h860E71B3F09F69E0)) 
-    \rStoredData[0]_i_83__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[0]_i_83__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h1051EEAE8A8875F7)) 
-    \rStoredData[0]_i_84__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_84__1_n_0 ));
   LUT6 #(
-    .INIT(64'hC43C63CCC3BC33C3)) 
+    .INIT(64'hECEB3614EB3B44C1)) 
     \rStoredData[0]_i_85__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_85__1_n_0 ));
   LUT6 #(
-    .INIT(64'h769155A8578815EA)) 
+    .INIT(64'h624394DC1111ECEB)) 
     \rStoredData[0]_i_86__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[0]_i_86__1_n_0 ));
-  LUT5 #(
-    .INIT(32'h9D462B9D)) 
+  LUT6 #(
+    .INIT(64'hD0953D6AFAC50527)) 
     \rStoredData[0]_i_87__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[0]_i_87__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAB999D546662AAB9)) 
+    .INIT(64'h81927E6C175BE9B2)) 
     \rStoredData[0]_i_88__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_88__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5577FEEAA8811155)) 
+    .INIT(64'hC551DAAA375EC884)) 
     \rStoredData[0]_i_89__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_89__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEA880011557FFEEA)) 
+    .INIT(64'hE8A4566D0593FAA4)) 
     \rStoredData[0]_i_90__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_90__1_n_0 ));
   LUT6 #(
-    .INIT(64'h533A32ECCCD3D932)) 
+    .INIT(64'hBF3F60DA9FED2039)) 
     \rStoredData[0]_i_91__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_91__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5756EEEAA8811515)) 
+    .INIT(64'h79DC86B9E5635ADC)) 
     \rStoredData[0]_i_92__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_92__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9DB99D392B626246)) 
+    .INIT(64'h9854D0342FC1BFD2)) 
     \rStoredData[0]_i_93__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_93__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCC32CC4CD3CC33DB)) 
+    .INIT(64'h5A9CF944A5231A9C)) 
     \rStoredData[0]_i_94__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_94__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCC339C4333CCC4)) 
+    .INIT(64'hC836EE54C9B6A159)) 
     \rStoredData[0]_i_95__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_95__1_n_0 ));
   LUT6 #(
-    .INIT(64'h4623DCC43BB94623)) 
+    .INIT(64'h8913F2A41479A993)) 
     \rStoredData[0]_i_96__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_96__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAA9956669155AAA9)) 
+    .INIT(64'hC5713A81256BCA1E)) 
     \rStoredData[0]_i_97__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[0]_i_97__1_n_0 ));
   LUT6 #(
-    .INIT(64'h89116EEA5577A899)) 
+    .INIT(64'hA9B65E6C05DBE8A6)) 
     \rStoredData[0]_i_98__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_98__1_n_0 ));
   LUT6 #(
-    .INIT(64'h40FC43DC17A9249E)) 
+    .INIT(64'h3FB8B7F0402D483A)) 
     \rStoredData[0]_i_99__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[0]_i_99__1_n_0 ));
   LUT6 #(
-    .INIT(64'h2232EC22CD6CD9DD)) 
+    .INIT(64'hBD962B2939B56269)) 
     \rStoredData[1]_i_100__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_100__1_n_0 ));
   LUT6 #(
-    .INIT(64'h4F00000020FFFFFF)) 
+    .INIT(64'h756A889D10A3AF46)) 
     \rStoredData[1]_i_101__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_101__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0AAF00AAFD54FFD5)) 
+    .INIT(64'hB5D22F9D2DD50A2D)) 
     \rStoredData[1]_i_102__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_102__1_n_0 ));
   LUT6 #(
-    .INIT(64'h088C88CCEEF7EF77)) 
+    .INIT(64'hAA26A2666455655D)) 
     \rStoredData[1]_i_103__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
@@ -12498,39 +12632,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_103__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5F4F0F050520A0B0)) 
+    .INIT(64'h1555AA8857EA5555)) 
     \rStoredData[1]_i_104__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_104__1_n_0 ));
   LUT6 #(
-    .INIT(64'hE361717961617978)) 
+    .INIT(64'h695B49DB49DB49DA)) 
     \rStoredData[1]_i_105__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[1]_i_105__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9888E6E68EEE7777)) 
+    .INIT(64'hD9999BBBBA222666)) 
     \rStoredData[1]_i_106__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_106__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5075EFAFF5F78A0A)) 
+    .INIT(64'hDA5F45255D55A0A2)) 
     \rStoredData[1]_i_107__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
@@ -12538,58 +12672,58 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_107__1_n_0 ));
   LUT6 #(
-    .INIT(64'hF2B4B024B024B42D)) 
+    .INIT(64'hAAE6AE6775515519)) 
     \rStoredData[1]_i_108__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_108__1_n_0 ));
   LUT6 #(
-    .INIT(64'h080000F0F0F3FFFF)) 
+    .INIT(64'hC4CCCC3C3C3B3333)) 
     \rStoredData[1]_i_109__1 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_109__1_n_0 ));
-  LUT5 #(
-    .INIT(32'h9DCCDC44)) 
+  LUT6 #(
+    .INIT(64'h9AAA6664A6A65555)) 
     \rStoredData[1]_i_110__1 
-       (.I0(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_110__1_n_0 ));
+  LUT5 #(
+    .INIT(32'h33333336)) 
+    \rStoredData[1]_i_111__1 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_111__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h000800AFFFF7FF51)) 
+    \rStoredData[1]_i_112__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .O(\rStoredData[1]_i_110__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0F0F0F0F0F0FF4)) 
-    \rStoredData[1]_i_111__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[0]),
-        .O(\rStoredData[1]_i_111__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h004F0000FFB0FFFF)) 
-    \rStoredData[1]_i_112__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[6]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_112__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAA67551955558AAA)) 
+    .INIT(64'hAAEF7511FFF70000)) 
     \rStoredData[1]_i_113__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
@@ -12597,19 +12731,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_113__1_n_0 ));
   LUT6 #(
-    .INIT(64'h555D55D9BAAAAAA2)) 
+    .INIT(64'h5A1A5A1E0E8F8F87)) 
     \rStoredData[1]_i_114__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_114__1_n_0 ));
   LUT6 #(
-    .INIT(64'h3232C4C817C799B8)) 
+    .INIT(64'h1090EEEA9DEF3B10)) 
     \rStoredData[1]_i_115__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
@@ -12617,35 +12751,35 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_115__1_n_0 ));
   LUT6 #(
-    .INIT(64'h8ACAD2D7F7F53520)) 
+    .INIT(64'hBB8C3333CC45ACCC)) 
     \rStoredData[1]_i_116__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_116__1_n_0 ));
   LUT6 #(
-    .INIT(64'h40FDAF500AD0AF00)) 
-    \rStoredData[1]_i_117__0 
-       (.I0(s_axis_video_tdata[6]),
+    .INIT(64'hEA55AA52A57A85AA)) 
+    \rStoredData[1]_i_117__1 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[1]_i_117__0_n_0 ));
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[1]_i_117__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5A5A496D5A5BE5A5)) 
-    \rStoredData[1]_i_118__0 
-       (.I0(s_axis_video_tdata[6]),
+    .INIT(64'h0F581EF00E781AF0)) 
+    \rStoredData[1]_i_118__1 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[1]_i_118__0_n_0 ));
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_118__1_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[1]_i_2__1 
@@ -12659,11 +12793,11 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[1]_i_3__1 
-       (.I0(\rStoredData_reg[1]_i_7__0_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_7__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_8__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[7]),
         .I3(\rStoredData_reg[1]_i_9__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[8]),
         .I5(\rStoredData_reg[1]_i_10__1_n_0 ),
         .O(\rStoredData[1]_i_3__1_n_0 ));
   LUT6 #(
@@ -12677,25 +12811,25 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(\rStoredData_reg[1]_i_14__1_n_0 ),
         .O(\rStoredData[1]_i_4__1_n_0 ));
   LUT6 #(
-    .INIT(64'h334C32CCCCCCCCCC)) 
-    \rStoredData[1]_i_55__0 
+    .INIT(64'h9A96A6A69296A6A5)) 
+    \rStoredData[1]_i_55__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_55__0_n_0 ));
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_55__1_n_0 ));
   LUT6 #(
-    .INIT(64'h3B3C3C3CCCCCCCCC)) 
-    \rStoredData[1]_i_56 
+    .INIT(64'hAF5A0A50AA581A75)) 
+    \rStoredData[1]_i_56__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[1]_i_56_n_0 ));
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[1]_i_56__1_n_0 ));
   LUT6 #(
     .INIT(64'h23DDFF00FF00FF00)) 
     \rStoredData[1]_i_57__1 
@@ -12710,34 +12844,34 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
     .INIT(64'hFFFCFFFF00010000)) 
     \rStoredData[1]_i_58__1 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[5]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[1]_i_58__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFF77F7551008008A)) 
+    .INIT(64'hA5A49E1AA6961B5B)) 
     \rStoredData[1]_i_59__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_59__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[1]_i_5__1 
        (.I0(\rStoredData_reg[1]_i_15__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_16__1_n_0 ),
-        .I2(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[0]),
         .I3(\rStoredData_reg[1]_i_17__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[6]),
         .I5(\rStoredData_reg[1]_i_18__1_n_0 ),
         .O(\rStoredData[1]_i_5__1_n_0 ));
   LUT6 #(
-    .INIT(64'h98E6AA758A77AE55)) 
+    .INIT(64'h1FA0FF00FF00FE11)) 
     \rStoredData[1]_i_60__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -12747,27 +12881,27 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_60__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9AA696A692A696A5)) 
+    .INIT(64'hCCCDCDCD9393B333)) 
     \rStoredData[1]_i_61__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_61__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAF5AAA580A501A75)) 
+    .INIT(64'h6C4CCCCCCCCDCDC9)) 
     \rStoredData[1]_i_62__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_62__1_n_0 ));
   LUT6 #(
-    .INIT(64'h66444CCDDDD9999B)) 
+    .INIT(64'hFFF777551000088A)) 
     \rStoredData[1]_i_63__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -12777,27 +12911,27 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_63__1_n_0 ));
   LUT6 #(
-    .INIT(64'hA0807FFF0515A8A8)) 
+    .INIT(64'h98E6AA758A77AE55)) 
     \rStoredData[1]_i_64__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_64__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCDCDCD9393B333)) 
+    .INIT(64'h343C3C2CCCCCCCCC)) 
     \rStoredData[1]_i_65__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_65__1_n_0 ));
   LUT6 #(
-    .INIT(64'h6C4CCCCCCCCDCDC9)) 
+    .INIT(64'h3B3C3C3CCCCCCCCC)) 
     \rStoredData[1]_i_66__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
@@ -12827,14 +12961,14 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_68__1_n_0 ));
   LUT6 #(
-    .INIT(64'hA5A4A6969E1A1B5B)) 
+    .INIT(64'h664C44CDDD99D99B)) 
     \rStoredData[1]_i_69__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_69__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
@@ -12847,39 +12981,39 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(\rStoredData_reg[1]_i_22__1_n_0 ),
         .O(\rStoredData[1]_i_6__1_n_0 ));
   LUT6 #(
-    .INIT(64'h1FA0FF00FF00FE11)) 
+    .INIT(64'hA0807FFF0515A8A8)) 
     \rStoredData[1]_i_70__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_70__1_n_0 ));
   LUT6 #(
-    .INIT(64'h2300FCFFFFFF0000)) 
+    .INIT(64'hBF0050FFFDFF0000)) 
     \rStoredData[1]_i_71__1 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[9]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_71__1_n_0 ));
   LUT6 #(
-    .INIT(64'hE7117708558851AA)) 
+    .INIT(64'hA525657858585A5A)) 
     \rStoredData[1]_i_72__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_72__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEF51FF00FF00F708)) 
+    .INIT(64'h45FB55AADDAADD22)) 
     \rStoredData[1]_i_73__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -12887,19 +13021,19 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_73__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCFF4CCC3330FB33)) 
+    .INIT(64'hFFFE7FFF0001A080)) 
     \rStoredData[1]_i_74__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_74__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEE15AA57887F01EE)) 
+    .INIT(64'hCCB7AA75AA55AB44)) 
     \rStoredData[1]_i_75__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
@@ -12907,609 +13041,615 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_75__1_n_0 ));
   LUT6 #(
-    .INIT(64'hE5F1E1F0F0787058)) 
+    .INIT(64'hF0F0E165F0F12D0D)) 
     \rStoredData[1]_i_76__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[1]_i_76__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hB4785A5A70585A4B)) 
+    \rStoredData[1]_i_77__1 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_76__1_n_0 ));
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[1]_i_77__1_n_0 ));
   LUT6 #(
-    .INIT(64'h1E5A70F0F0F0F0E1)) 
-    \rStoredData[1]_i_77__1 
-       (.I0(s_axis_video_tdata[5]),
+    .INIT(64'h00FF75AA15AAF58A)) 
+    \rStoredData[1]_i_78__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[1]_i_78__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F8F87A6F0F0F0F0)) 
+    \rStoredData[1]_i_79__1 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_77__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h5110AEAE0888FFF7)) 
-    \rStoredData[1]_i_78__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[1]_i_78__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0F0F0E78F0F0F0)) 
-    \rStoredData[1]_i_79__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_79__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAEEF5511F7750088)) 
+    .INIT(64'hAAAA555595FD6200)) 
     \rStoredData[1]_i_80__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_80__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0F0F0F0F8FF0F0F0)) 
+    .INIT(64'h430B4B0B0F3C3C3C)) 
     \rStoredData[1]_i_81__1 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[9]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_81__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0520BAFAA0AADF5F)) 
+    .INIT(64'h0F0F0F8FCFF2D2F2)) 
     \rStoredData[1]_i_82__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_82__1_n_0 ));
   LUT6 #(
-    .INIT(64'h4C333CA23D8235C2)) 
+    .INIT(64'hE4B43128B5B50A4A)) 
     \rStoredData[1]_i_83__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_83__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFF005DA005BA00FF)) 
+    .INIT(64'hAB3144C81544BBBB)) 
     \rStoredData[1]_i_84__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_84__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5A6559E579A569A6)) 
+    .INIT(64'h585B5B4B4F4F0F8E)) 
     \rStoredData[1]_i_85__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_85__1_n_0 ));
   LUT6 #(
-    .INIT(64'h080A080EEFF7F7F5)) 
+    .INIT(64'h0F0E9AD21E1EF2F1)) 
     \rStoredData[1]_i_86__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[1]_i_86__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hD99BB226)) 
+  LUT6 #(
+    .INIT(64'h681F0EF25E851DED)) 
     \rStoredData[1]_i_87__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_87__1_n_0 ));
   LUT6 #(
-    .INIT(64'h324426CC224466DD)) 
+    .INIT(64'hC224BC49D46D3DDB)) 
     \rStoredData[1]_i_88__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_88__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9933BB3333223266)) 
+    .INIT(64'h60A27A0C5F5397F6)) 
     \rStoredData[1]_i_89__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_89__1_n_0 ));
   LUT6 #(
-    .INIT(64'hF0F0F0F3C38F0F0F)) 
+    .INIT(64'hC336C62594493CC9)) 
     \rStoredData[1]_i_90__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_90__1_n_0 ));
   LUT6 #(
-    .INIT(64'h347CCCCBC333303C)) 
+    .INIT(64'h51006B5B8AFF560E)) 
     \rStoredData[1]_i_91__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_91__1_n_0 ));
   LUT6 #(
-    .INIT(64'hA800001557FFFEEA)) 
+    .INIT(64'hBD393B6396B52D69)) 
     \rStoredData[1]_i_92__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[1]_i_92__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5540F555AAAB00AA)) 
+    .INIT(64'h774A809E50A4AF43)) 
     \rStoredData[1]_i_93__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_93__1_n_0 ));
   LUT6 #(
-    .INIT(64'h3C3C3B333343C3C4)) 
+    .INIT(64'h9C3DD6963923B529)) 
     \rStoredData[1]_i_94__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_94__1_n_0 ));
   LUT6 #(
-    .INIT(64'h666665555D599999)) 
+    .INIT(64'h68970CF25EA159AD)) 
     \rStoredData[1]_i_95__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_95__1_n_0 ));
   LUT6 #(
-    .INIT(64'h644599995DDD9BBA)) 
+    .INIT(64'hC2253C49D46D3DDA)) 
     \rStoredData[1]_i_96__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_96__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCDD9BBBDD993332)) 
+    .INIT(64'h60825F725A0D95EC)) 
     \rStoredData[1]_i_97__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[1]_i_97__1_n_0 ));
   LUT6 #(
-    .INIT(64'h324C66CC22CC44DD)) 
+    .INIT(64'hC2C69C3C246D49CB)) 
     \rStoredData[1]_i_98__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[1]_i_98__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAA55ED0043BA36E8)) 
+    .INIT(64'h50E5109A8F50EF68)) 
     \rStoredData[1]_i_99__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[1]_i_99__1_n_0 ));
   LUT6 #(
-    .INIT(64'hF333B3333C0C0C4C)) 
+    .INIT(64'hCCCCCCC933333333)) 
     \rStoredData[2]_i_100__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_100__1_n_0 ));
   LUT6 #(
-    .INIT(64'h666666666662222B)) 
+    .INIT(64'hCCC4CC6333333333)) 
     \rStoredData[2]_i_101__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_101__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h6233633333333333)) 
+    \rStoredData[2]_i_102__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_102__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h333B3B3B9D9C9CDC)) 
+    \rStoredData[2]_i_103__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_103__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h25FAFF05B70DFA00)) 
+    \rStoredData[2]_i_104__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[1]),
+        .O(\rStoredData[2]_i_104__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hDDD99998AAAA2666)) 
+    \rStoredData[2]_i_105__1 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_101__1_n_0 ));
-  LUT5 #(
-    .INIT(32'h99955466)) 
-    \rStoredData[2]_i_102__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_102__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h555555556AAAAAAA)) 
-    \rStoredData[2]_i_103__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_103__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAA95555)) 
-    \rStoredData[2]_i_104__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_104__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hECFF03000000FFFF)) 
-    \rStoredData[2]_i_105__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_105__1_n_0 ));
   LUT6 #(
-    .INIT(64'h6233633333B93B99)) 
+    .INIT(64'h00FF00F00FE07F00)) 
     \rStoredData[2]_i_106__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_106__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h15FF0000FF00FFFF)) 
-    \rStoredData[2]_i_107__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_107__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAF509F055F2558A0)) 
-    \rStoredData[2]_i_108__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[2]_i_108__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h8FCFD2D2CBDAD2D2)) 
-    \rStoredData[2]_i_109__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_109__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hC70C3C3C)) 
-    \rStoredData[2]_i_110__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_110__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h999399B333263266)) 
-    \rStoredData[2]_i_111__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_111__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_15__1 
-       (.I0(\rStoredData_reg[2]_i_38__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_39__1_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData_reg[2]_i_40__1_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_41__1_n_0 ),
-        .O(\rStoredData[2]_i_15__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_16__1 
-       (.I0(\rStoredData[2]_i_42__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_43__1_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData_reg[2]_i_44__1_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_45__1_n_0 ),
-        .O(\rStoredData[2]_i_16__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h66AAEAAAAAAAAAAA)) 
-    \rStoredData[2]_i_21__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_21__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h6666EAAAAAAAAAAA)) 
-    \rStoredData[2]_i_22__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_22__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0FF070F0F0F0F0F0)) 
-    \rStoredData[2]_i_23__0 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_106__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hF0F3C70F0F0F0F0F)) 
+    \rStoredData[2]_i_107__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_107__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_14__1 
+       (.I0(\rStoredData[2]_i_39__1_n_0 ),
+        .I1(\rStoredData[2]_i_40__1_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[2]_i_41__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[2]_i_42__1_n_0 ),
+        .O(\rStoredData[2]_i_14__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_16__1 
+       (.I0(\rStoredData[2]_i_45__1_n_0 ),
+        .I1(\rStoredData[2]_i_46__1_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[2]_i_41__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[2]_i_47__1_n_0 ),
+        .O(\rStoredData[2]_i_16__1_n_0 ));
+  LUT3 #(
+    .INIT(8'hE4)) 
+    \rStoredData[2]_i_1__1 
+       (.I0(sGammaReg[2]),
+        .I1(p_1_in__1[2]),
+        .I2(\rStoredData_reg[2]_i_3__1_n_0 ),
+        .O(\rStoredData[2]_i_1__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h30BBFC88FF00FF00)) 
+    \rStoredData[2]_i_21__1 
+       (.I0(\rStoredData[5]_i_30_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_63__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[2]_i_56_n_0 ),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_23__0_n_0 ));
+        .O(\rStoredData[2]_i_21__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hB8BBB888B888B888)) 
+    \rStoredData[2]_i_25__1 
+       (.I0(\rStoredData[4]_i_23_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[5]_i_20_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_31_n_0 ),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_25__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h70F070F0F5EFF0E5)) 
+    \rStoredData[2]_i_27__1 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[6]_i_19_n_0 ),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(\rStoredData[2]_i_65__1_n_0 ),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_27__1_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[2]_i_2__1 
        (.I0(\rStoredData[2]_i_4__1_n_0 ),
         .I1(s_axis_video_tdata[4]),
-        .I2(\rStoredData_reg[2]_i_5__1_n_0 ),
+        .I2(\rStoredData[2]_i_5__1_n_0 ),
         .I3(sGammaReg[1]),
         .I4(sGammaReg[0]),
         .I5(\rStoredData[2]_i_6__1_n_0 ),
         .O(p_1_in__1[2]));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_3__1 
-       (.I0(\rStoredData[2]_i_7__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_8__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData_reg[2]_i_9__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData_reg[2]_i_10__1_n_0 ),
-        .O(\rStoredData[2]_i_3__1_n_0 ));
+    .INIT(64'hB9B999B95423462B)) 
+    \rStoredData[2]_i_39__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_39__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCCCCCDD99BB333)) 
-    \rStoredData[2]_i_42__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
+    .INIT(64'h3C9EBC243C3B9366)) 
+    \rStoredData[2]_i_40__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_40__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h9B9999DD426B436B)) 
+    \rStoredData[2]_i_41__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_41__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CBB3C20B365934B)) 
+    \rStoredData[2]_i_42__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_42__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hB999B9B95646233B)) 
+    \rStoredData[2]_i_45__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[2]_i_45__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CBE3C38B4259362)) 
+    \rStoredData[2]_i_46__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_46__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h3CB33B653CD3204A)) 
+    \rStoredData[2]_i_47__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_47__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[2]_i_4__1 
-       (.I0(\rStoredData_reg[2]_i_11__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_12__1_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_9__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_10__1_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData_reg[2]_i_13__0_n_0 ),
+        .I3(\rStoredData_reg[2]_i_11__1_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[2]_i_14__1_n_0 ),
+        .I5(\rStoredData_reg[2]_i_12__1_n_0 ),
         .O(\rStoredData[2]_i_4__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \rStoredData[2]_i_56 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_56_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF8FFFF00010000)) 
-    \rStoredData[2]_i_54__0 
+    .INIT(64'hFFECFFFF00010000)) 
+    \rStoredData[2]_i_57__1 
        (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[5]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_54__0_n_0 ));
+        .O(\rStoredData[2]_i_57__1_n_0 ));
   LUT6 #(
     .INIT(64'h50525A4A0A0F0F0F)) 
-    \rStoredData[2]_i_55__1 
+    \rStoredData[2]_i_58__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_55__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hBB99BB9999DDDDDC)) 
-    \rStoredData[2]_i_56__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_56__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h5A5A5A4A0A0A0A2F)) 
-    \rStoredData[2]_i_57__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_57__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hDDD5DD5544444442)) 
-    \rStoredData[2]_i_58__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_58__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAABBABBBD5555555)) 
+    .INIT(64'hDDD5D5D544444442)) 
     \rStoredData[2]_i_59__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_59__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_5__1 
+       (.I0(\rStoredData_reg[2]_i_13__1_n_0 ),
+        .I1(\rStoredData[2]_i_14__1_n_0 ),
+        .I2(s_axis_video_tdata[0]),
+        .I3(\rStoredData_reg[2]_i_15__1_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[2]_i_16__1_n_0 ),
+        .O(\rStoredData[2]_i_5__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAABBABBBD5555555)) 
+    \rStoredData[2]_i_60__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_59__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAB9B99DDD)) 
-    \rStoredData[2]_i_60__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_60__1_n_0 ));
   LUT6 #(
-    .INIT(64'h2A2AAAAAAAAAABBB)) 
+    .INIT(64'h7CB4A2B3A5A1D2DE)) 
     \rStoredData[2]_i_61__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[1]),
         .O(\rStoredData[2]_i_61__1_n_0 ));
   LUT6 #(
-    .INIT(64'h7CB4A5A1A2B3D2DE)) 
+    .INIT(64'h6158785A7058785A)) 
     \rStoredData[2]_i_62__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[0]),
         .O(\rStoredData[2]_i_62__1_n_0 ));
   LUT6 #(
-    .INIT(64'h6178585A7078585A)) 
+    .INIT(64'hBBBB999999DDDDDC)) 
     \rStoredData[2]_i_63__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_63__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCC99DD33CDBBD922)) 
+    .INIT(64'h5A5A5A4A0A0A0A2F)) 
     \rStoredData[2]_i_64__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_64__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT3 #(
+    .INIT(8'h07)) 
+    \rStoredData[2]_i_65__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_65__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCC99CDBBDD33D922)) 
+    \rStoredData[2]_i_66__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_64__1_n_0 ));
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_66__1_n_0 ));
   LUT6 #(
     .INIT(64'h38F0F0F0F0F0F0F5)) 
-    \rStoredData[2]_i_65__1 
+    \rStoredData[2]_i_67__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_65__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h30EFFF00FF00FF00)) 
-    \rStoredData[2]_i_66__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_66__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00022222BFFFFFDD)) 
-    \rStoredData[2]_i_67__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_67__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFD40000000)) 
+    .INIT(64'h007F0FF00FF00FF0)) 
     \rStoredData[2]_i_68__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_68__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0FF8F0FFFFF0000)) 
-    \rStoredData[2]_i_69__1 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_68__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h367636666E6C6EEC)) 
+    \rStoredData[2]_i_69__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_69__1_n_0 ));
   LUT6 #(
@@ -13523,78 +13663,79 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(\rStoredData_reg[2]_i_20__1_n_0 ),
         .O(\rStoredData[2]_i_6__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCCCCCDDB9393B3)) 
+    .INIT(64'h7F7F7F7FC8888888)) 
     \rStoredData[2]_i_70__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_70__1_n_0 ));
-  LUT5 #(
-    .INIT(32'h0002BFFF)) 
-    \rStoredData[2]_i_71__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_71__1_n_0 ));
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_70__1_n_0 ));
   LUT6 #(
-    .INIT(64'h2C4C6CCCCCCCCCCD)) 
-    \rStoredData[2]_i_72__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
+    .INIT(64'hFFFFFFFE80000000)) 
+    \rStoredData[2]_i_71__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_71__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h4466666773333333)) 
+    \rStoredData[2]_i_72__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_72__1_n_0 ));
   LUT6 #(
-    .INIT(64'h00FF4CFFCF33FF00)) 
+    .INIT(64'h66666666667B673B)) 
     \rStoredData[2]_i_73__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_73__1_n_0 ));
   LUT6 #(
-    .INIT(64'h00FF7F00FF00FF00)) 
+    .INIT(64'h2666666666CCEECD)) 
     \rStoredData[2]_i_74__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_74__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9CDCDCCCCCCCC4C4)) 
+    .INIT(64'h0F7A1AFAF0F0F0F0)) 
     \rStoredData[2]_i_75__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_75__1_n_0 ));
   LUT6 #(
-    .INIT(64'h3B3C3C3CCCCCCCCC)) 
+    .INIT(64'h70EFFF00FF00FF00)) 
     \rStoredData[2]_i_76__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_76__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFD00550A40AA00FF)) 
+    .INIT(64'hAA55BF00FF00F500)) 
     \rStoredData[2]_i_77__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[4]),
@@ -13602,1955 +13743,2030 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_77__1_n_0 ));
   LUT6 #(
-    .INIT(64'h659955885DAAD9AA)) 
+    .INIT(64'h999C9C9CC6464646)) 
     \rStoredData[2]_i_78__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_78__1_n_0 ));
   LUT6 #(
-    .INIT(64'hF0F0F0F0F04A500F)) 
+    .INIT(64'h9594961666666666)) 
     \rStoredData[2]_i_79__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_79__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[2]_i_7__0 
-       (.I0(\rStoredData[6]_i_7__1_n_0 ),
-        .I1(\rStoredData[2]_i_21__1_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[2]_i_22__0_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[2]_i_23__0_n_0 ),
-        .O(\rStoredData[2]_i_7__0_n_0 ));
+    \rStoredData[2]_i_7__1 
+       (.I0(\rStoredData[2]_i_21__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_22__1_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(\rStoredData_reg[2]_i_23__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[2]_i_24__1_n_0 ),
+        .O(\rStoredData[2]_i_7__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9B93B3B336262624)) 
+    .INIT(64'hCD99DD88DD80D922)) 
     \rStoredData[2]_i_80__1 
-       (.I0(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_80__1_n_0 ));
   LUT6 #(
-    .INIT(64'hC4C6C4C223333333)) 
+    .INIT(64'h9888C4C48CCC7777)) 
     \rStoredData[2]_i_81__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_81__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h9999999112226666)) 
+    \rStoredData[2]_i_82__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_82__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hC353D333C313D332)) 
+    \rStoredData[2]_i_83__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[0]),
+        .O(\rStoredData[2]_i_83__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hD4C9C33AC2D84337)) 
+    \rStoredData[2]_i_84__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[2]_i_84__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hA96DBD24952494B6)) 
+    \rStoredData[2]_i_85__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_85__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hDCC6CC59C43393AE)) 
+    \rStoredData[2]_i_86__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_81__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h33333333304C00CC)) 
-    \rStoredData[2]_i_82__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_82__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hC3F3B333C3F33330)) 
-    \rStoredData[2]_i_83__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[2]_i_83__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h02022222BBBFBFBF)) 
-    \rStoredData[2]_i_84__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_84__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hF5D5F5555002400A)) 
-    \rStoredData[2]_i_85__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_85__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0F0F0F0B00F0F0F)) 
-    \rStoredData[2]_i_86__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
         .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_86__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hD40A00FF)) 
+  LUT6 #(
+    .INIT(64'hA9BDAD956D246CA4)) 
     \rStoredData[2]_i_87__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[2]_i_87__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEE45BB55B86200BA)) 
+    .INIT(64'hD4C9433AC2986337)) 
     \rStoredData[2]_i_88__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_88__1_n_0 ));
   LUT6 #(
-    .INIT(64'h55999888AAAAE677)) 
+    .INIT(64'hA995BD946C2424B6)) 
     \rStoredData[2]_i_89__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[2]_i_89__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAABFD55)) 
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[2]_i_8__1 
+       (.I0(\rStoredData[2]_i_25__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_26__1_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(\rStoredData[2]_i_27__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[2]_i_28__1_n_0 ),
+        .O(\rStoredData[2]_i_8__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hDCC5C6C8C3BA4336)) 
     \rStoredData[2]_i_90__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_90__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5A0A4AAA5A0A0AAF)) 
+    .INIT(64'hA9B5AD956D2424A6)) 
     \rStoredData[2]_i_91__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[2]_i_91__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0A0A0A0BFFF5FFF5)) 
+    .INIT(64'h999D9D9DDCDCDCC4)) 
     \rStoredData[2]_i_92__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_92__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFEF0F0F000010)) 
+    .INIT(64'h4000AAAA02AAFFFF)) 
     \rStoredData[2]_i_93__1 
-       (.I0(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[2]_i_93__1_n_0 ));
   LUT6 #(
-    .INIT(64'hC78F0C3C0F0C3C30)) 
+    .INIT(64'hFF0F8F0F0F0000F0)) 
     \rStoredData[2]_i_94__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_94__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAABBBDDDDD555)) 
+    \rStoredData[2]_i_95__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_95__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFBF3F330000004)) 
+    \rStoredData[2]_i_96__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[2]_i_96__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h662262233333333B)) 
+    \rStoredData[2]_i_97__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[2]_i_97__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCBC3C3F3F3F0F0F0)) 
+    \rStoredData[2]_i_98__1 
        (.I0(s_axis_video_tdata[0]),
         .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[2]_i_94__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0F0F0E5A70F0F0F)) 
-    \rStoredData[2]_i_95__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_95__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h9115115577667666)) 
-    \rStoredData[2]_i_96__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[2]_i_96__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h55775776AAAAAAAA)) 
-    \rStoredData[2]_i_97__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[2]_i_97__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F0F0F7FFFF0F0F0)) 
-    \rStoredData[2]_i_98__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[2]_i_98__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFAAEA80AA00AA55)) 
+    .INIT(64'h334C00CC30CC00FF)) 
     \rStoredData[2]_i_99__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
         .O(\rStoredData[2]_i_99__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEFEAE5E5EFEA4040)) 
+    .INIT(64'hEFE0FFFFEFE00000)) 
+    \rStoredData[3]_i_10__1 
+       (.I0(\rStoredData[3]_i_29_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData[5]_i_16__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[3]_i_30__1_n_0 ),
+        .O(\rStoredData[3]_i_10__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEFEAE5E5E5E0E0E0)) 
     \rStoredData[3]_i_11__1 
        (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[3]_i_33__0_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[4]_i_41__0_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[3]_i_34_n_0 ),
+        .I1(\rStoredData[3]_i_31__1_n_0 ),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[4]_i_38_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[4]_i_21_n_0 ),
         .O(\rStoredData[3]_i_11__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_17__1 
-       (.I0(\rStoredData[3]_i_45__1_n_0 ),
-        .I1(\rStoredData[3]_i_46__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData[5]_i_44_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[3]_i_47__1_n_0 ),
-        .O(\rStoredData[3]_i_17__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \rStoredData[3]_i_18__1 
-       (.I0(\rStoredData[3]_i_48__1_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[3]_i_49__1_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_50__1_n_0 ),
-        .O(\rStoredData[3]_i_18__1_n_0 ));
+    \rStoredData[3]_i_14__1 
+       (.I0(\rStoredData[3]_i_36__1_n_0 ),
+        .I1(\rStoredData[4]_i_45__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData[3]_i_37__1_n_0 ),
+        .I4(s_axis_video_tdata[5]),
+        .I5(\rStoredData[3]_i_38__1_n_0 ),
+        .O(\rStoredData[3]_i_14__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_21__1 
-       (.I0(\rStoredData[3]_i_55__1_n_0 ),
-        .I1(\rStoredData[3]_i_56__1_n_0 ),
+    \rStoredData[3]_i_17__1 
+       (.I0(\rStoredData[3]_i_43__1_n_0 ),
+        .I1(\rStoredData[3]_i_44__1_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[3]_i_57__1_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[4]_i_33__0_n_0 ),
+        .I3(\rStoredData[3]_i_45__1_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[3]_i_46__1_n_0 ),
+        .O(\rStoredData[3]_i_17__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_18__1 
+       (.I0(\rStoredData[3]_i_47__1_n_0 ),
+        .I1(\rStoredData[5]_i_34__1_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[3]_i_48__1_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_23_n_0 ),
+        .O(\rStoredData[3]_i_18__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFAFAFAF0FC000C0)) 
+    \rStoredData[3]_i_21__1 
+       (.I0(\rStoredData[3]_i_53_n_0 ),
+        .I1(\rStoredData[3]_i_54_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(\rStoredData[6]_i_20__1_n_0 ),
+        .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[3]_i_21__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFF80000000)) 
+    \rStoredData[3]_i_22__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[3]_i_22__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h7F7FFFFFFFFFFEEE)) 
+    \rStoredData[3]_i_23__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_23__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
-    .INIT(32'h80000000)) 
-    \rStoredData[3]_i_23__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_23__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \rStoredData[3]_i_24__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_24__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
-  LUT5 #(
-    .INIT(32'hAA800000)) 
-    \rStoredData[3]_i_25__0 
+    .INIT(32'h0000557F)) 
+    \rStoredData[3]_i_24__1 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_25__0_n_0 ));
+        .O(\rStoredData[3]_i_24__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \rStoredData[3]_i_26 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_26_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT5 #(
+    .INIT(32'hAA800000)) 
+    \rStoredData[3]_i_27 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_27_n_0 ));
   LUT6 #(
-    .INIT(64'hAFAFAFAF0FC000C0)) 
-    \rStoredData[3]_i_26__1 
-       (.I0(\rStoredData[6]_i_16_n_0 ),
-        .I1(\rStoredData[3]_i_60_n_0 ),
+    .INIT(64'h00AF00A0FFCFFFCF)) 
+    \rStoredData[3]_i_28__1 
+       (.I0(\rStoredData[3]_i_57__1_n_0 ),
+        .I1(\rStoredData[6]_i_20__1_n_0 ),
         .I2(s_axis_video_tdata[6]),
         .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[5]_i_37__0_n_0 ),
+        .I4(\rStoredData[4]_i_24_n_0 ),
         .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_26__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h333333333FFC7CFC)) 
-    \rStoredData[3]_i_27__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_27__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000001FFFFFFFF)) 
-    \rStoredData[3]_i_28__1 
-       (.I0(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_28__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT5 #(
+    .INIT(32'hFEAA0000)) 
+    \rStoredData[3]_i_29 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_28__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCCCCFCCF3F3B3B3)) 
-    \rStoredData[3]_i_29__1 
-       (.I0(\rStoredData[3]_i_61_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[3]_i_62__0_n_0 ),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_29__1_n_0 ));
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_29_n_0 ));
   LUT6 #(
     .INIT(64'hF0AAFFCCF0AA00CC)) 
     \rStoredData[3]_i_2__1 
        (.I0(\rStoredData[3]_i_4__1_n_0 ),
         .I1(s_axis_video_tdata[5]),
-        .I2(\rStoredData[3]_i_5__1_n_0 ),
+        .I2(\rStoredData_reg[3]_i_5__1_n_0 ),
         .I3(sGammaReg[1]),
         .I4(sGammaReg[0]),
         .I5(\rStoredData[3]_i_6__1_n_0 ),
         .O(p_1_in__1[3]));
   LUT6 #(
-    .INIT(64'hA0F0A0F0F0CFF0C0)) 
-    \rStoredData[3]_i_30__0 
-       (.I0(\rStoredData[4]_i_49__0_n_0 ),
-        .I1(\rStoredData[3]_i_63__0_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[4]_i_34__0_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_30__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h55577777EAAAAAAA)) 
-    \rStoredData[3]_i_33__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_33__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \rStoredData[3]_i_34 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_34_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_3__1 
-       (.I0(\rStoredData[3]_i_7__1_n_0 ),
-        .I1(\rStoredData[3]_i_8__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData_reg[3]_i_9__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData_reg[3]_i_10__1_n_0 ),
-        .O(\rStoredData[3]_i_3__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hDDD5DDD544444442)) 
-    \rStoredData[3]_i_41__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_41__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAB9B9B99D)) 
-    \rStoredData[3]_i_42__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
+    .INIT(64'h033F373FFFFFFFFF)) 
+    \rStoredData[3]_i_31__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[9]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_31__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT5 #(
+    .INIT(32'hFFFFC880)) 
+    \rStoredData[3]_i_36__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_36__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFAAAAAAEAAAAA55)) 
+    \rStoredData[3]_i_37__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[2]),
+        .O(\rStoredData[3]_i_37__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555555540020002)) 
+    \rStoredData[3]_i_38__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_38__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_39__1 
+       (.I0(\rStoredData[3]_i_68__1_n_0 ),
+        .I1(\rStoredData[3]_i_69__1_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_70__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_71__1_n_0 ),
+        .O(\rStoredData[3]_i_39__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_3__1 
+       (.I0(\rStoredData_reg[3]_i_7__1_n_0 ),
+        .I1(\rStoredData[3]_i_8__1_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[3]_i_9__1_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .I5(\rStoredData[3]_i_10__1_n_0 ),
+        .O(\rStoredData[3]_i_3__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_40__1 
+       (.I0(\rStoredData[3]_i_72__1_n_0 ),
+        .I1(\rStoredData[3]_i_73__1_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_74__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_75__1_n_0 ),
+        .O(\rStoredData[3]_i_40__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_41__1 
+       (.I0(\rStoredData[3]_i_76__1_n_0 ),
+        .I1(\rStoredData[3]_i_77__1_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_70__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_78__1_n_0 ),
+        .O(\rStoredData[3]_i_41__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[3]_i_42__1 
+       (.I0(\rStoredData[3]_i_79__1_n_0 ),
+        .I1(\rStoredData[3]_i_80__1_n_0 ),
+        .I2(s_axis_video_tdata[1]),
+        .I3(\rStoredData[3]_i_74__1_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_81__1_n_0 ),
         .O(\rStoredData[3]_i_42__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAA888)) 
+    \rStoredData[3]_i_43__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_43__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[3]_i_45__1 
+    .INIT(16'h01FF)) 
+    \rStoredData[3]_i_44__1 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[5]),
+        .O(\rStoredData[3]_i_44__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFF000000E00000FF)) 
+    \rStoredData[3]_i_45__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_45__1_n_0 ));
   LUT6 #(
-    .INIT(64'h00001555FFFFFFFF)) 
+    .INIT(64'hFFFFFFFFA8880000)) 
     \rStoredData[3]_i_46__1 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
         .O(\rStoredData[3]_i_46__1_n_0 ));
   LUT6 #(
-    .INIT(64'hA8A8888811151515)) 
+    .INIT(64'h0F0F0F0F7FFFFFF0)) 
     \rStoredData[3]_i_47__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_47__1_n_0 ));
   LUT6 #(
-    .INIT(64'h33333333393CBCBC)) 
+    .INIT(64'hAAAAAAA811111115)) 
     \rStoredData[3]_i_48__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_48__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT5 #(
-    .INIT(32'h3B9DBB9C)) 
-    \rStoredData[3]_i_49__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_49__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_4__1 
        (.I0(\rStoredData[3]_i_11__1_n_0 ),
         .I1(\rStoredData_reg[3]_i_12__1_n_0 ),
         .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData_reg[3]_i_13__0_n_0 ),
+        .I3(\rStoredData_reg[3]_i_13__1_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[3]_i_14__1_n_0 ),
+        .I5(\rStoredData[3]_i_14__1_n_0 ),
         .O(\rStoredData[3]_i_4__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  LUT5 #(
+    .INIT(32'hFFFE0000)) 
+    \rStoredData[3]_i_53 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_53_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \rStoredData[3]_i_54 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_54_n_0 ));
   LUT6 #(
-    .INIT(64'h33222222677755CC)) 
-    \rStoredData[3]_i_50__1 
+    .INIT(64'h5555555544622222)) 
+    \rStoredData[3]_i_55__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_50__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h557F0000FFFFFFFF)) 
-    \rStoredData[3]_i_55__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[6]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_55__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFDDFDDD44004000)) 
+    .INIT(64'h9555555555555550)) 
     \rStoredData[3]_i_56__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_56__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
-  LUT5 #(
-    .INIT(32'h001000FF)) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT4 #(
+    .INIT(16'h37FF)) 
     \rStoredData[3]_i_57__1 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_57__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[3]_i_5__1 
-       (.I0(\rStoredData_reg[3]_i_15__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_16__1_n_0 ),
-        .I2(s_axis_video_tdata[7]),
-        .I3(\rStoredData[3]_i_17__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[3]_i_18__1_n_0 ),
-        .O(\rStoredData[3]_i_5__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    \rStoredData[3]_i_60 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_60_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
-  LUT3 #(
-    .INIT(8'hC8)) 
-    \rStoredData[3]_i_61 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_61_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    \rStoredData[3]_i_62__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .O(\rStoredData[3]_i_62__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
-  LUT4 #(
-    .INIT(16'hFFEA)) 
-    \rStoredData[3]_i_63__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_63__0_n_0 ));
-  LUT6 #(
     .INIT(64'hA724273526752678)) 
-    \rStoredData[3]_i_64__1 
+    \rStoredData[3]_i_58__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[1]),
-        .O(\rStoredData[3]_i_64__1_n_0 ));
+        .O(\rStoredData[3]_i_58__1_n_0 ));
   LUT6 #(
     .INIT(64'h02220222BFFDFFFD)) 
-    \rStoredData[3]_i_65__1 
+    \rStoredData[3]_i_59__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_65__1_n_0 ));
+        .O(\rStoredData[3]_i_59__1_n_0 ));
   LUT6 #(
-    .INIT(64'h5555555544226222)) 
-    \rStoredData[3]_i_66__1 
-       (.I0(s_axis_video_tdata[5]),
+    .INIT(64'h000000003BBB3BBF)) 
+    \rStoredData[3]_i_60__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_60__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFDD55544444)) 
+    \rStoredData[3]_i_61__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_61__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h6222222222AAAAAB)) 
+    \rStoredData[3]_i_62__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_62__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h99D59D5555555555)) 
+    \rStoredData[3]_i_63__1 
+       (.I0(s_axis_video_tdata[9]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_66__1_n_0 ));
+        .O(\rStoredData[3]_i_63__1_n_0 ));
   LUT6 #(
-    .INIT(64'h9555555555555550)) 
-    \rStoredData[3]_i_67__1 
-       (.I0(s_axis_video_tdata[5]),
+    .INIT(64'h7FF0F0F0F0F0F0F0)) 
+    \rStoredData[3]_i_64__1 
+       (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_67__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAABBB9999D)) 
-    \rStoredData[3]_i_68__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_68__1_n_0 ));
+        .O(\rStoredData[3]_i_64__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000005777FFFF)) 
+    \rStoredData[3]_i_65__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[3]_i_65__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEEEEAAAAAAA8888)) 
+    \rStoredData[3]_i_66__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_66__1_n_0 ));
   LUT5 #(
-    .INIT(32'hAAA81555)) 
+    .INIT(32'h033337FF)) 
+    \rStoredData[3]_i_67__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_67__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h15151717E8E9E9E1)) 
+    \rStoredData[3]_i_68__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[3]_i_68__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h6E6E666255563725)) 
     \rStoredData[3]_i_69__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_69__1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[3]_i_6__1 
-       (.I0(\rStoredData_reg[3]_i_19__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_20__1_n_0 ),
+       (.I0(\rStoredData[3]_i_17__1_n_0 ),
+        .I1(\rStoredData[3]_i_18__1_n_0 ),
         .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[3]_i_21__1_n_0 ),
+        .I3(\rStoredData_reg[3]_i_19__1_n_0 ),
         .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData_reg[3]_i_22__1_n_0 ),
+        .I5(\rStoredData_reg[3]_i_20__1_n_0 ),
         .O(\rStoredData[3]_i_6__1_n_0 ));
   LUT6 #(
-    .INIT(64'h6A2A2AAAAAAAAAAB)) 
+    .INIT(64'h15151757E8E9E1A1)) 
     \rStoredData[3]_i_70__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_70__1_n_0 ));
   LUT6 #(
-    .INIT(64'hC083C30333333333)) 
+    .INIT(64'h6E6A62625656272C)) 
     \rStoredData[3]_i_71__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_71__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0FF070F0F0F0F0F0)) 
+    .INIT(64'hFFFAEAAAA0805557)) 
     \rStoredData[3]_i_72__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_72__1_n_0 ));
   LUT6 #(
-    .INIT(64'h000000007FFFFFFF)) 
+    .INIT(64'hAA57AA5A552F5AB5)) 
     \rStoredData[3]_i_73__1 
-       (.I0(s_axis_video_tdata[4]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_73__1_n_0 ));
-  LUT5 #(
-    .INIT(32'h33333F7C)) 
+  LUT6 #(
+    .INIT(64'hFEEEEAAA88815557)) 
     \rStoredData[3]_i_74__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
         .O(\rStoredData[3]_i_74__1_n_0 ));
   LUT6 #(
-    .INIT(64'hDDDDD55540002222)) 
+    .INIT(64'hA55BA74BA669866C)) 
     \rStoredData[3]_i_75__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[3]),
         .O(\rStoredData[3]_i_75__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hAAAAAA89)) 
+  LUT6 #(
+    .INIT(64'h0333FCC00337FC83)) 
     \rStoredData[3]_i_76__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_76__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCFB333)) 
-    \rStoredData[3]_i_77__1 
-       (.I0(s_axis_video_tdata[1]),
+       (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_76__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h66EE466255563265)) 
+    \rStoredData[3]_i_77__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
         .O(\rStoredData[3]_i_77__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAA89999911)) 
+    .INIT(64'h6E6E62625656272C)) 
     \rStoredData[3]_i_78__1 
        (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_78__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h333030304CCCCCCC)) 
-    \rStoredData[3]_i_79__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_79__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFCBBFC88FF88FF88)) 
-    \rStoredData[3]_i_7__1 
-       (.I0(\rStoredData[3]_i_23__0_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[3]_i_24__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_25__0_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[3]_i_7__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h33333333334C30CC)) 
-    \rStoredData[3]_i_80__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_80__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h55FF55FEAAAAAAAA)) 
-    \rStoredData[3]_i_81__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[1]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_81__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
-    \rStoredData[3]_i_82__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[3]_i_78__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFAEAAAA0805555)) 
+    \rStoredData[3]_i_79__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[3]_i_79__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAA57AA5A552F52B5)) 
+    \rStoredData[3]_i_80__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[7]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[3]_i_80__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hA55BA74BA669A66C)) 
+    \rStoredData[3]_i_81__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[7]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[3]),
+        .O(\rStoredData[3]_i_81__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555555566666662)) 
+    \rStoredData[3]_i_82__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_82__1_n_0 ));
   LUT6 #(
-    .INIT(64'h4444400022222222)) 
+    .INIT(64'h55555555666E666A)) 
     \rStoredData[3]_i_83__1 
-       (.I0(s_axis_video_tdata[6]),
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
         .O(\rStoredData[3]_i_83__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAA080FFFFFFFF)) 
+    .INIT(64'h55555555EEEAAAAA)) 
     \rStoredData[3]_i_84__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_84__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAA888FFFFFFFF)) 
-    \rStoredData[3]_i_85__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_85__1_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF01)) 
-    \rStoredData[3]_i_86__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_86__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0001555500000000)) 
-    \rStoredData[3]_i_87__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_87__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFD55555554)) 
-    \rStoredData[3]_i_88__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_88__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hBBBFFFDD)) 
-    \rStoredData[3]_i_89__1 
-       (.I0(s_axis_video_tdata[6]),
+        .O(\rStoredData[3]_i_84__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h77766EEEAAAAAAAA)) 
+    \rStoredData[3]_i_85__1 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_89__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \rStoredData[3]_i_8__1 
-       (.I0(\rStoredData[3]_i_26__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[3]_i_27__1_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[3]_i_28__1_n_0 ),
-        .O(\rStoredData[3]_i_8__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h1555555500000000)) 
-    \rStoredData[3]_i_90__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[3]_i_90__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h5F4F0F0F0F0A2AAA)) 
-    \rStoredData[3]_i_91__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[0]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_91__0_n_0 ));
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_85__1_n_0 ));
   LUT6 #(
-    .INIT(64'hEABBABBB99999999)) 
-    \rStoredData[3]_i_92__0 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[1]),
+    .INIT(64'hD50F470F0F0A0A0A)) 
+    \rStoredData[3]_i_86__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[1]),
         .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[3]_i_92__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFF08000)) 
-    \rStoredData[3]_i_93__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_93__0_n_0 ));
+        .O(\rStoredData[3]_i_86__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000011177777FFF)) 
-    \rStoredData[3]_i_94__0 
-       (.I0(s_axis_video_tdata[6]),
+    .INIT(64'hAAAAABBBDDDDDDDD)) 
+    \rStoredData[3]_i_87__1 
+       (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[0]),
         .I4(s_axis_video_tdata[2]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[3]_i_94__0_n_0 ));
+        .O(\rStoredData[3]_i_87__1_n_0 ));
   LUT6 #(
-    .INIT(64'h3077304430FF30FF)) 
+    .INIT(64'h00FF0700FF00FF00)) 
+    \rStoredData[3]_i_88__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_88__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h333333333C0C4CCC)) 
+    \rStoredData[3]_i_89__1 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[3]_i_89__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h88B8FFFF88B80000)) 
+    \rStoredData[3]_i_8__1 
+       (.I0(\rStoredData[3]_i_23__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[3]_i_24__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[3]_i_25__1_n_0 ),
+        .O(\rStoredData[3]_i_8__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hB8CCFFFFB8CC0000)) 
+    \rStoredData[3]_i_9__1 
+       (.I0(\rStoredData[3]_i_26_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[3]_i_27_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[3]_i_28__1_n_0 ),
+        .O(\rStoredData[3]_i_9__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \rStoredData[4]_i_12__1 
-       (.I0(\rStoredData[4]_i_28__1_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[4]_i_29__1_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_30__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(\rStoredData_reg[4]_i_30__1_n_0 ),
+        .I1(\rStoredData_reg[4]_i_31__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[4]_i_32__1_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData_reg[4]_i_33__1_n_0 ),
         .O(\rStoredData[4]_i_12__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFEAAA88888)) 
-    \rStoredData[4]_i_13__0 
-       (.I0(s_axis_video_tdata[8]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(\rStoredData[4]_i_31__0_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_13__0_n_0 ));
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_13__1 
+       (.I0(\rStoredData[4]_i_34__1_n_0 ),
+        .I1(\rStoredData_reg[4]_i_31__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[4]_i_35__1_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData_reg[4]_i_33__1_n_0 ),
+        .O(\rStoredData[4]_i_13__1_n_0 ));
   LUT6 #(
-    .INIT(64'hCCCCCCCFF3F3F3B3)) 
-    \rStoredData[4]_i_14__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_14__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFCFAFC000C000C0)) 
+    .INIT(64'hAF0FAF00C0C0C0C0)) 
     \rStoredData[4]_i_15__1 
-       (.I0(\rStoredData[4]_i_32__0_n_0 ),
-        .I1(\rStoredData[5]_i_34__0_n_0 ),
+       (.I0(\rStoredData[4]_i_38_n_0 ),
+        .I1(\rStoredData[5]_i_34__1_n_0 ),
         .I2(s_axis_video_tdata[7]),
         .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[4]_i_33__0_n_0 ),
+        .I4(\rStoredData[4]_i_39_n_0 ),
         .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[4]_i_15__1_n_0 ));
   LUT6 #(
-    .INIT(64'hBFC0FFFFBFC00000)) 
+    .INIT(64'hCCCCCCCFF3F3F3B3)) 
     \rStoredData[4]_i_16__1 
-       (.I0(\rStoredData[4]_i_34__0_n_0 ),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData[4]_i_35__0_n_0 ),
-        .O(\rStoredData[4]_i_16__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBB8FF33BBB8CC00)) 
-    \rStoredData[4]_i_17__1 
-       (.I0(\rStoredData[4]_i_36_n_0 ),
+       (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_37__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[5]),
-        .I5(\rStoredData[4]_i_38__1_n_0 ),
-        .O(\rStoredData[4]_i_17__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hB888FFFFB8880000)) 
-    \rStoredData[4]_i_18__1 
-       (.I0(\rStoredData[5]_i_20__0_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[4]_i_39__0_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData_reg[4]_i_40_n_0 ),
-        .O(\rStoredData[4]_i_18__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAF00AF00FCFFFC00)) 
-    \rStoredData[4]_i_19__1 
-       (.I0(\rStoredData[4]_i_41__0_n_0 ),
-        .I1(\rStoredData[4]_i_42__0_n_0 ),
         .I2(s_axis_video_tdata[5]),
-        .I3(s_axis_video_tdata[7]),
-        .I4(\rStoredData[3]_i_28__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_19__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBBBBBB8BBB8BBB8)) 
-    \rStoredData[4]_i_1__1 
-       (.I0(\rStoredData_reg[4]_i_2__1_n_0 ),
-        .I1(sGammaReg[2]),
-        .I2(\rStoredData[4]_i_3__1_n_0 ),
-        .I3(\rStoredData[4]_i_4__1_n_0 ),
-        .I4(\rStoredData[4]_i_5__0_n_0 ),
-        .I5(\rStoredData_reg[4]_0 ),
-        .O(\rStoredData[4]_i_1__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBBBBBB8BB8888)) 
-    \rStoredData[4]_i_20__1 
-       (.I0(\rStoredData[4]_i_43__0_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_37__0_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[6]_i_7__1_n_0 ),
-        .O(\rStoredData[4]_i_20__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
-    \rStoredData[4]_i_21__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_16__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \rStoredData[4]_i_17 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
+        .O(\rStoredData[4]_i_17_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT5 #(
+    .INIT(32'h7FFFFFFF)) 
+    \rStoredData[4]_i_18__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[3]),
         .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[7]),
-        .O(\rStoredData[4]_i_21__1_n_0 ));
+        .O(\rStoredData[4]_i_18__1_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[4]_i_22__1 
-       (.I0(\rStoredData[4]_i_44__1_n_0 ),
-        .I1(\rStoredData[4]_i_45__1_n_0 ),
-        .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[4]_i_46__1_n_0 ),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[4]_i_47__1_n_0 ),
-        .O(\rStoredData[4]_i_22__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hE5A5E0A5A5A5A5A5)) 
-    \rStoredData[4]_i_23__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[4]_i_48_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(s_axis_video_tdata[4]),
-        .I4(\rStoredData[4]_i_49__0_n_0 ),
+    .INIT(64'hFFFFFFFFFEEEAAAA)) 
+    \rStoredData[4]_i_19__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_23__1_n_0 ));
+        .O(\rStoredData[4]_i_19__1_n_0 ));
   LUT6 #(
-    .INIT(64'h00B8FFFF00B80000)) 
-    \rStoredData[4]_i_24__1 
-       (.I0(\rStoredData[4]_i_50__1_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[5]_i_42__0_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[4]_i_51__1_n_0 ),
-        .O(\rStoredData[4]_i_24__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBB888B8BBB8BB)) 
-    \rStoredData[4]_i_25__1 
-       (.I0(\rStoredData[4]_i_52__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[4]_i_53__1_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[4]_i_54__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_25__1_n_0 ));
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
+    \rStoredData[4]_i_1__1 
+       (.I0(\rStoredData[4]_i_2__1_n_0 ),
+        .I1(sGammaReg[2]),
+        .I2(\rStoredData[4]_i_3__1_n_0 ),
+        .I3(\rStoredData_reg[4]_i_4__1_n_0 ),
+        .I4(\rStoredData_reg[4]_0 ),
+        .I5(\rStoredData[4]_i_5__1_n_0 ),
+        .O(\rStoredData[4]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \rStoredData[4]_i_26__1 
-       (.I0(\rStoredData[4]_i_55__1_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[4]_i_56__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_57__1_n_0 ),
-        .O(\rStoredData[4]_i_26__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0F00DFDF0F00D0D0)) 
-    \rStoredData[4]_i_27__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[4]_i_50__1_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(\rStoredData[5]_i_44_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(\rStoredData[4]_i_58__0_n_0 ),
-        .O(\rStoredData[4]_i_27__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \rStoredData[4]_i_28__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_28__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFEAAA00000000)) 
-    \rStoredData[4]_i_29__1 
+    .INIT(32'hFFEA0000)) 
+    \rStoredData[4]_i_20__1 
        (.I0(s_axis_video_tdata[4]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_29__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT5 #(
-    .INIT(32'h00007FFF)) 
-    \rStoredData[4]_i_30__1 
-       (.I0(s_axis_video_tdata[0]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_30__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \rStoredData[4]_i_31__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .O(\rStoredData[4]_i_31__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
-  LUT5 #(
-    .INIT(32'hFFFF8000)) 
-    \rStoredData[4]_i_32__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_32__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT5 #(
-    .INIT(32'hFFFFAAA8)) 
-    \rStoredData[4]_i_33__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_33__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
-  LUT4 #(
-    .INIT(16'h15FF)) 
-    \rStoredData[4]_i_34__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_34__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h001FFFFFFFF00000)) 
-    \rStoredData[4]_i_35__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[4]),
         .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_35__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h5555544422222AAA)) 
-    \rStoredData[4]_i_36 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_36_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+        .O(\rStoredData[4]_i_20__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \rStoredData[4]_i_21 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_21_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
     .INIT(32'h00005F7F)) 
-    \rStoredData[4]_i_37__0 
+    \rStoredData[4]_i_22__1 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_37__0_n_0 ));
+        .O(\rStoredData[4]_i_22__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFEAFFFF00000000)) 
-    \rStoredData[4]_i_38__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
+    .INIT(64'hFFFFFFFE00000000)) 
+    \rStoredData[4]_i_23 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_38__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_23_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT4 #(
-    .INIT(16'hFFEA)) 
-    \rStoredData[4]_i_39__0 
+    .INIT(16'h0001)) 
+    \rStoredData[4]_i_24 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_24_n_0 ));
+  LUT6 #(
+    .INIT(64'h22FF22FFF0FFF000)) 
+    \rStoredData[4]_i_26__1 
+       (.I0(\rStoredData[4]_i_42_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[5]_i_21__1_n_0 ),
+        .I3(s_axis_video_tdata[6]),
+        .I4(\rStoredData[4]_i_43__1_n_0 ),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_26__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEAEAAAAA55005555)) 
+    \rStoredData[4]_i_27__1 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[4]_i_44_n_0 ),
+        .I2(s_axis_video_tdata[4]),
+        .I3(\rStoredData[5]_i_20_n_0 ),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_27__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h33BB338830883088)) 
+    \rStoredData[4]_i_28__1 
+       (.I0(\rStoredData[4]_i_45__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_46_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[4]_i_47_n_0 ),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_28__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBB88B8BBB8BB)) 
+    \rStoredData[4]_i_29__1 
+       (.I0(\rStoredData[4]_i_48__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_49__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[7]_i_8_n_0 ),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_29__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_2__1 
+       (.I0(\rStoredData[4]_i_6__1_n_0 ),
+        .I1(\rStoredData[4]_i_7__1_n_0 ),
+        .I2(s_axis_video_tdata[7]),
+        .I3(\rStoredData[4]_i_8__1_n_0 ),
+        .I4(s_axis_video_tdata[8]),
+        .I5(\rStoredData[4]_i_9__1_n_0 ),
+        .O(\rStoredData[4]_i_2__1_n_0 ));
+  LUT5 #(
+    .INIT(32'hCDFFCD00)) 
+    \rStoredData[4]_i_34__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[4]_i_58__1_n_0 ),
+        .O(\rStoredData[4]_i_34__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBFCF333BBFCC000)) 
+    \rStoredData[4]_i_36__1 
+       (.I0(\rStoredData[3]_i_24__1_n_0 ),
+        .I1(s_axis_video_tdata[7]),
+        .I2(\rStoredData[4]_i_61__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_62__1_n_0 ),
+        .O(\rStoredData[4]_i_36__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBCCCFFFFBCCC0000)) 
+    \rStoredData[4]_i_37__1 
+       (.I0(\rStoredData[4]_i_63__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(\rStoredData[4]_i_64__1_n_0 ),
+        .O(\rStoredData[4]_i_37__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT5 #(
+    .INIT(32'hFFFF8000)) 
+    \rStoredData[4]_i_38 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_39__0_n_0 ));
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_38_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT5 #(
+    .INIT(32'hFFFFAAA8)) 
+    \rStoredData[4]_i_39 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_39_n_0 ));
   LUT6 #(
     .INIT(64'h0E020E0E0E020202)) 
     \rStoredData[4]_i_3__1 
        (.I0(s_axis_video_tdata[6]),
         .I1(sGammaReg[0]),
         .I2(sGammaReg[1]),
-        .I3(\rStoredData_reg[4]_i_9__1_n_0 ),
+        .I3(\rStoredData_reg[4]_i_10__1_n_0 ),
         .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData_reg[4]_i_10__1_n_0 ),
+        .I5(\rStoredData_reg[4]_i_11__1_n_0 ),
         .O(\rStoredData[4]_i_3__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \rStoredData[4]_i_41__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_41__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT5 #(
-    .INIT(32'hFFFFAA80)) 
-    \rStoredData[4]_i_42__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_42__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
-    \rStoredData[4]_i_43__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[4]_i_43__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT5 #(
-    .INIT(32'h0000557F)) 
-    \rStoredData[4]_i_44__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_44__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h8880000000000001)) 
-    \rStoredData[4]_i_45__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_45__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
-  LUT5 #(
-    .INIT(32'hFFFFEAAA)) 
-    \rStoredData[4]_i_46__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_46__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFEAAAA)) 
-    \rStoredData[4]_i_47__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_47__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
-  LUT4 #(
-    .INIT(16'hFFA8)) 
-    \rStoredData[4]_i_48 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_48_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \rStoredData[4]_i_49__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_49__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[4]_i_4__1 
-       (.I0(\rStoredData_reg[4]_i_11_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[4]_i_12__1_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[4]_i_13__0_n_0 ),
-        .I5(\rStoredData_reg[4]_1 ),
-        .O(\rStoredData[4]_i_4__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT5 #(
-    .INIT(32'h00001555)) 
-    \rStoredData[4]_i_50__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_50__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFCCCCCCCC8)) 
-    \rStoredData[4]_i_51__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_51__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h30040C0CCCCCCCCC)) 
-    \rStoredData[4]_i_52__1 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_52__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
-    \rStoredData[4]_i_53__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_53__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT5 #(
-    .INIT(32'h557FFFFF)) 
-    \rStoredData[4]_i_54__1 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_54__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hA8A8899955555555)) 
-    \rStoredData[4]_i_55__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_55__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT5 #(
-    .INIT(32'h80033333)) 
-    \rStoredData[4]_i_56__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_56__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h99999999DCC4CCC4)) 
-    \rStoredData[4]_i_57__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[3]),
-        .O(\rStoredData[4]_i_57__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFAAEAAA)) 
-    \rStoredData[4]_i_58__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[4]_i_58__0_n_0 ));
   LUT6 #(
     .INIT(64'h636363636332723A)) 
-    \rStoredData[4]_i_59__0 
+    \rStoredData[4]_i_40__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[4]),
         .I2(s_axis_video_tdata[3]),
         .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[2]),
-        .O(\rStoredData[4]_i_59__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \rStoredData[4]_i_5__0 
-       (.I0(\rStoredData[4]_i_14__0_n_0 ),
-        .I1(\rStoredData[4]_i_15__1_n_0 ),
-        .I2(s_axis_video_tdata[9]),
-        .I3(\rStoredData[4]_i_16__1_n_0 ),
-        .I4(s_axis_video_tdata[8]),
-        .I5(\rStoredData[4]_i_17__1_n_0 ),
-        .O(\rStoredData[4]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \rStoredData[4]_i_6 
-       (.I0(sGammaReg[1]),
-        .I1(sGammaReg[0]),
-        .O(\rStoredData_reg[4]_0 ));
+        .O(\rStoredData[4]_i_40__1_n_0 ));
   LUT6 #(
     .INIT(64'h57775777EAAAAAAA)) 
-    \rStoredData[4]_i_60__0 
+    \rStoredData[4]_i_41__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
         .I4(s_axis_video_tdata[0]),
         .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[4]_i_60__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h55040504FFFFFFFF)) 
-    \rStoredData[5]_i_10__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_25_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_26__0_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_10__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF55155555)) 
-    \rStoredData[5]_i_11__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(s_axis_video_tdata[3]),
-        .I3(\rStoredData[5]_i_27__1_n_0 ),
+        .O(\rStoredData[4]_i_41__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT5 #(
+    .INIT(32'hA8000000)) 
+    \rStoredData[4]_i_42 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
-        .O(\rStoredData[5]_i_11__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \rStoredData[5]_i_12__0 
-       (.I0(sGammaReg[0]),
-        .I1(sGammaReg[1]),
-        .O(\rStoredData_reg[5]_0 ));
+        .O(\rStoredData[4]_i_42_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF80FF8000)) 
-    \rStoredData[5]_i_14__1 
+    .INIT(64'hFFFFFFFFC444C440)) 
+    \rStoredData[4]_i_43__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[0]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_43__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT4 #(
+    .INIT(16'hFFA8)) 
+    \rStoredData[4]_i_44 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_44_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000F0F0F7FFF)) 
+    \rStoredData[4]_i_45__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_45__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \rStoredData[4]_i_46 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_46_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \rStoredData[4]_i_47 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_47_n_0 ));
+  LUT6 #(
+    .INIT(64'h0037FFFFC0000000)) 
+    \rStoredData[4]_i_48__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_48__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT5 #(
+    .INIT(32'h557FFFFF)) 
+    \rStoredData[4]_i_49__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_49__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AA888155)) 
+    \rStoredData[4]_i_50__1 
        (.I0(s_axis_video_tdata[5]),
         .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_50__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FFFF01FF)) 
+    \rStoredData[4]_i_51__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_51__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AA880155)) 
+    \rStoredData[4]_i_52__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_52__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF0000FFFE5557)) 
+    \rStoredData[4]_i_53__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_53__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h3F3FFF3F33C337F0)) 
+    \rStoredData[4]_i_54__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
         .I2(s_axis_video_tdata[4]),
         .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_30__0_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_14__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \rStoredData[5]_i_15__1 
-       (.I0(sGammaReg[0]),
-        .I1(sGammaReg[1]),
-        .O(\rStoredData_reg[4]_1 ));
-  LUT6 #(
-    .INIT(64'hFBFB333333300000)) 
-    \rStoredData[5]_i_16__1 
-       (.I0(\rStoredData[5]_i_31__0_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[5]_i_22__1_n_0 ),
-        .I4(s_axis_video_tdata[5]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_16__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h8383330333333333)) 
-    \rStoredData[5]_i_17__1 
-       (.I0(\rStoredData[5]_i_31__0_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(s_axis_video_tdata[6]),
-        .I3(\rStoredData[5]_i_32__0_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_17__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0FFF0F0AF8FAF8F)) 
-    \rStoredData[5]_i_18__1 
-       (.I0(s_axis_video_tdata[6]),
-        .I1(\rStoredData[5]_i_33__0_n_0 ),
-        .I2(s_axis_video_tdata[8]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_34__0_n_0 ),
+        .I4(s_axis_video_tdata[3]),
         .I5(s_axis_video_tdata[7]),
-        .O(\rStoredData[5]_i_18__1_n_0 ));
+        .O(\rStoredData[4]_i_54__1_n_0 ));
   LUT6 #(
-    .INIT(64'h8080000003033303)) 
-    \rStoredData[5]_i_19__0 
-       (.I0(\rStoredData[5]_i_35__0_n_0 ),
+    .INIT(64'hE0E0E0E05F5E7E7E)) 
+    \rStoredData[4]_i_55__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_55__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h3F3FFF3F33C33FB0)) 
+    \rStoredData[4]_i_56__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_56__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hE0E0E0A05F5E7E7E)) 
+    \rStoredData[4]_i_57__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_57__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000AA80AAA88155)) 
+    \rStoredData[4]_i_58__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[4]_i_58__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h7577F7F759595D7C)) 
+    \rStoredData[4]_i_59__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_59__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEE222E200000000)) 
+    \rStoredData[4]_i_5__1 
+       (.I0(\rStoredData_reg[4]_i_14__1_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[4]_i_15__1_n_0 ),
+        .I3(s_axis_video_tdata[8]),
+        .I4(\rStoredData[4]_i_16__1_n_0 ),
+        .I5(\rStoredData_reg[4]_1 ),
+        .O(\rStoredData[4]_i_5__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFC00FC0033FF37FC)) 
+    \rStoredData[4]_i_60__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[4]_i_60__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT5 #(
+    .INIT(32'hFFEA0000)) 
+    \rStoredData[4]_i_61__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_61__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000FFFF5F7F0000)) 
+    \rStoredData[4]_i_62__1 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[4]_i_62__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  LUT4 #(
+    .INIT(16'h15FF)) 
+    \rStoredData[4]_i_63__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[4]_i_63__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0F1F0FF0F0F0F0F0)) 
+    \rStoredData[4]_i_64__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[4]_i_64__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAAAA8)) 
+    \rStoredData[4]_i_6__1 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(\rStoredData[4]_i_17_n_0 ),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[4]_i_6__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[4]_i_7__1 
+       (.I0(\rStoredData[4]_i_18__1_n_0 ),
+        .I1(\rStoredData[4]_i_19__1_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[5]_i_18__1_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_20__1_n_0 ),
+        .O(\rStoredData[4]_i_7__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hB8333333B8330000)) 
+    \rStoredData[4]_i_8__1 
+       (.I0(\rStoredData[4]_i_21_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[4]_i_22__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData[4]_i_23_n_0 ),
+        .O(\rStoredData[4]_i_8__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h005DFFFF005D0000)) 
+    \rStoredData[4]_i_9__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[4]_i_24_n_0 ),
+        .I2(s_axis_video_tdata[4]),
+        .I3(s_axis_video_tdata[6]),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData_reg[4]_i_25__1_n_0 ),
+        .O(\rStoredData[4]_i_9__1_n_0 ));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \rStoredData[5]_i_10__1 
+       (.I0(\rStoredData[5]_i_25__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[5]_i_26__1_n_0 ),
+        .O(\rStoredData[5]_i_10__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \rStoredData[5]_i_11__1 
+       (.I0(\rStoredData[5]_i_27__1_n_0 ),
+        .I1(\rStoredData[5]_i_25__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(\rStoredData_reg[5]_i_28__1_n_0 ),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData[5]_i_29__1_n_0 ),
+        .O(\rStoredData[5]_i_11__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hF3F3B3B330303000)) 
+    \rStoredData[5]_i_12__1 
+       (.I0(\rStoredData[5]_i_30_n_0 ),
         .I1(s_axis_video_tdata[7]),
         .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[5]_i_36_n_0 ),
+        .I3(\rStoredData[5]_i_31_n_0 ),
         .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_19__0_n_0 ));
+        .O(\rStoredData[5]_i_12__1_n_0 ));
   LUT6 #(
-    .INIT(64'hBBBBBBBBBBBBBBB8)) 
+    .INIT(64'h8383330333333333)) 
+    \rStoredData[5]_i_13__1 
+       (.I0(\rStoredData[5]_i_30_n_0 ),
+        .I1(s_axis_video_tdata[7]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[5]_i_32_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_13__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hF0FFF0F0EF0FEF0F)) 
+    \rStoredData[5]_i_14__1 
+       (.I0(\rStoredData[5]_i_33__1_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[6]),
+        .I4(\rStoredData[5]_i_34__1_n_0 ),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_14__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEEAAAAA00000000)) 
+    \rStoredData[5]_i_15 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_15_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000001FFFFFFFF)) 
+    \rStoredData[5]_i_16__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_16__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hB833B83333333300)) 
+    \rStoredData[5]_i_17__1 
+       (.I0(\rStoredData[6]_i_20__1_n_0 ),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[4]_i_24_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_30_n_0 ),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_17__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000007FFFFFFF)) 
+    \rStoredData[5]_i_18__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_18__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \rStoredData[5]_i_19__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_19__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
     \rStoredData[5]_i_1__1 
        (.I0(\rStoredData_reg[5]_i_2__1_n_0 ),
         .I1(sGammaReg[2]),
         .I2(\rStoredData[5]_i_3__1_n_0 ),
-        .I3(\rStoredData[5]_i_4__1_n_0 ),
-        .I4(\rStoredData[5]_i_5__1_n_0 ),
-        .I5(\rStoredData[5]_i_6__1_n_0 ),
+        .I3(\rStoredData_reg[5]_i_4__1_n_0 ),
+        .I4(\rStoredData_reg[4]_0 ),
+        .I5(\rStoredData[5]_i_5__1_n_0 ),
         .O(\rStoredData[5]_i_1__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000007FFFFFFF)) 
-    \rStoredData[5]_i_20__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_20__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hB833B83333333300)) 
-    \rStoredData[5]_i_21__0 
-       (.I0(\rStoredData[5]_i_37__0_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[5]_i_36_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[5]_i_31__0_n_0 ),
-        .I5(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_21__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT4 #(
-    .INIT(16'hC800)) 
-    \rStoredData[5]_i_22__1 
-       (.I0(s_axis_video_tdata[1]),
+    .INIT(16'h7FFF)) 
+    \rStoredData[5]_i_20 
+       (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_22__1_n_0 ));
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_20_n_0 ));
   LUT6 #(
-    .INIT(64'hFFEAFAEA00000000)) 
-    \rStoredData[5]_i_23__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_38__0_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_39__0_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_23__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h80808080FCCCCCCC)) 
-    \rStoredData[5]_i_24 
-       (.I0(\rStoredData[5]_i_40_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[5]_i_31__0_n_0 ),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
-        .O(\rStoredData[5]_i_24_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \rStoredData[5]_i_25 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_25_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
-  LUT3 #(
-    .INIT(8'h07)) 
-    \rStoredData[5]_i_26__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_26__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \rStoredData[5]_i_27__1 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .O(\rStoredData[5]_i_27__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h88BB88BBB8BBB888)) 
-    \rStoredData[5]_i_28__1 
-       (.I0(\rStoredData[5]_i_41__0_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[5]_i_42__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(\rStoredData[4]_i_28__1_n_0 ),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_28__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFF00A8FFA8FF)) 
-    \rStoredData[5]_i_29__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(\rStoredData[5]_i_43_n_0 ),
-        .I2(s_axis_video_tdata[4]),
-        .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_44_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_29__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEAAAAAAA00000000)) 
-    \rStoredData[5]_i_30__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[3]),
+    .INIT(64'h02220222AAAAAAAB)) 
+    \rStoredData[5]_i_21__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[2]),
         .I4(s_axis_video_tdata[0]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_30__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_21__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFEAA0000FFFFFFFF)) 
+    \rStoredData[5]_i_22__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[5]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[5]_i_22__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000A8880000)) 
+    \rStoredData[5]_i_23__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[3]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[5]_i_23__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFF0F080F000)) 
+    \rStoredData[5]_i_24__1 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[0]),
+        .I2(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[2]),
+        .I5(s_axis_video_tdata[4]),
+        .O(\rStoredData[5]_i_24__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFAAAA5555233B)) 
+    \rStoredData[5]_i_25__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_21__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_25__1_n_0 ));
+  LUT5 #(
+    .INIT(32'hB8FFB800)) 
+    \rStoredData[5]_i_26__1 
+       (.I0(\rStoredData[5]_i_35__1_n_0 ),
+        .I1(s_axis_video_tdata[9]),
+        .I2(\rStoredData[5]_i_36__1_n_0 ),
+        .I3(s_axis_video_tdata[1]),
+        .I4(\rStoredData[5]_i_29__1_n_0 ),
+        .O(\rStoredData[5]_i_26__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFAAAA55552333)) 
+    \rStoredData[5]_i_27__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_21__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_27__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEAAA44009995FEEE)) 
+    \rStoredData[5]_i_29__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_29__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'hEA00)) 
-    \rStoredData[5]_i_31__0 
+    \rStoredData[5]_i_30 
        (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[0]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_31__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \rStoredData[5]_i_32__0 
+        .O(\rStoredData[5]_i_30_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  LUT4 #(
+    .INIT(16'hA800)) 
+    \rStoredData[5]_i_31 
        (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[5]_i_31_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT3 #(
+    .INIT(8'h1F)) 
+    \rStoredData[5]_i_32 
+       (.I0(s_axis_video_tdata[1]),
+        .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_32__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+        .O(\rStoredData[5]_i_32_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    \rStoredData[5]_i_33__0 
+    \rStoredData[5]_i_33__1 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_33__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+        .O(\rStoredData[5]_i_33__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT5 #(
     .INIT(32'h000057FF)) 
-    \rStoredData[5]_i_34__0 
+    \rStoredData[5]_i_34__1 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_34__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
-  LUT3 #(
-    .INIT(8'h80)) 
-    \rStoredData[5]_i_35__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_35__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \rStoredData[5]_i_36 
-       (.I0(s_axis_video_tdata[0]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_36_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
-  LUT3 #(
-    .INIT(8'hF8)) 
-    \rStoredData[5]_i_37__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_37__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \rStoredData[5]_i_38__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_38__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[5]_i_39__0 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_39__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[5]_i_3__1 
-       (.I0(\rStoredData_reg[5]_i_9__1_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[5]_i_10__1_n_0 ),
-        .I3(s_axis_video_tdata[8]),
-        .I4(\rStoredData[5]_i_11__1_n_0 ),
-        .I5(\rStoredData_reg[5]_0 ),
-        .O(\rStoredData[5]_i_3__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
-  LUT4 #(
-    .INIT(16'hFFA8)) 
-    \rStoredData[5]_i_40 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_40_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000055555777)) 
-    \rStoredData[5]_i_41__0 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[5]_i_41__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
-  LUT3 #(
-    .INIT(8'h1F)) 
-    \rStoredData[5]_i_42__0 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[2]),
-        .I2(s_axis_video_tdata[4]),
-        .O(\rStoredData[5]_i_42__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
-  LUT4 #(
-    .INIT(16'hFF80)) 
-    \rStoredData[5]_i_43 
-       (.I0(s_axis_video_tdata[2]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[5]_i_43_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000015FFFFFFFF)) 
-    \rStoredData[5]_i_44 
+        .I4(s_axis_video_tdata[5]),
+        .O(\rStoredData[5]_i_34__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  LUT5 #(
+    .INIT(32'hFFE000FF)) 
+    \rStoredData[5]_i_35__1 
        (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[5]_i_44_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
-  LUT3 #(
-    .INIT(8'h02)) 
-    \rStoredData[5]_i_4__1 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(sGammaReg[1]),
-        .I2(sGammaReg[0]),
-        .O(\rStoredData[5]_i_4__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEE222E200000000)) 
-    \rStoredData[5]_i_5__1 
-       (.I0(\rStoredData_reg[5]_i_13_n_0 ),
-        .I1(s_axis_video_tdata[7]),
-        .I2(\rStoredData[5]_i_14__1_n_0 ),
-        .I3(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_35__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hC000CC003337FCCC)) 
+    \rStoredData[5]_i_36__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_36__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hC000CC803337FCCC)) 
+    \rStoredData[5]_i_37__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[5]_i_37__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFE000000FFFF)) 
+    \rStoredData[5]_i_38__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[5]_i_38__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT5 #(
+    .INIT(32'h31223100)) 
+    \rStoredData[5]_i_3__1 
+       (.I0(sGammaReg[0]),
+        .I1(sGammaReg[1]),
+        .I2(\rStoredData[5]_i_8__1_n_0 ),
+        .I3(s_axis_video_tdata[7]),
+        .I4(\rStoredData[5]_i_9__1_n_0 ),
+        .O(\rStoredData[5]_i_3__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFE200E200000000)) 
+    \rStoredData[5]_i_5__1 
+       (.I0(\rStoredData[5]_i_12__1_n_0 ),
+        .I1(s_axis_video_tdata[8]),
+        .I2(\rStoredData[5]_i_13__1_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[5]_i_14__1_n_0 ),
         .I5(\rStoredData_reg[4]_1 ),
         .O(\rStoredData[5]_i_5__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFE200E200000000)) 
+    .INIT(64'hCCFCBB33CCFC8800)) 
     \rStoredData[5]_i_6__1 
-       (.I0(\rStoredData[5]_i_16__1_n_0 ),
+       (.I0(\rStoredData[5]_i_15_n_0 ),
         .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[5]_i_17__1_n_0 ),
-        .I3(s_axis_video_tdata[9]),
-        .I4(\rStoredData[5]_i_18__1_n_0 ),
-        .I5(\rStoredData_reg[4]_0 ),
-        .O(\rStoredData[5]_i_6__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hB8BBBBBBB8BB8888)) 
-    \rStoredData[5]_i_7__1 
-       (.I0(\rStoredData[5]_i_19__0_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[5]_i_20__0_n_0 ),
+        .I2(\rStoredData[5]_i_16__1_n_0 ),
         .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(\rStoredData[5]_i_21__0_n_0 ),
+        .I4(s_axis_video_tdata[9]),
+        .I5(\rStoredData[5]_i_17__1_n_0 ),
+        .O(\rStoredData[5]_i_6__1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFAD0D)) 
+    \rStoredData[5]_i_7__1 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(\rStoredData[5]_i_18__1_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[5]_i_19__1_n_0 ),
+        .I4(s_axis_video_tdata[8]),
         .O(\rStoredData[5]_i_7__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFEEEAAAAA)) 
+    .INIT(64'hA0AFA0A0EFFFEFFF)) 
     \rStoredData[5]_i_8__1 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[5]),
-        .I2(\rStoredData[5]_i_22__1_n_0 ),
-        .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[9]),
+       (.I0(s_axis_video_tdata[9]),
+        .I1(\rStoredData[5]_i_20_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_21__1_n_0 ),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[5]_i_8__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFF3F3B3B0)) 
+    .INIT(64'hAFAFAFA0C000C000)) 
+    \rStoredData[5]_i_9__1 
+       (.I0(\rStoredData[5]_i_22__1_n_0 ),
+        .I1(\rStoredData[5]_i_23__1_n_0 ),
+        .I2(s_axis_video_tdata[8]),
+        .I3(s_axis_video_tdata[5]),
+        .I4(\rStoredData[5]_i_24__1_n_0 ),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[5]_i_9__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hEFEFAFAA00000000)) 
     \rStoredData[6]_i_10__1 
-       (.I0(\rStoredData[6]_i_17__0_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(s_axis_video_tdata[4]),
-        .I3(\rStoredData[6]_i_18__0_n_0 ),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[6]_i_10__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFEA00000000)) 
-    \rStoredData[6]_i_11__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[0]),
-        .I3(s_axis_video_tdata[3]),
-        .I4(s_axis_video_tdata[2]),
-        .I5(s_axis_video_tdata[5]),
-        .O(\rStoredData[6]_i_11__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h333030300C0C8C8C)) 
-    \rStoredData[6]_i_12__1 
-       (.I0(\rStoredData[6]_i_19__0_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[4]_i_31__0_n_0 ),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[6]_i_20__1_n_0 ),
+        .I2(s_axis_video_tdata[9]),
+        .I3(\rStoredData[6]_i_17_n_0 ),
         .I4(s_axis_video_tdata[4]),
         .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[6]_i_12__1_n_0 ));
+        .O(\rStoredData[6]_i_10__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000FFFF75FF0000)) 
-    \rStoredData[6]_i_13__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[4]),
-        .I2(\rStoredData[5]_i_32__0_n_0 ),
-        .I3(s_axis_video_tdata[6]),
-        .I4(s_axis_video_tdata[8]),
-        .I5(s_axis_video_tdata[7]),
-        .O(\rStoredData[6]_i_13__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAA888)) 
-    \rStoredData[6]_i_14__1 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_11_n_0 ),
+    .INIT(64'hAAAAAAAAFFFFDCCC)) 
+    \rStoredData[6]_i_11__1 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_21__1_n_0 ),
         .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
         .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_11__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAFFFFDCC4)) 
+    \rStoredData[6]_i_12 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[6]_i_21__1_n_0 ),
+        .I3(s_axis_video_tdata[4]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_12_n_0 ));
+  LUT6 #(
+    .INIT(64'h5555777FFFFFFFFF)) 
+    \rStoredData[6]_i_14__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[1]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[6]_i_14__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFEEEAAAAA)) 
+    \rStoredData[6]_i_15 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(s_axis_video_tdata[3]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[2]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
+        .O(\rStoredData[6]_i_15_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \rStoredData[6]_i_16 
+       (.I0(sGammaReg[1]),
+        .I1(sGammaReg[0]),
+        .O(\rStoredData_reg[4]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \rStoredData[6]_i_17 
+       (.I0(s_axis_video_tdata[0]),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[2]),
+        .I3(s_axis_video_tdata[3]),
+        .O(\rStoredData[6]_i_17_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
-    \rStoredData[6]_i_15__1 
+    \rStoredData[6]_i_18 
        (.I0(s_axis_video_tdata[0]),
         .I1(s_axis_video_tdata[2]),
         .I2(s_axis_video_tdata[1]),
         .I3(s_axis_video_tdata[3]),
-        .O(\rStoredData[6]_i_15__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT5 #(
-    .INIT(32'hFFFE0000)) 
-    \rStoredData[6]_i_16 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[6]_i_16_n_0 ));
+        .O(\rStoredData[6]_i_18_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \rStoredData[6]_i_17__0 
+    \rStoredData[6]_i_19 
        (.I0(s_axis_video_tdata[1]),
         .I1(s_axis_video_tdata[2]),
-        .O(\rStoredData[6]_i_17__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+        .O(\rStoredData[6]_i_19_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBBBBBBBBB8B8B8)) 
+    \rStoredData[6]_i_1__1 
+       (.I0(\rStoredData_reg[6]_i_2__1_n_0 ),
+        .I1(sGammaReg[2]),
+        .I2(\rStoredData[6]_i_3__1_n_0 ),
+        .I3(\rStoredData[6]_i_4__1_n_0 ),
+        .I4(\rStoredData_reg[4]_0 ),
+        .I5(\rStoredData[6]_i_6__1_n_0 ),
+        .O(\rStoredData[6]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT3 #(
-    .INIT(8'hFE)) 
-    \rStoredData[6]_i_18__0 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .O(\rStoredData[6]_i_18__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
-  LUT3 #(
-    .INIT(8'h07)) 
-    \rStoredData[6]_i_19__0 
+    .INIT(8'hF8)) 
+    \rStoredData[6]_i_20__1 
        (.I0(s_axis_video_tdata[2]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[6]_i_19__0_n_0 ));
+        .O(\rStoredData[6]_i_20__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \rStoredData[6]_i_21__1 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[3]),
+        .O(\rStoredData[6]_i_21__1_n_0 ));
   LUT6 #(
-    .INIT(64'hF0AAFFCCF0AA00CC)) 
-    \rStoredData[6]_i_2__1 
-       (.I0(\rStoredData[6]_i_4__1_n_0 ),
-        .I1(s_axis_video_tdata[8]),
-        .I2(\rStoredData[6]_i_5__1_n_0 ),
-        .I3(sGammaReg[1]),
-        .I4(sGammaReg[0]),
-        .I5(\rStoredData_reg[6]_i_6__1_n_0 ),
-        .O(p_1_in__1[6]));
-  LUT6 #(
-    .INIT(64'hFFFE5555FFFE0000)) 
-    \rStoredData[6]_i_3__1 
-       (.I0(s_axis_video_tdata[8]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[6]_i_7__1_n_0 ),
-        .I3(s_axis_video_tdata[7]),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[6]_i_8__1_n_0 ),
-        .O(\rStoredData[6]_i_3__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hCCEEFFFFF0000000)) 
-    \rStoredData[6]_i_4__1 
-       (.I0(\rStoredData[6]_i_9__0_n_0 ),
-        .I1(s_axis_video_tdata[9]),
-        .I2(\rStoredData[6]_i_10__1_n_0 ),
-        .I3(s_axis_video_tdata[6]),
+    .INIT(64'hAAAAABFFFFFF0000)) 
+    \rStoredData[6]_i_22 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(s_axis_video_tdata[5]),
         .I4(s_axis_video_tdata[7]),
         .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAABFFFFFF0000)) 
+    \rStoredData[6]_i_23 
+       (.I0(s_axis_video_tdata[9]),
+        .I1(s_axis_video_tdata[4]),
+        .I2(\rStoredData[6]_i_21__1_n_0 ),
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_23_n_0 ));
+  LUT6 #(
+    .INIT(64'h3131333322000000)) 
+    \rStoredData[6]_i_3__1 
+       (.I0(sGammaReg[0]),
+        .I1(sGammaReg[1]),
+        .I2(\rStoredData[6]_i_9__1_n_0 ),
+        .I3(\rStoredData[6]_i_10__1_n_0 ),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[6]_i_3__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hBF80FFFFBF800000)) 
+    \rStoredData[6]_i_4__1 
+       (.I0(\rStoredData[6]_i_11__1_n_0 ),
+        .I1(s_axis_video_tdata[1]),
+        .I2(s_axis_video_tdata[0]),
+        .I3(\rStoredData[6]_i_12_n_0 ),
+        .I4(s_axis_video_tdata[6]),
+        .I5(\rStoredData_reg[6]_i_13_n_0 ),
         .O(\rStoredData[6]_i_4__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFEA55FFFFEA00AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \rStoredData[6]_i_5__1 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[6]_i_11__1_n_0 ),
-        .I3(s_axis_video_tdata[8]),
-        .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[6]_i_12__1_n_0 ),
-        .O(\rStoredData[6]_i_5__1_n_0 ));
+       (.I0(sGammaReg[0]),
+        .I1(sGammaReg[1]),
+        .O(\rStoredData_reg[4]_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFE00000000)) 
+    .INIT(64'hEE62CC6200000000)) 
+    \rStoredData[6]_i_6__1 
+       (.I0(s_axis_video_tdata[7]),
+        .I1(s_axis_video_tdata[8]),
+        .I2(\rStoredData[6]_i_14__1_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(\rStoredData[6]_i_15_n_0 ),
+        .I5(\rStoredData_reg[4]_1 ),
+        .O(\rStoredData[6]_i_6__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hDDDDDDDDD8C8C888)) 
     \rStoredData[6]_i_7__1 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[0]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[1]),
-        .I4(s_axis_video_tdata[3]),
-        .I5(s_axis_video_tdata[5]),
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(\rStoredData[6]_i_17_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[6]),
         .O(\rStoredData[6]_i_7__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0FBF0FBFFFF0F0F0)) 
+    .INIT(64'hFFFFFFFF11115515)) 
     \rStoredData[6]_i_8__1 
-       (.I0(\rStoredData[6]_i_15__1_n_0 ),
-        .I1(s_axis_video_tdata[4]),
-        .I2(s_axis_video_tdata[7]),
-        .I3(s_axis_video_tdata[5]),
-        .I4(\rStoredData[6]_i_16_n_0 ),
-        .I5(s_axis_video_tdata[6]),
-        .O(\rStoredData[6]_i_8__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
-    \rStoredData[6]_i_9__0 
-       (.I0(s_axis_video_tdata[4]),
-        .I1(s_axis_video_tdata[1]),
-        .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[3]),
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[6]),
+        .I2(s_axis_video_tdata[4]),
+        .I3(\rStoredData[6]_i_18_n_0 ),
         .I4(s_axis_video_tdata[5]),
-        .O(\rStoredData[6]_i_9__0_n_0 ));
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[6]_i_8__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hCDDDDDDDDDDDDDDD)) 
+    \rStoredData[6]_i_9__1 
+       (.I0(s_axis_video_tdata[6]),
+        .I1(s_axis_video_tdata[9]),
+        .I2(s_axis_video_tdata[3]),
+        .I3(\rStoredData[6]_i_19_n_0 ),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[5]),
+        .O(\rStoredData[6]_i_9__1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
     \rStoredData[7]_i_1 
        (.I0(s_axis_video_tvalid),
         .I1(m_axis_video_tready),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
-  LUT4 #(
-    .INIT(16'hFFEA)) 
-    \rStoredData[7]_i_10 
-       (.I0(s_axis_video_tdata[3]),
-        .I1(s_axis_video_tdata[1]),
+  LUT6 #(
+    .INIT(64'hFFFF0000FE000000)) 
+    \rStoredData[7]_i_10__1 
+       (.I0(s_axis_video_tdata[4]),
+        .I1(s_axis_video_tdata[3]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[4]),
-        .O(\rStoredData[7]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+        .I3(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[8]),
+        .I5(s_axis_video_tdata[7]),
+        .O(\rStoredData[7]_i_10__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFC8C8C888)) 
+    \rStoredData[7]_i_11 
+       (.I0(s_axis_video_tdata[7]),
+        .I1(s_axis_video_tdata[8]),
+        .I2(s_axis_video_tdata[5]),
+        .I3(s_axis_video_tdata[3]),
+        .I4(s_axis_video_tdata[4]),
+        .I5(s_axis_video_tdata[9]),
+        .O(\rStoredData[7]_i_11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT3 #(
     .INIT(8'hE0)) 
-    \rStoredData[7]_i_11 
-       (.I0(s_axis_video_tdata[1]),
-        .I1(s_axis_video_tdata[2]),
+    \rStoredData[7]_i_12 
+       (.I0(s_axis_video_tdata[2]),
+        .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[3]),
-        .O(\rStoredData[7]_i_11_n_0 ));
+        .O(\rStoredData[7]_i_12_n_0 ));
   LUT6 #(
     .INIT(64'hCAFFCAF0CAFFCA00)) 
     \rStoredData[7]_i_3__1 
@@ -15559,66 +15775,66 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I2(sGammaReg[1]),
         .I3(sGammaReg[0]),
         .I4(s_axis_video_tdata[9]),
-        .I5(\rStoredData[7]_i_7__0_n_0 ),
+        .I5(\rStoredData[7]_i_7_n_0 ),
         .O(p_1_in__1[7]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFEEEAAAAA)) 
+    .INIT(64'hFFFFFFFFFFFFE000)) 
     \rStoredData[7]_i_4__1 
-       (.I0(s_axis_video_tdata[9]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_8__0_n_0 ),
-        .I3(s_axis_video_tdata[5]),
-        .I4(s_axis_video_tdata[7]),
-        .I5(s_axis_video_tdata[8]),
-        .O(\rStoredData[7]_i_4__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hEFFFE000)) 
-    \rStoredData[7]_i_5__1 
-       (.I0(\rStoredData[7]_i_9__1_n_0 ),
-        .I1(s_axis_video_tdata[6]),
-        .I2(s_axis_video_tdata[8]),
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[7]_i_8_n_0 ),
+        .I2(s_axis_video_tdata[6]),
         .I3(s_axis_video_tdata[7]),
         .I4(s_axis_video_tdata[9]),
+        .I5(s_axis_video_tdata[8]),
+        .O(\rStoredData[7]_i_4__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF8000000)) 
+    \rStoredData[7]_i_5__1 
+       (.I0(s_axis_video_tdata[5]),
+        .I1(\rStoredData[7]_i_9__1_n_0 ),
+        .I2(s_axis_video_tdata[6]),
+        .I3(s_axis_video_tdata[8]),
+        .I4(s_axis_video_tdata[7]),
+        .I5(s_axis_video_tdata[9]),
         .O(\rStoredData[7]_i_5__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFCCCCC888)) 
+    .INIT(64'hFFB8FFBBFFB8CC88)) 
     \rStoredData[7]_i_6__1 
-       (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[8]),
-        .I2(s_axis_video_tdata[5]),
-        .I3(\rStoredData[7]_i_10_n_0 ),
-        .I4(s_axis_video_tdata[6]),
-        .I5(s_axis_video_tdata[9]),
+       (.I0(s_axis_video_tdata[8]),
+        .I1(s_axis_video_tdata[6]),
+        .I2(\rStoredData[7]_i_10__1_n_0 ),
+        .I3(s_axis_video_tdata[9]),
+        .I4(s_axis_video_tdata[1]),
+        .I5(\rStoredData[7]_i_11_n_0 ),
         .O(\rStoredData[7]_i_6__1_n_0 ));
   LUT6 #(
     .INIT(64'hEEEAAAAA00000000)) 
-    \rStoredData[7]_i_7__0 
+    \rStoredData[7]_i_7 
        (.I0(s_axis_video_tdata[7]),
-        .I1(s_axis_video_tdata[6]),
-        .I2(\rStoredData[7]_i_11_n_0 ),
+        .I1(s_axis_video_tdata[5]),
+        .I2(\rStoredData[7]_i_12_n_0 ),
         .I3(s_axis_video_tdata[4]),
-        .I4(s_axis_video_tdata[5]),
+        .I4(s_axis_video_tdata[6]),
         .I5(s_axis_video_tdata[8]),
-        .O(\rStoredData[7]_i_7__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+        .O(\rStoredData[7]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
-    \rStoredData[7]_i_8__0 
+    \rStoredData[7]_i_8 
+       (.I0(s_axis_video_tdata[3]),
+        .I1(s_axis_video_tdata[2]),
+        .I2(s_axis_video_tdata[1]),
+        .I3(s_axis_video_tdata[0]),
+        .I4(s_axis_video_tdata[4]),
+        .O(\rStoredData[7]_i_8_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  LUT4 #(
+    .INIT(16'h8000)) 
+    \rStoredData[7]_i_9__1 
        (.I0(s_axis_video_tdata[3]),
         .I1(s_axis_video_tdata[1]),
         .I2(s_axis_video_tdata[2]),
-        .I3(s_axis_video_tdata[0]),
-        .I4(s_axis_video_tdata[4]),
-        .O(\rStoredData[7]_i_8__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
-    \rStoredData[7]_i_9__1 
-       (.I0(s_axis_video_tdata[5]),
-        .I1(s_axis_video_tdata[3]),
-        .I2(s_axis_video_tdata[1]),
-        .I3(s_axis_video_tdata[2]),
-        .I4(s_axis_video_tdata[4]),
-        .I5(s_axis_video_tdata[9]),
+        .I3(s_axis_video_tdata[4]),
         .O(\rStoredData[7]_i_9__1_n_0 ));
   FDRE \rStoredData_reg[0] 
        (.C(StreamClk),
@@ -15630,7 +15846,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
        (.I0(\rStoredData_reg[0]_i_29__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_30__1_n_0 ),
         .O(\rStoredData_reg[0]_i_10__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_11__1 
        (.I0(\rStoredData_reg[0]_i_31__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_32__1_n_0 ),
@@ -15655,22 +15871,22 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
        (.I0(\rStoredData_reg[0]_i_39__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_40__1_n_0 ),
         .O(\rStoredData_reg[0]_i_15__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_16__1 
        (.I0(\rStoredData_reg[0]_i_41__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_42__1_n_0 ),
         .O(\rStoredData_reg[0]_i_16__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_17__1 
        (.I0(\rStoredData_reg[0]_i_43__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_44__1_n_0 ),
         .O(\rStoredData_reg[0]_i_17__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_18__1 
        (.I0(\rStoredData_reg[0]_i_45__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_46__1_n_0 ),
         .O(\rStoredData_reg[0]_i_18__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[0]_i_19__1 
        (.I0(\rStoredData_reg[0]_i_47__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_48__1_n_0 ),
@@ -15740,137 +15956,137 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
        (.I0(\rStoredData[0]_i_71__1_n_0 ),
         .I1(\rStoredData[0]_i_72__1_n_0 ),
         .O(\rStoredData_reg[0]_i_31__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_32__1 
        (.I0(\rStoredData[0]_i_73__1_n_0 ),
         .I1(\rStoredData[0]_i_74__1_n_0 ),
         .O(\rStoredData_reg[0]_i_32__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_33__1 
        (.I0(\rStoredData[0]_i_75__1_n_0 ),
         .I1(\rStoredData[0]_i_76__1_n_0 ),
         .O(\rStoredData_reg[0]_i_33__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_34__1 
        (.I0(\rStoredData[0]_i_77__1_n_0 ),
         .I1(\rStoredData[0]_i_78__1_n_0 ),
         .O(\rStoredData_reg[0]_i_34__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_35__1 
        (.I0(\rStoredData[0]_i_79__1_n_0 ),
         .I1(\rStoredData[0]_i_80__1_n_0 ),
         .O(\rStoredData_reg[0]_i_35__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_36__1 
        (.I0(\rStoredData[0]_i_81__1_n_0 ),
         .I1(\rStoredData[0]_i_82__1_n_0 ),
         .O(\rStoredData_reg[0]_i_36__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_37__1 
        (.I0(\rStoredData[0]_i_83__1_n_0 ),
         .I1(\rStoredData[0]_i_84__1_n_0 ),
         .O(\rStoredData_reg[0]_i_37__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_38__1 
        (.I0(\rStoredData[0]_i_85__1_n_0 ),
         .I1(\rStoredData[0]_i_86__1_n_0 ),
         .O(\rStoredData_reg[0]_i_38__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[0]_i_39__1 
        (.I0(\rStoredData[0]_i_87__1_n_0 ),
         .I1(\rStoredData[0]_i_88__1_n_0 ),
         .O(\rStoredData_reg[0]_i_39__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_40__1 
        (.I0(\rStoredData[0]_i_89__1_n_0 ),
         .I1(\rStoredData[0]_i_90__1_n_0 ),
         .O(\rStoredData_reg[0]_i_40__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_41__1 
        (.I0(\rStoredData[0]_i_91__1_n_0 ),
         .I1(\rStoredData[0]_i_92__1_n_0 ),
         .O(\rStoredData_reg[0]_i_41__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_42__1 
        (.I0(\rStoredData[0]_i_93__1_n_0 ),
         .I1(\rStoredData[0]_i_94__1_n_0 ),
         .O(\rStoredData_reg[0]_i_42__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_43__1 
        (.I0(\rStoredData[0]_i_95__1_n_0 ),
         .I1(\rStoredData[0]_i_96__1_n_0 ),
         .O(\rStoredData_reg[0]_i_43__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_44__1 
        (.I0(\rStoredData[0]_i_97__1_n_0 ),
         .I1(\rStoredData[0]_i_98__1_n_0 ),
         .O(\rStoredData_reg[0]_i_44__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_45__1 
        (.I0(\rStoredData[0]_i_99__1_n_0 ),
         .I1(\rStoredData[0]_i_100__1_n_0 ),
         .O(\rStoredData_reg[0]_i_45__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_46__1 
        (.I0(\rStoredData[0]_i_101__1_n_0 ),
         .I1(\rStoredData[0]_i_102__1_n_0 ),
         .O(\rStoredData_reg[0]_i_46__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[0]_i_47__1 
        (.I0(\rStoredData[0]_i_103__1_n_0 ),
         .I1(\rStoredData[0]_i_104__1_n_0 ),
         .O(\rStoredData_reg[0]_i_47__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_48__1 
        (.I0(\rStoredData[0]_i_105__1_n_0 ),
         .I1(\rStoredData[0]_i_106__1_n_0 ),
         .O(\rStoredData_reg[0]_i_48__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_49__1 
        (.I0(\rStoredData[0]_i_107__1_n_0 ),
         .I1(\rStoredData[0]_i_108__1_n_0 ),
         .O(\rStoredData_reg[0]_i_49__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_50__1 
        (.I0(\rStoredData[0]_i_109__1_n_0 ),
         .I1(\rStoredData[0]_i_110__1_n_0 ),
         .O(\rStoredData_reg[0]_i_50__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_51__1 
        (.I0(\rStoredData[0]_i_111__1_n_0 ),
         .I1(\rStoredData[0]_i_112__1_n_0 ),
         .O(\rStoredData_reg[0]_i_51__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_52__1 
        (.I0(\rStoredData[0]_i_113__1_n_0 ),
         .I1(\rStoredData[0]_i_114__1_n_0 ),
         .O(\rStoredData_reg[0]_i_52__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_53__1 
        (.I0(\rStoredData[0]_i_115__1_n_0 ),
         .I1(\rStoredData[0]_i_116__1_n_0 ),
         .O(\rStoredData_reg[0]_i_53__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[0]_i_54__1 
        (.I0(\rStoredData[0]_i_117__1_n_0 ),
         .I1(\rStoredData[0]_i_118__1_n_0 ),
         .O(\rStoredData_reg[0]_i_54__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[0]_i_7__1 
        (.I0(\rStoredData_reg[0]_i_23__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_24__1_n_0 ),
         .O(\rStoredData_reg[0]_i_7__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_8__1 
        (.I0(\rStoredData_reg[0]_i_25__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_26__1_n_0 ),
         .O(\rStoredData_reg[0]_i_8__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[0]_i_9__1 
        (.I0(\rStoredData_reg[0]_i_27__1_n_0 ),
         .I1(\rStoredData_reg[0]_i_28__1_n_0 ),
         .O(\rStoredData_reg[0]_i_9__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[1] 
        (.C(StreamClk),
         .CE(E),
@@ -15881,7 +16097,7 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
        (.I0(\rStoredData_reg[1]_i_29__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_30__1_n_0 ),
         .O(\rStoredData_reg[1]_i_10__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[1]_i_11__1 
        (.I0(\rStoredData_reg[1]_i_31__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_32__1_n_0 ),
@@ -15906,22 +16122,22 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
        (.I0(\rStoredData_reg[1]_i_39__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_40__1_n_0 ),
         .O(\rStoredData_reg[1]_i_15__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_16__1 
        (.I0(\rStoredData_reg[1]_i_41__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_42__1_n_0 ),
         .O(\rStoredData_reg[1]_i_16__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_17__1 
        (.I0(\rStoredData_reg[1]_i_43__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_44__1_n_0 ),
         .O(\rStoredData_reg[1]_i_17__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_18__1 
        (.I0(\rStoredData_reg[1]_i_45__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_46__1_n_0 ),
         .O(\rStoredData_reg[1]_i_18__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[1]_i_19__1 
        (.I0(\rStoredData_reg[1]_i_47__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_48__1_n_0 ),
@@ -15947,25 +16163,25 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .I1(\rStoredData_reg[1]_i_54__1_n_0 ),
         .O(\rStoredData_reg[1]_i_22__1_n_0 ),
         .S(s_axis_video_tdata[7]));
-  MUXF7 \rStoredData_reg[1]_i_23__0 
-       (.I0(\rStoredData[1]_i_55__0_n_0 ),
-        .I1(\rStoredData[1]_i_56_n_0 ),
-        .O(\rStoredData_reg[1]_i_23__0_n_0 ),
+  MUXF7 \rStoredData_reg[1]_i_23__1 
+       (.I0(\rStoredData[1]_i_55__1_n_0 ),
+        .I1(\rStoredData[1]_i_56__1_n_0 ),
+        .O(\rStoredData_reg[1]_i_23__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_24__0 
+  MUXF7 \rStoredData_reg[1]_i_24__1 
        (.I0(\rStoredData[1]_i_57__1_n_0 ),
         .I1(\rStoredData[1]_i_58__1_n_0 ),
-        .O(\rStoredData_reg[1]_i_24__0_n_0 ),
+        .O(\rStoredData_reg[1]_i_24__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_25__0 
+  MUXF7 \rStoredData_reg[1]_i_25__1 
        (.I0(\rStoredData[1]_i_59__1_n_0 ),
         .I1(\rStoredData[1]_i_60__1_n_0 ),
-        .O(\rStoredData_reg[1]_i_25__0_n_0 ),
+        .O(\rStoredData_reg[1]_i_25__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[1]_i_26__0 
+  MUXF7 \rStoredData_reg[1]_i_26__1 
        (.I0(\rStoredData[1]_i_61__1_n_0 ),
         .I1(\rStoredData[1]_i_62__1_n_0 ),
-        .O(\rStoredData_reg[1]_i_26__0_n_0 ),
+        .O(\rStoredData_reg[1]_i_26__1_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_27__1 
        (.I0(\rStoredData[1]_i_63__1_n_0 ),
@@ -15991,392 +16207,352 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
        (.I0(\rStoredData[1]_i_71__1_n_0 ),
         .I1(\rStoredData[1]_i_72__1_n_0 ),
         .O(\rStoredData_reg[1]_i_31__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_32__1 
        (.I0(\rStoredData[1]_i_73__1_n_0 ),
         .I1(\rStoredData[1]_i_74__1_n_0 ),
         .O(\rStoredData_reg[1]_i_32__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_33__1 
        (.I0(\rStoredData[1]_i_75__1_n_0 ),
         .I1(\rStoredData[1]_i_76__1_n_0 ),
         .O(\rStoredData_reg[1]_i_33__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_34__1 
        (.I0(\rStoredData[1]_i_77__1_n_0 ),
         .I1(\rStoredData[1]_i_78__1_n_0 ),
         .O(\rStoredData_reg[1]_i_34__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_35__1 
        (.I0(\rStoredData[1]_i_79__1_n_0 ),
         .I1(\rStoredData[1]_i_80__1_n_0 ),
         .O(\rStoredData_reg[1]_i_35__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_36__1 
        (.I0(\rStoredData[1]_i_81__1_n_0 ),
         .I1(\rStoredData[1]_i_82__1_n_0 ),
         .O(\rStoredData_reg[1]_i_36__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_37__1 
        (.I0(\rStoredData[1]_i_83__1_n_0 ),
         .I1(\rStoredData[1]_i_84__1_n_0 ),
         .O(\rStoredData_reg[1]_i_37__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_38__1 
        (.I0(\rStoredData[1]_i_85__1_n_0 ),
         .I1(\rStoredData[1]_i_86__1_n_0 ),
         .O(\rStoredData_reg[1]_i_38__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+        .S(s_axis_video_tdata[5]));
   MUXF7 \rStoredData_reg[1]_i_39__1 
        (.I0(\rStoredData[1]_i_87__1_n_0 ),
         .I1(\rStoredData[1]_i_88__1_n_0 ),
         .O(\rStoredData_reg[1]_i_39__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_40__1 
        (.I0(\rStoredData[1]_i_89__1_n_0 ),
         .I1(\rStoredData[1]_i_90__1_n_0 ),
         .O(\rStoredData_reg[1]_i_40__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_41__1 
        (.I0(\rStoredData[1]_i_91__1_n_0 ),
         .I1(\rStoredData[1]_i_92__1_n_0 ),
         .O(\rStoredData_reg[1]_i_41__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_42__1 
        (.I0(\rStoredData[1]_i_93__1_n_0 ),
         .I1(\rStoredData[1]_i_94__1_n_0 ),
         .O(\rStoredData_reg[1]_i_42__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_43__1 
        (.I0(\rStoredData[1]_i_95__1_n_0 ),
         .I1(\rStoredData[1]_i_96__1_n_0 ),
         .O(\rStoredData_reg[1]_i_43__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_44__1 
        (.I0(\rStoredData[1]_i_97__1_n_0 ),
         .I1(\rStoredData[1]_i_98__1_n_0 ),
         .O(\rStoredData_reg[1]_i_44__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_45__1 
        (.I0(\rStoredData[1]_i_99__1_n_0 ),
         .I1(\rStoredData[1]_i_100__1_n_0 ),
         .O(\rStoredData_reg[1]_i_45__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_46__1 
        (.I0(\rStoredData[1]_i_101__1_n_0 ),
         .I1(\rStoredData[1]_i_102__1_n_0 ),
         .O(\rStoredData_reg[1]_i_46__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+        .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[1]_i_47__1 
        (.I0(\rStoredData[1]_i_103__1_n_0 ),
         .I1(\rStoredData[1]_i_104__1_n_0 ),
         .O(\rStoredData_reg[1]_i_47__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_48__1 
        (.I0(\rStoredData[1]_i_105__1_n_0 ),
         .I1(\rStoredData[1]_i_106__1_n_0 ),
         .O(\rStoredData_reg[1]_i_48__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_49__1 
        (.I0(\rStoredData[1]_i_107__1_n_0 ),
         .I1(\rStoredData[1]_i_108__1_n_0 ),
         .O(\rStoredData_reg[1]_i_49__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_50__1 
        (.I0(\rStoredData[1]_i_109__1_n_0 ),
         .I1(\rStoredData[1]_i_110__1_n_0 ),
         .O(\rStoredData_reg[1]_i_50__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_51__1 
        (.I0(\rStoredData[1]_i_111__1_n_0 ),
         .I1(\rStoredData[1]_i_112__1_n_0 ),
         .O(\rStoredData_reg[1]_i_51__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_52__1 
        (.I0(\rStoredData[1]_i_113__1_n_0 ),
         .I1(\rStoredData[1]_i_114__1_n_0 ),
         .O(\rStoredData_reg[1]_i_52__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_53__1 
        (.I0(\rStoredData[1]_i_115__1_n_0 ),
         .I1(\rStoredData[1]_i_116__1_n_0 ),
         .O(\rStoredData_reg[1]_i_53__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[1]_i_54__1 
-       (.I0(\rStoredData[1]_i_117__0_n_0 ),
-        .I1(\rStoredData[1]_i_118__0_n_0 ),
+       (.I0(\rStoredData[1]_i_117__1_n_0 ),
+        .I1(\rStoredData[1]_i_118__1_n_0 ),
         .O(\rStoredData_reg[1]_i_54__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF8 \rStoredData_reg[1]_i_7__0 
-       (.I0(\rStoredData_reg[1]_i_23__0_n_0 ),
-        .I1(\rStoredData_reg[1]_i_24__0_n_0 ),
-        .O(\rStoredData_reg[1]_i_7__0_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[1]_i_7__1 
+       (.I0(\rStoredData_reg[1]_i_23__1_n_0 ),
+        .I1(\rStoredData_reg[1]_i_24__1_n_0 ),
+        .O(\rStoredData_reg[1]_i_7__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[1]_i_8__1 
-       (.I0(\rStoredData_reg[1]_i_25__0_n_0 ),
-        .I1(\rStoredData_reg[1]_i_26__0_n_0 ),
+       (.I0(\rStoredData_reg[1]_i_25__1_n_0 ),
+        .I1(\rStoredData_reg[1]_i_26__1_n_0 ),
         .O(\rStoredData_reg[1]_i_8__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   MUXF8 \rStoredData_reg[1]_i_9__1 
        (.I0(\rStoredData_reg[1]_i_27__1_n_0 ),
         .I1(\rStoredData_reg[1]_i_28__1_n_0 ),
         .O(\rStoredData_reg[1]_i_9__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[2] 
        (.C(StreamClk),
         .CE(E),
-        .D(\rStoredData_reg[2]_i_1__1_n_0 ),
+        .D(\rStoredData[2]_i_1__1_n_0 ),
         .Q(m_axis_video_tdata[2]),
         .R(1'b0));
   MUXF8 \rStoredData_reg[2]_i_10__1 
-       (.I0(\rStoredData_reg[2]_i_28__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_29__1_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_31__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_32__1_n_0 ),
         .O(\rStoredData_reg[2]_i_10__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_11__1 
-       (.I0(\rStoredData_reg[2]_i_30__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_31__1_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_33__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_34__1_n_0 ),
         .O(\rStoredData_reg[2]_i_11__1_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_12__1 
-       (.I0(\rStoredData_reg[2]_i_32__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_33__0_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_35__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_36__1_n_0 ),
         .O(\rStoredData_reg[2]_i_12__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[2]_i_13__0 
-       (.I0(\rStoredData_reg[2]_i_34__0_n_0 ),
-        .I1(\rStoredData_reg[2]_i_35__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_13__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[2]_i_14__1 
-       (.I0(\rStoredData_reg[2]_i_36__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_37__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_14__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[2]_i_13__1 
+       (.I0(\rStoredData_reg[2]_i_37__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_38__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_13__1_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF8 \rStoredData_reg[2]_i_15__1 
+       (.I0(\rStoredData_reg[2]_i_43__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_44__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_15__1_n_0 ),
+        .S(s_axis_video_tdata[1]));
   MUXF8 \rStoredData_reg[2]_i_17__1 
-       (.I0(\rStoredData_reg[2]_i_46__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_47__1_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_48__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_49__1_n_0 ),
         .O(\rStoredData_reg[2]_i_17__1_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[2]_i_18__1 
-       (.I0(\rStoredData_reg[2]_i_48__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_49__1_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_50__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_51__1_n_0 ),
         .O(\rStoredData_reg[2]_i_18__1_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[2]_i_19__1 
-       (.I0(\rStoredData_reg[2]_i_50__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_51__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_19__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF7 \rStoredData_reg[2]_i_1__1 
-       (.I0(p_1_in__1[2]),
-        .I1(\rStoredData[2]_i_3__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_1__1_n_0 ),
-        .S(sGammaReg[2]));
-  MUXF8 \rStoredData_reg[2]_i_20__1 
        (.I0(\rStoredData_reg[2]_i_52__1_n_0 ),
         .I1(\rStoredData_reg[2]_i_53__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_19__1_n_0 ),
+        .S(s_axis_video_tdata[7]));
+  MUXF8 \rStoredData_reg[2]_i_20__1 
+       (.I0(\rStoredData_reg[2]_i_54__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_55__1_n_0 ),
         .O(\rStoredData_reg[2]_i_20__1_n_0 ),
         .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[2]_i_22__1 
+       (.I0(\rStoredData[2]_i_57__1_n_0 ),
+        .I1(\rStoredData[2]_i_58__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_22__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_23__1 
+       (.I0(\rStoredData[2]_i_59__1_n_0 ),
+        .I1(\rStoredData[2]_i_60__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_23__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_24__1 
-       (.I0(\rStoredData[2]_i_54__0_n_0 ),
-        .I1(\rStoredData[2]_i_55__1_n_0 ),
+       (.I0(\rStoredData[2]_i_61__1_n_0 ),
+        .I1(\rStoredData[2]_i_62__1_n_0 ),
         .O(\rStoredData_reg[2]_i_24__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_25__1 
-       (.I0(\rStoredData[2]_i_56__1_n_0 ),
-        .I1(\rStoredData[2]_i_57__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_25__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_26__1 
-       (.I0(\rStoredData[2]_i_58__1_n_0 ),
-        .I1(\rStoredData[2]_i_59__1_n_0 ),
+       (.I0(\rStoredData[2]_i_63__1_n_0 ),
+        .I1(\rStoredData[2]_i_64__1_n_0 ),
         .O(\rStoredData_reg[2]_i_26__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_27__1 
-       (.I0(\rStoredData[2]_i_60__1_n_0 ),
-        .I1(\rStoredData[2]_i_61__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_27__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_28__1 
-       (.I0(\rStoredData[2]_i_62__1_n_0 ),
-        .I1(\rStoredData[2]_i_63__1_n_0 ),
+       (.I0(\rStoredData[2]_i_66__1_n_0 ),
+        .I1(\rStoredData[2]_i_67__1_n_0 ),
         .O(\rStoredData_reg[2]_i_28__1_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[2]_i_29__1 
-       (.I0(\rStoredData[2]_i_64__1_n_0 ),
-        .I1(\rStoredData[2]_i_65__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_29__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_30__1 
-       (.I0(\rStoredData[2]_i_66__1_n_0 ),
-        .I1(\rStoredData[2]_i_67__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_30__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_31__1 
        (.I0(\rStoredData[2]_i_68__1_n_0 ),
         .I1(\rStoredData[2]_i_69__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_31__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_32__1 
+        .O(\rStoredData_reg[2]_i_29__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_30__1 
        (.I0(\rStoredData[2]_i_70__1_n_0 ),
         .I1(\rStoredData[2]_i_71__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_32__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_33__0 
+        .O(\rStoredData_reg[2]_i_30__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_31__1 
        (.I0(\rStoredData[2]_i_72__1_n_0 ),
         .I1(\rStoredData[2]_i_73__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_33__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_34__0 
+        .O(\rStoredData_reg[2]_i_31__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_32__1 
        (.I0(\rStoredData[2]_i_74__1_n_0 ),
         .I1(\rStoredData[2]_i_75__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_34__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_35__0 
+        .O(\rStoredData_reg[2]_i_32__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_33__1 
        (.I0(\rStoredData[2]_i_76__1_n_0 ),
         .I1(\rStoredData[2]_i_77__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_35__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_36__1 
+        .O(\rStoredData_reg[2]_i_33__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_34__1 
        (.I0(\rStoredData[2]_i_78__1_n_0 ),
         .I1(\rStoredData[2]_i_79__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_36__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[2]_i_37__1 
+        .O(\rStoredData_reg[2]_i_34__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_35__1 
        (.I0(\rStoredData[2]_i_80__1_n_0 ),
         .I1(\rStoredData[2]_i_81__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_35__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_36__1 
+       (.I0(\rStoredData[2]_i_82__1_n_0 ),
+        .I1(\rStoredData[2]_i_83__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_36__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[2]_i_37__1 
+       (.I0(\rStoredData[2]_i_84__1_n_0 ),
+        .I1(\rStoredData[2]_i_85__1_n_0 ),
         .O(\rStoredData_reg[2]_i_37__1_n_0 ),
         .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[2]_i_38__1 
-       (.I0(\rStoredData[2]_i_82__1_n_0 ),
-        .I1(\rStoredData[2]_i_83__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_38__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_39__1 
-       (.I0(\rStoredData[2]_i_84__1_n_0 ),
-        .I1(\rStoredData[2]_i_85__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_39__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_40__1 
        (.I0(\rStoredData[2]_i_86__1_n_0 ),
         .I1(\rStoredData[2]_i_87__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_40__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_41__1 
+        .O(\rStoredData_reg[2]_i_38__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[2]_i_3__1 
+       (.I0(\rStoredData[2]_i_7__1_n_0 ),
+        .I1(\rStoredData[2]_i_8__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_3__1_n_0 ),
+        .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[2]_i_43__1 
        (.I0(\rStoredData[2]_i_88__1_n_0 ),
         .I1(\rStoredData[2]_i_89__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_41__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_43__1 
+        .O(\rStoredData_reg[2]_i_43__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[2]_i_44__1 
        (.I0(\rStoredData[2]_i_90__1_n_0 ),
         .I1(\rStoredData[2]_i_91__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_43__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_44__1 
+        .O(\rStoredData_reg[2]_i_44__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[2]_i_48__1 
        (.I0(\rStoredData[2]_i_92__1_n_0 ),
         .I1(\rStoredData[2]_i_93__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_44__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_48__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_45__1 
+  MUXF7 \rStoredData_reg[2]_i_49__1 
        (.I0(\rStoredData[2]_i_94__1_n_0 ),
         .I1(\rStoredData[2]_i_95__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_45__1_n_0 ),
+        .O(\rStoredData_reg[2]_i_49__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[2]_i_46__1 
+  MUXF7 \rStoredData_reg[2]_i_50__1 
        (.I0(\rStoredData[2]_i_96__1_n_0 ),
         .I1(\rStoredData[2]_i_97__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_46__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_47__1 
+        .O(\rStoredData_reg[2]_i_50__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_51__1 
        (.I0(\rStoredData[2]_i_98__1_n_0 ),
         .I1(\rStoredData[2]_i_99__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_47__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_48__1 
+        .O(\rStoredData_reg[2]_i_51__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_52__1 
        (.I0(\rStoredData[2]_i_100__1_n_0 ),
         .I1(\rStoredData[2]_i_101__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_48__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_49__1 
+        .O(\rStoredData_reg[2]_i_52__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_53__1 
        (.I0(\rStoredData[2]_i_102__1_n_0 ),
         .I1(\rStoredData[2]_i_103__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_49__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_50__1 
+        .O(\rStoredData_reg[2]_i_53__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_54__1 
        (.I0(\rStoredData[2]_i_104__1_n_0 ),
         .I1(\rStoredData[2]_i_105__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_50__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_51__1 
+        .O(\rStoredData_reg[2]_i_54__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[2]_i_55__1 
        (.I0(\rStoredData[2]_i_106__1_n_0 ),
         .I1(\rStoredData[2]_i_107__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_51__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_52__1 
-       (.I0(\rStoredData[2]_i_108__1_n_0 ),
-        .I1(\rStoredData[2]_i_109__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_52__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_53__1 
-       (.I0(\rStoredData[2]_i_110__0_n_0 ),
-        .I1(\rStoredData[2]_i_111__0_n_0 ),
-        .O(\rStoredData_reg[2]_i_53__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[2]_i_5__1 
-       (.I0(\rStoredData[2]_i_15__1_n_0 ),
-        .I1(\rStoredData[2]_i_16__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_5__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[2]_i_8__1 
-       (.I0(\rStoredData_reg[2]_i_24__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_25__1_n_0 ),
-        .O(\rStoredData_reg[2]_i_8__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .O(\rStoredData_reg[2]_i_55__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[2]_i_9__1 
-       (.I0(\rStoredData_reg[2]_i_26__1_n_0 ),
-        .I1(\rStoredData_reg[2]_i_27__1_n_0 ),
+       (.I0(\rStoredData_reg[2]_i_29__1_n_0 ),
+        .I1(\rStoredData_reg[2]_i_30__1_n_0 ),
         .O(\rStoredData_reg[2]_i_9__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
   FDRE \rStoredData_reg[3] 
        (.C(StreamClk),
         .CE(E),
         .D(\rStoredData_reg[3]_i_1__1_n_0 ),
         .Q(m_axis_video_tdata[3]),
         .R(1'b0));
-  MUXF8 \rStoredData_reg[3]_i_10__1 
-       (.I0(\rStoredData_reg[3]_i_31__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_32__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_10__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
   MUXF8 \rStoredData_reg[3]_i_12__1 
-       (.I0(\rStoredData_reg[3]_i_35__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_36__0_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_32__1_n_0 ),
+        .I1(\rStoredData_reg[3]_i_33__1_n_0 ),
         .O(\rStoredData_reg[3]_i_12__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[3]_i_13__0 
-       (.I0(\rStoredData_reg[3]_i_37__0_n_0 ),
-        .I1(\rStoredData_reg[3]_i_38__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_13__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF8 \rStoredData_reg[3]_i_14__1 
-       (.I0(\rStoredData_reg[3]_i_39__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_40__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_14__1_n_0 ),
+  MUXF8 \rStoredData_reg[3]_i_13__1 
+       (.I0(\rStoredData_reg[3]_i_34__1_n_0 ),
+        .I1(\rStoredData_reg[3]_i_35__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_13__1_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_15__1 
+       (.I0(\rStoredData[3]_i_39__1_n_0 ),
+        .I1(\rStoredData[3]_i_40__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_15__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_16__1 
        (.I0(\rStoredData[3]_i_41__1_n_0 ),
         .I1(\rStoredData[3]_i_42__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_15__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF8 \rStoredData_reg[3]_i_16__1 
-       (.I0(\rStoredData_reg[3]_i_43__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_44__1_n_0 ),
         .O(\rStoredData_reg[3]_i_16__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[6]));
   MUXF8 \rStoredData_reg[3]_i_19__1 
-       (.I0(\rStoredData_reg[3]_i_51__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_52__1_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_49__1_n_0 ),
+        .I1(\rStoredData_reg[3]_i_50__1_n_0 ),
         .O(\rStoredData_reg[3]_i_19__1_n_0 ),
         .S(s_axis_video_tdata[7]));
   MUXF7 \rStoredData_reg[3]_i_1__1 
@@ -16385,100 +16561,70 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .O(\rStoredData_reg[3]_i_1__1_n_0 ),
         .S(sGammaReg[2]));
   MUXF8 \rStoredData_reg[3]_i_20__1 
-       (.I0(\rStoredData_reg[3]_i_53__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_54__1_n_0 ),
+       (.I0(\rStoredData_reg[3]_i_51__1_n_0 ),
+        .I1(\rStoredData_reg[3]_i_52__1_n_0 ),
         .O(\rStoredData_reg[3]_i_20__1_n_0 ),
         .S(s_axis_video_tdata[7]));
-  MUXF8 \rStoredData_reg[3]_i_22__1 
-       (.I0(\rStoredData_reg[3]_i_58__1_n_0 ),
-        .I1(\rStoredData_reg[3]_i_59__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_22__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
-  MUXF7 \rStoredData_reg[3]_i_31__1 
+  MUXF7 \rStoredData_reg[3]_i_25__1 
+       (.I0(\rStoredData[3]_i_55__1_n_0 ),
+        .I1(\rStoredData[3]_i_56__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_25__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_30__1 
+       (.I0(\rStoredData[3]_i_58__1_n_0 ),
+        .I1(\rStoredData[3]_i_59__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_30__1_n_0 ),
+        .S(s_axis_video_tdata[6]));
+  MUXF7 \rStoredData_reg[3]_i_32__1 
+       (.I0(\rStoredData[3]_i_60__1_n_0 ),
+        .I1(\rStoredData[3]_i_61__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_32__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_33__1 
+       (.I0(\rStoredData[3]_i_62__1_n_0 ),
+        .I1(\rStoredData[3]_i_63__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_33__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_34__1 
        (.I0(\rStoredData[3]_i_64__1_n_0 ),
         .I1(\rStoredData[3]_i_65__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_31__1_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_32__0 
+        .O(\rStoredData_reg[3]_i_34__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_35__1 
        (.I0(\rStoredData[3]_i_66__1_n_0 ),
         .I1(\rStoredData[3]_i_67__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_32__0_n_0 ),
-        .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_35__1 
-       (.I0(\rStoredData[3]_i_68__1_n_0 ),
-        .I1(\rStoredData[3]_i_69__1_n_0 ),
         .O(\rStoredData_reg[3]_i_35__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_36__0 
-       (.I0(\rStoredData[3]_i_70__1_n_0 ),
-        .I1(\rStoredData[3]_i_71__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_36__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_37__0 
-       (.I0(\rStoredData[3]_i_72__1_n_0 ),
-        .I1(\rStoredData[3]_i_73__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_37__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_38__0 
-       (.I0(\rStoredData[2]_i_22__0_n_0 ),
-        .I1(\rStoredData[3]_i_74__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_38__0_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_39__1 
-       (.I0(\rStoredData[3]_i_75__1_n_0 ),
-        .I1(\rStoredData[3]_i_76__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_39__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_40__1 
-       (.I0(\rStoredData[3]_i_77__1_n_0 ),
-        .I1(\rStoredData[3]_i_78__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_40__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[3]_i_43__1 
-       (.I0(\rStoredData[3]_i_79__1_n_0 ),
-        .I1(\rStoredData[3]_i_80__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_43__1_n_0 ),
+        .S(s_axis_video_tdata[5]));
+  MUXF7 \rStoredData_reg[3]_i_49__1 
+       (.I0(\rStoredData[3]_i_82__1_n_0 ),
+        .I1(\rStoredData[3]_i_83__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_49__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[3]_i_44__1 
-       (.I0(\rStoredData[3]_i_81__1_n_0 ),
-        .I1(\rStoredData[3]_i_82__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_44__1_n_0 ),
+  MUXF7 \rStoredData_reg[3]_i_50__1 
+       (.I0(\rStoredData[3]_i_84__1_n_0 ),
+        .I1(\rStoredData[3]_i_85__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_50__1_n_0 ),
         .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_51__1 
-       (.I0(\rStoredData[3]_i_83__1_n_0 ),
-        .I1(\rStoredData[3]_i_84__1_n_0 ),
+       (.I0(\rStoredData[3]_i_86__1_n_0 ),
+        .I1(\rStoredData[3]_i_87__1_n_0 ),
         .O(\rStoredData_reg[3]_i_51__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
+        .S(s_axis_video_tdata[6]));
   MUXF7 \rStoredData_reg[3]_i_52__1 
-       (.I0(\rStoredData[3]_i_85__1_n_0 ),
-        .I1(\rStoredData[3]_i_86__1_n_0 ),
+       (.I0(\rStoredData[3]_i_88__1_n_0 ),
+        .I1(\rStoredData[3]_i_89__1_n_0 ),
         .O(\rStoredData_reg[3]_i_52__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_53__1 
-       (.I0(\rStoredData[3]_i_87__1_n_0 ),
-        .I1(\rStoredData[3]_i_88__1_n_0 ),
-        .O(\rStoredData_reg[3]_i_53__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_54__1 
-       (.I0(\rStoredData[3]_i_89__1_n_0 ),
-        .I1(\rStoredData[3]_i_90__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_54__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_58__1 
-       (.I0(\rStoredData[3]_i_91__0_n_0 ),
-        .I1(\rStoredData[3]_i_92__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_58__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_59__1 
-       (.I0(\rStoredData[3]_i_93__0_n_0 ),
-        .I1(\rStoredData[3]_i_94__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_59__1_n_0 ),
-        .S(s_axis_video_tdata[5]));
-  MUXF7 \rStoredData_reg[3]_i_9__1 
-       (.I0(\rStoredData[3]_i_29__1_n_0 ),
-        .I1(\rStoredData[3]_i_30__0_n_0 ),
-        .O(\rStoredData_reg[3]_i_9__1_n_0 ),
-        .S(s_axis_video_tdata[7]));
+        .S(s_axis_video_tdata[6]));
+  MUXF8 \rStoredData_reg[3]_i_5__1 
+       (.I0(\rStoredData_reg[3]_i_15__1_n_0 ),
+        .I1(\rStoredData_reg[3]_i_16__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_5__1_n_0 ),
+        .S(s_axis_video_tdata[0]));
+  MUXF7 \rStoredData_reg[3]_i_7__1 
+       (.I0(\rStoredData[3]_i_21__1_n_0 ),
+        .I1(\rStoredData[3]_i_22__1_n_0 ),
+        .O(\rStoredData_reg[3]_i_7__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
   FDRE \rStoredData_reg[4] 
        (.C(StreamClk),
         .CE(E),
@@ -16486,77 +16632,92 @@ module system_AXI_GammaCorrection_0_0_StoredGammaCoefs_1
         .Q(m_axis_video_tdata[4]),
         .R(1'b0));
   MUXF7 \rStoredData_reg[4]_i_10__1 
-       (.I0(\rStoredData[4]_i_24__1_n_0 ),
-        .I1(\rStoredData[4]_i_25__1_n_0 ),
+       (.I0(\rStoredData[4]_i_26__1_n_0 ),
+        .I1(\rStoredData[4]_i_27__1_n_0 ),
         .O(\rStoredData_reg[4]_i_10__1_n_0 ),
         .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[4]_i_11 
-       (.I0(\rStoredData[4]_i_26__1_n_0 ),
-        .I1(\rStoredData[4]_i_27__0_n_0 ),
-        .O(\rStoredData_reg[4]_i_11_n_0 ),
-        .S(s_axis_video_tdata[9]));
-  MUXF8 \rStoredData_reg[4]_i_2__1 
-       (.I0(\rStoredData_reg[4]_i_7__1_n_0 ),
-        .I1(\rStoredData_reg[4]_i_8__1_n_0 ),
-        .O(\rStoredData_reg[4]_i_2__1_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_11__1 
+       (.I0(\rStoredData[4]_i_28__1_n_0 ),
+        .I1(\rStoredData[4]_i_29__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_11__1_n_0 ),
         .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[4]_i_40 
-       (.I0(\rStoredData[4]_i_59__0_n_0 ),
-        .I1(\rStoredData[4]_i_60__0_n_0 ),
-        .O(\rStoredData_reg[4]_i_40_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_14__1 
+       (.I0(\rStoredData[4]_i_36__1_n_0 ),
+        .I1(\rStoredData[4]_i_37__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_14__1_n_0 ),
+        .S(s_axis_video_tdata[8]));
+  MUXF7 \rStoredData_reg[4]_i_25__1 
+       (.I0(\rStoredData[4]_i_40__1_n_0 ),
+        .I1(\rStoredData[4]_i_41__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_25__1_n_0 ),
         .S(s_axis_video_tdata[6]));
-  MUXF7 \rStoredData_reg[4]_i_7__1 
-       (.I0(\rStoredData[4]_i_18__1_n_0 ),
-        .I1(\rStoredData[4]_i_19__1_n_0 ),
-        .O(\rStoredData_reg[4]_i_7__1_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_30__1 
+       (.I0(\rStoredData[4]_i_50__1_n_0 ),
+        .I1(\rStoredData[4]_i_51__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_30__1_n_0 ),
         .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_8__1 
-       (.I0(\rStoredData[4]_i_20__1_n_0 ),
-        .I1(\rStoredData[4]_i_21__1_n_0 ),
-        .O(\rStoredData_reg[4]_i_8__1_n_0 ),
+  MUXF7 \rStoredData_reg[4]_i_31__1 
+       (.I0(\rStoredData[4]_i_52__1_n_0 ),
+        .I1(\rStoredData[4]_i_53__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_31__1_n_0 ),
         .S(s_axis_video_tdata[9]));
-  MUXF7 \rStoredData_reg[4]_i_9__1 
-       (.I0(\rStoredData[4]_i_22__1_n_0 ),
-        .I1(\rStoredData[4]_i_23__1_n_0 ),
-        .O(\rStoredData_reg[4]_i_9__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+  MUXF7 \rStoredData_reg[4]_i_32__1 
+       (.I0(\rStoredData[4]_i_54__1_n_0 ),
+        .I1(\rStoredData[4]_i_55__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_32__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_33__1 
+       (.I0(\rStoredData[4]_i_56__1_n_0 ),
+        .I1(\rStoredData[4]_i_57__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_33__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_35__1 
+       (.I0(\rStoredData[4]_i_59__1_n_0 ),
+        .I1(\rStoredData[4]_i_60__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_35__1_n_0 ),
+        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[4]_i_4__1 
+       (.I0(\rStoredData[4]_i_12__1_n_0 ),
+        .I1(\rStoredData[4]_i_13__1_n_0 ),
+        .O(\rStoredData_reg[4]_i_4__1_n_0 ),
+        .S(s_axis_video_tdata[0]));
   FDRE \rStoredData_reg[5] 
        (.C(StreamClk),
         .CE(E),
         .D(\rStoredData[5]_i_1__1_n_0 ),
         .Q(m_axis_video_tdata[5]),
         .R(1'b0));
-  MUXF7 \rStoredData_reg[5]_i_13 
-       (.I0(\rStoredData[5]_i_28__1_n_0 ),
-        .I1(\rStoredData[5]_i_29__0_n_0 ),
-        .O(\rStoredData_reg[5]_i_13_n_0 ),
+  MUXF7 \rStoredData_reg[5]_i_28__1 
+       (.I0(\rStoredData[5]_i_37__1_n_0 ),
+        .I1(\rStoredData[5]_i_38__1_n_0 ),
+        .O(\rStoredData_reg[5]_i_28__1_n_0 ),
         .S(s_axis_video_tdata[9]));
   MUXF7 \rStoredData_reg[5]_i_2__1 
-       (.I0(\rStoredData[5]_i_7__1_n_0 ),
-        .I1(\rStoredData[5]_i_8__1_n_0 ),
+       (.I0(\rStoredData[5]_i_6__1_n_0 ),
+        .I1(\rStoredData[5]_i_7__1_n_0 ),
         .O(\rStoredData_reg[5]_i_2__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
-  MUXF7 \rStoredData_reg[5]_i_9__1 
-       (.I0(\rStoredData[5]_i_23__1_n_0 ),
-        .I1(\rStoredData[5]_i_24_n_0 ),
-        .O(\rStoredData_reg[5]_i_9__1_n_0 ),
-        .S(s_axis_video_tdata[8]));
+        .S(s_axis_video_tdata[7]));
+  MUXF7 \rStoredData_reg[5]_i_4__1 
+       (.I0(\rStoredData[5]_i_10__1_n_0 ),
+        .I1(\rStoredData[5]_i_11__1_n_0 ),
+        .O(\rStoredData_reg[5]_i_4__1_n_0 ),
+        .S(s_axis_video_tdata[0]));
   FDRE \rStoredData_reg[6] 
        (.C(StreamClk),
         .CE(E),
-        .D(\rStoredData_reg[6]_i_1__1_n_0 ),
+        .D(\rStoredData[6]_i_1__1_n_0 ),
         .Q(m_axis_video_tdata[6]),
         .R(1'b0));
-  MUXF7 \rStoredData_reg[6]_i_1__1 
-       (.I0(p_1_in__1[6]),
-        .I1(\rStoredData[6]_i_3__1_n_0 ),
-        .O(\rStoredData_reg[6]_i_1__1_n_0 ),
-        .S(sGammaReg[2]));
-  MUXF7 \rStoredData_reg[6]_i_6__1 
-       (.I0(\rStoredData[6]_i_13__1_n_0 ),
-        .I1(\rStoredData[6]_i_14__1_n_0 ),
-        .O(\rStoredData_reg[6]_i_6__1_n_0 ),
-        .S(s_axis_video_tdata[9]));
+  MUXF7 \rStoredData_reg[6]_i_13 
+       (.I0(\rStoredData[6]_i_22_n_0 ),
+        .I1(\rStoredData[6]_i_23_n_0 ),
+        .O(\rStoredData_reg[6]_i_13_n_0 ),
+        .S(s_axis_video_tdata[1]));
+  MUXF7 \rStoredData_reg[6]_i_2__1 
+       (.I0(\rStoredData[6]_i_7__1_n_0 ),
+        .I1(\rStoredData[6]_i_8__1_n_0 ),
+        .O(\rStoredData_reg[6]_i_2__1_n_0 ),
+        .S(s_axis_video_tdata[7]));
   FDRE \rStoredData_reg[7] 
        (.C(StreamClk),
         .CE(E),
